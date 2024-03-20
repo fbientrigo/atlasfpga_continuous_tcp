@@ -1,0 +1,1139 @@
+
+Loading design for application trce from file benchfifo_impl1.ncd.
+Design name: uart_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-9400HC
+Package:     CABGA256
+Performance: 5
+Loading device for application trce from file 'se5c9400.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 7.
+Performance Hardware Data Status:   Final          Version 2.2.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
+Wed Aug 31 17:22:16 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o benchFIFO_impl1.twr -gui -msgset C:/Users/victo/Desktop/Lattice_proj/bench_UART/promote.xml benchFIFO_impl1.ncd benchFIFO_impl1.prf 
+Design file:     benchfifo_impl1.ncd
+Preference file: benchfifo_impl1.prf
+Device,speed:    LCMXO3D-9400HC,5
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "WrClock" 14.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 59.724ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_64  (from WrClock +)
+   Destination:    FF         Data in        fifo/FF_52  (to WrClock +)
+
+   Delay:              11.555ns  (20.9% logic, 79.1% route), 6 logic levels.
+
+ Constraint Details:
+
+     11.555ns physical path delay fifo/SLICE_391 to fifo/SLICE_240 meets
+     71.429ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 71.279ns) by 59.724ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_391 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R21C24A.CLK to     R21C24A.Q0 fifo/SLICE_391 (from WrClock)
+ROUTE       192     6.077     R21C24A.Q0 to     R21C26B.D0 fifo/rptr_3
+CTOF_DEL    ---     0.452     R21C26B.D0 to     R21C26B.F0 fifo/fifo_pfu_26_1
+ROUTE         1     1.355     R21C26B.F0 to     R20C29B.B1 fifo/mdL0_26_2
+CTOOFX_DEL  ---     0.661     R20C29B.B1 to   R20C29B.OFX0 fifo/i2264/SLICE_370
+ROUTE         1     0.000   R20C29B.OFX0 to    R20C29A.FXA fifo/n2800
+FXTOOFX_DE  ---     0.223    R20C29A.FXA to   R20C29A.OFX1 fifo/i2265/SLICE_372
+ROUTE         1     0.000   R20C29A.OFX1 to    R20C29B.FXB fifo/n2805
+FXTOOFX_DE  ---     0.223    R20C29B.FXB to   R20C29B.OFX1 fifo/i2264/SLICE_370
+ROUTE         1     1.703   R20C29B.OFX1 to     R19C25D.A0 fifo/n2807
+CTOF_DEL    ---     0.452     R19C25D.A0 to     R19C25D.F0 fifo/SLICE_240
+ROUTE         1     0.000     R19C25D.F0 to    R19C25D.DI0 fifo/rdataout2 (to WrClock)
+                  --------
+                   11.555   (20.9% logic, 79.1% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_391:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R21C24A.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R19C25D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 59.878ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_66  (from WrClock +)
+   Destination:    FF         Data in        fifo/FF_52  (to WrClock +)
+
+   Delay:              11.401ns  (21.2% logic, 78.8% route), 6 logic levels.
+
+ Constraint Details:
+
+     11.401ns physical path delay fifo/SLICE_389 to fifo/SLICE_240 meets
+     71.429ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 71.279ns) by 59.878ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_389 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R20C26D.CLK to     R20C26D.Q0 fifo/SLICE_389 (from WrClock)
+ROUTE       192     5.995     R20C26D.Q0 to     R19C27B.B0 fifo/rptr_1
+CTOF_DEL    ---     0.452     R19C27B.B0 to     R19C27B.F0 fifo/fifo_pfu_25_1.70
+ROUTE         1     1.283     R19C27B.F0 to     R20C29B.B0 fifo/mdL0_25_2
+CTOOFX_DEL  ---     0.661     R20C29B.B0 to   R20C29B.OFX0 fifo/i2264/SLICE_370
+ROUTE         1     0.000   R20C29B.OFX0 to    R20C29A.FXA fifo/n2800
+FXTOOFX_DE  ---     0.223    R20C29A.FXA to   R20C29A.OFX1 fifo/i2265/SLICE_372
+ROUTE         1     0.000   R20C29A.OFX1 to    R20C29B.FXB fifo/n2805
+FXTOOFX_DE  ---     0.223    R20C29B.FXB to   R20C29B.OFX1 fifo/i2264/SLICE_370
+ROUTE         1     1.703   R20C29B.OFX1 to     R19C25D.A0 fifo/n2807
+CTOF_DEL    ---     0.452     R19C25D.A0 to     R19C25D.F0 fifo/SLICE_240
+ROUTE         1     0.000     R19C25D.F0 to    R19C25D.DI0 fifo/rdataout2 (to WrClock)
+                  --------
+                   11.401   (21.2% logic, 78.8% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_389:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R20C26D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R19C25D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 60.090ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_64  (from WrClock +)
+   Destination:    FF         Data in        fifo/FF_50  (to WrClock +)
+
+   Delay:              11.189ns  (21.6% logic, 78.4% route), 6 logic levels.
+
+ Constraint Details:
+
+     11.189ns physical path delay fifo/SLICE_391 to fifo/SLICE_240 meets
+     71.429ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 71.279ns) by 60.090ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_391 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R21C24A.CLK to     R21C24A.Q0 fifo/SLICE_391 (from WrClock)
+ROUTE       192     5.645     R21C24A.Q0 to     R19C29B.D1 fifo/rptr_3
+CTOF_DEL    ---     0.452     R19C29B.D1 to     R19C29B.F1 fifo/fifo_pfu_21_1
+ROUTE         1     1.872     R19C29B.F1 to     R21C27C.C0 fifo/mdL0_21_3
+CTOOFX_DEL  ---     0.661     R21C27C.C0 to   R21C27C.OFX0 fifo/i2232/SLICE_347
+ROUTE         1     0.000   R21C27C.OFX0 to    R21C27C.FXB fifo/n2768
+FXTOOFX_DE  ---     0.223    R21C27C.FXB to   R21C27C.OFX1 fifo/i2232/SLICE_347
+ROUTE         1     0.000   R21C27C.OFX1 to    R21C27B.FXA fifo/n2773
+FXTOOFX_DE  ---     0.223    R21C27B.FXA to   R21C27B.OFX1 fifo/i2233/SLICE_349
+ROUTE         1     1.252   R21C27B.OFX1 to     R19C25D.A1 fifo/n2776
+CTOF_DEL    ---     0.452     R19C25D.A1 to     R19C25D.F1 fifo/SLICE_240
+ROUTE         1     0.000     R19C25D.F1 to    R19C25D.DI1 fifo/rdataout3 (to WrClock)
+                  --------
+                   11.189   (21.6% logic, 78.4% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_391:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R21C24A.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R19C25D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 60.133ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_64  (from WrClock +)
+   Destination:    FF         Data in        fifo/FF_52  (to WrClock +)
+
+   Delay:              11.146ns  (21.7% logic, 78.3% route), 6 logic levels.
+
+ Constraint Details:
+
+     11.146ns physical path delay fifo/SLICE_391 to fifo/SLICE_240 meets
+     71.429ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 71.279ns) by 60.133ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_391 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R21C24A.CLK to     R21C24A.Q0 fifo/SLICE_391 (from WrClock)
+ROUTE       192     6.069     R21C24A.Q0 to     R21C28B.D0 fifo/rptr_3
+CTOF_DEL    ---     0.452     R21C28B.D0 to     R21C28B.F0 fifo/fifo_pfu_24_1.67
+ROUTE         1     0.954     R21C28B.F0 to     R20C29B.C0 fifo/mdL0_24_2
+CTOOFX_DEL  ---     0.661     R20C29B.C0 to   R20C29B.OFX0 fifo/i2264/SLICE_370
+ROUTE         1     0.000   R20C29B.OFX0 to    R20C29A.FXA fifo/n2800
+FXTOOFX_DE  ---     0.223    R20C29A.FXA to   R20C29A.OFX1 fifo/i2265/SLICE_372
+ROUTE         1     0.000   R20C29A.OFX1 to    R20C29B.FXB fifo/n2805
+FXTOOFX_DE  ---     0.223    R20C29B.FXB to   R20C29B.OFX1 fifo/i2264/SLICE_370
+ROUTE         1     1.703   R20C29B.OFX1 to     R19C25D.A0 fifo/n2807
+CTOF_DEL    ---     0.452     R19C25D.A0 to     R19C25D.F0 fifo/SLICE_240
+ROUTE         1     0.000     R19C25D.F0 to    R19C25D.DI0 fifo/rdataout2 (to WrClock)
+                  --------
+                   11.146   (21.7% logic, 78.3% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_391:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R21C24A.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R19C25D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 60.133ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_64  (from WrClock +)
+   Destination:    FF         Data in        fifo/FF_50  (to WrClock +)
+
+   Delay:              11.146ns  (21.7% logic, 78.3% route), 6 logic levels.
+
+ Constraint Details:
+
+     11.146ns physical path delay fifo/SLICE_391 to fifo/SLICE_240 meets
+     71.429ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 71.279ns) by 60.133ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_391 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R21C24A.CLK to     R21C24A.Q0 fifo/SLICE_391 (from WrClock)
+ROUTE       192     5.663     R21C24A.Q0 to     R19C30B.D1 fifo/rptr_3
+CTOF_DEL    ---     0.452     R19C30B.D1 to     R19C30B.F1 fifo/fifo_pfu_22_1.59
+ROUTE         1     1.811     R19C30B.F1 to     R21C27C.B1 fifo/mdL0_22_3
+CTOOFX_DEL  ---     0.661     R21C27C.B1 to   R21C27C.OFX0 fifo/i2232/SLICE_347
+ROUTE         1     0.000   R21C27C.OFX0 to    R21C27C.FXB fifo/n2768
+FXTOOFX_DE  ---     0.223    R21C27C.FXB to   R21C27C.OFX1 fifo/i2232/SLICE_347
+ROUTE         1     0.000   R21C27C.OFX1 to    R21C27B.FXA fifo/n2773
+FXTOOFX_DE  ---     0.223    R21C27B.FXA to   R21C27B.OFX1 fifo/i2233/SLICE_349
+ROUTE         1     1.252   R21C27B.OFX1 to     R19C25D.A1 fifo/n2776
+CTOF_DEL    ---     0.452     R19C25D.A1 to     R19C25D.F1 fifo/SLICE_240
+ROUTE         1     0.000     R19C25D.F1 to    R19C25D.DI1 fifo/rdataout3 (to WrClock)
+                  --------
+                   11.146   (21.7% logic, 78.3% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_391:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R21C24A.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R19C25D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 60.194ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_66  (from WrClock +)
+   Destination:    FF         Data in        fifo/FF_52  (to WrClock +)
+
+   Delay:              11.085ns  (21.8% logic, 78.2% route), 6 logic levels.
+
+ Constraint Details:
+
+     11.085ns physical path delay fifo/SLICE_389 to fifo/SLICE_240 meets
+     71.429ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 71.279ns) by 60.194ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_389 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R20C26D.CLK to     R20C26D.Q0 fifo/SLICE_389 (from WrClock)
+ROUTE       192     6.008     R20C26D.Q0 to     R21C28B.B0 fifo/rptr_1
+CTOF_DEL    ---     0.452     R21C28B.B0 to     R21C28B.F0 fifo/fifo_pfu_24_1.67
+ROUTE         1     0.954     R21C28B.F0 to     R20C29B.C0 fifo/mdL0_24_2
+CTOOFX_DEL  ---     0.661     R20C29B.C0 to   R20C29B.OFX0 fifo/i2264/SLICE_370
+ROUTE         1     0.000   R20C29B.OFX0 to    R20C29A.FXA fifo/n2800
+FXTOOFX_DE  ---     0.223    R20C29A.FXA to   R20C29A.OFX1 fifo/i2265/SLICE_372
+ROUTE         1     0.000   R20C29A.OFX1 to    R20C29B.FXB fifo/n2805
+FXTOOFX_DE  ---     0.223    R20C29B.FXB to   R20C29B.OFX1 fifo/i2264/SLICE_370
+ROUTE         1     1.703   R20C29B.OFX1 to     R19C25D.A0 fifo/n2807
+CTOF_DEL    ---     0.452     R19C25D.A0 to     R19C25D.F0 fifo/SLICE_240
+ROUTE         1     0.000     R19C25D.F0 to    R19C25D.DI0 fifo/rdataout2 (to WrClock)
+                  --------
+                   11.085   (21.8% logic, 78.2% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_389:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R20C26D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R19C25D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 60.236ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_64  (from WrClock +)
+   Destination:    FF         Data in        fifo/FF_52  (to WrClock +)
+
+   Delay:              11.043ns  (21.9% logic, 78.1% route), 6 logic levels.
+
+ Constraint Details:
+
+     11.043ns physical path delay fifo/SLICE_391 to fifo/SLICE_240 meets
+     71.429ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 71.279ns) by 60.236ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_391 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R21C24A.CLK to     R21C24A.Q0 fifo/SLICE_391 (from WrClock)
+ROUTE       192     6.069     R21C24A.Q0 to     R21C29B.D0 fifo/rptr_3
+CTOF_DEL    ---     0.452     R21C29B.D0 to     R21C29B.F0 fifo/fifo_pfu_28_1
+ROUTE         1     0.851     R21C29B.F0 to     R20C29A.A0 fifo/mdL0_28_2
+CTOOFX_DEL  ---     0.661     R20C29A.A0 to   R20C29A.OFX0 fifo/i2265/SLICE_372
+ROUTE         1     0.000   R20C29A.OFX0 to    R20C29A.FXB fifo/n2801
+FXTOOFX_DE  ---     0.223    R20C29A.FXB to   R20C29A.OFX1 fifo/i2265/SLICE_372
+ROUTE         1     0.000   R20C29A.OFX1 to    R20C29B.FXB fifo/n2805
+FXTOOFX_DE  ---     0.223    R20C29B.FXB to   R20C29B.OFX1 fifo/i2264/SLICE_370
+ROUTE         1     1.703   R20C29B.OFX1 to     R19C25D.A0 fifo/n2807
+CTOF_DEL    ---     0.452     R19C25D.A0 to     R19C25D.F0 fifo/SLICE_240
+ROUTE         1     0.000     R19C25D.F0 to    R19C25D.DI0 fifo/rdataout2 (to WrClock)
+                  --------
+                   11.043   (21.9% logic, 78.1% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_391:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R21C24A.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R19C25D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 60.297ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_66  (from WrClock +)
+   Destination:    FF         Data in        fifo/FF_52  (to WrClock +)
+
+   Delay:              10.982ns  (22.0% logic, 78.0% route), 6 logic levels.
+
+ Constraint Details:
+
+     10.982ns physical path delay fifo/SLICE_389 to fifo/SLICE_240 meets
+     71.429ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 71.279ns) by 60.297ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_389 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R20C26D.CLK to     R20C26D.Q0 fifo/SLICE_389 (from WrClock)
+ROUTE       192     6.008     R20C26D.Q0 to     R21C29B.B0 fifo/rptr_1
+CTOF_DEL    ---     0.452     R21C29B.B0 to     R21C29B.F0 fifo/fifo_pfu_28_1
+ROUTE         1     0.851     R21C29B.F0 to     R20C29A.A0 fifo/mdL0_28_2
+CTOOFX_DEL  ---     0.661     R20C29A.A0 to   R20C29A.OFX0 fifo/i2265/SLICE_372
+ROUTE         1     0.000   R20C29A.OFX0 to    R20C29A.FXB fifo/n2801
+FXTOOFX_DE  ---     0.223    R20C29A.FXB to   R20C29A.OFX1 fifo/i2265/SLICE_372
+ROUTE         1     0.000   R20C29A.OFX1 to    R20C29B.FXB fifo/n2805
+FXTOOFX_DE  ---     0.223    R20C29B.FXB to   R20C29B.OFX1 fifo/i2264/SLICE_370
+ROUTE         1     1.703   R20C29B.OFX1 to     R19C25D.A0 fifo/n2807
+CTOF_DEL    ---     0.452     R19C25D.A0 to     R19C25D.F0 fifo/SLICE_240
+ROUTE         1     0.000     R19C25D.F0 to    R19C25D.DI0 fifo/rdataout2 (to WrClock)
+                  --------
+                   10.982   (22.0% logic, 78.0% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_389:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R20C26D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/SLICE_240:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R19C25D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 60.430ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_64  (from WrClock +)
+   Destination:    FF         Data in        fifo/FF_56  (to WrClock +)
+
+   Delay:              10.849ns  (22.3% logic, 77.7% route), 6 logic levels.
+
+ Constraint Details:
+
+     10.849ns physical path delay fifo/SLICE_391 to fifo/SLICE_239 meets
+     71.429ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 71.279ns) by 60.430ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_391 to fifo/SLICE_239:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R21C24A.CLK to     R21C24A.Q0 fifo/SLICE_391 (from WrClock)
+ROUTE       192     6.069     R21C24A.Q0 to     R21C29A.D0 fifo/rptr_3
+CTOF_DEL    ---     0.452     R21C29A.D0 to     R21C29A.F0 fifo/fifo_pfu_28_1.83
+ROUTE         1     1.180     R21C29A.F0 to     R20C28A.B0 fifo/mdL0_28_0
+CTOOFX_DEL  ---     0.661     R20C28A.B0 to   R20C28A.OFX0 fifo/i2327/SLICE_373
+ROUTE         1     0.000   R20C28A.OFX0 to    R20C28A.FXB fifo/n2863
+FXTOOFX_DE  ---     0.223    R20C28A.FXB to   R20C28A.OFX1 fifo/i2327/SLICE_373
+ROUTE         1     0.000   R20C28A.OFX1 to    R20C28B.FXB fifo/n2867
+FXTOOFX_DE  ---     0.223    R20C28B.FXB to   R20C28B.OFX1 fifo/i2326/SLICE_371
+ROUTE         1     1.180   R20C28B.OFX1 to     R19C27D.B0 fifo/n2869
+CTOF_DEL    ---     0.452     R19C27D.B0 to     R19C27D.F0 fifo/SLICE_239
+ROUTE         1     0.000     R19C27D.F0 to    R19C27D.DI0 fifo/rdataout0 (to WrClock)
+                  --------
+                   10.849   (22.3% logic, 77.7% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_391:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R21C24A.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/SLICE_239:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R19C27D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 60.453ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_64  (from WrClock +)
+   Destination:    FF         Data in        fifo/FF_56  (to WrClock +)
+
+   Delay:              10.826ns  (22.4% logic, 77.6% route), 6 logic levels.
+
+ Constraint Details:
+
+     10.826ns physical path delay fifo/SLICE_391 to fifo/SLICE_239 meets
+     71.429ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 71.279ns) by 60.453ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_391 to fifo/SLICE_239:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R21C24A.CLK to     R21C24A.Q0 fifo/SLICE_391 (from WrClock)
+ROUTE       192     6.077     R21C24A.Q0 to     R21C26A.D0 fifo/rptr_3
+CTOF_DEL    ---     0.452     R21C26A.D0 to     R21C26A.F0 fifo/fifo_pfu_26_1.75
+ROUTE         1     1.149     R21C26A.F0 to     R20C28B.A1 fifo/mdL0_26_0
+CTOOFX_DEL  ---     0.661     R20C28B.A1 to   R20C28B.OFX0 fifo/i2326/SLICE_371
+ROUTE         1     0.000   R20C28B.OFX0 to    R20C28A.FXA fifo/n2862
+FXTOOFX_DE  ---     0.223    R20C28A.FXA to   R20C28A.OFX1 fifo/i2327/SLICE_373
+ROUTE         1     0.000   R20C28A.OFX1 to    R20C28B.FXB fifo/n2867
+FXTOOFX_DE  ---     0.223    R20C28B.FXB to   R20C28B.OFX1 fifo/i2326/SLICE_371
+ROUTE         1     1.180   R20C28B.OFX1 to     R19C27D.B0 fifo/n2869
+CTOF_DEL    ---     0.452     R19C27D.B0 to     R19C27D.F0 fifo/SLICE_239
+ROUTE         1     0.000     R19C27D.F0 to    R19C27D.DI0 fifo/rdataout0 (to WrClock)
+                  --------
+                   10.826   (22.4% logic, 77.6% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_391:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R21C24A.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/SLICE_239:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     2.487        OSC.OSC to    R19C27D.CLK WrClock
+                  --------
+                    2.487   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:   85.434MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "WrClock" 14.000000 MHz ; |   14.000 MHz|   85.434 MHz|   6  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: WrClock   Source: OSCInst0.OSC   Loads: 240
+   Covered under: FREQUENCY NET "WrClock" 14.000000 MHz ;
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 4162 paths, 1 nets, and 4373 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
+Wed Aug 31 17:22:16 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o benchFIFO_impl1.twr -gui -msgset C:/Users/victo/Desktop/Lattice_proj/bench_UART/promote.xml benchFIFO_impl1.ncd benchFIFO_impl1.prf 
+Design file:     benchfifo_impl1.ncd
+Preference file: benchfifo_impl1.prf
+Device,speed:    LCMXO3D-9400HC,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "WrClock" 14.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.140ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_ascii_i0_i3  (from WrClock +)
+   Destination:    FF         Data in        fifo/fifo_pfu_18_1/RAM1  (to WrClock +)
+                   FF                        fifo/fifo_pfu_18_1/RAM1
+
+   Delay:               0.271ns  (49.1% logic, 50.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.271ns physical path delay SLICE_308 to fifo/fifo_pfu_18_1 meets
+      0.131ns WD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.140ns
+
+ Physical Path Details:
+
+      Data path SLICE_308 to fifo/fifo_pfu_18_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R21C30D.CLK to     R21C30D.Q0 SLICE_308 (from WrClock)
+ROUTE        32     0.138     R21C30D.Q0 to     R21C30C.D1 i_ascii_3
+ZERO_DEL    ---     0.000     R21C30C.D1 to   R21C30C.WDO3 fifo/fifo_pfu_18_1.38
+ROUTE         1     0.000   R21C30C.WDO3 to    R21C30B.WD1 fifo/fifo_pfu_18_1/WD3_INT (to WrClock)
+                  --------
+                    0.271   (49.1% logic, 50.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_308:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R21C30D.CLK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/fifo_pfu_18_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R21C30B.WCK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.143ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_95  (from WrClock +)
+   Destination:    FF         Data in        fifo/fifo_pfu_26_1/RAM1  (to WrClock +)
+                   FF                        fifo/fifo_pfu_26_1/RAM1
+
+   Delay:               0.274ns  (48.5% logic, 51.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.274ns physical path delay fifo/SLICE_403 to fifo/fifo_pfu_26_1 meets
+      0.131ns WAD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.143ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_403 to fifo/fifo_pfu_26_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R21C25C.CLK to     R21C25C.Q0 fifo/SLICE_403 (from WrClock)
+ROUTE        48     0.141     R21C25C.Q0 to     R21C26C.C0 fifo/wptr_2
+ZERO_DEL    ---     0.000     R21C26C.C0 to  R21C26C.WADO2 fifo/fifo_pfu_26_1.74
+ROUTE         2     0.000  R21C26C.WADO2 to   R21C26B.WAD2 fifo/fifo_pfu_26_1/WAD2_INT (to WrClock)
+                  --------
+                    0.274   (48.5% logic, 51.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_403:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R21C25C.CLK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/fifo_pfu_26_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R21C26B.WCK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.143ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_95  (from WrClock +)
+   Destination:    FF         Data in        fifo/fifo_pfu_26_1/RAM0  (to WrClock +)
+                   FF                        fifo/fifo_pfu_26_1/RAM0
+
+   Delay:               0.274ns  (48.5% logic, 51.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.274ns physical path delay fifo/SLICE_403 to fifo/fifo_pfu_26_1.75 meets
+      0.131ns WAD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.143ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_403 to fifo/fifo_pfu_26_1.75:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R21C25C.CLK to     R21C25C.Q0 fifo/SLICE_403 (from WrClock)
+ROUTE        48     0.141     R21C25C.Q0 to     R21C26C.C0 fifo/wptr_2
+ZERO_DEL    ---     0.000     R21C26C.C0 to  R21C26C.WADO2 fifo/fifo_pfu_26_1.74
+ROUTE         2     0.000  R21C26C.WADO2 to   R21C26A.WAD2 fifo/fifo_pfu_26_1/WAD2_INT (to WrClock)
+                  --------
+                    0.274   (48.5% logic, 51.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_403:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R21C25C.CLK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/fifo_pfu_26_1.75:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R21C26A.WCK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.144ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_94_rep_45  (from WrClock +)
+   Destination:    FF         Data in        fifo/fifo_pfu_11_1/RAM1  (to WrClock +)
+                   FF                        fifo/fifo_pfu_11_1/RAM1
+
+   Delay:               0.275ns  (48.4% logic, 51.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.275ns physical path delay fifo/SLICE_417 to fifo/fifo_pfu_11_1.10 meets
+      0.131ns WAD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.144ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_417 to fifo/fifo_pfu_11_1.10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R20C24D.CLK to     R20C24D.Q0 fifo/SLICE_417 (from WrClock)
+ROUTE        16     0.142     R20C24D.Q0 to     R18C24C.D0 fifo/n3026
+ZERO_DEL    ---     0.000     R18C24C.D0 to  R18C24C.WADO3 fifo/fifo_pfu_11_1
+ROUTE         2     0.000  R18C24C.WADO3 to   R18C24B.WAD3 fifo/fifo_pfu_11_1/WAD3_INT (to WrClock)
+                  --------
+                    0.275   (48.4% logic, 51.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_417:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R20C24D.CLK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/fifo_pfu_11_1.10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R18C24B.WCK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.144ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_95_rep_47  (from WrClock +)
+   Destination:    FF         Data in        fifo/fifo_pfu_23_1/RAM1  (to WrClock +)
+                   FF                        fifo/fifo_pfu_23_1/RAM1
+
+   Delay:               0.275ns  (48.4% logic, 51.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.275ns physical path delay fifo/SLICE_417 to fifo/fifo_pfu_23_1 meets
+      0.131ns WAD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.144ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_417 to fifo/fifo_pfu_23_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R20C24D.CLK to     R20C24D.Q1 fifo/SLICE_417 (from WrClock)
+ROUTE        16     0.142     R20C24D.Q1 to     R20C25C.C0 fifo/n3028
+ZERO_DEL    ---     0.000     R20C25C.C0 to  R20C25C.WADO2 fifo/fifo_pfu_23_1.62
+ROUTE         2     0.000  R20C25C.WADO2 to   R20C25B.WAD2 fifo/fifo_pfu_23_1/WAD2_INT (to WrClock)
+                  --------
+                    0.275   (48.4% logic, 51.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_417:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R20C24D.CLK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/fifo_pfu_23_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R20C25B.WCK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.144ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_94_rep_45  (from WrClock +)
+   Destination:    FF         Data in        fifo/fifo_pfu_3_1/RAM1  (to WrClock +)
+                   FF                        fifo/fifo_pfu_3_1/RAM1
+
+   Delay:               0.275ns  (48.4% logic, 51.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.275ns physical path delay fifo/SLICE_417 to fifo/fifo_pfu_3_1.103 meets
+      0.131ns WAD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.144ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_417 to fifo/fifo_pfu_3_1.103:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R20C24D.CLK to     R20C24D.Q0 fifo/SLICE_417 (from WrClock)
+ROUTE        16     0.142     R20C24D.Q0 to     R19C24C.D0 fifo/n3026
+ZERO_DEL    ---     0.000     R19C24C.D0 to  R19C24C.WADO3 fifo/fifo_pfu_3_1
+ROUTE         2     0.000  R19C24C.WADO3 to   R19C24B.WAD3 fifo/fifo_pfu_3_1/WAD3_INT (to WrClock)
+                  --------
+                    0.275   (48.4% logic, 51.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_417:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R20C24D.CLK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/fifo_pfu_3_1.103:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R19C24B.WCK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.144ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_94_rep_45  (from WrClock +)
+   Destination:    FF         Data in        fifo/fifo_pfu_3_1/RAM0  (to WrClock +)
+                   FF                        fifo/fifo_pfu_3_1/RAM0
+
+   Delay:               0.275ns  (48.4% logic, 51.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.275ns physical path delay fifo/SLICE_417 to fifo/fifo_pfu_3_1.102 meets
+      0.131ns WAD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.144ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_417 to fifo/fifo_pfu_3_1.102:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R20C24D.CLK to     R20C24D.Q0 fifo/SLICE_417 (from WrClock)
+ROUTE        16     0.142     R20C24D.Q0 to     R19C24C.D0 fifo/n3026
+ZERO_DEL    ---     0.000     R19C24C.D0 to  R19C24C.WADO3 fifo/fifo_pfu_3_1
+ROUTE         2     0.000  R19C24C.WADO3 to   R19C24A.WAD3 fifo/fifo_pfu_3_1/WAD3_INT (to WrClock)
+                  --------
+                    0.275   (48.4% logic, 51.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_417:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R20C24D.CLK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/fifo_pfu_3_1.102:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R19C24A.WCK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.144ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_94_rep_45  (from WrClock +)
+   Destination:    FF         Data in        fifo/fifo_pfu_11_1/RAM0  (to WrClock +)
+                   FF                        fifo/fifo_pfu_11_1/RAM0
+
+   Delay:               0.275ns  (48.4% logic, 51.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.275ns physical path delay fifo/SLICE_417 to fifo/fifo_pfu_11_1.11 meets
+      0.131ns WAD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.144ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_417 to fifo/fifo_pfu_11_1.11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R20C24D.CLK to     R20C24D.Q0 fifo/SLICE_417 (from WrClock)
+ROUTE        16     0.142     R20C24D.Q0 to     R18C24C.D0 fifo/n3026
+ZERO_DEL    ---     0.000     R18C24C.D0 to  R18C24C.WADO3 fifo/fifo_pfu_11_1
+ROUTE         2     0.000  R18C24C.WADO3 to   R18C24A.WAD3 fifo/fifo_pfu_11_1/WAD3_INT (to WrClock)
+                  --------
+                    0.275   (48.4% logic, 51.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_417:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R20C24D.CLK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/fifo_pfu_11_1.11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R18C24A.WCK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.144ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_95_rep_47  (from WrClock +)
+   Destination:    FF         Data in        fifo/fifo_pfu_23_1/RAM0  (to WrClock +)
+                   FF                        fifo/fifo_pfu_23_1/RAM0
+
+   Delay:               0.275ns  (48.4% logic, 51.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.275ns physical path delay fifo/SLICE_417 to fifo/fifo_pfu_23_1.63 meets
+      0.131ns WAD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.144ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_417 to fifo/fifo_pfu_23_1.63:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R20C24D.CLK to     R20C24D.Q1 fifo/SLICE_417 (from WrClock)
+ROUTE        16     0.142     R20C24D.Q1 to     R20C25C.C0 fifo/n3028
+ZERO_DEL    ---     0.000     R20C25C.C0 to  R20C25C.WADO2 fifo/fifo_pfu_23_1.62
+ROUTE         2     0.000  R20C25C.WADO2 to   R20C25A.WAD2 fifo/fifo_pfu_23_1/WAD2_INT (to WrClock)
+                  --------
+                    0.275   (48.4% logic, 51.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to fifo/SLICE_417:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R20C24D.CLK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/fifo_pfu_23_1.63:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R20C25A.WCK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.145ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i_ascii_i0_i3  (from WrClock +)
+   Destination:    FF         Data in        fifo/fifo_pfu_16_1/RAM1  (to WrClock +)
+                   FF                        fifo/fifo_pfu_16_1/RAM1
+
+   Delay:               0.276ns  (48.2% logic, 51.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.276ns physical path delay SLICE_308 to fifo/fifo_pfu_16_1 meets
+      0.131ns WD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.145ns
+
+ Physical Path Details:
+
+      Data path SLICE_308 to fifo/fifo_pfu_16_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R21C30D.CLK to     R21C30D.Q0 SLICE_308 (from WrClock)
+ROUTE        32     0.143     R21C30D.Q0 to     R21C31C.D1 i_ascii_3
+ZERO_DEL    ---     0.000     R21C31C.D1 to   R21C31C.WDO3 fifo/fifo_pfu_16_1.30
+ROUTE         1     0.000   R21C31C.WDO3 to    R21C31B.WD1 fifo/fifo_pfu_16_1/WD3_INT (to WrClock)
+                  --------
+                    0.276   (48.2% logic, 51.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path OSCInst0 to SLICE_308:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R21C30D.CLK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path OSCInst0 to fifo/fifo_pfu_16_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       240     1.125        OSC.OSC to    R21C31B.WCK WrClock
+                  --------
+                    1.125   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "WrClock" 14.000000 MHz ; |     0.000 ns|     0.140 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: WrClock   Source: OSCInst0.OSC   Loads: 240
+   Covered under: FREQUENCY NET "WrClock" 14.000000 MHz ;
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 4162 paths, 1 nets, and 4373 connections (100.00% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

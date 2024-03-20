@@ -1,0 +1,26 @@
+<BaliSimProject version="1.3" path="." stage="0" language="-1" name="Sim_CPLD" simType="ModelSim">
+    <Source worklib="work" path="src/comparator.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/comparator_tb.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/lfsr.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/lfsr_tb.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/voter.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/fanout.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/lfsrTMR.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/lfsrTMR_tb.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/comparatorTMR.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/b13.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/single_unit.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/single_unit_tb.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/UART_RX.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/UART_TX.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/FIFO2UART.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/Bench_top.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="b13fifo.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/uart_top.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="CPLD_rad_tb.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="src/top_tb.vhd" type="VHDL" include="none"/>
+    <SimLib value="pmi_work ovi_machxo3d"/>
+    <GlbInc value=""/>
+    <Macro value=""/>
+    <TopModule instance="" language="VHDL" name="comparator_tb"/>
+</BaliSimProject>

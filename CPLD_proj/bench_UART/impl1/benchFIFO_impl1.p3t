@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "benchFIFO_impl1.log"
+-o "benchFIFO_impl1.csv"
+-pr "benchFIFO_impl1.prf"

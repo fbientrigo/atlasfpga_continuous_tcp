@@ -1,0 +1,325 @@
+# Reading pref.tcl
+# Loading project cpld_rad_rst_SIM
+# Compile of b13fifo.vhd was successful.
+# Compile of CPLD_rad_tb.vhd failed with 3 errors.
+# Compile of rst_logic.vhd was successful.
+# Compile of b13.vhd was successful.
+# Compile of Bench_top.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of comparatorTMR.vhd was successful.
+# Compile of fanout.vhd was successful.
+# Compile of FIFO2UART.vhd was successful.
+# Compile of lfsr.vhd was successful.
+# Compile of lfsrTMR.vhd was successful.
+# Compile of single_unit.vhd was successful.
+# Compile of UART_RX.vhd was successful.
+# Compile of uart_top.vhd was successful.
+# Compile of UART_TX.vhd was successful.
+# Compile of voter.vhd was successful.
+# 16 compiles, 1 failed with 3 errors.
+# Compile of b13fifo.vhd was successful.
+# Compile of CPLD_rad_tb.vhd was successful.
+# Compile of rst_logic.vhd was successful.
+# Compile of b13.vhd was successful.
+# Compile of Bench_top.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of comparatorTMR.vhd was successful.
+# Compile of fanout.vhd was successful.
+# Compile of FIFO2UART.vhd was successful.
+# Compile of lfsr.vhd was successful.
+# Compile of lfsrTMR.vhd was successful.
+# Compile of single_unit.vhd was successful.
+# Compile of UART_RX.vhd was successful.
+# Compile of uart_top.vhd was successful.
+# Compile of UART_TX.vhd was successful.
+# Compile of voter.vhd was successful.
+# 16 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 17:10:44 on Nov 01,2022
+# //  ModelSim - Lattice FPGA Edition 2020.3 Oct 14 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim - Lattice FPGA Edition and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(tb)
+# Loading work.uart_top(behavioral)
+# Loading machxo3d.OSCJ
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading machxo3d.olvds(v)
+# Loading work.rst_logic(behav)
+# Loading machxo3d.components(body)
+# Loading work.b13fifo(structure)
+# Loading machxo3d.and2(v)
+# Loading machxo3d.inv(v)
+# Loading machxo3d.or2(v)
+# Loading machxo3d.xor2(v)
+# Loading machxo3d.mem2(body)
+# Loading machxo3d.rom16x1a(v)
+# Loading machxo3d.global(body)
+# Loading machxo3d.fd1p3bx(v)
+# Loading machxo3d.fd1p3dx(v)
+# Loading machxo3d.fd1s3dx(v)
+# Loading machxo3d.fd1s3bx(v)
+# Loading machxo3d.fadd2b(v)
+# Loading machxo3d.cu2(v)
+# Loading machxo3d.buf(v)
+# Loading machxo3d.vhi(v)
+# Loading machxo3d.mux161(v)
+# Loading machxo3d.ageb2(v)
+# Loading machxo3d.vlo(v)
+# Loading machxo3d.mem1(body)
+# Loading machxo3d.dpr16x4c(v)
+# Loading work.bench_top(behavioral)
+# Loading work.lfsrtmr(behavioral)
+# Loading work.fanout(behavioral)
+# Loading work.lfsr(behavioral)
+# Loading work.voter(behavioral)
+# Loading work.single_unit(behavioral)
+# Loading work.b13(behav)
+# Loading work.comparatortmr(behavioral)
+# Loading work.comparator(behavioral)
+# Loading work.fifo2uart(behavioral)
+# Loading work.uart_tx(rtl)
+# Loading work.uart_rx(rtl)
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/clk
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/comp_out
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/comparator_b13
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/flag_finish_b13
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/flag_rstb13_done
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/i_ascii
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/i_Timer/bench_b13
+run
+run
+run
+run
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35710 ps  Iteration: 2  Instance: /testbench/i_Timer/bench_b13
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/osc_int
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/pause_LFSR
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/rst_b13
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/Uart_tx_P
+run -continue
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/i_Timer/bench_b13
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35710 ps  Iteration: 2  Instance: /testbench/i_Timer/bench_b13
+run -all
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/neg_stop_logic
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/Neg_enable_fifo
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/i_Timer/bench_b13
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35710 ps  Iteration: 2  Instance: /testbench/i_Timer/bench_b13
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/ST_fifo_handler
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/i_Timer/bench_b13
+run -continue
+run -continue
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35710 ps  Iteration: 2  Instance: /testbench/i_Timer/bench_b13
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/i_f_wr_en
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/i_fifo_full
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/o_fifo_full
+# Compile of b13fifo.vhd was successful.
+# Compile of CPLD_rad_tb.vhd was successful.
+# Compile of rst_logic.vhd was successful.
+# Compile of b13.vhd was successful.
+# Compile of Bench_top.vhd was successful.
+# Compile of comparator.vhd was successful.
+# Compile of comparatorTMR.vhd was successful.
+# Compile of fanout.vhd was successful.
+# Compile of FIFO2UART.vhd was successful.
+# Compile of lfsr.vhd was successful.
+# Compile of lfsrTMR.vhd was successful.
+# Compile of single_unit.vhd was successful.
+# Compile of UART_RX.vhd was successful.
+# Compile of uart_top.vhd was successful.
+# Compile of UART_TX.vhd was successful.
+# Compile of voter.vhd was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.testbench(tb)
+# Loading work.uart_top(behavioral)
+# Loading work.rst_logic(behav)
+# Loading work.b13fifo(structure)
+# Loading work.bench_top(behavioral)
+# Loading work.lfsrtmr(behavioral)
+# Loading work.fanout(behavioral)
+# Loading work.lfsr(behavioral)
+# Loading work.voter(behavioral)
+# Loading work.single_unit(behavioral)
+# Loading work.b13(behav)
+# Loading work.comparatortmr(behavioral)
+# Loading work.comparator(behavioral)
+# Loading work.fifo2uart(behavioral)
+# Loading work.uart_tx(rtl)
+# Loading work.uart_rx(rtl)
+run -continue
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/i_Timer/bench_b13
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35710 ps  Iteration: 2  Instance: /testbench/i_Timer/bench_b13
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/fifoUart/baud_rate \
+sim:/testbench/i_Timer/fifoUart/clk \
+sim:/testbench/i_Timer/fifoUart/counter_delay_tx \
+sim:/testbench/i_Timer/fifoUart/delay_limit \
+sim:/testbench/i_Timer/fifoUart/end_one_byte \
+sim:/testbench/i_Timer/fifoUart/f_empty \
+sim:/testbench/i_Timer/fifoUart/f_full \
+sim:/testbench/i_Timer/fifoUart/f_rd_en \
+sim:/testbench/i_Timer/fifoUart/f_wr_en \
+sim:/testbench/i_Timer/fifoUart/fifo_out \
+sim:/testbench/i_Timer/fifoUart/freq_clk \
+sim:/testbench/i_Timer/fifoUart/i_ascii \
+sim:/testbench/i_Timer/fifoUart/i_f_wr_en \
+sim:/testbench/i_Timer/fifoUart/i_fifo_dout \
+sim:/testbench/i_Timer/fifoUart/i_fifo_empty \
+sim:/testbench/i_Timer/fifoUart/i_fifo_full \
+sim:/testbench/i_Timer/fifoUart/i_UART_Rx \
+sim:/testbench/i_Timer/fifoUart/o_fifo_din \
+sim:/testbench/i_Timer/fifoUart/o_fifo_full \
+sim:/testbench/i_Timer/fifoUart/o_fifo_rd_en \
+sim:/testbench/i_Timer/fifoUart/o_fifo_wr_en \
+sim:/testbench/i_Timer/fifoUart/o_rst_fifo \
+sim:/testbench/i_Timer/fifoUart/o_serial_out \
+sim:/testbench/i_Timer/fifoUart/o_UART_Tx \
+sim:/testbench/i_Timer/fifoUart/rst \
+sim:/testbench/i_Timer/fifoUart/States_tx \
+sim:/testbench/i_Timer/fifoUart/U_rx_dv \
+sim:/testbench/i_Timer/fifoUart/U_tx_active \
+sim:/testbench/i_Timer/fifoUart/U_tx_done \
+sim:/testbench/i_Timer/fifoUart/U_tx_dv
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/i_Timer/bench_b13
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35710 ps  Iteration: 2  Instance: /testbench/i_Timer/bench_b13
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/i_f_wr_en \
+sim:/testbench/i_Timer/i_fifo_dout \
+sim:/testbench/i_Timer/i_fifo_empty \
+sim:/testbench/i_Timer/i_fifo_full
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/o_fifo_din \
+sim:/testbench/i_Timer/o_fifo_full \
+sim:/testbench/i_Timer/o_fifo_rd_en \
+sim:/testbench/i_Timer/o_fifo_wr_en \
+sim:/testbench/i_Timer/o_rst_fifo \
+sim:/testbench/i_Timer/o_serial_out
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/rst \
+sim:/testbench/i_Timer/rst_comp \
+sim:/testbench/i_Timer/rst_counter \
+sim:/testbench/i_Timer/rst_i
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/i_Timer/bench_b13
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35710 ps  Iteration: 2  Instance: /testbench/i_Timer/bench_b13
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/o_fifo_rd_en
+add wave -position insertpoint  \
+sim:/testbench/i_Timer/end_one_byte
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/i_Timer/bench_b13
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35710 ps  Iteration: 2  Instance: /testbench/i_Timer/bench_b13
+# End time: 18:06:57 on Nov 01,2022, Elapsed time: 0:56:13
+# Errors: 0, Warnings: 3

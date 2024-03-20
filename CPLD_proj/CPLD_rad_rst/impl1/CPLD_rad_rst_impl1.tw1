@@ -1,0 +1,217 @@
+
+Loading design for application trce from file cpld_rad_rst_impl1_map.ncd.
+Design name: uart_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-9400HC
+Package:     CABGA484
+Performance: 6
+Loading device for application trce from file 'se5c9400.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 7.
+Performance Hardware Data Status:   Final          Version 2.2.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
+Thu Nov 03 11:42:19 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CPLD_rad_rst_impl1.tw1 -gui -msgset C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/promote.xml CPLD_rad_rst_impl1_map.ncd CPLD_rad_rst_impl1.prf 
+Design file:     cpld_rad_rst_impl1_map.ncd
+Preference file: cpld_rad_rst_impl1.prf
+Device,speed:    LCMXO3D-9400HC,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "osc_int" 14.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 61.404ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bench_b13/LFSR1/LA/i_q__i7  (from osc_int +)
+   Destination:    FF         Data in        rst_req_188  (to osc_int +)
+
+   Delay:               9.459ns  (39.5% logic, 60.5% route), 9 logic levels.
+
+ Constraint Details:
+
+      9.459ns physical path delay bench_b13/SLICE_3636 to SLICE_3762 meets
+     71.429ns delay constraint less
+      0.566ns LSRREC_SET requirement (totaling 70.863ns) by 61.404ns
+
+ Physical Path Details:
+
+      Data path bench_b13/SLICE_3636 to SLICE_3762:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.368 *LICE_3636.CLK to *SLICE_3636.Q1 bench_b13/SLICE_3636 (from osc_int)
+ROUTE         6   e 0.896 *SLICE_3636.Q1 to *3/SLICE_48.A1 bench_b13/LFSR1/qA_7
+C1TOFCO_DE  ---     0.687 *3/SLICE_48.A1 to */SLICE_48.FCO bench_b13/SLICE_48
+ROUTE         1   e 0.001 */SLICE_48.FCO to */SLICE_47.FCI bench_b13/LFSR1/V1/n49515
+FCITOFCO_D  ---     0.130 */SLICE_47.FCI to */SLICE_47.FCO bench_b13/SLICE_47
+ROUTE         1   e 0.001 */SLICE_47.FCO to */SLICE_46.FCI bench_b13/LFSR1/V1/n49516
+FCITOF1_DE  ---     0.497 */SLICE_46.FCI to *3/SLICE_46.F1 bench_b13/SLICE_46
+ROUTE         1   e 0.896 *3/SLICE_46.F1 to *SLICE_3921.C0 bench_b13/LFSR1/V1/n18761
+CTOF_DEL    ---     0.410 *SLICE_3921.C0 to *SLICE_3921.F0 bench_b13/SLICE_3921
+ROUTE         2   e 0.349 *SLICE_3921.F0 to *SLICE_3921.C1 lfsr_err_N_207
+CTOF_DEL    ---     0.410 *SLICE_3921.C1 to *SLICE_3921.F1 bench_b13/SLICE_3921
+ROUTE         1   e 0.896 *SLICE_3921.F1 to *SLICE_3966.B0 bench_b13/GEN_SUNIT_31..SUX/COMP_1/CA/n48
+CTOF_DEL    ---     0.410 *SLICE_3966.B0 to *SLICE_3966.F0 bench_b13/SLICE_3966
+ROUTE         1   e 0.896 *SLICE_3966.F0 to *SLICE_3964.B0 bench_b13/GEN_SUNIT_31..SUX/COMP_1/CA/n54
+CTOF_DEL    ---     0.410 *SLICE_3964.B0 to *SLICE_3964.F0 bench_b13/SLICE_3964
+ROUTE         1   e 0.896 *SLICE_3964.F0 to *SLICE_3963.A0 bench_b13/GEN_SUNIT_31..SUX/COMP_1/CA/n54213
+CTOF_DEL    ---     0.410 *SLICE_3963.A0 to *SLICE_3963.F0 bench_b13/SLICE_3963
+ROUTE         1   e 0.896 *SLICE_3963.F0 to SLICE_3762.LSR rst_comp (to osc_int)
+                  --------
+                    9.459   (39.5% logic, 60.5% route), 9 logic levels.
+
+Report:   99.751MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "osc_int" 14.000000 MHz ; |   14.000 MHz|   99.751 MHz|   9  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: osc_int   Source: OSCInst0.OSC   Loads: 3201
+   Covered under: FREQUENCY NET "osc_int" 14.000000 MHz ;
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 33992 paths, 1 nets, and 26167 connections (99.97% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
+Thu Nov 03 11:42:20 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CPLD_rad_rst_impl1.tw1 -gui -msgset C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/promote.xml CPLD_rad_rst_impl1_map.ncd CPLD_rad_rst_impl1.prf 
+Design file:     cpld_rad_rst_impl1_map.ncd
+Preference file: cpld_rad_rst_impl1.prf
+Device,speed:    LCMXO3D-9400HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "osc_int" 14.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.349ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bench_b13/GEN_SUNIT_2..SUX/B13_1/next_bit_FSM__i6  (from osc_int +)
+   Destination:    FF         Data in        bench_b13/GEN_SUNIT_2..SUX/B13_1/next_bit_FSM__i7  (to osc_int +)
+
+   Delay:               0.330ns  (39.7% logic, 60.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.330ns physical path delay SLICE_14 to SLICE_14 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.349ns
+
+ Physical Path Details:
+
+      Data path SLICE_14 to SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.131   SLICE_14.CLK to    SLICE_14.Q0 SLICE_14 (from osc_int)
+ROUTE         3   e 0.199    SLICE_14.Q0 to    SLICE_14.M1 bench_b13/GEN_SUNIT_2..SUX/B13_1/n1953 (to osc_int)
+                  --------
+                    0.330   (39.7% logic, 60.3% route), 1 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "osc_int" 14.000000 MHz ; |     0.000 ns|     0.349 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: osc_int   Source: OSCInst0.OSC   Loads: 3201
+   Covered under: FREQUENCY NET "osc_int" 14.000000 MHz ;
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 33992 paths, 1 nets, and 26167 connections (99.97% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

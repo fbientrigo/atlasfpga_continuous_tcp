@@ -1,0 +1,1640 @@
+---------------------------------------------------
+Report for cell uart_top
+   Instance path: uart_top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    2940.00        100.0
+                                  LUT4	    4015.00        100.0
+                               DISTRAM	      96.00        100.0
+                                 IOBUF	          2        100.0
+                                PFUREG	       3890        100.0
+                                RIPPLE	        625        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                          rst_logic(8)	          1         0.0
+            fifo2Uart(115200,14000000)	          1         1.1
+                               b13fifo	          1         5.7
+        Bench_top(8,8,"01100001")(0,7)	          1        91.2
+---------------------------------------------------
+Report for cell rst_logic(8)
+   Instance path: uart_top/Reset_Logic
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.0
+                                  LUT4	       2.00         0.0
+---------------------------------------------------
+Report for cell fifo2Uart(115200,14000000)
+   Instance path: uart_top/fifoUart
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      31.00         1.1
+                                  LUT4	      49.00         1.2
+                                PFUREG	         34         0.9
+                                RIPPLE	          4         0.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              UART_TX(115200,14000000)	          1         0.6
+---------------------------------------------------
+Report for cell UART_TX(115200,14000000)
+   Instance path: uart_top/fifoUart/uart_tx_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      16.33         0.6
+                                  LUT4	      20.00         0.5
+                                PFUREG	         23         0.6
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell Bench_top(8,8,"01100001")(0,7)
+   Instance path: uart_top/bench_b13
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    2682.60        91.2
+                                  LUT4	    3614.00        90.0
+                                PFUREG	       3688        94.8
+                                RIPPLE	        585        93.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                      single_unit_U137	          1         3.2
+                      single_unit_U139	          1         3.2
+                      single_unit_U138	          1         3.2
+                      single_unit_U133	          1         3.3
+                      single_unit_U135	          1         3.2
+                      single_unit_U136	          1         3.3
+                      single_unit_U134	          1         3.2
+                           single_unit	          1         3.1
+              lfsrTMR("01100001")(0,7)	          1         0.6
+                      B13_duo_TMR_U141	          1         8.1
+                      B13_duo_TMR_U145	          1         8.0
+                      B13_duo_TMR_U146	          1         8.2
+                      B13_duo_TMR_U143	          1         8.1
+                      B13_duo_TMR_U144	          1         8.0
+                      B13_duo_TMR_U142	          1         8.0
+                           B13_duo_TMR	          1         8.1
+                      B13_duo_TMR_U140	          1         8.0
+---------------------------------------------------
+Report for cell lfsrTMR("01100001")(0,7)
+   Instance path: uart_top/bench_b13/LFSR1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      17.42         0.6
+                                  LUT4	      30.00         0.7
+                                PFUREG	         24         0.6
+                                RIPPLE	          9         1.4
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                              voter(8)	          1         0.2
+                  lfsr("01100001")_U79	          1         0.1
+                      lfsr("01100001")	          1         0.1
+                  lfsr("01100001")_U78	          1         0.1
+---------------------------------------------------
+Report for cell voter(8)
+   Instance path: uart_top/bench_b13/LFSR1/V1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       6.17         0.2
+                                  LUT4	      12.00         0.3
+                                RIPPLE	          9         1.4
+---------------------------------------------------
+Report for cell lfsr("01100001")
+   Instance path: uart_top/bench_b13/LFSR1/LC
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.75         0.1
+                                  LUT4	       6.00         0.1
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell lfsr("01100001")_U78
+   Instance path: uart_top/bench_b13/LFSR1/LB
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.75         0.1
+                                  LUT4	       6.00         0.1
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell lfsr("01100001")_U79
+   Instance path: uart_top/bench_b13/LFSR1/LA
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.75         0.1
+                                  LUT4	       6.00         0.1
+                                PFUREG	          8         0.2
+---------------------------------------------------
+Report for cell single_unit
+   Instance path: uart_top/bench_b13/GEN_SUNIT_7..SUX
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      92.33         3.1
+                                  LUT4	     104.33         2.6
+                                PFUREG	        139         3.6
+                                RIPPLE	         24         3.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     comparatorTMR(10)	          1         0.1
+                               b13_U80	          1         1.3
+                               b13_U81	          1         1.4
+---------------------------------------------------
+Report for cell comparatorTMR(10)
+   Instance path: uart_top/bench_b13/GEN_SUNIT_7..SUX/COMP_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.33         0.1
+                                  LUT4	       1.33         0.0
+                                RIPPLE	          4         0.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                        comparator(10)	          1         0.1
+---------------------------------------------------
+Report for cell comparator(10)
+   Instance path: uart_top/bench_b13/GEN_SUNIT_7..SUX/COMP_1/CA
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.33         0.1
+                                  LUT4	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U80
+   Instance path: uart_top/bench_b13/GEN_SUNIT_7..SUX/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.58         1.3
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U81
+   Instance path: uart_top/bench_b13/GEN_SUNIT_7..SUX/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      41.42         1.4
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell single_unit_U133
+   Instance path: uart_top/bench_b13/GEN_SUNIT_6..SUX
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      96.25         3.3
+                                  LUT4	     103.00         2.6
+                                PFUREG	        139         3.6
+                                RIPPLE	         24         3.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                 comparatorTMR(10)_U82	          1         0.1
+                               b13_U84	          1         1.4
+                               b13_U83	          1         1.4
+---------------------------------------------------
+Report for cell comparatorTMR(10)_U82
+   Instance path: uart_top/bench_b13/GEN_SUNIT_6..SUX/COMP_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.1
+                                RIPPLE	          4         0.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     comparator(10)_U0	          1         0.1
+---------------------------------------------------
+Report for cell comparator(10)_U0
+   Instance path: uart_top/bench_b13/GEN_SUNIT_6..SUX/COMP_1/CA
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U83
+   Instance path: uart_top/bench_b13/GEN_SUNIT_6..SUX/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      42.33         1.4
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U84
+   Instance path: uart_top/bench_b13/GEN_SUNIT_6..SUX/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      42.42         1.4
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell single_unit_U134
+   Instance path: uart_top/bench_b13/GEN_SUNIT_5..SUX
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      95.33         3.2
+                                  LUT4	     103.00         2.6
+                                PFUREG	        139         3.6
+                                RIPPLE	         24         3.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                 comparatorTMR(10)_U85	          1         0.1
+                               b13_U87	          1         1.4
+                               b13_U86	          1         1.5
+---------------------------------------------------
+Report for cell comparatorTMR(10)_U85
+   Instance path: uart_top/bench_b13/GEN_SUNIT_5..SUX/COMP_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.1
+                                RIPPLE	          4         0.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     comparator(10)_U1	          1         0.1
+---------------------------------------------------
+Report for cell comparator(10)_U1
+   Instance path: uart_top/bench_b13/GEN_SUNIT_5..SUX/COMP_1/CA
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U86
+   Instance path: uart_top/bench_b13/GEN_SUNIT_5..SUX/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      42.92         1.5
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U87
+   Instance path: uart_top/bench_b13/GEN_SUNIT_5..SUX/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      41.75         1.4
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell single_unit_U135
+   Instance path: uart_top/bench_b13/GEN_SUNIT_4..SUX
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      95.17         3.2
+                                  LUT4	     103.00         2.6
+                                PFUREG	        139         3.6
+                                RIPPLE	         24         3.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                 comparatorTMR(10)_U88	          1         0.1
+                               b13_U89	          1         1.4
+                               b13_U90	          1         1.4
+---------------------------------------------------
+Report for cell comparatorTMR(10)_U88
+   Instance path: uart_top/bench_b13/GEN_SUNIT_4..SUX/COMP_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.1
+                                RIPPLE	          4         0.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     comparator(10)_U2	          1         0.1
+---------------------------------------------------
+Report for cell comparator(10)_U2
+   Instance path: uart_top/bench_b13/GEN_SUNIT_4..SUX/COMP_1/CA
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U89
+   Instance path: uart_top/bench_b13/GEN_SUNIT_4..SUX/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      41.42         1.4
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U90
+   Instance path: uart_top/bench_b13/GEN_SUNIT_4..SUX/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      42.58         1.4
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell single_unit_U136
+   Instance path: uart_top/bench_b13/GEN_SUNIT_3..SUX
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      97.17         3.3
+                                  LUT4	     104.33         2.6
+                                PFUREG	        139         3.6
+                                RIPPLE	         24         3.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                 comparatorTMR(10)_U91	          1         0.1
+                               b13_U93	          1         1.5
+                               b13_U92	          1         1.4
+---------------------------------------------------
+Report for cell comparatorTMR(10)_U91
+   Instance path: uart_top/bench_b13/GEN_SUNIT_3..SUX/COMP_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.83         0.1
+                                  LUT4	       1.33         0.0
+                                RIPPLE	          4         0.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     comparator(10)_U3	          1         0.1
+---------------------------------------------------
+Report for cell comparator(10)_U3
+   Instance path: uart_top/bench_b13/GEN_SUNIT_3..SUX/COMP_1/CA
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.83         0.1
+                                  LUT4	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U92
+   Instance path: uart_top/bench_b13/GEN_SUNIT_3..SUX/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      41.92         1.4
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U93
+   Instance path: uart_top/bench_b13/GEN_SUNIT_3..SUX/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      43.25         1.5
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell single_unit_U137
+   Instance path: uart_top/bench_b13/GEN_SUNIT_2..SUX
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      94.50         3.2
+                                  LUT4	     103.00         2.6
+                                PFUREG	        139         3.6
+                                RIPPLE	         24         3.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                 comparatorTMR(10)_U94	          1         0.0
+                               b13_U96	          1         1.4
+                               b13_U95	          1         1.4
+---------------------------------------------------
+Report for cell comparatorTMR(10)_U94
+   Instance path: uart_top/bench_b13/GEN_SUNIT_2..SUX/COMP_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     comparator(10)_U4	          1         0.0
+---------------------------------------------------
+Report for cell comparator(10)_U4
+   Instance path: uart_top/bench_b13/GEN_SUNIT_2..SUX/COMP_1/CA
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U95
+   Instance path: uart_top/bench_b13/GEN_SUNIT_2..SUX/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      41.75         1.4
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U96
+   Instance path: uart_top/bench_b13/GEN_SUNIT_2..SUX/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      41.42         1.4
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell single_unit_U138
+   Instance path: uart_top/bench_b13/GEN_SUNIT_1..SUX
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      93.33         3.2
+                                  LUT4	     103.00         2.6
+                                PFUREG	        139         3.6
+                                RIPPLE	         24         3.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                 comparatorTMR(10)_U97	          1         0.1
+                               b13_U98	          1         1.3
+                               b13_U99	          1         1.4
+---------------------------------------------------
+Report for cell comparatorTMR(10)_U97
+   Instance path: uart_top/bench_b13/GEN_SUNIT_1..SUX/COMP_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     comparator(10)_U5	          1         0.1
+---------------------------------------------------
+Report for cell comparator(10)_U5
+   Instance path: uart_top/bench_b13/GEN_SUNIT_1..SUX/COMP_1/CA
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U98
+   Instance path: uart_top/bench_b13/GEN_SUNIT_1..SUX/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.58         1.3
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U99
+   Instance path: uart_top/bench_b13/GEN_SUNIT_1..SUX/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      42.08         1.4
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell single_unit_U139
+   Instance path: uart_top/bench_b13/GEN_SUNIT_0..SUX
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      94.52         3.2
+                                  LUT4	     103.00         2.6
+                                PFUREG	        139         3.6
+                                RIPPLE	         24         3.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                comparatorTMR(10)_U100	          1         0.1
+                              b13_U101	          1         1.4
+                              b13_U102	          1         1.5
+---------------------------------------------------
+Report for cell comparatorTMR(10)_U100
+   Instance path: uart_top/bench_b13/GEN_SUNIT_0..SUX/COMP_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     comparator(10)_U6	          1         0.1
+---------------------------------------------------
+Report for cell comparator(10)_U6
+   Instance path: uart_top/bench_b13/GEN_SUNIT_0..SUX/COMP_1/CA
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U101
+   Instance path: uart_top/bench_b13/GEN_SUNIT_0..SUX/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.58         1.4
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U102
+   Instance path: uart_top/bench_b13/GEN_SUNIT_0..SUX/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      42.93         1.5
+                                  LUT4	      51.00         1.3
+                                PFUREG	         59         1.5
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_TMR
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     239.00         8.1
+                                  LUT4	     350.67         8.7
+                                PFUREG	        318         8.2
+                                RIPPLE	         48         7.7
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                              voter(1)	          1         0.0
+                          B13_duo_U103	          1         2.7
+                          B13_duo_U104	          1         2.7
+                               B13_duo	          1         2.8
+---------------------------------------------------
+Report for cell voter(1)
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/V1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.25         0.0
+                                  LUT4	       1.00         0.0
+---------------------------------------------------
+Report for cell B13_duo
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_2..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      82.25         2.8
+                                  LUT4	     124.67         3.1
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     comparator(10)_U7	          1         0.2
+                                b13_U8	          1         1.3
+                                   b13	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U7
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_2..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.58         0.2
+                                  LUT4	      12.67         0.3
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_2..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.50         1.3
+                                  LUT4	      58.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U8
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_2..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.17         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U103
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_1..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      78.58         2.7
+                                  LUT4	     114.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     comparator(10)_U9	          1         0.0
+                               b13_U11	          1         1.3
+                               b13_U10	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U9
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_1..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U10
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_1..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.50         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U11
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_1..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.75         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U104
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_0..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      77.92         2.7
+                                  LUT4	     111.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U12	          1         0.0
+                               b13_U14	          1         1.3
+                               b13_U13	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U12
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_0..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U13
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_0..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.33         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U14
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_7..b13_gen/TMR_b13_0..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.25         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_TMR_U140
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     235.67         8.0
+                                  LUT4	     339.00         8.4
+                                PFUREG	        318         8.2
+                                RIPPLE	         48         7.7
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                         voter(1)_U105	          1         0.0
+                          B13_duo_U106	          1         2.7
+                          B13_duo_U108	          1         2.7
+                          B13_duo_U107	          1         2.6
+---------------------------------------------------
+Report for cell voter(1)_U105
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/V1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.25         0.0
+                                  LUT4	       5.00         0.1
+---------------------------------------------------
+Report for cell B13_duo_U106
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_2..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      77.92         2.7
+                                  LUT4	     111.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U15	          1         0.1
+                               b13_U17	          1         1.3
+                               b13_U16	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U15
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_2..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U16
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_2..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.58         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U17
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_2..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.83         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U107
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_1..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      77.17         2.6
+                                  LUT4	     111.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U18	          1         0.0
+                               b13_U20	          1         1.3
+                               b13_U19	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U18
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_1..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U19
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_1..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.00         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U20
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_1..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.83         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U108
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_0..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      79.33         2.7
+                                  LUT4	     112.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U21	          1         0.1
+                               b13_U23	          1         1.3
+                               b13_U22	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U21
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_0..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U22
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_0..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.25         1.3
+                                  LUT4	      55.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U23
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_6..b13_gen/TMR_b13_0..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.58         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_TMR_U141
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     238.92         8.1
+                                  LUT4	     334.00         8.3
+                                PFUREG	        318         8.2
+                                RIPPLE	         48         7.7
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                         voter(1)_U109	          1         0.0
+                          B13_duo_U111	          1         2.7
+                          B13_duo_U112	          1         2.7
+                          B13_duo_U110	          1         2.6
+---------------------------------------------------
+Report for cell voter(1)_U109
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/V1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.0
+                                  LUT4	       3.00         0.1
+---------------------------------------------------
+Report for cell B13_duo_U110
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_2..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      77.50         2.6
+                                  LUT4	     109.00         2.7
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U24	          1         0.1
+                               b13_U26	          1         1.3
+                               b13_U25	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U24
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_2..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U25
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_2..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.08         1.3
+                                  LUT4	      55.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U26
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_2..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.92         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U111
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_1..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      79.92         2.7
+                                  LUT4	     111.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U27	          1         0.1
+                               b13_U29	          1         1.3
+                               b13_U28	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U27
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_1..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U28
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_1..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.25         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U29
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_1..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.00         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U112
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_0..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      80.50         2.7
+                                  LUT4	     111.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U30	          1         0.1
+                               b13_U32	          1         1.3
+                               b13_U31	          1         1.4
+---------------------------------------------------
+Report for cell comparator(10)_U30
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_0..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U31
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_0..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.83         1.4
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U32
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_5..b13_gen/TMR_b13_0..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.17         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_TMR_U142
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     236.50         8.0
+                                  LUT4	     337.00         8.4
+                                PFUREG	        318         8.2
+                                RIPPLE	         48         7.7
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                         voter(1)_U113	          1         0.0
+                          B13_duo_U116	          1         2.7
+                          B13_duo_U114	          1         2.7
+                          B13_duo_U115	          1         2.7
+---------------------------------------------------
+Report for cell voter(1)_U113
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/V1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.75         0.0
+                                  LUT4	       2.00         0.0
+---------------------------------------------------
+Report for cell B13_duo_U114
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_2..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      78.25         2.7
+                                  LUT4	     109.00         2.7
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U33	          1         0.0
+                               b13_U35	          1         1.3
+                               b13_U34	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U33
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_2..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U34
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_2..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.25         1.3
+                                  LUT4	      55.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U35
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_2..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.67         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U115
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_1..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      78.67         2.7
+                                  LUT4	     112.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U36	          1         0.0
+                               b13_U38	          1         1.3
+                               b13_U37	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U36
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_1..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U37
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_1..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.92         1.3
+                                  LUT4	      55.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U38
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_1..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.42         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U116
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_0..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      78.83         2.7
+                                  LUT4	     114.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U39	          1         0.1
+                               b13_U41	          1         1.3
+                               b13_U40	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U39
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_0..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U40
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_0..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.08         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U41
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_4..b13_gen/TMR_b13_0..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.25         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_TMR_U143
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     238.83         8.1
+                                  LUT4	     352.00         8.8
+                                PFUREG	        318         8.2
+                                RIPPLE	         48         7.7
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                         voter(1)_U117	          1         0.0
+                          B13_duo_U119	          1         2.8
+                          B13_duo_U120	          1         2.7
+                          B13_duo_U118	          1         2.6
+---------------------------------------------------
+Report for cell voter(1)_U117
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/V1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.25         0.0
+                                  LUT4	       1.00         0.0
+---------------------------------------------------
+Report for cell B13_duo_U118
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_2..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      77.08         2.6
+                                  LUT4	     111.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U42	          1         0.1
+                               b13_U44	          1         1.3
+                               b13_U43	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U42
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_2..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.83         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U43
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_2..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.08         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U44
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_2..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.17         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U119
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_1..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      82.92         2.8
+                                  LUT4	     126.00         3.1
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U45	          1         0.2
+                               b13_U47	          1         1.3
+                               b13_U46	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U45
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_1..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.92         0.2
+                                  LUT4	      12.00         0.3
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U46
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_1..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.25         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U47
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_1..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.75         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U120
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_0..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      78.58         2.7
+                                  LUT4	     114.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U48	          1         0.1
+                               b13_U50	          1         1.3
+                               b13_U49	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U48
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_0..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U49
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_0..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.25         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U50
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_3..b13_gen/TMR_b13_0..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.83         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_TMR_U144
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     236.00         8.0
+                                  LUT4	     346.67         8.6
+                                PFUREG	        318         8.2
+                                RIPPLE	         48         7.7
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                         voter(1)_U121	          1         0.1
+                          B13_duo_U122	          1         2.6
+                          B13_duo_U124	          1         2.7
+                          B13_duo_U123	          1         2.6
+---------------------------------------------------
+Report for cell voter(1)_U121
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/V1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.58         0.1
+                                  LUT4	       4.67         0.1
+---------------------------------------------------
+Report for cell B13_duo_U122
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_2..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      77.83         2.6
+                                  LUT4	     114.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U51	          1         0.1
+                               b13_U53	          1         1.3
+                               b13_U52	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U51
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_2..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U52
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_2..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.83         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U53
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_2..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.50         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U123
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_1..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      77.67         2.6
+                                  LUT4	     114.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U54	          1         0.0
+                               b13_U56	          1         1.3
+                               b13_U55	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U54
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_1..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U55
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_1..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.00         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U56
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_1..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.33         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U124
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_0..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      78.92         2.7
+                                  LUT4	     114.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U57	          1         0.1
+                               b13_U59	          1         1.3
+                               b13_U58	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U57
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_0..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U58
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_0..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.33         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U59
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_2..b13_gen/TMR_b13_0..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.08         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_TMR_U145
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     235.00         8.0
+                                  LUT4	     341.00         8.5
+                                PFUREG	        318         8.2
+                                RIPPLE	         48         7.7
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                         voter(1)_U125	          1         0.1
+                          B13_duo_U127	          1         2.6
+                          B13_duo_U128	          1         2.6
+                          B13_duo_U126	          1         2.7
+---------------------------------------------------
+Report for cell voter(1)_U125
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/V1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.42         0.1
+                                  LUT4	       8.00         0.2
+---------------------------------------------------
+Report for cell B13_duo_U126
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_2..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      78.83         2.7
+                                  LUT4	     114.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U60	          1         0.0
+                               b13_U62	          1         1.3
+                               b13_U61	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U60
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_2..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U61
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_2..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.58         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U62
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_2..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.92         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U127
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_1..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      77.83         2.6
+                                  LUT4	     111.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U63	          1         0.0
+                               b13_U65	          1         1.3
+                               b13_U64	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U63
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_1..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U64
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_1..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.00         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U65
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_1..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.50         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U128
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_0..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      75.92         2.6
+                                  LUT4	     108.00         2.7
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U66	          1         0.1
+                               b13_U68	          1         1.3
+                               b13_U67	          1         1.2
+---------------------------------------------------
+Report for cell comparator(10)_U66
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_0..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.50         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U67
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_0..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      36.67         1.2
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U68
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_1..b13_gen/TMR_b13_0..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.75         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_TMR_U146
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     239.67         8.2
+                                  LUT4	     340.00         8.5
+                                PFUREG	        318         8.2
+                                RIPPLE	         48         7.7
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                         voter(1)_U129	          1         0.1
+                          B13_duo_U132	          1         2.8
+                          B13_duo_U130	          1         2.6
+                          B13_duo_U131	          1         2.7
+---------------------------------------------------
+Report for cell voter(1)_U129
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/V1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.25         0.1
+                                  LUT4	       8.00         0.2
+---------------------------------------------------
+Report for cell B13_duo_U130
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_2..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      77.08         2.6
+                                  LUT4	     108.00         2.7
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U69	          1         0.1
+                               b13_U71	          1         1.3
+                               b13_U70	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U69
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_2..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.83         0.1
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U70
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_2..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      36.92         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U71
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_2..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.33         1.3
+                                  LUT4	      54.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U131
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_1..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      79.17         2.7
+                                  LUT4	     110.00         2.7
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U72	          1         0.0
+                               b13_U74	          1         1.3
+                               b13_U73	          1         1.3
+---------------------------------------------------
+Report for cell comparator(10)_U72
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_1..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U73
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_1..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.25         1.3
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U74
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_1..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.58         1.3
+                                  LUT4	      53.00         1.3
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell B13_duo_U132
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_0..B13_duo_mod
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      81.17         2.8
+                                  LUT4	     114.00         2.8
+                                PFUREG	        106         2.7
+                                RIPPLE	         16         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    comparator(10)_U75	          1         0.0
+                               b13_U77	          1         1.4
+                               b13_U76	          1         1.4
+---------------------------------------------------
+Report for cell comparator(10)_U75
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_0..B13_duo_mod/Comp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.0
+                                RIPPLE	          4         0.6
+---------------------------------------------------
+Report for cell b13_U76
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_0..B13_duo_mod/B13_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.92         1.4
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13_U77
+   Instance path: uart_top/bench_b13/GEN_B13_TMR_0..b13_gen/TMR_b13_0..B13_duo_mod/B13_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.92         1.4
+                                  LUT4	      57.00         1.4
+                                PFUREG	         53         1.4
+                                RIPPLE	          6         1.0
+---------------------------------------------------
+Report for cell b13fifo
+   Instance path: uart_top/fifo
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     168.82         5.7
+                                  LUT4	     170.33         4.2
+                               DISTRAM	      96.00        100.0
+                                PFUREG	        100         2.6
+                                RIPPLE	         26         4.2

@@ -1,0 +1,22 @@
+C:/Users/victo/Desktop/Lattice_proj/monitor_clk/DRS_A_test.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/monitor_clk/DRS_A_test.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity DRS_A_test
+-- Compiling architecture Behavioral of DRS_A_test
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/monitor_clk/tb_monitor_clk.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/monitor_clk/tb_monitor_clk.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity tb_monitor_clk
+-- Compiling architecture behavioral of tb_monitor_clk
+-- Loading entity clk_monitor
+-- Loading entity DRS_A_test
+
+} {} {}}

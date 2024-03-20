@@ -1,0 +1,46 @@
+---------------------------------------------------
+Report for cell uart_top
+   Instance path: uart_top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     399.00        100.0
+                                  LUT4	     338.00        100.0
+                               DISTRAM	     192.00        100.0
+                                 IOBUF	          1        100.0
+                                PFUREG	        197        100.0
+                                RIPPLE	         36        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+            fifo2Uart(115200,14000000)	          1         7.7
+                               b13fifo	          1        84.4
+---------------------------------------------------
+Report for cell b13fifo
+   Instance path: uart_top/fifo
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     336.83        84.4
+                                  LUT4	     233.50        69.1
+                               DISTRAM	     192.00        100.0
+                                PFUREG	        126        64.0
+                                RIPPLE	         26        72.2
+---------------------------------------------------
+Report for cell fifo2Uart(115200,14000000)
+   Instance path: uart_top/fifoUart
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      30.67         7.7
+                                  LUT4	      49.00        14.5
+                                PFUREG	         34        17.3
+                                RIPPLE	          4        11.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              UART_TX(115200,14000000)	          1         4.1
+---------------------------------------------------
+Report for cell UART_TX(115200,14000000)
+   Instance path: uart_top/fifoUart/uart_tx_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      16.17         4.1
+                                  LUT4	      20.00         5.9
+                                PFUREG	         23        11.7
+                                RIPPLE	          4        11.1

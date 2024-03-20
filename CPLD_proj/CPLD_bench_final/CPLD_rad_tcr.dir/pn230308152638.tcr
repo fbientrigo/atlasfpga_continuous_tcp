@@ -1,0 +1,4 @@
+#Start recording tcl command: 3/8/2023 13:12:44
+#Project Location: C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final; Project name: CPLD_rad
+prj_project open "C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/CPLD_rad.ldf"
+#Stop recording: 3/8/2023 15:26:38

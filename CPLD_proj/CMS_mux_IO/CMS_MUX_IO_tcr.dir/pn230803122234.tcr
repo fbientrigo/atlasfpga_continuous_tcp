@@ -1,0 +1,6 @@
+#Start recording tcl command: 8/3/2023 11:50:43
+#Project Location: C:/Users/victo/Desktop/Lattice_proj/CMS_mux_IO; Project name: CMS_MUX_IO
+prj_project open "C:/Users/victo/Desktop/Lattice_proj/CMS_mux_IO/CMS_MUX_IO.ldf"
+prj_run PAR -impl cms_mux
+prj_run Export -impl cms_mux
+#Stop recording: 8/3/2023 12:22:34

@@ -1,0 +1,30 @@
+----------------------------------------------------------------------
+Report for cell top_cms_mux.TECH
+Register bits:  138 of 10552 (1.308%)
+I/O cells:      76
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        78          100.0
+                            FD1P3IX        30          100.0
+                             FD1S1A        10          100.0
+                             FD1S1I        20          100.0
+                                GSR         1          100.0
+                                 IB         9          100.0
+                              ILVDS        52          100.0
+                               LUT4       132          100.0
+                                 OB        67          100.0
+                              OLVDS        15          100.0
+                              PFUMX        10          100.0
+                        VERIFIC_PWR         1          100.0
+SUB MODULES
+                        SPI_som(12)         1
+                              TOTAL       426
+----------------------------------------------------------------------
+Report for cell SPI_som(12).v1
+Instance Path : SPI
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        33           42.3
+                            FD1P3IX        30          100.0
+                               LUT4        74           56.1
+                              TOTAL       137

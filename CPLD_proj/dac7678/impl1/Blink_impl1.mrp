@@ -1,0 +1,468 @@
+
+        Lattice Mapping Report File for Design Module 'XO3D_BB_blink'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO3D -p LCMXO3D-9400HC -t CABGA256 -s 5 -oc
+     Commercial Blink_impl1.ngd -o Blink_impl1_map.ncd -pr Blink_impl1.prf -mp
+     Blink_impl1.mrp -lpf
+     C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1/Blink_impl1.lpf
+     -lpf C:/Users/victo/Desktop/Lattice_proj/blink/project/Blink.lpf -c 0 -gui
+     -msgset C:/Users/victo/Desktop/Lattice_proj/blink/project/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3D-9400HCCABGA256
+Target Performance:   5
+Mapper:  se5c00,  version:  Diamond (64-bit) 3.12.0.240.2
+Mapped on:  12/27/21  12:22:48
+
+Design Summary
+--------------
+
+   Number of registers:     67 out of 10021 (1%)
+      PFU registers:           67 out of  9400 (1%)
+      PIO registers:            0 out of   621 (0%)
+   Number of SLICEs:        70 out of  4700 (1%)
+      SLICEs as Logic/ROM:     70 out of  4700 (1%)
+      SLICEs as RAM:            0 out of  3525 (0%)
+      SLICEs as Carry:         52 out of  4700 (1%)
+   Number of LUT4s:        133 out of  9400 (1%)
+      Number used as logic LUTs:         29
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      104
+      Number used as shift registers:     0
+   Number of PIO sites used: 14 + 4(JTAG) out of 207 (9%)
+   Number of block RAMs:  0 out of 48 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Security used :   No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCSLEWRATEA):  0 out of 6 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  1
+
+                                    Page 1
+
+
+
+
+Design:  XO3D_BB_blink                                 Date:  12/27/21  12:22:48
+
+Design Summary (cont)
+---------------------
+     Net clk12M: 40 loads, 40 rising, 0 falling (Driver: clk_x1_I_0_3_lut )
+   Number of Clock Enables:  1
+     Net kitcar_inst/enable: 2 loads, 2 LSLICEs
+   Number of LSRs:  4
+     Net heartbeat_inst/count_26__N_84: 14 loads, 14 LSLICEs
+     Net kitcar_inst/clk_div_25__N_150: 14 loads, 14 LSLICEs
+     Net kitcar_inst/n323: 2 loads, 2 LSLICEs
+     Net kitcar_inst/count_0: 8 loads, 8 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net heartbeat_inst/count_26__N_84: 15 loads
+     Net kitcar_inst/clk_div_25__N_150: 15 loads
+     Net kitcar_inst/count_0: 13 loads
+     Net kitcar_inst/count_1: 12 loads
+     Net kitcar_inst/count_2: 11 loads
+     Net LED_i_7_N_21_6: 11 loads
+     Net kitcar_inst/count_3: 9 loads
+     Net DIPSW_c_1: 6 loads
+     Net DIPSW_c_2: 5 loads
+     Net DIPSW_c_0: 4 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| LED[5]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED[6]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED[7]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED[4]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 2
+
+
+
+
+Design:  XO3D_BB_blink                                 Date:  12/27/21  12:22:48
+
+IO (PIO) Attributes (cont)
+--------------------------
+| clk_x1              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| rstn                | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DIPSW[3]            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DIPSW[2]            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DIPSW[1]            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| DIPSW[0]            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block i254 undriven or does not drive anything - clipped.
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal kitcar_inst/sub_49_add_2_2/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_2/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_2/CI undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_4/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_4/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_6/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_6/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_8/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_8/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_10/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_10/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_12/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_12/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_14/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_14/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_16/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_16/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_18/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_18/S0 undriven or does not drive anything -
+
+                                    Page 3
+
+
+
+
+Design:  XO3D_BB_blink                                 Date:  12/27/21  12:22:48
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal kitcar_inst/sub_49_add_2_20/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_20/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_22/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_22/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_24/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_24/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_26/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_26/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_cout/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/sub_49_add_2_cout/CO undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/clk_div_72_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/clk_div_72_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/clk_div_72_add_4_27/S1 undriven or does not drive anything -
+     clipped.
+Signal kitcar_inst/clk_div_72_add_4_27/CO undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/count_70_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/count_70_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/count_70_add_4_27/CO undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_2/S1 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_2/S0 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_2/CI undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_4/S1 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_4/S0 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_6/S1 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_6/S0 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_8/S1 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_8/S0 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_10/S1 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_10/S0 undriven or does not drive anything -
+
+                                    Page 4
+
+
+
+
+Design:  XO3D_BB_blink                                 Date:  12/27/21  12:22:48
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal heartbeat_inst/add_156_12/S1 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_12/S0 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_14/S1 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_14/S0 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_16/S1 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_16/S0 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_18/S1 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_18/S0 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_20/S0 undriven or does not drive anything -
+     clipped.
+Signal heartbeat_inst/add_156_20/CO undriven or does not drive anything -
+     clipped.
+Block i1 was optimized away.
+
+     
+
+ASIC Components
+---------------
+
+Instance Name: OSCJ_inst
+         Type: OSCJ
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'rstn_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'rstn_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 65 
+
+
+                                    Page 5
+
+
+
+
+Design:  XO3D_BB_blink                                 Date:  12/27/21  12:22:48
+
+GSR Usage (cont)
+----------------
+     Type and instance name of component: 
+   Register : heartbeat_inst/count_70__i0
+   Register : heartbeat_inst/count_70__i26
+   Register : heartbeat_inst/count_70__i25
+   Register : heartbeat_inst/count_70__i24
+   Register : heartbeat_inst/count_70__i23
+   Register : heartbeat_inst/count_70__i22
+   Register : heartbeat_inst/count_70__i21
+   Register : heartbeat_inst/count_70__i20
+   Register : heartbeat_inst/count_70__i19
+   Register : heartbeat_inst/count_70__i18
+   Register : heartbeat_inst/count_70__i17
+   Register : heartbeat_inst/count_70__i16
+   Register : heartbeat_inst/count_70__i15
+   Register : heartbeat_inst/count_70__i14
+   Register : heartbeat_inst/count_70__i13
+   Register : heartbeat_inst/count_70__i12
+   Register : heartbeat_inst/count_70__i11
+   Register : heartbeat_inst/count_70__i10
+   Register : heartbeat_inst/count_70__i9
+   Register : heartbeat_inst/count_70__i8
+   Register : heartbeat_inst/count_70__i7
+   Register : heartbeat_inst/count_70__i6
+   Register : heartbeat_inst/count_70__i5
+   Register : heartbeat_inst/count_70__i4
+   Register : heartbeat_inst/count_70__i3
+   Register : heartbeat_inst/count_70__i2
+   Register : heartbeat_inst/count_70__i1
+   Register : kitcar_inst/count_71__i3
+   Register : kitcar_inst/LED_array_i0
+   Register : kitcar_inst/count_71__i2
+   Register : kitcar_inst/count_71__i0
+   Register : kitcar_inst/clk_div_72__i25
+   Register : kitcar_inst/clk_div_72__i24
+   Register : kitcar_inst/clk_div_72__i23
+   Register : kitcar_inst/clk_div_72__i22
+   Register : kitcar_inst/clk_div_72__i21
+   Register : kitcar_inst/clk_div_72__i20
+   Register : kitcar_inst/clk_div_72__i19
+   Register : kitcar_inst/clk_div_72__i18
+   Register : kitcar_inst/clk_div_72__i17
+   Register : kitcar_inst/clk_div_72__i16
+   Register : kitcar_inst/clk_div_72__i15
+   Register : kitcar_inst/clk_div_72__i14
+   Register : kitcar_inst/clk_div_72__i13
+   Register : kitcar_inst/clk_div_72__i12
+   Register : kitcar_inst/clk_div_72__i11
+   Register : kitcar_inst/clk_div_72__i10
+   Register : kitcar_inst/clk_div_72__i9
+   Register : kitcar_inst/clk_div_72__i8
+   Register : kitcar_inst/clk_div_72__i7
+   Register : kitcar_inst/clk_div_72__i6
+   Register : kitcar_inst/clk_div_72__i5
+   Register : kitcar_inst/clk_div_72__i4
+   Register : kitcar_inst/clk_div_72__i3
+   Register : kitcar_inst/clk_div_72__i2
+
+                                    Page 6
+
+
+
+
+Design:  XO3D_BB_blink                                 Date:  12/27/21  12:22:48
+
+GSR Usage (cont)
+----------------
+   Register : kitcar_inst/clk_div_72__i1
+   Register : kitcar_inst/clk_div_72__i0
+   Register : kitcar_inst/LED_array_i2
+   Register : kitcar_inst/LED_array_i5
+   Register : kitcar_inst/LED_array_i4
+   Register : kitcar_inst/LED_array_i1
+   Register : kitcar_inst/LED_array_i3
+   Register : kitcar_inst/LED_array_i6
+   Register : kitcar_inst/LED_array_i7
+   Register : kitcar_inst/count_71__i1
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 67 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 7
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.

@@ -1,0 +1,510 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Fri Jul 28 13:03:26 2023
+
+
+Command Line:  synthesis -f CMS_MUX_cms_mux_lattice.synproj -gui -msgset C:/Users/victo/Desktop/Lattice_proj/promote.xml 
+
+Synthesis options:
+The -a option is MachXO3D.
+The -s option is 6.
+The -t option is CABGA484.
+The -d option is LCMXO3D-9400HC.
+Using package CABGA484.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO3D
+
+### Device  : LCMXO3D-9400HC
+
+### Package : CABGA484
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = top_cms_mux.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/lscc/diamond/3.12/ispfpga/se5c00/data (searchpath added)
+-p C:/Users/victo/Desktop/Lattice_proj/cms_mux (searchpath added)
+-p C:/Users/victo/Desktop/Lattice_proj (searchpath added)
+VHDL library = work
+VHDL design file = C:/Users/victo/Desktop/Lattice_proj/top_cms_mux.vhd
+VHDL design file = C:/Users/victo/Desktop/Lattice_proj/SPI_som.vhd
+NGD file = CMS_MUX_cms_mux.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3d.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "C:/Users/victo/Desktop/Lattice_proj/cms_mux". VHDL-1504
+Analyzing VHDL file c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd. VHDL-1481
+INFO - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(16): analyzing entity top_cms_mux. VHDL-1012
+INFO - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(103): analyzing architecture behavioral. VHDL-1010
+unit top_cms_mux is not yet analyzed. VHDL-1485
+unit top_cms_mux is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/victo/desktop/lattice_proj/spi_som.vhd. VHDL-1481
+INFO - synthesis: c:/users/victo/desktop/lattice_proj/spi_som.vhd(15): analyzing entity spi_som. VHDL-1012
+INFO - synthesis: c:/users/victo/desktop/lattice_proj/spi_som.vhd(25): analyzing architecture behavioral. VHDL-1010
+unit top_cms_mux is not yet analyzed. VHDL-1485
+unit top_cms_mux is not yet analyzed. VHDL-1485
+unit top_cms_mux is not yet analyzed. VHDL-1485
+c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(16): executing top_cms_mux(Behavioral)
+
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(403): mezz1_adc_ch_input_diff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(404): adc_lclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(405): adc_adclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(407): drs4_a_buf should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(411): mezz2_adc_ch_input_diff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(412): adc_lclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(413): adc_adclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(416): drs4_a_buf should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(419): mezz3_adc_ch_input_diff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(420): adc_lclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(421): adc_adclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(424): drs4_a_buf should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(427): mezz4_adc_ch_input_diff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(428): adc_lclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(429): adc_adclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(431): drs4_a_buf should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(434): mezz5_adc_ch_input_diff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(435): adc_lclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(436): adc_adclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(439): drs4_a_buf should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(443): drs4_a_buf should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(444): drs4_a_buf should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(445): drs4_a_buf should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(446): drs4_a_buf should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(447): drs4_a_buf should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(451): mezz1_adc_ch_input_diff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(452): adc_lclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(453): adc_adclk_input_buff should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(458): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/top_cms_mux.vhd(100): replacing existing netlist top_cms_mux(Behavioral). VHDL-1205
+Top module name (VHDL): top_cms_mux
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/se5c00/data/se5clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'se5c9400.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 7.
+Top-level module name = top_cms_mux.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: I/O Port Mezz_Mux1[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port Mezz_Mux1[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port Mezz_Mux1[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port Mezz_Mux1[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port Mezz_Mux1[0] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port rst 's net has no driver and is unused.
+######## Missing driver on net Mezz_Mux1[4]. Patching with GND.
+######## Missing driver on net Mezz_Mux1[3]. Patching with GND.
+######## Missing driver on net Mezz_Mux1[2]. Patching with GND.
+######## Missing driver on net Mezz_Mux1[1]. Patching with GND.
+######## Missing driver on net Mezz_Mux1[0]. Patching with GND.
+INFO - synthesis: Extracted state machine for register '\SPI/SPI_states' with gray encoding
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 01 -> 01
+
+ 10 -> 11
+
+
+
+
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on Z.
+WARNING - synthesis: Cell OLVDS already has the black_box_pad_pin attribute on ZN.
+WARNING - synthesis: I/O Port rst 's net has no driver and is unused.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_p[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_p[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_p[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_p[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_p[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_p[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_p[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_p[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_n[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_n[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_n[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_n[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_n[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_n[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_n[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ch_o_n[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_LCLK_o_p due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_LCLK_o_n due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ADCLK_o_p due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CPLD_ADC_ADCLK_o_n due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_DRS4_o_refclk_p[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_DRS4_o_refclk_p[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_DRS4_o_refclk_p[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_DRS4_o_refclk_p[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_DRS4_o_refclk_p[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_DRS4_o_refclk_n[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_DRS4_o_refclk_n[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_DRS4_o_refclk_n[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_DRS4_o_refclk_n[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_DRS4_o_refclk_n[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_p[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_p[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_p[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_p[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_p[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_p[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_p[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_p[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_n[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_n[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_n[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_n[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_n[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_n[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_n[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz1_ADC_ch_i_n[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_p[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_p[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_p[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_p[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_p[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_p[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_p[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_p[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_n[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_n[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_n[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_n[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_n[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_n[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_n[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz2_ADC_ch_i_n[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_p[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_p[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_p[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_p[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_p[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_p[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_p[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_p[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_n[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_n[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_n[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_n[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_n[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_n[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_n[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz3_ADC_ch_i_n[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_p[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_p[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_p[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_p[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_p[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_p[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_p[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_p[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_n[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_n[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_n[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_n[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_n[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_n[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_n[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz4_ADC_ch_i_n[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_p[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_p[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_p[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_p[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_p[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_p[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_p[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_p[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_n[7] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_n[6] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_n[5] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_n[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_n[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_n[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_n[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz5_ADC_ch_i_n[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_LCLK_p[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_LCLK_p[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_LCLK_p[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_LCLK_p[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_LCLK_p[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_LCLK_n[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_LCLK_n[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_LCLK_n[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_LCLK_n[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_LCLK_n[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_ADCLK_p[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_ADCLK_p[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_ADCLK_p[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_ADCLK_p[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_ADCLK_p[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_ADCLK_n[4] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_ADCLK_n[3] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_ADCLK_n[2] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_ADCLK_n[1] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on Mezz_ADC_ADCLK_n[0] due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on DRS4_i_refclk_p due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on DRS4_i_refclk_n due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CSR_MOSI_P due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CSR_MOSI_N due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CSR_SCLK_P due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CSR_SCLK_N due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CSR_CS_P due to black_box_pad_pin attribute.
+WARNING - synthesis: Skipping pad insertion on CSR_CS_N due to black_box_pad_pin attribute.
+GSR instance connected to net CS_buff_neg.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in top_cms_mux_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/se5c00/data/se5clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'rst' has no load.
+WARNING - synthesis: input pad net 'rst' has no legal load.
+WARNING - synthesis: DRC complete with 2 warnings.
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file CMS_MUX_cms_mux.ngd.
+
+################### Begin Area Report (top_cms_mux)######################
+Number of register bits => 92 of 10552 (0 % )
+FD1P3AX => 40
+FD1P3IX => 20
+FD1S1A => 10
+FD1S1I => 20
+FD1S3IX => 2
+GSR => 1
+IB => 7
+ILVDS => 54
+LUT4 => 76
+OB => 60
+OLVDS => 15
+PFUMX => 10
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 8
+  Net : SPI/SPI_rdy, loads : 35
+  Net : SCLK_buff, loads : 27
+  Net : ADC_ch_out_sel_7__N_69, loads : 10
+  Net : Mezz1_DRS4_o_A_3__N_10, loads : 8
+  Net : Mezz4_DRS4_o_A_3__N_25, loads : 8
+  Net : Mezz2_DRS4_o_A_3__N_15, loads : 8
+  Net : Mux_sel_c_0_derived_7, loads : 4
+  Net : Mux_sel_c_0_derived_8, loads : 4
+Clock Enable Nets
+Number of Clock Enables: 9
+Top 9 highest fanout Clock Enables:
+  Net : SPI/SCLK_buff_enable_24, loads : 14
+  Net : SPI/SCLK_buff_enable_25, loads : 10
+  Net : SCLK_buff_enable_4, loads : 1
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : Mux_sel_c_0, loads : 38
+  Net : Mux_sel_c_1, loads : 26
+  Net : SPI/n1874, loads : 20
+  Net : Mux_sel_c_2, loads : 16
+  Net : SPI/SCLK_buff_enable_24, loads : 14
+  Net : SPI/SPI_states_1, loads : 11
+  Net : SPI/SCLK_buff_enable_25, loads : 10
+  Net : CS_buff_neg, loads : 8
+  Net : SPI/SPI_states_0, loads : 6
+  Net : SPI/SPI_rdy_enable_7, loads : 6
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets SCLK_buff]               |  200.000 MHz|  201.369 MHz|     4  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets ADC_ch_out_sel_7__N_69]  |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets SPI_rdy]                 |            -|            -|     0  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 80.512  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.891  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

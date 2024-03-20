@@ -1,0 +1,239 @@
+
+Lattice Place and Route Report for Design "CPLD_bench_tmr_impl1_map.ncd"
+Tue Nov 08 16:22:52 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.0.240.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/victo/Desktop/Lattice_proj/CPLD_TMR_rst/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 CPLD_bench_tmr_impl1_map.ncd CPLD_bench_tmr_impl1.dir/5_1.ncd CPLD_bench_tmr_impl1.prf
+Preference file: CPLD_bench_tmr_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file CPLD_bench_tmr_impl1_map.ncd.
+Design name: uart_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-9400HC
+Package:     CABGA484
+Performance: 6
+Loading device for application par from file 'se5c9400.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 7.
+Performance Hardware Data Status:   Final          Version 2.2.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)    3+4(JTAG)/384     2% used
+                   3+4(JTAG)/384     2% bonded
+
+   SLICE           2940/4700         62% used
+
+   GSR                1/1           100% used
+   OSC                1/1           100% used
+
+
+Number of Signals: 9403
+Number of Connections: 24657
+WARNING - par: The SN pin is not available for use as a general purpose I/O pin when the SLAVE_SPI_PORT attribute is enabled.  The SN pin should be tied high with an external pull-up if you are not using the Slave SPI port for configuration.
+
+Pin Constraint Summary:
+   2 out of 2 pins locked (100% locked).
+
+WARNING - par: (user pref. primary clock) Signal "osc_int" will be routed through the primary clock network, however according to the architecture the driver of this clock cannot drive the primary clock spine directly. General routing must be used to route this clock to the primary clock tree and this clock will have variable injection delay.
+The following 1 signal is selected to use the primary clock routing resources:
+    osc_int (driver: OSCInst0, clk load #: 2807)
+
+
+The following 8 signals are selected to use the secondary clock routing resources:
+    n53526 (driver: SLICE_3080, clk load #: 0, sr load #: 33, ce load #: 2)
+    n53527 (driver: SLICE_3080, clk load #: 0, sr load #: 30, ce load #: 0)
+    fifo/rden_i (driver: SLICE_2957, clk load #: 0, sr load #: 0, ce load #: 23)
+    osc_int_enable_2205 (driver: fifo/i48804/SLICE_3194, clk load #: 0, sr load #: 0, ce load #: 18)
+    fifo/wren_i (driver: fifo/SLICE_3673, clk load #: 0, sr load #: 0, ce load #: 15)
+    bench_b13/GEN_SUNIT_7..SUX/B13_2/osc_int_enable_1111 (driver: bench_b13/GEN_SUNIT_7..SUX/B13_2/SLICE_2946, clk load #: 0, sr load #: 6, ce load #: 6)
+    bench_b13/GEN_SUNIT_7..SUX/B13_1/osc_int_enable_1895 (driver: bench_b13/GEN_SUNIT_7..SUX/B13_1/SLICE_2917, clk load #: 0, sr load #: 6, ce load #: 6)
+    bench_b13/GEN_SUNIT_6..SUX/B13_2/osc_int_enable_1904 (driver: bench_b13/GEN_SUNIT_6..SUX/B13_2/SLICE_2859, clk load #: 0, sr load #: 6, ce load #: 6)
+
+Signal osc_int_enable_1070 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+..........
+Finished Placer Phase 0.  REAL time: 3 secs 
+
+Starting Placer Phase 1.
+............................
+Placer score = 1265648.
+Finished Placer Phase 1.  REAL time: 12 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  1246896
+Finished Placer Phase 2.  REAL time: 13 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 8 (0%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "osc_int" from OSC on comp "OSCInst0" on site "OSC", clk load = 2807
+  SECONDARY "n53526" from Q0 on comp "SLICE_3080" on site "R9C24D", clk load = 0, ce load = 2, sr load = 33
+  SECONDARY "n53527" from Q1 on comp "SLICE_3080" on site "R9C24D", clk load = 0, ce load = 0, sr load = 30
+  SECONDARY "fifo/rden_i" from F1 on comp "SLICE_2957" on site "R9C26D", clk load = 0, ce load = 23, sr load = 0
+  SECONDARY "osc_int_enable_2205" from OFX0 on comp "fifo/i48804/SLICE_3194" on site "R9C26B", clk load = 0, ce load = 18, sr load = 0
+  SECONDARY "fifo/wren_i" from F1 on comp "fifo/SLICE_3673" on site "R23C26B", clk load = 0, ce load = 15, sr load = 0
+  SECONDARY "bench_b13/GEN_SUNIT_7..SUX/B13_2/osc_int_enable_1111" from F0 on comp "bench_b13/GEN_SUNIT_7..SUX/B13_2/SLICE_2946" on site "R23C26D", clk load = 0, ce load = 6, sr load = 6
+  SECONDARY "bench_b13/GEN_SUNIT_7..SUX/B13_1/osc_int_enable_1895" from F0 on comp "bench_b13/GEN_SUNIT_7..SUX/B13_1/SLICE_2917" on site "R23C26A", clk load = 0, ce load = 6, sr load = 6
+  SECONDARY "bench_b13/GEN_SUNIT_6..SUX/B13_2/osc_int_enable_1904" from F0 on comp "bench_b13/GEN_SUNIT_6..SUX/B13_2/SLICE_2859" on site "R23C26C", clk load = 0, ce load = 6, sr load = 6
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 8 out of 8 (100%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   3 + 4(JTAG) out of 384 (1.8%) PIO sites used.
+   3 + 4(JTAG) out of 384 (1.8%) bonded PIO sites used.
+   Number of PIO comps: 2; differential: 1.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 3 / 96 (  3%) | 2.5V       | -         |
+| 1        | 0 / 96 (  0%) | -          | -         |
+| 2        | 0 / 96 (  0%) | -          | -         |
+| 3        | 0 / 36 (  0%) | -          | -         |
+| 4        | 0 / 24 (  0%) | -          | -         |
+| 5        | 0 / 36 (  0%) | -          | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 13 secs 
+
+Dumping design to file CPLD_bench_tmr_impl1.dir/5_1.ncd.
+
+0 connections routed; 24657 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 16 secs 
+
+Start NBR router at 16:23:08 11/08/22
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 16:23:09 11/08/22
+
+Start NBR section for initial routing at 16:23:09 11/08/22
+Level 4, iteration 1
+964(0.19%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 57.597ns/0.000ns; real time: 19 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 16:23:11 11/08/22
+Level 4, iteration 1
+485(0.09%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 56.267ns/0.000ns; real time: 20 secs 
+Level 4, iteration 2
+220(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 56.266ns/0.000ns; real time: 20 secs 
+Level 4, iteration 3
+98(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 56.266ns/0.000ns; real time: 20 secs 
+Level 4, iteration 4
+44(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 56.266ns/0.000ns; real time: 20 secs 
+Level 4, iteration 5
+19(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 56.266ns/0.000ns; real time: 21 secs 
+Level 4, iteration 6
+6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 56.266ns/0.000ns; real time: 21 secs 
+Level 4, iteration 7
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 56.266ns/0.000ns; real time: 21 secs 
+Level 4, iteration 8
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 56.266ns/0.000ns; real time: 21 secs 
+Level 4, iteration 9
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 56.266ns/0.000ns; real time: 21 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 16:23:13 11/08/22
+
+Start NBR section for re-routing at 16:23:14 11/08/22
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 56.266ns/0.000ns; real time: 22 secs 
+
+Start NBR section for post-routing at 16:23:14 11/08/22
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 56.266ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 24 secs 
+Total REAL time: 25 secs 
+Completely routed.
+End of route.  24657 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file CPLD_bench_tmr_impl1.dir/5_1.ncd.
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 56.266
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.136
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 25 secs 
+Total REAL time to completion: 26 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
