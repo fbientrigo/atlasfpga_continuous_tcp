@@ -1,9 +1,9 @@
-#TGC-Charge Monitoring System
+# TGC-Charge Monitoring System
 
-##Description
+## Description
 
-##PCB Files
+## PCB Files
 
-##CPLD fw
+## CPLD fw
 
-##Zynq fw
+## Zynq fw
