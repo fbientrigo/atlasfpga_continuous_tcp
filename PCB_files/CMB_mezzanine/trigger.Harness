@@ -1,0 +1,1 @@
+DAC_c=dac_cs0,dac_cs1,dac_nCLR,dac_nreset,dac_sclk,dac_sda/sdi
