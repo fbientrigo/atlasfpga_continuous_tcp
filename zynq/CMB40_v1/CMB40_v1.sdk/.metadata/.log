@@ -22329,3 +22329,545 @@ java.lang.NullPointerException
 
 !ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:35:37.919
 !MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:37:55.438
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:37:55.438
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:37:55.438
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:37:55.438
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.7",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:37:55.438
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:37:55.438
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:37:59.141
+!MESSAGE XSCT Command: [disconnect tcfchan#4], Thread: Thread-1070
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:37:59.147
+!MESSAGE XSCT command with result: [disconnect tcfchan#4], Result: [null, ]. Thread: Thread-1070
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-01 23:38:00.164
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.164
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.164
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#5]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.164
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.180
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.180
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.180
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.180
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.180
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.180
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.195
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.195
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.227
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.227
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.227
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#5]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.227
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.227
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.227
+!MESSAGE XSCT Command: [version -server], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.227
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2.2]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.227
+!MESSAGE XSCT Command: [version], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.227
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2.2]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.227
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.242
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.242
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.242
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.242
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.258
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.258
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.258
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.258
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.273
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.273
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.273
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.273
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.289
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.289
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.305
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.305
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.305
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.305
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.320
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.320
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.320
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.320
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.336
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.336
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "JTAG-ONB4 2516330074E8A" && level == 0}], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.351
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "JTAG-ONB4 2516330074E8A" && level == 0}], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.351
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.351
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.351
+!MESSAGE XSCT Command: [source C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/ps7_init.tcl], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.351
+!MESSAGE XSCT command with result: [source C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/ps7_init.tcl], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.351
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.367
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.367
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.383
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, zsys_wrapper_0]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.383
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.383
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.383
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.398
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.398
+!MESSAGE XSCT Command: [stop], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.448
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.448
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.620
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.620
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.636
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.636
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.651
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.651
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.714
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.714
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.730
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:00.730
+!MESSAGE XSCT Command: [dow C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server/Debug/MB40ch_wTCP_server.elf], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:01.167
+!MESSAGE XSCT command with result: [dow C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server/Debug/MB40ch_wTCP_server.elf], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:01.167
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:01.167
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:01.230
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:01.292
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:01.292
+!MESSAGE XSCT Command: [con], Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:38:01.292
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-54
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:43.897
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:43.913
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:43.913
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:43.913
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.7",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:43.913
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:43.913
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:46.366
+!MESSAGE XSCT Command: [disconnect tcfchan#5], Thread: Thread-1129
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:46.366
+!MESSAGE XSCT command with result: [disconnect tcfchan#5], Result: [null, ]. Thread: Thread-1129
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-01 23:39:47.373
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.373
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.373
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#6]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.373
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.373
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.373
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.388
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.388
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.404
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.404
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.420
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.420
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.435
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.435
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.435
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#6]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.435
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.435
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.435
+!MESSAGE XSCT Command: [version -server], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.435
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2018.2.2]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.435
+!MESSAGE XSCT Command: [version], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.435
+!MESSAGE XSCT command with result: [version], Result: [null, 2018.2.2]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.435
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.451
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.451
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.451
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.451
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.467
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.467
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.467
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.467
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.482
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.482
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.498
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.498
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.498
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.498
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.514
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.514
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.514
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.514
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.529
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.529
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.529
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* JTAG-ONB4 2516330074E8A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.529
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.545
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z015 (idcode 0373b093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.545
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "JTAG-ONB4 2516330074E8A" && level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.560
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "JTAG-ONB4 2516330074E8A" && level == 0}], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.560
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.560
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.560
+!MESSAGE XSCT Command: [source C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/ps7_init.tcl], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.560
+!MESSAGE XSCT command with result: [source C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/ps7_init.tcl], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.560
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.576
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.576
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.576
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, zsys_wrapper_0]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.576
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.592
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.592
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.607
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.607
+!MESSAGE XSCT Command: [stop], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.641
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.641
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.844
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.844
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.844
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.844
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.860
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.860
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.922
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.922
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.938
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:47.938
+!MESSAGE XSCT Command: [dow C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server/Debug/MB40ch_wTCP_server.elf], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:48.375
+!MESSAGE XSCT command with result: [dow C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server/Debug/MB40ch_wTCP_server.elf], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:48.375
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:48.375
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:48.422
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:48.485
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:48.485
+!MESSAGE XSCT Command: [con], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-01 23:39:48.485
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-57

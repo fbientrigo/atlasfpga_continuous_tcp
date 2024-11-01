@@ -52980,3 +52980,93 @@ con
 ----------------End of Script----------------
 
 23:26:41 INFO  : Launch script is exported to file 'C:\Users\osotosan\charge-monitoring-system\zynq\CMB40_v1\CMB40_v1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_mb40ch_wtcp_server.elf_on_local.tcl'
+23:37:59 INFO  : Disconnected from the channel tcfchan#4.
+23:38:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1' command is executed.
+23:38:00 INFO  : 'fpga -state' command is executed.
+23:38:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:38:00 INFO  : Jtag cable 'JTAG-ONB4 2516330074E8A' is selected.
+23:38:00 INFO  : 'jtag frequency' command is executed.
+23:38:00 INFO  : Sourcing of 'C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/ps7_init.tcl' is done.
+23:38:00 INFO  : Context for 'APU' is selected.
+23:38:00 INFO  : Hardware design information is loaded from 'C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf'.
+23:38:00 INFO  : 'configparams force-mem-access 1' command is executed.
+23:38:00 INFO  : Context for 'APU' is selected.
+23:38:00 INFO  : 'stop' command is executed.
+23:38:00 INFO  : 'ps7_init' command is executed.
+23:38:00 INFO  : 'ps7_post_config' command is executed.
+23:38:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:38:00 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:38:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:38:01 INFO  : The application 'C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server/Debug/MB40ch_wTCP_server.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:38:01 INFO  : 'configparams force-mem-access 0' command is executed.
+23:38:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+dow C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server/Debug/MB40ch_wTCP_server.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:38:01 INFO  : Memory regions updated for context APU
+23:38:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:38:01 INFO  : 'con' command is executed.
+23:38:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+con
+----------------End of Script----------------
+
+23:38:01 INFO  : Launch script is exported to file 'C:\Users\osotosan\charge-monitoring-system\zynq\CMB40_v1\CMB40_v1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_mb40ch_wtcp_server.elf_on_local.tcl'
+23:39:46 INFO  : Disconnected from the channel tcfchan#5.
+23:39:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1' command is executed.
+23:39:47 INFO  : 'fpga -state' command is executed.
+23:39:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:39:47 INFO  : Jtag cable 'JTAG-ONB4 2516330074E8A' is selected.
+23:39:47 INFO  : 'jtag frequency' command is executed.
+23:39:47 INFO  : Sourcing of 'C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/ps7_init.tcl' is done.
+23:39:47 INFO  : Context for 'APU' is selected.
+23:39:47 INFO  : Hardware design information is loaded from 'C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf'.
+23:39:47 INFO  : 'configparams force-mem-access 1' command is executed.
+23:39:47 INFO  : Context for 'APU' is selected.
+23:39:47 INFO  : 'stop' command is executed.
+23:39:47 INFO  : 'ps7_init' command is executed.
+23:39:47 INFO  : 'ps7_post_config' command is executed.
+23:39:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:47 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:39:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:48 INFO  : The application 'C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server/Debug/MB40ch_wTCP_server.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:39:48 INFO  : 'configparams force-mem-access 0' command is executed.
+23:39:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+dow C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server/Debug/MB40ch_wTCP_server.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:39:48 INFO  : Memory regions updated for context APU
+23:39:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:48 INFO  : 'con' command is executed.
+23:39:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+con
+----------------End of Script----------------
+
+23:39:48 INFO  : Launch script is exported to file 'C:\Users\osotosan\charge-monitoring-system\zynq\CMB40_v1\CMB40_v1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_mb40ch_wtcp_server.elf_on_local.tcl'
