@@ -17,7 +17,7 @@ src/pcap.o src/pcap.o: ../src/pcap.c ../src/pcap.h \
  ../../CMB40_FSBL_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \
  ../../CMB40_FSBL_bsp/ps7_cortexa9_0/include/xil_printf.h \
  ../src/fsbl_debug.h \
- C:\Users\osotosan\2024_10_25_CMB_editable\CMB40_v1\CMB40_v1.sdk\zsys_wrapper_hw_platform_5/ps7_init.h \
+ C:\Users\osotosan\charge-monitoring-system\zynq\CMB40_v1\CMB40_v1.sdk\zsys_wrapper_hw_platform_5/ps7_init.h \
  ../src/image_mover.h \
  ../../CMB40_FSBL_bsp/ps7_cortexa9_0/include/xil_exception.h \
  ../../CMB40_FSBL_bsp/ps7_cortexa9_0/include/sleep.h \
@@ -67,7 +67,7 @@ src/pcap.o src/pcap.o: ../src/pcap.c ../src/pcap.h \
 
 ../src/fsbl_debug.h:
 
-C:\Users\osotosan\2024_10_25_CMB_editable\CMB40_v1\CMB40_v1.sdk\zsys_wrapper_hw_platform_5/ps7_init.h:
+C:\Users\osotosan\charge-monitoring-system\zynq\CMB40_v1\CMB40_v1.sdk\zsys_wrapper_hw_platform_5/ps7_init.h:
 
 ../src/image_mover.h:
 

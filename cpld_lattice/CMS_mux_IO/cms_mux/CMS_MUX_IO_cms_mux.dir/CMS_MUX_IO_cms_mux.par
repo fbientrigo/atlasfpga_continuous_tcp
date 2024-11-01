@@ -4,12 +4,12 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Oct 30 12:58:17 2024
+Fri Nov 01 16:22:22 2024
 
 C:/lscc/diamond/3.13/ispfpga\bin\nt64\par -f CMS_MUX_IO_cms_mux.p2t
 CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.dir CMS_MUX_IO_cms_mux.prf -gui
 -msgset
-C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml
+C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/promote.xml
 
 
 Preference file: CMS_MUX_IO_cms_mux.prf.
@@ -17,11 +17,11 @@ Preference file: CMS_MUX_IO_cms_mux.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            3.528        0            0.116        0            13           Completed
+5_1   *      0            3.528        0            0.116        0            14           Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 13 secs 
+Total (real) run time for 1-seed: 14 secs 
 
 par done!
 

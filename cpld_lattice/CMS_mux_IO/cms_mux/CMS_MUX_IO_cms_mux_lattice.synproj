@@ -31,13 +31,13 @@
 
 
 -lpf 1
--lib "work" -vhd "C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/top_cms_mux.vhd"
-"C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/SPI_som.vhd"
-"C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/heartbeat.vhd"
+-lib "work" -vhd "C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/top_cms_mux.vhd"
+"C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/SPI_som.vhd"
+"C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/heartbeat.vhd"
 -top top_cms_mux
 
 
--p "C:/lscc/diamond/3.13/ispfpga/xo3c00a/data" "C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux" "C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO"
+-p "C:/lscc/diamond/3.13/ispfpga/xo3c00a/data" "C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/cms_mux" "C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO"
 
 -ngd "CMS_MUX_IO_cms_mux.ngd"
 

@@ -7,17 +7,16 @@ Design Information
 
 Command line:   map -a MachXO3L -p LCMXO3L-9400C -t CABGA484 -s 5 -oc Commercial
      CMS_MUX_IO_cms_mux.ngd -o CMS_MUX_IO_cms_mux_map.ncd -pr
-     CMS_MUX_IO_cms_mux.prf -mp CMS_MUX_IO_cms_mux.mrp -lpf C:/CMB_40_project/Ol
-     d_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms
-     _mux/CMS_MUX_IO_cms_mux.lpf -lpf C:/CMB_40_project/Old_project_with_CPLD_fi
-     les/charge-monitoring-system/CPLD_proj/CMS_mux_IO/CMS_MUX_IO.lpf -c 0 -gui
-     -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-sys
-     tem/CPLD_proj/CMS_mux_IO/promote.xml 
+     CMS_MUX_IO_cms_mux.prf -mp CMS_MUX_IO_cms_mux.mrp -lpf C:/Users/osotosan/ch
+     arge-monitoring-system/cpld_lattice/CMS_mux_IO/cms_mux/CMS_MUX_IO_cms_mux.l
+     pf -lpf C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/
+     CMS_MUX_IO.lpf -c 0 -gui -msgset C:/Users/osotosan/charge-monitoring-system
+     /cpld_lattice/CMS_mux_IO/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LCMXO3L-9400CCABGA484
 Target Performance:   5
 Mapper:  xo3c00a,  version:  Diamond (64-bit) 3.13.0.56.2
-Mapped on:  10/30/24  12:58:14
+Mapped on:  11/01/24  16:22:19
 
 Design Summary
 --------------
@@ -60,17 +59,17 @@ Design Summary
    Notes:-
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
      distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
 
                                     Page 1
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 Design Summary (cont)
 ---------------------
-      2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  9
      Net SPI_rdy: 30 loads, 30 rising, 0 falling (Driver: SPI/data_rdy_o_66 )
@@ -126,17 +125,17 @@ Design Summary (cont)
      Net SPI/n1761: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
+     Net Mux_sel_c_0: 40 loads
 
                                     Page 2
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 Design Summary (cont)
 ---------------------
-     Net Mux_sel_c_0: 40 loads
      Net SPI/SPI_states_0: 37 loads
      Net SPI/SPI_states_1: 29 loads
      Net Mux_sel_c_1: 28 loads
@@ -192,17 +191,17 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+------------+
 | Mezz1_ADC_ch_i_p[7] | INPUT     | LVDS25    |            |
 +---------------------+-----------+-----------+------------+
+| Mezz2_ADC_ch_i_p[0] | INPUT     | LVDS25    |            |
 
                                     Page 3
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 IO (PIO) Attributes (cont)
 --------------------------
-| Mezz2_ADC_ch_i_p[0] | INPUT     | LVDS25    |            |
 +---------------------+-----------+-----------+------------+
 | Mezz2_ADC_ch_i_p[1] | INPUT     | LVDS25    |            |
 +---------------------+-----------+-----------+------------+
@@ -258,17 +257,17 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | Mezz5_ADC_ch_i_p[3] | INPUT     | LVDS25    |            |
 +---------------------+-----------+-----------+------------+
+| Mezz5_ADC_ch_i_p[4] | INPUT     | LVDS25    |            |
 
                                     Page 4
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 IO (PIO) Attributes (cont)
 --------------------------
-| Mezz5_ADC_ch_i_p[4] | INPUT     | LVDS25    |            |
 +---------------------+-----------+-----------+------------+
 | Mezz5_ADC_ch_i_p[5] | INPUT     | LVDS25    |            |
 +---------------------+-----------+-----------+------------+
@@ -324,17 +323,17 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | Mezz_DRS4_o_refclk_p[2]| OUTPUT    | LVDS25    |            |
 +---------------------+-----------+-----------+------------+
+| Mezz_DRS4_o_refclk_p[3]| OUTPUT    | LVDS25    |            |
 
                                     Page 5
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 IO (PIO) Attributes (cont)
 --------------------------
-| Mezz_DRS4_o_refclk_p[3]| OUTPUT    | LVDS25    |            |
 +---------------------+-----------+-----------+------------+
 | Mezz_DRS4_o_refclk_p[4]| OUTPUT    | LVDS25    |            |
 +---------------------+-----------+-----------+------------+
@@ -390,17 +389,17 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | Mezz4_DRS4_o_A[1]   | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
+| Mezz4_DRS4_o_A[0]   | OUTPUT    | LVCMOS25  |            |
 
                                     Page 6
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 IO (PIO) Attributes (cont)
 --------------------------
-| Mezz4_DRS4_o_A[0]   | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | Mezz5_DRS4_o_A[3]   | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
@@ -456,17 +455,17 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | o_Mezz_ADC_nCS[2]   | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
+| o_Mezz_ADC_nCS[1]   | OUTPUT    | LVCMOS25  |            |
 
                                     Page 7
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 IO (PIO) Attributes (cont)
 --------------------------
-| o_Mezz_ADC_nCS[1]   | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | o_Mezz_ADC_nCS[0]   | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
@@ -522,17 +521,17 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | o_Mezz_Mux_gain_1[4]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
+| o_Mezz_Mux_gain_1[3]| OUTPUT    | LVCMOS25  |            |
 
                                     Page 8
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 IO (PIO) Attributes (cont)
 --------------------------
-| o_Mezz_Mux_gain_1[3]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 | o_Mezz_Mux_gain_1[2]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
@@ -588,17 +587,17 @@ Block i1942 undriven or does not drive anything - clipped.
 Block i1943 undriven or does not drive anything - clipped.
 Signal n1757 was merged into signal DRS4_i_SRIN_c
 Signal n1768 was merged into signal E14_monitor_c_3_c
+Signal n1767 was merged into signal P6_monitor_c_2_c
 
                                     Page 9
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 Removed logic (cont)
 --------------------
-Signal n1767 was merged into signal P6_monitor_c_2_c
 Signal n1766 was merged into signal E15_monitor_c_1_c
 Signal n6 was merged into signal CSR_CS_SOM_c
 Signal SPI/SCLK_buff_enable_56 was merged into signal SPI/SPI_states_ack_0
@@ -654,17 +653,17 @@ GSR Component:
      Type and number of components of the type: 
    Register = 155 
 
+     Type and instance name of component: 
 
                                    Page 10
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 GSR Usage (cont)
 ----------------
-     Type and instance name of component: 
    Register : Mezz_nSHDN_i1
    Register : Mezz_DAC_sel0_i1
    Register : Mezz_DAC_sel1_i1
@@ -720,17 +719,17 @@ GSR Usage (cont)
    Register : Mezz_DAC_sel1_i4
    Register : Mezz_DAC_sel1_i5
    Register : Mezz_ADC_DAC_nReset_i2
+   Register : Mezz_ADC_DAC_nReset_i3
 
                                    Page 11
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 GSR Usage (cont)
 ----------------
-   Register : Mezz_ADC_DAC_nReset_i3
    Register : Mezz_ADC_DAC_nReset_i4
    Register : Mezz_ADC_DAC_nReset_i5
    Register : Mezz_tcal_en_i2
@@ -786,17 +785,17 @@ GSR Usage (cont)
    Register : SPI/data_rec_i0_i7
    Register : SPI/data_in_i0_i1
    Register : SPI/data_in_i0_i3
+   Register : SPI/data_in_i0_i4
 
                                    Page 12
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 GSR Usage (cont)
 ----------------
-   Register : SPI/data_in_i0_i4
    Register : SPI/data_in_i0_i6
    Register : SPI/data_in_i0_i10
    Register : SPI/data_in_i0_i11
@@ -852,17 +851,17 @@ GSR Usage (cont)
      Type and number of components of the type: 
    Register = 2 
 
+     Type and instance name of component: 
 
                                    Page 13
 
 
 
 
-Design:  top_cms_mux                                   Date:  10/30/24  12:58:14
+Design:  top_cms_mux                                   Date:  11/01/24  16:22:19
 
 GSR Usage (cont)
 ----------------
-     Type and instance name of component: 
    Register : SPI/SPI_states_i0
    Register : SPI/data_rdy_o_66
 
@@ -873,6 +872,7 @@ Run Time and Memory Usage
    Total REAL Time: 0 secs  
    Peak Memory Usage: 73 MB
         
+
 
 
 

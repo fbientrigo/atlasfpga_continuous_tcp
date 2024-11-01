@@ -2,4 +2,4 @@
 
 -g RamCfg:Reset
 
--path "C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO"  
+-path "C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO"  

@@ -99,374 +99,374 @@
             <ID>35921504</ID>
             <Severity>Info</Severity>
             <Dynamic></Dynamic>
-            <Dynamic>C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux</Dynamic>
+            <Dynamic>C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/cms_mux</Dynamic>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(15): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(15): </Dynamic>
             <Dynamic>top_cms_mux</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>15</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(128): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(128): </Dynamic>
             <Dynamic>behavioral</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>128</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd(15): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/spi_som.vhd(15): </Dynamic>
             <Dynamic>spi_som</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/spi_som.vhd</Navigation>
             <Navigation>15</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd(31): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/spi_som.vhd(31): </Dynamic>
             <Dynamic>behavioral</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/spi_som.vhd</Navigation>
             <Navigation>31</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd(14): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/heartbeat.vhd(14): </Dynamic>
             <Dynamic>heartbeat</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/heartbeat.vhd</Navigation>
             <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd(22): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/heartbeat.vhd(22): </Dynamic>
             <Dynamic>behavioral</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/heartbeat.vhd</Navigation>
             <Navigation>22</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(516): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(516): </Dynamic>
             <Dynamic>mezz1_adc_ch_input_diff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>516</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(517): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(517): </Dynamic>
             <Dynamic>adc_lclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>517</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(518): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(518): </Dynamic>
             <Dynamic>adc_adclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>518</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(520): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(520): </Dynamic>
             <Dynamic>drs4_a_buf</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>520</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(521): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(521): </Dynamic>
             <Dynamic>drs4_srin_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>521</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(525): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(525): </Dynamic>
             <Dynamic>mezz2_adc_ch_input_diff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>525</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(526): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(526): </Dynamic>
             <Dynamic>adc_lclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>526</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(527): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(527): </Dynamic>
             <Dynamic>adc_adclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>527</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(530): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(530): </Dynamic>
             <Dynamic>drs4_a_buf</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>530</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(531): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(531): </Dynamic>
             <Dynamic>drs4_srin_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>531</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(534): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(534): </Dynamic>
             <Dynamic>mezz3_adc_ch_input_diff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>534</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(535): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(535): </Dynamic>
             <Dynamic>adc_lclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>535</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(536): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(536): </Dynamic>
             <Dynamic>adc_adclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>536</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(539): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(539): </Dynamic>
             <Dynamic>drs4_a_buf</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>539</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(540): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(540): </Dynamic>
             <Dynamic>drs4_srin_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>540</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(543): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(543): </Dynamic>
             <Dynamic>mezz4_adc_ch_input_diff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>543</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(544): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(544): </Dynamic>
             <Dynamic>adc_lclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>544</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(545): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(545): </Dynamic>
             <Dynamic>adc_adclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>545</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(547): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(547): </Dynamic>
             <Dynamic>drs4_a_buf</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>547</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(548): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(548): </Dynamic>
             <Dynamic>drs4_srin_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>548</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(551): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(551): </Dynamic>
             <Dynamic>mezz5_adc_ch_input_diff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>551</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(552): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(552): </Dynamic>
             <Dynamic>adc_lclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>552</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(553): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(553): </Dynamic>
             <Dynamic>adc_adclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>553</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(556): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(556): </Dynamic>
             <Dynamic>drs4_a_buf</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>556</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(557): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(557): </Dynamic>
             <Dynamic>drs4_srin_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>557</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(561): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(561): </Dynamic>
             <Dynamic>drs4_a_buf</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>561</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(562): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(562): </Dynamic>
             <Dynamic>drs4_a_buf</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>562</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(563): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(563): </Dynamic>
             <Dynamic>drs4_a_buf</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>563</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(564): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(564): </Dynamic>
             <Dynamic>drs4_a_buf</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>564</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(565): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(565): </Dynamic>
             <Dynamic>drs4_a_buf</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>565</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(566): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(566): </Dynamic>
             <Dynamic>drs4_srin_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>566</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(567): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(567): </Dynamic>
             <Dynamic>drs4_srin_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>567</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(568): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(568): </Dynamic>
             <Dynamic>drs4_srin_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>568</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(569): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(569): </Dynamic>
             <Dynamic>drs4_srin_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>569</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(570): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(570): </Dynamic>
             <Dynamic>drs4_srin_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>570</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(574): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(574): </Dynamic>
             <Dynamic>mezz1_adc_ch_input_diff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>574</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(575): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(575): </Dynamic>
             <Dynamic>adc_lclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>575</Navigation>
         </Message>
         <Message>
             <ID>35921251</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(576): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(576): </Dynamic>
             <Dynamic>adc_adclk_input_buff</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>576</Navigation>
         </Message>
         <Message>
             <ID>35921613</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(581): </Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(581): </Dynamic>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>581</Navigation>
         </Message>
         <Message>
             <ID>35921205</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(125): </Dynamic>
+            <Dynamic>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(125): </Dynamic>
             <Dynamic>top_cms_mux</Dynamic>
             <Dynamic>Behavioral</Dynamic>
-            <Navigation>c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd</Navigation>
+            <Navigation>c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd</Navigation>
             <Navigation>125</Navigation>
         </Message>
         <Message>

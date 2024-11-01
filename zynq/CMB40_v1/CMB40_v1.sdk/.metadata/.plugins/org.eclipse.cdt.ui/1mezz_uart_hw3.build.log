@@ -1,4 +1,4 @@
-00:21:22 **** Auto Build of configuration Debug for project 1mezz_uart_hw3 ****
+16:20:00 **** Build of configuration Debug for project 1mezz_uart_hw3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -48,5 +48,5 @@ arm-none-eabi-size 1mezz_uart_hw3.elf  |tee "1mezz_uart_hw3.elf.size"
 'Finished building: 1mezz_uart_hw3.elf.size'
 ' '
 
-00:21:25 Build Finished (took 3s.16ms)
+16:20:02 Build Finished (took 1s.923ms)
 

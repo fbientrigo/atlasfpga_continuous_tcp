@@ -29,6 +29,7 @@
 #include "tcp_com.h"
 #include "CPLD_driver.h"
 #include "clk_mon.h"
+
 //#include "platform_config.h"
 //#define UARTLITE_DEVICE_ID	XPAR_UARTLITE_0_DEVICE_ID
 #define TEST_BUFFER_SIZE 1024 	//tamaño del buffer interno es 16 byte

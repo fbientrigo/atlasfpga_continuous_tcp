@@ -9,7 +9,7 @@
 <PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Tue Oct 22 13:48:51 2024
+Fri Nov 01 16:22:19 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -27,118 +27,153 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk2 [get_nets SCLK_buff]
-            499 items scored, 128 timing errors detected.
+Constraint: create_clock -period 5.000000 -name clk3 [get_nets \h_beat/clk_internal]
+            1 item scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 3.257ns
+Passed:  The following path meets requirements by 2.213ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             \SPI/echo_word_i0_i0  (from SCLK_buff +)
-   Destination:    FD1P3AX    D              \SPI/data_cpld_i0  (to SCLK_buff +)
+   Source:         FD1S3DX    CK             \h_beat/divided_clk_9  (from \h_beat/clk_internal +)
+   Destination:    FD1S3DX    D              \h_beat/divided_clk_9  (to \h_beat/clk_internal +)
 
-   Delay:                   8.111ns  (32.6% logic, 67.4% route), 6 logic levels.
-
- Constraint Details:
-
-      8.111ns data_path \SPI/echo_word_i0_i0 to \SPI/data_cpld_i0 violates
-      5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 3.257ns
-
- Path Details: \SPI/echo_word_i0_i0 to \SPI/data_cpld_i0
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \SPI/echo_word_i0_i0 (from SCLK_buff)
-Route         2   e 1.002                                  \SPI/echo_word[0]
-LUT4        ---     0.448              B to Z              \SPI/i2_2_lut
-Route         1   e 0.788                                  \SPI/n14
-LUT4        ---     0.448              C to Z              \SPI/i10_4_lut
-Route         1   e 0.788                                  \SPI/n22_adj_258
-LUT4        ---     0.448              B to Z              \SPI/i11_4_lut
-Route         3   e 1.051                                  \SPI/n2024
-LUT4        ---     0.448              B to Z              \SPI/i1_2_lut_3_lut_adj_13
-Route         3   e 1.051                                  \SPI/n1999
-LUT4        ---     0.448              D to Z              \SPI/SPI_states_ack_1__I_0_75_Mux_0_i3_4_lut
-Route         1   e 0.788                                  \SPI/data_cpld_13__N_146[0]
-                  --------
-                    8.111  (32.6% logic, 67.4% route), 6 logic levels.
-
-
-Error:  The following path violates requirements by 3.257ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3IX    CK             \SPI/echo_word_i0_i0  (from SCLK_buff +)
-   Destination:    FD1P3AX    D              \SPI/data_cpld_i2  (to SCLK_buff +)
-
-   Delay:                   8.111ns  (32.6% logic, 67.4% route), 6 logic levels.
+   Delay:                   2.641ns  (32.2% logic, 67.8% route), 2 logic levels.
 
  Constraint Details:
 
-      8.111ns data_path \SPI/echo_word_i0_i0 to \SPI/data_cpld_i2 violates
+      2.641ns data_path \h_beat/divided_clk_9 to \h_beat/divided_clk_9 meets
       5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 3.257ns
+      0.146ns L_S requirement (totaling 4.854ns) by 2.213ns
 
- Path Details: \SPI/echo_word_i0_i0 to \SPI/data_cpld_i2
+ Path Details: \h_beat/divided_clk_9 to \h_beat/divided_clk_9
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \SPI/echo_word_i0_i0 (from SCLK_buff)
-Route         2   e 1.002                                  \SPI/echo_word[0]
-LUT4        ---     0.448              B to Z              \SPI/i2_2_lut
-Route         1   e 0.788                                  \SPI/n14
-LUT4        ---     0.448              C to Z              \SPI/i10_4_lut
-Route         1   e 0.788                                  \SPI/n22_adj_258
-LUT4        ---     0.448              B to Z              \SPI/i11_4_lut
-Route         3   e 1.051                                  \SPI/n2024
-LUT4        ---     0.448              B to Z              \SPI/i1_2_lut_3_lut_adj_13
-Route         3   e 1.051                                  \SPI/n1999
-LUT4        ---     0.448              D to Z              \SPI/SPI_states_ack_1__I_0_75_Mux_2_i3_4_lut
-Route         1   e 0.788                                  \SPI/data_cpld_13__N_146[2]
+L_CO        ---     0.403             CK to Q              \h_beat/divided_clk_9 (from \h_beat/clk_internal)
+Route         2   e 1.002                                  top_heartbeat_c
+LUT4        ---     0.448              A to Z              \h_beat/heartbeat_I_0_1_lut
+Route         1   e 0.788                                  \h_beat/heartbeat_N_267
                   --------
-                    8.111  (32.6% logic, 67.4% route), 6 logic levels.
+                    2.641  (32.2% logic, 67.8% route), 2 logic levels.
 
-
-Error:  The following path violates requirements by 3.257ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3IX    CK             \SPI/echo_word_i0_i0  (from SCLK_buff +)
-   Destination:    FD1P3AX    D              \SPI/data_cpld_i10  (to SCLK_buff +)
-
-   Delay:                   8.111ns  (32.6% logic, 67.4% route), 6 logic levels.
-
- Constraint Details:
-
-      8.111ns data_path \SPI/echo_word_i0_i0 to \SPI/data_cpld_i10 violates
-      5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 3.257ns
-
- Path Details: \SPI/echo_word_i0_i0 to \SPI/data_cpld_i10
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \SPI/echo_word_i0_i0 (from SCLK_buff)
-Route         2   e 1.002                                  \SPI/echo_word[0]
-LUT4        ---     0.448              B to Z              \SPI/i2_2_lut
-Route         1   e 0.788                                  \SPI/n14
-LUT4        ---     0.448              C to Z              \SPI/i10_4_lut
-Route         1   e 0.788                                  \SPI/n22_adj_258
-LUT4        ---     0.448              B to Z              \SPI/i11_4_lut
-Route         3   e 1.051                                  \SPI/n2024
-LUT4        ---     0.448              B to Z              \SPI/i1_2_lut_3_lut_adj_13
-Route         3   e 1.051                                  \SPI/n1999
-LUT4        ---     0.448              D to Z              \SPI/SPI_states_ack_1__I_0_75_Mux_10_i3_4_lut
-Route         1   e 0.788                                  \SPI/data_cpld_13__N_146[10]
-                  --------
-                    8.111  (32.6% logic, 67.4% route), 6 logic levels.
-
-Warning: 8.257 ns is the maximum delay for this constraint.
+Report: 2.787 ns is the maximum delay for this constraint.
 
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk1 [get_nets ADC_ch_out_sel_7__N_89]
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets SCLK_buff]
+            646 items scored, 232 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.590ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \SPI/echo_word_i0_i2  (from SCLK_buff +)
+   Destination:    FD1P3AX    D              \SPI/data_cpld_i0  (to SCLK_buff +)
+
+   Delay:                   8.444ns  (31.3% logic, 68.7% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.444ns data_path \SPI/echo_word_i0_i2 to \SPI/data_cpld_i0 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.590ns
+
+ Path Details: \SPI/echo_word_i0_i2 to \SPI/data_cpld_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \SPI/echo_word_i0_i2 (from SCLK_buff)
+Route         2   e 1.002                                  \SPI/echo_word[2]
+LUT4        ---     0.448              B to Z              \SPI/i5_3_lut
+Route         1   e 0.788                                  \SPI/n14
+LUT4        ---     0.448              C to Z              \SPI/i8_4_lut
+Route         1   e 0.788                                  \SPI/n2071
+LUT4        ---     0.448              C to Z              \SPI/i3_4_lut
+Route         3   e 1.051                                  \SPI/n2171
+LUT4        ---     0.448              B to Z              \SPI/i1_2_lut_3_lut_adj_32
+Route        12   e 1.384                                  \SPI/n27
+LUT4        ---     0.448              D to Z              \SPI/SPI_states_ack_1__I_0_80_Mux_0_i3_4_lut
+Route         1   e 0.788                                  \SPI/data_cpld_13__N_151[0]
+                  --------
+                    8.444  (31.3% logic, 68.7% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.590ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \SPI/echo_word_i0_i2  (from SCLK_buff +)
+   Destination:    FD1P3AX    D              \SPI/data_cpld_i2  (to SCLK_buff +)
+
+   Delay:                   8.444ns  (31.3% logic, 68.7% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.444ns data_path \SPI/echo_word_i0_i2 to \SPI/data_cpld_i2 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.590ns
+
+ Path Details: \SPI/echo_word_i0_i2 to \SPI/data_cpld_i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \SPI/echo_word_i0_i2 (from SCLK_buff)
+Route         2   e 1.002                                  \SPI/echo_word[2]
+LUT4        ---     0.448              B to Z              \SPI/i5_3_lut
+Route         1   e 0.788                                  \SPI/n14
+LUT4        ---     0.448              C to Z              \SPI/i8_4_lut
+Route         1   e 0.788                                  \SPI/n2071
+LUT4        ---     0.448              C to Z              \SPI/i3_4_lut
+Route         3   e 1.051                                  \SPI/n2171
+LUT4        ---     0.448              B to Z              \SPI/i1_2_lut_3_lut_adj_32
+Route        12   e 1.384                                  \SPI/n27
+LUT4        ---     0.448              D to Z              \SPI/SPI_states_ack_1__I_0_80_Mux_2_i3_4_lut
+Route         1   e 0.788                                  \SPI/data_cpld_13__N_151[2]
+                  --------
+                    8.444  (31.3% logic, 68.7% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.590ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3AX    CK             \SPI/echo_word_i0_i2  (from SCLK_buff +)
+   Destination:    FD1P3AX    D              \SPI/data_cpld_i3  (to SCLK_buff +)
+
+   Delay:                   8.444ns  (31.3% logic, 68.7% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.444ns data_path \SPI/echo_word_i0_i2 to \SPI/data_cpld_i3 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.590ns
+
+ Path Details: \SPI/echo_word_i0_i2 to \SPI/data_cpld_i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \SPI/echo_word_i0_i2 (from SCLK_buff)
+Route         2   e 1.002                                  \SPI/echo_word[2]
+LUT4        ---     0.448              B to Z              \SPI/i5_3_lut
+Route         1   e 0.788                                  \SPI/n14
+LUT4        ---     0.448              C to Z              \SPI/i8_4_lut
+Route         1   e 0.788                                  \SPI/n2071
+LUT4        ---     0.448              C to Z              \SPI/i3_4_lut
+Route         3   e 1.051                                  \SPI/n2171
+LUT4        ---     0.448              B to Z              \SPI/i1_2_lut_3_lut_adj_32
+Route        12   e 1.384                                  \SPI/n27
+LUT4        ---     0.448              D to Z              \SPI/SPI_states_ack_1__I_0_80_Mux_3_i3_4_lut
+Route         1   e 0.788                                  \SPI/data_cpld_13__N_151[3]
+                  --------
+                    8.444  (31.3% logic, 68.7% route), 6 logic levels.
+
+Warning: 8.590 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets ADC_ch_out_sel_7__N_94]
             0 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
@@ -155,10 +190,13 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets SCLK_buff]               |     5.000 ns|     8.257 ns|     6 *
+clk3 [get_nets \h_beat/clk_internal]    |     5.000 ns|     2.787 ns|     2  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets ADC_ch_out_sel_7__N_89]  |            -|            -|     0  
+clk2 [get_nets SCLK_buff]               |     5.000 ns|     8.590 ns|     6 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets ADC_ch_out_sel_7__N_94]  |            -|            -|     0  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
 clk0 [get_nets SPI_rdy]                 |            -|            -|     0  
@@ -171,25 +209,19 @@ clk0 [get_nets SPI_rdy]                 |            -|            -|     0
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-\SPI/n2024                              |       3|      60|     46.88%
+\SPI/n2171                              |       3|     168|     72.41%
                                         |        |        |
-\SPI/SCLK_buff_enable_37                |      14|      56|     43.75%
+\SPI/n27                                |      12|     144|     62.07%
                                         |        |        |
-\SPI/n7_adj_257                         |       5|      56|     43.75%
+\SPI/n2071                              |       1|     126|     54.31%
                                         |        |        |
-\SPI/n22_adj_258                        |       1|      40|     31.25%
+\SPI/n15                                |       1|      56|     24.14%
                                         |        |        |
-\SPI/n1999                              |       3|      36|     28.13%
+\SPI/SCLK_buff_enable_46                |      14|      42|     18.10%
                                         |        |        |
-\SPI/n20                                |       1|      20|     15.63%
+\SPI/n14                                |       1|      42|     18.10%
                                         |        |        |
-\SPI/count_data_cpld[0]                 |       5|      14|     10.94%
-                                        |        |        |
-\SPI/count_data_cpld[1]                 |       4|      14|     10.94%
-                                        |        |        |
-\SPI/count_data_cpld[2]                 |       3|      14|     10.94%
-                                        |        |        |
-\SPI/count_data_cpld[3]                 |       2|      14|     10.94%
+\SPI/n2336                              |       2|      42|     18.10%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -197,12 +229,12 @@ Critical Nets                           |   Loads|  Errors| % of total
 <A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
 ---------------
 
-Timing errors: 128  Score: 170714
+Timing errors: 232  Score: 469744
 
-Constraints cover  527 paths, 134 nets, and 545 connections (53.7% coverage)
+Constraints cover  668 paths, 143 nets, and 576 connections (52.9% coverage)
 
 
-Peak memory: 84561920 bytes, TRCE: 2109440 bytes, DLYMAN: 0 bytes
+Peak memory: 84541440 bytes, TRCE: 2101248 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 
 
 

@@ -7,10 +7,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Oct 30 12:58:13 2024
+Fri Nov 01 16:22:18 2024
 
 
-Command Line:  synthesis -f CMS_MUX_IO_cms_mux_lattice.synproj -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml 
+Command Line:  synthesis -f CMS_MUX_IO_cms_mux_lattice.synproj -gui -msgset C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/promote.xml 
 
     <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
 Synthesis options:
@@ -65,12 +65,12 @@ RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
 -p C:/lscc/diamond/3.13/ispfpga/xo3c00a/data (searchpath added)
--p C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux (searchpath added)
--p C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO (searchpath added)
+-p C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/cms_mux (searchpath added)
+-p C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO (searchpath added)
 VHDL library = work
-VHDL design file = C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/top_cms_mux.vhd
-VHDL design file = C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/SPI_som.vhd
-VHDL design file = C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/heartbeat.vhd
+VHDL design file = C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/top_cms_mux.vhd
+VHDL design file = C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/SPI_som.vhd
+VHDL design file = C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/heartbeat.vhd
 NGD file = CMS_MUX_IO_cms_mux.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -81,65 +81,65 @@ Technology check ok...
 Analyzing Verilog file C:/lscc/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3l.v. VERI-1482
 Compile design.
 Compile Design Begin
-    <postMsg mid="35921504" type="Info"    dynamic="2" navigation="0" arg0="" arg1="C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux"  />
-Analyzing VHDL file c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd. VHDL-1481
-    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(15): " arg1="top_cms_mux" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="15"  />
-    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(128): " arg1="behavioral" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="128"  />
+    <postMsg mid="35921504" type="Info"    dynamic="2" navigation="0" arg0="" arg1="C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/cms_mux"  />
+Analyzing VHDL file c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(15): " arg1="top_cms_mux" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="15"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(128): " arg1="behavioral" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="128"  />
 unit top_cms_mux is not yet analyzed. VHDL-1485
 unit top_cms_mux is not yet analyzed. VHDL-1485
-Analyzing VHDL file c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd. VHDL-1481
-    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd(15): " arg1="spi_som" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd" arg3="15"  />
-    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd(31): " arg1="behavioral" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd" arg3="31"  />
+Analyzing VHDL file c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/spi_som.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/spi_som.vhd(15): " arg1="spi_som" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/spi_som.vhd" arg3="15"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/spi_som.vhd(31): " arg1="behavioral" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/spi_som.vhd" arg3="31"  />
 unit top_cms_mux is not yet analyzed. VHDL-1485
 unit top_cms_mux is not yet analyzed. VHDL-1485
-Analyzing VHDL file c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd. VHDL-1481
-    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd(14): " arg1="heartbeat" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd" arg3="14"  />
-    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd(22): " arg1="behavioral" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd" arg3="22"  />
+Analyzing VHDL file c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/heartbeat.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/heartbeat.vhd(14): " arg1="heartbeat" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/heartbeat.vhd" arg3="14"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/heartbeat.vhd(22): " arg1="behavioral" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/heartbeat.vhd" arg3="22"  />
 unit top_cms_mux is not yet analyzed. VHDL-1485
 unit top_cms_mux is not yet analyzed. VHDL-1485
 unit top_cms_mux is not yet analyzed. VHDL-1485
-c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(15): executing top_cms_mux(Behavioral)
+c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(15): executing top_cms_mux(Behavioral)
 
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(516): " arg1="mezz1_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="516"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(517): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="517"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(518): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="518"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(520): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="520"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(521): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="521"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(525): " arg1="mezz2_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="525"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(526): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="526"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(527): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="527"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(530): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="530"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(531): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="531"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(534): " arg1="mezz3_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="534"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(535): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="535"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(536): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="536"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(539): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="539"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(540): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="540"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(543): " arg1="mezz4_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="543"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(544): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="544"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(545): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="545"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(547): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="547"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(548): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="548"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(551): " arg1="mezz5_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="551"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(552): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="552"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(553): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="553"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(556): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="556"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(557): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="557"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(561): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="561"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(562): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="562"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(563): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="563"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(564): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="564"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(565): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="565"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(566): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="566"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(567): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="567"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(568): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="568"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(569): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="569"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(570): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="570"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(574): " arg1="mezz1_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="574"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(575): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="575"  />
-    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(576): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="576"  />
-    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(581): " arg1="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg2="581"  />
-    <postMsg mid="35921205" type="Warning" dynamic="3" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(125): " arg1="top_cms_mux" arg2="Behavioral" arg3="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg4="125"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(516): " arg1="mezz1_adc_ch_input_diff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="516"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(517): " arg1="adc_lclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="517"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(518): " arg1="adc_adclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="518"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(520): " arg1="drs4_a_buf" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="520"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(521): " arg1="drs4_srin_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="521"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(525): " arg1="mezz2_adc_ch_input_diff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="525"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(526): " arg1="adc_lclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="526"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(527): " arg1="adc_adclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="527"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(530): " arg1="drs4_a_buf" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="530"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(531): " arg1="drs4_srin_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="531"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(534): " arg1="mezz3_adc_ch_input_diff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="534"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(535): " arg1="adc_lclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="535"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(536): " arg1="adc_adclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="536"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(539): " arg1="drs4_a_buf" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="539"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(540): " arg1="drs4_srin_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="540"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(543): " arg1="mezz4_adc_ch_input_diff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="543"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(544): " arg1="adc_lclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="544"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(545): " arg1="adc_adclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="545"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(547): " arg1="drs4_a_buf" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="547"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(548): " arg1="drs4_srin_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="548"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(551): " arg1="mezz5_adc_ch_input_diff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="551"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(552): " arg1="adc_lclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="552"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(553): " arg1="adc_adclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="553"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(556): " arg1="drs4_a_buf" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="556"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(557): " arg1="drs4_srin_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="557"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(561): " arg1="drs4_a_buf" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="561"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(562): " arg1="drs4_a_buf" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="562"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(563): " arg1="drs4_a_buf" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="563"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(564): " arg1="drs4_a_buf" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="564"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(565): " arg1="drs4_a_buf" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="565"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(566): " arg1="drs4_srin_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="566"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(567): " arg1="drs4_srin_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="567"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(568): " arg1="drs4_srin_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="568"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(569): " arg1="drs4_srin_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="569"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(570): " arg1="drs4_srin_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="570"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(574): " arg1="mezz1_adc_ch_input_diff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="574"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(575): " arg1="adc_lclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="575"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(576): " arg1="adc_adclk_input_buff" arg2="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg3="576"  />
+    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(581): " arg1="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg2="581"  />
+    <postMsg mid="35921205" type="Warning" dynamic="3" navigation="2" arg0="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd(125): " arg1="top_cms_mux" arg2="Behavioral" arg3="c:/users/osotosan/charge-monitoring-system/cpld_lattice/cms_mux_io/top_cms_mux.vhd" arg4="125"  />
 Top module name (VHDL): top_cms_mux
 Last elaborated design is top_cms_mux(Behavioral)
 Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
@@ -454,13 +454,13 @@ clk0 [get_nets SPI_rdy]                 |            -|            -|     0
 1 constraints not met.
 
 
-Peak Memory Usage: 80.930  MB
+Peak Memory Usage: 80.785  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.172  secs
+Elapsed CPU time for LSE flow : 0.000  secs
 --------------------------------------------------------------
 
-map -a "MachXO3L" -p LCMXO3L-9400C -t CABGA484 -s 5 -oc Commercial   "CMS_MUX_IO_cms_mux.ngd" -o "CMS_MUX_IO_cms_mux_map.ncd" -pr "CMS_MUX_IO_cms_mux.prf" -mp "CMS_MUX_IO_cms_mux.mrp" -lpf "C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/CMS_MUX_IO_cms_mux.lpf" -lpf "C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/CMS_MUX_IO.lpf"  -c 0           
+map -a "MachXO3L" -p LCMXO3L-9400C -t CABGA484 -s 5 -oc Commercial   "CMS_MUX_IO_cms_mux.ngd" -o "CMS_MUX_IO_cms_mux_map.ncd" -pr "CMS_MUX_IO_cms_mux.prf" -mp "CMS_MUX_IO_cms_mux.mrp" -lpf "C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/cms_mux/CMS_MUX_IO_cms_mux.lpf" -lpf "C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/CMS_MUX_IO.lpf"  -c 0           
 map:  version Diamond (64-bit) 3.13.0.56.2
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
@@ -633,7 +633,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
-Wed Oct 30 12:58:16 2024
+Fri Nov 01 16:22:21 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -643,7 +643,7 @@ Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CMS_MUX_IO_cms_mux.tw1 -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CMS_MUX_IO_cms_mux.tw1 -gui -msgset C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.prf 
 Design file:     cms_mux_io_cms_mux_map.ncd
 Preference file: cms_mux_io_cms_mux.prf
 Device,speed:    LCMXO3L-9400C,5
@@ -666,7 +666,7 @@ Constraints cover 686 paths, 9 nets, and 718 connections (77.12% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
-Wed Oct 30 12:58:16 2024
+Fri Nov 01 16:22:21 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -676,7 +676,7 @@ Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CMS_MUX_IO_cms_mux.tw1 -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CMS_MUX_IO_cms_mux.tw1 -gui -msgset C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.prf 
 Design file:     cms_mux_io_cms_mux_map.ncd
 Preference file: cms_mux_io_cms_mux.prf
 Device,speed:    LCMXO3L-9400C,M
@@ -781,10 +781,10 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "CMS_MUX_IO_cms_mux_map.ncd"
-Wed Oct 30 12:58:17 2024
+Fri Nov 01 16:22:22 2024
 
 PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
-Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.dir/5_1.ncd CMS_MUX_IO_cms_mux.prf
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.dir/5_1.ncd CMS_MUX_IO_cms_mux.prf
 Preference file: CMS_MUX_IO_cms_mux.prf.
 Placement level-cost: 5-1.
 Routing Iterations: 6
@@ -837,17 +837,17 @@ Signal CSR_CS_SOM_c is selected as Global Set/Reset.
 .
 Starting Placer Phase 0.
 .............
-Finished Placer Phase 0.  REAL time: 0 secs 
+Finished Placer Phase 0.  REAL time: 2 secs 
 
 Starting Placer Phase 1.
 ....................
 Placer score = 245616.
-Finished Placer Phase 1.  REAL time: 3 secs 
+Finished Placer Phase 1.  REAL time: 4 secs 
 
 Starting Placer Phase 2.
 .
 Placer score =  245155
-Finished Placer Phase 2.  REAL time: 3 secs 
+Finished Placer Phase 2.  REAL time: 4 secs 
 
 
 ------------------ Clock Report ------------------
@@ -907,7 +907,7 @@ Starting router resource preassignment
 
 Completed router resource preassignment. Real time: 10 secs 
 
-Start NBR router at 12:58:27 10/30/24
+Start NBR router at 16:22:32 11/01/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -922,9 +922,9 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 12:58:27 10/30/24
+Start NBR special constraint process at 16:22:32 11/01/24
 
-Start NBR section for initial routing at 12:58:27 10/30/24
+Start NBR section for initial routing at 16:22:32 11/01/24
 Level 1, iteration 1
 0(0.00%) conflict; 730(78.41%) untouched conns; 0 (nbr) score; 
 Estimated worst slack/total negative slack<setup>: 2.648ns/0.000ns; real time: 10 secs 
@@ -933,47 +933,47 @@ Level 2, iteration 1
 Estimated worst slack/total negative slack<setup>: 2.983ns/0.000ns; real time: 10 secs 
 Level 3, iteration 1
 0(0.00%) conflict; 622(66.81%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 Level 4, iteration 1
 17(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 12:58:27 10/30/24
+Start NBR section for normal routing at 16:22:33 11/01/24
 Level 1, iteration 1
 3(0.00%) conflicts; 14(1.50%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 Level 4, iteration 1
 12(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 Level 4, iteration 2
 9(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 Level 4, iteration 3
 3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 Level 4, iteration 4
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 Level 4, iteration 5
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 Level 4, iteration 6
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 Level 4, iteration 7
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 Level 4, iteration 8
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 Level 4, iteration 9
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 12:58:27 10/30/24
+Start NBR section for setup/hold timing optimization with effort level 3 at 16:22:33 11/01/24
 Level 4, iteration 0
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
@@ -985,12 +985,12 @@ Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
 Estimated worst slack/total negative slack<setup>: 3.508ns/0.000ns; real time: 13 secs 
 
-Start NBR section for re-routing at 12:58:30 10/30/24
+Start NBR section for re-routing at 16:22:36 11/01/24
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 14 secs 
 
-Start NBR section for post-routing at 12:58:30 10/30/24
+Start NBR section for post-routing at 16:22:36 11/01/24
 
 End NBR router with 0 unrouted connection
 
@@ -1008,7 +1008,7 @@ Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored
     <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=Mux_sel_c_0_derived_9 loads=3 clock_loads=3&#xA;   Signal=Mezz4_DRS4_o_A_3__N_30 loads=3 clock_loads=3&#xA;   Signal=Mux_sel_c_0_derived_10 loads=3 clock_loads=3&#xA;   Signal=h_beat/clk_internal loads=1 clock_loads=1"  />
 
 Total CPU time 0 secs 
-Total REAL time: 13 secs 
+Total REAL time: 14 secs 
 Completely routed.
 End of route.  931 routed (100.00%); 0 unrouted.
 
@@ -1028,7 +1028,7 @@ PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
 Total CPU  time to completion: 0 secs 
-Total REAL time to completion: 13 secs 
+Total REAL time to completion: 14 secs 
 
 par done!
 
@@ -1065,7 +1065,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
-Wed Oct 30 12:58:30 2024
+Fri Nov 01 16:22:36 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1075,7 +1075,7 @@ Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o CMS_MUX_IO_cms_mux.twr -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux.ncd CMS_MUX_IO_cms_mux.prf 
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o CMS_MUX_IO_cms_mux.twr -gui -msgset C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux.ncd CMS_MUX_IO_cms_mux.prf 
 Design file:     cms_mux_io_cms_mux.ncd
 Preference file: cms_mux_io_cms_mux.prf
 Device,speed:    LCMXO3L-9400C,5
@@ -1098,7 +1098,7 @@ Constraints cover 686 paths, 9 nets, and 718 connections (77.12% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
-Wed Oct 30 12:58:30 2024
+Fri Nov 01 16:22:36 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1108,7 +1108,7 @@ Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o CMS_MUX_IO_cms_mux.twr -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux.ncd CMS_MUX_IO_cms_mux.prf 
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o CMS_MUX_IO_cms_mux.twr -gui -msgset C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux.ncd CMS_MUX_IO_cms_mux.prf 
 Design file:     cms_mux_io_cms_mux.ncd
 Preference file: cms_mux_io_cms_mux.prf
 Device,speed:    LCMXO3L-9400C,m
@@ -1283,94 +1283,5 @@ Bitstream Status: Final           Version 1.95.
  
 Saving bit stream in "CMS_MUX_IO_cms_mux.bit".
 Total CPU Time: 0 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 305 MB
-
-tmcheck -par "CMS_MUX_IO_cms_mux.par" 
-
-bitgen -f "CMS_MUX_IO_cms_mux.t2b" -w "CMS_MUX_IO_cms_mux.ncd"  -jedec "CMS_MUX_IO_cms_mux.prf"
-
-
-BITGEN: Bitstream Generator Diamond (64-bit) 3.13.0.56.2
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-
-
-Loading design for application Bitgen from file CMS_MUX_IO_cms_mux.ncd.
-Design name: top_cms_mux
-NCD version: 3.3
-Vendor:      LATTICE
-Device:      LCMXO3L-9400C
-Package:     CABGA484
-Performance: 5
-Loading device for application Bitgen from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
-Package Status:                     Final          Version 1.6.
-Performance Hardware Data Status:   Final          Version 37.5.
-
-Running DRC.
-DRC detected 0 errors and 0 warnings.
-Reading Preference File from CMS_MUX_IO_cms_mux.prf.
-    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo3c00a.acd ###"  />
-    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK"  />
-
-Preference Summary:
-+---------------------------------+---------------------------------+
-|  Preference                     |  Current Setting                |
-+---------------------------------+---------------------------------+
-|                         RamCfg  |                        Reset**  |
-+---------------------------------+---------------------------------+
-|                     MCCLK_FREQ  |                           66.5  |
-+---------------------------------+---------------------------------+
-|                  CONFIG_SECURE  |                          OFF**  |
-+---------------------------------+---------------------------------+
-|                          INBUF  |                           ON**  |
-+---------------------------------+---------------------------------+
-|                      JTAG_PORT  |                       ENABLE**  |
-+---------------------------------+---------------------------------+
-|                       SDM_PORT  |                      DISABLE**  |
-+---------------------------------+---------------------------------+
-|                 SLAVE_SPI_PORT  |                        DISABLE  |
-+---------------------------------+---------------------------------+
-|                MASTER_SPI_PORT  |                      DISABLE**  |
-+---------------------------------+---------------------------------+
-|                       I2C_PORT  |                      DISABLE**  |
-+---------------------------------+---------------------------------+
-|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
-+---------------------------------+---------------------------------+
-|                  CONFIGURATION  |                          CFG**  |
-+---------------------------------+---------------------------------+
-|                COMPRESS_CONFIG  |                           ON**  |
-+---------------------------------+---------------------------------+
-|                        MY_ASSP  |                          OFF**  |
-+---------------------------------+---------------------------------+
-|               ONE_TIME_PROGRAM  |                          OFF**  |
-+---------------------------------+---------------------------------+
-|                 ENABLE_TRANSFR  |                      DISABLE**  |
-+---------------------------------+---------------------------------+
-|                  SHAREDEBRINIT  |                      DISABLE**  |
-+---------------------------------+---------------------------------+
-|            BACKGROUND_RECONFIG  |                          OFF**  |
-+---------------------------------+---------------------------------+
-|                 DUALBOOTGOLDEN  |                     INTERNAL**  |
-+---------------------------------+---------------------------------+
- *  Default setting.
- ** The specified setting matches the default setting.
-
-
-Creating bit map...
- 
-Bitstream Status: Final           Version 1.95.
- 
-Saving bit stream in "CMS_MUX_IO_cms_mux.jed".
-=========
-Padding summary
-=========
-Padded 1756032 bits for this design
-
-
-Total CPU Time: 0 secs 
-Total REAL Time: 2 secs 
+Total REAL Time: 0 secs 
 Peak Memory Usage: 305 MB

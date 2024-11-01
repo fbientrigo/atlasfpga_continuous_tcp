@@ -4,10 +4,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Oct 30 12:58:34 2024
+Fri Nov 01 16:22:39 2024
 
 
-Command: bitgen -g RamCfg:Reset -path C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO -w -jedec -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux.ncd CMS_MUX_IO_cms_mux.prf 
+Command: bitgen -g RamCfg:Reset -path C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO -w -gui -msgset C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux.ncd CMS_MUX_IO_cms_mux.prf 
 
 Loading design for application Bitgen from file CMS_MUX_IO_cms_mux.ncd.
 Design name: top_cms_mux
@@ -74,13 +74,7 @@ Creating bit map...
  
 Bitstream Status: Final           Version 1.95.
  
-Saving bit stream in "CMS_MUX_IO_cms_mux.jed".
-=========
-Padding summary
-=========
-Padded 1756032 bits for this design
-
-
+Saving bit stream in "CMS_MUX_IO_cms_mux.bit".
 Total CPU Time: 0 secs 
-Total REAL Time: 2 secs 
+Total REAL Time: 0 secs 
 Peak Memory Usage: 305 MB

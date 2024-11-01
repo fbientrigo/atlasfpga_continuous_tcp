@@ -52767,3 +52767,81 @@ con
 14:42:38 INFO  : Successfully done setting SDK workspace  
 14:42:38 INFO  : Processing command line option -hwspec C:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.sdk/zsys_wrapper.hdf.
 14:42:38 INFO  : Checking for hwspec changes in the project zsys_wrapper_hw_platform_5.
+16:19:20 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\osotosan\charge-monitoring-system\zynq\CMB40_v1\CMB40_v1.sdk\temp_xsdb_launch_script.tcl
+16:19:20 INFO  : Registering command handlers for SDK TCF services
+16:19:23 INFO  : XSCT server has started successfully.
+16:19:25 INFO  : Successfully done setting XSCT server connection channel  
+16:19:25 INFO  : Successfully done setting SDK workspace  
+16:19:25 INFO  : Processing command line option -hwspec C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper.hdf.
+16:22:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:22:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1' command is executed.
+16:22:49 INFO  : FPGA configured successfully with bitstream "C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_5/zsys_wrapper.bit"
+16:24:14 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\osotosan\charge-monitoring-system\zynq\CMB40_v1\CMB40_v1.sdk\temp_xsdb_launch_script.tcl
+16:24:15 INFO  : Registering command handlers for SDK TCF services
+16:24:16 INFO  : XSCT server has started successfully.
+16:24:17 INFO  : Successfully done setting XSCT server connection channel  
+16:24:17 INFO  : Successfully done setting SDK workspace  
+16:24:17 INFO  : Processing command line option -hwspec C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper.hdf.
+16:24:17 INFO  : Checking for hwspec changes in the project zsys_wrapper_hw_platform_6.
+16:24:59 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/1mezz_uart_hw3_bsp/system.mss line 22 - No IP instance named ADC_AXI_ADC_v1_0_0 present in hardware design
+
+16:24:59 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+16:24:59 ERROR :  [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+16:24:59 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/1mezz_uart_hw3_bsp/system.mss line 22 - No IP instance named ADC_AXI_ADC_v1_0_0 present in hardware design
+
+16:24:59 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+16:24:59 INFO  : Unable to read in MSS file C:\Users\osotosan\charge-monitoring-system\zynq\CMB40_v1\CMB40_v1.sdk\1mezz_uart_hw3_bsp\system.mss : null
+16:24:59 ERROR : (XSDB Server)ERROR: [Hsi 55-1403] C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/1mezz_uart_hw3_bsp/system.mss line 22 - No IP instance named ADC_AXI_ADC_v1_0_0 present in hardware design
+
+16:24:59 ERROR : (XSDB Server)ERROR: [Hsi 55-1452] Error: running open_sw_design.
+
+22:06:29 INFO  : Refreshed build settings on project MB40ch_wTCP_server
+22:08:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:08:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1' command is executed.
+22:09:01 INFO  : FPGA configured successfully with bitstream "C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/zsys_wrapper.bit"
+22:09:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1' command is executed.
+22:09:29 INFO  : 'fpga -state' command is executed.
+22:09:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:09:29 INFO  : Jtag cable 'JTAG-ONB4 2516330074E8A' is selected.
+22:09:29 INFO  : 'jtag frequency' command is executed.
+22:09:29 INFO  : Sourcing of 'C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/ps7_init.tcl' is done.
+22:09:29 INFO  : Context for 'APU' is selected.
+22:09:29 INFO  : Hardware design information is loaded from 'C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf'.
+22:09:29 INFO  : 'configparams force-mem-access 1' command is executed.
+22:09:29 INFO  : Context for 'APU' is selected.
+22:09:29 INFO  : 'stop' command is executed.
+22:09:30 INFO  : 'ps7_init' command is executed.
+22:09:30 INFO  : 'ps7_post_config' command is executed.
+22:09:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:30 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:09:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:30 INFO  : The application 'C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server/Debug/MB40ch_wTCP_server.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:09:30 INFO  : 'configparams force-mem-access 0' command is executed.
+22:09:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_6/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+dow C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/MB40ch_wTCP_server/Debug/MB40ch_wTCP_server.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:09:30 INFO  : Memory regions updated for context APU
+22:09:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:30 INFO  : 'con' command is executed.
+22:09:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+con
+----------------End of Script----------------
+
+22:09:30 INFO  : Launch script is exported to file 'C:\Users\osotosan\charge-monitoring-system\zynq\CMB40_v1\CMB40_v1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_mb40ch_wtcp_server.elf_on_local.tcl'
