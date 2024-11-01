@@ -20,7 +20,7 @@ entity top_cms_mux is
 		N_DRS4_i:	integer := 14;
 		N_ADC_o : integer := 39 ;--number of signal per mezzanines
 		N_DRS4_o:	integer := 14;
-		SPI_word_lenght : integer := 12 --12 is for 12 bits 
+		SPI_word_lenght : integer := 12 --originally 12 is for 12 bits, but now 14 bits due 2 additional for mezz's gain setting
 	);
     port (
 		--ADC digital output channels of each mezzanine
@@ -84,6 +84,8 @@ entity top_cms_mux is
 		o_Mezz_ADC_DAC_nReset	: out std_logic_vector ( N_mezz-1 downto 0);--98 y 99
 		o_Mezz_nSHDN	: out std_logic_vector (N_mezz-1 downto 0);
 		o_Mezz_tcal_en : out std_logic_vector (N_mezz-1 downto 0);
+		o_Mezz_Mux_gain_0 : out std_logic_vector (N_mezz-1 downto 0);
+		o_Mezz_Mux_gain_1 : out std_logic_vector (N_mezz-1 downto 0);
 		
 		-----SPI Som signals----------------
 		
@@ -116,7 +118,7 @@ signal ADC_ch_out_sel : std_logic_vector(7 downto 0);
 signal ADC_LCLK_out : std_logic;
 signal ADC_ADCLK_out : std_logic;
 
-signal Mezz_DRS4_o_denable,Mezz_nSHDN,Mezz_DAC_sel0,Mezz_DAC_sel1,Mezz_ADC_DAC_nReset,Mezz_ADC_nCS,Mezz_Mux0,Mezz_Mux1,Mezz_tcal_en : std_logic_vector(N_mezz -1 downto 0);
+signal Mezz_DRS4_o_denable,Mezz_nSHDN,Mezz_DAC_sel0,Mezz_DAC_sel1,Mezz_ADC_DAC_nReset,Mezz_ADC_nCS,Mezz_Mux0,Mezz_Mux1,Mezz_tcal_en,Mezz_Mux_gain_0,Mezz_Mux_gain_1 : std_logic_vector(N_mezz -1 downto 0);
 
 
 ---------------DRS4 signals -------------------
@@ -150,7 +152,8 @@ Component ILVDS
 	
 Component SPI_SOM
 generic(
-word_lenght : integer := 12 --ej: 10 is for 10 bit
+--word_lenght : integer := 12 --ej: 10 is for 10 bit
+word_lenght : integer := 14 --originaly 12 bits, but now 2 additional for gain settting at mezzanine's mux
 );
 port(
 		MOSI_som : in std_logic;
@@ -185,6 +188,8 @@ o_Mezz_ADC_nCS <= Mezz_ADC_nCS;
 o_Mezz_Mux0 <= Mezz_Mux0;
 o_Mezz_Mux1 <= Mezz_Mux1;
 o_Mezz_tcal_en <= Mezz_tcal_en;
+o_Mezz_Mux_gain_0 <= Mezz_Mux_gain_0;
+o_Mezz_Mux_gain_1 <= Mezz_Mux_gain_1;
 
 DRS4_A_buf <= DRS4_i_A;
 
@@ -353,6 +358,8 @@ begin
 				Mezz_Mux0(0) <= SPI_data(6);
 				Mezz_Mux1(0) <= SPI_data(7);
 				Mezz_ADC_nCS(0) <= SPI_data(8);
+				Mezz_Mux_gain_0(0) <= SPI_data(9);
+				Mezz_Mux_gain_1(0) <= SPI_data(10);
 				
 			WHEN b"010" =>
 				Mezz_DRS4_o_denable(1) <= SPI_data(0);
@@ -364,6 +371,8 @@ begin
 				Mezz_Mux0(1) <= SPI_data(6);
 				Mezz_Mux1(1) <= SPI_data(7);
 				Mezz_ADC_nCS(1) <= SPI_data(8);
+				Mezz_Mux_gain_0(1) <= SPI_data(9);
+				Mezz_Mux_gain_1(1) <= SPI_data(10);
 				
 			WHEN b"011" =>
 				Mezz_DRS4_o_denable(2) <= SPI_data(0);
@@ -375,6 +384,8 @@ begin
 				Mezz_Mux0(2) <= SPI_data(6);
 				Mezz_Mux1(2) <= SPI_data(7);
 				Mezz_ADC_nCS(2) <= SPI_data(8);
+				Mezz_Mux_gain_0(2) <= SPI_data(9);
+				Mezz_Mux_gain_1(2) <= SPI_data(10);
 				
 			WHEN b"100" =>
 				Mezz_DRS4_o_denable(3) <= SPI_data(0);
@@ -386,6 +397,8 @@ begin
 				Mezz_Mux0(3) <= SPI_data(6);
 				Mezz_Mux1(3) <= SPI_data(7);
 				Mezz_ADC_nCS(3) <= SPI_data(8);
+				Mezz_Mux_gain_0(3) <= SPI_data(9);
+				Mezz_Mux_gain_1(3) <= SPI_data(10);
 				
 			WHEN b"101" =>
 				Mezz_DRS4_o_denable(4) <= SPI_data(0);
@@ -397,6 +410,8 @@ begin
 				Mezz_Mux0(4) <= SPI_data(6);
 				Mezz_Mux1(4) <= SPI_data(7);
 				Mezz_ADC_nCS(4) <= SPI_data(8);
+				Mezz_Mux_gain_0(4) <= SPI_data(9);
+				Mezz_Mux_gain_1(4) <= SPI_data(10);
 				
 			WHEN b"111" =>
 				
@@ -409,6 +424,8 @@ begin
 				Mezz_Mux0 <= SPI_data(6) & SPI_data(6) & SPI_data(6) & SPI_data(6) & SPI_data(6);
 				Mezz_Mux1 <= SPI_data(7)& SPI_data(7)& SPI_data(7)& SPI_data(7)& SPI_data(7);
 				Mezz_ADC_nCS <= SPI_data(8)& SPI_data(8)& SPI_data(8)& SPI_data(8)& SPI_data(8);
+				Mezz_Mux_gain_0 <= SPI_data(9)& SPI_data(9)& SPI_data(9)& SPI_data(9)& SPI_data(9);
+				Mezz_Mux_gain_1 <= SPI_data(10)& SPI_data(10)& SPI_data(10)& SPI_data(10)& SPI_data(10);
 			WHEN others =>
 				Mezz_DRS4_o_denable <= Mezz_DRS4_o_denable;
 				Mezz_nSHDN <= Mezz_nSHDN;
@@ -419,6 +436,8 @@ begin
 				Mezz_Mux0 <= Mezz_Mux0;
 				Mezz_Mux1 <= Mezz_Mux1;
 				Mezz_ADC_nCS <= Mezz_ADC_nCS;
+				Mezz_Mux_gain_0 <= Mezz_Mux_gain_0;
+				Mezz_Mux_gain_1 <= Mezz_Mux_gain_1;
 		end case;
 			
 	end if;
