@@ -1,0 +1,1376 @@
+
+synthesis -f "CMS_MUX_IO_cms_mux_lattice.synproj"
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Wed Oct 30 12:58:13 2024
+
+
+Command Line:  synthesis -f CMS_MUX_IO_cms_mux_lattice.synproj -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml 
+
+    <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
+Synthesis options:
+The -a option is MachXO3L.
+The -s option is 5.
+The -t option is CABGA484.
+The -d option is LCMXO3L-9400C.
+Using package CABGA484.
+Using performance grade 5.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO3L
+
+### Device  : LCMXO3L-9400C
+
+### Package : CABGA484
+
+### Speed   : 5
+
+##########################################################
+
+                                                          
+
+    <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
+Optimization goal = Balanced
+Top-level module name = top_cms_mux.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/lscc/diamond/3.13/ispfpga/xo3c00a/data (searchpath added)
+-p C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux (searchpath added)
+-p C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO (searchpath added)
+VHDL library = work
+VHDL design file = C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/top_cms_mux.vhd
+VHDL design file = C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/SPI_som.vhd
+VHDL design file = C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/heartbeat.vhd
+NGD file = CMS_MUX_IO_cms_mux.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3l.v. VERI-1482
+Compile design.
+Compile Design Begin
+    <postMsg mid="35921504" type="Info"    dynamic="2" navigation="0" arg0="" arg1="C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux"  />
+Analyzing VHDL file c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(15): " arg1="top_cms_mux" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="15"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(128): " arg1="behavioral" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="128"  />
+unit top_cms_mux is not yet analyzed. VHDL-1485
+unit top_cms_mux is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd(15): " arg1="spi_som" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd" arg3="15"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd(31): " arg1="behavioral" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/spi_som.vhd" arg3="31"  />
+unit top_cms_mux is not yet analyzed. VHDL-1485
+unit top_cms_mux is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd(14): " arg1="heartbeat" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd" arg3="14"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd(22): " arg1="behavioral" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/heartbeat.vhd" arg3="22"  />
+unit top_cms_mux is not yet analyzed. VHDL-1485
+unit top_cms_mux is not yet analyzed. VHDL-1485
+unit top_cms_mux is not yet analyzed. VHDL-1485
+c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(15): executing top_cms_mux(Behavioral)
+
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(516): " arg1="mezz1_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="516"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(517): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="517"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(518): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="518"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(520): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="520"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(521): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="521"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(525): " arg1="mezz2_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="525"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(526): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="526"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(527): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="527"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(530): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="530"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(531): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="531"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(534): " arg1="mezz3_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="534"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(535): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="535"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(536): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="536"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(539): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="539"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(540): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="540"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(543): " arg1="mezz4_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="543"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(544): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="544"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(545): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="545"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(547): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="547"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(548): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="548"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(551): " arg1="mezz5_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="551"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(552): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="552"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(553): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="553"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(556): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="556"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(557): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="557"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(561): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="561"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(562): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="562"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(563): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="563"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(564): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="564"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(565): " arg1="drs4_a_buf" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="565"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(566): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="566"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(567): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="567"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(568): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="568"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(569): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="569"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(570): " arg1="drs4_srin_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="570"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(574): " arg1="mezz1_adc_ch_input_diff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="574"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(575): " arg1="adc_lclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="575"  />
+    <postMsg mid="35921251" type="Warning" dynamic="2" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(576): " arg1="adc_adclk_input_buff" arg2="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg3="576"  />
+    <postMsg mid="35921613" type="Warning" dynamic="1" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(581): " arg1="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg2="581"  />
+    <postMsg mid="35921205" type="Warning" dynamic="3" navigation="2" arg0="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd(125): " arg1="top_cms_mux" arg2="Behavioral" arg3="c:/cmb_40_project/old_project_with_cpld_files/charge-monitoring-system/cpld_proj/cms_mux_io/top_cms_mux.vhd" arg4="125"  />
+Top module name (VHDL): top_cms_mux
+Last elaborated design is top_cms_mux(Behavioral)
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Top-level module name = top_cms_mux.
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="rst"  />
+
+
+
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="Z"  />
+    <postMsg mid="35001537" type="Warning" dynamic="2" navigation="0" arg0="OLVDS" arg1="ZN"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="rst"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_p[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_p[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_p[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_p[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_p[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_p[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_p[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_p[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_n[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_n[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_n[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_n[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_n[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_n[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_n[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ch_o_n[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_LCLK_o_p"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_LCLK_o_n"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ADCLK_o_p"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CPLD_ADC_ADCLK_o_n"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_DRS4_o_refclk_p[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_DRS4_o_refclk_p[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_DRS4_o_refclk_p[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_DRS4_o_refclk_p[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_DRS4_o_refclk_p[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_DRS4_o_refclk_n[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_DRS4_o_refclk_n[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_DRS4_o_refclk_n[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_DRS4_o_refclk_n[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_DRS4_o_refclk_n[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_p[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_p[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_p[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_p[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_p[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_p[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_p[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_p[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_n[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_n[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_n[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_n[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_n[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_n[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_n[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz1_ADC_ch_i_n[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_p[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_p[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_p[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_p[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_p[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_p[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_p[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_p[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_n[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_n[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_n[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_n[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_n[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_n[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_n[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz2_ADC_ch_i_n[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_p[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_p[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_p[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_p[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_p[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_p[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_p[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_p[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_n[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_n[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_n[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_n[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_n[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_n[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_n[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz3_ADC_ch_i_n[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_p[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_p[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_p[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_p[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_p[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_p[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_p[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_p[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_n[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_n[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_n[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_n[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_n[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_n[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_n[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz4_ADC_ch_i_n[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_p[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_p[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_p[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_p[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_p[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_p[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_p[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_p[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_n[7]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_n[6]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_n[5]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_n[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_n[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_n[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_n[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz5_ADC_ch_i_n[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_LCLK_p[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_LCLK_p[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_LCLK_p[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_LCLK_p[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_LCLK_p[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_LCLK_n[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_LCLK_n[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_LCLK_n[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_LCLK_n[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_LCLK_n[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_ADCLK_p[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_ADCLK_p[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_ADCLK_p[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_ADCLK_p[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_ADCLK_p[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_ADCLK_n[4]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_ADCLK_n[3]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_ADCLK_n[2]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_ADCLK_n[1]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="Mezz_ADC_ADCLK_n[0]"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="DRS4_i_refclk_p"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="DRS4_i_refclk_n"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CSR_SCLK_P"  />
+    <postMsg mid="35001263" type="Warning" dynamic="1" navigation="0" arg0="CSR_SCLK_N"  />
+GSR instance connected to net \SPI/n6.
+Applying 200.000000 MHz constraint to all clocks
+
+    <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
+Results of NGD DRC are available in top_cms_mux_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="rst" arg2="rst"  />
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="rst"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="GND_net" arg2="GND_net"  />
+    <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="3"  />
+
+Design Results:
+    497 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file CMS_MUX_IO_cms_mux.ngd.
+
+################### Begin Area Report (top_cms_mux)######################
+Number of register bits => 162 of 10552 (1 % )
+FD1P3AX => 100
+FD1P3IX => 26
+FD1S1A => 10
+FD1S1I => 25
+FD1S3DX => 1
+GSR => 1
+IB => 12
+ILVDS => 52
+LUT4 => 148
+OB => 93
+OLVDS => 15
+PFUMX => 10
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+OSCH("10.23")(1,5) => 1
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 9
+  Net : SCLK_buff, loads : 71
+  Net : SPI/SPI_rdy, loads : 58
+  Net : ADC_ch_out_sel_7__N_94, loads : 10
+  Net : Mezz1_DRS4_o_A_3__N_15, loads : 10
+  Net : Mezz2_DRS4_o_A_3__N_20, loads : 9
+  Net : Mezz4_DRS4_o_A_3__N_30, loads : 5
+  Net : Mux_sel_c_0_derived_9, loads : 5
+  Net : Mux_sel_c_0_derived_10, loads : 5
+  Net : h_beat/clk_internal, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 18
+Top 10 highest fanout Clock Enables:
+  Net : SPI/SCLK_buff_enable_71, loads : 14
+  Net : SPI/SCLK_buff_enable_61, loads : 14
+  Net : SPI/SCLK_buff_enable_69, loads : 14
+  Net : SPI/SCLK_buff_enable_46, loads : 14
+  Net : SPI_rdy_enable_52, loads : 11
+  Net : SPI_rdy_enable_11, loads : 11
+  Net : SPI_rdy_enable_53, loads : 11
+  Net : SPI_rdy_enable_54, loads : 11
+  Net : SPI_rdy_enable_55, loads : 11
+  Net : SPI/SCLK_buff_enable_21, loads : 6
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : Mux_sel_c_0, loads : 40
+  Net : SPI/SPI_states_0, loads : 37
+  Net : SPI/SPI_states_1, loads : 29
+  Net : Mux_sel_c_1, loads : 28
+  Net : SPI/SPI_states_ack_1, loads : 21
+  Net : SPI/n1804, loads : 19
+  Net : CSR_MOSI_c, loads : 18
+  Net : Mux_sel_c_2, loads : 18
+  Net : SPI/SCLK_buff_enable_71, loads : 14
+  Net : SPI/SCLK_buff_enable_61, loads : 14
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets \h_beat/clk_internal]    |  200.000 MHz|  358.809 MHz|     2  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets SCLK_buff]               |  200.000 MHz|  116.414 MHz|     6 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets ADC_ch_out_sel_7__N_94]  |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets SPI_rdy]                 |            -|            -|     0  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 80.930  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.172  secs
+--------------------------------------------------------------
+
+map -a "MachXO3L" -p LCMXO3L-9400C -t CABGA484 -s 5 -oc Commercial   "CMS_MUX_IO_cms_mux.ngd" -o "CMS_MUX_IO_cms_mux_map.ncd" -pr "CMS_MUX_IO_cms_mux.prf" -mp "CMS_MUX_IO_cms_mux.mrp" -lpf "C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/CMS_MUX_IO_cms_mux.lpf" -lpf "C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/CMS_MUX_IO.lpf"  -c 0           
+map:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: CMS_MUX_IO_cms_mux.ngd
+   Picdevice="LCMXO3L-9400C"
+
+   Pictype="CABGA484"
+
+   Picspeed=5
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LCMXO3L-9400CCABGA484, Performance used: 5.
+
+Loading device for application map from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+
+    <postMsg mid="52101275" type="Warning" dynamic="3" navigation="0" arg0="SLEWRATE" arg1="FAST" arg2="DRS4_refclk_0..DRS4_refclk_gen/IOBUF"  />
+Running general design DRC...
+
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="rst"  />
+Removing unused logic...
+
+Optimizing...
+
+    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="rst"  />
+
+
+
+Design Summary:
+   Number of registers:    162 out of 10552 (2%)
+      PFU registers:          162 out of  9400 (2%)
+      PIO registers:            0 out of  1152 (0%)
+   Number of SLICEs:       102 out of  4700 (2%)
+      SLICEs as Logic/ROM:    102 out of  4700 (2%)
+      SLICEs as RAM:            0 out of  3525 (0%)
+      SLICEs as Carry:          0 out of  4700 (0%)
+   Number of LUT4s:        141 out of  9400 (2%)
+      Number used as logic LUTs:        141
+      Number used as distributed RAM:     0
+      Number used as ripple logic:        0
+      Number used as shift registers:     0
+   Number of PIO sites used: 239 + 4(JTAG) out of 384 (63%)
+      Number of PIO sites used for single ended IOs: 109
+      Number of PIO sites used for differential IOs: 134 (represented by 67 PIO comps in NCD)
+   Number of block RAMs:  0 out of 48 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+   Number of clocks:  9
+     Net SPI_rdy: 30 loads, 30 rising, 0 falling (Driver: SPI/data_rdy_o_66 )
+     Net ADC_ch_out_sel_7__N_94: 10 loads, 10 rising, 0 falling (Driver: i1877_2_lut_3_lut )
+     Net Mux_sel_c_0_derived_9: 3 loads, 3 rising, 0 falling (Driver: i1541_2_lut_rep_42 )
+     Net Mezz4_DRS4_o_A_3__N_30: 3 loads, 3 rising, 0 falling (Driver: i1489_3_lut )
+     Net Mezz1_DRS4_o_A_3__N_15: 5 loads, 5 rising, 0 falling (Driver: i1043_3_lut )
+     Net Mux_sel_c_0_derived_10: 3 loads, 3 rising, 0 falling (Driver: i1488_2_lut_rep_32 )
+     Net Mezz2_DRS4_o_A_3__N_20: 5 loads, 5 rising, 0 falling (Driver: i1540_3_lut )
+     Net SCLK_buff: 42 loads, 42 rising, 0 falling (Driver: PIO CSR_SCLK_P )
+     Net h_beat/clk_internal: 1 loads, 1 rising, 0 falling (Driver: h_beat/Clock_inst )
+   Number of Clock Enables:  18
+     Net SPI_rdy_enable_11: 6 loads, 6 LSLICEs
+     Net SPI_rdy_enable_52: 6 loads, 6 LSLICEs
+     Net SPI_rdy_enable_53: 6 loads, 6 LSLICEs
+     Net SPI_rdy_enable_54: 6 loads, 6 LSLICEs
+     Net SPI_rdy_enable_55: 6 loads, 6 LSLICEs
+     Net SPI/SCLK_buff_enable_71: 10 loads, 10 LSLICEs
+     Net SPI/SCLK_buff_enable_61: 7 loads, 7 LSLICEs
+     Net SPI/SCLK_buff_enable_46: 7 loads, 7 LSLICEs
+     Net SPI/SCLK_buff_enable_5: 1 loads, 1 LSLICEs
+     Net SPI/SCLK_buff_enable_21: 2 loads, 2 LSLICEs
+     Net SPI/SCLK_buff_enable_69: 7 loads, 7 LSLICEs
+     Net SPI/SCLK_buff_enable_12: 1 loads, 1 LSLICEs
+     Net SPI/SCLK_buff_enable_13: 1 loads, 1 LSLICEs
+     Net SPI/SCLK_buff_enable_14: 1 loads, 1 LSLICEs
+     Net SPI/SPI_states_ack_0: 2 loads, 2 LSLICEs
+     Net SPI/SCLK_buff_enable_16: 1 loads, 1 LSLICEs
+     Net SPI/SCLK_buff_enable_33: 1 loads, 1 LSLICEs
+     Net SPI/SCLK_buff_enable_53: 1 loads, 1 LSLICEs
+   Number of LSRs:  15
+     Net P3_monitor_c_0_c: 2 loads, 2 LSLICEs
+     Net n2334: 3 loads, 3 LSLICEs
+     Net n1293: 3 loads, 3 LSLICEs
+     Net DRS4_i_SRIN_c: 1 loads, 1 LSLICEs
+     Net n1754: 3 loads, 3 LSLICEs
+     Net n2329: 1 loads, 1 LSLICEs
+     Net E15_monitor_c_1_c: 2 loads, 2 LSLICEs
+     Net P6_monitor_c_2_c: 2 loads, 2 LSLICEs
+     Net E14_monitor_c_3_c: 2 loads, 2 LSLICEs
+     Net top_rst_c: 1 loads, 1 LSLICEs
+     Net SPI/n1804: 11 loads, 11 LSLICEs
+     Net SPI/SPI_states_1: 1 loads, 1 LSLICEs
+     Net SPI/SCLK_buff_enable_13: 2 loads, 2 LSLICEs
+     Net SPI/SPI_states_ack_0: 1 loads, 1 LSLICEs
+     Net SPI/n1761: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net Mux_sel_c_0: 40 loads
+     Net SPI/SPI_states_0: 37 loads
+     Net SPI/SPI_states_1: 29 loads
+     Net Mux_sel_c_1: 28 loads
+     Net SPI/SPI_states_ack_1: 21 loads
+     Net CSR_MOSI_c: 18 loads
+     Net Mux_sel_c_2: 18 loads
+     Net SPI/n27: 12 loads
+     Net SPI/n1804: 11 loads
+     Net SPI/SCLK_buff_enable_71: 10 loads
+    <postMsg mid="51001104" type="Warning" dynamic="1" navigation="0" arg0="B11"  />
+    <postMsg mid="1103737" type="Warning" dynamic="3" navigation="0" arg0="" arg1="LOCATE COMP &quot;CPLD_ADC_ch_o_p[1]&quot; SITE &quot;B11&quot; ;&#xA;" arg2="LOCATE COMP &quot;CPLD_ADC_ADCLK_o_p&quot; SITE &quot;B11&quot; ;&#xA;"  />
+ 
+
+   Number of warnings:  5
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 73 MB
+
+Dumping design to file CMS_MUX_IO_cms_mux_map.ncd.
+
+ncd2vdb "CMS_MUX_IO_cms_mux_map.ncd" ".vdbs/CMS_MUX_IO_cms_mux_map.vdb"
+
+Loading device for application ncd2vdb from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+
+trce -f "CMS_MUX_IO_cms_mux.mt" -o "CMS_MUX_IO_cms_mux.tw1" "CMS_MUX_IO_cms_mux_map.ncd" "CMS_MUX_IO_cms_mux.prf"
+trce:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file cms_mux_io_cms_mux_map.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: 5
+Loading device for application trce from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Wed Oct 30 12:58:16 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CMS_MUX_IO_cms_mux.tw1 -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.prf 
+Design file:     cms_mux_io_cms_mux_map.ncd
+Preference file: cms_mux_io_cms_mux.prf
+Device,speed:    LCMXO3L-9400C,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 686 paths, 9 nets, and 718 connections (77.12% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Wed Oct 30 12:58:16 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CMS_MUX_IO_cms_mux.tw1 -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.prf 
+Design file:     cms_mux_io_cms_mux_map.ncd
+Preference file: cms_mux_io_cms_mux.prf
+Device,speed:    LCMXO3L-9400C,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 686 paths, 9 nets, and 718 connections (77.12% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 79 MB
+
+
+ldbanno "CMS_MUX_IO_cms_mux_map.ncd" -n Verilog -o "CMS_MUX_IO_cms_mux_mapvo.vo" -w -neg
+ldbanno: version Diamond (64-bit) 3.13.0.56.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a Verilog netlist using the orca library type based on the CMS_MUX_IO_cms_mux_map design file.
+
+
+Loading design for application ldbanno from file CMS_MUX_IO_cms_mux_map.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: 5
+Loading device for application ldbanno from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+Converting design CMS_MUX_IO_cms_mux_map.ncd into .ldb format.
+Writing Verilog netlist to file CMS_MUX_IO_cms_mux_mapvo.vo
+Writing SDF timing to file CMS_MUX_IO_cms_mux_mapvo.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 66 MB
+
+ldbanno "CMS_MUX_IO_cms_mux_map.ncd" -n VHDL -o "CMS_MUX_IO_cms_mux_mapvho.vho" -w -neg
+ldbanno: version Diamond (64-bit) 3.13.0.56.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a VHDL netlist using the orca library type based on the CMS_MUX_IO_cms_mux_map design file.
+
+
+Loading design for application ldbanno from file CMS_MUX_IO_cms_mux_map.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: 5
+Loading device for application ldbanno from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+Converting design CMS_MUX_IO_cms_mux_map.ncd into .ldb format.
+    <postMsg mid="35400209" type="Warning" dynamic="3" navigation="0" arg0="DEFAULT" arg1="-1" arg2="Keyword"  />
+    <postMsg mid="35400209" type="Warning" dynamic="3" navigation="0" arg0="ASSERT" arg1="-1" arg2="Keyword"  />
+Writing VHDL netlist to file CMS_MUX_IO_cms_mux_mapvho.vho
+Writing SDF timing to file CMS_MUX_IO_cms_mux_mapvho.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 66 MB
+
+mpartrce -p "CMS_MUX_IO_cms_mux.p2t" -f "CMS_MUX_IO_cms_mux.p3t" -tf "CMS_MUX_IO_cms_mux.pt" "CMS_MUX_IO_cms_mux_map.ncd" "CMS_MUX_IO_cms_mux.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "CMS_MUX_IO_cms_mux_map.ncd"
+Wed Oct 30 12:58:17 2024
+
+PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.dir/5_1.ncd CMS_MUX_IO_cms_mux.prf
+Preference file: CMS_MUX_IO_cms_mux.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file CMS_MUX_IO_cms_mux_map.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: 5
+Loading device for application par from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)  239+4(JTAG)/384     63% used
+                 239+4(JTAG)/384     63% bonded
+
+   SLICE            102/4700          2% used
+
+   GSR                1/1           100% used
+   OSC                1/1           100% used
+
+
+Number of Signals: 358
+Number of Connections: 931
+
+Pin Constraint Summary:
+   163 out of 172 pins locked (94% locked).
+
+The following 3 signals are selected to use the primary clock routing resources:
+    SCLK_buff (driver: CSR_SCLK_P, clk load #: 42)
+    SPI_rdy (driver: SPI/SLICE_65, clk load #: 30)
+    ADC_ch_out_sel_7__N_94 (driver: SLICE_137, clk load #: 10)
+
+    <postMsg mid="61061008" type="Warning" dynamic="5" navigation="0" arg0="SCLK_buff" arg1="Primary" arg2="CSR_SCLK_P" arg3="T13" arg4="Primary"  />
+
+The following 4 signals are selected to use the secondary clock routing resources:
+    SPI/n1804 (driver: SLICE_136, clk load #: 0, sr load #: 11, ce load #: 0)
+    Mezz1_DRS4_o_A_3__N_15 (driver: SLICE_12, clk load #: 5, sr load #: 0, ce load #: 0)
+    Mezz2_DRS4_o_A_3__N_20 (driver: SLICE_16, clk load #: 5, sr load #: 0, ce load #: 0)
+    SPI/SCLK_buff_enable_71 (driver: SPI/SLICE_27, clk load #: 0, sr load #: 0, ce load #: 10)
+
+Signal CSR_CS_SOM_c is selected as Global Set/Reset.
+.
+Starting Placer Phase 0.
+.............
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+....................
+Placer score = 245616.
+Finished Placer Phase 1.  REAL time: 3 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  245155
+Finished Placer Phase 2.  REAL time: 3 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 8 (0%)
+  General PIO: 1 out of 384 (0%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "SCLK_buff" from comp "CSR_SCLK_P" on PIO site "T13 (PB32A)", clk load = 42
+  PRIMARY "SPI_rdy" from Q0 on comp "SPI/SLICE_65" on site "R2C25C", clk load = 30
+  PRIMARY "ADC_ch_out_sel_7__N_94" from F1 on comp "SLICE_137" on site "R23C2B", clk load = 10
+  SECONDARY "SPI/n1804" from F1 on comp "SLICE_136" on site "R9C24D", clk load = 0, ce load = 0, sr load = 11
+  SECONDARY "Mezz1_DRS4_o_A_3__N_15" from F0 on comp "SLICE_12" on site "R9C24A", clk load = 5, ce load = 0, sr load = 0
+  SECONDARY "Mezz2_DRS4_o_A_3__N_20" from F0 on comp "SLICE_16" on site "R23C24A", clk load = 5, ce load = 0, sr load = 0
+  SECONDARY "SPI/SCLK_buff_enable_71" from F1 on comp "SPI/SLICE_27" on site "R9C24C", clk load = 0, ce load = 10, sr load = 0
+
+  PRIMARY  : 3 out of 8 (37%)
+  SECONDARY: 4 out of 8 (50%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   239 + 4(JTAG) out of 384 (63.3%) PIO sites used.
+   239 + 4(JTAG) out of 384 (63.3%) bonded PIO sites used.
+   Number of PIO comps: 172; differential: 67.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+-----------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref |
++----------+----------------+------------+-----------+
+| 0        | 40 / 96 ( 41%) | 2.5V       | -         |
+| 1        | 55 / 96 ( 57%) | 2.5V       | -         |
+| 2        | 90 / 96 ( 93%) | 2.5V       | -         |
+| 3        | 17 / 36 ( 47%) | 2.5V       | -         |
+| 4        | 20 / 24 ( 83%) | 2.5V       | -         |
+| 5        | 17 / 36 ( 47%) | 2.5V       | -         |
++----------+----------------+------------+-----------+
+
+Total placer CPU time: 0 secs 
+
+Dumping design to file CMS_MUX_IO_cms_mux.dir/5_1.ncd.
+
+0 connections routed; 931 unrouted.
+Starting router resource preassignment
+    <postMsg mid="62061008" type="Warning" dynamic="1" navigation="0" arg0="SCLK_buff"  />
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=Mux_sel_c_0_derived_9 loads=3 clock_loads=3&#xA;   Signal=Mezz4_DRS4_o_A_3__N_30 loads=3 clock_loads=3&#xA;   Signal=Mux_sel_c_0_derived_10 loads=3 clock_loads=3&#xA;   Signal=h_beat/clk_internal loads=1 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 10 secs 
+
+Start NBR router at 12:58:27 10/30/24
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 12:58:27 10/30/24
+
+Start NBR section for initial routing at 12:58:27 10/30/24
+Level 1, iteration 1
+0(0.00%) conflict; 730(78.41%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.648ns/0.000ns; real time: 10 secs 
+Level 2, iteration 1
+1(0.00%) conflict; 720(77.34%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 2.983ns/0.000ns; real time: 10 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 622(66.81%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Level 4, iteration 1
+17(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 12:58:27 10/30/24
+Level 1, iteration 1
+3(0.00%) conflicts; 14(1.50%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Level 4, iteration 1
+12(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Level 4, iteration 2
+9(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Level 4, iteration 3
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Level 4, iteration 4
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Level 4, iteration 5
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Level 4, iteration 6
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Level 4, iteration 7
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Level 4, iteration 8
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+Level 4, iteration 9
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 10 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 12:58:27 10/30/24
+Level 4, iteration 0
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.111ns/0.000ns; real time: 13 secs 
+Level 4, iteration 0
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.508ns/0.000ns; real time: 13 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.508ns/0.000ns; real time: 13 secs 
+
+Start NBR section for re-routing at 12:58:30 10/30/24
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
+
+Start NBR section for post-routing at 12:58:30 10/30/24
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 3.528ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=Mux_sel_c_0_derived_9 loads=3 clock_loads=3&#xA;   Signal=Mezz4_DRS4_o_A_3__N_30 loads=3 clock_loads=3&#xA;   Signal=Mux_sel_c_0_derived_10 loads=3 clock_loads=3&#xA;   Signal=h_beat/clk_internal loads=1 clock_loads=1"  />
+
+Total CPU time 0 secs 
+Total REAL time: 13 secs 
+Completely routed.
+End of route.  931 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file CMS_MUX_IO_cms_mux.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 3.528
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.116
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 0 secs 
+Total REAL time to completion: 13 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "CMS_MUX_IO_cms_mux.pt" -o "CMS_MUX_IO_cms_mux.twr" "CMS_MUX_IO_cms_mux.ncd" "CMS_MUX_IO_cms_mux.prf"
+trce:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file cms_mux_io_cms_mux.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: 5
+Loading device for application trce from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Wed Oct 30 12:58:30 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o CMS_MUX_IO_cms_mux.twr -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux.ncd CMS_MUX_IO_cms_mux.prf 
+Design file:     cms_mux_io_cms_mux.ncd
+Preference file: cms_mux_io_cms_mux.prf
+Device,speed:    LCMXO3L-9400C,5
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 686 paths, 9 nets, and 718 connections (77.12% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Wed Oct 30 12:58:30 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o CMS_MUX_IO_cms_mux.twr -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux.ncd CMS_MUX_IO_cms_mux.prf 
+Design file:     cms_mux_io_cms_mux.ncd
+Preference file: cms_mux_io_cms_mux.prf
+Device,speed:    LCMXO3L-9400C,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 686 paths, 9 nets, and 718 connections (77.12% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 79 MB
+
+
+iotiming  "CMS_MUX_IO_cms_mux.ncd" "CMS_MUX_IO_cms_mux.prf"
+I/O Timing Report:
+:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application iotiming from file cms_mux_io_cms_mux.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: 5
+Loading device for application iotiming from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+Running Performance Grade: 5
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file cms_mux_io_cms_mux.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: 6
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+Running Performance Grade: 6
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file cms_mux_io_cms_mux.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: M
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+Running Performance Grade: M
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+Done.
+
+tmcheck -par "CMS_MUX_IO_cms_mux.par" 
+
+bitgen -f "CMS_MUX_IO_cms_mux.t2b" -w "CMS_MUX_IO_cms_mux.ncd"  "CMS_MUX_IO_cms_mux.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.13.0.56.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file CMS_MUX_IO_cms_mux.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: 5
+Loading device for application Bitgen from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from CMS_MUX_IO_cms_mux.prf.
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo3c00a.acd ###"  />
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK"  />
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                           66.5  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                        DISABLE  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 DUALBOOTGOLDEN  |                     INTERNAL**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.95.
+ 
+Saving bit stream in "CMS_MUX_IO_cms_mux.bit".
+Total CPU Time: 0 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 305 MB
+
+tmcheck -par "CMS_MUX_IO_cms_mux.par" 
+
+bitgen -f "CMS_MUX_IO_cms_mux.t2b" -w "CMS_MUX_IO_cms_mux.ncd"  -jedec "CMS_MUX_IO_cms_mux.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.13.0.56.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file CMS_MUX_IO_cms_mux.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: 5
+Loading device for application Bitgen from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from CMS_MUX_IO_cms_mux.prf.
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo3c00a.acd ###"  />
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK"  />
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                           66.5  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                        DISABLE  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 DUALBOOTGOLDEN  |                     INTERNAL**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.95.
+ 
+Saving bit stream in "CMS_MUX_IO_cms_mux.jed".
+=========
+Padding summary
+=========
+Padded 1756032 bits for this design
+
+
+Total CPU Time: 0 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 305 MB

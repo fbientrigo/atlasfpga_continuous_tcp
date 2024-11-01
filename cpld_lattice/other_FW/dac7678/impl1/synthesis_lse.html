@@ -1,0 +1,332 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Tue May 24 11:44:20 2022
+
+
+Command Line:  synthesis -f dac7578_impl1_lattice.synproj -gui -msgset C:/Users/victo/Desktop/Lattice_proj/dac7678/promote.xml 
+
+Synthesis options:
+The -a option is MachXO3D.
+The -s option is 5.
+The -t option is CABGA256.
+The -d option is LCMXO3D-9400HC.
+Using package CABGA256.
+Using performance grade 5.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO3D
+
+### Device  : LCMXO3D-9400HC
+
+### Package : CABGA256
+
+### Speed   : 5
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = i2c_dac.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/lscc/diamond/3.12/ispfpga/se5c00/data (searchpath added)
+-p C:/Users/victo/Desktop/Lattice_proj/dac7678/impl1 (searchpath added)
+-p C:/Users/victo/Desktop/Lattice_proj/dac7678 (searchpath added)
+VHDL library = work
+VHDL design file = C:/Users/victo/Desktop/Lattice_proj/dac7678/top_dac.vhd
+VHDL design file = C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7678_i2c.vhd
+VHDL design file = C:/Users/victo/Desktop/Lattice_proj/dac7678/i2c_dac.vhd
+NGD file = dac7578_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3d.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "C:/Users/victo/Desktop/Lattice_proj/dac7678/impl1". VHDL-1504
+Analyzing VHDL file c:/users/victo/desktop/lattice_proj/dac7678/top_dac.vhd. VHDL-1481
+INFO - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/top_dac.vhd(10): analyzing entity top_dac. VHDL-1012
+INFO - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/top_dac.vhd(24): analyzing architecture behavioral. VHDL-1010
+unit i2c_dac is not yet analyzed. VHDL-1485
+unit i2c_dac is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/victo/desktop/lattice_proj/dac7678/dac7678_i2c.vhd. VHDL-1481
+INFO - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/dac7678_i2c.vhd(6): analyzing entity dac7678_i2c. VHDL-1012
+INFO - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/dac7678_i2c.vhd(35): analyzing architecture behavioral. VHDL-1010
+unit i2c_dac is not yet analyzed. VHDL-1485
+unit i2c_dac is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/victo/desktop/lattice_proj/dac7678/i2c_dac.vhd. VHDL-1481
+INFO - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/i2c_dac.vhd(6): analyzing entity i2c_dac. VHDL-1012
+INFO - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/i2c_dac.vhd(34): analyzing architecture behavioral. VHDL-1010
+unit i2c_dac is not yet analyzed. VHDL-1485
+unit i2c_dac is not yet analyzed. VHDL-1485
+unit i2c_dac is not yet analyzed. VHDL-1485
+c:/users/victo/desktop/lattice_proj/dac7678/i2c_dac.vhd(6): executing i2c_dac(Behavioral)
+
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/i2c_dac.vhd(50): using initial value 'U' for ena_read_pulse since it is never assigned. VHDL-1303
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/i2c_dac.vhd(68): using initial value 'U' for o_sda since it is never assigned. VHDL-1303
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/i2c_dac.vhd(272): i2c_states should be on the sensitivity list of the process. VHDL-1251
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/i2c_dac.vhd(275): incomplete sensitivity list specified, assuming completeness. VHDL-1613
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/i2c_dac.vhd(32): replacing existing netlist i2c_dac(Behavioral). VHDL-1205
+Top module name (VHDL): i2c_dac
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/se5c00/data/se5clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'se5c9400.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 7.
+Top-level module name = i2c_dac.
+WARNING - synthesis: I/O Port ena_read 's net has no driver and is unused.
+WARNING - synthesis: I/O Port ADDR0_sel_i 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[7] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[6] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[0] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port read_byte_o[7] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port read_byte_o[6] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port read_byte_o[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port read_byte_o[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port read_byte_o[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port read_byte_o[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port read_byte_o[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port read_byte_o[0] 's net has no driver and is unused.
+######## Missing driver on net read_byte_o[7]. Patching with GND.
+######## Missing driver on net read_byte_o[6]. Patching with GND.
+######## Missing driver on net read_byte_o[5]. Patching with GND.
+######## Missing driver on net read_byte_o[4]. Patching with GND.
+######## Missing driver on net read_byte_o[3]. Patching with GND.
+######## Missing driver on net read_byte_o[2]. Patching with GND.
+######## Missing driver on net read_byte_o[1]. Patching with GND.
+######## Missing driver on net read_byte_o[0]. Patching with GND.
+INFO - synthesis: Extracted state machine for register 'i2c_states' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 000 -> 00001
+
+ 001 -> 00010
+
+ 011 -> 00100
+
+ 100 -> 01000
+
+ 101 -> 10000
+
+
+
+
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/i2c_dac.vhd(273): Register Fail_ACK_179 is stuck at Zero. VDB-5013
+WARNING - synthesis: I/O Port ena_read 's net has no driver and is unused.
+WARNING - synthesis: I/O Port ADDR0_sel_i 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[7] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[6] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port data_byte_i[0] 's net has no driver and is unused.
+WARNING - synthesis: c:/users/victo/desktop/lattice_proj/dac7678/i2c_dac.vhd(273): Register SDA_t_183 is stuck at One. VDB-5014
+GSR instance connected to net \i458/n3.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in i2c_dac_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/se5c00/data/se5clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'ena_read' has no load.
+WARNING - synthesis: input pad net 'ena_read' has no legal load.
+WARNING - synthesis: logical net 'ADDR0_sel_i' has no load.
+WARNING - synthesis: input pad net 'ADDR0_sel_i' has no legal load.
+WARNING - synthesis: logical net 'data_byte_i[7]' has no load.
+WARNING - synthesis: input pad net 'data_byte_i[7]' has no legal load.
+WARNING - synthesis: logical net 'data_byte_i[6]' has no load.
+WARNING - synthesis: input pad net 'data_byte_i[6]' has no legal load.
+WARNING - synthesis: logical net 'data_byte_i[5]' has no load.
+WARNING - synthesis: input pad net 'data_byte_i[5]' has no legal load.
+WARNING - synthesis: logical net 'data_byte_i[4]' has no load.
+WARNING - synthesis: input pad net 'data_byte_i[4]' has no legal load.
+WARNING - synthesis: logical net 'data_byte_i[3]' has no load.
+WARNING - synthesis: input pad net 'data_byte_i[3]' has no legal load.
+WARNING - synthesis: logical net 'data_byte_i[2]' has no load.
+WARNING - synthesis: input pad net 'data_byte_i[2]' has no legal load.
+WARNING - synthesis: logical net 'data_byte_i[1]' has no load.
+WARNING - synthesis: input pad net 'data_byte_i[1]' has no legal load.
+WARNING - synthesis: logical net 'data_byte_i[0]' has no load.
+WARNING - synthesis: input pad net 'data_byte_i[0]' has no legal load.
+WARNING - synthesis: DRC complete with 20 warnings.
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file dac7578_impl1.ngd.
+
+################### Begin Area Report (i2c_dac)######################
+Number of register bits => 37 of 10021 (0 % )
+CCU2D => 15
+FD1P3AX => 2
+FD1P3IX => 27
+FD1S3AX => 7
+FD1S3AY => 1
+GSR => 1
+IB => 5
+LUT4 => 63
+OB => 19
+PFUMX => 1
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_i_c, loads : 37
+Clock Enable Nets
+Number of Clock Enables: 7
+Top 7 highest fanout Clock Enables:
+  Net : clk_i_c_enable_15, loads : 9
+  Net : clk_i_c_enable_29, loads : 9
+  Net : clk_i_c_enable_27, loads : 8
+  Net : clk_i_c_enable_17, loads : 2
+  Net : clk_i_c_enable_25, loads : 2
+  Net : clk_i_c_enable_16, loads : 1
+  Net : clk_i_c_enable_21, loads : 1
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n695, loads : 15
+  Net : rec_ack_ok, loads : 11
+  Net : rst_i_c, loads : 10
+  Net : SCL_o_c, loads : 9
+  Net : clk_i_c_enable_15, loads : 9
+  Net : n2056, loads : 9
+  Net : clk_i_c_enable_29, loads : 9
+  Net : n700, loads : 9
+  Net : clk_i_c_enable_27, loads : 8
+  Net : n1281, loads : 8
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_i_c]                 |  200.000 MHz|   96.852 MHz|     7 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 82.129  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.609  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

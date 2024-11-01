@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<STYLE type=text/css>
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 9pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 9pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY><B>
+</B>
+<BR><PRE><A name="Report Header"></A>
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Mon Jun 24 15:21:43 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design file:     top_cms_mux
+Device,speed:    LCMXO3L-9400C,M
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+
+
+</A><A name="FREQUENCY 100.000000 MH"></A>================================================================================
+Preference: FREQUENCY 100.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+</A><A name="INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT 'Mux_sel[0]"></A>================================================================================
+Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[0]" ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+</A><A name="INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT 'Mux_sel[1]"></A>================================================================================
+Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[1]" ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+</A><A name="INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT 'Mux_sel[2]"></A>================================================================================
+Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[2]" ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+<A name="Report Summary"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY 100.000000 MHz ;              |            -|            -|   0  
+                                        |             |             |
+INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
+2.000000 ns CLKPORT "Mux_sel[0]" ;      |            -|            -|   0  
+                                        |             |             |
+INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
+2.000000 ns CLKPORT "Mux_sel[1]" ;      |            -|            -|   0  
+                                        |             |             |
+INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
+2.000000 ns CLKPORT "Mux_sel[2]" ;      |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="Clock Domains Analysis"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 7 clocks:
+
+Clock Domain: <A href="#@net:SPI_rdy">SPI_rdy</A>   Source: SPI/SLICE_68.Q0   Loads: 31
+   No transfer within this clock domain is found
+
+Clock Domain: <A href="#@net:Mux_sel_c_0_derived_8">Mux_sel_c_0_derived_8</A>   Source: SLICE_16.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: <A href="#@net:Mux_sel_c_0_derived_7">Mux_sel_c_0_derived_7</A>   Source: SLICE_136.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: <A href="#@net:Mezz4_DRS4_o_A_3__N_30">Mezz4_DRS4_o_A_3__N_30</A>   Source: SLICE_22.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: <A href="#@net:Mezz2_DRS4_o_A_3__N_20">Mezz2_DRS4_o_A_3__N_20</A>   Source: SLICE_16.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: <A href="#@net:Mezz1_DRS4_o_A_3__N_15">Mezz1_DRS4_o_A_3__N_15</A>   Source: SLICE_12.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: <A href="#@net:ADC_ch_out_sel_7__N_89">ADC_ch_out_sel_7__N_89</A>   Source: SLICE_22.F1   Loads: 10
+   No transfer within this clock domain is found
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 0 paths, 8 nets, and 742 connections (86.58% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)

@@ -1,0 +1,410 @@
+
+Loading design for application trce from file cms_mux_io_cms_mux_map.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: 5
+Loading device for application trce from file 'xo3c9400.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Wed Oct 30 12:58:16 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CMS_MUX_IO_cms_mux.tw1 -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.prf 
+Design file:     cms_mux_io_cms_mux_map.ncd
+Preference file: cms_mux_io_cms_mux.prf
+Device,speed:    LCMXO3L-9400C,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "h_beat/clk_internal" 10.230000 MHz ;
+            1 item scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 95.502ns
+         The internal maximum frequency of the following component is 444.444 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    SLICE      CLK            SLICE_126
+
+   Delay:               2.250ns -- based on Minimum Pulse Width
+
+
+Passed: The following path meets requirements by 96.339ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              h_beat/divided_clk_9  (from h_beat/clk_internal +)
+   Destination:    FF         Data in        h_beat/divided_clk_9  (to h_beat/clk_internal +)
+
+   Delay:               1.263ns  (68.2% logic, 31.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.263ns physical path delay SLICE_126 to SLICE_126 meets
+     97.752ns delay constraint less
+      0.150ns DIN_SET requirement (totaling 97.602ns) by 96.339ns
+
+ Physical Path Details:
+
+      Data path SLICE_126 to SLICE_126:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409  SLICE_126.CLK to   SLICE_126.Q0 SLICE_126 (from h_beat/clk_internal)
+ROUTE         2   e 0.401   SLICE_126.Q0 to   SLICE_126.A0 top_heartbeat_c
+CTOF_DEL    ---     0.452   SLICE_126.A0 to   SLICE_126.F0 SLICE_126
+ROUTE         1   e 0.001   SLICE_126.F0 to  SLICE_126.DI0 h_beat/heartbeat_N_267 (to h_beat/clk_internal)
+                  --------
+                    1.263   (68.2% logic, 31.8% route), 2 logic levels.
+
+Report:  444.444MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY 100.000000 MHz ;
+            685 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 2.030ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SPI/echo_word_i0_i11  (from SCLK_buff +)
+   Destination:    FF         Data in        SPI/data_cpld_i7  (to SCLK_buff +)
+
+   Delay:               7.820ns  (34.1% logic, 65.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      7.820ns physical path delay SPI/SLICE_56 to SPI/SLICE_37 meets
+     10.000ns delay constraint less
+      0.150ns DIN_SET requirement (totaling 9.850ns) by 2.030ns
+
+ Physical Path Details:
+
+      Data path SPI/SLICE_56 to SPI/SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409 */SLICE_56.CLK to *I/SLICE_56.Q0 SPI/SLICE_56 (from SCLK_buff)
+ROUTE         2   e 1.030 *I/SLICE_56.Q0 to   SLICE_125.A1 SPI/echo_word_11
+CTOF_DEL    ---     0.452   SLICE_125.A1 to   SLICE_125.F1 SLICE_125
+ROUTE         1   e 1.030   SLICE_125.F1 to   SLICE_134.A1 SPI/n15
+CTOF_DEL    ---     0.452   SLICE_134.A1 to   SLICE_134.F1 SLICE_134
+ROUTE         1   e 1.030   SLICE_134.F1 to   SLICE_131.C1 SPI/n2071
+CTOF_DEL    ---     0.452   SLICE_131.C1 to   SLICE_131.F1 SLICE_131
+ROUTE         3   e 1.030   SLICE_131.F1 to   SLICE_140.B0 SPI/n2171
+CTOF_DEL    ---     0.452   SLICE_140.B0 to   SLICE_140.F0 SLICE_140
+ROUTE         1   e 1.030   SLICE_140.F0 to *I/SLICE_37.D1 SPI/n2328
+CTOF_DEL    ---     0.452 *I/SLICE_37.D1 to *I/SLICE_37.F1 SPI/SLICE_37
+ROUTE         1   e 0.001 *I/SLICE_37.F1 to */SLICE_37.DI1 SPI/data_cpld_13_N_151_7 (to SCLK_buff)
+                  --------
+                    7.820   (34.1% logic, 65.9% route), 6 logic levels.
+
+Report:  125.471MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[0]" ; Setup Analysis.
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[1]" ; Setup Analysis.
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[2]" ; Setup Analysis.
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "h_beat/clk_internal"     |             |             |
+10.230000 MHz ;                         |   10.230 MHz|  444.444 MHz|   0  
+                                        |             |             |
+FREQUENCY 100.000000 MHz ;              |  100.000 MHz|  125.471 MHz|   6  
+                                        |             |             |
+INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
+2.000000 ns CLKPORT "Mux_sel[0]" ;      |             |             |
+Setup Analysis.                         |            -|            -|   0  
+                                        |             |             |
+INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
+2.000000 ns CLKPORT "Mux_sel[1]" ;      |             |             |
+Setup Analysis.                         |            -|            -|   0  
+                                        |             |             |
+INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
+2.000000 ns CLKPORT "Mux_sel[2]" ;      |             |             |
+Setup Analysis.                         |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 9 clocks:
+
+Clock Domain: h_beat/clk_internal   Source: h_beat/Clock_inst.OSC   Loads: 1
+   Covered under: FREQUENCY NET "h_beat/clk_internal" 10.230000 MHz ;
+
+Clock Domain: SPI_rdy   Source: SPI/SLICE_65.Q0   Loads: 33
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: SCLK_buff   Source: CSR_SCLK_P.PAD
+      Covered under: FREQUENCY 100.000000 MHz ;   Transfers: 14
+
+Clock Domain: SCLK_buff   Source: CSR_SCLK_P.PAD   Loads: 42
+   Covered under: FREQUENCY 100.000000 MHz ;
+
+Clock Domain: Mux_sel_c_0_derived_9   Source: SLICE_141.F0   Loads: 3
+   No transfer within this clock domain is found
+
+Clock Domain: Mux_sel_c_0_derived_10   Source: SLICE_142.F0   Loads: 3
+   No transfer within this clock domain is found
+
+Clock Domain: Mezz4_DRS4_o_A_3__N_30   Source: SLICE_16.F1   Loads: 3
+   No transfer within this clock domain is found
+
+Clock Domain: Mezz2_DRS4_o_A_3__N_20   Source: SLICE_16.F0   Loads: 9
+   No transfer within this clock domain is found
+
+Clock Domain: Mezz1_DRS4_o_A_3__N_15   Source: SLICE_12.F0   Loads: 10
+   No transfer within this clock domain is found
+
+Clock Domain: ADC_ch_out_sel_7__N_94   Source: SLICE_137.F1   Loads: 10
+   No transfer within this clock domain is found
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 686 paths, 9 nets, and 718 connections (77.12% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Wed Oct 30 12:58:16 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CMS_MUX_IO_cms_mux.tw1 -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.prf 
+Design file:     cms_mux_io_cms_mux_map.ncd
+Preference file: cms_mux_io_cms_mux.prf
+Device,speed:    LCMXO3L-9400C,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "h_beat/clk_internal" 10.230000 MHz ;
+            1 item scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              h_beat/divided_clk_9  (from h_beat/clk_internal +)
+   Destination:    FF         Data in        h_beat/divided_clk_9  (to h_beat/clk_internal +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay SLICE_126 to SLICE_126 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path SLICE_126 to SLICE_126:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133  SLICE_126.CLK to   SLICE_126.Q0 SLICE_126 (from h_beat/clk_internal)
+ROUTE         2   e 0.199   SLICE_126.Q0 to   SLICE_126.A0 top_heartbeat_c
+CTOF_DEL    ---     0.101   SLICE_126.A0 to   SLICE_126.F0 SLICE_126
+ROUTE         1   e 0.001   SLICE_126.F0 to  SLICE_126.DI0 h_beat/heartbeat_N_267 (to h_beat/clk_internal)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY 100.000000 MHz ;
+            685 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.389ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SPI/SPI_states_ack_i0  (from SCLK_buff +)
+   Destination:    FF         Data in        SPI/SPI_states_ack_i0  (to SCLK_buff +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay SLICE_28 to SLICE_28 meets
+     -0.057ns LSR_HLD and
+      0.000ns delay constraint requirement (totaling -0.057ns) by 0.389ns
+
+ Physical Path Details:
+
+      Data path SLICE_28 to SLICE_28:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133   SLICE_28.CLK to    SLICE_28.Q0 SLICE_28 (from SCLK_buff)
+ROUTE         9   e 0.199    SLICE_28.Q0 to   SLICE_28.LSR SPI/SPI_states_ack_0 (to SCLK_buff)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+
+================================================================================
+Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[0]" ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[1]" ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[2]" ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "h_beat/clk_internal"     |             |             |
+10.230000 MHz ;                         |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+FREQUENCY 100.000000 MHz ;              |            -|            -|   1  
+                                        |             |             |
+INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
+2.000000 ns CLKPORT "Mux_sel[0]" ;      |            -|            -|   0  
+                                        |             |             |
+INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
+2.000000 ns CLKPORT "Mux_sel[1]" ;      |            -|            -|   0  
+                                        |             |             |
+INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
+2.000000 ns CLKPORT "Mux_sel[2]" ;      |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 9 clocks:
+
+Clock Domain: h_beat/clk_internal   Source: h_beat/Clock_inst.OSC   Loads: 1
+   Covered under: FREQUENCY NET "h_beat/clk_internal" 10.230000 MHz ;
+
+Clock Domain: SPI_rdy   Source: SPI/SLICE_65.Q0   Loads: 33
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: SCLK_buff   Source: CSR_SCLK_P.PAD
+      Covered under: FREQUENCY 100.000000 MHz ;   Transfers: 14
+
+Clock Domain: SCLK_buff   Source: CSR_SCLK_P.PAD   Loads: 42
+   Covered under: FREQUENCY 100.000000 MHz ;
+
+Clock Domain: Mux_sel_c_0_derived_9   Source: SLICE_141.F0   Loads: 3
+   No transfer within this clock domain is found
+
+Clock Domain: Mux_sel_c_0_derived_10   Source: SLICE_142.F0   Loads: 3
+   No transfer within this clock domain is found
+
+Clock Domain: Mezz4_DRS4_o_A_3__N_30   Source: SLICE_16.F1   Loads: 3
+   No transfer within this clock domain is found
+
+Clock Domain: Mezz2_DRS4_o_A_3__N_20   Source: SLICE_16.F0   Loads: 9
+   No transfer within this clock domain is found
+
+Clock Domain: Mezz1_DRS4_o_A_3__N_15   Source: SLICE_12.F0   Loads: 10
+   No transfer within this clock domain is found
+
+Clock Domain: ADC_ch_out_sel_7__N_94   Source: SLICE_137.F1   Loads: 10
+   No transfer within this clock domain is found
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 686 paths, 9 nets, and 718 connections (77.12% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

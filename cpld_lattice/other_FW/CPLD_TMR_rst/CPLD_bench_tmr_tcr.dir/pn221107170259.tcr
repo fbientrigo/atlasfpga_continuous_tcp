@@ -1,0 +1,10 @@
+#Start recording tcl command: 11/7/2022 15:25:39
+#Project Location: C:/Users/victo/Desktop/Lattice_proj/CPLD_TMR_rst; Project name: CPLD_bench_tmr
+prj_project open "C:/Users/victo/Desktop/Lattice_proj/CPLD_TMR_rst/CPLD_bench_tmr.ldf"
+prj_src add "C:/Users/victo/Desktop/Lattice_proj/CPLD_TMR_rst/B13_duo_comp.vhd"
+prj_src add "C:/Users/victo/Desktop/Lattice_proj/CPLD_TMR_rst/B13_duo.vhd"
+prj_src remove "C:/Users/victo/Desktop/Lattice_proj/CPLD_TMR_rst/tmr_b13.vhd"
+prj_src remove "C:/Users/victo/Desktop/Lattice_proj/CPLD_TMR_rst/B13_duo_comp.vhd"
+prj_src add "C:/Users/victo/Desktop/Lattice_proj/CPLD_TMR_rst/B13_duo_TMR.vhd"
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+#Stop recording: 11/7/2022 17:02:59

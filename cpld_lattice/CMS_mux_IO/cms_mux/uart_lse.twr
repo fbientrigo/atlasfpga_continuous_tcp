@@ -1,0 +1,177 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Thu Oct 24 20:58:17 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     uart
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_c]
+            1609 items scored, 1042 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.647ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             baud_counter_127__i12  (from clk_c +)
+   Destination:    FD1S3IX    CD             baud_counter_127__i1  (to clk_c +)
+
+   Delay:                   8.501ns  (31.1% logic, 68.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.501ns data_path baud_counter_127__i12 to baud_counter_127__i1 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.647ns
+
+ Path Details: baud_counter_127__i12 to baud_counter_127__i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              baud_counter_127__i12 (from clk_c)
+Route         2   e 1.002                                  baud_counter[12]
+LUT4        ---     0.448              B to Z              i17_4_lut
+Route         1   e 0.788                                  n46
+LUT4        ---     0.448              B to Z              i23_4_lut
+Route         1   e 0.788                                  n52
+LUT4        ---     0.448              B to Z              i26_4_lut
+Route         1   e 0.788                                  n55
+LUT4        ---     0.448              A to Z              i1_4_lut
+Route         1   e 0.788                                  n5
+LUT4        ---     0.448              A to Z              i313_3_lut
+Route        33   e 1.704                                  baud_counter_31__N_75
+                  --------
+                    8.501  (31.1% logic, 68.9% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.647ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             baud_counter_127__i12  (from clk_c +)
+   Destination:    FD1S3IX    CD             baud_counter_127__i2  (to clk_c +)
+
+   Delay:                   8.501ns  (31.1% logic, 68.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.501ns data_path baud_counter_127__i12 to baud_counter_127__i2 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.647ns
+
+ Path Details: baud_counter_127__i12 to baud_counter_127__i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              baud_counter_127__i12 (from clk_c)
+Route         2   e 1.002                                  baud_counter[12]
+LUT4        ---     0.448              B to Z              i17_4_lut
+Route         1   e 0.788                                  n46
+LUT4        ---     0.448              B to Z              i23_4_lut
+Route         1   e 0.788                                  n52
+LUT4        ---     0.448              B to Z              i26_4_lut
+Route         1   e 0.788                                  n55
+LUT4        ---     0.448              A to Z              i1_4_lut
+Route         1   e 0.788                                  n5
+LUT4        ---     0.448              A to Z              i313_3_lut
+Route        33   e 1.704                                  baud_counter_31__N_75
+                  --------
+                    8.501  (31.1% logic, 68.9% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.647ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             baud_counter_127__i12  (from clk_c +)
+   Destination:    FD1S3IX    CD             baud_counter_127__i3  (to clk_c +)
+
+   Delay:                   8.501ns  (31.1% logic, 68.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.501ns data_path baud_counter_127__i12 to baud_counter_127__i3 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.647ns
+
+ Path Details: baud_counter_127__i12 to baud_counter_127__i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              baud_counter_127__i12 (from clk_c)
+Route         2   e 1.002                                  baud_counter[12]
+LUT4        ---     0.448              B to Z              i17_4_lut
+Route         1   e 0.788                                  n46
+LUT4        ---     0.448              B to Z              i23_4_lut
+Route         1   e 0.788                                  n52
+LUT4        ---     0.448              B to Z              i26_4_lut
+Route         1   e 0.788                                  n55
+LUT4        ---     0.448              A to Z              i1_4_lut
+Route         1   e 0.788                                  n5
+LUT4        ---     0.448              A to Z              i313_3_lut
+Route        33   e 1.704                                  baud_counter_31__N_75
+                  --------
+                    8.501  (31.1% logic, 68.9% route), 6 logic levels.
+
+Warning: 8.647 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |     5.000 ns|     8.647 ns|     6 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+baud_counter_31__N_75                   |      33|     957|     91.84%
+                                        |        |        |
+n5                                      |       1|     957|     91.84%
+                                        |        |        |
+n55                                     |       1|     429|     41.17%
+                                        |        |        |
+n52                                     |       1|     264|     25.34%
+                                        |        |        |
+n53                                     |       1|     264|     25.34%
+                                        |        |        |
+n54                                     |       1|     264|     25.34%
+                                        |        |        |
+n46                                     |       1|     132|     12.67%
+                                        |        |        |
+n48                                     |       1|     132|     12.67%
+                                        |        |        |
+n50                                     |       1|     132|     12.67%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 1042  Score: 2341495
+
+Constraints cover  1609 paths, 102 nets, and 209 connections (95.0% coverage)
+
+
+Peak memory: 83423232 bytes, TRCE: 1343488 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

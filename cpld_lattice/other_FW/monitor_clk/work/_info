@@ -1,0 +1,148 @@
+m255
+K4
+z2
+!s11e vcom 2020.3 2020.10, Oct 14 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/victo/Desktop/Lattice_proj/SoM_comm_tb
+Eclk_monitor
+Z0 w1695125386
+Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 65
+Z6 dC:/Users/victo/Desktop/Lattice_proj/monitor_clk
+Z7 8C:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.srcs/sources_1/new/clk_monitor.vhd
+Z8 FC:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.srcs/sources_1/new/clk_monitor.vhd
+l0
+L36 1
+Vk1VEmVng]XL8Tk_]Q]Kzz0
+!s100 0iDcb4NfV1>LJgNkKRW300
+Z9 OT;C;2020.3;71
+32
+Z10 !s110 1695417587
+!i10b 1
+Z11 !s108 1695417587.000000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.srcs/sources_1/new/clk_monitor.vhd|
+Z13 !s107 C:/Users/victo/Desktop/Vivados/CMB40_v1/CMB40_v1.srcs/sources_1/new/clk_monitor.vhd|
+!i113 1
+Z14 o-work work -2002 -explicit -O0
+Z15 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+R4
+R5
+Z16 DEx4 work 11 clk_monitor 0 22 k1VEmVng]XL8Tk_]Q]Kzz0
+!i122 65
+l57
+L50 42
+VC3iF_IMXdLQgz<N4BLKQ43
+!s100 >9J^]80]2e=0U:m6zK[n21
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Edrs_a_test
+Z17 w1695417582
+R4
+R5
+!i122 67
+R6
+Z18 8C:/Users/victo/Desktop/Lattice_proj/monitor_clk/DRS_A_test.vhd
+Z19 FC:/Users/victo/Desktop/Lattice_proj/monitor_clk/DRS_A_test.vhd
+l0
+L5 1
+VQI==m;BoLZN9W?[L<h65a1
+!s100 3THA<;TJW8H[IP_:JD`JF3
+R9
+32
+R10
+!i10b 1
+R11
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/monitor_clk/DRS_A_test.vhd|
+Z21 !s107 C:/Users/victo/Desktop/Lattice_proj/monitor_clk/DRS_A_test.vhd|
+!i113 1
+R14
+R15
+Abehavioral
+R4
+R5
+Z22 DEx4 work 10 drs_a_test 0 22 QI==m;BoLZN9W?[L<h65a1
+!i122 67
+l18
+Z23 L15 36
+Vn@F[`Ki^S1hdoCT0Q<aG@0
+!s100 Zg:0VYQ4ZY5hD]dPO8^7E0
+R9
+32
+R10
+!i10b 1
+R11
+R20
+R21
+!i113 1
+R14
+R15
+Etb_monitor_clk
+Z24 w1695416609
+R1
+R2
+R3
+R4
+R5
+!i122 66
+R6
+Z25 8C:/Users/victo/Desktop/Lattice_proj/monitor_clk/tb_monitor_clk.vhd
+Z26 FC:/Users/victo/Desktop/Lattice_proj/monitor_clk/tb_monitor_clk.vhd
+l0
+L10 1
+VL[fJ0RO[<]4MiAm9b[ACF2
+!s100 QFmFIRZ:GQ00a5ZkEjKT32
+R9
+32
+R10
+!i10b 1
+R11
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/monitor_clk/tb_monitor_clk.vhd|
+Z28 !s107 C:/Users/victo/Desktop/Lattice_proj/monitor_clk/tb_monitor_clk.vhd|
+!i113 1
+R14
+R15
+Abehavioral
+R22
+R16
+R1
+R2
+R3
+R4
+R5
+DEx4 work 14 tb_monitor_clk 0 22 L[fJ0RO[<]4MiAm9b[ACF2
+!i122 66
+l27
+L15 60
+VVi]Poa_63Vfl[7OT@i<@41
+!s100 ?mJ4kz2GK@zZi_8SWUf6_0
+R9
+32
+R10
+!i10b 1
+R11
+R27
+R28
+!i113 1
+R14
+R15

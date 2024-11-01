@@ -1,0 +1,29 @@
+---------------------------------------------------
+Report for cell top_cms_mux
+   Instance path: top_cms_mux
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     102.00        100.0
+                                  LUT4	     141.00        100.0
+                                 IOBUF	        172        100.0
+                                PFUREG	        162        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                             heartbeat	          1         0.7
+                           SPI_som(14)	          1        47.5
+---------------------------------------------------
+Report for cell heartbeat
+   Instance path: top_cms_mux/h_beat
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.67         0.7
+                                  LUT4	       1.00         0.7
+                                PFUREG	          1         0.6
+---------------------------------------------------
+Report for cell SPI_som(14)
+   Instance path: top_cms_mux/SPI
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      48.50        47.5
+                                  LUT4	      84.00        59.6
+                                PFUREG	         71        43.8

@@ -1,0 +1,161 @@
+C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/uart_top.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\victo\Desktop\Lattice_proj\CPLD_bench_final\src\uart_top.vhd}
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity uart_top
+-- Compiling architecture Behavioral of uart_top
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/single_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/single_unit.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity single_unit
+-- Compiling architecture Behavioral of single_unit
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/FIFO2UART.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/FIFO2UART.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fifo2Uart
+-- Compiling architecture Behavioral of fifo2Uart
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/comparatorTMR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/comparatorTMR.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity comparatorTMR
+-- Compiling architecture Behavioral of comparatorTMR
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/UART_RX.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/UART_RX.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity UART_RX
+-- Compiling architecture rtl of UART_RX
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/b13.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/b13.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity b13
+-- Compiling architecture BEHAV of b13
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/CPLD_rad_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\victo\Desktop\Lattice_proj\CPLD_bench_final\CPLD_rad_tb.vhd}
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package MATH_REAL
+-- Loading package NUMERIC_STD
+-- Compiling entity testbench
+-- Compiling architecture tb of testbench
+-- Loading entity uart_top
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/UART_TX.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/UART_TX.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity UART_TX
+-- Compiling architecture RTL of UART_TX
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/lfsr.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/lfsr.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity lfsr
+-- Compiling architecture Behavioral of lfsr
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/voter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/voter.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity voter
+-- Compiling architecture Behavioral of voter
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/comparator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/comparator.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity comparator
+-- Compiling architecture Behavioral of comparator
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/Bench_top.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/Bench_top.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Bench_top
+-- Compiling architecture Behavioral of Bench_top
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/b13fifo.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/b13fifo.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package components
+-- Compiling entity b13fifo
+-- Compiling architecture Structure of b13fifo
+-- Compiling configuration Structure_CON
+-- Loading entity b13fifo
+-- Loading architecture Structure of b13fifo
+-- Loading package VITAL_Timing
+-- Loading entity and2
+-- Loading entity inv
+-- Loading entity or2
+-- Loading entity xor2
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package VITAL_Primitives
+-- Loading package mem2
+-- Loading entity rom16x1a
+-- Loading package global
+-- Loading entity fd1p3bx
+-- Loading entity fd1p3dx
+-- Loading entity fd1s3dx
+-- Loading entity fd1s3bx
+-- Loading entity fadd2b
+-- Loading entity cu2
+-- Loading entity vhi
+-- Loading entity mux321
+-- Loading entity ageb2
+-- Loading entity vlo
+-- Loading package mem1
+-- Loading entity dpr16x4c
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/lfsrTMR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/lfsrTMR.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lfsrTMR
+-- Compiling architecture Behavioral of lfsrTMR
+
+} {} {}} C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/fanout.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/src/fanout.vhd
+Model Technology ModelSim - Lattice FPGA Edition vcom 2020.3 Compiler 2020.10 Oct 14 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fanout
+-- Compiling architecture Behavioral of fanout
+
+} {} {}}

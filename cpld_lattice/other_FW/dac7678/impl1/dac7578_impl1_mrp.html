@@ -1,0 +1,543 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+           Lattice Mapping Report File for Design Module 'i2c_dac'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO3D -p LCMXO3D-9400HC -t CABGA256 -s 5 -oc
+     Commercial dac7578_impl1.ngd -o dac7578_impl1_map.ncd -pr dac7578_impl1.prf
+     -mp dac7578_impl1.mrp -lpf
+     C:/Users/victo/Desktop/Lattice_proj/dac7678/impl1/dac7578_impl1.lpf -lpf
+     C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf -c 0 -gui -msgset
+     C:/Users/victo/Desktop/Lattice_proj/dac7678/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3D-9400HCCABGA256
+Target Performance:   5
+Mapper:  se5c00,  version:  Diamond (64-bit) 3.12.0.240.2
+Mapped on:  05/24/22  11:44:21
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:     37 out of 10021 (0%)
+      PFU registers:           37 out of  9400 (0%)
+      PIO registers:            0 out of   621 (0%)
+   Number of SLICEs:        47 out of  4700 (1%)
+      SLICEs as Logic/ROM:     47 out of  4700 (1%)
+      SLICEs as RAM:            0 out of  3525 (0%)
+      SLICEs as Carry:         15 out of  4700 (0%)
+   Number of LUT4s:         94 out of  9400 (1%)
+      Number used as logic LUTs:         64
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       30
+      Number used as shift registers:     0
+   Number of PIO sites used: 24 + 4(JTAG) out of 207 (14%)
+   Number of block RAMs:  0 out of 48 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Security used :   No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCSLEWRATEA):  0 out of 6 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  1
+
+     Net clk_i_c: 25 loads, 25 rising, 0 falling (Driver: PIO clk_i )
+   Number of Clock Enables:  7
+     Net rst_i_c: 1 loads, 1 LSLICEs
+     Net clk_i_c_enable_15: 5 loads, 5 LSLICEs
+     Net clk_i_c_enable_27: 5 loads, 5 LSLICEs
+     Net clk_i_c_enable_17: 2 loads, 2 LSLICEs
+     Net clk_i_c_enable_29: 5 loads, 5 LSLICEs
+     Net clk_i_c_enable_21: 1 loads, 1 LSLICEs
+     Net clk_i_c_enable_16: 1 loads, 1 LSLICEs
+   Number of LSRs:  5
+     Net n1487: 5 loads, 5 LSLICEs
+     Net n2056: 5 loads, 5 LSLICEs
+     Net n2306: 2 loads, 2 LSLICEs
+     Net n1281: 5 loads, 5 LSLICEs
+     Net n41_adj_18: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net n695: 15 loads
+     Net rec_ack_ok: 11 loads
+     Net rst_i_c: 11 loads
+     Net n700: 9 loads
+     Net SCL_o_c: 9 loads
+     Net n1882: 8 loads
+     Net n697: 8 loads
+     Net clk_i_c_enable_15: 6 loads
+     Net clk_i_c_enable_29: 6 loads
+     Net n2056: 6 loads
+
+
+
+
+   Number of warnings:  56
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(4):
+     Semantic error in "LOCATE COMP "rstn" SITE "B3" ;": COMP "rstn" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(5):
+     Semantic error in "LOCATE COMP "LED[0]" SITE "H11" ;": COMP "LED[0]" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(6):
+     Semantic error in "LOCATE COMP "LED[1]" SITE "J13" ;": COMP "LED[1]" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(7):
+     Semantic error in "LOCATE COMP "LED[2]" SITE "J11" ;": COMP "LED[2]" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(8):
+     Semantic error in "LOCATE COMP "LED[3]" SITE "L12" ;": COMP "LED[3]" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(9):
+     Semantic error in "LOCATE COMP "LED[4]" SITE "K11" ;": COMP "LED[4]" cannot
+     be found in design. This preference has been disabled.
+
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(10):
+     Semantic error in "LOCATE COMP "LED[5]" SITE "L13" ;": COMP "LED[5]" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(11):
+     Semantic error in "LOCATE COMP "LED[6]" SITE "N15" ;": COMP "LED[6]" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(12):
+     Semantic error in "LOCATE COMP "LED[7]" SITE "P16" ;": COMP "LED[7]" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(13):
+     Semantic error in "LOCATE COMP "DIPSW[0]" SITE "P2" ;": COMP "DIPSW[0]"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(14):
+     Semantic error in "LOCATE COMP "DIPSW[1]" SITE "P1" ;": COMP "DIPSW[1]"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(15):
+     Semantic error in "LOCATE COMP "DIPSW[2]" SITE "N2" ;": COMP "DIPSW[2]"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(16):
+     Semantic error in "LOCATE COMP "DIPSW[3]" SITE "R1" ;": COMP "DIPSW[3]"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(20):
+     Semantic error in "IOBUF PORT "DIPSW[3]" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "DIPSW[3]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(21):
+     Semantic error in "IOBUF PORT "DIPSW[0]" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "DIPSW[0]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(22):
+     Semantic error in "IOBUF PORT "DIPSW[1]" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "DIPSW[1]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(23):
+     Semantic error in "IOBUF PORT "DIPSW[2]" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "DIPSW[2]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(24):
+     Semantic error in "IOBUF PORT "rstn" PULLMODE=UP IO_TYPE=LVCMOS33 ;": Port
+     "rstn" does not exist in the design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(25):
+     Semantic error in "IOBUF PORT "LED[0]" PULLMODE=UP IO_TYPE=LVCMOS33
+     HYSTERESIS=NA ;": Port "LED[0]" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(26):
+     Semantic error in "IOBUF PORT "LED[1]" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "LED[1]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(27):
+     Semantic error in "IOBUF PORT "LED[2]" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "LED[2]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(28):
+     Semantic error in "IOBUF PORT "LED[3]" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "LED[3]" does not exist in the design. This preference has been
+     disabled.
+
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(29):
+     Semantic error in "IOBUF PORT "LED[4]" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "LED[4]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(30):
+     Semantic error in "IOBUF PORT "LED[5]" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "LED[5]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(31):
+     Semantic error in "IOBUF PORT "LED[6]" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "LED[6]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(32):
+     Semantic error in "IOBUF PORT "LED[7]" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "LED[7]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(35):
+     Semantic error in "LOCATE COMP "SDA_T" SITE "T12" ;": COMP "SDA_T" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(36):
+     Semantic error in "LOCATE COMP "SCL_O" SITE "T14" ;": COMP "SCL_O" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(37):
+     Semantic error in "LOCATE COMP "nCLR_O" SITE "R11" ;": COMP "nCLR_O" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(38):
+     Semantic error in "LOCATE COMP "Addr_O" SITE "R13" ;": COMP "Addr_O" cannot
+     be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(39):
+     Semantic error in "LOCATE COMP "nLDAC_O" SITE "T11" ;": COMP "nLDAC_O"
+     cannot be found in design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(40):
+     Semantic error in "IOBUF PORT "SDA_T" PULLMODE=UP IO_TYPE=LVCMOS33 ;": Port
+     "SDA_T" does not exist in the design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(41):
+     Semantic error in "IOBUF PORT "SCL_O" PULLMODE=UP IO_TYPE=LVCMOS33 ;": Port
+     "SCL_O" does not exist in the design. This preference has been disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(42):
+     Semantic error in "IOBUF PORT "nCLR_O" PULLMODE=UP IO_TYPE=LVCMOS33 ;":
+     Port "nCLR_O" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(43):
+     Semantic error in "IOBUF PORT "Addr_O" PULLMODE=DOWN IO_TYPE=LVCMOS33 ;":
+     Port "Addr_O" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: C:/Users/victo/Desktop/Lattice_proj/dac7678/dac7578.lpf(44):
+     Semantic error in "IOBUF PORT "nLDAC_O" PULLMODE=DOWN IO_TYPE=LVCMOS33 ;":
+     Port "nLDAC_O" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: input pad net 'ena_read' has no legal load.
+WARNING - map: input pad net 'ADDR0_sel_i' has no legal load.
+WARNING - map: input pad net 'data_byte_i[7]' has no legal load.
+WARNING - map: input pad net 'data_byte_i[6]' has no legal load.
+WARNING - map: input pad net 'data_byte_i[5]' has no legal load.
+WARNING - map: input pad net 'data_byte_i[4]' has no legal load.
+WARNING - map: input pad net 'data_byte_i[3]' has no legal load.
+
+WARNING - map: input pad net 'data_byte_i[2]' has no legal load.
+WARNING - map: input pad net 'data_byte_i[1]' has no legal load.
+WARNING - map: input pad net 'data_byte_i[0]' has no legal load.
+WARNING - map: IO buffer missing for top level port ena_read...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port ADDR0_sel_i...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port data_byte_i[7:0](7)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port data_byte_i[7:0](6)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port data_byte_i[7:0](5)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port data_byte_i[7:0](4)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port data_byte_i[7:0](3)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port data_byte_i[7:0](2)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port data_byte_i[7:0](1)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port data_byte_i[7:0](0)...logic
+     will be discarded.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| read_byte_o[2]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| read_byte_o[3]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| read_byte_o[4]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| read_byte_o[5]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| read_byte_o[6]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| read_byte_o[7]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADDR1_o             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADDR0_o             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| nLDAC_o             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SCL_o               | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SDA_o               | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SDA_t               | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| read_byte_o[1]      | OUTPUT    | LVCMOS25  |            |
+
++---------------------+-----------+-----------+------------+
+| read_byte_o[0]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SCLK_c_test[3]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SCLK_c_test[2]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SCLK_c_test[1]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SCLK_c_test[0]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| Fail_ACK            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk_i               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rst_i               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SDA_i               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ena_write           | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| update_i            | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Signal clk_i_c_enable_25 was merged into signal rst_i_c
+Signal freq_counter_451_add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal freq_counter_451_add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal ack_counter_453_add_4_1/S0 undriven or does not drive anything - clipped.
+     
+Signal ack_counter_453_add_4_1/CI undriven or does not drive anything - clipped.
+     
+Signal ack_counter_453_add_4_9/S1 undriven or does not drive anything - clipped.
+     
+Signal ack_counter_453_add_4_9/CO undriven or does not drive anything - clipped.
+     
+Signal SCLK_counter_450_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal SCLK_counter_450_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal SCLK_counter_450_add_4_9/S1 undriven or does not drive anything -
+     clipped.
+Signal SCLK_counter_450_add_4_9/CO undriven or does not drive anything -
+     clipped.
+Signal freq_counter_451_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal freq_counter_451_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Block i1495_1_lut_rep_15 was optimized away.
+
+     
+
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'rst_i_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'rst_i_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 29 
+
+     Type and instance name of component: 
+   Register : freq_counter_451__i2
+   Register : SCLK_counter_450__i8
+   Register : SDA_R_176
+   Register : SCLK_counter_450__i5
+   Register : freq_counter_451__i0
+   Register : SCLK_counter_450__i3
+   Register : SCLK_counter_450__i6
+   Register : freq_counter_451__i1
+   Register : freq_counter_451__i3
+   Register : SCLK_counter_450__i7
+   Register : freq_counter_451__i4
+   Register : freq_counter_451__i5
+   Register : SCLK_counter_450__i2
+   Register : freq_counter_451__i6
+   Register : freq_counter_451__i7
+   Register : repeat_comm_184
+   Register : rec_ack_ok_178
+   Register : ack_counter_453__i1
+   Register : ack_counter_453__i2
+   Register : ack_counter_453__i3
+   Register : o_sclk_175
+   Register : ack_counter_453__i4
+   Register : ack_counter_453__i5
+   Register : ack_counter_453__i6
+   Register : clk_delay1_170
+   Register : SCLK_counter_450__i4
+   Register : SCLK_counter_450__i1
+   Register : ack_counter_453__i0
+   Register : ack_counter_453__i7
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 0 secs  
+
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 39 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

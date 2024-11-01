@@ -1,0 +1,39 @@
+----------------------------------------------------------------------
+Report for cell top_cms_mux.TECH
+Register bits:  162 of 10552 (1.535%)
+I/O cells:      105
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX       100          100.0
+                            FD1P3IX        26          100.0
+                             FD1S1A        10          100.0
+                             FD1S1I        25          100.0
+                            FD1S3DX         1          100.0
+                                GSR         1          100.0
+                                 IB        12          100.0
+                              ILVDS        52          100.0
+                               LUT4       148          100.0
+                                 OB        93          100.0
+                              OLVDS        15          100.0
+                              PFUMX        10          100.0
+SUB MODULES
+                        SPI_som(14)         1
+                          heartbeat         1
+                              TOTAL       495
+----------------------------------------------------------------------
+Report for cell heartbeat.v1
+Instance Path : h_beat
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3DX         1          100.0
+                               LUT4         1            0.7
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell SPI_som(14).v1
+Instance Path : SPI
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        45           45.0
+                            FD1P3IX        26          100.0
+                               LUT4        86           58.1
+                              TOTAL       157

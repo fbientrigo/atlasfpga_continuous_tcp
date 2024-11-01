@@ -1,0 +1,89 @@
+[ START MERGED ]
+[ END MERGED ]
+[ START CLIPPED ]
+GND_net
+VCC_net
+kitcar_inst/sub_49_add_2_2/S1
+kitcar_inst/sub_49_add_2_2/S0
+kitcar_inst/sub_49_add_2_2/CI
+kitcar_inst/sub_49_add_2_4/S1
+kitcar_inst/sub_49_add_2_4/S0
+kitcar_inst/sub_49_add_2_6/S1
+kitcar_inst/sub_49_add_2_6/S0
+kitcar_inst/sub_49_add_2_8/S1
+kitcar_inst/sub_49_add_2_8/S0
+kitcar_inst/sub_49_add_2_10/S1
+kitcar_inst/sub_49_add_2_10/S0
+kitcar_inst/sub_49_add_2_12/S1
+kitcar_inst/sub_49_add_2_12/S0
+kitcar_inst/sub_49_add_2_14/S1
+kitcar_inst/sub_49_add_2_14/S0
+kitcar_inst/sub_49_add_2_16/S1
+kitcar_inst/sub_49_add_2_16/S0
+kitcar_inst/sub_49_add_2_18/S1
+kitcar_inst/sub_49_add_2_18/S0
+kitcar_inst/sub_49_add_2_20/S1
+kitcar_inst/sub_49_add_2_20/S0
+kitcar_inst/sub_49_add_2_22/S1
+kitcar_inst/sub_49_add_2_22/S0
+kitcar_inst/sub_49_add_2_24/S1
+kitcar_inst/sub_49_add_2_24/S0
+kitcar_inst/sub_49_add_2_26/S1
+kitcar_inst/sub_49_add_2_26/S0
+kitcar_inst/sub_49_add_2_cout/S1
+kitcar_inst/sub_49_add_2_cout/CO
+kitcar_inst/clk_div_72_add_4_1/S0
+kitcar_inst/clk_div_72_add_4_1/CI
+kitcar_inst/clk_div_72_add_4_27/S1
+kitcar_inst/clk_div_72_add_4_27/CO
+heartbeat_inst/count_70_add_4_1/S0
+heartbeat_inst/count_70_add_4_1/CI
+heartbeat_inst/count_70_add_4_27/CO
+heartbeat_inst/add_156_2/S1
+heartbeat_inst/add_156_2/S0
+heartbeat_inst/add_156_2/CI
+heartbeat_inst/add_156_4/S1
+heartbeat_inst/add_156_4/S0
+heartbeat_inst/add_156_6/S1
+heartbeat_inst/add_156_6/S0
+heartbeat_inst/add_156_8/S1
+heartbeat_inst/add_156_8/S0
+heartbeat_inst/add_156_10/S1
+heartbeat_inst/add_156_10/S0
+heartbeat_inst/add_156_12/S1
+heartbeat_inst/add_156_12/S0
+heartbeat_inst/add_156_14/S1
+heartbeat_inst/add_156_14/S0
+heartbeat_inst/add_156_16/S1
+heartbeat_inst/add_156_16/S0
+heartbeat_inst/add_156_18/S1
+heartbeat_inst/add_156_18/S0
+heartbeat_inst/add_156_20/S0
+heartbeat_inst/add_156_20/CO
+[ END CLIPPED ]
+[ START OSC ]
+osc_clk 12.09
+[ END OSC ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Mon Dec 27 12:22:48 2021
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=ENABLE I2C_PORT=DISABLE I2C_GLITCH_FILTER=DISABLE I2C_GLITCH_FILTER_RANGE=R_16_50NS MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF CONFIG_SECURE=OFF MCCLK_FREQ=66.5 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF BACKGROUND_RECONFIG_SECURITY=OFF SPIM_ADDRESS_32BIT=DISABLE SFDP_CHECK=DISABLE PRIMARY_BOOT=IMAGE_0 SECONDARY_BOOT=NONE SLAVE_IDLE_TIMER=0 MASTER_PREAMBLE_DETECTION_TIMER=0 MASTER_PREAMBLE_DETECTION_RETRY=0 CUR_DESIGN_BOOT_LOCATION=IMAGE_0 INBUF=ON ROLLBACK_CONTROL=DISABLE ;
+LOCATE COMP "LED[5]" SITE "L13" ;
+LOCATE COMP "LED[6]" SITE "N15" ;
+LOCATE COMP "LED[7]" SITE "P16" ;
+LOCATE COMP "LED[4]" SITE "K11" ;
+LOCATE COMP "LED[3]" SITE "L12" ;
+LOCATE COMP "LED[2]" SITE "J11" ;
+LOCATE COMP "LED[1]" SITE "J13" ;
+LOCATE COMP "LED[0]" SITE "H11" ;
+LOCATE COMP "clk_x1" SITE "C8" ;
+LOCATE COMP "rstn" SITE "B3" ;
+LOCATE COMP "DIPSW[3]" SITE "R1" ;
+LOCATE COMP "DIPSW[2]" SITE "N2" ;
+LOCATE COMP "DIPSW[1]" SITE "P1" ;
+LOCATE COMP "DIPSW[0]" SITE "P2" ;
+FREQUENCY NET "osc_clk" 12.090000 MHz ;
+FREQUENCY PORT "clk_x1" 12.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

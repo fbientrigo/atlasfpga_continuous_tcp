@@ -1,0 +1,32 @@
+---------------------------------------------------
+Report for cell XO3D_BB_blink
+   Instance path: XO3D_BB_blink
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      70.00        100.0
+                                  LUT4	      29.00        100.0
+                                 IOBUF	         14        100.0
+                                PFUREG	         67        100.0
+                                RIPPLE	         52        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+             kitcar(clk_freq=12000000)	          1        55.2
+          heartbeat(clk_freq=12000000)	          1        35.2
+---------------------------------------------------
+Report for cell heartbeat(clk_freq=12000000)
+   Instance path: XO3D_BB_blink/heartbeat_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      24.67        35.2
+                                  LUT4	       1.00         3.4
+                                PFUREG	         28        41.8
+                                RIPPLE	         24        46.2
+---------------------------------------------------
+Report for cell kitcar(clk_freq=12000000)
+   Instance path: XO3D_BB_blink/kitcar_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.67        55.2
+                                  LUT4	      14.00        48.3
+                                PFUREG	         39        58.2
+                                RIPPLE	         28        53.8

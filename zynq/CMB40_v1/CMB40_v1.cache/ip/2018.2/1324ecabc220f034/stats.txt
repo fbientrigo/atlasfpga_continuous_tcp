@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Mon Jul 17 14:06:53 UTC 2023
+VLNV: xilinx.com:user:CPLD_ctrl:1.0
+SynthRuntime: 35

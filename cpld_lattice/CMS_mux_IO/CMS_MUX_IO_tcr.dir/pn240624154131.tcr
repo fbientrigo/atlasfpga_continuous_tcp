@@ -1,0 +1,49 @@
+#Start recording tcl command: 6/24/2024 13:40:28
+#Project Location: C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO; Project name: CMS_MUX_IO
+prj_project open "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/CMS_MUX_IO.ldf"
+pgr_project open "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/cms_mux.xcf"
+pgr_program set -cable 
+pgr_program run
+pgr_program run
+pgr_program set -cable 
+pgr_program set -port FTUSB-1
+pgr_program run
+pgr_program set -port FTUSB-0
+pgr_program run
+pgr_program set -cable 
+pgr_program set -port FTUSB-1
+pgr_program run
+pgr_project save "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/cms_mux.xcf"
+prj_dev set -part LCMXO3D-9400HC-5BG484C
+pgr_project close
+pgr_project open "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/cms_mux.xcf"
+pgr_program run
+prj_dev set -part LCMXO3D-9400HC-6BG256I
+pgr_project close
+pgr_project open "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/cms_mux.xcf"
+pgr_program set -cable 
+pgr_program set -port FTUSB-0
+pgr_program run
+pgr_program set -port FTUSB-1
+pgr_program run
+pgr_project save "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/cms_mux.xcf"
+prj_dev set -part LCMXO3L-9400C-5BG484C
+pgr_project close
+pgr_project open "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/cms_mux.xcf"
+pgr_program run
+pgr_program set -port FTUSB-0
+pgr_program run
+pgr_project save "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/cms_mux.xcf"
+pgr_project close
+pgr_project open "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/cms_mux.xcf"
+pgr_project close
+pgr_project open "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/cms_mux.xcf"
+pgr_program run
+pgr_program set -cable 
+pgr_program set -port FTUSB-1
+pgr_program run
+pgr_program set -port FTUSB-0
+pgr_program run
+pgr_project save "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/cms_mux.xcf"
+pgr_project close
+#Stop recording: 6/24/2024 15:41:31

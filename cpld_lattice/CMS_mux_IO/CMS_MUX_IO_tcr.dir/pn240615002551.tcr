@@ -1,0 +1,4 @@
+#Start recording tcl command: 6/14/2024 11:07:28
+#Project Location: C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO; Project name: CMS_MUX_IO
+prj_project open "C:/Users/rbarraza/cernbox/WINDOWS/Desktop/CMB_gitlab/charge-monitoring-system/CPLD_proj/CMS_mux_IO/CMS_MUX_IO.ldf"
+#Stop recording: 6/15/2024 00:25:51

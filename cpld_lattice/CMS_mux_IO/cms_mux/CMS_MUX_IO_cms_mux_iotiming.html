@@ -1,0 +1,255 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+Loading design for application iotiming from file cms_mux_io_cms_mux.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: 6
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+Loading design for application iotiming from file cms_mux_io_cms_mux.ncd.
+Design name: top_cms_mux
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3L-9400C
+Package:     CABGA484
+Performance: M
+Package Status:                     Final          Version 1.6.
+Performance Hardware Data Status:   Final          Version 37.5.
+// Design: top_cms_mux
+// Package: CABGA484
+// ncd File: cms_mux_io_cms_mux.ncd
+// Version: Diamond (64-bit) 3.13.0.56.2
+// Written on Wed Oct 30 12:58:32 2024
+// M: Minimum Performance Grade
+// iotiming CMS_MUX_IO_cms_mux.ncd CMS_MUX_IO_cms_mux.prf -gui -msgset C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5):
+
+// Input Setup and Hold Times
+
+Port       Clock      Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+CSR_CS_SOM CSR_SCLK_P R     4.609      5       0.301     M
+CSR_MOSI   CSR_SCLK_P R     4.004      5       2.891     5
+
+
+// Clock to Output Delay
+
+Port        Clock      Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+CSR_CS_CPLD CSR_SCLK_P R    15.509         5        5.032          M
+CSR_MISO    CSR_SCLK_P R    14.246         5        4.646          M
+F16_monitor CSR_SCLK_P R    17.961         5        5.645          M
+
+
+// Internal_Clock to Input
+
+Port       Internal_Clock        
+--------------------------------------------------------
+DRS4_i_A[0 Mux_sel_c_0_derived_9 
+DRS4_i_A[0 Mezz4_DRS4_o_A_3__N_30
+DRS4_i_A[0 Mezz1_DRS4_o_A_3__N_15
+DRS4_i_A[0 Mux_sel_c_0_derived_10
+DRS4_i_A[0 Mezz2_DRS4_o_A_3__N_20
+DRS4_i_A[1 Mux_sel_c_0_derived_9 
+DRS4_i_A[1 Mezz4_DRS4_o_A_3__N_30
+DRS4_i_A[1 Mezz1_DRS4_o_A_3__N_15
+DRS4_i_A[1 Mux_sel_c_0_derived_10
+DRS4_i_A[1 Mezz2_DRS4_o_A_3__N_20
+DRS4_i_A[2 Mux_sel_c_0_derived_9 
+DRS4_i_A[2 Mezz4_DRS4_o_A_3__N_30
+DRS4_i_A[2 Mezz1_DRS4_o_A_3__N_15
+DRS4_i_A[2 Mux_sel_c_0_derived_10
+DRS4_i_A[2 Mezz2_DRS4_o_A_3__N_20
+DRS4_i_A[3 Mux_sel_c_0_derived_9 
+DRS4_i_A[3 Mezz4_DRS4_o_A_3__N_30
+DRS4_i_A[3 Mezz1_DRS4_o_A_3__N_15
+DRS4_i_A[3 Mux_sel_c_0_derived_10
+DRS4_i_A[3 Mezz2_DRS4_o_A_3__N_20
+DRS4_i_SRI Mux_sel_c_0_derived_9 
+DRS4_i_SRI Mezz4_DRS4_o_A_3__N_30
+DRS4_i_SRI Mezz1_DRS4_o_A_3__N_15
+DRS4_i_SRI Mux_sel_c_0_derived_10
+DRS4_i_SRI Mezz2_DRS4_o_A_3__N_20
+Mezz2_ADC_ ADC_ch_out_sel_7__N_94
+Mezz2_ADC_ ADC_ch_out_sel_7__N_94
+Mezz2_ADC_ ADC_ch_out_sel_7__N_94
+Mezz2_ADC_ ADC_ch_out_sel_7__N_94
+Mezz3_ADC_ ADC_ch_out_sel_7__N_94
+Mezz3_ADC_ ADC_ch_out_sel_7__N_94
+Mezz3_ADC_ ADC_ch_out_sel_7__N_94
+Mezz4_ADC_ ADC_ch_out_sel_7__N_94
+Mezz5_ADC_ ADC_ch_out_sel_7__N_94
+Mezz_ADC_L ADC_ch_out_sel_7__N_94
+top_rst    h_beat/clk_internal   
+
+
+// Internal_Clock to Output
+
+Port                     Internal_Clock        
+--------------------------------------------------------
+CPLD_ADC_ADCLK_o_p       ADC_ch_out_sel_7__N_94
+CPLD_ADC_LCLK_o_p        ADC_ch_out_sel_7__N_94
+CPLD_ADC_ch_o_p[0]       ADC_ch_out_sel_7__N_94
+CPLD_ADC_ch_o_p[1]       ADC_ch_out_sel_7__N_94
+CPLD_ADC_ch_o_p[2]       ADC_ch_out_sel_7__N_94
+CPLD_ADC_ch_o_p[3]       ADC_ch_out_sel_7__N_94
+CPLD_ADC_ch_o_p[4]       ADC_ch_out_sel_7__N_94
+CPLD_ADC_ch_o_p[5]       ADC_ch_out_sel_7__N_94
+CPLD_ADC_ch_o_p[6]       ADC_ch_out_sel_7__N_94
+CPLD_ADC_ch_o_p[7]       ADC_ch_out_sel_7__N_94
+Mezz1_DRS4_o_A[0]        Mezz1_DRS4_o_A_3__N_15
+Mezz1_DRS4_o_A[1]        Mezz1_DRS4_o_A_3__N_15
+Mezz1_DRS4_o_A[2]        Mezz1_DRS4_o_A_3__N_15
+Mezz1_DRS4_o_A[3]        Mezz1_DRS4_o_A_3__N_15
+Mezz2_DRS4_o_A[0]        Mezz2_DRS4_o_A_3__N_20
+Mezz2_DRS4_o_A[1]        Mezz2_DRS4_o_A_3__N_20
+Mezz2_DRS4_o_A[2]        Mezz2_DRS4_o_A_3__N_20
+Mezz2_DRS4_o_A[3]        Mezz2_DRS4_o_A_3__N_20
+Mezz3_DRS4_o_A[0]        Mux_sel_c_0_derived_9 
+Mezz3_DRS4_o_A[1]        Mux_sel_c_0_derived_9 
+Mezz3_DRS4_o_A[2]        Mux_sel_c_0_derived_9 
+Mezz3_DRS4_o_A[3]        Mux_sel_c_0_derived_9 
+Mezz4_DRS4_o_A[0]        Mezz4_DRS4_o_A_3__N_30
+Mezz4_DRS4_o_A[1]        Mezz4_DRS4_o_A_3__N_30
+Mezz4_DRS4_o_A[2]        Mezz4_DRS4_o_A_3__N_30
+Mezz4_DRS4_o_A[3]        Mezz4_DRS4_o_A_3__N_30
+Mezz5_DRS4_o_A[0]        Mux_sel_c_0_derived_10
+Mezz5_DRS4_o_A[1]        Mux_sel_c_0_derived_10
+Mezz5_DRS4_o_A[2]        Mux_sel_c_0_derived_10
+Mezz5_DRS4_o_A[3]        Mux_sel_c_0_derived_10
+o_Mezz_ADC_nCS[0]        SPI_rdy               
+o_Mezz_ADC_nCS[1]        SPI_rdy               
+o_Mezz_ADC_nCS[2]        SPI_rdy               
+o_Mezz_ADC_nCS[3]        SPI_rdy               
+o_Mezz_ADC_nCS[4]        SPI_rdy               
+o_Mezz_ADC_nReset[0]     SPI_rdy               
+o_Mezz_ADC_nReset[1]     SPI_rdy               
+o_Mezz_ADC_nReset[2]     SPI_rdy               
+o_Mezz_ADC_nReset[3]     SPI_rdy               
+o_Mezz_ADC_nReset[4]     SPI_rdy               
+o_Mezz_DAC_nReset[0]     SPI_rdy               
+o_Mezz_DAC_nReset[1]     SPI_rdy               
+o_Mezz_DAC_nReset[2]     SPI_rdy               
+o_Mezz_DAC_nReset[3]     SPI_rdy               
+o_Mezz_DAC_nReset[4]     SPI_rdy               
+o_Mezz_DAC_sel0[0]       SPI_rdy               
+o_Mezz_DAC_sel0[1]       SPI_rdy               
+o_Mezz_DAC_sel0[2]       SPI_rdy               
+o_Mezz_DAC_sel0[3]       SPI_rdy               
+o_Mezz_DAC_sel0[4]       SPI_rdy               
+o_Mezz_DAC_sel1[0]       SPI_rdy               
+o_Mezz_DAC_sel1[1]       SPI_rdy               
+o_Mezz_DAC_sel1[2]       SPI_rdy               
+o_Mezz_DAC_sel1[3]       SPI_rdy               
+o_Mezz_DAC_sel1[4]       SPI_rdy               
+o_Mezz_DRS4_o_SRIN[0]    Mezz1_DRS4_o_A_3__N_15
+o_Mezz_DRS4_o_SRIN[1]    Mezz2_DRS4_o_A_3__N_20
+o_Mezz_DRS4_o_SRIN[2]    Mux_sel_c_0_derived_9 
+o_Mezz_DRS4_o_SRIN[3]    Mezz4_DRS4_o_A_3__N_30
+o_Mezz_DRS4_o_SRIN[4]    Mux_sel_c_0_derived_10
+o_Mezz_DRS4_o_denable[0] SPI_rdy               
+o_Mezz_DRS4_o_denable[1] SPI_rdy               
+o_Mezz_DRS4_o_denable[2] SPI_rdy               
+o_Mezz_DRS4_o_denable[3] SPI_rdy               
+o_Mezz_DRS4_o_denable[4] SPI_rdy               
+o_Mezz_Mux0[0]           SPI_rdy               
+o_Mezz_Mux0[1]           SPI_rdy               
+o_Mezz_Mux0[2]           SPI_rdy               
+o_Mezz_Mux0[3]           SPI_rdy               
+o_Mezz_Mux0[4]           SPI_rdy               
+o_Mezz_Mux1[0]           SPI_rdy               
+o_Mezz_Mux1[1]           SPI_rdy               
+o_Mezz_Mux1[2]           SPI_rdy               
+o_Mezz_Mux1[3]           SPI_rdy               
+o_Mezz_Mux1[4]           SPI_rdy               
+o_Mezz_Mux_gain_0[0]     SPI_rdy               
+o_Mezz_Mux_gain_0[1]     SPI_rdy               
+o_Mezz_Mux_gain_0[2]     SPI_rdy               
+o_Mezz_Mux_gain_0[3]     SPI_rdy               
+o_Mezz_Mux_gain_0[4]     SPI_rdy               
+o_Mezz_Mux_gain_1[0]     SPI_rdy               
+o_Mezz_Mux_gain_1[1]     SPI_rdy               
+o_Mezz_Mux_gain_1[2]     SPI_rdy               
+o_Mezz_Mux_gain_1[3]     SPI_rdy               
+o_Mezz_Mux_gain_1[4]     SPI_rdy               
+o_Mezz_nSHDN[0]          SPI_rdy               
+o_Mezz_nSHDN[1]          SPI_rdy               
+o_Mezz_nSHDN[2]          SPI_rdy               
+o_Mezz_nSHDN[3]          SPI_rdy               
+o_Mezz_nSHDN[4]          SPI_rdy               
+o_Mezz_tcal_en[0]        SPI_rdy               
+o_Mezz_tcal_en[1]        SPI_rdy               
+o_Mezz_tcal_en[2]        SPI_rdy               
+o_Mezz_tcal_en[3]        SPI_rdy               
+o_Mezz_tcal_en[4]        SPI_rdy               
+top_heartbeat            h_beat/clk_internal   
+WARNING: you must also run trce with hold speed: 5
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

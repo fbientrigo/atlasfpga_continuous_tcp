@@ -1,0 +1,53 @@
+[Device]
+Family=machxo3d
+PartType=LCMXO3D-9400HC
+PartName=LCMXO3D-9400HC-6BG484I
+SpeedGrade=6
+Package=CABGA484
+OperatingCondition=IND
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=FIFO_DC
+CoreRevision=5.8
+ModuleName=b13fifo
+SourceFormat=VHDL
+ParameterFileVersion=1.0
+Date=08/30/2022
+Time=16:41:49
+
+[Parameters]
+Verilog=0
+VHDL=1
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+FIFOImp=LUT Based
+RDepth=256
+RWidth=8
+WDepth=256
+WWidth=8
+regout=0
+CtrlByRdEn=0
+ClockEn=0
+EmpFlg=0
+PeMode=Static - Single Threshold
+PeAssert=10
+PeDeassert=12
+FullFlg=0
+PfMode=Static - Single Threshold
+PfAssert=508
+PfDeassert=506
+Reset=Async
+Reset1=Sync
+RDataCount=0
+WDataCount=0
+EnECC=0
+
+[Command]
+cmd_line= -w -n b13fifo -lang vhdl -synth lse -bus_exp 7 -bb -arch se5c00 -type ebfifo -depth 256 -width 8 -rwidth 8 -pfu_fifo -no_enable -pe -1 -pf -1

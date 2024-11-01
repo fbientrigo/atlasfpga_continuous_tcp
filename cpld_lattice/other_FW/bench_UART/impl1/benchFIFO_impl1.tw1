@@ -1,0 +1,209 @@
+
+Loading design for application trce from file benchfifo_impl1_map.ncd.
+Design name: uart_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-9400HC
+Package:     CABGA256
+Performance: 5
+Loading device for application trce from file 'se5c9400.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 7.
+Performance Hardware Data Status:   Final          Version 2.2.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
+Wed Aug 31 17:21:32 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o benchFIFO_impl1.tw1 -gui -msgset C:/Users/victo/Desktop/Lattice_proj/bench_UART/promote.xml benchFIFO_impl1_map.ncd benchFIFO_impl1.prf 
+Design file:     benchfifo_impl1_map.ncd
+Preference file: benchfifo_impl1.prf
+Device,speed:    LCMXO3D-9400HC,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "WrClock" 14.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 64.549ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifoUart/counter_delay_tx_i0_i1  (from WrClock +)
+   Destination:    FF         Data in        fifoUart/States_tx_i0  (to WrClock +)
+
+   Delay:               6.631ns  (31.8% logic, 68.2% route), 5 logic levels.
+
+ Constraint Details:
+
+      6.631ns physical path delay fifoUart/SLICE_292 to fifoUart/SLICE_288 meets
+     71.429ns delay constraint less
+      0.249ns CE_SET requirement (totaling 71.180ns) by 64.549ns
+
+ Physical Path Details:
+
+      Data path fifoUart/SLICE_292 to fifoUart/SLICE_288:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409 *SLICE_292.CLK to */SLICE_292.Q1 fifoUart/SLICE_292 (from WrClock)
+ROUTE         5   e 1.030 */SLICE_292.Q1 to */SLICE_402.B1 fifoUart/counter_delay_tx_1
+CTOF_DEL    ---     0.452 */SLICE_402.B1 to */SLICE_402.F1 fifoUart/SLICE_402
+ROUTE         1   e 0.401 */SLICE_402.F1 to */SLICE_402.C0 fifoUart/n2609
+CTOF_DEL    ---     0.452 */SLICE_402.C0 to */SLICE_402.F0 fifoUart/SLICE_402
+ROUTE         7   e 1.030 */SLICE_402.F0 to */SLICE_290.B1 fifoUart/n2536
+CTOF_DEL    ---     0.452 */SLICE_290.B1 to */SLICE_290.F1 fifoUart/SLICE_290
+ROUTE         3   e 1.030 */SLICE_290.F1 to */SLICE_383.M0 fifoUart/n2985
+MTOOFX_DEL  ---     0.345 */SLICE_383.M0 to *LICE_383.OFX0 fifoUart/i2534/SLICE_383
+ROUTE         1   e 1.030 *LICE_383.OFX0 to */SLICE_288.CE fifoUart/WrClock_enable_4 (to WrClock)
+                  --------
+                    6.631   (31.8% logic, 68.2% route), 5 logic levels.
+
+Report:  145.349MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "WrClock" 14.000000 MHz ; |   14.000 MHz|  145.349 MHz|   5  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: WrClock   Source: OSCInst0.OSC   Loads: 240
+   Covered under: FREQUENCY NET "WrClock" 14.000000 MHz ;
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 4162 paths, 1 nets, and 4373 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
+Wed Aug 31 17:21:32 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o benchFIFO_impl1.tw1 -gui -msgset C:/Users/victo/Desktop/Lattice_proj/bench_UART/promote.xml benchFIFO_impl1_map.ncd benchFIFO_impl1.prf 
+Design file:     benchfifo_impl1_map.ncd
+Preference file: benchfifo_impl1.prf
+Device,speed:    LCMXO3D-9400HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "WrClock" 14.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              fifo/FF_22  (from WrClock +)
+   Destination:    FF         Data in        fifo/FF_2  (to WrClock +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay fifo/SLICE_414 to fifo/SLICE_414 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path fifo/SLICE_414 to fifo/SLICE_414:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_414.CLK to */SLICE_414.Q1 fifo/SLICE_414 (from WrClock)
+ROUTE         1   e 0.199 */SLICE_414.Q1 to */SLICE_414.M0 fifo/r_gcount_w9 (to WrClock)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "WrClock" 14.000000 MHz ; |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: WrClock   Source: OSCInst0.OSC   Loads: 240
+   Covered under: FREQUENCY NET "WrClock" 14.000000 MHz ;
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 4162 paths, 1 nets, and 4373 connections (100.00% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

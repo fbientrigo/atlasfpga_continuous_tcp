@@ -1,0 +1,2550 @@
+----------------------------------------------------------------------
+Report for cell uart_top.TECH
+Register bits:  3890 of 10552 (36.865%)
+I/O cells:      1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              AGEB2        10          100.0
+                               AND2         2          100.0
+                              CCU2D       599          100.0
+                                CU2        10          100.0
+                           DPR16X4C        32          100.0
+                             FADD2B         6          100.0
+                            FD1P3AX      2215          100.0
+                            FD1P3AY        17          100.0
+                            FD1P3BX         3          100.0
+                            FD1P3DX        75          100.0
+                            FD1P3IX       823          100.0
+                            FD1S3AX       544          100.0
+                            FD1S3AY        16          100.0
+                            FD1S3BX         4          100.0
+                            FD1S3DX        37          100.0
+                            FD1S3IX       132          100.0
+                            FD1S3JX        24          100.0
+                                GSR         1          100.0
+                                 IB         1          100.0
+                                INV         6          100.0
+                            L6MUX21        44          100.0
+                               LUT4      3940          100.0
+                              OLVDS         1          100.0
+                                OR2         1          100.0
+                               OSCJ         1          100.0
+                              PFUMX       172          100.0
+                           ROM16X1A        54          100.0
+                               XOR2        16          100.0
+SUB MODULES
+                            B13_duo         1
+                        B13_duo_TMR         1
+                   B13_duo_TMR_U140         1
+                   B13_duo_TMR_U141         1
+                   B13_duo_TMR_U142         1
+                   B13_duo_TMR_U143         1
+                   B13_duo_TMR_U144         1
+                   B13_duo_TMR_U145         1
+                   B13_duo_TMR_U146         1
+                       B13_duo_U103         1
+                       B13_duo_U104         1
+                       B13_duo_U106         1
+                       B13_duo_U107         1
+                       B13_duo_U108         1
+                       B13_duo_U110         1
+                       B13_duo_U111         1
+                       B13_duo_U112         1
+                       B13_duo_U114         1
+                       B13_duo_U115         1
+                       B13_duo_U116         1
+                       B13_duo_U118         1
+                       B13_duo_U119         1
+                       B13_duo_U120         1
+                       B13_duo_U122         1
+                       B13_duo_U123         1
+                       B13_duo_U124         1
+                       B13_duo_U126         1
+                       B13_duo_U127         1
+                       B13_duo_U128         1
+                       B13_duo_U130         1
+                       B13_duo_U131         1
+                       B13_duo_U132         1
+     Bench_top(8,8,"01100001")(0,7)         1
+           UART_TX(115200,14000000)         1
+                                b13         1
+                            b13_U10         1
+                           b13_U101         1
+                           b13_U102         1
+                            b13_U11         1
+                            b13_U13         1
+                            b13_U14         1
+                            b13_U16         1
+                            b13_U17         1
+                            b13_U19         1
+                            b13_U20         1
+                            b13_U22         1
+                            b13_U23         1
+                            b13_U25         1
+                            b13_U26         1
+                            b13_U28         1
+                            b13_U29         1
+                            b13_U31         1
+                            b13_U32         1
+                            b13_U34         1
+                            b13_U35         1
+                            b13_U37         1
+                            b13_U38         1
+                            b13_U40         1
+                            b13_U41         1
+                            b13_U43         1
+                            b13_U44         1
+                            b13_U46         1
+                            b13_U47         1
+                            b13_U49         1
+                            b13_U50         1
+                            b13_U52         1
+                            b13_U53         1
+                            b13_U55         1
+                            b13_U56         1
+                            b13_U58         1
+                            b13_U59         1
+                            b13_U61         1
+                            b13_U62         1
+                            b13_U64         1
+                            b13_U65         1
+                            b13_U67         1
+                            b13_U68         1
+                            b13_U70         1
+                            b13_U71         1
+                            b13_U73         1
+                            b13_U74         1
+                            b13_U76         1
+                            b13_U77         1
+                             b13_U8         1
+                            b13_U80         1
+                            b13_U81         1
+                            b13_U83         1
+                            b13_U84         1
+                            b13_U86         1
+                            b13_U87         1
+                            b13_U89         1
+                            b13_U90         1
+                            b13_U92         1
+                            b13_U93         1
+                            b13_U95         1
+                            b13_U96         1
+                            b13_U98         1
+                            b13_U99         1
+                            b13fifo         1
+                     comparator(10)         1
+                  comparator(10)_U0         1
+                  comparator(10)_U1         1
+                 comparator(10)_U12         1
+                 comparator(10)_U15         1
+                 comparator(10)_U18         1
+                  comparator(10)_U2         1
+                 comparator(10)_U21         1
+                 comparator(10)_U24         1
+                 comparator(10)_U27         1
+                  comparator(10)_U3         1
+                 comparator(10)_U30         1
+                 comparator(10)_U33         1
+                 comparator(10)_U36         1
+                 comparator(10)_U39         1
+                  comparator(10)_U4         1
+                 comparator(10)_U42         1
+                 comparator(10)_U45         1
+                 comparator(10)_U48         1
+                  comparator(10)_U5         1
+                 comparator(10)_U51         1
+                 comparator(10)_U54         1
+                 comparator(10)_U57         1
+                  comparator(10)_U6         1
+                 comparator(10)_U60         1
+                 comparator(10)_U63         1
+                 comparator(10)_U66         1
+                 comparator(10)_U69         1
+                  comparator(10)_U7         1
+                 comparator(10)_U72         1
+                 comparator(10)_U75         1
+                  comparator(10)_U9         1
+                  comparatorTMR(10)         1
+             comparatorTMR(10)_U100         1
+              comparatorTMR(10)_U82         1
+              comparatorTMR(10)_U85         1
+              comparatorTMR(10)_U88         1
+              comparatorTMR(10)_U91         1
+              comparatorTMR(10)_U94         1
+              comparatorTMR(10)_U97         1
+         fifo2Uart(115200,14000000)         1
+                   lfsr("01100001")         1
+               lfsr("01100001")_U78         1
+               lfsr("01100001")_U79         1
+           lfsrTMR("01100001")(0,7)         1
+                       rst_logic(8)         1
+                        single_unit         1
+                   single_unit_U133         1
+                   single_unit_U134         1
+                   single_unit_U135         1
+                   single_unit_U136         1
+                   single_unit_U137         1
+                   single_unit_U138         1
+                   single_unit_U139         1
+                           voter(1)         1
+                      voter(1)_U105         1
+                      voter(1)_U109         1
+                      voter(1)_U113         1
+                      voter(1)_U117         1
+                      voter(1)_U121         1
+                      voter(1)_U125         1
+                      voter(1)_U129         1
+                           voter(8)         1
+                              TOTAL      8948
+----------------------------------------------------------------------
+Report for cell rst_logic(8).v1
+Instance Path : Reset_Logic
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         2            0.1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell fifo2Uart(115200,14000000).v1
+Instance Path : fifoUart
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                            FD1P3AX        13            0.6
+                            FD1P3DX         3            4.0
+                            FD1P3IX        15            1.8
+                            FD1S3IX         3            2.3
+                            L6MUX21         1            2.3
+                               LUT4        50            1.3
+                              PFUMX         6            3.5
+SUB MODULES
+           UART_TX(115200,14000000)         1
+                              TOTAL        96
+----------------------------------------------------------------------
+Report for cell UART_TX(115200,14000000).v1
+Instance Path : fifoUart.uart_tx_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                            FD1P3AX         5            0.2
+                            FD1P3IX        15            1.8
+                            FD1S3IX         3            2.3
+                            L6MUX21         1            2.3
+                               LUT4        21            0.5
+                              PFUMX         2            1.2
+                              TOTAL        51
+----------------------------------------------------------------------
+Report for cell Bench_top(8,8,"01100001")(0,7).v1
+Instance Path : bench_b13
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       585           97.7
+                            FD1P3AX      2161           97.6
+                            FD1P3AY        16           94.1
+                            FD1P3IX       798           97.0
+                            FD1S3AX       544          100.0
+                            FD1S3AY        16          100.0
+                            FD1S3IX       129           97.7
+                            FD1S3JX        24          100.0
+                            L6MUX21        19           43.2
+                               LUT4      3702           94.0
+                              PFUMX       121           70.3
+SUB MODULES
+                            B13_duo         1
+                        B13_duo_TMR         1
+                   B13_duo_TMR_U140         1
+                   B13_duo_TMR_U141         1
+                   B13_duo_TMR_U142         1
+                   B13_duo_TMR_U143         1
+                   B13_duo_TMR_U144         1
+                   B13_duo_TMR_U145         1
+                   B13_duo_TMR_U146         1
+                       B13_duo_U103         1
+                       B13_duo_U104         1
+                       B13_duo_U106         1
+                       B13_duo_U107         1
+                       B13_duo_U108         1
+                       B13_duo_U110         1
+                       B13_duo_U111         1
+                       B13_duo_U112         1
+                       B13_duo_U114         1
+                       B13_duo_U115         1
+                       B13_duo_U116         1
+                       B13_duo_U118         1
+                       B13_duo_U119         1
+                       B13_duo_U120         1
+                       B13_duo_U122         1
+                       B13_duo_U123         1
+                       B13_duo_U124         1
+                       B13_duo_U126         1
+                       B13_duo_U127         1
+                       B13_duo_U128         1
+                       B13_duo_U130         1
+                       B13_duo_U131         1
+                       B13_duo_U132         1
+                                b13         1
+                            b13_U10         1
+                           b13_U101         1
+                           b13_U102         1
+                            b13_U11         1
+                            b13_U13         1
+                            b13_U14         1
+                            b13_U16         1
+                            b13_U17         1
+                            b13_U19         1
+                            b13_U20         1
+                            b13_U22         1
+                            b13_U23         1
+                            b13_U25         1
+                            b13_U26         1
+                            b13_U28         1
+                            b13_U29         1
+                            b13_U31         1
+                            b13_U32         1
+                            b13_U34         1
+                            b13_U35         1
+                            b13_U37         1
+                            b13_U38         1
+                            b13_U40         1
+                            b13_U41         1
+                            b13_U43         1
+                            b13_U44         1
+                            b13_U46         1
+                            b13_U47         1
+                            b13_U49         1
+                            b13_U50         1
+                            b13_U52         1
+                            b13_U53         1
+                            b13_U55         1
+                            b13_U56         1
+                            b13_U58         1
+                            b13_U59         1
+                            b13_U61         1
+                            b13_U62         1
+                            b13_U64         1
+                            b13_U65         1
+                            b13_U67         1
+                            b13_U68         1
+                            b13_U70         1
+                            b13_U71         1
+                            b13_U73         1
+                            b13_U74         1
+                            b13_U76         1
+                            b13_U77         1
+                             b13_U8         1
+                            b13_U80         1
+                            b13_U81         1
+                            b13_U83         1
+                            b13_U84         1
+                            b13_U86         1
+                            b13_U87         1
+                            b13_U89         1
+                            b13_U90         1
+                            b13_U92         1
+                            b13_U93         1
+                            b13_U95         1
+                            b13_U96         1
+                            b13_U98         1
+                            b13_U99         1
+                     comparator(10)         1
+                  comparator(10)_U0         1
+                  comparator(10)_U1         1
+                 comparator(10)_U12         1
+                 comparator(10)_U15         1
+                 comparator(10)_U18         1
+                  comparator(10)_U2         1
+                 comparator(10)_U21         1
+                 comparator(10)_U24         1
+                 comparator(10)_U27         1
+                  comparator(10)_U3         1
+                 comparator(10)_U30         1
+                 comparator(10)_U33         1
+                 comparator(10)_U36         1
+                 comparator(10)_U39         1
+                  comparator(10)_U4         1
+                 comparator(10)_U42         1
+                 comparator(10)_U45         1
+                 comparator(10)_U48         1
+                  comparator(10)_U5         1
+                 comparator(10)_U51         1
+                 comparator(10)_U54         1
+                 comparator(10)_U57         1
+                  comparator(10)_U6         1
+                 comparator(10)_U60         1
+                 comparator(10)_U63         1
+                 comparator(10)_U66         1
+                 comparator(10)_U69         1
+                  comparator(10)_U7         1
+                 comparator(10)_U72         1
+                 comparator(10)_U75         1
+                  comparator(10)_U9         1
+                  comparatorTMR(10)         1
+             comparatorTMR(10)_U100         1
+              comparatorTMR(10)_U82         1
+              comparatorTMR(10)_U85         1
+              comparatorTMR(10)_U88         1
+              comparatorTMR(10)_U91         1
+              comparatorTMR(10)_U94         1
+              comparatorTMR(10)_U97         1
+                   lfsr("01100001")         1
+               lfsr("01100001")_U78         1
+               lfsr("01100001")_U79         1
+           lfsrTMR("01100001")(0,7)         1
+                        single_unit         1
+                   single_unit_U133         1
+                   single_unit_U134         1
+                   single_unit_U135         1
+                   single_unit_U136         1
+                   single_unit_U137         1
+                   single_unit_U138         1
+                   single_unit_U139         1
+                           voter(1)         1
+                      voter(1)_U105         1
+                      voter(1)_U109         1
+                      voter(1)_U113         1
+                      voter(1)_U117         1
+                      voter(1)_U121         1
+                      voter(1)_U125         1
+                      voter(1)_U129         1
+                           voter(8)         1
+                              TOTAL      8272
+----------------------------------------------------------------------
+Report for cell lfsrTMR("01100001")(0,7).v1
+Instance Path : bench_b13.LFSR1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            1.5
+                            FD1P3IX        24            2.9
+                               LUT4        30            0.8
+SUB MODULES
+                   lfsr("01100001")         1
+               lfsr("01100001")_U78         1
+               lfsr("01100001")_U79         1
+                           voter(8)         1
+                              TOTAL        67
+----------------------------------------------------------------------
+Report for cell voter(8).v1
+Instance Path : bench_b13.LFSR1.V1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            1.5
+                               LUT4        12            0.3
+                              TOTAL        21
+----------------------------------------------------------------------
+Report for cell lfsr("01100001").v1
+Instance Path : bench_b13.LFSR1.LC
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3IX         8            1.0
+                               LUT4         6            0.2
+                              TOTAL        14
+----------------------------------------------------------------------
+Report for cell lfsr("01100001")_U78.v1
+Instance Path : bench_b13.LFSR1.LB
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3IX         8            1.0
+                               LUT4         6            0.2
+                              TOTAL        14
+----------------------------------------------------------------------
+Report for cell lfsr("01100001")_U79.v1
+Instance Path : bench_b13.LFSR1.LA
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3IX         8            1.0
+                               LUT4         6            0.2
+                              TOTAL        14
+----------------------------------------------------------------------
+Report for cell single_unit.v1
+Instance Path : bench_b13.GEN_SUNIT[7].SUX
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        24            4.0
+                            FD1P3AX        66            3.0
+                            FD1P3AY         2           11.8
+                            FD1P3IX        24            2.9
+                            FD1S3AX        38            7.0
+                            FD1S3AY         2           12.5
+                            FD1S3IX         4            3.0
+                            FD1S3JX         3           12.5
+                               LUT4       110            2.8
+                              PFUMX         4            2.3
+SUB MODULES
+                            b13_U80         1
+                            b13_U81         1
+                     comparator(10)         1
+                  comparatorTMR(10)         1
+                              TOTAL       281
+----------------------------------------------------------------------
+Report for cell comparatorTMR(10).v1
+Instance Path : bench_b13.GEN_SUNIT[7].SUX.COMP_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                               LUT4         2            0.1
+SUB MODULES
+                     comparator(10)         1
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell comparator(10).v1
+Instance Path : bench_b13.GEN_SUNIT[7].SUX.COMP_1.CA
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                               LUT4         2            0.1
+                              TOTAL         6
+----------------------------------------------------------------------
+Report for cell b13_U80.v1
+Instance Path : bench_b13.GEN_SUNIT[7].SUX.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U81.v1
+Instance Path : bench_b13.GEN_SUNIT[7].SUX.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell single_unit_U133.v1
+Instance Path : bench_b13.GEN_SUNIT[6].SUX
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        24            4.0
+                            FD1P3AX        66            3.0
+                            FD1P3AY         2           11.8
+                            FD1P3IX        24            2.9
+                            FD1S3AX        38            7.0
+                            FD1S3AY         2           12.5
+                            FD1S3IX         4            3.0
+                            FD1S3JX         3           12.5
+                               LUT4       108            2.7
+                              PFUMX         4            2.3
+SUB MODULES
+                            b13_U83         1
+                            b13_U84         1
+                  comparator(10)_U0         1
+              comparatorTMR(10)_U82         1
+                              TOTAL       279
+----------------------------------------------------------------------
+Report for cell comparatorTMR(10)_U82.v1
+Instance Path : bench_b13.GEN_SUNIT[6].SUX.COMP_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+SUB MODULES
+                  comparator(10)_U0         1
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell comparator(10)_U0.v1
+Instance Path : bench_b13.GEN_SUNIT[6].SUX.COMP_1.CA
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U83.v1
+Instance Path : bench_b13.GEN_SUNIT[6].SUX.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U84.v1
+Instance Path : bench_b13.GEN_SUNIT[6].SUX.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell single_unit_U134.v1
+Instance Path : bench_b13.GEN_SUNIT[5].SUX
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        24            4.0
+                            FD1P3AX        66            3.0
+                            FD1P3AY         2           11.8
+                            FD1P3IX        24            2.9
+                            FD1S3AX        38            7.0
+                            FD1S3AY         2           12.5
+                            FD1S3IX         4            3.0
+                            FD1S3JX         3           12.5
+                               LUT4       108            2.7
+                              PFUMX         4            2.3
+SUB MODULES
+                            b13_U86         1
+                            b13_U87         1
+                  comparator(10)_U1         1
+              comparatorTMR(10)_U85         1
+                              TOTAL       279
+----------------------------------------------------------------------
+Report for cell comparatorTMR(10)_U85.v1
+Instance Path : bench_b13.GEN_SUNIT[5].SUX.COMP_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+SUB MODULES
+                  comparator(10)_U1         1
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell comparator(10)_U1.v1
+Instance Path : bench_b13.GEN_SUNIT[5].SUX.COMP_1.CA
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U86.v1
+Instance Path : bench_b13.GEN_SUNIT[5].SUX.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U87.v1
+Instance Path : bench_b13.GEN_SUNIT[5].SUX.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell single_unit_U135.v1
+Instance Path : bench_b13.GEN_SUNIT[4].SUX
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        24            4.0
+                            FD1P3AX        66            3.0
+                            FD1P3AY         2           11.8
+                            FD1P3IX        24            2.9
+                            FD1S3AX        38            7.0
+                            FD1S3AY         2           12.5
+                            FD1S3IX         4            3.0
+                            FD1S3JX         3           12.5
+                               LUT4       108            2.7
+                              PFUMX         4            2.3
+SUB MODULES
+                            b13_U89         1
+                            b13_U90         1
+                  comparator(10)_U2         1
+              comparatorTMR(10)_U88         1
+                              TOTAL       279
+----------------------------------------------------------------------
+Report for cell comparatorTMR(10)_U88.v1
+Instance Path : bench_b13.GEN_SUNIT[4].SUX.COMP_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+SUB MODULES
+                  comparator(10)_U2         1
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell comparator(10)_U2.v1
+Instance Path : bench_b13.GEN_SUNIT[4].SUX.COMP_1.CA
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U89.v1
+Instance Path : bench_b13.GEN_SUNIT[4].SUX.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U90.v1
+Instance Path : bench_b13.GEN_SUNIT[4].SUX.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell single_unit_U136.v1
+Instance Path : bench_b13.GEN_SUNIT[3].SUX
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        24            4.0
+                            FD1P3AX        66            3.0
+                            FD1P3AY         2           11.8
+                            FD1P3IX        24            2.9
+                            FD1S3AX        38            7.0
+                            FD1S3AY         2           12.5
+                            FD1S3IX         4            3.0
+                            FD1S3JX         3           12.5
+                               LUT4       110            2.8
+                              PFUMX         4            2.3
+SUB MODULES
+                            b13_U92         1
+                            b13_U93         1
+                  comparator(10)_U3         1
+              comparatorTMR(10)_U91         1
+                              TOTAL       281
+----------------------------------------------------------------------
+Report for cell comparatorTMR(10)_U91.v1
+Instance Path : bench_b13.GEN_SUNIT[3].SUX.COMP_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                               LUT4         2            0.1
+SUB MODULES
+                  comparator(10)_U3         1
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell comparator(10)_U3.v1
+Instance Path : bench_b13.GEN_SUNIT[3].SUX.COMP_1.CA
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                               LUT4         2            0.1
+                              TOTAL         6
+----------------------------------------------------------------------
+Report for cell b13_U92.v1
+Instance Path : bench_b13.GEN_SUNIT[3].SUX.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U93.v1
+Instance Path : bench_b13.GEN_SUNIT[3].SUX.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell single_unit_U137.v1
+Instance Path : bench_b13.GEN_SUNIT[2].SUX
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        24            4.0
+                            FD1P3AX        66            3.0
+                            FD1P3AY         2           11.8
+                            FD1P3IX        24            2.9
+                            FD1S3AX        38            7.0
+                            FD1S3AY         2           12.5
+                            FD1S3IX         4            3.0
+                            FD1S3JX         3           12.5
+                               LUT4       108            2.7
+                              PFUMX         4            2.3
+SUB MODULES
+                            b13_U95         1
+                            b13_U96         1
+                  comparator(10)_U4         1
+              comparatorTMR(10)_U94         1
+                              TOTAL       279
+----------------------------------------------------------------------
+Report for cell comparatorTMR(10)_U94.v1
+Instance Path : bench_b13.GEN_SUNIT[2].SUX.COMP_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+SUB MODULES
+                  comparator(10)_U4         1
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell comparator(10)_U4.v1
+Instance Path : bench_b13.GEN_SUNIT[2].SUX.COMP_1.CA
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U95.v1
+Instance Path : bench_b13.GEN_SUNIT[2].SUX.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U96.v1
+Instance Path : bench_b13.GEN_SUNIT[2].SUX.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell single_unit_U138.v1
+Instance Path : bench_b13.GEN_SUNIT[1].SUX
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        24            4.0
+                            FD1P3AX        66            3.0
+                            FD1P3AY         2           11.8
+                            FD1P3IX        24            2.9
+                            FD1S3AX        38            7.0
+                            FD1S3AY         2           12.5
+                            FD1S3IX         4            3.0
+                            FD1S3JX         3           12.5
+                               LUT4       108            2.7
+                              PFUMX         4            2.3
+SUB MODULES
+                            b13_U98         1
+                            b13_U99         1
+                  comparator(10)_U5         1
+              comparatorTMR(10)_U97         1
+                              TOTAL       279
+----------------------------------------------------------------------
+Report for cell comparatorTMR(10)_U97.v1
+Instance Path : bench_b13.GEN_SUNIT[1].SUX.COMP_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+SUB MODULES
+                  comparator(10)_U5         1
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell comparator(10)_U5.v1
+Instance Path : bench_b13.GEN_SUNIT[1].SUX.COMP_1.CA
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U98.v1
+Instance Path : bench_b13.GEN_SUNIT[1].SUX.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U99.v1
+Instance Path : bench_b13.GEN_SUNIT[1].SUX.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell single_unit_U139.v1
+Instance Path : bench_b13.GEN_SUNIT[0].SUX
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        24            4.0
+                            FD1P3AX        66            3.0
+                            FD1P3AY         2           11.8
+                            FD1P3IX        24            2.9
+                            FD1S3AX        38            7.0
+                            FD1S3AY         2           12.5
+                            FD1S3IX         4            3.0
+                            FD1S3JX         3           12.5
+                               LUT4       108            2.7
+                              PFUMX         4            2.3
+SUB MODULES
+                           b13_U101         1
+                           b13_U102         1
+                  comparator(10)_U6         1
+             comparatorTMR(10)_U100         1
+                              TOTAL       279
+----------------------------------------------------------------------
+Report for cell comparatorTMR(10)_U100.v1
+Instance Path : bench_b13.GEN_SUNIT[0].SUX.COMP_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+SUB MODULES
+                  comparator(10)_U6         1
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell comparator(10)_U6.v1
+Instance Path : bench_b13.GEN_SUNIT[0].SUX.COMP_1.CA
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U101.v1
+Instance Path : bench_b13.GEN_SUNIT[0].SUX.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U102.v1
+Instance Path : bench_b13.GEN_SUNIT[0].SUX.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        33            1.5
+                            FD1P3AY         1            5.9
+                            FD1P3IX        12            1.5
+                            FD1S3AX         9            1.7
+                            FD1S3AY         1            6.3
+                            FD1S3IX         2            1.5
+                            FD1S3JX         1            4.2
+                               LUT4        53            1.3
+                              PFUMX         2            1.2
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell B13_duo_TMR.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        48            8.0
+                            FD1P3AX       204            9.2
+                            FD1P3IX        72            8.7
+                            FD1S3AX        30            5.5
+                            FD1S3IX        12            9.1
+                            L6MUX21         2            4.5
+                               LUT4       355            9.0
+                              PFUMX        15            8.7
+SUB MODULES
+                            B13_duo         1
+                       B13_duo_U103         1
+                       B13_duo_U104         1
+                                b13         1
+                            b13_U10         1
+                            b13_U11         1
+                            b13_U13         1
+                            b13_U14         1
+                             b13_U8         1
+                 comparator(10)_U12         1
+                  comparator(10)_U7         1
+                  comparator(10)_U9         1
+                           voter(1)         1
+                              TOTAL       751
+----------------------------------------------------------------------
+Report for cell voter(1).v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.V1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         1            0.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell B13_duo.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[2].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         1            2.3
+                               LUT4       125            3.2
+                              PFUMX         8            4.7
+SUB MODULES
+                                b13         1
+                             b13_U8         1
+                  comparator(10)_U7         1
+                              TOTAL       259
+----------------------------------------------------------------------
+Report for cell comparator(10)_U7.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[2].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                               LUT4        11            0.3
+                              PFUMX         5            2.9
+                              TOTAL        20
+----------------------------------------------------------------------
+Report for cell b13.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[2].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        59            1.5
+                              PFUMX         1            0.6
+                              TOTAL       119
+----------------------------------------------------------------------
+Report for cell b13_U8.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[2].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell B13_duo_U103.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[1].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                               LUT4       116            2.9
+                              PFUMX         4            2.3
+SUB MODULES
+                            b13_U10         1
+                            b13_U11         1
+                  comparator(10)_U9         1
+                              TOTAL       245
+----------------------------------------------------------------------
+Report for cell comparator(10)_U9.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[1].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U10.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[1].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         3            1.7
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U11.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[1].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell B13_duo_U104.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[0].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         1            2.3
+                               LUT4       113            2.9
+                              PFUMX         3            1.7
+SUB MODULES
+                            b13_U13         1
+                            b13_U14         1
+                 comparator(10)_U12         1
+                              TOTAL       242
+----------------------------------------------------------------------
+Report for cell comparator(10)_U12.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[0].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U13.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[0].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell b13_U14.v1
+Instance Path : bench_b13.GEN_B13_TMR[7].b13_gen.TMR_b13[0].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell B13_duo_TMR_U140.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        48            8.0
+                            FD1P3AX       204            9.2
+                            FD1P3IX        72            8.7
+                            FD1S3AX        30            5.5
+                            FD1S3IX        12            9.1
+                            L6MUX21         3            6.8
+                               LUT4       345            8.8
+                              PFUMX        10            5.8
+SUB MODULES
+                       B13_duo_U106         1
+                       B13_duo_U107         1
+                       B13_duo_U108         1
+                            b13_U16         1
+                            b13_U17         1
+                            b13_U19         1
+                            b13_U20         1
+                            b13_U22         1
+                            b13_U23         1
+                 comparator(10)_U15         1
+                 comparator(10)_U18         1
+                 comparator(10)_U21         1
+                      voter(1)_U105         1
+                              TOTAL       737
+----------------------------------------------------------------------
+Report for cell voter(1)_U105.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.V1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         5            0.1
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell B13_duo_U106.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[2].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         1            2.3
+                               LUT4       113            2.9
+                              PFUMX         3            1.7
+SUB MODULES
+                            b13_U16         1
+                            b13_U17         1
+                 comparator(10)_U15         1
+                              TOTAL       242
+----------------------------------------------------------------------
+Report for cell comparator(10)_U15.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[2].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U16.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[2].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell b13_U17.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[2].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell B13_duo_U107.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[1].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         1            2.3
+                               LUT4       113            2.9
+                              PFUMX         3            1.7
+SUB MODULES
+                            b13_U19         1
+                            b13_U20         1
+                 comparator(10)_U18         1
+                              TOTAL       242
+----------------------------------------------------------------------
+Report for cell comparator(10)_U18.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[1].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U19.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[1].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell b13_U20.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[1].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell B13_duo_U108.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[0].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         1            2.3
+                               LUT4       114            2.9
+                              PFUMX         4            2.3
+SUB MODULES
+                            b13_U22         1
+                            b13_U23         1
+                 comparator(10)_U21         1
+                              TOTAL       244
+----------------------------------------------------------------------
+Report for cell comparator(10)_U21.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[0].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U22.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[0].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        56            1.4
+                              PFUMX         1            0.6
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell b13_U23.v1
+Instance Path : bench_b13.GEN_B13_TMR[6].b13_gen.TMR_b13[0].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         3            1.7
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell B13_duo_TMR_U141.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        48            8.0
+                            FD1P3AX       204            9.2
+                            FD1P3IX        72            8.7
+                            FD1S3AX        30            5.5
+                            FD1S3IX        12            9.1
+                            L6MUX21         4            9.1
+                               LUT4       341            8.7
+                              PFUMX        13            7.6
+SUB MODULES
+                       B13_duo_U110         1
+                       B13_duo_U111         1
+                       B13_duo_U112         1
+                            b13_U25         1
+                            b13_U26         1
+                            b13_U28         1
+                            b13_U29         1
+                            b13_U31         1
+                            b13_U32         1
+                 comparator(10)_U24         1
+                 comparator(10)_U27         1
+                 comparator(10)_U30         1
+                      voter(1)_U109         1
+                              TOTAL       737
+----------------------------------------------------------------------
+Report for cell voter(1)_U109.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.V1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         3            0.1
+                              TOTAL         3
+----------------------------------------------------------------------
+Report for cell B13_duo_U110.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[2].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         2            4.5
+                               LUT4       111            2.8
+                              PFUMX         3            1.7
+SUB MODULES
+                            b13_U25         1
+                            b13_U26         1
+                 comparator(10)_U24         1
+                              TOTAL       241
+----------------------------------------------------------------------
+Report for cell comparator(10)_U24.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[2].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U25.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[2].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        56            1.4
+                              PFUMX         1            0.6
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell b13_U26.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[2].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell B13_duo_U111.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[1].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         1            2.3
+                               LUT4       114            2.9
+                              PFUMX         5            2.9
+SUB MODULES
+                            b13_U28         1
+                            b13_U29         1
+                 comparator(10)_U27         1
+                              TOTAL       245
+----------------------------------------------------------------------
+Report for cell comparator(10)_U27.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[1].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U28.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[1].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         3            1.7
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U29.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[1].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        56            1.4
+                              PFUMX         2            1.2
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell B13_duo_U112.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[0].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         1            2.3
+                               LUT4       113            2.9
+                              PFUMX         5            2.9
+SUB MODULES
+                            b13_U31         1
+                            b13_U32         1
+                 comparator(10)_U30         1
+                              TOTAL       244
+----------------------------------------------------------------------
+Report for cell comparator(10)_U30.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[0].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U31.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[0].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         3            1.7
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U32.v1
+Instance Path : bench_b13.GEN_B13_TMR[5].b13_gen.TMR_b13[0].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell B13_duo_TMR_U142.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        48            8.0
+                            FD1P3AX       204            9.2
+                            FD1P3IX        72            8.7
+                            FD1S3AX        30            5.5
+                            FD1S3IX        12            9.1
+                            L6MUX21         3            6.8
+                               LUT4       343            8.7
+                              PFUMX         7            4.1
+SUB MODULES
+                       B13_duo_U114         1
+                       B13_duo_U115         1
+                       B13_duo_U116         1
+                            b13_U34         1
+                            b13_U35         1
+                            b13_U37         1
+                            b13_U38         1
+                            b13_U40         1
+                            b13_U41         1
+                 comparator(10)_U33         1
+                 comparator(10)_U36         1
+                 comparator(10)_U39         1
+                      voter(1)_U113         1
+                              TOTAL       732
+----------------------------------------------------------------------
+Report for cell voter(1)_U113.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.V1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         2            0.1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell B13_duo_U114.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[2].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         2            4.5
+                               LUT4       111            2.8
+                              PFUMX         3            1.7
+SUB MODULES
+                            b13_U34         1
+                            b13_U35         1
+                 comparator(10)_U33         1
+                              TOTAL       241
+----------------------------------------------------------------------
+Report for cell comparator(10)_U33.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[2].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U34.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[2].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        56            1.4
+                              PFUMX         1            0.6
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell b13_U35.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[2].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell B13_duo_U115.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[1].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         1            2.3
+                               LUT4       114            2.9
+                              PFUMX         2            1.2
+SUB MODULES
+                            b13_U37         1
+                            b13_U38         1
+                 comparator(10)_U36         1
+                              TOTAL       242
+----------------------------------------------------------------------
+Report for cell comparator(10)_U36.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[1].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U37.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[1].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        56            1.4
+                              PFUMX         1            0.6
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell b13_U38.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[1].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell B13_duo_U116.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[0].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                               LUT4       116            2.9
+                              PFUMX         2            1.2
+SUB MODULES
+                            b13_U40         1
+                            b13_U41         1
+                 comparator(10)_U39         1
+                              TOTAL       243
+----------------------------------------------------------------------
+Report for cell comparator(10)_U39.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[0].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U40.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[0].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell b13_U41.v1
+Instance Path : bench_b13.GEN_B13_TMR[4].b13_gen.TMR_b13[0].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell B13_duo_TMR_U143.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        48            8.0
+                            FD1P3AX       204            9.2
+                            FD1P3IX        72            8.7
+                            FD1S3AX        30            5.5
+                            FD1S3IX        12            9.1
+                            L6MUX21         1            2.3
+                               LUT4       356            9.0
+                              PFUMX        16            9.3
+SUB MODULES
+                       B13_duo_U118         1
+                       B13_duo_U119         1
+                       B13_duo_U120         1
+                            b13_U43         1
+                            b13_U44         1
+                            b13_U46         1
+                            b13_U47         1
+                            b13_U49         1
+                            b13_U50         1
+                 comparator(10)_U42         1
+                 comparator(10)_U45         1
+                 comparator(10)_U48         1
+                      voter(1)_U117         1
+                              TOTAL       752
+----------------------------------------------------------------------
+Report for cell voter(1)_U117.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.V1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         1            0.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell B13_duo_U118.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[2].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         1            2.3
+                               LUT4       113            2.9
+                              PFUMX         3            1.7
+SUB MODULES
+                            b13_U43         1
+                            b13_U44         1
+                 comparator(10)_U42         1
+                              TOTAL       242
+----------------------------------------------------------------------
+Report for cell comparator(10)_U42.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[2].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U43.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[2].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell b13_U44.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[2].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell B13_duo_U119.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[1].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                               LUT4       126            3.2
+                              PFUMX        11            6.4
+SUB MODULES
+                            b13_U46         1
+                            b13_U47         1
+                 comparator(10)_U45         1
+                              TOTAL       262
+----------------------------------------------------------------------
+Report for cell comparator(10)_U45.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[1].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                               LUT4        10            0.3
+                              PFUMX         5            2.9
+                              TOTAL        19
+----------------------------------------------------------------------
+Report for cell b13_U46.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[1].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         3            1.7
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell b13_U47.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[1].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         3            1.7
+                              TOTAL       120
+----------------------------------------------------------------------
+Report for cell B13_duo_U120.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[0].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                               LUT4       116            2.9
+                              PFUMX         2            1.2
+SUB MODULES
+                            b13_U49         1
+                            b13_U50         1
+                 comparator(10)_U48         1
+                              TOTAL       243
+----------------------------------------------------------------------
+Report for cell comparator(10)_U48.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[0].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U49.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[0].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell b13_U50.v1
+Instance Path : bench_b13.GEN_B13_TMR[3].b13_gen.TMR_b13[0].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell B13_duo_TMR_U144.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        48            8.0
+                            FD1P3AX       204            9.2
+                            FD1P3IX        72            8.7
+                            FD1S3AX        30            5.5
+                            FD1S3IX        12            9.1
+                               LUT4       353            9.0
+                              PFUMX         6            3.5
+SUB MODULES
+                       B13_duo_U122         1
+                       B13_duo_U123         1
+                       B13_duo_U124         1
+                            b13_U52         1
+                            b13_U53         1
+                            b13_U55         1
+                            b13_U56         1
+                            b13_U58         1
+                            b13_U59         1
+                 comparator(10)_U51         1
+                 comparator(10)_U54         1
+                 comparator(10)_U57         1
+                      voter(1)_U121         1
+                              TOTAL       738
+----------------------------------------------------------------------
+Report for cell voter(1)_U121.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.V1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         5            0.1
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell B13_duo_U122.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[2].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                               LUT4       116            2.9
+                              PFUMX         2            1.2
+SUB MODULES
+                            b13_U52         1
+                            b13_U53         1
+                 comparator(10)_U51         1
+                              TOTAL       243
+----------------------------------------------------------------------
+Report for cell comparator(10)_U51.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[2].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U52.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[2].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell b13_U53.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[2].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell B13_duo_U123.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[1].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                               LUT4       116            2.9
+                              PFUMX         2            1.2
+SUB MODULES
+                            b13_U55         1
+                            b13_U56         1
+                 comparator(10)_U54         1
+                              TOTAL       243
+----------------------------------------------------------------------
+Report for cell comparator(10)_U54.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[1].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U55.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[1].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell b13_U56.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[1].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell B13_duo_U124.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[0].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                               LUT4       116            2.9
+                              PFUMX         2            1.2
+SUB MODULES
+                            b13_U58         1
+                            b13_U59         1
+                 comparator(10)_U57         1
+                              TOTAL       243
+----------------------------------------------------------------------
+Report for cell comparator(10)_U57.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[0].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U58.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[0].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell b13_U59.v1
+Instance Path : bench_b13.GEN_B13_TMR[2].b13_gen.TMR_b13[0].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell B13_duo_TMR_U145.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        48            8.0
+                            FD1P3AX       204            9.2
+                            FD1P3IX        72            8.7
+                            FD1S3AX        30            5.5
+                            FD1S3IX        12            9.1
+                            L6MUX21         3            6.8
+                               LUT4       348            8.8
+                              PFUMX         9            5.2
+SUB MODULES
+                       B13_duo_U126         1
+                       B13_duo_U127         1
+                       B13_duo_U128         1
+                            b13_U61         1
+                            b13_U62         1
+                            b13_U64         1
+                            b13_U65         1
+                            b13_U67         1
+                            b13_U68         1
+                 comparator(10)_U60         1
+                 comparator(10)_U63         1
+                 comparator(10)_U66         1
+                      voter(1)_U125         1
+                              TOTAL       739
+----------------------------------------------------------------------
+Report for cell voter(1)_U125.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.V1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         9            0.2
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell B13_duo_U126.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[2].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                               LUT4       116            2.9
+                              PFUMX         2            1.2
+SUB MODULES
+                            b13_U61         1
+                            b13_U62         1
+                 comparator(10)_U60         1
+                              TOTAL       243
+----------------------------------------------------------------------
+Report for cell comparator(10)_U60.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[2].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U61.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[2].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell b13_U62.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[2].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell B13_duo_U127.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[1].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         1            2.3
+                               LUT4       113            2.9
+                              PFUMX         3            1.7
+SUB MODULES
+                            b13_U64         1
+                            b13_U65         1
+                 comparator(10)_U63         1
+                              TOTAL       242
+----------------------------------------------------------------------
+Report for cell comparator(10)_U63.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[1].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U64.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[1].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell b13_U65.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[1].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell B13_duo_U128.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[0].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         2            4.5
+                               LUT4       110            2.8
+                              PFUMX         4            2.3
+SUB MODULES
+                            b13_U67         1
+                            b13_U68         1
+                 comparator(10)_U66         1
+                              TOTAL       241
+----------------------------------------------------------------------
+Report for cell comparator(10)_U66.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[0].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U67.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[0].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell b13_U68.v1
+Instance Path : bench_b13.GEN_B13_TMR[1].b13_gen.TMR_b13[0].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell B13_duo_TMR_U146.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        48            8.0
+                            FD1P3AX       204            9.2
+                            FD1P3IX        72            8.7
+                            FD1S3AX        30            5.5
+                            FD1S3IX        12            9.1
+                            L6MUX21         3            6.8
+                               LUT4       346            8.8
+                              PFUMX        13            7.6
+SUB MODULES
+                       B13_duo_U130         1
+                       B13_duo_U131         1
+                       B13_duo_U132         1
+                            b13_U70         1
+                            b13_U71         1
+                            b13_U73         1
+                            b13_U74         1
+                            b13_U76         1
+                            b13_U77         1
+                 comparator(10)_U69         1
+                 comparator(10)_U72         1
+                 comparator(10)_U75         1
+                      voter(1)_U129         1
+                              TOTAL       741
+----------------------------------------------------------------------
+Report for cell voter(1)_U129.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.V1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         8            0.2
+                              TOTAL         8
+----------------------------------------------------------------------
+Report for cell B13_duo_U130.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[2].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         2            4.5
+                               LUT4       110            2.8
+                              PFUMX         4            2.3
+SUB MODULES
+                            b13_U70         1
+                            b13_U71         1
+                 comparator(10)_U69         1
+                              TOTAL       241
+----------------------------------------------------------------------
+Report for cell comparator(10)_U69.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[2].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U70.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[2].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell b13_U71.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[2].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        55            1.4
+                              PFUMX         2            1.2
+                              TOTAL       117
+----------------------------------------------------------------------
+Report for cell B13_duo_U131.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[1].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                            L6MUX21         1            2.3
+                               LUT4       112            2.8
+                              PFUMX         3            1.7
+SUB MODULES
+                            b13_U73         1
+                            b13_U74         1
+                 comparator(10)_U72         1
+                              TOTAL       241
+----------------------------------------------------------------------
+Report for cell comparator(10)_U72.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[1].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U73.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[1].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         1            0.6
+                              TOTAL       118
+----------------------------------------------------------------------
+Report for cell b13_U74.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[1].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                            L6MUX21         1            2.3
+                               LUT4        54            1.4
+                              PFUMX         2            1.2
+                              TOTAL       116
+----------------------------------------------------------------------
+Report for cell B13_duo_U132.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[0].B13_duo_mod
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16            2.7
+                            FD1P3AX        68            3.1
+                            FD1P3IX        24            2.9
+                            FD1S3AX        10            1.8
+                            FD1S3IX         4            3.0
+                               LUT4       116            2.9
+                              PFUMX         6            3.5
+SUB MODULES
+                            b13_U76         1
+                            b13_U77         1
+                 comparator(10)_U75         1
+                              TOTAL       247
+----------------------------------------------------------------------
+Report for cell comparator(10)_U75.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[0].B13_duo_mod.Comp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         4            0.7
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell b13_U76.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[0].B13_duo_mod.B13_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         2            1.2
+                              TOTAL       119
+----------------------------------------------------------------------
+Report for cell b13_U77.v1
+Instance Path : bench_b13.GEN_B13_TMR[0].b13_gen.TMR_b13[0].B13_duo_mod.B13_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            1.0
+                            FD1P3AX        34            1.5
+                            FD1P3IX        12            1.5
+                            FD1S3AX         5            0.9
+                            FD1S3IX         2            1.5
+                               LUT4        58            1.5
+                              PFUMX         4            2.3
+                              TOTAL       121
+----------------------------------------------------------------------
+Report for cell b13fifo.v1
+Instance Path : fifo
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              AGEB2        10          100.0
+                               AND2         2          100.0
+                                CU2        10          100.0
+                           DPR16X4C        32          100.0
+                             FADD2B         6          100.0
+                            FD1P3BX         2           66.7
+                            FD1P3DX        60           80.0
+                            FD1S3BX         1           25.0
+                            FD1S3DX        37          100.0
+                                INV         6          100.0
+                            L6MUX21        24           54.5
+                               LUT4       100            2.5
+                                OR2         1          100.0
+                              PFUMX        38           22.1
+                           ROM16X1A        54          100.0
+                               XOR2        16          100.0
+                              TOTAL       399

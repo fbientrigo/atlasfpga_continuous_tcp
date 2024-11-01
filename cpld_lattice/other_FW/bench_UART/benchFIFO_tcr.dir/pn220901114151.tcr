@@ -1,0 +1,10 @@
+#Start recording tcl command: 9/1/2022 11:39:14
+#Project Location: C:/Users/victo/Desktop/Lattice_proj/bench_UART; Project name: benchFIFO
+prj_project open "C:/Users/victo/Desktop/Lattice_proj/bench_UART/benchFIFO.ldf"
+pgr_project open "C:/Users/victo/Desktop/Lattice_proj/bench_UART/impl1/impl1.xcf"
+pgr_program set -cable 
+pgr_program set -port FTUSB-1
+pgr_program run
+pgr_project save "C:/Users/victo/Desktop/Lattice_proj/bench_UART/impl1/impl1.xcf"
+prj_project close
+#Stop recording: 9/1/2022 11:41:51

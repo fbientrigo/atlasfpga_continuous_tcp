@@ -1,0 +1,40 @@
+----------------------------------------------------------------------
+Report for cell XO3D_BB_blink.TECH
+Register bits:  67 of 10021 (0.669%)
+I/O cells:      14
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        52          100.0
+                            FD1P3IX         4          100.0
+                            FD1S3AX         2          100.0
+                            FD1S3IX        61          100.0
+                                GSR         1          100.0
+                                 IB         6          100.0
+                               LUT4        29          100.0
+                                 OB         8          100.0
+                               OSCJ         1          100.0
+SUB MODULES
+       heartbeat(clk_freq=12000000)         1
+          kitcar(clk_freq=12000000)         1
+                              TOTAL       166
+----------------------------------------------------------------------
+Report for cell heartbeat(clk_freq=12000000).v1
+Instance Path : heartbeat_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        24           46.2
+                            FD1S3AX         1           50.0
+                            FD1S3IX        27           44.3
+                               LUT4         1            3.4
+                              TOTAL        53
+----------------------------------------------------------------------
+Report for cell kitcar(clk_freq=12000000).v1
+Instance Path : kitcar_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        28           53.8
+                            FD1P3IX         4          100.0
+                            FD1S3AX         1           50.0
+                            FD1S3IX        34           55.7
+                               LUT4        14           48.3
+                              TOTAL        81

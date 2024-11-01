@@ -1,0 +1,5 @@
+#Start recording tcl command: 12/27/2021 16:16:22
+#Project Location: C:/Users/victo/Desktop/Lattice_proj/blink/project; Project name: Blink
+prj_project open "C:/Users/victo/Desktop/Lattice_proj/blink/project/Blink.ldf"
+prj_project close
+#Stop recording: 12/27/2021 16:16:34

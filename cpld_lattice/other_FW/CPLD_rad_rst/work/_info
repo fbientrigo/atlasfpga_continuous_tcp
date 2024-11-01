@@ -1,0 +1,795 @@
+m255
+K4
+z2
+!s11e vcom 2020.3 2020.10, Oct 14 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst
+Eb13
+Z1 w1660643148
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 47
+R0
+Z4 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/b13.vhd
+Z5 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/b13.vhd
+l0
+L4 1
+VV>Z36?`Q[Wb;4=?z0fM6f0
+!s100 ]2P1?HPV:U3EYgh]IgcgL0
+Z6 OT;C;2020.3;71
+32
+Z7 !s110 1667321909
+!i10b 1
+Z8 !s108 1667321909.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/b13.vhd|
+Z10 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/b13.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+DEx4 work 3 b13 0 22 V>Z36?`Q[Wb;4=?z0fM6f0
+!i122 47
+l76
+L24 276
+Vk`aHE2i^M=a<JjWaJIC]P0
+!s100 Tz2HlK;C]=Z[T=4^Z>ng^0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eb13fifo
+Z13 w1661870509
+Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z15 DPx8 machxo3d 10 components 0 22 ^4bRH^EzkBgkJf4nnX[2<1
+R2
+R3
+!i122 44
+R0
+Z16 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/b13fifo.vhd
+Z17 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/b13fifo.vhd
+l0
+L14 1
+VL>X=fd`^b9D?:5e2S<c>^0
+!s100 @jMImdkT=YnI;n3Ra54hz1
+R6
+32
+R7
+!i10b 1
+Z18 !s108 1667321908.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/b13fifo.vhd|
+Z20 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/b13fifo.vhd|
+!i113 1
+R11
+R12
+Astructure
+R14
+R15
+R2
+R3
+Z21 DEx4 work 7 b13fifo 0 22 L>X=fd`^b9D?:5e2S<c>^0
+!i122 44
+l662
+L28 1793
+V1ZN>hmidTae4jdZ5?i9A`0
+!s100 f@R`nzi2fUYa`J1LH93]Y3
+R6
+32
+R7
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Ebench_top
+Z22 w1667300576
+R14
+Z23 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z24 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 48
+R0
+Z25 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/Bench_top.vhd
+Z26 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/Bench_top.vhd
+l0
+L15 1
+Vz=eR3CDB9Ddn=KmSc>5QA1
+!s100 BK_JYh0m64=d;T?<CbbL:0
+R6
+32
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/Bench_top.vhd|
+Z28 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/Bench_top.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R14
+R23
+R24
+R2
+R3
+DEx4 work 9 bench_top 0 22 z=eR3CDB9Ddn=KmSc>5QA1
+!i122 48
+l85
+L34 130
+VWHBFjYX?jCi0l^lVJHcez3
+!s100 dYDKBSiC]=[Sj;lcA_3kl3
+R6
+32
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Ecomparator
+Z29 w1649173010
+R2
+R3
+!i122 49
+R0
+Z30 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/comparator.vhd
+Z31 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/comparator.vhd
+l0
+L4 1
+VEKig1gTH=i^?oW0j_3nPY0
+!s100 7^7nc@AdZORgU^8N2V]N[3
+R6
+32
+R7
+!i10b 1
+R8
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/comparator.vhd|
+Z33 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/comparator.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 10 comparator 0 22 EKig1gTH=i^?oW0j_3nPY0
+!i122 49
+l17
+L15 16
+V_2z_8JFoODGMm4mz7efP91
+!s100 M2a@Ce<iiSn0nbZYzmTW70
+R6
+32
+R7
+!i10b 1
+R8
+R32
+R33
+!i113 1
+R11
+R12
+Ecomparatortmr
+Z34 w1649174656
+R2
+R3
+!i122 50
+R0
+Z35 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/comparatorTMR.vhd
+Z36 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/comparatorTMR.vhd
+l0
+L4 1
+V^a4m9R;YB2>R:We8MkLf@3
+!s100 AiVU]CM>e5d?nYRD0]g2?0
+R6
+32
+R7
+!i10b 1
+R8
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/comparatorTMR.vhd|
+Z38 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/comparatorTMR.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 13 comparatortmr 0 22 ^a4m9R;YB2>R:We8MkLf@3
+!i122 50
+l69
+L16 125
+VGS4YNBeH?CWRl@>:`E^@U3
+!s100 hUfSXfob8XjHbdT<ZfHWc3
+R6
+32
+R7
+!i10b 1
+R8
+R37
+R38
+!i113 1
+R11
+R12
+Efanout
+Z39 w1649172696
+R2
+R3
+!i122 51
+R0
+Z40 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/fanout.vhd
+Z41 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/fanout.vhd
+l0
+L4 1
+VB`41RV`BCdgT6bCZg<o;b0
+!s100 SGTUARnPiQTPb[70F<IJk3
+R6
+32
+R7
+!i10b 1
+R8
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/fanout.vhd|
+Z43 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/fanout.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 6 fanout 0 22 B`41RV`BCdgT6bCZg<o;b0
+!i122 51
+l18
+L16 9
+V`[eFIba1VBhegRgA6Z3nA1
+!s100 A_02COlJj?RR3`jdYc[R:2
+R6
+32
+R7
+!i10b 1
+R8
+R42
+R43
+!i113 1
+R11
+R12
+Efifo2uart
+Z44 w1661250566
+R2
+R3
+!i122 52
+R0
+Z45 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/FIFO2UART.vhd
+Z46 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/FIFO2UART.vhd
+l0
+L34 1
+Vc:OF=Z7gdP[fNn]AWmFQ71
+!s100 ^?2aTdUKV2QRL72ChIBcZ2
+R6
+32
+R7
+!i10b 1
+R8
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/FIFO2UART.vhd|
+Z48 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/FIFO2UART.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 9 fifo2uart 0 22 c:OF=Z7gdP[fNn]AWmFQ71
+!i122 52
+l101
+L60 144
+VI7[i[]OhhM<0]0c]zg4U;1
+!s100 W6N=[o]ohNaRW=]?]UeDG0
+R6
+32
+R7
+!i10b 1
+R8
+R47
+R48
+!i113 1
+R11
+R12
+Elfsr
+Z49 w1667300321
+R24
+R2
+R3
+!i122 53
+R0
+Z50 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/lfsr.vhd
+Z51 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/lfsr.vhd
+l0
+L6 1
+V66jOa8F^jmNVeA^USMj;F1
+!s100 UCM4E8jOZkgdE=bbWDAo`2
+R6
+32
+R7
+!i10b 1
+R8
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/lfsr.vhd|
+Z53 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/lfsr.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R24
+R2
+R3
+DEx4 work 4 lfsr 0 22 66jOa8F^jmNVeA^USMj;F1
+!i122 53
+l24
+L22 34
+V1C]gj_NmG>7lfTCoi^7:N2
+!s100 80<I5Z=U>Rl=[On7V59[@3
+R6
+32
+R7
+!i10b 1
+R8
+R52
+R53
+!i113 1
+R11
+R12
+Elfsr_tb
+Z54 w1667300374
+R24
+Z55 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+R14
+R23
+R2
+R3
+!i122 11
+R0
+Z56 8C:\Users\victo\Desktop\Lattice_proj\CPLD_rad_rst\src\lfsr_tb.vhd
+Z57 FC:\Users\victo\Desktop\Lattice_proj\CPLD_rad_rst\src\lfsr_tb.vhd
+l0
+L8 1
+V9MG1<n3Ez_Lf84TZYDPNX1
+!s100 ]<Rn2mL0Adn_c>eGCfP9W3
+R6
+32
+Z58 !s110 1667300378
+!i10b 1
+Z59 !s108 1667300378.000000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\victo\Desktop\Lattice_proj\CPLD_rad_rst\src\lfsr_tb.vhd|
+Z61 !s107 C:\Users\victo\Desktop\Lattice_proj\CPLD_rad_rst\src\lfsr_tb.vhd|
+!i113 1
+R11
+R12
+Atb
+R24
+R55
+R14
+R23
+R2
+R3
+DEx4 work 7 lfsr_tb 0 22 9MG1<n3Ez_Lf84TZYDPNX1
+!i122 11
+l36
+L11 68
+V@Tn;HD9cP^5h`M5?T[74Y1
+!s100 `D9bA8:KzQJ5iN_BDb[if0
+R6
+32
+R58
+!i10b 1
+R59
+R60
+R61
+!i113 1
+R11
+R12
+Elfsrtmr
+Z62 w1667300511
+R2
+R3
+!i122 54
+R0
+Z63 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/lfsrTMR.vhd
+Z64 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/lfsrTMR.vhd
+l0
+L4 1
+V4eg3>28i1IPkSCKomN=c_1
+!s100 6M]?>KOCdk[fTUeITeW>_0
+R6
+32
+R7
+!i10b 1
+R8
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/lfsrTMR.vhd|
+Z66 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/lfsrTMR.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 7 lfsrtmr 0 22 4eg3>28i1IPkSCKomN=c_1
+!i122 54
+l76
+L21 158
+V6_4_Ii?oPeD9elRTkk>iQ1
+!s100 d`fJQhknT<X<WQ[[>_4;Q1
+R6
+32
+R7
+!i10b 1
+R8
+R65
+R66
+!i113 1
+R11
+R12
+Erst_logic
+Z67 w1667303027
+R2
+R3
+!i122 46
+R0
+Z68 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/rst_logic.vhd
+Z69 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/rst_logic.vhd
+l0
+L5 1
+V`hl7RjX_iCD:cC1B_77_I2
+!s100 K@PTob1HTK`H:2nJ<2WM61
+R6
+32
+R7
+!i10b 1
+R8
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/rst_logic.vhd|
+Z71 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/rst_logic.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 9 rst_logic 0 22 `hl7RjX_iCD:cC1B_77_I2
+!i122 46
+l22
+L17 10
+V]^mM72UcY2Y>[kb^SCVHJ0
+!s100 7K=eO>a<XNZTFNj[`jj>22
+R6
+32
+R7
+!i10b 1
+R8
+R70
+R71
+!i113 1
+R11
+R12
+Esingle_unit
+Z72 w1661960648
+R24
+R2
+R3
+!i122 55
+R0
+Z73 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/single_unit.vhd
+Z74 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/single_unit.vhd
+l0
+L5 1
+VVH6ZU8?bm2?c5mz^^F=512
+!s100 H31[``j`Si1jJX2l;[;4j3
+R6
+32
+R7
+!i10b 1
+R8
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/single_unit.vhd|
+Z76 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/single_unit.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R24
+R2
+R3
+DEx4 work 11 single_unit 0 22 VH6ZU8?bm2?c5mz^^F=512
+!i122 55
+l61
+L17 112
+VCo^XZ09I7Sa3h5]7f`:5k0
+!s100 G]h`4`KJ74GK[m>OJXbMT0
+R6
+32
+R7
+!i10b 1
+R8
+R75
+R76
+!i113 1
+R11
+R12
+Cstructure_con
+eb13fifo
+aStructure
+DEx8 machxo3d 4 xor2 0 22 ceTEgocnK:1J2L?M=D_VB3
+DEx8 machxo3d 3 vlo 0 22 LPXhg6ciERNeEY2`Zj6CD0
+DEx8 machxo3d 3 vhi 0 22 77Z6EEO8VR63If4dN9z562
+DPx8 machxo3d 4 mem1 0 22 iLR[=k>zcf]j2O1P^a8C63
+DEx8 machxo3d 8 dpr16x4c 0 22 0n7i@0=d]2EOQP7b?S_Pj1
+DPx8 machxo3d 4 mem2 0 22 ??W3W^Ne;Z[M37MSi;1HV2
+R23
+DEx8 machxo3d 8 rom16x1a 0 22 aNkV1F_9n1X=PhKP0djXC1
+DEx8 machxo3d 3 or2 0 22 ?`3M8zQV7DIzVk[DgCD4c2
+DEx8 machxo3d 6 mux161 0 22 A6zMe[GKGSXZaRmKYiK:=1
+DEx8 machxo3d 3 inv 0 22 5HRH6lJ142SSRO4_KfG`T1
+DEx8 machxo3d 7 fd1s3dx 0 22 K>Pk:InSLV<1nFN<KLOG71
+DEx8 machxo3d 7 fd1s3bx 0 22 fENZ?IiiJ2D]GNh[lV9fn0
+DEx8 machxo3d 7 fd1p3dx 0 22 b@=2hQgN5Bg17o47M7R_E0
+DPx8 machxo3d 6 global 0 22 Wn[AdeX]A=AhV4I7b9J@b2
+DEx8 machxo3d 7 fd1p3bx 0 22 4aClXnMl47`YeOQ6X^o?l1
+DEx8 machxo3d 6 fadd2b 0 22 TVeD_8n>o[Zhe9^Z>^<L61
+DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+DEx8 machxo3d 3 cu2 0 22 5Sg4iH7<6c9P?Gk41ldH[0
+DEx8 machxo3d 4 and2 0 22 S93B>I2=P7z5I:8Bj7ZH82
+DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+DEx8 machxo3d 5 ageb2 0 22 hK1<5;bUGHdS?cL<Ja[5c2
+DAx4 work 7 b13fifo 9 structure 22 1ZN>hmidTae4jdZ5?i9A`0
+R14
+R15
+R2
+R3
+R21
+!i122 44
+R13
+R0
+R16
+R17
+l0
+L1824 1
+VN4iHPFXZCYSYk3C^fa9E<2
+!s100 9aJ:BCmm9<`zX9HnYgL1>0
+R6
+32
+R7
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Etestbench
+Z77 w1667318901
+R24
+R55
+R14
+R23
+R2
+R3
+!i122 45
+R0
+Z78 8C:\Users\victo\Desktop\Lattice_proj\CPLD_rad_rst\CPLD_rad_tb.vhd
+Z79 FC:\Users\victo\Desktop\Lattice_proj\CPLD_rad_rst\CPLD_rad_tb.vhd
+l0
+L29 1
+VaJS@=32Ge5KITN1OdVWT;2
+!s100 JEfbRQU6j0FEJaiEB^BWI2
+R6
+32
+R7
+!i10b 1
+R8
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\victo\Desktop\Lattice_proj\CPLD_rad_rst\CPLD_rad_tb.vhd|
+Z81 !s107 C:\Users\victo\Desktop\Lattice_proj\CPLD_rad_rst\CPLD_rad_tb.vhd|
+!i113 1
+R11
+R12
+Atb
+Z82 DEx4 work 8 uart_top 0 22 Go15Fn[T]V4V>Nk4FW]Hz0
+R24
+R55
+R14
+R23
+R2
+R3
+DEx4 work 9 testbench 0 22 aJS@=32Ge5KITN1OdVWT;2
+!i122 45
+l48
+L32 41
+Vm35z^d4fNci7<i_kj:Xm02
+!s100 iU;hX08GNEaOTmgILHbX80
+R6
+32
+R7
+!i10b 1
+R8
+R80
+R81
+!i113 1
+R11
+R12
+Euart_rx
+Z83 w1653190459
+R24
+R2
+R3
+!i122 56
+R0
+Z84 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/UART_RX.vhd
+Z85 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/UART_RX.vhd
+l0
+Z86 L18 1
+VCk4GS]RY2d1>38Yh5:16Q3
+!s100 Ed:ei8[[Mb?`RKHkO5z?;1
+R6
+32
+Z87 !s110 1667321910
+!i10b 1
+R8
+Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/UART_RX.vhd|
+Z89 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/UART_RX.vhd|
+!i113 1
+R11
+R12
+Artl
+R24
+R2
+R3
+DEx4 work 7 uart_rx 0 22 Ck4GS]RY2d1>38Yh5:16Q3
+!i122 56
+l46
+L31 113
+VXn3b]DZ:4=4ZgbIn>g0X10
+!s100 T<LHckTX2_S^S>KFO]>K?3
+R6
+32
+R87
+!i10b 1
+R8
+R88
+R89
+!i113 1
+R11
+R12
+Euart_top
+Z90 w1667321903
+R24
+R2
+R3
+!i122 57
+R0
+Z91 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/uart_top.vhd
+Z92 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/uart_top.vhd
+l0
+L10 1
+VGo15Fn[T]V4V>Nk4FW]Hz0
+!s100 zdhjV=^CEX:IeoK;M5:212
+R6
+32
+R87
+!i10b 1
+Z93 !s108 1667321910.000000
+Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/uart_top.vhd|
+Z95 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/uart_top.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R24
+R2
+R3
+R82
+!i122 57
+l195
+L23 420
+VMa62Y]Z?Lz;ZIoNh<MJPS2
+!s100 EhQB<38DS7:]a?4MNJPgJ2
+R6
+32
+R87
+!i10b 1
+R93
+R94
+R95
+!i113 1
+R11
+R12
+Euart_tx
+Z96 w1661250512
+R24
+R2
+R3
+!i122 58
+R0
+Z97 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/UART_TX.vhd
+Z98 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/UART_TX.vhd
+l0
+R86
+VMkfOW]H^zW[`@M?J8h4SO1
+!s100 XX<@o<fFe>ilza8LG=RAM1
+R6
+32
+R87
+!i10b 1
+R93
+Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/UART_TX.vhd|
+Z100 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/UART_TX.vhd|
+!i113 1
+R11
+R12
+Artl
+R24
+R2
+R3
+DEx4 work 7 uart_tx 0 22 MkfOW]H^zW[`@M?J8h4SO1
+!i122 58
+l46
+L35 104
+VQB_HR8QZY@X0HfV[^U@<k3
+!s100 =P7?64ecEz^Qg7o0GY_NR2
+R6
+32
+R87
+!i10b 1
+R93
+R99
+R100
+!i113 1
+R11
+R12
+Evoter
+Z101 w1649172720
+R2
+R3
+!i122 59
+R0
+Z102 8C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/voter.vhd
+Z103 FC:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/voter.vhd
+l0
+L4 1
+VH4z?Qfk2nBigDhg1D7m[F2
+!s100 O`1FIk=i6_DXThK]=Z]3=1
+R6
+32
+R87
+!i10b 1
+R93
+Z104 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/voter.vhd|
+Z105 !s107 C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/src/voter.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+Z106 DEx4 work 5 voter 0 22 H4z?Qfk2nBigDhg1D7m[F2
+!i122 59
+l19
+Z107 L17 18
+Z108 Vk0ldKF4zh`93gMA=95?S80
+Z109 !s100 ?HTBkKZOHm2K6XG6`<0Xm0
+R6
+32
+R87
+!i10b 1
+R93
+R104
+R105
+!i113 1
+R11
+R12

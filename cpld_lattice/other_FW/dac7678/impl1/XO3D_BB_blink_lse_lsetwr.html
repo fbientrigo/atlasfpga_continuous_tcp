@@ -1,0 +1,302 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Mon Dec 27 12:22:47 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     XO3D_BB_blink
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk12M]
+            1173 items scored, 1141 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 2.391ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \heartbeat_inst/count_70__i9  (from clk12M +)
+   Destination:    FD1S3AX    D              \heartbeat_inst/heartbeat_12  (to clk12M +)
+
+   Delay:                   7.245ns  (45.4% logic, 54.6% route), 12 logic levels.
+
+ Constraint Details:
+
+      7.245ns data_path \heartbeat_inst/count_70__i9 to \heartbeat_inst/heartbeat_12 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 2.391ns
+
+ Path Details: \heartbeat_inst/count_70__i9 to \heartbeat_inst/heartbeat_12
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \heartbeat_inst/count_70__i9 (from clk12M)
+Route         2   e 1.002                                  \heartbeat_inst/count[9]
+A1_TO_FCO   ---     0.752           A[2] to COUT           \heartbeat_inst/add_156_2
+Route         1   e 0.020                                  \heartbeat_inst/n424
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_4
+Route         1   e 0.020                                  \heartbeat_inst/n425
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_6
+Route         1   e 0.020                                  \heartbeat_inst/n426
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_8
+Route         1   e 0.020                                  \heartbeat_inst/n427
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_10
+Route         1   e 0.020                                  \heartbeat_inst/n428
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_12
+Route         1   e 0.020                                  \heartbeat_inst/n429
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_14
+Route         1   e 0.020                                  \heartbeat_inst/n430
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_16
+Route         1   e 0.020                                  \heartbeat_inst/n431
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_18
+Route         1   e 0.020                                  \heartbeat_inst/n432
+FCI_TO_F    ---     0.544            CIN to S[2]           \heartbeat_inst/add_156_20
+Route        28   e 1.984                                  \heartbeat_inst/count_26__N_84
+LUT4        ---     0.448              B to Z              \heartbeat_inst/heartbeat_I_0_2_lut
+Route         1   e 0.788                                  \heartbeat_inst/heartbeat_N_85
+                  --------
+                    7.245  (45.4% logic, 54.6% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 2.391ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \heartbeat_inst/count_70__i8  (from clk12M +)
+   Destination:    FD1S3AX    D              \heartbeat_inst/heartbeat_12  (to clk12M +)
+
+   Delay:                   7.245ns  (45.4% logic, 54.6% route), 12 logic levels.
+
+ Constraint Details:
+
+      7.245ns data_path \heartbeat_inst/count_70__i8 to \heartbeat_inst/heartbeat_12 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 2.391ns
+
+ Path Details: \heartbeat_inst/count_70__i8 to \heartbeat_inst/heartbeat_12
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \heartbeat_inst/count_70__i8 (from clk12M)
+Route         2   e 1.002                                  \heartbeat_inst/count[8]
+A1_TO_FCO   ---     0.752           A[2] to COUT           \heartbeat_inst/add_156_2
+Route         1   e 0.020                                  \heartbeat_inst/n424
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_4
+Route         1   e 0.020                                  \heartbeat_inst/n425
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_6
+Route         1   e 0.020                                  \heartbeat_inst/n426
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_8
+Route         1   e 0.020                                  \heartbeat_inst/n427
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_10
+Route         1   e 0.020                                  \heartbeat_inst/n428
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_12
+Route         1   e 0.020                                  \heartbeat_inst/n429
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_14
+Route         1   e 0.020                                  \heartbeat_inst/n430
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_16
+Route         1   e 0.020                                  \heartbeat_inst/n431
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_18
+Route         1   e 0.020                                  \heartbeat_inst/n432
+FCI_TO_F    ---     0.544            CIN to S[2]           \heartbeat_inst/add_156_20
+Route        28   e 1.984                                  \heartbeat_inst/count_26__N_84
+LUT4        ---     0.448              B to Z              \heartbeat_inst/heartbeat_I_0_2_lut
+Route         1   e 0.788                                  \heartbeat_inst/heartbeat_N_85
+                  --------
+                    7.245  (45.4% logic, 54.6% route), 12 logic levels.
+
+
+Error:  The following path violates requirements by 2.391ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \heartbeat_inst/count_70__i7  (from clk12M +)
+   Destination:    FD1S3AX    D              \heartbeat_inst/heartbeat_12  (to clk12M +)
+
+   Delay:                   7.245ns  (45.4% logic, 54.6% route), 12 logic levels.
+
+ Constraint Details:
+
+      7.245ns data_path \heartbeat_inst/count_70__i7 to \heartbeat_inst/heartbeat_12 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 2.391ns
+
+ Path Details: \heartbeat_inst/count_70__i7 to \heartbeat_inst/heartbeat_12
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \heartbeat_inst/count_70__i7 (from clk12M)
+Route         2   e 1.002                                  \heartbeat_inst/count[7]
+A1_TO_FCO   ---     0.752           B[2] to COUT           \heartbeat_inst/add_156_2
+Route         1   e 0.020                                  \heartbeat_inst/n424
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_4
+Route         1   e 0.020                                  \heartbeat_inst/n425
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_6
+Route         1   e 0.020                                  \heartbeat_inst/n426
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_8
+Route         1   e 0.020                                  \heartbeat_inst/n427
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_10
+Route         1   e 0.020                                  \heartbeat_inst/n428
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_12
+Route         1   e 0.020                                  \heartbeat_inst/n429
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_14
+Route         1   e 0.020                                  \heartbeat_inst/n430
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_16
+Route         1   e 0.020                                  \heartbeat_inst/n431
+FCI_TO_FCO  ---     0.143            CIN to COUT           \heartbeat_inst/add_156_18
+Route         1   e 0.020                                  \heartbeat_inst/n432
+FCI_TO_F    ---     0.544            CIN to S[2]           \heartbeat_inst/add_156_20
+Route        28   e 1.984                                  \heartbeat_inst/count_26__N_84
+LUT4        ---     0.448              B to Z              \heartbeat_inst/heartbeat_I_0_2_lut
+Route         1   e 0.788                                  \heartbeat_inst/heartbeat_N_85
+                  --------
+                    7.245  (45.4% logic, 54.6% route), 12 logic levels.
+
+Warning: 7.391 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk12M]                  |     5.000 ns|     7.391 ns|    12 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\kitcar_inst/clk_div_25__N_150          |      27|     621|     54.43%
+                                        |        |        |
+\kitcar_inst/n409                       |       1|     621|     54.43%
+                                        |        |        |
+\kitcar_inst/n410                       |       1|     621|     54.43%
+                                        |        |        |
+\kitcar_inst/n408                       |       1|     567|     49.69%
+                                        |        |        |
+\kitcar_inst/n407                       |       1|     513|     44.96%
+                                        |        |        |
+\heartbeat_inst/count_26__N_84          |      28|     479|     41.98%
+                                        |        |        |
+\heartbeat_inst/n432                    |       1|     478|     41.89%
+                                        |        |        |
+\heartbeat_inst/n431                    |       1|     476|     41.72%
+                                        |        |        |
+\kitcar_inst/n406                       |       1|     459|     40.23%
+                                        |        |        |
+\heartbeat_inst/n430                    |       1|     420|     36.81%
+                                        |        |        |
+\kitcar_inst/n405                       |       1|     405|     35.50%
+                                        |        |        |
+\heartbeat_inst/n429                    |       1|     364|     31.90%
+                                        |        |        |
+\kitcar_inst/n404                       |       1|     351|     30.76%
+                                        |        |        |
+\heartbeat_inst/n428                    |       1|     308|     26.99%
+                                        |        |        |
+\kitcar_inst/n403                       |       1|     297|     26.03%
+                                        |        |        |
+\heartbeat_inst/n427                    |       1|     252|     22.09%
+                                        |        |        |
+\kitcar_inst/n402                       |       1|     243|     21.30%
+                                        |        |        |
+\heartbeat_inst/n426                    |       1|     196|     17.18%
+                                        |        |        |
+\kitcar_inst/n401                       |       1|     189|     16.56%
+                                        |        |        |
+\heartbeat_inst/n425                    |       1|     140|     12.27%
+                                        |        |        |
+\kitcar_inst/n400                       |       1|     135|     11.83%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 1141  Score: 865936
+
+Constraints cover  2055 paths, 178 nets, and 390 connections (87.2% coverage)
+
+
+Peak memory: 67072000 bytes, TRCE: 3469312 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

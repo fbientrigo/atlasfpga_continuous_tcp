@@ -1,0 +1,270 @@
+
+           Lattice Mapping Report File for Design Module 'uart_top'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO3D -p LCMXO3D-9400HC -t CABGA256 -s 5 -oc
+     Commercial benchFIFO_impl1.ngd -o benchFIFO_impl1_map.ncd -pr
+     benchFIFO_impl1.prf -mp benchFIFO_impl1.mrp -lpf
+     C:/Users/victo/Desktop/Lattice_proj/bench_UART/impl1/benchFIFO_impl1.lpf
+     -lpf C:/Users/victo/Desktop/Lattice_proj/bench_UART/benchFIFO.lpf -c 0 -gui
+     -msgset C:/Users/victo/Desktop/Lattice_proj/bench_UART/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3D-9400HCCABGA256
+Target Performance:   5
+Mapper:  se5c00,  version:  Diamond (64-bit) 3.12.0.240.2
+Mapped on:  08/31/22  17:21:28
+
+Design Summary
+--------------
+
+   Number of registers:    197 out of 10021 (2%)
+      PFU registers:          197 out of  9400 (2%)
+      PIO registers:            0 out of   621 (0%)
+   Number of SLICEs:       399 out of  4700 (8%)
+      SLICEs as Logic/ROM:    207 out of  4700 (4%)
+      SLICEs as RAM:          192 out of  3525 (5%)
+      SLICEs as Carry:         36 out of  4700 (1%)
+   Number of LUT4s:        794 out of  9400 (8%)
+      Number used as logic LUTs:        338
+      Number used as distributed RAM:   384
+      Number used as ripple logic:       72
+      Number used as shift registers:     0
+   Number of PIO sites used: 1 + 4(JTAG) out of 207 (2%)
+   Number of block RAMs:  0 out of 48 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Security used :   No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCSLEWRATEA):  0 out of 6 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  1
+
+                                    Page 1
+
+
+
+
+Design:  uart_top                                      Date:  08/31/22  17:21:28
+
+Design Summary (cont)
+---------------------
+     Net WrClock: 240 loads, 240 rising, 0 falling (Driver: OSCInst0 )
+   Number of Clock Enables:  21
+     Net fifo/rden_i: 21 loads, 21 LSLICEs
+     Net RdEn: 4 loads, 4 LSLICEs
+     Net Full: 18 loads, 18 LSLICEs
+     Net WrClock_enable_11: 1 loads, 1 LSLICEs
+     Net WrClock_enable_64: 1 loads, 1 LSLICEs
+     Net WrClock_enable_44: 4 loads, 4 LSLICEs
+     Net WrClock_enable_59: 6 loads, 6 LSLICEs
+     Net WrClock_enable_32: 2 loads, 2 LSLICEs
+     Net WrClock_enable_12: 1 loads, 1 LSLICEs
+     Net WrClock_enable_22: 5 loads, 5 LSLICEs
+     Net WrClock_enable_46: 1 loads, 1 LSLICEs
+     Net fifoUart/WrClock_enable_40: 4 loads, 4 LSLICEs
+     Net fifoUart/WrClock_enable_4: 1 loads, 1 LSLICEs
+     Net fifoUart/WrClock_enable_33: 1 loads, 1 LSLICEs
+     Net fifoUart/WrClock_enable_35: 1 loads, 1 LSLICEs
+     Net fifoUart/WrClock_enable_48: 1 loads, 1 LSLICEs
+     Net fifoUart/WrClock_enable_63: 1 loads, 1 LSLICEs
+     Net fifoUart/uart_tx_inst/WrClock_enable_62: 5 loads, 5 LSLICEs
+     Net fifoUart/uart_tx_inst/WrClock_enable_34: 2 loads, 2 LSLICEs
+     Net fifoUart/uart_tx_inst/r_SM_Main_1: 1 loads, 1 LSLICEs
+     Net fifoUart/uart_tx_inst/WrClock_enable_61: 4 loads, 4 LSLICEs
+   Number of local set/reset loads for net n3034 merged into GSR:  71
+   Number of LSRs:  6
+     Net rst: 8 loads, 8 LSLICEs
+     Net n3035: 27 loads, 27 LSLICEs
+     Net fifoUart/uart_tx_inst/n1789: 4 loads, 4 LSLICEs
+     Net fifoUart/uart_tx_inst/n2576: 1 loads, 1 LSLICEs
+     Net fifoUart/uart_tx_inst/r_SM_Main_2: 1 loads, 1 LSLICEs
+     Net fifoUart/uart_tx_inst/n1782: 4 loads, 4 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net fifo/rptr_0: 192 loads
+     Net fifo/rptr_1: 192 loads
+     Net fifo/rptr_2: 192 loads
+     Net fifo/rptr_3: 192 loads
+     Net fifo/rptr_4: 128 loads
+     Net fifo/n3018: 64 loads
+     Net fifo/n3020: 64 loads
+     Net fifo/n3022: 64 loads
+     Net fifo/n3024: 64 loads
+     Net fifo/rptr_5: 64 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: Using local reset signal 'n3034' to infer global GSR net.
+
+
+                                    Page 2
+
+
+
+
+Design:  uart_top                                      Date:  08/31/22  17:21:28
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| uart_tx             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Signal fifoUart/uart_tx_inst/WrClock_enable_6 was merged into signal
+     fifoUart/uart_tx_inst/r_SM_Main_1
+Signal fifo/rRst was merged into signal n3034
+Signal fifo/invout_0 was merged into signal Empty
+Signal fifo/wren_i was merged into signal o_fifo_full_N_168
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal fifoUart/uart_tx_inst/r_Clk_Count_286_add_4_7/CO undriven or does not
+     drive anything - clipped.
+Signal fifoUart/uart_tx_inst/r_Clk_Count_286_add_4_1/S0 undriven or does not
+     drive anything - clipped.
+Signal fifoUart/uart_tx_inst/r_Clk_Count_286_add_4_1/CI undriven or does not
+     drive anything - clipped.
+Signal rst_counter_284_add_4_11/CO undriven or does not drive anything -
+     clipped.
+Signal rst_counter_284_add_4_1/S0 undriven or does not drive anything - clipped.
+     
+Signal rst_counter_284_add_4_1/CI undriven or does not drive anything - clipped.
+     
+Signal fifo/empty_cmp_ci_a/S1 undriven or does not drive anything - clipped.
+Signal fifo/empty_cmp_ci_a/S0 undriven or does not drive anything - clipped.
+Signal fifo/a1/S1 undriven or does not drive anything - clipped.
+Signal fifo/a1/COUT undriven or does not drive anything - clipped.
+Signal fifo/full_cmp_ci_a/S1 undriven or does not drive anything - clipped.
+Signal fifo/full_cmp_ci_a/S0 undriven or does not drive anything - clipped.
+Signal fifo/a0/S1 undriven or does not drive anything - clipped.
+Signal fifo/a0/COUT undriven or does not drive anything - clipped.
+Signal fifo/r_gctr_4/CO undriven or does not drive anything - clipped.
+Signal fifo/r_gctr_cia/S1 undriven or does not drive anything - clipped.
+Signal fifo/r_gctr_cia/S0 undriven or does not drive anything - clipped.
+Signal fifo/w_gctr_4/CO undriven or does not drive anything - clipped.
+Signal fifo/w_gctr_cia/S1 undriven or does not drive anything - clipped.
+Signal fifo/w_gctr_cia/S0 undriven or does not drive anything - clipped.
+Block fifoUart/uart_tx_inst/i1_1_lut was optimized away.
+Block fifo/OR2_t18 was optimized away.
+Block fifo/INV_5 was optimized away.
+Block fifo/AND2_t20 was optimized away.
+Block i1 was optimized away.
+Block i2 was optimized away.
+
+Memory Usage
+------------
+
+/fifo:
+    EBRs: 0
+
+                                    Page 3
+
+
+
+
+Design:  uart_top                                      Date:  08/31/22  17:21:28
+
+Memory Usage (cont)
+-------------------
+    RAM SLICEs: 192
+    Logic SLICEs: 85
+    PFU Registers: 126
+
+     
+
+ASIC Components
+---------------
+
+Instance Name: OSCInst0
+         Type: OSCJ
+
+GSR Usage
+---------
+
+GSR Component:
+   The local reset signal 'n3034' of the design has been inferred as Global Set
+        Reset (GSR). The reset signal used for GSR control is 'n3034'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 72 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 4
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.

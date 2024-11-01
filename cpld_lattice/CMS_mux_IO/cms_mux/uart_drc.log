@@ -1,0 +1,26 @@
+Results of NGD DRC are available in uart_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'rx' has no load.
+WARNING - synthesis: input pad net 'rx' has no legal load.
+WARNING - synthesis: logical net 'data_in_c_7' has no load.
+WARNING - synthesis: logical net 'data_in_c_6' has no load.
+WARNING - synthesis: logical net 'data_in_c_5' has no load.
+WARNING - synthesis: logical net 'data_in_c_4' has no load.
+WARNING - synthesis: logical net 'data_in_c_3' has no load.
+WARNING - synthesis: logical net 'data_in_c_2' has no load.
+WARNING - synthesis: logical net 'data_in_c_1' has no load.
+WARNING - synthesis: logical net 'data_in_c_0' has no load.
+WARNING - synthesis: DRC complete with 10 warnings.
+
+Design Results:
+     99 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file CMS_MUX_IO_cms_mux.ngd.

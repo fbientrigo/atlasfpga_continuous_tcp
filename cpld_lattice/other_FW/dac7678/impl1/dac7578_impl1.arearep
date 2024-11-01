@@ -1,0 +1,17 @@
+----------------------------------------------------------------------
+Report for cell i2c_dac.TECH
+Register bits:  37 of 10021 (0.369%)
+I/O cells:      24
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        15          100.0
+                            FD1P3AX         2          100.0
+                            FD1P3IX        27          100.0
+                            FD1S3AX         7          100.0
+                            FD1S3AY         1          100.0
+                                GSR         1          100.0
+                                 IB         5          100.0
+                               LUT4        63          100.0
+                                 OB        19          100.0
+                              PFUMX         1          100.0
+                              TOTAL       141

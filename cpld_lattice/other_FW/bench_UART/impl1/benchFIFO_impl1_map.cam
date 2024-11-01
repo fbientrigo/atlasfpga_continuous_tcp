@@ -1,0 +1,42 @@
+[ START MERGED ]
+fifo/wren_i o_fifo_full_N_168
+fifo/rRst n3034
+fifo/invout_0 Empty
+fifoUart/uart_tx_inst/WrClock_enable_6 fifoUart/uart_tx_inst/r_SM_Main_1
+[ END MERGED ]
+[ START CLIPPED ]
+GND_net
+VCC_net
+fifoUart/uart_tx_inst/r_Clk_Count_286_add_4_7/CO
+fifoUart/uart_tx_inst/r_Clk_Count_286_add_4_1/S0
+fifoUart/uart_tx_inst/r_Clk_Count_286_add_4_1/CI
+rst_counter_284_add_4_11/CO
+rst_counter_284_add_4_1/S0
+rst_counter_284_add_4_1/CI
+fifo/empty_cmp_ci_a/S1
+fifo/empty_cmp_ci_a/S0
+fifo/a1/S1
+fifo/a1/COUT
+fifo/full_cmp_ci_a/S1
+fifo/full_cmp_ci_a/S0
+fifo/a0/S1
+fifo/a0/COUT
+fifo/r_gctr_4/CO
+fifo/r_gctr_cia/S1
+fifo/r_gctr_cia/S0
+fifo/w_gctr_4/CO
+fifo/w_gctr_cia/S1
+fifo/w_gctr_cia/S0
+[ END CLIPPED ]
+[ START OSC ]
+WrClock 14.00
+[ END OSC ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Wed Aug 31 17:21:29 2022
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=ENABLE I2C_PORT=DISABLE I2C_GLITCH_FILTER=DISABLE I2C_GLITCH_FILTER_RANGE=R_16_50NS MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF CONFIG_SECURE=OFF MCCLK_FREQ=66.5 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF BACKGROUND_RECONFIG_SECURITY=OFF SPIM_ADDRESS_32BIT=DISABLE SFDP_CHECK=DISABLE PRIMARY_BOOT=IMAGE_0 SECONDARY_BOOT=NONE SLAVE_IDLE_TIMER=0 MASTER_PREAMBLE_DETECTION_TIMER=0 MASTER_PREAMBLE_DETECTION_RETRY=0 CUR_DESIGN_BOOT_LOCATION=IMAGE_0 INBUF=ON ROLLBACK_CONTROL=DISABLE ;
+LOCATE COMP "uart_tx" SITE "T12" ;
+FREQUENCY NET "WrClock" 14.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

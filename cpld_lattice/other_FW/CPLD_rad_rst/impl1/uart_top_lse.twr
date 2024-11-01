@@ -1,0 +1,238 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Thu Nov 03 11:42:11 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     uart_top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets osc_int]
+            104 items scored, 104 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 7.518ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \fifo/FF_0  (from osc_int +)
+   Destination:    FD1S3DX    D              \fifo/FF_0  (to osc_int +)
+
+   Delay:                  12.385ns  (32.6% logic, 67.4% route), 10 logic levels.
+
+ Constraint Details:
+
+     12.385ns data_path \fifo/FF_0 to \fifo/FF_0 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 7.518ns
+
+ Path Details: \fifo/FF_0 to \fifo/FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \fifo/FF_0 (from osc_int)
+Route        17   e 1.309                                  Full
+LUT4        ---     0.408              A to Z              \fifo/INV_5
+Route         5   e 0.981                                  invout_1
+LUT4        ---     0.408              B to Z              \fifo/AND2_t18
+Route        45   e 1.436                                  \fifo/wren_i
+LUT4        ---     0.408                to                \fifo/full_cmp_ci_a
+Route         1   e 0.660                                  \fifo/wcount_1
+LUT4        ---     0.408                to                \fifo/full_cmp_0
+Route         1   e 0.660                                  \fifo/wcount_2
+LUT4        ---     0.408                to                \fifo/full_cmp_1
+Route         1   e 0.660                                  \fifo/wcount_5
+LUT4        ---     0.408                to                \fifo/full_cmp_2
+Route         1   e 0.660                                  \fifo/wcount_7
+LUT4        ---     0.408                to                \fifo/full_cmp_3
+Route         1   e 0.660                                  \fifo/co3_3
+LUT4        ---     0.408                to                \fifo/full_cmp_4
+Route         1   e 0.660                                  \fifo/full_d_c
+LUT4        ---     0.408                to                \fifo/a1
+Route         1   e 0.660                                  \fifo/full_d
+                  --------
+                   12.385  (32.6% logic, 67.4% route), 10 logic levels.
+
+
+Error:  The following path violates requirements by 7.518ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \fifo/FF_0  (from osc_int +)
+   Destination:    FD1S3DX    D              \fifo/FF_0  (to osc_int +)
+
+   Delay:                  12.385ns  (32.6% logic, 67.4% route), 10 logic levels.
+
+ Constraint Details:
+
+     12.385ns data_path \fifo/FF_0 to \fifo/FF_0 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 7.518ns
+
+ Path Details: \fifo/FF_0 to \fifo/FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \fifo/FF_0 (from osc_int)
+Route        17   e 1.309                                  Full
+LUT4        ---     0.408              A to Z              \fifo/INV_5
+Route         5   e 0.981                                  invout_1
+LUT4        ---     0.408              B to Z              \fifo/AND2_t18
+Route        45   e 1.436                                  \fifo/wren_i
+LUT4        ---     0.408                to                \fifo/full_cmp_ci_a
+Route         1   e 0.660                                  \fifo/wcount_1
+LUT4        ---     0.408                to                \fifo/full_cmp_0
+Route         1   e 0.660                                  \fifo/wcount_2
+LUT4        ---     0.408                to                \fifo/full_cmp_1
+Route         1   e 0.660                                  \fifo/wcount_5
+LUT4        ---     0.408                to                \fifo/full_cmp_2
+Route         1   e 0.660                                  \fifo/wcount_7
+LUT4        ---     0.408                to                \fifo/full_cmp_3
+Route         1   e 0.660                                  \fifo/co3_3
+LUT4        ---     0.408                to                \fifo/full_cmp_4
+Route         1   e 0.660                                  \fifo/full_d_c
+LUT4        ---     0.408                to                \fifo/a1
+Route         1   e 0.660                                  \fifo/full_d
+                  --------
+                   12.385  (32.6% logic, 67.4% route), 10 logic levels.
+
+
+Error:  The following path violates requirements by 7.197ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \fifo/FF_0  (from osc_int +)
+   Destination:    FD1S3DX    D              \fifo/FF_0  (to osc_int +)
+
+   Delay:                  12.064ns  (33.5% logic, 66.5% route), 10 logic levels.
+
+ Constraint Details:
+
+     12.064ns data_path \fifo/FF_0 to \fifo/FF_0 violates
+      5.000ns delay constraint less
+      0.133ns L_S requirement (totaling 4.867ns) by 7.197ns
+
+ Path Details: \fifo/FF_0 to \fifo/FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.367             CK to Q              \fifo/FF_0 (from osc_int)
+Route        17   e 1.309                                  Full
+LUT4        ---     0.408              A to Z              \fifo/i1_2_lut
+Route         1   e 0.660                                  \fifo/WrEn
+LUT4        ---     0.408              A to Z              \fifo/AND2_t18
+Route        45   e 1.436                                  \fifo/wren_i
+LUT4        ---     0.408                to                \fifo/full_cmp_ci_a
+Route         1   e 0.660                                  \fifo/wcount_1
+LUT4        ---     0.408                to                \fifo/full_cmp_0
+Route         1   e 0.660                                  \fifo/wcount_2
+LUT4        ---     0.408                to                \fifo/full_cmp_1
+Route         1   e 0.660                                  \fifo/wcount_5
+LUT4        ---     0.408                to                \fifo/full_cmp_2
+Route         1   e 0.660                                  \fifo/wcount_7
+LUT4        ---     0.408                to                \fifo/full_cmp_3
+Route         1   e 0.660                                  \fifo/co3_3
+LUT4        ---     0.408                to                \fifo/full_cmp_4
+Route         1   e 0.660                                  \fifo/full_d_c
+LUT4        ---     0.408                to                \fifo/a1
+Route         1   e 0.660                                  \fifo/full_d
+                  --------
+                   12.064  (33.5% logic, 66.5% route), 10 logic levels.
+
+Warning: 12.518 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets osc_int]                 |     5.000 ns|    12.518 ns|    10 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\fifo/w_g2b_xor_cluster_0               |       4|      40|     38.46%
+                                        |        |        |
+\bench_b13/GEN_SUNIT[31].SUX/COMP_1/CA/n|        |        |
+48                                      |       1|      36|     34.62%
+                                        |        |        |
+\bench_b13/GEN_SUNIT[31].SUX/COMP_1/CA/n|        |        |
+54                                      |       1|      36|     34.62%
+                                        |        |        |
+\bench_b13/GEN_SUNIT[31].SUX/COMP_1/CA/n|        |        |
+54213                                   |       1|      36|     34.62%
+                                        |        |        |
+lfsr_err_N_207                          |       2|      36|     34.62%
+                                        |        |        |
+rst_comp                                |       1|      36|     34.62%
+                                        |        |        |
+\fifo/co3_3                             |       1|      30|     28.85%
+                                        |        |        |
+\fifo/full_d                            |       1|      30|     28.85%
+                                        |        |        |
+\fifo/full_d_c                          |       1|      30|     28.85%
+                                        |        |        |
+\fifo/wcount_2                          |       5|      30|     28.85%
+                                        |        |        |
+\fifo/wcount_5                          |       5|      30|     28.85%
+                                        |        |        |
+\fifo/wcount_7                          |       5|      30|     28.85%
+                                        |        |        |
+\fifo/co0_2                             |       1|      28|     26.92%
+                                        |        |        |
+\fifo/co3_2                             |       1|      28|     26.92%
+                                        |        |        |
+\fifo/empty_d                           |       1|      28|     26.92%
+                                        |        |        |
+\fifo/empty_d_c                         |       1|      28|     26.92%
+                                        |        |        |
+\fifo/rcount_7                          |       5|      28|     26.92%
+                                        |        |        |
+\fifo/wcount_1                          |       5|      23|     22.12%
+                                        |        |        |
+\fifo/rcount_0                          |       4|      21|     20.19%
+                                        |        |        |
+\bench_b13/LFSR1/V1/n18761              |       1|      12|     11.54%
+                                        |        |        |
+\bench_b13/LFSR1/V1/n18763              |       1|      12|     11.54%
+                                        |        |        |
+\bench_b13/LFSR1/V1/n18765              |       1|      12|     11.54%
+                                        |        |        |
+\bench_b13/LFSR1/V1/n49516              |       1|      12|     11.54%
+                                        |        |        |
+\bench_b13/LFSR1/V1/n49518              |       1|      12|     11.54%
+                                        |        |        |
+\bench_b13/LFSR1/V1/n49520              |       1|      12|     11.54%
+                                        |        |        |
+\fifo/r_g2b_xor_cluster_0               |       4|      12|     11.54%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 104  Score: 473096
+
+Constraints cover  40968 paths, 10081 nets, and 27927 connections (97.5% coverage)
+
+
+Peak memory: 172318720 bytes, TRCE: 28721152 bytes, DLYMAN: 2301952 bytes
+CPU_TIME_REPORT: 0 secs 

@@ -1,0 +1,53 @@
+[Device]
+Family=machxo3d
+PartType=LCMXO3D-9400HC
+PartName=LCMXO3D-9400HC-5BG256C
+SpeedGrade=5
+Package=CABGA256
+OperatingCondition=COM
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=RAM_DP
+CoreRevision=6.5
+ModuleName=test
+SourceFormat=VHDL
+ParameterFileVersion=1.0
+Date=01/05/2022
+Time=13:52:03
+
+[Parameters]
+Verilog=0
+VHDL=1
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+RAddress=512
+RData=18
+WAddress=512
+WData=18
+enByte=0
+ByteSize=9
+OutputEn=1
+ClockEn=0
+Optimization=Speed
+Reset=Sync
+Reset1=Sync
+Init=0
+MemFile=
+MemFormat=bin
+EnECC=0
+Pipeline=0
+init_data=0
+no_init=0
+
+[FilesGenerated]
+=mem
+
+[Command]
+cmd_line= -w -n test -lang vhdl -synth lse -bus_exp 7 -bb -arch se5c00 -type ramdps -device LCMXO3D-9400HC -raddr_width 9 -rwidth 18 -waddr_width 9 -wwidth 18 -rnum_words 512 -wnum_words 512 -outdata REGISTERED -cascade -1 -resetmode SYNC -sync_reset -mem_init0

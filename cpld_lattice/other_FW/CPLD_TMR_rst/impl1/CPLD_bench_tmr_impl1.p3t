@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "CPLD_bench_tmr_impl1.log"
+-o "CPLD_bench_tmr_impl1.csv"
+-pr "CPLD_bench_tmr_impl1.prf"
