@@ -1,339 +1,0 @@
-<HTML>
-<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
-
-Loading design for application trce from file blink_impl1_map.ncd.
-Design name: XO3D_BB_blink
-NCD version: 3.3
-Vendor:      LATTICE
-Device:      LCMXO3D-9400HC
-Package:     CABGA256
-Performance: 5
-Loading device for application trce from file 'se5c9400.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
-Package Status:                     Final          Version 7.
-Performance Hardware Data Status:   Final          Version 2.2.
-Setup and Hold Report
-
---------------------------------------------------------------------------------
-<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2</big></U></B>
-Mon Dec 27 12:22:49 2021
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-
-<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
-------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o Blink_impl1.tw1 -gui -msgset C:/Users/victo/Desktop/Lattice_proj/blink/project/promote.xml Blink_impl1_map.ncd Blink_impl1.prf 
-Design file:     blink_impl1_map.ncd
-Preference file: blink_impl1.prf
-Device,speed:    LCMXO3D-9400HC,5
-Report level:    verbose report, limited to 1 item per preference
---------------------------------------------------------------------------------
-
-<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
-
-<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY NET "osc_clk" 12.090000 MHz (0 errors)</A></LI>            1458 items scored, 0 timing errors detected.
-Report:  172.861MHz is the maximum frequency for this preference.
-
-<LI><A href='#map_twr_pref_0_1' Target='right'>FREQUENCY PORT "clk_x1" 12.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-Report:  150.150MHz is the maximum frequency for this preference.
-
-BLOCK ASYNCPATHS
-BLOCK RESETPATHS
---------------------------------------------------------------------------------
-
-
-
-================================================================================
-<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY NET "osc_clk" 12.090000 MHz ;
-            1458 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed: The following path meets requirements by 76.928ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              kitcar_inst/clk_div_72__i1  (from clk12M +)
-   Destination:    FF         Data in        kitcar_inst/clk_div_72__i2  (to clk12M +)
-                   FF                        kitcar_inst/clk_div_72__i1
-
-   Delay:               5.537ns  (62.6% logic, 37.4% route), 15 logic levels.
-
- Constraint Details:
-
-      5.537ns physical path delay kitcar_inst/SLICE_36 to kitcar_inst/SLICE_36 meets
-     82.713ns delay constraint less
-      0.248ns LSR_SET requirement (totaling 82.465ns) by 76.928ns
-
- Physical Path Details:
-
-      Data path kitcar_inst/SLICE_36 to kitcar_inst/SLICE_36:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409 */SLICE_36.CLK to *t/SLICE_36.Q0 kitcar_inst/SLICE_36 (from clk12M)
-ROUTE         2   e 1.030 *t/SLICE_36.Q0 to *t/SLICE_51.A1 kitcar_inst/clk_div_1
-C1TOFCO_DE  ---     0.786 *t/SLICE_51.A1 to */SLICE_51.FCO kitcar_inst/SLICE_51
-ROUTE         1   e 0.001 */SLICE_51.FCO to */SLICE_50.FCI kitcar_inst/n398
-FCITOFCO_D  ---     0.146 */SLICE_50.FCI to */SLICE_50.FCO kitcar_inst/SLICE_50
-ROUTE         1   e 0.001 */SLICE_50.FCO to */SLICE_49.FCI kitcar_inst/n399
-FCITOFCO_D  ---     0.146 */SLICE_49.FCI to */SLICE_49.FCO kitcar_inst/SLICE_49
-ROUTE         1   e 0.001 */SLICE_49.FCO to */SLICE_48.FCI kitcar_inst/n400
-FCITOFCO_D  ---     0.146 */SLICE_48.FCI to */SLICE_48.FCO kitcar_inst/SLICE_48
-ROUTE         1   e 0.001 */SLICE_48.FCO to */SLICE_47.FCI kitcar_inst/n401
-FCITOFCO_D  ---     0.146 */SLICE_47.FCI to */SLICE_47.FCO kitcar_inst/SLICE_47
-ROUTE         1   e 0.001 */SLICE_47.FCO to */SLICE_46.FCI kitcar_inst/n402
-FCITOFCO_D  ---     0.146 */SLICE_46.FCI to */SLICE_46.FCO kitcar_inst/SLICE_46
-ROUTE         1   e 0.001 */SLICE_46.FCO to */SLICE_45.FCI kitcar_inst/n403
-FCITOFCO_D  ---     0.146 */SLICE_45.FCI to */SLICE_45.FCO kitcar_inst/SLICE_45
-ROUTE         1   e 0.001 */SLICE_45.FCO to */SLICE_44.FCI kitcar_inst/n404
-FCITOFCO_D  ---     0.146 */SLICE_44.FCI to */SLICE_44.FCO kitcar_inst/SLICE_44
-ROUTE         1   e 0.001 */SLICE_44.FCO to */SLICE_43.FCI kitcar_inst/n405
-FCITOFCO_D  ---     0.146 */SLICE_43.FCI to */SLICE_43.FCO kitcar_inst/SLICE_43
-ROUTE         1   e 0.001 */SLICE_43.FCO to */SLICE_42.FCI kitcar_inst/n406
-FCITOFCO_D  ---     0.146 */SLICE_42.FCI to */SLICE_42.FCO kitcar_inst/SLICE_42
-ROUTE         1   e 0.001 */SLICE_42.FCO to */SLICE_41.FCI kitcar_inst/n407
-FCITOFCO_D  ---     0.146 */SLICE_41.FCI to */SLICE_41.FCO kitcar_inst/SLICE_41
-ROUTE         1   e 0.001 */SLICE_41.FCO to */SLICE_40.FCI kitcar_inst/n408
-FCITOFCO_D  ---     0.146 */SLICE_40.FCI to */SLICE_40.FCO kitcar_inst/SLICE_40
-ROUTE         1   e 0.001 */SLICE_40.FCO to */SLICE_39.FCI kitcar_inst/n409
-FCITOFCO_D  ---     0.146 */SLICE_39.FCI to */SLICE_39.FCO kitcar_inst/SLICE_39
-ROUTE         1   e 0.001 */SLICE_39.FCO to */SLICE_38.FCI kitcar_inst/n410
-FCITOF0_DE  ---     0.517 */SLICE_38.FCI to *t/SLICE_38.F0 kitcar_inst/SLICE_38
-ROUTE        15   e 1.030 *t/SLICE_38.F0 to */SLICE_36.LSR kitcar_inst/clk_div_25__N_150 (to clk12M)
-                  --------
-                    5.537   (62.6% logic, 37.4% route), 15 logic levels.
-
-Report:  172.861MHz is the maximum frequency for this preference.
-
-
-================================================================================
-<A name="map_twr_pref_0_1"></A>Preference: FREQUENCY PORT "clk_x1" 12.000000 MHz ;
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed:  The following path meets requirements by 76.673ns
-         The internal maximum frequency of the following component is 150.150 MHz
-
- Logical Details:  Cell type  Pin name       Component name
-
-   Destination:    PIO        PAD            clk_x1
-
-   Delay:               6.660ns -- based on Minimum Pulse Width
-
-Report:  150.150MHz is the maximum frequency for this preference.
-
-<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
---------------
-----------------------------------------------------------------------------
-Preference                              |   Constraint|       Actual|Levels
-----------------------------------------------------------------------------
-                                        |             |             |
-FREQUENCY NET "osc_clk" 12.090000 MHz ; |   12.090 MHz|  172.861 MHz|  15  
-                                        |             |             |
-FREQUENCY PORT "clk_x1" 12.000000 MHz ; |   12.000 MHz|  150.150 MHz|   0  
-                                        |             |             |
-----------------------------------------------------------------------------
-
-
-All preferences were met.
-
-
-<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
-------------------------
-
-Found 1 clocks:
-
-Clock Domain: clk12M   Source: SLICE_59.F1   Loads: 40
-   Covered under: FREQUENCY NET "osc_clk" 12.090000 MHz ;
-
-
-<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
----------------
-
-Timing errors: 0  Score: 0
-Cumulative negative slack: 0
-
-Constraints cover 1458 paths, 3 nets, and 337 connections (86.19% coverage)
-
---------------------------------------------------------------------------------
-<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2</big></U></B>
-Mon Dec 27 12:22:49 2021
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-
-<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
-------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o Blink_impl1.tw1 -gui -msgset C:/Users/victo/Desktop/Lattice_proj/blink/project/promote.xml Blink_impl1_map.ncd Blink_impl1.prf 
-Design file:     blink_impl1_map.ncd
-Preference file: blink_impl1.prf
-Device,speed:    LCMXO3D-9400HC,M
-Report level:    verbose report, limited to 1 item per preference
---------------------------------------------------------------------------------
-
-<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
-
-<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY NET "osc_clk" 12.090000 MHz (0 errors)</A></LI>            1458 items scored, 0 timing errors detected.
-
-<LI><A href='#map_twr_pref_1_1' Target='right'>FREQUENCY PORT "clk_x1" 12.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-
-BLOCK ASYNCPATHS
-BLOCK RESETPATHS
---------------------------------------------------------------------------------
-
-
-
-================================================================================
-<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY NET "osc_clk" 12.090000 MHz ;
-            1458 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed: The following path meets requirements by 0.447ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              heartbeat_inst/heartbeat_12  (from clk12M +)
-   Destination:    FF         Data in        heartbeat_inst/heartbeat_12  (to clk12M +)
-
-   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
-
- Constraint Details:
-
-      0.434ns physical path delay SLICE_60 to SLICE_60 meets
-     -0.013ns DIN_HLD and
-      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
-
- Physical Path Details:
-
-      Data path SLICE_60 to SLICE_60:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133   SLICE_60.CLK to    SLICE_60.Q0 SLICE_60 (from clk12M)
-ROUTE        11   e 0.199    SLICE_60.Q0 to    SLICE_60.A0 LED_i_7_N_21_6
-CTOF_DEL    ---     0.101    SLICE_60.A0 to    SLICE_60.F0 SLICE_60
-ROUTE         1   e 0.001    SLICE_60.F0 to   SLICE_60.DI0 heartbeat_inst/heartbeat_N_85 (to clk12M)
-                  --------
-                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
-
-
-================================================================================
-<A name="map_twr_pref_1_1"></A>Preference: FREQUENCY PORT "clk_x1" 12.000000 MHz ;
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
---------------
-----------------------------------------------------------------------------
-Preference(MIN Delays)                  |   Constraint|       Actual|Levels
-----------------------------------------------------------------------------
-                                        |             |             |
-FREQUENCY NET "osc_clk" 12.090000 MHz ; |     0.000 ns|     0.447 ns|   2  
-                                        |             |             |
-FREQUENCY PORT "clk_x1" 12.000000 MHz ; |            -|            -|   0  
-                                        |             |             |
-----------------------------------------------------------------------------
-
-
-All preferences were met.
-
-
-<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
-------------------------
-
-Found 1 clocks:
-
-Clock Domain: clk12M   Source: SLICE_59.F1   Loads: 40
-   Covered under: FREQUENCY NET "osc_clk" 12.090000 MHz ;
-
-
-<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
----------------
-
-Timing errors: 0  Score: 0
-Cumulative negative slack: 0
-
-Constraints cover 1458 paths, 3 nets, and 337 connections (86.19% coverage)
-
-
-
-<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
----------------
-
-Timing errors: 0 (setup), 0 (hold)
-Score: 0 (setup), 0 (hold)
-Cumulative negative slack: 0 (0+0)
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>

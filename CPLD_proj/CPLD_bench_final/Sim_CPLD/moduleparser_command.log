@@ -1,1 +1,0 @@
-C:/lscc/diamond/3.12/bin/nt64/moduleparser.exe -PROJ Sim_CPLD -pf C:/lscc/diamond/3.12/cae_library/synthesis/vhdl/machxo3d.vhd -lib machxo3d -pf C:/lscc/diamond/3.12/cae_library/synthesis/verilog/machxo3d.v -pkg C:/lscc/diamond/3.12/cae_library/vhdl_packages/vdbs -lst C:/Users/victo/Desktop/Lattice_proj/CPLD_bench_final/Sim_CPLD/source_files.lst

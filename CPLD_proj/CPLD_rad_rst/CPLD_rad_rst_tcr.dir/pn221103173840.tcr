@@ -1,6 +1,0 @@
-#Start recording tcl command: 11/3/2022 10:54:24
-#Project Location: C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst; Project name: CPLD_rad_rst
-prj_project open "C:/Users/victo/Desktop/Lattice_proj/CPLD_rad_rst/CPLD_rad_rst.ldf"
-prj_run Synthesis -impl impl1 -task Lattice_Synthesis
-prj_run Export -impl impl1 -task Bitgen
-#Stop recording: 11/3/2022 17:38:40

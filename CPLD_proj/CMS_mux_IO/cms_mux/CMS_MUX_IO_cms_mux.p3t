@@ -1,5 +1,0 @@
--rem
--distrce
--log "CMS_MUX_IO_cms_mux.log"
--o "CMS_MUX_IO_cms_mux.csv"
--pr "CMS_MUX_IO_cms_mux.prf"

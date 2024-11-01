@@ -1,6 +1,0 @@
-#Start recording tcl command: 9/13/2022 18:51:30
-#Project Location: C:/Users/victo/Desktop/Lattice_proj/bench_UART; Project name: benchFIFO
-prj_project open "C:/Users/victo/Desktop/Lattice_proj/bench_UART/benchFIFO.ldf"
-pgr_project close
-prj_project close
-#Stop recording: 9/13/2022 18:51:58

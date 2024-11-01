@@ -1,114 +1,0 @@
-<HTML>
-<HEAD><TITLE>Lattice TCL Log</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="pn211227161605"></A><B><U><big>pn211227161605</big></U></B>
-#Start recording tcl command: 12/27/2021 11:51:25
-#Project Location: C:/Users/victo/Desktop/Lattice_proj/blink/project; Project name: Blink
-C:/Users/victo/Desktop/Lattice_proj/blink/project
-dac7578
-#Start recording tcl command: 12/27/2021 16:16:05
-#Project Location: C:/Users/victo/Desktop/Lattice_proj/blink/project; Project name: dac7578
-prj_project open "C:/Users/victo/Desktop/Lattice_proj/blink/project/Blink.ldf"
-pgr_project open "C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1.xcf"
-prj_run Synthesis -impl impl1 -task Lattice_Synthesis
-prj_run Synthesis -impl impl1
-prj_run Synthesis -impl impl1 -forceAll
-prj_run Synthesis -impl impl1 -forceAll
-prj_run Synthesis -impl impl1 -forceAll
-prj_run Map -impl impl1 -forceOne
-prj_run PAR -impl impl1 -forceAll
-prj_strgy set_value -strategy Strategy1 thermal_default_clock_frequency=12
-prj_run PAR -impl impl1 -task PowerCal -forceAll
-prj_run Export -impl impl1 -task Bitgen
-pgr_project close
-pgr_project open "C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1.xcf"
-pgr_program set -cable USB2
-pgr_program set -port FTUSB-0
-pgr_project close
-pgr_project open "C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1.xcf"
-prj_run Export -impl impl1 -task Jedecgen
-pgr_project close
-pgr_project open "C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1.xcf"
-pgr_project close
-pgr_project open "C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1.xcf"
-pgr_program set -cable USB2
-pgr_program set -port FTUSB-0
-pgr_project close
-pgr_project open "C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1.xcf"
-pgr_program set -cable USB2
-pgr_program set -port FTUSB-0
-pgr_program set -cable 
-pgr_project close
-prj_src remove "C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1.xcf"
-prj_run Export -impl impl1 -task Jedecgen -forceAll
-pgr_project save "C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1/impl1.xcf"
-prj_src add -exclude "C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1/impl1.xcf"
-prj_src enable "C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1/impl1.xcf"
-pgr_program run
-pgr_project save "C:/Users/victo/Desktop/Lattice_proj/blink/project/impl1/impl1.xcf"
-prj_project save
-prj_project close
-prj_project new -name "dac7578" -impl "impl1" -dev LCMXO3D-9400HC-5BG256C -synthesis "lse"
-prj_project save
-#Stop recording: 12/27/2021 16:16:05
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>

@@ -1,9 +1,0 @@
-#Start recording tcl command: 8/15/2023 10:28:27
-#Project Location: C:/Users/victo/Desktop/Lattice_proj/CMS_mux_IO; Project name: CMS_MUX_IO
-C:/Users/victo/Desktop/Lattice_proj/CMS_IO_clk_emulation
-CMS_MUX_IO_EMU
-#Start recording tcl command: 8/15/2023 10:28:56
-#Project Location: C:/Users/victo/Desktop/Lattice_proj/CMS_IO_clk_emulation; Project name: CMS_MUX_IO_EMU
-prj_project open "C:/Users/victo/Desktop/Lattice_proj/CMS_mux_IO/CMS_MUX_IO.ldf"
-prj_project saveas -name "CMS_MUX_IO_EMU" -dir "C:/Users/victo/Desktop/Lattice_proj/CMS_IO_clk_emulation" -copy_gen
-#Stop recording: 8/15/2023 10:28:57

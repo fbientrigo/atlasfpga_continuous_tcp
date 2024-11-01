@@ -1,402 +1,0 @@
-<HTML>
-<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
-
-Loading design for application trce from file cms_mux_io_cms_mux_map.ncd.
-Design name: top_cms_mux
-NCD version: 3.3
-Vendor:      LATTICE
-Device:      LCMXO3D-9400HC
-Package:     CABGA484
-Performance: 6
-Loading device for application trce from file 'se5c9400.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
-Package Status:                     Final          Version 7.
-Performance Hardware Data Status:   Final          Version 2.2.
-Setup and Hold Report
-
---------------------------------------------------------------------------------
-<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2</big></U></B>
-Fri Aug 11 11:08:55 2023
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-
-<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
-------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CMS_MUX_IO_cms_mux.tw1 -gui -msgset C:/Users/victo/Desktop/Lattice_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.prf 
-Design file:     cms_mux_io_cms_mux_map.ncd
-Preference file: cms_mux_io_cms_mux.prf
-Device,speed:    LCMXO3D-9400HC,6
-Report level:    verbose report, limited to 1 item per preference
---------------------------------------------------------------------------------
-
-<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
-
-<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY 100.000000 MHz (0 errors)</A></LI>            475 items scored, 0 timing errors detected.
-Report:  174.642MHz is the maximum frequency for this preference.
-
-<LI><A href='#map_twr_pref_0_1' Target='right'>INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[0]" ; Setup Analysis.(0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-
-<LI><A href='#map_twr_pref_0_2' Target='right'>INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[1]" ; Setup Analysis.(0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-
-<LI><A href='#map_twr_pref_0_3' Target='right'>INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[2]" ; Setup Analysis.(0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-
-BLOCK ASYNCPATHS
-BLOCK RESETPATHS
---------------------------------------------------------------------------------
-
-
-
-================================================================================
-<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY 100.000000 MHz ;
-            475 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed: The following path meets requirements by 4.274ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              SPI/echo_word_i0_i3  (from SCLK_buff +)
-   Destination:    FF         Data in        SPI/data_cpld_i2  (to SCLK_buff +)
-
-   Delay:               5.593ns  (35.9% logic, 64.1% route), 5 logic levels.
-
- Constraint Details:
-
-      5.593ns physical path delay SPI/SLICE_53 to SPI/SLICE_37 meets
-     10.000ns delay constraint less
-      0.133ns DIN_SET requirement (totaling 9.867ns) by 4.274ns
-
- Physical Path Details:
-
-      Data path SPI/SLICE_53 to SPI/SLICE_37:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.368 */SLICE_53.CLK to *I/SLICE_53.Q1 SPI/SLICE_53 (from SCLK_buff)
-ROUTE         2   e 0.896 *I/SLICE_53.Q1 to   SLICE_133.A0 SPI/data_cpld_11_N_208_3
-CTOF_DEL    ---     0.410   SLICE_133.A0 to   SLICE_133.F0 SLICE_133
-ROUTE         1   e 0.896   SLICE_133.F0 to   SLICE_112.C1 SPI/n16
-CTOF_DEL    ---     0.410   SLICE_112.C1 to   SLICE_112.F1 SLICE_112
-ROUTE         3   e 0.896   SLICE_112.F1 to   SLICE_120.B1 SPI/n1869
-CTOF_DEL    ---     0.410   SLICE_120.B1 to   SLICE_120.F1 SLICE_120
-ROUTE         3   e 0.896   SLICE_120.F1 to *I/SLICE_37.D0 SPI/n1846
-CTOF_DEL    ---     0.410 *I/SLICE_37.D0 to *I/SLICE_37.F0 SPI/SLICE_37
-ROUTE         1   e 0.001 *I/SLICE_37.F0 to */SLICE_37.DI0 SPI/data_cpld_11_N_130_2 (to SCLK_buff)
-                  --------
-                    5.593   (35.9% logic, 64.1% route), 5 logic levels.
-
-Report:  174.642MHz is the maximum frequency for this preference.
-
-
-================================================================================
-<A name="map_twr_pref_0_1"></A>Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[0]" ; Setup Analysis.
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-================================================================================
-<A name="map_twr_pref_0_2"></A>Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[1]" ; Setup Analysis.
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-================================================================================
-<A name="map_twr_pref_0_3"></A>Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[2]" ; Setup Analysis.
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
---------------
-----------------------------------------------------------------------------
-Preference                              |   Constraint|       Actual|Levels
-----------------------------------------------------------------------------
-                                        |             |             |
-FREQUENCY 100.000000 MHz ;              |  100.000 MHz|  174.642 MHz|   5  
-                                        |             |             |
-INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
-2.000000 ns CLKPORT "Mux_sel[0]" ;      |             |             |
-Setup Analysis.                         |            -|            -|   0  
-                                        |             |             |
-INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
-2.000000 ns CLKPORT "Mux_sel[1]" ;      |             |             |
-Setup Analysis.                         |            -|            -|   0  
-                                        |             |             |
-INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
-2.000000 ns CLKPORT "Mux_sel[2]" ;      |             |             |
-Setup Analysis.                         |            -|            -|   0  
-                                        |             |             |
-----------------------------------------------------------------------------
-
-
-All preferences were met.
-
-
-<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
-------------------------
-
-Found 8 clocks:
-
-Clock Domain: SPI_rdy   Source: SPI/SLICE_63.Q0   Loads: 26
-   No transfer within this clock domain is found
-
-   Data transfers from:
-   Clock Domain: SCLK_buff   Source: CSR_SCLK_P.PAD
-      Covered under: FREQUENCY 100.000000 MHz ;   Transfers: 12
-
-Clock Domain: SCLK_buff   Source: CSR_SCLK_P.PAD   Loads: 37
-   Covered under: FREQUENCY 100.000000 MHz ;
-
-Clock Domain: Mux_sel_c_0_derived_8   Source: SLICE_12.F1   Loads: 2
-   No transfer within this clock domain is found
-
-Clock Domain: Mux_sel_c_0_derived_7   Source: SLICE_122.F1   Loads: 2
-   No transfer within this clock domain is found
-
-Clock Domain: Mezz4_DRS4_o_A_3__N_30   Source: SLICE_22.F0   Loads: 8
-   No transfer within this clock domain is found
-
-Clock Domain: Mezz2_DRS4_o_A_3__N_20   Source: SLICE_16.F0   Loads: 8
-   No transfer within this clock domain is found
-
-Clock Domain: Mezz1_DRS4_o_A_3__N_15   Source: SLICE_12.F0   Loads: 8
-   No transfer within this clock domain is found
-
-Clock Domain: ADC_ch_out_sel_7__N_79   Source: SLICE_22.F1   Loads: 10
-   No transfer within this clock domain is found
-
-
-<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
----------------
-
-Timing errors: 0  Score: 0
-Cumulative negative slack: 0
-
-Constraints cover 475 paths, 8 nets, and 613 connections (77.30% coverage)
-
---------------------------------------------------------------------------------
-<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2</big></U></B>
-Fri Aug 11 11:08:55 2023
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-
-<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
-------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o CMS_MUX_IO_cms_mux.tw1 -gui -msgset C:/Users/victo/Desktop/Lattice_proj/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.prf 
-Design file:     cms_mux_io_cms_mux_map.ncd
-Preference file: cms_mux_io_cms_mux.prf
-Device,speed:    LCMXO3D-9400HC,M
-Report level:    verbose report, limited to 1 item per preference
---------------------------------------------------------------------------------
-
-<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
-
-<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY 100.000000 MHz (0 errors)</A></LI>            475 items scored, 0 timing errors detected.
-
-<LI><A href='#map_twr_pref_1_1' Target='right'>INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[0]" (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-
-<LI><A href='#map_twr_pref_1_2' Target='right'>INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[1]" (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-
-<LI><A href='#map_twr_pref_1_3' Target='right'>INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[2]" (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
-
-BLOCK ASYNCPATHS
-BLOCK RESETPATHS
---------------------------------------------------------------------------------
-
-
-
-================================================================================
-<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY 100.000000 MHz ;
-            475 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed: The following path meets requirements by 0.386ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              SPI/SPI_states_ack_i0  (from SCLK_buff +)
-   Destination:    FF         Data in        SPI/SPI_states_ack_i0  (to SCLK_buff +)
-
-   Delay:               0.330ns  (39.7% logic, 60.3% route), 1 logic levels.
-
- Constraint Details:
-
-      0.330ns physical path delay SLICE_30 to SLICE_30 meets
-     -0.056ns LSR_HLD and
-      0.000ns delay constraint requirement (totaling -0.056ns) by 0.386ns
-
- Physical Path Details:
-
-      Data path SLICE_30 to SLICE_30:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.131   SLICE_30.CLK to    SLICE_30.Q0 SLICE_30 (from SCLK_buff)
-ROUTE        10   e 0.199    SLICE_30.Q0 to   SLICE_30.LSR SPI/SPI_states_ack_0 (to SCLK_buff)
-                  --------
-                    0.330   (39.7% logic, 60.3% route), 1 logic levels.
-
-
-================================================================================
-<A name="map_twr_pref_1_1"></A>Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[0]" ;
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-================================================================================
-<A name="map_twr_pref_1_2"></A>Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[1]" ;
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-================================================================================
-<A name="map_twr_pref_1_3"></A>Preference: INPUT_SETUP ALLPORTS 5.000000 ns HOLD 2.000000 ns CLKPORT "Mux_sel[2]" ;
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
---------------
-----------------------------------------------------------------------------
-Preference(MIN Delays)                  |   Constraint|       Actual|Levels
-----------------------------------------------------------------------------
-                                        |             |             |
-FREQUENCY 100.000000 MHz ;              |            -|            -|   1  
-                                        |             |             |
-INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
-2.000000 ns CLKPORT "Mux_sel[0]" ;      |            -|            -|   0  
-                                        |             |             |
-INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
-2.000000 ns CLKPORT "Mux_sel[1]" ;      |            -|            -|   0  
-                                        |             |             |
-INPUT_SETUP ALLPORTS 5.000000 ns HOLD   |             |             |
-2.000000 ns CLKPORT "Mux_sel[2]" ;      |            -|            -|   0  
-                                        |             |             |
-----------------------------------------------------------------------------
-
-
-All preferences were met.
-
-
-<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
-------------------------
-
-Found 8 clocks:
-
-Clock Domain: SPI_rdy   Source: SPI/SLICE_63.Q0   Loads: 26
-   No transfer within this clock domain is found
-
-   Data transfers from:
-   Clock Domain: SCLK_buff   Source: CSR_SCLK_P.PAD
-      Covered under: FREQUENCY 100.000000 MHz ;   Transfers: 12
-
-Clock Domain: SCLK_buff   Source: CSR_SCLK_P.PAD   Loads: 37
-   Covered under: FREQUENCY 100.000000 MHz ;
-
-Clock Domain: Mux_sel_c_0_derived_8   Source: SLICE_12.F1   Loads: 2
-   No transfer within this clock domain is found
-
-Clock Domain: Mux_sel_c_0_derived_7   Source: SLICE_122.F1   Loads: 2
-   No transfer within this clock domain is found
-
-Clock Domain: Mezz4_DRS4_o_A_3__N_30   Source: SLICE_22.F0   Loads: 8
-   No transfer within this clock domain is found
-
-Clock Domain: Mezz2_DRS4_o_A_3__N_20   Source: SLICE_16.F0   Loads: 8
-   No transfer within this clock domain is found
-
-Clock Domain: Mezz1_DRS4_o_A_3__N_15   Source: SLICE_12.F0   Loads: 8
-   No transfer within this clock domain is found
-
-Clock Domain: ADC_ch_out_sel_7__N_79   Source: SLICE_22.F1   Loads: 10
-   No transfer within this clock domain is found
-
-
-<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
----------------
-
-Timing errors: 0  Score: 0
-Cumulative negative slack: 0
-
-Constraints cover 475 paths, 8 nets, and 613 connections (77.30% coverage)
-
-
-
-<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
----------------
-
-Timing errors: 0 (setup), 0 (hold)
-Score: 0 (setup), 0 (hold)
-Cumulative negative slack: 0 (0+0)
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>

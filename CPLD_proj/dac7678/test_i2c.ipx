@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<DiamondModule name="test_i2c" module="EFB" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2022 01 05 15:52:56.665" version="1.2" type="Module" synthesis="lse" source_format="VHDL">
-  <Package>
-		<File name="test_i2c.lpc" type="lpc" modified="2022 01 05 15:52:39.229"/>
-		<File name="test_i2c.vhd" type="top_level_vhdl" modified="2022 01 05 15:52:39.276"/>
-		<File name="test_i2c_tmpl.vhd" type="template_vhdl" modified="2022 01 05 15:52:39.276"/>
-  </Package>
-</DiamondModule>

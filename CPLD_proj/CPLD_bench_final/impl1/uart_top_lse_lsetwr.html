@@ -1,286 +1,0 @@
-<HTML>
-<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
---------------------------------------------------------------------------------
-Lattice Synthesis Timing Report, Version  
-Thu Sep 15 12:37:01 2022
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-
-<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
-------------------
-Design:     uart_top
-Constraint file:  
-Report level:    verbose report, limited to 3 items per constraint
---------------------------------------------------------------------------------
-
-
-
-================================================================================
-Constraint: create_clock -period 5.000000 -name clk0 [get_nets osc_int]
-            137 items scored, 137 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Error:  The following path violates requirements by 6.718ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3BX    CK             \fifo/FF_1  (from osc_int +)
-   Destination:    FD1S3BX    D              \fifo/FF_1  (to osc_int +)
-
-   Delay:                  11.585ns  (34.9% logic, 65.1% route), 10 logic levels.
-
- Constraint Details:
-
-     11.585ns data_path \fifo/FF_1 to \fifo/FF_1 violates
-      5.000ns delay constraint less
-      0.133ns L_S requirement (totaling 4.867ns) by 6.718ns
-
- Path Details: \fifo/FF_1 to \fifo/FF_1
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367             CK to Q              \fifo/FF_1 (from osc_int)
-Route         2   e 0.838                                  Empty
-LUT4        ---     0.408              A to Z              \fifo/INV_4
-Route         1   e 0.660                                  \fifo/invout_0
-LUT4        ---     0.408              B to Z              \fifo/AND2_t17
-Route        37   e 1.428                                  \fifo/rden_i
-LUT4        ---     0.408                to                \fifo/empty_cmp_ci_a
-Route         1   e 0.660                                  \fifo/rcount_1
-LUT4        ---     0.408                to                \fifo/empty_cmp_0
-Route         1   e 0.660                                  \fifo/rcount_3
-LUT4        ---     0.408                to                \fifo/empty_cmp_1
-Route         1   e 0.660                                  \fifo/rcount_4
-LUT4        ---     0.408                to                \fifo/empty_cmp_2
-Route         1   e 0.660                                  \fifo/rcount_7
-LUT4        ---     0.408                to                \fifo/empty_cmp_3
-Route         1   e 0.660                                  \fifo/co3_2
-LUT4        ---     0.408                to                \fifo/empty_cmp_4
-Route         1   e 0.660                                  \fifo/empty_d_c
-LUT4        ---     0.408                to                \fifo/a0
-Route         1   e 0.660                                  \fifo/empty_d
-                  --------
-                   11.585  (34.9% logic, 65.1% route), 10 logic levels.
-
-
-Error:  The following path violates requirements by 6.718ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3BX    CK             \fifo/FF_1  (from osc_int +)
-   Destination:    FD1S3BX    D              \fifo/FF_1  (to osc_int +)
-
-   Delay:                  11.585ns  (34.9% logic, 65.1% route), 10 logic levels.
-
- Constraint Details:
-
-     11.585ns data_path \fifo/FF_1 to \fifo/FF_1 violates
-      5.000ns delay constraint less
-      0.133ns L_S requirement (totaling 4.867ns) by 6.718ns
-
- Path Details: \fifo/FF_1 to \fifo/FF_1
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367             CK to Q              \fifo/FF_1 (from osc_int)
-Route         2   e 0.838                                  Empty
-LUT4        ---     0.408              A to Z              \fifo/INV_4
-Route         1   e 0.660                                  \fifo/invout_0
-LUT4        ---     0.408              B to Z              \fifo/AND2_t17
-Route        37   e 1.428                                  \fifo/rden_i
-LUT4        ---     0.408                to                \fifo/empty_cmp_ci_a
-Route         1   e 0.660                                  \fifo/rcount_1
-LUT4        ---     0.408                to                \fifo/empty_cmp_0
-Route         1   e 0.660                                  \fifo/rcount_3
-LUT4        ---     0.408                to                \fifo/empty_cmp_1
-Route         1   e 0.660                                  \fifo/rcount_4
-LUT4        ---     0.408                to                \fifo/empty_cmp_2
-Route         1   e 0.660                                  \fifo/rcount_7
-LUT4        ---     0.408                to                \fifo/empty_cmp_3
-Route         1   e 0.660                                  \fifo/co3_2
-LUT4        ---     0.408                to                \fifo/empty_cmp_4
-Route         1   e 0.660                                  \fifo/empty_d_c
-LUT4        ---     0.408                to                \fifo/a0
-Route         1   e 0.660                                  \fifo/empty_d
-                  --------
-                   11.585  (34.9% logic, 65.1% route), 10 logic levels.
-
-
-Error:  The following path violates requirements by 6.686ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3AX    CK             i_f_wr_en_161  (from osc_int +)
-   Destination:    FD1S3AX    D              \fifo/FF_0  (to osc_int +)
-
-   Delay:                  11.553ns  (35.0% logic, 65.0% route), 10 logic levels.
-
- Constraint Details:
-
-     11.553ns data_path i_f_wr_en_161 to \fifo/FF_0 violates
-      5.000ns delay constraint less
-      0.133ns L_S requirement (totaling 4.867ns) by 6.686ns
-
- Path Details: i_f_wr_en_161 to \fifo/FF_0
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.367             CK to Q              i_f_wr_en_161 (from osc_int)
-Route         1   e 0.660                                  i_f_wr_en
-LUT4        ---     0.408              B to Z              \fifoUart/o_fifo_wr_en_I_0_2_lut
-Route         1   e 0.660                                  WrEn
-LUT4        ---     0.408              A to Z              \fifo/AND2_t18
-Route        45   e 1.436                                  \fifo/wren_i
-LUT4        ---     0.408                to                \fifo/full_cmp_ci_a
-Route         1   e 0.660                                  \fifo/wcount_1
-LUT4        ---     0.408                to                \fifo/full_cmp_0
-Route         1   e 0.660                                  \fifo/wcount_3
-LUT4        ---     0.408                to                \fifo/full_cmp_1
-Route         1   e 0.660                                  \fifo/wcount_5
-LUT4        ---     0.408                to                \fifo/full_cmp_2
-Route         1   e 0.660                                  \fifo/wcount_6
-LUT4        ---     0.408                to                \fifo/full_cmp_3
-Route         1   e 0.660                                  \fifo/co3_3
-LUT4        ---     0.408                to                \fifo/full_cmp_4
-Route         1   e 0.660                                  \fifo/full_d_c
-LUT4        ---     0.408                to                \fifo/a1
-Route         2   e 0.798                                  \fifo/full_d
-                  --------
-                   11.553  (35.0% logic, 65.0% route), 10 logic levels.
-
-Warning: 11.718 ns is the maximum delay for this constraint.
-
-
-<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
---------------
---------------------------------------------------------------------------------
-Constraint                              |   Constraint|       Actual|Levels
---------------------------------------------------------------------------------
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets osc_int]                 |     5.000 ns|    11.718 ns|    10 *
-                                        |             |             |
---------------------------------------------------------------------------------
-
-
-1 constraints not met.
-
---------------------------------------------------------------------------------
-Critical Nets                           |   Loads|  Errors| % of total
---------------------------------------------------------------------------------
-\fifo/co3_3                             |       1|      60|     43.80%
-                                        |        |        |
-\fifo/full_d                            |       2|      60|     43.80%
-                                        |        |        |
-\fifo/full_d_c                          |       1|      60|     43.80%
-                                        |        |        |
-\fifo/wcount_3                          |       5|      60|     43.80%
-                                        |        |        |
-\fifo/wcount_5                          |       5|      60|     43.80%
-                                        |        |        |
-\fifo/wcount_6                          |       5|      60|     43.80%
-                                        |        |        |
-\fifo/wcount_1                          |       5|      46|     33.58%
-                                        |        |        |
-\fifo/co3_2                             |       1|      28|     20.44%
-                                        |        |        |
-\fifo/empty_d                           |       1|      28|     20.44%
-                                        |        |        |
-\fifo/empty_d_c                         |       1|      28|     20.44%
-                                        |        |        |
-\fifo/rcount_3                          |       5|      28|     20.44%
-                                        |        |        |
-\fifo/rcount_4                          |       5|      28|     20.44%
-                                        |        |        |
-\fifo/rcount_7                          |       5|      28|     20.44%
-                                        |        |        |
-\fifo/r_g2b_xor_cluster_0               |       4|      24|     17.52%
-                                        |        |        |
-\fifo/rcount_1                          |       5|      21|     15.33%
-                                        |        |        |
-b13_conv_hexa_15__N_138[8]              |       1|      17|     12.41%
-                                        |        |        |
-n53020                                  |       1|      17|     12.41%
-                                        |        |        |
-n53023                                  |       1|      17|     12.41%
-                                        |        |        |
-\fifo/r_g2b_xor_cluster_1               |       2|      16|     11.68%
-                                        |        |        |
---------------------------------------------------------------------------------
-
-
-<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
----------------
-
-Timing errors: 137  Score: 619348
-
-Constraints cover  40089 paths, 10031 nets, and 27733 connections (97.6% coverage)
-
-
-Peak memory: 167493632 bytes, TRCE: 28278784 bytes, DLYMAN: 2293760 bytes
-CPU_TIME_REPORT: 0 secs 
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>

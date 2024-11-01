@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<DiamondModule name="b13fifo" module="b13fifo" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2022 08 30 16:41:58.100" version="5.8" type="Module" synthesis="lse" source_format="VHDL">
-  <Package>
-		<File name="b13fifo.lpc" type="lpc" modified="2022 08 30 16:41:49.371"/>
-		<File name="b13fifo.vhd" type="top_level_vhdl" modified="2022 08 30 16:41:49.418"/>
-		<File name="b13fifo_tmpl.vhd" type="template_vhdl" modified="2022 08 30 16:41:49.418"/>
-		<File name="tb_b13fifo_tmpl.vhd" type="testbench_vhdl" modified="2022 08 30 16:41:49.418"/>
-  </Package>
-</DiamondModule>

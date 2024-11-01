@@ -1,657 +1,0 @@
-<HTML>
-<HEAD><TITLE>Project Summary</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Mrp"></A>
-         Lattice Mapping Report File for Design Module 'top_cms_mux'
-
-
-
-<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
-
-Command line:   map -a MachXO3D -p LCMXO3D-9400HC -t CABGA484 -s 6 -oc
-     Industrial CMS_MUX_cms_mux.ngd -o CMS_MUX_cms_mux_map.ncd -pr
-     CMS_MUX_cms_mux.prf -mp CMS_MUX_cms_mux.mrp -lpf
-     C:/Users/victo/Desktop/Lattice_proj/cms_mux/CMS_MUX_cms_mux.lpf -lpf
-     C:/Users/victo/Desktop/Lattice_proj/CMS_MUX.lpf -c 0 -gui -msgset
-     C:/Users/victo/Desktop/Lattice_proj/promote.xml 
-Target Vendor:  LATTICE
-Target Device:  LCMXO3D-9400HCCABGA484
-Target Performance:   6
-Mapper:  se5c00,  version:  Diamond (64-bit) 3.12.0.240.2
-Mapped on:  07/24/23  13:44:02
-
-
-<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:     92 out of 10552 (1%)
-      PFU registers:           92 out of  9400 (1%)
-      PIO registers:            0 out of  1152 (0%)
-   Number of SLICEs:        61 out of  4700 (1%)
-      SLICEs as Logic/ROM:     61 out of  4700 (1%)
-      SLICEs as RAM:            0 out of  3525 (0%)
-      SLICEs as Carry:          0 out of  4700 (0%)
-   Number of LUT4s:         70 out of  9400 (1%)
-      Number used as logic LUTs:         70
-      Number used as distributed RAM:     0
-      Number used as ripple logic:        0
-      Number used as shift registers:     0
-   Number of PIO sites used: 205 + 4(JTAG) out of 384 (54%)
-      Number of PIO sites used for single ended IOs: 71
-      Number of PIO sites used for differential IOs: 138 (represented by 69 PIO
-     comps in NCD)
-   Number of block RAMs:  0 out of 48 (0%)
-   Number of GSRs:        1 out of 1 (100%)
-   EFB used :        No
-   JTAG used :       No
-   Readback used :   No
-   Oscillator used : No
-   Security used :   No
-   Startup used :    No
-   POR :             On
-   Bandgap :         On
-   Number of Power Controller:  0 out of 1 (0%)
-   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
-   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
-   Number of Dynamic Bank Controller (BCSLEWRATEA):  0 out of 6 (0%)
-   Number of DCCA:  0 out of 8 (0%)
-   Number of DCMA:  0 out of 2 (0%)
-   Number of PLLs:  0 out of 2 (0%)
-   Number of DQSDLLs:  0 out of 2 (0%)
-   Number of CLKDIVC:  0 out of 4 (0%)
-   Number of ECLKSYNCA:  0 out of 4 (0%)
-   Number of ECLKBRIDGECS:  0 out of 2 (0%)
-   Notes:-
-      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
-     distributed RAMs) + 2*(Number of ripple logic)
-
-      2. Number of logic LUT4s does not include count of distributed RAM and
-     ripple logic.
-   Number of clocks:  8
-     Net SPI_rdy: 20 loads, 20 rising, 0 falling (Driver: SPI/data_rdy_40 )
-     Net ADC_ch_out_sel_7__N_69: 10 loads, 10 rising, 0 falling (Driver:
-     i1377_2_lut_3_lut )
-     Net Mux_sel_c_0_derived_7: 2 loads, 2 rising, 0 falling (Driver:
-     i1176_2_lut_rep_7 )
-     Net Mezz1_DRS4_o_A_3__N_10: 4 loads, 4 rising, 0 falling (Driver:
-     i943_3_lut )
-     Net SCLK_buff: 14 loads, 14 rising, 0 falling (Driver: PIO CSR_SCLK_P )
-     Net Mux_sel_c_0_derived_8: 2 loads, 2 rising, 0 falling (Driver:
-     i1178_2_lut_rep_6 )
-     Net Mezz2_DRS4_o_A_3__N_15: 4 loads, 4 rising, 0 falling (Driver: i1_3_lut
-     )
-     Net Mezz4_DRS4_o_A_3__N_25: 4 loads, 4 rising, 0 falling (Driver:
-     i1370_3_lut )
-   Number of Clock Enables:  9
-     Net SPI_rdy_enable_7: 4 loads, 4 LSLICEs
-     Net CS_buff_neg: 1 loads, 1 LSLICEs
-     Net SPI_rdy_enable_32: 4 loads, 4 LSLICEs
-     Net SPI_rdy_enable_33: 4 loads, 4 LSLICEs
-     Net SPI_rdy_enable_34: 4 loads, 4 LSLICEs
-     Net SPI_rdy_enable_35: 4 loads, 4 LSLICEs
-     Net SPI/SCLK_buff_enable_23: 7 loads, 7 LSLICEs
-     Net SPI/SCLK_buff_enable_2: 1 loads, 1 LSLICEs
-     Net SPI/SCLK_buff_enable_25: 5 loads, 5 LSLICEs
-   Number of LSRs:  8
-     Net DRS4_i_A_c_0: 3 loads, 3 LSLICEs
-     Net n1521: 2 loads, 2 LSLICEs
-     Net DRS4_i_A_c_1: 3 loads, 3 LSLICEs
-     Net n1851: 2 loads, 2 LSLICEs
-     Net DRS4_i_A_c_2: 3 loads, 3 LSLICEs
-     Net DRS4_i_A_c_3: 3 loads, 3 LSLICEs
-     Net SPI/n1861: 5 loads, 5 LSLICEs
-     Net SPI/n1872: 5 loads, 5 LSLICEs
-   Number of nets driven by tri-state buffers:  0
-   Top 10 highest fanout non-clock nets:
-     Net Mux_sel_c_0: 38 loads
-     Net Mux_sel_c_1: 26 loads
-     Net Mux_sel_c_2: 16 loads
-     Net SPI_states_1: 13 loads
-     Net CS_buff_neg: 8 loads
-     Net SPI_states_0: 8 loads
-     Net SPI/SCLK_buff_enable_23: 7 loads
-     Net DRS4_refclk_input_buff: 5 loads
-     Net MOSI_buff: 5 loads
-     Net SPI_data_1: 5 loads
-
-
-
-
-   Number of warnings:  2
-   Number of errors:    0
-     
-
-
-
-
-
-<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
-
-WARNING - map: input pad net 'rst' has no legal load.
-WARNING - map: IO buffer missing for top level port rst...logic will be
-     discarded.
-
-
-
-<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
-
-+---------------------+-----------+-----------+------------+
-| IO Name             | Direction | Levelmode | IO         |
-|                     |           |  IO_TYPE  | Register   |
-+---------------------+-----------+-----------+------------+
-| CSR_MOSI_P          | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| CSR_CS_P            | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_ADC_ch_i_p[0] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_ADC_ch_i_p[1] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_ADC_ch_i_p[2] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_ADC_ch_i_p[3] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_ADC_ch_i_p[4] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_ADC_ch_i_p[5] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_ADC_ch_i_p[6] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_ADC_ch_i_p[7] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_ADC_ch_i_p[0] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_ADC_ch_i_p[1] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_ADC_ch_i_p[2] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_ADC_ch_i_p[3] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_ADC_ch_i_p[4] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_ADC_ch_i_p[5] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_ADC_ch_i_p[6] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_ADC_ch_i_p[7] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz3_ADC_ch_i_p[0] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz3_ADC_ch_i_p[1] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz3_ADC_ch_i_p[2] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz3_ADC_ch_i_p[3] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-
-| Mezz3_ADC_ch_i_p[4] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz3_ADC_ch_i_p[5] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz3_ADC_ch_i_p[6] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz3_ADC_ch_i_p[7] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_ADC_ch_i_p[0] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_ADC_ch_i_p[1] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_ADC_ch_i_p[2] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_ADC_ch_i_p[3] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_ADC_ch_i_p[4] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_ADC_ch_i_p[5] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_ADC_ch_i_p[6] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_ADC_ch_i_p[7] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_ADC_ch_i_p[0] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_ADC_ch_i_p[1] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_ADC_ch_i_p[2] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_ADC_ch_i_p[3] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_ADC_ch_i_p[4] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_ADC_ch_i_p[5] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_ADC_ch_i_p[6] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_ADC_ch_i_p[7] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_LCLK_p[0]  | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_LCLK_p[1]  | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_LCLK_p[2]  | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_LCLK_p[3]  | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_LCLK_p[4]  | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_ADCLK_p[0] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_ADCLK_p[1] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_ADCLK_p[2] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-
-| Mezz_ADC_ADCLK_p[3] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_ADCLK_p[4] | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| CPLD_ADC_ch_o_p[0]  | OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| CPLD_ADC_ch_o_p[1]  | OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| CPLD_ADC_ch_o_p[2]  | OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| CPLD_ADC_ch_o_p[3]  | OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| CPLD_ADC_ch_o_p[4]  | OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| CPLD_ADC_ch_o_p[5]  | OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| CPLD_ADC_ch_o_p[6]  | OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| CPLD_ADC_ch_o_p[7]  | OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| CPLD_ADC_LCLK_o_p   | OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| CPLD_ADC_ADCLK_o_p  | OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| DRS4_i_refclk_p     | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DRS4_o_refclk_p[0]| OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DRS4_o_refclk_p[1]| OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DRS4_o_refclk_p[2]| OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DRS4_o_refclk_p[3]| OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DRS4_o_refclk_p[4]| OUTPUT    | LVDS25E   |            |
-+---------------------+-----------+-----------+------------+
-| CSR_SCLK_P          | INPUT     | LVDS25    |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_Mux0[4]        | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_Mux0[3]        | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_Mux0[2]        | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_Mux0[1]        | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_Mux0[0]        | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_Mux1[4]        | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_Mux1[3]        | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_Mux1[2]        | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_Mux1[1]        | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-
-| Mezz_Mux1[0]        | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_DRS4_o_A[3]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_DRS4_o_A[2]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_DRS4_o_A[1]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz1_DRS4_o_A[0]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_DRS4_o_A[3]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_DRS4_o_A[2]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_DRS4_o_A[1]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz2_DRS4_o_A[0]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz3_DRS4_o_A[3]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz3_DRS4_o_A[2]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz3_DRS4_o_A[1]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz3_DRS4_o_A[0]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_DRS4_o_A[3]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_DRS4_o_A[2]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_DRS4_o_A[1]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz4_DRS4_o_A[0]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_DRS4_o_A[3]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_DRS4_o_A[2]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_DRS4_o_A[1]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz5_DRS4_o_A[0]   | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DRS4_o_denable[4]| OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DRS4_o_denable[3]| OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DRS4_o_denable[2]| OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DRS4_o_denable[1]| OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DRS4_o_denable[0]| OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DAC_sel0[4]    | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DAC_sel0[3]    | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-
-| Mezz_DAC_sel0[2]    | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DAC_sel0[1]    | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DAC_sel0[0]    | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DAC_sel1[4]    | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DAC_sel1[3]    | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DAC_sel1[2]    | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DAC_sel1[1]    | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_DAC_sel1[0]    | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_nCS[4]     | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_nCS[3]     | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_nCS[2]     | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_nCS[1]     | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_nCS[0]     | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_DAC_nReset[4]| OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_DAC_nReset[3]| OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_DAC_nReset[2]| OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_DAC_nReset[1]| OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_ADC_DAC_nReset[0]| OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_nSHDN[4]       | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_nSHDN[3]       | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_nSHDN[2]       | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_nSHDN[1]       | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mezz_nSHDN[0]       | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| DRS4_i_A[3]         | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| DRS4_i_A[2]         | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| DRS4_i_A[1]         | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| DRS4_i_A[0]         | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mux_sel[2]          | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-
-| Mux_sel[1]          | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Mux_sel[0]          | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-
-
-
-<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
-
-Block i1445 undriven or does not drive anything - clipped.
-Signal n1853 was merged into signal DRS4_i_A_c_0
-Signal n1858 was merged into signal DRS4_i_A_c_3
-Signal n1857 was merged into signal DRS4_i_A_c_2
-Signal n1856 was merged into signal DRS4_i_A_c_1
-Signal VCC_net undriven or does not drive anything - clipped.
-Block i1112_1_lut was optimized away.
-Block i1117_1_lut was optimized away.
-Block i1116_1_lut was optimized away.
-Block i1115_1_lut was optimized away.
-
-     
-
-
-
-<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
----------
-
-GSR Component:
-   The Global Set Reset (GSR) resource has been used to implement a global reset
-        of the design. The reset signal used for GSR control is 'CS_buff_neg'.
-        
-
-     GSR Property:
-   The design components with GSR property set to ENABLED will respond to global
-        set reset while the components with GSR property set to DISABLED will
-        not.
-        
-
-     Components with disabled GSR Property
--------------------------------------
-
-     These components have the GSR property set to DISABLED. The components will
-     not respond to the reset signal 'CS_buff_neg' via the GSR component.
-
-     Type and number of components of the type: 
-   Register = 90 
-
-     Type and instance name of component: 
-   Register : Mezz_nSHDN_i1
-   Register : Mezz_DAC_sel0_i1
-   Register : Mezz_DAC_sel1_i1
-   Register : Mezz_ADC_DAC_nReset_i1
-   Register : Mezz_ADC_nCS_i1
-   Register : Mezz_Mux0_i1
-   Register : ADC_LCLK_out_I_0
-   Register : Mezz3_DRS4_o_A_3__I_0_i1
-   Register : ADC_ADCLK_out_I_0
-   Register : Mezz1_DRS4_o_A_3__I_0_i1
-   Register : Mezz_DRS4_o_denable_i1
-
-   Register : ADC_ch_out_sel_7__I_0_i2
-   Register : ADC_ch_out_sel_7__I_0_i3
-   Register : ADC_ch_out_sel_7__I_0_i4
-   Register : ADC_ch_out_sel_7__I_0_i5
-   Register : ADC_ch_out_sel_7__I_0_i6
-   Register : ADC_ch_out_sel_7__I_0_i7
-   Register : ADC_ch_out_sel_7__I_0_i8
-   Register : Mezz5_DRS4_o_A_3__I_0_i2
-   Register : Mezz5_DRS4_o_A_3__I_0_i3
-   Register : Mezz5_DRS4_o_A_3__I_0_i4
-   Register : Mezz3_DRS4_o_A_3__I_0_i2
-   Register : Mezz3_DRS4_o_A_3__I_0_i3
-   Register : Mezz3_DRS4_o_A_3__I_0_i4
-   Register : Mezz2_DRS4_o_A_3__I_0_i2
-   Register : Mezz2_DRS4_o_A_3__I_0_i3
-   Register : Mezz2_DRS4_o_A_3__I_0_i4
-   Register : Mezz1_DRS4_o_A_3__I_0_i2
-   Register : Mezz1_DRS4_o_A_3__I_0_i3
-   Register : Mezz1_DRS4_o_A_3__I_0_i4
-   Register : Mezz_nSHDN_i2
-   Register : Mezz_nSHDN_i3
-   Register : Mezz_nSHDN_i4
-   Register : Mezz_nSHDN_i5
-   Register : Mezz_DAC_sel0_i2
-   Register : Mezz_DAC_sel0_i3
-   Register : Mezz_DAC_sel0_i4
-   Register : Mezz_DAC_sel0_i5
-   Register : Mezz_DAC_sel1_i2
-   Register : Mezz_DAC_sel1_i3
-   Register : Mezz_DAC_sel1_i4
-   Register : Mezz_DAC_sel1_i5
-   Register : Mezz_ADC_DAC_nReset_i2
-   Register : Mezz_ADC_DAC_nReset_i3
-   Register : Mezz_ADC_DAC_nReset_i4
-   Register : Mezz_ADC_DAC_nReset_i5
-   Register : Mezz_ADC_nCS_i2
-   Register : Mezz_ADC_nCS_i3
-   Register : Mezz_ADC_nCS_i4
-   Register : Mezz_ADC_nCS_i5
-   Register : Mezz_Mux0_i2
-   Register : Mezz_Mux0_i3
-   Register : Mezz_Mux0_i4
-   Register : Mezz_Mux0_i5
-   Register : Mezz_DRS4_o_denable_i2
-   Register : Mezz4_DRS4_o_A_3__I_0_i4
-   Register : Mezz4_DRS4_o_A_3__I_0_i3
-   Register : Mezz_DRS4_o_denable_i3
-   Register : Mezz_DRS4_o_denable_i4
-   Register : Mezz_DRS4_o_denable_i5
-   Register : Mezz5_DRS4_o_A_3__I_0_i1
-   Register : ADC_ch_out_sel_7__I_0_i1
-   Register : Mezz4_DRS4_o_A_3__I_0_i2
-   Register : Mezz2_DRS4_o_A_3__I_0_i1
-   Register : Mezz4_DRS4_o_A_3__I_0_i1
-   Register : SPI/data_in_i0_i8
-   Register : SPI/data_rdy_40
-
-   Register : SPI/data_in_i0_i7
-   Register : SPI/count_data_i0_i0
-   Register : SPI/data_in_i0_i6
-   Register : SPI/data_in_i0_i5
-   Register : SPI/data_in_i0_i4
-   Register : SPI/data_in_i0_i3
-   Register : SPI/data_in_i0_i2
-   Register : SPI/data_in_i0_i1
-   Register : SPI/data_rec_i0_i0
-   Register : SPI/data_rec_i0_i6
-   Register : SPI/data_rec_i0_i5
-   Register : SPI/data_rec_i0_i4
-   Register : SPI/data_rec_i0_i3
-   Register : SPI/data_rec_i0_i2
-   Register : SPI/data_rec_i0_i1
-   Register : SPI/count_data_i0_i3
-   Register : SPI/count_data_i0_i2
-   Register : SPI/data_rec_i0_i7
-   Register : SPI/data_in_i0_i0
-   Register : SPI/count_data_i0_i1
-   Register : SPI/data_in_i0_i9
-   Register : SPI/data_rec_i0_i9
-   Register : SPI/data_rec_i0_i8
-
-
-
-<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
--------------------------
-
-   Total CPU Time: 1 secs  
-   Total REAL Time: 2 secs  
-   Peak Memory Usage: 71 MB
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-     Copyright (c) 1995 AT&T Corp.   All rights reserved.
-     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-     Copyright (c) 2001 Agere Systems   All rights reserved.
-     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
-     reserved.
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>
