@@ -1731,3 +1731,1876 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
+18:21:53 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:37: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t remaining = (uint16_t)strlen(buffer);
+                                     ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:155:8: error: redefinition of 'data_ptr'
+  u8_t *data_ptr = "!#\n"
+        ^~~~~~~~
+../src/tcp_com.c:134:8: note: previous definition of 'data_ptr' was here
+  u8_t *data_ptr = buffer;
+        ^~~~~~~~
+../src/tcp_com.c:155:19: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  u8_t *data_ptr = "!#\n"
+                   ^~~~~~
+../src/tcp_com.c:157:2: error: expected ',' or ';' before 'usleep'
+  usleep(200);
+  ^~~~~~
+../src/tcp_com.c:155:8: warning: unused variable 'data_ptr' [-Wunused-variable]
+  u8_t *data_ptr = "!#\n"
+        ^~~~~~~~
+../src/tcp_com.c:158:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/tcp_com.o] Error 1
+18:22:08 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:37: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t remaining = (uint16_t)strlen(buffer);
+                                     ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:155:8: error: redefinition of 'data_ptr'
+  u8_t *data_ptr = "!#\n";
+        ^~~~~~~~
+../src/tcp_com.c:134:8: note: previous definition of 'data_ptr' was here
+  u8_t *data_ptr = buffer;
+        ^~~~~~~~
+../src/tcp_com.c:155:19: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+  u8_t *data_ptr = "!#\n";
+                   ^~~~~~
+../src/tcp_com.c:155:8: warning: unused variable 'data_ptr' [-Wunused-variable]
+  u8_t *data_ptr = "!#\n";
+        ^~~~~~~~
+../src/tcp_com.c:158:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/tcp_com.o] Error 1
+18:25:14 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:37: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t remaining = (uint16_t)strlen(buffer);
+                                     ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:156:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:157:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n");
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:176:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196132	   4504	2152736	2353372	 23e8dc	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+18:25:41 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:37: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t remaining = (uint16_t)strlen(buffer);
+                                     ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:156:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:157:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:177:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196132	   4504	2152736	2353372	 23e8dc	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+18:26:36 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:27:21 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:31:39 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:34:34 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:35:11 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:36:34 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:37: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t remaining = (uint16_t)strlen(buffer);
+                                     ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:156:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(buffer);
+                               ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:157:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:158:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:178:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196132	   4504	2152736	2353372	 23e8dc	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+18:36:39 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:37: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t remaining = (uint16_t)strlen(buffer);
+                                     ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:156:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(data_ptr);
+                               ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:157:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:158:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:178:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196132	   4504	2152736	2353372	 23e8dc	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+18:36:47 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:37: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t remaining = (uint16_t)strlen(buffer);
+                                     ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:156:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:157:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:158:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(data_ptr);
+                               ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:178:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196132	   4504	2152736	2353372	 23e8dc	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+18:36:53 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:43:44 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:37: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t remaining = (uint16_t)strlen(buffer);
+                                     ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:134:33: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t total = (uint16_t)strlen(buffer);
+                                 ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:158:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:159:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:160:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(data_ptr);
+                               ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:180:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196244	   4504	2152736	2353484	 23e94c	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+18:44:02 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:37: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t remaining = (uint16_t)strlen(buffer);
+                                     ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:158:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:159:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:160:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(data_ptr);
+                               ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:180:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196180	   4504	2152736	2353420	 23e90c	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+18:44:15 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:33: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t total = (uint16_t)strlen(buffer);
+                                 ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:158:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:159:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:160:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(data_ptr);
+                               ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:180:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196180	   4504	2152736	2353420	 23e90c	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+18:44:30 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:33: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t total = (uint16_t)strlen(buffer);
+                                 ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:158:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:159:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:160:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(data_ptr);
+                               ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:180:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196172	   4504	2152736	2353412	 23e904	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+18:44:42 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:52:58 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:33: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t total = (uint16_t)strlen(buffer);
+                                 ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:159:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:160:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:161:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(data_ptr);
+                               ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:181:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196236	   4504	2152736	2353476	 23e944	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+18:53:02 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:55:08 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+18:59:43 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:33: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t total = (uint16_t)strlen(buffer);
+                                 ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:159:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:160:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:161:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(data_ptr);
+                               ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:181:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196236	   4504	2152736	2353476	 23e944	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+18:59:50 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+19:02:47 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:33: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t total = (uint16_t)strlen(buffer);
+                                 ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:159:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:160:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:161:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(data_ptr);
+                               ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:181:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196252	   4504	2152736	2353492	 23e954	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+19:02:52 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:26:04 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:32:12 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:33: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t total = (uint16_t)strlen(buffer);
+                                 ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:159:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:160:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:161:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(data_ptr);
+                               ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:181:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196252	   4504	2152736	2353492	 23e954	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+22:32:51 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:36:48 **** Auto Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/tcp_com.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_com.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_com.d" -MT"src/tcp_com.o" -o "src/tcp_com.o" "../src/tcp_com.c"
+../src/tcp_com.c: In function 'packer':
+../src/tcp_com.c:51:10: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  strncpy(buffer,line,N_lines*Char_per_line);
+          ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:36:8: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ char  *_EXFUN(strncpy,(char *__restrict, const char *__restrict, size_t));
+        ^
+../src/tcp_com.c: In function 'hash':
+../src/tcp_com.c:72:12: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     while (c = *str++)
+            ^
+../src/tcp_com.c: In function 'transfer_data_bkup':
+../src/tcp_com.c:117:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   p->len = (uint16_t)strlen(buffer);
+                             ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:127:3: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+   usleep(200);
+   ^~~~~~
+   fseek
+../src/tcp_com.c: In function 'transfer_data':
+../src/tcp_com.c:133:33: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  u16_t total = (uint16_t)strlen(buffer);
+                                 ^~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:159:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(data_ptr, 0, strlen(data_ptr));
+                             ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:160:11: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  snprintf(data_ptr,40,"!#\n"); //end character sequence
+           ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'u8_t * {aka unsigned char *}'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/tcp_com.c:161:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  remaining = (uint16_t)strlen(data_ptr);
+                               ^~~~~~~~
+In file included from c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h:29:0,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/arch/cc.h:55,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/arch.h:48,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/debug.h:40,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/opt.h:52,
+                 from ../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/include/lwip/tcp.h:41,
+                 from ../src/tcp_com.h:11,
+                 from ../src/tcp_com.c:7:
+c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\string.h:33:9: note: expected 'const char *' but argument is of type 'u8_t * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/tcp_com.c:181:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/tcp_com.c'
+' '
+'Building target: MB40ch_wTCP_server.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40ch_wTCP_server_bsp/ps7_cortexa9_0/lib -o "MB40ch_wTCP_server.elf"  ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: MB40ch_wTCP_server.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 196316	   4504	2152736	2353556	 23e994	MB40ch_wTCP_server.elf
+'Finished building: MB40ch_wTCP_server.elf.size'
+' '
+22:36:53 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:42:40 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+22:45:54 **** Incremental Build of configuration Debug for project MB40ch_wTCP_server ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

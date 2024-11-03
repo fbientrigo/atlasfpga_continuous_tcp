@@ -7,7 +7,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Nov 01 16:22:18 2024
+Sun Nov 03 22:21:33 2024
 
 
 Command Line:  synthesis -f CMS_MUX_IO_cms_mux_lattice.synproj -gui -msgset C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/promote.xml 
@@ -454,10 +454,10 @@ clk0 [get_nets SPI_rdy]                 |            -|            -|     0
 1 constraints not met.
 
 
-Peak Memory Usage: 80.785  MB
+Peak Memory Usage: 80.824  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.000  secs
+Elapsed CPU time for LSE flow : 0.141  secs
 --------------------------------------------------------------
 
 map -a "MachXO3L" -p LCMXO3L-9400C -t CABGA484 -s 5 -oc Commercial   "CMS_MUX_IO_cms_mux.ngd" -o "CMS_MUX_IO_cms_mux_map.ncd" -pr "CMS_MUX_IO_cms_mux.prf" -mp "CMS_MUX_IO_cms_mux.mrp" -lpf "C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/cms_mux/CMS_MUX_IO_cms_mux.lpf" -lpf "C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/CMS_MUX_IO.lpf"  -c 0           
@@ -633,7 +633,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
-Fri Nov 01 16:22:21 2024
+Sun Nov 03 22:21:35 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -666,7 +666,7 @@ Constraints cover 686 paths, 9 nets, and 718 connections (77.12% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
-Fri Nov 01 16:22:21 2024
+Sun Nov 03 22:21:35 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -781,7 +781,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "CMS_MUX_IO_cms_mux_map.ncd"
-Fri Nov 01 16:22:22 2024
+Sun Nov 03 22:21:37 2024
 
 PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 CMS_MUX_IO_cms_mux_map.ncd CMS_MUX_IO_cms_mux.dir/5_1.ncd CMS_MUX_IO_cms_mux.prf
@@ -837,7 +837,7 @@ Signal CSR_CS_SOM_c is selected as Global Set/Reset.
 .
 Starting Placer Phase 0.
 .............
-Finished Placer Phase 0.  REAL time: 2 secs 
+Finished Placer Phase 0.  REAL time: 0 secs 
 
 Starting Placer Phase 1.
 ....................
@@ -895,7 +895,7 @@ I/O Bank Usage Summary:
 | 5        | 17 / 36 ( 47%) | 2.5V       | -         |
 +----------+----------------+------------+-----------+
 
-Total placer CPU time: 0 secs 
+Total placer CPU time: 1 secs 
 
 Dumping design to file CMS_MUX_IO_cms_mux.dir/5_1.ncd.
 
@@ -905,9 +905,9 @@ Starting router resource preassignment
 
     <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=Mux_sel_c_0_derived_9 loads=3 clock_loads=3&#xA;   Signal=Mezz4_DRS4_o_A_3__N_30 loads=3 clock_loads=3&#xA;   Signal=Mux_sel_c_0_derived_10 loads=3 clock_loads=3&#xA;   Signal=h_beat/clk_internal loads=1 clock_loads=1"  />
 
-Completed router resource preassignment. Real time: 10 secs 
+Completed router resource preassignment. Real time: 12 secs 
 
-Start NBR router at 16:22:32 11/01/24
+Start NBR router at 22:21:49 11/03/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -922,75 +922,75 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 16:22:32 11/01/24
+Start NBR special constraint process at 22:21:49 11/03/24
 
-Start NBR section for initial routing at 16:22:32 11/01/24
+Start NBR section for initial routing at 22:21:49 11/03/24
 Level 1, iteration 1
 0(0.00%) conflict; 730(78.41%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.648ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 2.648ns/0.000ns; real time: 13 secs 
 Level 2, iteration 1
 1(0.00%) conflict; 720(77.34%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 2.983ns/0.000ns; real time: 10 secs 
+Estimated worst slack/total negative slack<setup>: 2.983ns/0.000ns; real time: 13 secs 
 Level 3, iteration 1
 0(0.00%) conflict; 622(66.81%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 Level 4, iteration 1
 17(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 16:22:33 11/01/24
+Start NBR section for normal routing at 22:21:50 11/03/24
 Level 1, iteration 1
 3(0.00%) conflicts; 14(1.50%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 Level 4, iteration 1
 12(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 Level 4, iteration 2
 9(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 Level 4, iteration 3
 3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 Level 4, iteration 4
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 Level 4, iteration 5
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 Level 4, iteration 6
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 Level 4, iteration 7
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 Level 4, iteration 8
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 Level 4, iteration 9
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 11 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 13 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 16:22:33 11/01/24
+Start NBR section for setup/hold timing optimization with effort level 3 at 22:21:50 11/03/24
 Level 4, iteration 0
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<hold >: 0.111ns/0.000ns; real time: 13 secs 
+Estimated worst slack/total negative slack<hold >: 0.111ns/0.000ns; real time: 16 secs 
 Level 4, iteration 0
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.508ns/0.000ns; real time: 13 secs 
+Estimated worst slack/total negative slack<setup>: 3.508ns/0.000ns; real time: 16 secs 
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.508ns/0.000ns; real time: 13 secs 
+Estimated worst slack/total negative slack<setup>: 3.508ns/0.000ns; real time: 16 secs 
 
-Start NBR section for re-routing at 16:22:36 11/01/24
+Start NBR section for re-routing at 22:21:53 11/03/24
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 14 secs 
+Estimated worst slack/total negative slack<setup>: 3.528ns/0.000ns; real time: 16 secs 
 
-Start NBR section for post-routing at 16:22:36 11/01/24
+Start NBR section for post-routing at 22:21:53 11/03/24
 
 End NBR router with 0 unrouted connection
 
@@ -1007,8 +1007,8 @@ Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored
 
     <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=Mux_sel_c_0_derived_9 loads=3 clock_loads=3&#xA;   Signal=Mezz4_DRS4_o_A_3__N_30 loads=3 clock_loads=3&#xA;   Signal=Mux_sel_c_0_derived_10 loads=3 clock_loads=3&#xA;   Signal=h_beat/clk_internal loads=1 clock_loads=1"  />
 
-Total CPU time 0 secs 
-Total REAL time: 14 secs 
+Total CPU time 6 secs 
+Total REAL time: 17 secs 
 Completely routed.
 End of route.  931 routed (100.00%); 0 unrouted.
 
@@ -1027,8 +1027,8 @@ PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.116
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 0 secs 
-Total REAL time to completion: 14 secs 
+Total CPU  time to completion: 6 secs 
+Total REAL time to completion: 17 secs 
 
 par done!
 
@@ -1065,7 +1065,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
-Fri Nov 01 16:22:36 2024
+Sun Nov 03 22:21:54 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1098,7 +1098,7 @@ Constraints cover 686 paths, 9 nets, and 718 connections (77.12% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
-Fri Nov 01 16:22:36 2024
+Sun Nov 03 22:21:54 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1205,7 +1205,7 @@ Done.
 
 tmcheck -par "CMS_MUX_IO_cms_mux.par" 
 
-bitgen -f "CMS_MUX_IO_cms_mux.t2b" -w "CMS_MUX_IO_cms_mux.ncd"  "CMS_MUX_IO_cms_mux.prf"
+bitgen -f "CMS_MUX_IO_cms_mux.t2b" -w "CMS_MUX_IO_cms_mux.ncd"  -jedec "CMS_MUX_IO_cms_mux.prf"
 
 
 BITGEN: Bitstream Generator Diamond (64-bit) 3.13.0.56.2
@@ -1281,7 +1281,13 @@ Creating bit map...
  
 Bitstream Status: Final           Version 1.95.
  
-Saving bit stream in "CMS_MUX_IO_cms_mux.bit".
-Total CPU Time: 0 secs 
-Total REAL Time: 0 secs 
+Saving bit stream in "CMS_MUX_IO_cms_mux.jed".
+=========
+Padding summary
+=========
+Padded 1756032 bits for this design
+
+
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
 Peak Memory Usage: 305 MB

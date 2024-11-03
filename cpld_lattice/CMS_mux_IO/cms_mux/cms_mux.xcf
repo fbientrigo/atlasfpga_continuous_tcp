@@ -19,8 +19,8 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/CMS_MUX_IO_cms_mux.jed</File>
-			<FileTime>10/30/24 12:58:36</FileTime>
+			<File>C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/cms_mux/CMS_MUX_IO_cms_mux.jed</File>
+			<FileTime>11/03/24 22:21:58</FileTime>
 			<JedecChecksum>0xFB22</JedecChecksum>
 			<Operation>NVCM Erase,Program,Verify</Operation>
 			<Option>
@@ -46,6 +46,6 @@
 	<CableOptions>
 		<CableName>USB2</CableName>
 		<PortAdd>FTUSB-0</PortAdd>
-		<USBID>Dual RS232-HS A Location 0002 Serial A</USBID>
+		<USBID>Dual RS232-HS A Location 0000</USBID>
 	</CableOptions>
 </ispXCF>

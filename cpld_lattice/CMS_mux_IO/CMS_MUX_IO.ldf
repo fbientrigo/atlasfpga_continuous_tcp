@@ -12,6 +12,9 @@
         <Source name="SPI_som_tb.vhd" type="VHDL" type_short="VHDL" syn_sim="SimOnly">
             <Options/>
         </Source>
+        <Source name="heartbeat.vhd" type="VHDL" type_short="VHDL">
+            <Options/>
+        </Source>
         <Source name="cms_mux/cms_mux.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>

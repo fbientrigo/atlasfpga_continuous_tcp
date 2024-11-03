@@ -1,8 +1,8 @@
 <top name = "top_cms_mux"  library = "work"  arch = "RTL"  entry = "VHDL">
 
 <clocks>
-    <clockitem name = "SCLK_buff"  type = "net" />
     <clockitem name = "SPI_rdy"  type = "net" />
+    <clockitem name = "SCLK_buff"  type = "net" />
     <clockitem name = "h_beat/clk_internal"  type = "net" />
 </clocks>
 

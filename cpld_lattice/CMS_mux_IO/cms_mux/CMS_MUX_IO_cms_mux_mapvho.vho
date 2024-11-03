@@ -2,8 +2,8 @@
 -- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.13.0.56.2
 
 -- ldbanno -n VHDL -o CMS_MUX_IO_cms_mux_mapvho.vho -w -neg -gui -msgset C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/promote.xml CMS_MUX_IO_cms_mux_map.ncd 
--- Netlist created on Fri Nov 01 16:22:19 2024
--- Netlist written on Fri Nov 01 16:22:22 2024
+-- Netlist created on Sun Nov 03 22:21:34 2024
+-- Netlist written on Sun Nov 03 22:21:37 2024
 -- Design is for device LCMXO3L-9400C
 -- Design is for package CABGA484
 -- Design is for performance grade 5

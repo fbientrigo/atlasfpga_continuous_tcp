@@ -3,7 +3,7 @@
 <ReportView version="2.0">
     <Implement name="cms_mux">
         <ToolReport id="tooldec" path="" status="0"/>
-        <ToolReport id="toolhle_genhierarchy" path="C:/CMB_40_project/Old_project_with_CPLD_files/charge-monitoring-system/CPLD_proj/CMS_mux_IO/cms_mux/hdla_gen_hierarchy.html" status="1"/>
+        <ToolReport id="toolhle_genhierarchy" path="C:/Users/osotosan/charge-monitoring-system/cpld_lattice/CMS_mux_IO/cms_mux/hdla_gen_hierarchy.html" status="1"/>
         <ToolReport id="toolpio" path="" status="2"/>
         <ToolReport id="toolsso" path="" status="2"/>
     </Implement>

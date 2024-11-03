@@ -9,7 +9,7 @@
 <PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Fri Nov 01 16:22:19 2024
+Sun Nov 03 22:20:32 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -23,41 +23,6 @@ Design:     top_cms_mux
 Constraint file:  
 Report level:    verbose report, limited to 3 items per constraint
 --------------------------------------------------------------------------------
-
-
-
-================================================================================
-Constraint: create_clock -period 5.000000 -name clk3 [get_nets \h_beat/clk_internal]
-            1 item scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed:  The following path meets requirements by 2.213ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3DX    CK             \h_beat/divided_clk_9  (from \h_beat/clk_internal +)
-   Destination:    FD1S3DX    D              \h_beat/divided_clk_9  (to \h_beat/clk_internal +)
-
-   Delay:                   2.641ns  (32.2% logic, 67.8% route), 2 logic levels.
-
- Constraint Details:
-
-      2.641ns data_path \h_beat/divided_clk_9 to \h_beat/divided_clk_9 meets
-      5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 2.213ns
-
- Path Details: \h_beat/divided_clk_9 to \h_beat/divided_clk_9
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \h_beat/divided_clk_9 (from \h_beat/clk_internal)
-Route         2   e 1.002                                  top_heartbeat_c
-LUT4        ---     0.448              A to Z              \h_beat/heartbeat_I_0_1_lut
-Route         1   e 0.788                                  \h_beat/heartbeat_N_267
-                  --------
-                    2.641  (32.2% logic, 67.8% route), 2 logic levels.
-
-Report: 2.787 ns is the maximum delay for this constraint.
 
 
 
@@ -190,9 +155,6 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk3 [get_nets \h_beat/clk_internal]    |     5.000 ns|     2.787 ns|     2  
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
 clk2 [get_nets SCLK_buff]               |     5.000 ns|     8.590 ns|     6 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
@@ -231,10 +193,10 @@ Critical Nets                           |   Loads|  Errors| % of total
 
 Timing errors: 232  Score: 469744
 
-Constraints cover  668 paths, 143 nets, and 576 connections (52.9% coverage)
+Constraints cover  667 paths, 140 nets, and 573 connections (52.8% coverage)
 
 
-Peak memory: 84541440 bytes, TRCE: 2101248 bytes, DLYMAN: 0 bytes
+Peak memory: 84561920 bytes, TRCE: 1785856 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 
 
 

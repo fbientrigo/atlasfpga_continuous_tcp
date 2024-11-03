@@ -22,7 +22,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 <A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2</big></U></B>
-Fri Nov 01 16:22:36 2024
+Sun Nov 03 22:21:54 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -498,59 +498,6 @@ Passed: The following path meets requirements by 3.832ns
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              SPI/echo_word_i0_i9  (from SCLK_buff +)
-   Destination:    FF         Data in        SPI/data_cpld_i4  (to SCLK_buff +)
-
-   Delay:               6.018ns  (44.4% logic, 55.6% route), 6 logic levels.
-
- Constraint Details:
-
-      6.018ns physical path delay SPI/SLICE_55 to SPI/SLICE_36 meets
-     10.000ns delay constraint less
-      0.000ns skew and
-      0.150ns DIN_SET requirement (totaling 9.850ns) by 3.832ns
-
- Physical Path Details:
-
-      Data path SPI/SLICE_55 to SPI/SLICE_36:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R17C16A.CLK to     R17C16A.Q0 SPI/SLICE_55 (from SCLK_buff)
-ROUTE         2     1.187     R17C16A.Q0 to     R16C15B.B1 SPI/echo_word_9
-CTOF_DEL    ---     0.452     R16C15B.B1 to     R16C15B.F1 SLICE_125
-ROUTE         1     0.384     R16C15B.F1 to     R16C15A.C1 SPI/n15
-CTOF_DEL    ---     0.452     R16C15A.C1 to     R16C15A.F1 SLICE_134
-ROUTE         1     0.563     R16C15A.F1 to     R17C15D.D1 SPI/n2071
-CTOF_DEL    ---     0.452     R17C15D.D1 to     R17C15D.F1 SLICE_131
-ROUTE         3     0.284     R17C15D.F1 to     R17C15C.D1 SPI/n2171
-CTOF_DEL    ---     0.452     R17C15C.D1 to     R17C15C.F1 SLICE_140
-ROUTE        12     0.931     R17C15C.F1 to     R17C14A.B0 SPI/n27
-CTOF_DEL    ---     0.452     R17C14A.B0 to     R17C14A.F0 SPI/SLICE_36
-ROUTE         1     0.000     R17C14A.F0 to    R17C14A.DI0 SPI/data_cpld_13_N_151_4 (to SCLK_buff)
-                  --------
-                    6.018   (44.4% logic, 55.6% route), 6 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path CSR_SCLK_P to SPI/SLICE_55:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        42     5.932      T13.PADDI to    R17C16A.CLK SCLK_buff
-                  --------
-                    5.932   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path CSR_SCLK_P to SPI/SLICE_36:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        42     5.932      T13.PADDI to    R17C14A.CLK SCLK_buff
-                  --------
-                    5.932   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 3.832ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              SPI/echo_word_i0_i9  (from SCLK_buff +)
    Destination:    FF         Data in        SPI/data_cpld_i5  (to SCLK_buff +)
 
    Delay:               6.018ns  (44.4% logic, 55.6% route), 6 logic levels.
@@ -579,6 +526,59 @@ CTOF_DEL    ---     0.452     R17C15C.D1 to     R17C15C.F1 SLICE_140
 ROUTE        12     0.931     R17C15C.F1 to     R17C14A.B1 SPI/n27
 CTOF_DEL    ---     0.452     R17C14A.B1 to     R17C14A.F1 SPI/SLICE_36
 ROUTE         1     0.000     R17C14A.F1 to    R17C14A.DI1 SPI/data_cpld_13_N_151_5 (to SCLK_buff)
+                  --------
+                    6.018   (44.4% logic, 55.6% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path CSR_SCLK_P to SPI/SLICE_55:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        42     5.932      T13.PADDI to    R17C16A.CLK SCLK_buff
+                  --------
+                    5.932   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path CSR_SCLK_P to SPI/SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        42     5.932      T13.PADDI to    R17C14A.CLK SCLK_buff
+                  --------
+                    5.932   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 3.832ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SPI/echo_word_i0_i9  (from SCLK_buff +)
+   Destination:    FF         Data in        SPI/data_cpld_i4  (to SCLK_buff +)
+
+   Delay:               6.018ns  (44.4% logic, 55.6% route), 6 logic levels.
+
+ Constraint Details:
+
+      6.018ns physical path delay SPI/SLICE_55 to SPI/SLICE_36 meets
+     10.000ns delay constraint less
+      0.000ns skew and
+      0.150ns DIN_SET requirement (totaling 9.850ns) by 3.832ns
+
+ Physical Path Details:
+
+      Data path SPI/SLICE_55 to SPI/SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R17C16A.CLK to     R17C16A.Q0 SPI/SLICE_55 (from SCLK_buff)
+ROUTE         2     1.187     R17C16A.Q0 to     R16C15B.B1 SPI/echo_word_9
+CTOF_DEL    ---     0.452     R16C15B.B1 to     R16C15B.F1 SLICE_125
+ROUTE         1     0.384     R16C15B.F1 to     R16C15A.C1 SPI/n15
+CTOF_DEL    ---     0.452     R16C15A.C1 to     R16C15A.F1 SLICE_134
+ROUTE         1     0.563     R16C15A.F1 to     R17C15D.D1 SPI/n2071
+CTOF_DEL    ---     0.452     R17C15D.D1 to     R17C15D.F1 SLICE_131
+ROUTE         3     0.284     R17C15D.F1 to     R17C15C.D1 SPI/n2171
+CTOF_DEL    ---     0.452     R17C15C.D1 to     R17C15C.F1 SLICE_140
+ROUTE        12     0.931     R17C15C.F1 to     R17C14A.B0 SPI/n27
+CTOF_DEL    ---     0.452     R17C14A.B0 to     R17C14A.F0 SPI/SLICE_36
+ROUTE         1     0.000     R17C14A.F0 to    R17C14A.DI0 SPI/data_cpld_13_N_151_4 (to SCLK_buff)
                   --------
                     6.018   (44.4% logic, 55.6% route), 6 logic levels.
 
@@ -747,7 +747,7 @@ Constraints cover 686 paths, 9 nets, and 718 connections (77.12% coverage)
 
 --------------------------------------------------------------------------------
 <A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2</big></U></B>
-Fri Nov 01 16:22:36 2024
+Sun Nov 03 22:21:54 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
