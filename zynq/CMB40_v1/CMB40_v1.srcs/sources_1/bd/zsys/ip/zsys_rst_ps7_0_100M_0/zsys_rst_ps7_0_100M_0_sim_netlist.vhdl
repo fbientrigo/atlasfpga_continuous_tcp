@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Mon Jun 26 16:44:35 2023
--- Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top zsys_rst_ps7_0_100M_0 -prefix
---               zsys_rst_ps7_0_100M_0_ zsys_rst_ps7_0_100M_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+-- Date        : Mon Nov  4 01:07:10 2024
+-- Host        : lapepuat11 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_rst_ps7_0_100M_0/zsys_rst_ps7_0_100M_0_sim_netlist.vhdl
 -- Design      : zsys_rst_ps7_0_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,6 +25,8 @@ entity zsys_rst_ps7_0_100M_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_rst_ps7_0_100M_0_cdc_sync : entity is "cdc_sync";
 end zsys_rst_ps7_0_100M_0_cdc_sync;
 
 architecture STRUCTURE of zsys_rst_ps7_0_100M_0_cdc_sync is
@@ -233,6 +235,8 @@ entity zsys_rst_ps7_0_100M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_rst_ps7_0_100M_0_upcnt_n : entity is "upcnt_n";
 end zsys_rst_ps7_0_100M_0_upcnt_n;
 
 architecture STRUCTURE of zsys_rst_ps7_0_100M_0_upcnt_n is
@@ -397,6 +401,8 @@ entity zsys_rst_ps7_0_100M_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_rst_ps7_0_100M_0_lpf : entity is "lpf";
 end zsys_rst_ps7_0_100M_0_lpf;
 
 architecture STRUCTURE of zsys_rst_ps7_0_100M_0_lpf is
@@ -578,6 +584,8 @@ entity zsys_rst_ps7_0_100M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_rst_ps7_0_100M_0_sequence_psr : entity is "sequence_psr";
 end zsys_rst_ps7_0_100M_0_sequence_psr;
 
 architecture STRUCTURE of zsys_rst_ps7_0_100M_0_sequence_psr is
@@ -916,6 +924,8 @@ entity zsys_rst_ps7_0_100M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of zsys_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of zsys_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_rst_ps7_0_100M_0_proc_sys_reset : entity is "proc_sys_reset";
 end zsys_rst_ps7_0_100M_0_proc_sys_reset;
 
 architecture STRUCTURE of zsys_rst_ps7_0_100M_0_proc_sys_reset is
@@ -1051,7 +1061,7 @@ entity zsys_rst_ps7_0_100M_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_rst_ps7_0_100M_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_rst_ps7_0_100M_0 : entity is "proc_sys_reset,Vivado 2018.2";
+  attribute x_core_info of zsys_rst_ps7_0_100M_0 : entity is "proc_sys_reset,Vivado 2018.2.2";
 end zsys_rst_ps7_0_100M_0;
 
 architecture STRUCTURE of zsys_rst_ps7_0_100M_0 is
@@ -1084,7 +1094,7 @@ architecture STRUCTURE of zsys_rst_ps7_0_100M_0 is
   attribute x_interface_info of mb_reset : signal is "xilinx.com:signal:reset:1.0 mb_rst RST";
   attribute x_interface_parameter of mb_reset : signal is "XIL_INTERFACENAME mb_rst, POLARITY ACTIVE_HIGH, TYPE PROCESSOR";
   attribute x_interface_info of slowest_sync_clk : signal is "xilinx.com:signal:clock:1.0 clock CLK";
-  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
+  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
   attribute x_interface_info of bus_struct_reset : signal is "xilinx.com:signal:reset:1.0 bus_struct_reset RST";
   attribute x_interface_parameter of bus_struct_reset : signal is "XIL_INTERFACENAME bus_struct_reset, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT";
   attribute x_interface_info of interconnect_aresetn : signal is "xilinx.com:signal:reset:1.0 interconnect_low_rst RST";

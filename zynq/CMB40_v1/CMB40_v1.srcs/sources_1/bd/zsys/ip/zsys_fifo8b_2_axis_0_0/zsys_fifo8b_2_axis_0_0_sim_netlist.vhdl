@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Aug 16 22:34:15 2023
--- Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top zsys_fifo8b_2_axis_0_0 -prefix
---               zsys_fifo8b_2_axis_0_0_ zsys_fifo8b_2_axis_0_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+-- Date        : Mon Nov  4 01:07:51 2024
+-- Host        : lapepuat11 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_fifo8b_2_axis_0_0/zsys_fifo8b_2_axis_0_0_sim_netlist.vhdl
 -- Design      : zsys_fifo8b_2_axis_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,6 +25,8 @@ entity zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_wrapper is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     din : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_wrapper is
@@ -240,6 +242,8 @@ entity zsys_fifo8b_2_axis_0_0_rd_bin_cntr is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_rd_bin_cntr : entity is "rd_bin_cntr";
 end zsys_fifo8b_2_axis_0_0_rd_bin_cntr;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_rd_bin_cntr is
@@ -418,6 +422,8 @@ entity zsys_fifo8b_2_axis_0_0_rd_status_flags_ss is
     ram_full_fb_i_reg : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_rd_status_flags_ss : entity is "rd_status_flags_ss";
 end zsys_fifo8b_2_axis_0_0_rd_status_flags_ss;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_rd_status_flags_ss is
@@ -503,6 +509,8 @@ entity zsys_fifo8b_2_axis_0_0_updn_cntr is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_updn_cntr : entity is "updn_cntr";
 end zsys_fifo8b_2_axis_0_0_updn_cntr;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_updn_cntr is
@@ -624,6 +632,8 @@ entity zsys_fifo8b_2_axis_0_0_wr_bin_cntr is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_wr_bin_cntr : entity is "wr_bin_cntr";
 end zsys_fifo8b_2_axis_0_0_wr_bin_cntr;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_wr_bin_cntr is
@@ -853,6 +863,8 @@ entity zsys_fifo8b_2_axis_0_0_wr_status_flags_ss is
     clk : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_wr_status_flags_ss : entity is "wr_status_flags_ss";
 end zsys_fifo8b_2_axis_0_0_wr_status_flags_ss;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_wr_status_flags_ss is
@@ -939,6 +951,8 @@ entity zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_width is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     din : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_width is
@@ -968,6 +982,8 @@ entity zsys_fifo8b_2_axis_0_0_dc_ss is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_dc_ss : entity is "dc_ss";
 end zsys_fifo8b_2_axis_0_0_dc_ss;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_dc_ss is
@@ -1001,6 +1017,8 @@ entity zsys_fifo8b_2_axis_0_0_wr_logic is
     \gcc0.gc0.count_d1_reg[3]\ : in STD_LOGIC;
     \gc0.count_d1_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_wr_logic : entity is "wr_logic";
 end zsys_fifo8b_2_axis_0_0_wr_logic;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_wr_logic is
@@ -1051,6 +1069,8 @@ entity zsys_fifo8b_2_axis_0_0_blk_mem_gen_generic_cstr is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     din : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end zsys_fifo8b_2_axis_0_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_blk_mem_gen_generic_cstr is
@@ -1087,6 +1107,8 @@ entity zsys_fifo8b_2_axis_0_0_rd_logic is
     ram_full_fb_i_reg : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_rd_logic : entity is "rd_logic";
 end zsys_fifo8b_2_axis_0_0_rd_logic;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_rd_logic is
@@ -1143,6 +1165,8 @@ entity zsys_fifo8b_2_axis_0_0_blk_mem_gen_top is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     din : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end zsys_fifo8b_2_axis_0_0_blk_mem_gen_top;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_blk_mem_gen_top is
@@ -1174,6 +1198,8 @@ entity zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1_synth is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     din : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1_synth is
@@ -1205,6 +1231,8 @@ entity zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1 is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     din : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
 end zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1 is
@@ -1236,6 +1264,8 @@ entity zsys_fifo8b_2_axis_0_0_memory is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     din : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_memory : entity is "memory";
 end zsys_fifo8b_2_axis_0_0_memory;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_memory is
@@ -1268,6 +1298,8 @@ entity zsys_fifo8b_2_axis_0_0_fifo_generator_ramfifo is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_fifo_generator_ramfifo : entity is "fifo_generator_ramfifo";
 end zsys_fifo8b_2_axis_0_0_fifo_generator_ramfifo;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_fifo_generator_ramfifo is
@@ -1339,6 +1371,8 @@ entity zsys_fifo8b_2_axis_0_0_fifo_generator_top is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_fifo_generator_top : entity is "fifo_generator_top";
 end zsys_fifo8b_2_axis_0_0_fifo_generator_top;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_fifo_generator_top is
@@ -1372,6 +1406,8 @@ entity zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2_synth is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2_synth : entity is "fifo_generator_v13_2_2_synth";
 end zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2_synth;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2_synth is
@@ -2031,6 +2067,8 @@ entity zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2 is
   attribute C_WR_PNTR_WIDTH_WRCH of zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2 : entity is 4;
   attribute C_WR_RESPONSE_LATENCY : integer;
   attribute C_WR_RESPONSE_LATENCY of zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2 : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2 : entity is "fifo_generator_v13_2_2";
 end zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2 is
@@ -2579,6 +2617,8 @@ entity zsys_fifo8b_2_axis_0_0_fifo_generator_1 is
   );
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of zsys_fifo8b_2_axis_0_0_fifo_generator_1 : entity is "fifo_generator_1,fifo_generator_v13_2_2,{}";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_fifo_generator_1 : entity is "fifo_generator_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_fifo8b_2_axis_0_0_fifo_generator_1 : entity is "yes";
   attribute x_core_info : string;
@@ -3376,6 +3416,8 @@ entity zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0_M00_AXIS is
     m00_axis_tready : in STD_LOGIC;
     m00_axis_aresetn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0_M00_AXIS : entity is "fifo8b_2_axis_v1_0_M00_AXIS";
 end zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0_M00_AXIS;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0_M00_AXIS is
@@ -4522,6 +4564,8 @@ entity zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0 is
     m00_axis_tready : in STD_LOGIC;
     m00_axis_aresetn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0 : entity is "fifo8b_2_axis_v1_0";
 end zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0 is
@@ -4568,7 +4612,7 @@ entity zsys_fifo8b_2_axis_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_fifo8b_2_axis_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_fifo8b_2_axis_0_0 : entity is "fifo8b_2_axis_v1_0,Vivado 2018.2";
+  attribute x_core_info of zsys_fifo8b_2_axis_0_0 : entity is "fifo8b_2_axis_v1_0,Vivado 2018.2.2";
 end zsys_fifo8b_2_axis_0_0;
 
 architecture STRUCTURE of zsys_fifo8b_2_axis_0_0 is
@@ -4576,14 +4620,14 @@ architecture STRUCTURE of zsys_fifo8b_2_axis_0_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of m00_axis_aclk : signal is "xilinx.com:signal:clock:1.0 M00_AXIS_CLK CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of m00_axis_aclk : signal is "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
+  attribute x_interface_parameter of m00_axis_aclk : signal is "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
   attribute x_interface_info of m00_axis_aresetn : signal is "xilinx.com:signal:reset:1.0 M00_AXIS_RST RST";
   attribute x_interface_parameter of m00_axis_aresetn : signal is "XIL_INTERFACENAME M00_AXIS_RST, POLARITY ACTIVE_LOW";
   attribute x_interface_info of m00_axis_tlast : signal is "xilinx.com:interface:axis:1.0 M00_AXIS TLAST";
   attribute x_interface_info of m00_axis_tready : signal is "xilinx.com:interface:axis:1.0 M00_AXIS TREADY";
   attribute x_interface_info of m00_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 M00_AXIS TVALID";
   attribute x_interface_info of m00_axis_tdata : signal is "xilinx.com:interface:axis:1.0 M00_AXIS TDATA";
-  attribute x_interface_parameter of m00_axis_tdata : signal is "XIL_INTERFACENAME M00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef";
+  attribute x_interface_parameter of m00_axis_tdata : signal is "XIL_INTERFACENAME M00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef";
   attribute x_interface_info of m00_axis_tstrb : signal is "xilinx.com:interface:axis:1.0 M00_AXIS TSTRB";
 begin
   m00_axis_tstrb(3) <= \<const1>\;

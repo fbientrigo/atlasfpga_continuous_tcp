@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="3eeb5de944cd4701890460f422acdda4"/>
@@ -154,140 +154,188 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_3to3_2/zsys_xlslice_3to3_2.xci">
-          <Proxy FileSetName="zsys_xlslice_3to3_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_2_1/zsys_util_ds_buf_2_1.xci">
-          <Proxy FileSetName="zsys_util_ds_buf_2_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_2_2/zsys_xlslice_2_2.xci">
-          <Proxy FileSetName="zsys_xlslice_2_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_processing_system7_0_0/zsys_processing_system7_0_0.xci">
-          <Proxy FileSetName="zsys_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_1_1/zsys_util_ds_buf_1_1.xci">
-          <Proxy FileSetName="zsys_util_ds_buf_1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_reset_init_0_0/zsys_reset_init_0_0.xci">
-          <Proxy FileSetName="zsys_reset_init_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_2_1/zsys_xlslice_2_1.xci">
-          <Proxy FileSetName="zsys_xlslice_2_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_vector_logic_0_0/zsys_util_vector_logic_0_0.xci">
           <Proxy FileSetName="zsys_util_vector_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_c_counter_binary_0_0/zsys_c_counter_binary_0_0.xci">
-          <Proxy FileSetName="zsys_c_counter_binary_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_0_1/zsys_xlslice_0_1.xci">
-          <Proxy FileSetName="zsys_xlslice_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_3_1/zsys_util_ds_buf_3_1.xci">
-          <Proxy FileSetName="zsys_util_ds_buf_3_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_0_1/zsys_util_ds_buf_0_1.xci">
-          <Proxy FileSetName="zsys_util_ds_buf_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_trigger_logic_0_0/zsys_trigger_logic_0_0.xci">
-          <Proxy FileSetName="zsys_trigger_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_3to3_0/zsys_xlslice_3to3_0.xci">
-          <Proxy FileSetName="zsys_xlslice_3to3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_M1to5_0_1/zsys_M1to5_0_1.xci">
-          <Proxy FileSetName="zsys_M1to5_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_1_0/zsys_xlslice_1_0.xci">
-          <Proxy FileSetName="zsys_xlslice_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconcat_0_0/zsys_xlconcat_0_0.xci">
-          <Proxy FileSetName="zsys_xlconcat_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_Signal_sel_1_0/zsys_Signal_sel_1_0.xci">
-          <Proxy FileSetName="zsys_Signal_sel_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_M1to5_0_0/zsys_M1to5_0_0.xci">
-          <Proxy FileSetName="zsys_M1to5_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_ADC_readout_buff_0_0/zsys_ADC_readout_buff_0_0.xci">
-          <Proxy FileSetName="zsys_ADC_readout_buff_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_4_2/zsys_util_ds_buf_4_2.xci">
-          <Proxy FileSetName="zsys_util_ds_buf_4_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconstant_1_0/zsys_xlconstant_1_0.xci">
-          <Proxy FileSetName="zsys_xlconstant_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_axi_smc_0/zsys_axi_smc_0.xci">
-          <Proxy FileSetName="zsys_axi_smc_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_enable_signal_0_0/zsys_enable_signal_0_0.xci">
-          <Proxy FileSetName="zsys_enable_signal_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_10_0/zsys_xlslice_10_0.xci">
-          <Proxy FileSetName="zsys_xlslice_10_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconcat_1_0/zsys_xlconcat_1_0.xci">
-          <Proxy FileSetName="zsys_xlconcat_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_system_ila_0_0/zsys_system_ila_0_0.xci">
-          <Proxy FileSetName="zsys_system_ila_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_mapper_0_0/zsys_mapper_0_0.xci">
-          <Proxy FileSetName="zsys_mapper_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconstant_0_0/zsys_xlconstant_0_0.xci">
-          <Proxy FileSetName="zsys_xlconstant_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_2_0/zsys_util_ds_buf_2_0.xci">
-          <Proxy FileSetName="zsys_util_ds_buf_2_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_M1to5_0_2/zsys_M1to5_0_2.xci">
           <Proxy FileSetName="zsys_M1to5_0_2"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_ROController_0_0/zsys_ROController_0_0.xci">
-          <Proxy FileSetName="zsys_ROController_0_0"/>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_4_2/zsys_util_ds_buf_4_2.xci">
+          <Proxy FileSetName="zsys_util_ds_buf_4_2"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_4_0/zsys_util_ds_buf_4_0.xci">
-          <Proxy FileSetName="zsys_util_ds_buf_4_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_axi_dma_0_0/zsys_axi_dma_0_0.xci">
-          <Proxy FileSetName="zsys_axi_dma_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_4_1/zsys_util_ds_buf_4_1.xci">
-          <Proxy FileSetName="zsys_util_ds_buf_4_1"/>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_0_1/zsys_util_ds_buf_0_1.xci">
+          <Proxy FileSetName="zsys_util_ds_buf_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_12to14_0/zsys_xlslice_12to14_0.xci">
           <Proxy FileSetName="zsys_xlslice_12to14_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconcat_1_1/zsys_xlconcat_1_1.xci">
-          <Proxy FileSetName="zsys_xlconcat_1_1"/>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconstant_0_0/zsys_xlconstant_0_0.xci">
+          <Proxy FileSetName="zsys_xlconstant_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_trigger_logic_0_0/zsys_trigger_logic_0_0.xci">
+          <Proxy FileSetName="zsys_trigger_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_2_1/zsys_util_ds_buf_2_1.xci">
+          <Proxy FileSetName="zsys_util_ds_buf_2_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_delay_module_0_0/zsys_delay_module_0_0.xci">
           <Proxy FileSetName="zsys_delay_module_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_2_0/zsys_xlslice_2_0.xci">
-          <Proxy FileSetName="zsys_xlslice_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_c_counter_binary_0_1/zsys_c_counter_binary_0_1.xci">
-          <Proxy FileSetName="zsys_c_counter_binary_0_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_0_2/zsys_xlslice_0_2.xci">
           <Proxy FileSetName="zsys_xlslice_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_vector_logic_0_1/zsys_util_vector_logic_0_1.xci">
-          <Proxy FileSetName="zsys_util_vector_logic_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconstant_1_1/zsys_xlconstant_1_1.xci">
           <Proxy FileSetName="zsys_xlconstant_1_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_vector_logic_0_1/zsys_util_vector_logic_0_1.xci">
+          <Proxy FileSetName="zsys_util_vector_logic_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_fifo8b_2_axis_0_0/zsys_fifo8b_2_axis_0_0.xci">
+          <Proxy FileSetName="zsys_fifo8b_2_axis_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_4_0/zsys_util_ds_buf_4_0.xci">
+          <Proxy FileSetName="zsys_util_ds_buf_4_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_enable_signal_0_0/zsys_enable_signal_0_0.xci">
+          <Proxy FileSetName="zsys_enable_signal_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_reset_init_0_0/zsys_reset_init_0_0.xci">
+          <Proxy FileSetName="zsys_reset_init_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconstant_1_0/zsys_xlconstant_1_0.xci">
+          <Proxy FileSetName="zsys_xlconstant_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_1_1/zsys_util_ds_buf_1_1.xci">
+          <Proxy FileSetName="zsys_util_ds_buf_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_ROController_0_0/zsys_ROController_0_0.xci">
+          <Proxy FileSetName="zsys_ROController_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_fit_timer_0_0/zsys_fit_timer_0_0.xci">
+          <Proxy FileSetName="zsys_fit_timer_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_M1to5_0_1/zsys_M1to5_0_1.xci">
+          <Proxy FileSetName="zsys_M1to5_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_4_1/zsys_util_ds_buf_4_1.xci">
+          <Proxy FileSetName="zsys_util_ds_buf_4_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconcat_0_0/zsys_xlconcat_0_0.xci">
+          <Proxy FileSetName="zsys_xlconcat_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xbar_0/zsys_xbar_0.xci">
+          <Proxy FileSetName="zsys_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_3_1/zsys_util_ds_buf_3_1.xci">
+          <Proxy FileSetName="zsys_util_ds_buf_3_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_rst_ps7_0_100M_0/zsys_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="zsys_rst_ps7_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_3to3_0/zsys_xlslice_3to3_0.xci">
+          <Proxy FileSetName="zsys_xlslice_3to3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_system_ila_0_0/zsys_system_ila_0_0.xci">
+          <Proxy FileSetName="zsys_system_ila_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_Signal_sel_1_0/zsys_Signal_sel_1_0.xci">
+          <Proxy FileSetName="zsys_Signal_sel_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconcat_1_1/zsys_xlconcat_1_1.xci">
+          <Proxy FileSetName="zsys_xlconcat_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_axi_gpio_1_0/zsys_axi_gpio_1_0.xci">
+          <Proxy FileSetName="zsys_axi_gpio_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_DRS4_firmware_1_0/zsys_DRS4_firmware_1_0.xci">
+          <Proxy FileSetName="zsys_DRS4_firmware_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_axi_dma_0_0/zsys_axi_dma_0_0.xci">
+          <Proxy FileSetName="zsys_axi_dma_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_c_counter_binary_0_1/zsys_c_counter_binary_0_1.xci">
+          <Proxy FileSetName="zsys_c_counter_binary_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_axi_smc_0/zsys_axi_smc_0.xci">
+          <Proxy FileSetName="zsys_axi_smc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_1_0/zsys_xlslice_1_0.xci">
+          <Proxy FileSetName="zsys_xlslice_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_CPLD_ctrl_0_0/zsys_CPLD_ctrl_0_0.xci">
+          <Proxy FileSetName="zsys_CPLD_ctrl_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_processing_system7_0_0/zsys_processing_system7_0_0.xci">
+          <Proxy FileSetName="zsys_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_dac_i2c_0_0/zsys_dac_i2c_0_0.xci">
+          <Proxy FileSetName="zsys_dac_i2c_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_2_1/zsys_xlslice_2_1.xci">
+          <Proxy FileSetName="zsys_xlslice_2_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_proc_sys_reset_0_0/zsys_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="zsys_proc_sys_reset_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_M1to5_0_0/zsys_M1to5_0_0.xci">
+          <Proxy FileSetName="zsys_M1to5_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_fifo_generator_0_0/zsys_fifo_generator_0_0.xci">
+          <Proxy FileSetName="zsys_fifo_generator_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_axi_gpio_0_0/zsys_axi_gpio_0_0.xci">
+          <Proxy FileSetName="zsys_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_c_counter_binary_0_0/zsys_c_counter_binary_0_0.xci">
+          <Proxy FileSetName="zsys_c_counter_binary_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconcat_1_0/zsys_xlconcat_1_0.xci">
+          <Proxy FileSetName="zsys_xlconcat_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_0_1/zsys_xlslice_0_1.xci">
+          <Proxy FileSetName="zsys_xlslice_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_mapper_0_0/zsys_mapper_0_0.xci">
+          <Proxy FileSetName="zsys_mapper_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_10_0/zsys_xlslice_10_0.xci">
+          <Proxy FileSetName="zsys_xlslice_10_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_2_0/zsys_util_ds_buf_2_0.xci">
+          <Proxy FileSetName="zsys_util_ds_buf_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_2_0/zsys_xlslice_2_0.xci">
+          <Proxy FileSetName="zsys_xlslice_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_ADC_readout_buff_0_0/zsys_ADC_readout_buff_0_0.xci">
+          <Proxy FileSetName="zsys_ADC_readout_buff_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_rst_ps7_0_100M_1/zsys_rst_ps7_0_100M_1.xci">
+          <Proxy FileSetName="zsys_rst_ps7_0_100M_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_system_ila_1_0/zsys_system_ila_1_0.xci">
+          <Proxy FileSetName="zsys_system_ila_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconcat_3_0/zsys_xlconcat_3_0.xci">
+          <Proxy FileSetName="zsys_xlconcat_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_clk_mon_0_0/zsys_clk_mon_0_0.xci">
+          <Proxy FileSetName="zsys_clk_mon_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_0_0/zsys_util_ds_buf_0_0.xci">
+          <Proxy FileSetName="zsys_util_ds_buf_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_3to3_2/zsys_xlslice_3to3_2.xci">
+          <Proxy FileSetName="zsys_xlslice_3to3_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_Vibufds_diff_out_0_0/zsys_Vibufds_diff_out_0_0.xci">
+          <Proxy FileSetName="zsys_Vibufds_diff_out_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_util_ds_buf_0_2/zsys_util_ds_buf_0_2.xci">
+          <Proxy FileSetName="zsys_util_ds_buf_0_2"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_delay_module_0_1/zsys_delay_module_0_1.xci">
           <Proxy FileSetName="zsys_delay_module_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_Elink_output_0_0/zsys_Elink_output_0_0.xci">
-          <Proxy FileSetName="zsys_Elink_output_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_DRS_A_test_0_0/zsys_DRS_A_test_0_0.xci">
           <Proxy FileSetName="zsys_DRS_A_test_0_0"/>
@@ -295,14 +343,23 @@
         <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_system_ila_2_0/zsys_system_ila_2_0.xci">
           <Proxy FileSetName="zsys_system_ila_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlconcat_3_0/zsys_xlconcat_3_0.xci">
-          <Proxy FileSetName="zsys_xlconcat_3_0"/>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_Elink_output_0_0/zsys_Elink_output_0_0.xci">
+          <Proxy FileSetName="zsys_Elink_output_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_Vibufds_diff_out_0_0/zsys_Vibufds_diff_out_0_0.xci">
-          <Proxy FileSetName="zsys_Vibufds_diff_out_0_0"/>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_2_2/zsys_xlslice_2_2.xci">
+          <Proxy FileSetName="zsys_xlslice_2_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_xlslice_3to3_1/zsys_xlslice_3to3_1.xci">
           <Proxy FileSetName="zsys_xlslice_3to3_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_AXI_ADC_0_0/zsys_AXI_ADC_0_0.xci">
+          <Proxy FileSetName="zsys_AXI_ADC_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_auto_cc_0/zsys_auto_cc_0.xci">
+          <Proxy FileSetName="zsys_auto_cc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="zsys.bd" FileRelPathName="ip/zsys_auto_pc_0/zsys_auto_pc_0.xci">
+          <Proxy FileSetName="zsys_auto_pc_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/zsys/hdl/zsys_wrapper.vhd">
@@ -797,6 +854,120 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="zsys_fifo8b_2_axis_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_fifo8b_2_axis_0_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_fifo8b_2_axis_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_fit_timer_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_fit_timer_0_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_fit_timer_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_xbar_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_xbar_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_rst_ps7_0_100M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_rst_ps7_0_100M_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_rst_ps7_0_100M_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_axi_gpio_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_axi_gpio_1_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_axi_gpio_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_DRS4_firmware_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_DRS4_firmware_1_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_DRS4_firmware_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_CPLD_ctrl_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_CPLD_ctrl_0_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_CPLD_ctrl_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_dac_i2c_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_dac_i2c_0_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_dac_i2c_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_proc_sys_reset_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_proc_sys_reset_0_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_proc_sys_reset_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_fifo_generator_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_fifo_generator_0_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_fifo_generator_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_axi_gpio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_axi_gpio_0_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_axi_gpio_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_rst_ps7_0_100M_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_rst_ps7_0_100M_1">
+      <Config>
+        <Option Name="TopModule" Val="zsys_rst_ps7_0_100M_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_system_ila_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_system_ila_1_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_system_ila_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_clk_mon_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_clk_mon_0_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_clk_mon_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_util_ds_buf_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_util_ds_buf_0_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_util_ds_buf_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_util_ds_buf_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_util_ds_buf_0_2">
+      <Config>
+        <Option Name="TopModule" Val="zsys_util_ds_buf_0_2"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_AXI_ADC_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_AXI_ADC_0_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_AXI_ADC_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_auto_cc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_auto_cc_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_auto_cc_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="zsys_auto_pc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zsys_auto_pc_0">
+      <Config>
+        <Option Name="TopModule" Val="zsys_auto_pc_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -1260,6 +1431,24 @@
     </Run>
     <Run Id="zsys_xlslice_3to3_2_synth_1" Type="Ft3:Synth" SrcSet="zsys_xlslice_3to3_2" Part="xc7z015clg485-2" ConstrsSet="zsys_xlslice_3to3_2" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_xlslice_3to3_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_processing_system7_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_processing_system7_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_processing_system7_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_fifo8b_2_axis_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_fifo8b_2_axis_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_fifo8b_2_axis_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_fifo8b_2_axis_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
@@ -1269,7 +1458,194 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="zsys_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_processing_system7_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_processing_system7_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_processing_system7_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="zsys_fit_timer_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_fit_timer_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_fit_timer_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_fit_timer_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_xbar_0" Part="xc7z015clg485-2" ConstrsSet="zsys_xbar_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_xbar_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_rst_ps7_0_100M_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_rst_ps7_0_100M_0" Part="xc7z015clg485-2" ConstrsSet="zsys_rst_ps7_0_100M_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_rst_ps7_0_100M_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_axi_gpio_1_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_axi_gpio_1_0" Part="xc7z015clg485-2" ConstrsSet="zsys_axi_gpio_1_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_axi_gpio_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_DRS4_firmware_1_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_DRS4_firmware_1_0" Part="xc7z015clg485-2" ConstrsSet="zsys_DRS4_firmware_1_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_DRS4_firmware_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_CPLD_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_CPLD_ctrl_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_CPLD_ctrl_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_CPLD_ctrl_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_dac_i2c_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_dac_i2c_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_dac_i2c_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_dac_i2c_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_proc_sys_reset_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_proc_sys_reset_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_proc_sys_reset_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_proc_sys_reset_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_fifo_generator_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_fifo_generator_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_fifo_generator_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_fifo_generator_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_axi_gpio_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_axi_gpio_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_axi_gpio_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_rst_ps7_0_100M_1_synth_1" Type="Ft3:Synth" SrcSet="zsys_rst_ps7_0_100M_1" Part="xc7z015clg485-2" ConstrsSet="zsys_rst_ps7_0_100M_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_rst_ps7_0_100M_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_system_ila_1_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_system_ila_1_0" Part="xc7z015clg485-2" ConstrsSet="zsys_system_ila_1_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_system_ila_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_clk_mon_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_clk_mon_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_clk_mon_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_clk_mon_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_util_ds_buf_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_util_ds_buf_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_util_ds_buf_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_util_ds_buf_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_util_ds_buf_0_2_synth_1" Type="Ft3:Synth" SrcSet="zsys_util_ds_buf_0_2" Part="xc7z015clg485-2" ConstrsSet="zsys_util_ds_buf_0_2" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_util_ds_buf_0_2_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_AXI_ADC_0_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_AXI_ADC_0_0" Part="xc7z015clg485-2" ConstrsSet="zsys_AXI_ADC_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_AXI_ADC_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_auto_cc_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_auto_cc_0" Part="xc7z015clg485-2" ConstrsSet="zsys_auto_cc_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_auto_cc_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="zsys_auto_pc_0" Part="xc7z015clg485-2" ConstrsSet="zsys_auto_pc_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zsys_auto_pc_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -2073,6 +2449,38 @@
     </Run>
     <Run Id="zsys_xlslice_3to3_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_xlslice_3to3_2" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_xlslice_3to3_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_processing_system7_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_fifo8b_2_axis_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_fifo8b_2_axis_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_fifo8b_2_axis_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
         </StratHandle>
@@ -2089,7 +2497,313 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="zsys_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_processing_system7_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="zsys_fit_timer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_fit_timer_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_fit_timer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_xbar_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_rst_ps7_0_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_rst_ps7_0_100M_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_rst_ps7_0_100M_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_axi_gpio_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_axi_gpio_1_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_axi_gpio_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_DRS4_firmware_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_DRS4_firmware_1_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_DRS4_firmware_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_CPLD_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_CPLD_ctrl_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_CPLD_ctrl_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_dac_i2c_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_dac_i2c_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_dac_i2c_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_proc_sys_reset_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_proc_sys_reset_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_proc_sys_reset_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_fifo_generator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_fifo_generator_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_fifo_generator_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_axi_gpio_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_axi_gpio_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_rst_ps7_0_100M_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_rst_ps7_0_100M_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_rst_ps7_0_100M_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_system_ila_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_system_ila_1_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_system_ila_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_clk_mon_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_clk_mon_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_clk_mon_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_util_ds_buf_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_util_ds_buf_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_util_ds_buf_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_util_ds_buf_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_util_ds_buf_0_2" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_util_ds_buf_0_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_AXI_ADC_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_AXI_ADC_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_AXI_ADC_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_auto_cc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_auto_cc_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_auto_cc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="zsys_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z015clg485-2" ConstrsSet="zsys_auto_pc_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="zsys_auto_pc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>

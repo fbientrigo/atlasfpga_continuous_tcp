@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Fri Oct 18 12:47:15 2024
--- Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+-- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+-- Date        : Mon Nov  4 01:09:42 2024
+-- Host        : lapepuat11 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_0_0/zsys_system_ila_0_0_sim_netlist.vhdl
+--               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_0_0/zsys_system_ila_0_0_sim_netlist.vhdl
 -- Design      : zsys_system_ila_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -33631,7 +33631,7 @@ entity zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     u_scnt_cmp_q_0 : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \iscnt_reg[9]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \iscnt_reg[0]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     D : out STD_LOGIC_VECTOR ( 9 downto 0 );
     SRL_Q_O : out STD_LOGIC;
     shift_en_reg : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -33658,7 +33658,7 @@ architecture STRUCTURE of zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter 
   signal cfg_data_1_0 : STD_LOGIC;
   signal cfg_data_2 : STD_LOGIC;
   signal \iscnt[9]_i_3_n_0\ : STD_LOGIC;
-  signal \^iscnt_reg[9]_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^iscnt_reg[0]_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \p_0_in__13\ : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal scnt : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal scnt_cmp_ce : STD_LOGIC;
@@ -33669,17 +33669,17 @@ architecture STRUCTURE of zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter 
   attribute SOFT_HLUTNM of \iscnt[0]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \iscnt[1]_i_1\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \iscnt[2]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \iscnt[3]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \iscnt[4]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \iscnt[3]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \iscnt[4]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \iscnt[6]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \iscnt[7]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \iscnt[8]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \iscnt[9]_i_2\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \iscnt[8]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \iscnt[9]_i_2\ : label is "soft_lutpair1";
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of u_scnt_cmp_q : label is "PRIMITIVE";
 begin
   E(0) <= \^e\(0);
-  \iscnt_reg[9]_0\(0) <= \^iscnt_reg[9]_0\(0);
+  \iscnt_reg[0]_0\(0) <= \^iscnt_reg[0]_0\(0);
   u_scnt_cmp_q_0(1 downto 0) <= \^u_scnt_cmp_q_0\(1 downto 0);
 U_SCE: entity work.zsys_system_ila_0_0_ltlib_v1_0_0_cfglut4_61
      port map (
@@ -33693,7 +33693,7 @@ U_SCE: entity work.zsys_system_ila_0_0_ltlib_v1_0_0_cfglut4_61
     );
 U_SCMPCE: entity work.zsys_system_ila_0_0_ltlib_v1_0_0_cfglut5_62
      port map (
-      A(4) => \^iscnt_reg[9]_0\(0),
+      A(4) => \^iscnt_reg[0]_0\(0),
       A(3 downto 2) => \^u_scnt_cmp_q_0\(1 downto 0),
       A(1 downto 0) => A(1 downto 0),
       cfg_data_0 => cfg_data_0,
@@ -33714,7 +33714,7 @@ U_SCRST: entity work.zsys_system_ila_0_0_ltlib_v1_0_0_cfglut6_63
       s_dclk_o => s_dclk_o,
       shift_en_reg(0) => shift_en_reg(0),
       u_scnt_cmp_q(1 downto 0) => \^u_scnt_cmp_q_0\(1 downto 0),
-      u_scnt_cmp_q_0(0) => \^iscnt_reg[9]_0\(0)
+      u_scnt_cmp_q_0(0) => \^iscnt_reg[0]_0\(0)
     );
 \i_intcap.icap_addr[0]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -34036,7 +34036,7 @@ u_scnt_cmp_q: unisim.vcomponents.FDRE
       C => clk,
       CE => scnt_cmp_ce,
       D => scnt_cmp_temp,
-      Q => \^iscnt_reg[9]_0\(0),
+      Q => \^iscnt_reg[0]_0\(0),
       R => cmp_reset
     );
 end STRUCTURE;
@@ -34083,12 +34083,12 @@ architecture STRUCTURE of zsys_system_ila_0_0_ila_v6_2_7_ila_cap_window_counter 
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \iwcnt[1]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \iwcnt[2]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \iwcnt[3]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \iwcnt[4]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \iwcnt[3]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \iwcnt[4]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \iwcnt[6]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \iwcnt[7]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \iwcnt[8]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \iwcnt[9]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \iwcnt[8]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \iwcnt[9]_i_1\ : label is "soft_lutpair6";
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of u_wcnt_hcmp_q : label is "PRIMITIVE";
   attribute BOX_TYPE of u_wcnt_lcmp_q : label is "PRIMITIVE";
@@ -34552,7 +34552,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity zsys_system_ila_0_0_ila_v6_2_7_ila_cap_addrgen is
   port (
     A : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    \iscnt_reg[9]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \iscnt_reg[0]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     wcnt_hcmp : out STD_LOGIC;
     \out\ : out STD_LOGIC_VECTOR ( 9 downto 0 );
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ : out STD_LOGIC;
@@ -34601,7 +34601,7 @@ architecture STRUCTURE of zsys_system_ila_0_0_ila_v6_2_7_ila_cap_addrgen is
   attribute DONT_TOUCH of icap_wr_en : signal is std.standard.true;
   attribute RTL_KEEP of icap_wr_en : signal is "yes";
   attribute async_reg of icap_wr_en : signal is "true";
-  signal \^iscnt_reg[9]\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^iscnt_reg[0]\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal n_0_0 : STD_LOGIC;
   signal n_0_1 : STD_LOGIC;
   signal n_0_10 : STD_LOGIC;
@@ -34815,7 +34815,7 @@ architecture STRUCTURE of zsys_system_ila_0_0_ila_v6_2_7_ila_cap_addrgen is
   attribute KEEP of icap_wr_en_reg : label is "yes";
 begin
   A(2 downto 0) <= \^a\(2 downto 0);
-  \iscnt_reg[9]\(0) <= \^iscnt_reg[9]\(0);
+  \iscnt_reg[0]\(0) <= \^iscnt_reg[0]\(0);
 CAP_WR_EN_O_reg: unisim.vcomponents.FDRE
      port map (
       C => clk,
@@ -34833,7 +34833,7 @@ U_CMPRESET: entity work.zsys_system_ila_0_0_ltlib_v1_0_0_cfglut6
       cfg_data_1 => cfg_data_1,
       cmp_reset => cmp_reset,
       s_dclk_o => s_dclk_o,
-      u_scnt_cmp_q(0) => \^iscnt_reg[9]\(0)
+      u_scnt_cmp_q(0) => \^iscnt_reg[0]\(0)
     );
 \captured_samples_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -35927,7 +35927,7 @@ u_cap_sample_counter: entity work.zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_
       clk => clk,
       cmp_reset => cmp_reset,
       en_adv_trigger_reg => en_adv_trigger_reg,
-      \iscnt_reg[9]_0\(0) => \^iscnt_reg[9]\(0),
+      \iscnt_reg[0]_0\(0) => \^iscnt_reg[0]\(0),
       \out\(9 downto 0) => cfg_data_vec_sync2(10 downto 1),
       s_dclk_o => s_dclk_o,
       shift_en_reg(0) => E(0),
@@ -36182,7 +36182,7 @@ u_cap_addrgen: entity work.zsys_system_ila_0_0_ila_v6_2_7_ila_cap_addrgen
       clk => clk,
       en_adv_trigger_reg => en_adv_trigger_reg,
       in0(0) => cfg_data_1,
-      \iscnt_reg[9]\(0) => scnt_cmp,
+      \iscnt_reg[0]\(0) => scnt_cmp,
       \out\(9 downto 0) => \out\(9 downto 0),
       \reset_out_reg[0]\(0) => \reset_out_reg[0]\(0),
       s_dclk_o => s_dclk_o,
@@ -56960,7 +56960,7 @@ entity zsys_system_ila_0_0_bd_f448_ila_lib_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_0_0_bd_f448_ila_lib_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_0_0_bd_f448_ila_lib_0 : entity is "ila,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_0_0_bd_f448_ila_lib_0 : entity is "ila,Vivado 2018.2.2";
 end zsys_system_ila_0_0_bd_f448_ila_lib_0;
 
 architecture STRUCTURE of zsys_system_ila_0_0_bd_f448_ila_lib_0 is
@@ -76629,11 +76629,11 @@ architecture STRUCTURE of zsys_system_ila_0_0_bd_f448 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of ila_lib : label is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of ila_lib : label is "ila,Vivado 2018.2";
+  attribute x_core_info of ila_lib : label is "ila,Vivado 2018.2.2";
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, PHASE 0.000";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 1e+08, PHASE 0.000";
 begin
   probe0_1 <= probe0(0);
   probe1_1 <= probe1(0);
@@ -76682,7 +76682,7 @@ entity zsys_system_ila_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_0_0 : entity is "bd_f448,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_0_0 : entity is "bd_f448,Vivado 2018.2.2";
 end zsys_system_ila_0_0;
 
 architecture STRUCTURE of zsys_system_ila_0_0 is
@@ -76691,7 +76691,7 @@ architecture STRUCTURE of zsys_system_ila_0_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 CLK.clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.clk, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
 begin
 U0: entity work.zsys_system_ila_0_0_bd_f448
      port map (

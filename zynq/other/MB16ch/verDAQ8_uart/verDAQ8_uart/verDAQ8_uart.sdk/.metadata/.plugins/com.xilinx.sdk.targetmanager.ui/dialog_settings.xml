@@ -24,7 +24,7 @@
 	<item value="Auto Detect" key="zsys_wrapper_hw_platform_1-device"/>
 	<item value="zsys_wrapper.bit" key="zsys_wrapper_hw_platform_1-bitFile"/>
 	<item value="Local" key="zsys_wrapper_hw_platform_3-target"/>
-	<item value="zsys_wrapper_hw_platform_3" key="programfpga.hwplatform"/>
+	<item value="zsys_wrapper_hw_platform_1" key="programfpga.hwplatform"/>
 	<item value="" key="zsys_wrapper_hw_platform_3-bmmFile"/>
 	<item value="false" key="zsys_wrapper_hw_platform_1-partial_bit"/>
 	<item value="" key="zsys_wrapper_hw_platform_4-bmmFile"/>

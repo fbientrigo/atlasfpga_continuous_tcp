@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-| Date         : Sun Oct 27 00:10:55 2024
+| Date         : Mon Nov  4 01:11:25 2024
 | Host         : lapepuat11 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file zsys_axi_dma_0_0_utilization_synth.rpt -pb zsys_axi_dma_0_0_utilization_synth.pb
 | Design       : zsys_axi_dma_0_0

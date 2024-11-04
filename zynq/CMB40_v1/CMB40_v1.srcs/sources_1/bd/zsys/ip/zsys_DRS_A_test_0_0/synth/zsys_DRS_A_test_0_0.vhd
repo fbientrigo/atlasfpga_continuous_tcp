@@ -92,16 +92,16 @@ ARCHITECTURE zsys_DRS_A_test_0_0_arch OF zsys_DRS_A_test_0_0 IS
     );
   END COMPONENT DRS_A_test;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF zsys_DRS_A_test_0_0_arch: ARCHITECTURE IS "DRS_A_test,Vivado 2018.2";
+  ATTRIBUTE X_CORE_INFO OF zsys_DRS_A_test_0_0_arch: ARCHITECTURE IS "DRS_A_test,Vivado 2018.2.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF zsys_DRS_A_test_0_0_arch : ARCHITECTURE IS "zsys_DRS_A_test_0_0,DRS_A_test,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF zsys_DRS_A_test_0_0_arch: ARCHITECTURE IS "zsys_DRS_A_test_0_0,DRS_A_test,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=DRS_A_test,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF zsys_DRS_A_test_0_0_arch: ARCHITECTURE IS "zsys_DRS_A_test_0_0,DRS_A_test,{x_ipProduct=Vivado 2018.2.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=DRS_A_test,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF zsys_DRS_A_test_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF i_clk: SIGNAL IS "XIL_INTERFACENAME i_clk, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF i_clk: SIGNAL IS "XIL_INTERFACENAME i_clk, FREQ_HZ 5e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1";
   ATTRIBUTE X_INTERFACE_INFO OF i_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 i_clk CLK";
 BEGIN
   U0 : DRS_A_test

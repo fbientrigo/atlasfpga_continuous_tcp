@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Fri Oct 18 12:47:01 2024
--- Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+-- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+-- Date        : Mon Nov  4 01:09:59 2024
+-- Host        : lapepuat11 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/zsys_system_ila_2_0_sim_netlist.vhdl
+--               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/zsys_system_ila_2_0_sim_netlist.vhdl
 -- Design      : zsys_system_ila_2_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,7 +27,7 @@ entity zsys_system_ila_2_0_bd_34e9_slot_0_ar_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_2_0_bd_34e9_slot_0_ar_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_slot_0_ar_0 : entity is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_slot_0_ar_0 : entity is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2";
 end zsys_system_ila_2_0_bd_34e9_slot_0_ar_0;
 
 architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9_slot_0_ar_0 is
@@ -56,7 +56,7 @@ entity zsys_system_ila_2_0_bd_34e9_slot_0_aw_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_2_0_bd_34e9_slot_0_aw_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_slot_0_aw_0 : entity is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_slot_0_aw_0 : entity is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2";
 end zsys_system_ila_2_0_bd_34e9_slot_0_aw_0;
 
 architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9_slot_0_aw_0 is
@@ -85,7 +85,7 @@ entity zsys_system_ila_2_0_bd_34e9_slot_0_b_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_2_0_bd_34e9_slot_0_b_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_slot_0_b_0 : entity is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_slot_0_b_0 : entity is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2";
 end zsys_system_ila_2_0_bd_34e9_slot_0_b_0;
 
 architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9_slot_0_b_0 is
@@ -114,7 +114,7 @@ entity zsys_system_ila_2_0_bd_34e9_slot_0_r_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_2_0_bd_34e9_slot_0_r_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_slot_0_r_0 : entity is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_slot_0_r_0 : entity is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2";
 end zsys_system_ila_2_0_bd_34e9_slot_0_r_0;
 
 architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9_slot_0_r_0 is
@@ -143,7 +143,7 @@ entity zsys_system_ila_2_0_bd_34e9_slot_0_w_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_2_0_bd_34e9_slot_0_w_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_slot_0_w_0 : entity is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_slot_0_w_0 : entity is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2";
 end zsys_system_ila_2_0_bd_34e9_slot_0_w_0;
 
 architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9_slot_0_w_0 is
@@ -13488,7 +13488,7 @@ architecture STRUCTURE of \zsys_system_ila_2_0_xsdbs_v1_0_2_reg_ctl__parameteriz
   signal \xsdb_reg_reg_n_0_[9]\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of u_scnt_cmp_q_i_2 : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of u_wcnt_hcmp_q_i_1 : label is "soft_lutpair81";
+  attribute SOFT_HLUTNM of u_wcnt_lcmp_q_i_1 : label is "soft_lutpair81";
 begin
   u_scnt_cmp_q <= \^u_scnt_cmp_q\;
 \slaveRegDo_mux_0[0]_i_10\: unisim.vcomponents.LUT5
@@ -42054,7 +42054,7 @@ entity zsys_system_ila_2_0_bd_34e9_g_inst_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_2_0_bd_34e9_g_inst_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_g_inst_0 : entity is "bd_34e9_g_inst_0_gigantic_mux,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_g_inst_0 : entity is "bd_34e9_g_inst_0_gigantic_mux,Vivado 2018.2.2";
 end zsys_system_ila_2_0_bd_34e9_g_inst_0;
 
 architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9_g_inst_0 is
@@ -42082,7 +42082,7 @@ architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9_g_inst_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of aclk : signal is "xilinx.com:signal:clock:1.0 signal_clock CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of aclk : signal is "XIL_INTERFACENAME signal_clock, ASSOCIATED_RESET aresetn, ASSOCIATED_BUSIF m_slot_0_axi:m_slot_1_axi:m_slot_2_axi:m_slot_3_axi:m_slot_4_axi:m_slot_5_axi:m_slot_6_axi:m_slot_7_axi:m_slot_8_axi:m_slot_9_axi:m_slot_10_axi:m_slot_11_axi:m_slot_12_axi:m_slot_13_axi:m_slot_14_axi:m_slot_15_axi:m_slot_0_axis:m_slot_1_axis:m_slot_2_axis:m_slot_3_axis:m_slot_4_axis:m_slot_5_axis:m_slot_6_axis:m_slot_7_axis:m_slot_8_axis:m_slot_9_axis:m_slot_10_axis:m_slot_11_axis:m_slot_12_axis:m_slot_13_axis:m_slot_14_axis:m_slot_15_axis:slot_0_axi:slot_1_axi:slot_2_axi:slot_3_axi:slot_4_axi:slot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:slot_12_axi:slot_13_axi:slot_14_axi:slot_15_axi:slot_0_axis:slot_1_axis:slot_2_axis:slot_3_axis:slot_4_axis:slot_5_axis:slot_6_axis:slot_7_axis:slot_8_axis:slot_9_axis:slot_10_axis:slot_11_axis:slot_12_axis:slot_13_axis:slot_14_axis:slot_15_axis:mux_0_axis:mux_1_axis:mux_2_axis:mux_3_axis:mux_0_axi:mux_1_axi:mux_2_axi:mux_3_axi, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
+  attribute x_interface_parameter of aclk : signal is "XIL_INTERFACENAME signal_clock, ASSOCIATED_RESET aresetn, ASSOCIATED_BUSIF m_slot_0_axi:m_slot_1_axi:m_slot_2_axi:m_slot_3_axi:m_slot_4_axi:m_slot_5_axi:m_slot_6_axi:m_slot_7_axi:m_slot_8_axi:m_slot_9_axi:m_slot_10_axi:m_slot_11_axi:m_slot_12_axi:m_slot_13_axi:m_slot_14_axi:m_slot_15_axi:m_slot_0_axis:m_slot_1_axis:m_slot_2_axis:m_slot_3_axis:m_slot_4_axis:m_slot_5_axis:m_slot_6_axis:m_slot_7_axis:m_slot_8_axis:m_slot_9_axis:m_slot_10_axis:m_slot_11_axis:m_slot_12_axis:m_slot_13_axis:m_slot_14_axis:m_slot_15_axis:slot_0_axi:slot_1_axi:slot_2_axi:slot_3_axi:slot_4_axi:slot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:slot_12_axi:slot_13_axi:slot_14_axi:slot_15_axi:slot_0_axis:slot_1_axis:slot_2_axis:slot_3_axis:slot_4_axis:slot_5_axis:slot_6_axis:slot_7_axis:slot_8_axis:slot_9_axis:slot_10_axis:slot_11_axis:slot_12_axis:slot_13_axis:slot_14_axis:slot_15_axis:mux_0_axis:mux_1_axis:mux_2_axis:mux_3_axis:mux_0_axi:mux_1_axi:mux_2_axi:mux_3_axi, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
   attribute x_interface_info of aresetn : signal is "xilinx.com:signal:reset:1.0 signal_reset RST";
   attribute x_interface_parameter of aresetn : signal is "XIL_INTERFACENAME signal_reset, POLARITY ACTIVE_LOW";
   attribute x_interface_info of m_slot_0_axi_arready : signal is "xilinx.com:interface:aximm:1.0 m_slot_0_axi ARREADY";
@@ -42092,7 +42092,7 @@ architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9_g_inst_0 is
   attribute x_interface_info of m_slot_0_axi_bready : signal is "xilinx.com:interface:aximm:1.0 m_slot_0_axi BREADY";
   attribute x_interface_info of m_slot_0_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 m_slot_0_axi BVALID";
   attribute x_interface_info of m_slot_0_axi_rready : signal is "xilinx.com:interface:aximm:1.0 m_slot_0_axi RREADY";
-  attribute x_interface_parameter of m_slot_0_axi_rready : signal is "XIL_INTERFACENAME m_slot_0_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  attribute x_interface_parameter of m_slot_0_axi_rready : signal is "XIL_INTERFACENAME m_slot_0_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
   attribute x_interface_info of m_slot_0_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 m_slot_0_axi RVALID";
   attribute x_interface_info of m_slot_0_axi_wready : signal is "xilinx.com:interface:aximm:1.0 m_slot_0_axi WREADY";
   attribute x_interface_info of m_slot_0_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 m_slot_0_axi WVALID";
@@ -42103,7 +42103,7 @@ architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9_g_inst_0 is
   attribute x_interface_info of slot_0_axi_bready : signal is "xilinx.com:interface:aximm:1.0 slot_0_axi BREADY";
   attribute x_interface_info of slot_0_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 slot_0_axi BVALID";
   attribute x_interface_info of slot_0_axi_rready : signal is "xilinx.com:interface:aximm:1.0 slot_0_axi RREADY";
-  attribute x_interface_parameter of slot_0_axi_rready : signal is "XIL_INTERFACENAME slot_0_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  attribute x_interface_parameter of slot_0_axi_rready : signal is "XIL_INTERFACENAME slot_0_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
   attribute x_interface_info of slot_0_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 slot_0_axi RVALID";
   attribute x_interface_info of slot_0_axi_wready : signal is "xilinx.com:interface:aximm:1.0 slot_0_axi WREADY";
   attribute x_interface_info of slot_0_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 slot_0_axi WVALID";
@@ -51409,7 +51409,7 @@ entity zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     u_scnt_cmp_q_0 : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \iscnt_reg[9]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \iscnt_reg[0]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     D : out STD_LOGIC_VECTOR ( 9 downto 0 );
     DOUT_O : out STD_LOGIC;
     SRL_Q_O : out STD_LOGIC;
@@ -51437,7 +51437,7 @@ architecture STRUCTURE of zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter 
   signal cfg_data_1_0 : STD_LOGIC;
   signal cfg_data_2 : STD_LOGIC;
   signal \iscnt[9]_i_3_n_0\ : STD_LOGIC;
-  signal \^iscnt_reg[9]_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^iscnt_reg[0]_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal p_0_in : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal scnt : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal scnt_cmp_ce : STD_LOGIC;
@@ -51447,17 +51447,17 @@ architecture STRUCTURE of zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter 
   attribute SOFT_HLUTNM of \iscnt[0]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \iscnt[1]_i_1\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \iscnt[2]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \iscnt[3]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \iscnt[4]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \iscnt[3]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \iscnt[4]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \iscnt[6]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \iscnt[7]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \iscnt[8]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \iscnt[9]_i_2\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \iscnt[8]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \iscnt[9]_i_2\ : label is "soft_lutpair1";
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of u_scnt_cmp_q : label is "PRIMITIVE";
 begin
   E(0) <= \^e\(0);
-  \iscnt_reg[9]_0\(0) <= \^iscnt_reg[9]_0\(0);
+  \iscnt_reg[0]_0\(0) <= \^iscnt_reg[0]_0\(0);
   u_scnt_cmp_q_0(1 downto 0) <= \^u_scnt_cmp_q_0\(1 downto 0);
 U_SCE: entity work.zsys_system_ila_2_0_ltlib_v1_0_0_cfglut4_99
      port map (
@@ -51471,7 +51471,7 @@ U_SCE: entity work.zsys_system_ila_2_0_ltlib_v1_0_0_cfglut4_99
     );
 U_SCMPCE: entity work.zsys_system_ila_2_0_ltlib_v1_0_0_cfglut5_100
      port map (
-      A(4) => \^iscnt_reg[9]_0\(0),
+      A(4) => \^iscnt_reg[0]_0\(0),
       A(3 downto 2) => \^u_scnt_cmp_q_0\(1 downto 0),
       A(1 downto 0) => A(1 downto 0),
       S_DCLK_O => S_DCLK_O,
@@ -51492,7 +51492,7 @@ U_SCRST: entity work.zsys_system_ila_2_0_ltlib_v1_0_0_cfglut6_101
       en_adv_trigger_reg => en_adv_trigger_reg,
       shift_en_reg(0) => shift_en_reg(0),
       u_scnt_cmp_q(1 downto 0) => \^u_scnt_cmp_q_0\(1 downto 0),
-      u_scnt_cmp_q_0(0) => \^iscnt_reg[9]_0\(0)
+      u_scnt_cmp_q_0(0) => \^iscnt_reg[0]_0\(0)
     );
 \i_intcap.icap_addr[0]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -51813,7 +51813,7 @@ u_scnt_cmp_q: unisim.vcomponents.FDRE
       C => \out\,
       CE => scnt_cmp_ce,
       D => scnt_cmp_temp,
-      Q => \^iscnt_reg[9]_0\(0),
+      Q => \^iscnt_reg[0]_0\(0),
       R => cmp_reset
     );
 end STRUCTURE;
@@ -51860,12 +51860,12 @@ architecture STRUCTURE of zsys_system_ila_2_0_ila_v6_2_7_ila_cap_window_counter 
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \iwcnt[1]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \iwcnt[2]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \iwcnt[3]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \iwcnt[4]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \iwcnt[3]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \iwcnt[4]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \iwcnt[6]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \iwcnt[7]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \iwcnt[8]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \iwcnt[9]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \iwcnt[8]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \iwcnt[9]_i_1\ : label is "soft_lutpair6";
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of u_wcnt_hcmp_q : label is "PRIMITIVE";
   attribute BOX_TYPE of u_wcnt_lcmp_q : label is "PRIMITIVE";
@@ -52476,7 +52476,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity zsys_system_ila_2_0_ila_v6_2_7_ila_cap_addrgen is
   port (
     A : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    \iscnt_reg[9]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \iscnt_reg[0]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     wcnt_hcmp : out STD_LOGIC;
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\ : out STD_LOGIC_VECTOR ( 9 downto 0 );
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC;
@@ -52526,7 +52526,7 @@ architecture STRUCTURE of zsys_system_ila_2_0_ila_v6_2_7_ila_cap_addrgen is
   attribute DONT_TOUCH of icap_wr_en : signal is std.standard.true;
   attribute RTL_KEEP of icap_wr_en : signal is "yes";
   attribute async_reg of icap_wr_en : signal is "true";
-  signal \^iscnt_reg[9]\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^iscnt_reg[0]\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal n_0_0 : STD_LOGIC;
   signal n_0_1 : STD_LOGIC;
   signal n_0_10 : STD_LOGIC;
@@ -52740,7 +52740,7 @@ architecture STRUCTURE of zsys_system_ila_2_0_ila_v6_2_7_ila_cap_addrgen is
   attribute KEEP of icap_wr_en_reg : label is "yes";
 begin
   A(2 downto 0) <= \^a\(2 downto 0);
-  \iscnt_reg[9]\(0) <= \^iscnt_reg[9]\(0);
+  \iscnt_reg[0]\(0) <= \^iscnt_reg[0]\(0);
 CAP_WR_EN_O_reg: unisim.vcomponents.FDRE
      port map (
       C => \out\,
@@ -52758,7 +52758,7 @@ U_CMPRESET: entity work.zsys_system_ila_2_0_ltlib_v1_0_0_cfglut6
       cfg_data_0 => cfg_data_0,
       cfg_data_1 => cfg_data_1,
       cmp_reset => cmp_reset,
-      u_scnt_cmp_q(0) => \^iscnt_reg[9]\(0)
+      u_scnt_cmp_q(0) => \^iscnt_reg[0]\(0)
     );
 \captured_samples_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -53853,7 +53853,7 @@ u_cap_sample_counter: entity work.zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_
       \cfg_data_vec_sync2_reg[10]\(9 downto 0) => cfg_data_vec_sync2(10 downto 1),
       cmp_reset => cmp_reset,
       en_adv_trigger_reg => en_adv_trigger_reg,
-      \iscnt_reg[9]_0\(0) => \^iscnt_reg[9]\(0),
+      \iscnt_reg[0]_0\(0) => \^iscnt_reg[0]\(0),
       \out\ => \out\,
       scnt_cmp_temp => scnt_cmp_temp,
       shift_en_reg(0) => E(0),
@@ -54138,7 +54138,7 @@ u_cap_addrgen: entity work.zsys_system_ila_2_0_ila_v6_2_7_ila_cap_addrgen
       \capture_qual_ctrl_reg[1]\(1 downto 0) => \capture_qual_ctrl_reg[1]\(1 downto 0),
       en_adv_trigger_reg => en_adv_trigger_reg,
       in0(0) => cfg_data_1,
-      \iscnt_reg[9]\(0) => scnt_cmp,
+      \iscnt_reg[0]\(0) => scnt_cmp,
       \out\ => \out\,
       \reset_out_reg[0]\(0) => \reset_out_reg[0]\(0),
       scnt_cmp_temp => scnt_cmp_temp,
@@ -77605,7 +77605,7 @@ entity zsys_system_ila_2_0_bd_34e9_ila_lib_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_2_0_bd_34e9_ila_lib_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_ila_lib_0 : entity is "ila,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_2_0_bd_34e9_ila_lib_0 : entity is "ila,Vivado 2018.2.2";
 end zsys_system_ila_2_0_bd_34e9_ila_lib_0;
 
 architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9_ila_lib_0 is
@@ -97316,25 +97316,25 @@ architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of g_inst : label is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of g_inst : label is "bd_34e9_g_inst_0_gigantic_mux,Vivado 2018.2";
+  attribute X_CORE_INFO of g_inst : label is "bd_34e9_g_inst_0_gigantic_mux,Vivado 2018.2.2";
   attribute CHECK_LICENSE_TYPE of ila_lib : label is "bd_34e9_ila_lib_0,ila_v6_2_7_ila,{}";
   attribute DowngradeIPIdentifiedWarnings of ila_lib : label is "yes";
-  attribute X_CORE_INFO of ila_lib : label is "ila,Vivado 2018.2";
+  attribute X_CORE_INFO of ila_lib : label is "ila,Vivado 2018.2.2";
   attribute CHECK_LICENSE_TYPE of slot_0_ar : label is "bd_34e9_slot_0_ar_0,xlconcat_v2_1_1_xlconcat,{}";
   attribute DowngradeIPIdentifiedWarnings of slot_0_ar : label is "yes";
-  attribute X_CORE_INFO of slot_0_ar : label is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2";
+  attribute X_CORE_INFO of slot_0_ar : label is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2";
   attribute CHECK_LICENSE_TYPE of slot_0_aw : label is "bd_34e9_slot_0_aw_0,xlconcat_v2_1_1_xlconcat,{}";
   attribute DowngradeIPIdentifiedWarnings of slot_0_aw : label is "yes";
-  attribute X_CORE_INFO of slot_0_aw : label is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2";
+  attribute X_CORE_INFO of slot_0_aw : label is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2";
   attribute CHECK_LICENSE_TYPE of slot_0_b : label is "bd_34e9_slot_0_b_0,xlconcat_v2_1_1_xlconcat,{}";
   attribute DowngradeIPIdentifiedWarnings of slot_0_b : label is "yes";
-  attribute X_CORE_INFO of slot_0_b : label is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2";
+  attribute X_CORE_INFO of slot_0_b : label is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2";
   attribute CHECK_LICENSE_TYPE of slot_0_r : label is "bd_34e9_slot_0_r_0,xlconcat_v2_1_1_xlconcat,{}";
   attribute DowngradeIPIdentifiedWarnings of slot_0_r : label is "yes";
-  attribute X_CORE_INFO of slot_0_r : label is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2";
+  attribute X_CORE_INFO of slot_0_r : label is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2";
   attribute CHECK_LICENSE_TYPE of slot_0_w : label is "bd_34e9_slot_0_w_0,xlconcat_v2_1_1_xlconcat,{}";
   attribute DowngradeIPIdentifiedWarnings of slot_0_w : label is "yes";
-  attribute X_CORE_INFO of slot_0_w : label is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2";
+  attribute X_CORE_INFO of slot_0_w : label is "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2";
   attribute x_interface_info : string;
   attribute x_interface_info of SLOT_0_AXI_arready : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARREADY";
   attribute x_interface_info of SLOT_0_AXI_arvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARVALID";
@@ -97348,11 +97348,11 @@ architecture STRUCTURE of zsys_system_ila_2_0_bd_34e9 is
   attribute x_interface_info of SLOT_0_AXI_wvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WVALID";
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_0_AXI, ASSOCIATED_RESET resetn, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, PHASE 0.000";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_0_AXI, ASSOCIATED_RESET resetn, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 1e+08, PHASE 0.000";
   attribute x_interface_info of resetn : signal is "xilinx.com:signal:reset:1.0 RST.RESETN RST";
   attribute x_interface_parameter of resetn : signal is "XIL_INTERFACENAME RST.RESETN, POLARITY ACTIVE_LOW";
   attribute x_interface_info of SLOT_0_AXI_araddr : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARADDR";
-  attribute x_interface_parameter of SLOT_0_AXI_araddr : signal is "XIL_INTERFACENAME SLOT_0_AXI, ADDR_WIDTH 4, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0";
+  attribute x_interface_parameter of SLOT_0_AXI_araddr : signal is "XIL_INTERFACENAME SLOT_0_AXI, ADDR_WIDTH 4, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, DATA_WIDTH 32, FREQ_HZ 1e+08, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0";
   attribute x_interface_info of SLOT_0_AXI_arprot : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARPROT";
   attribute x_interface_info of SLOT_0_AXI_awaddr : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWADDR";
   attribute x_interface_info of SLOT_0_AXI_awprot : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWPROT";
@@ -97500,7 +97500,7 @@ entity zsys_system_ila_2_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_2_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_2_0 : entity is "bd_34e9,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_2_0 : entity is "bd_34e9,Vivado 2018.2.2";
 end zsys_system_ila_2_0;
 
 architecture STRUCTURE of zsys_system_ila_2_0 is
@@ -97519,13 +97519,13 @@ architecture STRUCTURE of zsys_system_ila_2_0 is
   attribute x_interface_info of SLOT_0_AXI_wvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WVALID";
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 CLK.clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF SLOT_0_AXI, ASSOCIATED_RESET resetn";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.clk, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF SLOT_0_AXI, ASSOCIATED_RESET resetn";
   attribute x_interface_info of resetn : signal is "xilinx.com:signal:reset:1.0 RST.resetn RST";
   attribute x_interface_parameter of resetn : signal is "XIL_INTERFACENAME RST.resetn, POLARITY ACTIVE_LOW";
   attribute x_interface_info of SLOT_0_AXI_araddr : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARADDR";
   attribute x_interface_info of SLOT_0_AXI_arprot : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARPROT";
   attribute x_interface_info of SLOT_0_AXI_awaddr : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWADDR";
-  attribute x_interface_parameter of SLOT_0_AXI_awaddr : signal is "XIL_INTERFACENAME SLOT_0_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  attribute x_interface_parameter of SLOT_0_AXI_awaddr : signal is "XIL_INTERFACENAME SLOT_0_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
   attribute x_interface_info of SLOT_0_AXI_awprot : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWPROT";
   attribute x_interface_info of SLOT_0_AXI_bresp : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI BRESP";
   attribute x_interface_info of SLOT_0_AXI_rdata : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI RDATA";

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-// Date        : Sun Oct 27 00:10:43 2024
+// Date        : Mon Nov  4 01:11:02 2024
 // Host        : lapepuat11 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               C:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_axi_smc_0/zsys_axi_smc_0_stub.v
+//               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_axi_smc_0/zsys_axi_smc_0_stub.v
 // Design      : zsys_axi_smc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z015clg485-2

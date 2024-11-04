@@ -3,9 +3,9 @@
     with args -log zsys_system_ila_2_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source zsys_system_ila_2_0.tcl
 
 
-****** Vivado v2018.2 (64-bit)
-  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
-  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+****** Vivado v2018.2.2 (64-bit)
+  **** SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
+  **** IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 source zsys_system_ila_2_0.tcl -notrace
@@ -14,16 +14,16 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 164964 
+INFO: Helper process launched with PID 8692 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1368.145 ; gain = 114.883 ; free physical = 285 ; free virtual = 5873
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 486.348 ; gain = 123.926
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'zsys_system_ila_2_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/synth/zsys_system_ila_2_0.vhd:83]
-INFO: [Synth 8-3491] module 'bd_34e9' declared at '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:11' bound to instance 'U0' of component 'bd_34e9' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/synth/zsys_system_ila_2_0.vhd:305]
-INFO: [Synth 8-638] synthesizing module 'bd_34e9' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:42]
-INFO: [Synth 8-3491] module 'bd_34e9_g_inst_0' declared at '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/synth/bd_34e9_g_inst_0.v:116' bound to instance 'g_inst' of component 'bd_34e9_g_inst_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:249]
-INFO: [Synth 8-6157] synthesizing module 'bd_34e9_g_inst_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/synth/bd_34e9_g_inst_0.v:116]
-INFO: [Synth 8-6157] synthesizing module 'bd_34e9_g_inst_0_gigantic_mux' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:63]
+INFO: [Synth 8-638] synthesizing module 'zsys_system_ila_2_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/synth/zsys_system_ila_2_0.vhd:83]
+INFO: [Synth 8-3491] module 'bd_34e9' declared at 'c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:11' bound to instance 'U0' of component 'bd_34e9' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/synth/zsys_system_ila_2_0.vhd:305]
+INFO: [Synth 8-638] synthesizing module 'bd_34e9' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:42]
+INFO: [Synth 8-3491] module 'bd_34e9_g_inst_0' declared at 'c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/synth/bd_34e9_g_inst_0.v:116' bound to instance 'g_inst' of component 'bd_34e9_g_inst_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:249]
+INFO: [Synth 8-6157] synthesizing module 'bd_34e9_g_inst_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/synth/bd_34e9_g_inst_0.v:116]
+INFO: [Synth 8-6157] synthesizing module 'bd_34e9_g_inst_0_gigantic_mux' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:63]
 	Parameter C_NUM_MONITOR_SLOTS bound to: 1 - type: integer 
 	Parameter C_MUX_LEVEL bound to: 1 - type: integer 
 	Parameter C_AXI_CH_SEL bound to: ALL - type: string 
@@ -1366,111 +1366,111 @@ INFO: [Synth 8-6157] synthesizing module 'bd_34e9_g_inst_0_gigantic_mux' [/home/
 	Parameter C_SLOT_15_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
 	Parameter C_SLOT_15_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_EN_GIGAMUX bound to: 1'b0 
-WARNING: [Synth 8-3848] Net probe_out0 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1985]
-WARNING: [Synth 8-3848] Net probe_out1 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1986]
-WARNING: [Synth 8-3848] Net probe_out2 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1987]
-WARNING: [Synth 8-3848] Net probe_out3 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1988]
-WARNING: [Synth 8-3848] Net probe_out4 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1989]
-WARNING: [Synth 8-3848] Net probe_out5 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1990]
-WARNING: [Synth 8-3848] Net probe_out6 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1991]
-WARNING: [Synth 8-3848] Net probe_out7 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1992]
-WARNING: [Synth 8-3848] Net probe_out8 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1993]
-WARNING: [Synth 8-3848] Net probe_out9 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1994]
-WARNING: [Synth 8-3848] Net probe_out10 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1995]
-WARNING: [Synth 8-3848] Net probe_out11 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1996]
-WARNING: [Synth 8-3848] Net probe_out12 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1997]
-WARNING: [Synth 8-3848] Net probe_out13 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1998]
-WARNING: [Synth 8-3848] Net probe_out14 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1999]
-WARNING: [Synth 8-3848] Net probe_out15 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2000]
-WARNING: [Synth 8-3848] Net probe_out16 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2001]
-WARNING: [Synth 8-3848] Net probe_out17 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2002]
-WARNING: [Synth 8-3848] Net probe_out18 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2003]
-WARNING: [Synth 8-3848] Net probe_out19 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2004]
-WARNING: [Synth 8-3848] Net probe_out20 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2005]
-WARNING: [Synth 8-3848] Net probe_out21 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2006]
-WARNING: [Synth 8-3848] Net probe_out22 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2007]
-WARNING: [Synth 8-3848] Net probe_out23 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2008]
-WARNING: [Synth 8-3848] Net probe_out24 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2009]
-WARNING: [Synth 8-3848] Net probe_out25 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2010]
-WARNING: [Synth 8-3848] Net probe_out26 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2011]
-WARNING: [Synth 8-3848] Net probe_out27 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2012]
-WARNING: [Synth 8-3848] Net probe_out28 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2013]
-WARNING: [Synth 8-3848] Net probe_out29 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2014]
-WARNING: [Synth 8-3848] Net probe_out30 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2015]
-WARNING: [Synth 8-3848] Net probe_out31 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2016]
-WARNING: [Synth 8-3848] Net probe_out32 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2017]
-WARNING: [Synth 8-3848] Net probe_out33 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2018]
-WARNING: [Synth 8-3848] Net probe_out34 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2019]
-WARNING: [Synth 8-3848] Net probe_out35 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2020]
-WARNING: [Synth 8-3848] Net probe_out36 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2021]
-WARNING: [Synth 8-3848] Net probe_out37 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2022]
-WARNING: [Synth 8-3848] Net probe_out38 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2023]
-WARNING: [Synth 8-3848] Net probe_out39 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2024]
-WARNING: [Synth 8-3848] Net probe_out40 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2025]
-WARNING: [Synth 8-3848] Net probe_out41 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2026]
-WARNING: [Synth 8-3848] Net probe_out42 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2027]
-WARNING: [Synth 8-3848] Net probe_out43 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2028]
-WARNING: [Synth 8-3848] Net probe_out44 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2029]
-WARNING: [Synth 8-3848] Net probe_out45 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2030]
-WARNING: [Synth 8-3848] Net probe_out46 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2031]
-WARNING: [Synth 8-3848] Net probe_out47 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2032]
-WARNING: [Synth 8-3848] Net probe_out48 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2033]
-WARNING: [Synth 8-3848] Net probe_out49 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2034]
-WARNING: [Synth 8-3848] Net probe_out50 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2035]
-WARNING: [Synth 8-3848] Net probe_out51 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2036]
-WARNING: [Synth 8-3848] Net probe_out52 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2037]
-WARNING: [Synth 8-3848] Net probe_out53 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2038]
-WARNING: [Synth 8-3848] Net probe_out54 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2039]
-WARNING: [Synth 8-3848] Net probe_out55 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2040]
-WARNING: [Synth 8-3848] Net probe_out56 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2041]
-WARNING: [Synth 8-3848] Net probe_out57 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2042]
-WARNING: [Synth 8-3848] Net probe_out58 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2043]
-WARNING: [Synth 8-3848] Net probe_out59 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2044]
-WARNING: [Synth 8-3848] Net probe_out60 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2045]
-WARNING: [Synth 8-3848] Net probe_out61 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2046]
-WARNING: [Synth 8-3848] Net probe_out62 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2047]
-WARNING: [Synth 8-3848] Net probe_out63 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2048]
-WARNING: [Synth 8-3848] Net probe_out64 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2049]
-WARNING: [Synth 8-3848] Net probe_out65 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2050]
-WARNING: [Synth 8-3848] Net probe_out66 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2051]
-WARNING: [Synth 8-3848] Net probe_out67 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2052]
-WARNING: [Synth 8-3848] Net probe_out68 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2053]
-WARNING: [Synth 8-3848] Net probe_out69 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2054]
-WARNING: [Synth 8-3848] Net probe_out70 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2055]
-WARNING: [Synth 8-3848] Net probe_out71 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2056]
-WARNING: [Synth 8-3848] Net probe_out72 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2057]
-WARNING: [Synth 8-3848] Net probe_out73 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2058]
-WARNING: [Synth 8-3848] Net probe_out74 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2059]
-WARNING: [Synth 8-3848] Net probe_out75 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2060]
-WARNING: [Synth 8-3848] Net probe_out76 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2061]
-WARNING: [Synth 8-3848] Net probe_out77 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2062]
-WARNING: [Synth 8-3848] Net probe_out78 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2063]
-WARNING: [Synth 8-3848] Net probe_out79 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2064]
-WARNING: [Synth 8-3848] Net probe_out80 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2065]
-WARNING: [Synth 8-3848] Net probe_out81 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2066]
-WARNING: [Synth 8-3848] Net probe_out82 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2067]
-WARNING: [Synth 8-3848] Net probe_out83 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2068]
-WARNING: [Synth 8-3848] Net probe_out84 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2069]
-WARNING: [Synth 8-3848] Net probe_out85 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2070]
-WARNING: [Synth 8-3848] Net probe_out86 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2071]
-WARNING: [Synth 8-3848] Net probe_out87 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2072]
-WARNING: [Synth 8-3848] Net probe_out88 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2073]
-WARNING: [Synth 8-3848] Net probe_out89 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2074]
-WARNING: [Synth 8-3848] Net probe_out90 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2075]
-WARNING: [Synth 8-3848] Net probe_out91 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2076]
-WARNING: [Synth 8-3848] Net probe_out92 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2077]
-WARNING: [Synth 8-3848] Net probe_out93 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2078]
-WARNING: [Synth 8-3848] Net probe_out94 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2079]
-WARNING: [Synth 8-3848] Net probe_out95 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2080]
-WARNING: [Synth 8-3848] Net probe_out96 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2081]
-WARNING: [Synth 8-3848] Net probe_out97 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2082]
-WARNING: [Synth 8-3848] Net probe_out98 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2083]
-WARNING: [Synth 8-3848] Net probe_out99 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2084]
+WARNING: [Synth 8-3848] Net probe_out0 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1985]
+WARNING: [Synth 8-3848] Net probe_out1 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1986]
+WARNING: [Synth 8-3848] Net probe_out2 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1987]
+WARNING: [Synth 8-3848] Net probe_out3 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1988]
+WARNING: [Synth 8-3848] Net probe_out4 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1989]
+WARNING: [Synth 8-3848] Net probe_out5 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1990]
+WARNING: [Synth 8-3848] Net probe_out6 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1991]
+WARNING: [Synth 8-3848] Net probe_out7 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1992]
+WARNING: [Synth 8-3848] Net probe_out8 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1993]
+WARNING: [Synth 8-3848] Net probe_out9 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1994]
+WARNING: [Synth 8-3848] Net probe_out10 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1995]
+WARNING: [Synth 8-3848] Net probe_out11 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1996]
+WARNING: [Synth 8-3848] Net probe_out12 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1997]
+WARNING: [Synth 8-3848] Net probe_out13 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1998]
+WARNING: [Synth 8-3848] Net probe_out14 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:1999]
+WARNING: [Synth 8-3848] Net probe_out15 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2000]
+WARNING: [Synth 8-3848] Net probe_out16 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2001]
+WARNING: [Synth 8-3848] Net probe_out17 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2002]
+WARNING: [Synth 8-3848] Net probe_out18 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2003]
+WARNING: [Synth 8-3848] Net probe_out19 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2004]
+WARNING: [Synth 8-3848] Net probe_out20 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2005]
+WARNING: [Synth 8-3848] Net probe_out21 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2006]
+WARNING: [Synth 8-3848] Net probe_out22 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2007]
+WARNING: [Synth 8-3848] Net probe_out23 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2008]
+WARNING: [Synth 8-3848] Net probe_out24 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2009]
+WARNING: [Synth 8-3848] Net probe_out25 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2010]
+WARNING: [Synth 8-3848] Net probe_out26 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2011]
+WARNING: [Synth 8-3848] Net probe_out27 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2012]
+WARNING: [Synth 8-3848] Net probe_out28 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2013]
+WARNING: [Synth 8-3848] Net probe_out29 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2014]
+WARNING: [Synth 8-3848] Net probe_out30 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2015]
+WARNING: [Synth 8-3848] Net probe_out31 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2016]
+WARNING: [Synth 8-3848] Net probe_out32 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2017]
+WARNING: [Synth 8-3848] Net probe_out33 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2018]
+WARNING: [Synth 8-3848] Net probe_out34 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2019]
+WARNING: [Synth 8-3848] Net probe_out35 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2020]
+WARNING: [Synth 8-3848] Net probe_out36 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2021]
+WARNING: [Synth 8-3848] Net probe_out37 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2022]
+WARNING: [Synth 8-3848] Net probe_out38 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2023]
+WARNING: [Synth 8-3848] Net probe_out39 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2024]
+WARNING: [Synth 8-3848] Net probe_out40 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2025]
+WARNING: [Synth 8-3848] Net probe_out41 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2026]
+WARNING: [Synth 8-3848] Net probe_out42 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2027]
+WARNING: [Synth 8-3848] Net probe_out43 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2028]
+WARNING: [Synth 8-3848] Net probe_out44 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2029]
+WARNING: [Synth 8-3848] Net probe_out45 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2030]
+WARNING: [Synth 8-3848] Net probe_out46 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2031]
+WARNING: [Synth 8-3848] Net probe_out47 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2032]
+WARNING: [Synth 8-3848] Net probe_out48 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2033]
+WARNING: [Synth 8-3848] Net probe_out49 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2034]
+WARNING: [Synth 8-3848] Net probe_out50 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2035]
+WARNING: [Synth 8-3848] Net probe_out51 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2036]
+WARNING: [Synth 8-3848] Net probe_out52 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2037]
+WARNING: [Synth 8-3848] Net probe_out53 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2038]
+WARNING: [Synth 8-3848] Net probe_out54 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2039]
+WARNING: [Synth 8-3848] Net probe_out55 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2040]
+WARNING: [Synth 8-3848] Net probe_out56 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2041]
+WARNING: [Synth 8-3848] Net probe_out57 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2042]
+WARNING: [Synth 8-3848] Net probe_out58 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2043]
+WARNING: [Synth 8-3848] Net probe_out59 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2044]
+WARNING: [Synth 8-3848] Net probe_out60 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2045]
+WARNING: [Synth 8-3848] Net probe_out61 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2046]
+WARNING: [Synth 8-3848] Net probe_out62 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2047]
+WARNING: [Synth 8-3848] Net probe_out63 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2048]
+WARNING: [Synth 8-3848] Net probe_out64 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2049]
+WARNING: [Synth 8-3848] Net probe_out65 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2050]
+WARNING: [Synth 8-3848] Net probe_out66 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2051]
+WARNING: [Synth 8-3848] Net probe_out67 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2052]
+WARNING: [Synth 8-3848] Net probe_out68 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2053]
+WARNING: [Synth 8-3848] Net probe_out69 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2054]
+WARNING: [Synth 8-3848] Net probe_out70 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2055]
+WARNING: [Synth 8-3848] Net probe_out71 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2056]
+WARNING: [Synth 8-3848] Net probe_out72 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2057]
+WARNING: [Synth 8-3848] Net probe_out73 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2058]
+WARNING: [Synth 8-3848] Net probe_out74 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2059]
+WARNING: [Synth 8-3848] Net probe_out75 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2060]
+WARNING: [Synth 8-3848] Net probe_out76 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2061]
+WARNING: [Synth 8-3848] Net probe_out77 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2062]
+WARNING: [Synth 8-3848] Net probe_out78 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2063]
+WARNING: [Synth 8-3848] Net probe_out79 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2064]
+WARNING: [Synth 8-3848] Net probe_out80 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2065]
+WARNING: [Synth 8-3848] Net probe_out81 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2066]
+WARNING: [Synth 8-3848] Net probe_out82 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2067]
+WARNING: [Synth 8-3848] Net probe_out83 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2068]
+WARNING: [Synth 8-3848] Net probe_out84 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2069]
+WARNING: [Synth 8-3848] Net probe_out85 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2070]
+WARNING: [Synth 8-3848] Net probe_out86 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2071]
+WARNING: [Synth 8-3848] Net probe_out87 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2072]
+WARNING: [Synth 8-3848] Net probe_out88 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2073]
+WARNING: [Synth 8-3848] Net probe_out89 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2074]
+WARNING: [Synth 8-3848] Net probe_out90 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2075]
+WARNING: [Synth 8-3848] Net probe_out91 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2076]
+WARNING: [Synth 8-3848] Net probe_out92 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2077]
+WARNING: [Synth 8-3848] Net probe_out93 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2078]
+WARNING: [Synth 8-3848] Net probe_out94 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2079]
+WARNING: [Synth 8-3848] Net probe_out95 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2080]
+WARNING: [Synth 8-3848] Net probe_out96 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2081]
+WARNING: [Synth 8-3848] Net probe_out97 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2082]
+WARNING: [Synth 8-3848] Net probe_out98 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2083]
+WARNING: [Synth 8-3848] Net probe_out99 in module/entity bd_34e9_g_inst_0_gigantic_mux does not have driver. [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:2084]
 INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_g_inst_0_gigantic_mux' (2#1) [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:63]
-INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_g_inst_0' (3#1) [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/synth/bd_34e9_g_inst_0.v:116]
-INFO: [Synth 8-3491] module 'bd_34e9_ila_lib_0' declared at '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:53' bound to instance 'ila_lib' of component 'bd_34e9_ila_lib_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:296]
-INFO: [Synth 8-638] synthesizing module 'bd_34e9_ila_lib_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:80]
+INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_g_inst_0_gigantic_mux' (2#1) [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_g_inst_0' (3#1) [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/synth/bd_34e9_g_inst_0.v:116]
+INFO: [Synth 8-3491] module 'bd_34e9_ila_lib_0' declared at 'c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:53' bound to instance 'ila_lib' of component 'bd_34e9_ila_lib_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:296]
+INFO: [Synth 8-638] synthesizing module 'bd_34e9_ila_lib_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:80]
 	Parameter C_XLNX_HW_PROBE_INFO bound to: DEFAULT - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_CORE_TYPE bound to: 1 - type: integer 
@@ -4573,23 +4573,23 @@ INFO: [Synth 8-638] synthesizing module 'bd_34e9_ila_lib_0' [/home/ifraba/Deskto
 	Parameter C_PROBE1021_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE1022_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE1023_TYPE bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'ila_v6_2_7_ila' declared at '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ipshared/0000/hdl/ila_v6_2_syn_rfs.v:5640' bound to instance 'U0' of component 'ila_v6_2_7_ila' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-6157] synthesizing module 'CFGLUT5' [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:1000]
-INFO: [Synth 8-6155] done synthesizing module 'CFGLUT5' (11#1) [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:1000]
-INFO: [Synth 8-6157] synthesizing module 'CARRY4' [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:963]
-INFO: [Synth 8-6155] done synthesizing module 'CARRY4' (12#1) [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:963]
-INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50861]
-INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (22#1) [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50861]
-INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50711]
-INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (24#1) [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50711]
-INFO: [Synth 8-6157] synthesizing module 'SRLC16E' [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50800]
-INFO: [Synth 8-6155] done synthesizing module 'SRLC16E' (26#1) [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50800]
-INFO: [Synth 8-6157] synthesizing module 'FDRE' [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:3966]
-INFO: [Synth 8-6155] done synthesizing module 'FDRE' (31#1) [/opt/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:3966]
-INFO: [Synth 8-256] done synthesizing module 'bd_34e9_ila_lib_0' (49#1) [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:80]
-INFO: [Synth 8-3491] module 'bd_34e9_slot_0_ar_0' declared at '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_5/synth/bd_34e9_slot_0_ar_0.v:58' bound to instance 'slot_0_ar' of component 'bd_34e9_slot_0_ar_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:319]
-INFO: [Synth 8-6157] synthesizing module 'bd_34e9_slot_0_ar_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_5/synth/bd_34e9_slot_0_ar_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-3491] module 'ila_v6_2_7_ila' declared at 'c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ipshared/0000/hdl/ila_v6_2_syn_rfs.v:5640' bound to instance 'U0' of component 'ila_v6_2_7_ila' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-6157] synthesizing module 'CFGLUT5' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:1000]
+INFO: [Synth 8-6155] done synthesizing module 'CFGLUT5' (11#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:1000]
+INFO: [Synth 8-6157] synthesizing module 'CARRY4' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:963]
+INFO: [Synth 8-6155] done synthesizing module 'CARRY4' (12#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:963]
+INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50861]
+INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (22#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50861]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50711]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (24#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50711]
+INFO: [Synth 8-6157] synthesizing module 'SRLC16E' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50800]
+INFO: [Synth 8-6155] done synthesizing module 'SRLC16E' (26#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50800]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:3966]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (31#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:3966]
+INFO: [Synth 8-256] done synthesizing module 'bd_34e9_ila_lib_0' (49#1) [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:80]
+INFO: [Synth 8-3491] module 'bd_34e9_slot_0_ar_0' declared at 'c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_5/synth/bd_34e9_slot_0_ar_0.v:58' bound to instance 'slot_0_ar' of component 'bd_34e9_slot_0_ar_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:319]
+INFO: [Synth 8-6157] synthesizing module 'bd_34e9_slot_0_ar_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_5/synth/bd_34e9_slot_0_ar_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
 	Parameter IN1_WIDTH bound to: 1 - type: integer 
 	Parameter IN2_WIDTH bound to: 1 - type: integer 
@@ -4624,23 +4624,23 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [/home/ifrab
 	Parameter IN31_WIDTH bound to: 1 - type: integer 
 	Parameter dout_width bound to: 2 - type: integer 
 	Parameter NUM_PORTS bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (50#1) [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_slot_0_ar_0' (51#1) [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_5/synth/bd_34e9_slot_0_ar_0.v:58]
-INFO: [Synth 8-3491] module 'bd_34e9_slot_0_aw_0' declared at '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_2/synth/bd_34e9_slot_0_aw_0.v:58' bound to instance 'slot_0_aw' of component 'bd_34e9_slot_0_aw_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:325]
-INFO: [Synth 8-6157] synthesizing module 'bd_34e9_slot_0_aw_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_2/synth/bd_34e9_slot_0_aw_0.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_slot_0_aw_0' (52#1) [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_2/synth/bd_34e9_slot_0_aw_0.v:58]
-INFO: [Synth 8-3491] module 'bd_34e9_slot_0_b_0' declared at '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_4/synth/bd_34e9_slot_0_b_0.v:58' bound to instance 'slot_0_b' of component 'bd_34e9_slot_0_b_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:331]
-INFO: [Synth 8-6157] synthesizing module 'bd_34e9_slot_0_b_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_4/synth/bd_34e9_slot_0_b_0.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_slot_0_b_0' (53#1) [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_4/synth/bd_34e9_slot_0_b_0.v:58]
-INFO: [Synth 8-3491] module 'bd_34e9_slot_0_r_0' declared at '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_6/synth/bd_34e9_slot_0_r_0.v:58' bound to instance 'slot_0_r' of component 'bd_34e9_slot_0_r_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:337]
-INFO: [Synth 8-6157] synthesizing module 'bd_34e9_slot_0_r_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_6/synth/bd_34e9_slot_0_r_0.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_slot_0_r_0' (54#1) [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_6/synth/bd_34e9_slot_0_r_0.v:58]
-INFO: [Synth 8-3491] module 'bd_34e9_slot_0_w_0' declared at '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_3/synth/bd_34e9_slot_0_w_0.v:58' bound to instance 'slot_0_w' of component 'bd_34e9_slot_0_w_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:343]
-INFO: [Synth 8-6157] synthesizing module 'bd_34e9_slot_0_w_0' [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_3/synth/bd_34e9_slot_0_w_0.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_slot_0_w_0' (55#1) [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_3/synth/bd_34e9_slot_0_w_0.v:58]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_lib'. This will prevent further optimization [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:296]
-INFO: [Synth 8-256] done synthesizing module 'bd_34e9' (56#1) [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'zsys_system_ila_2_0' (57#1) [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/synth/zsys_system_ila_2_0.vhd:83]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (50#1) [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_slot_0_ar_0' (51#1) [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_5/synth/bd_34e9_slot_0_ar_0.v:58]
+INFO: [Synth 8-3491] module 'bd_34e9_slot_0_aw_0' declared at 'c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_2/synth/bd_34e9_slot_0_aw_0.v:58' bound to instance 'slot_0_aw' of component 'bd_34e9_slot_0_aw_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:325]
+INFO: [Synth 8-6157] synthesizing module 'bd_34e9_slot_0_aw_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_2/synth/bd_34e9_slot_0_aw_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_slot_0_aw_0' (52#1) [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_2/synth/bd_34e9_slot_0_aw_0.v:58]
+INFO: [Synth 8-3491] module 'bd_34e9_slot_0_b_0' declared at 'c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_4/synth/bd_34e9_slot_0_b_0.v:58' bound to instance 'slot_0_b' of component 'bd_34e9_slot_0_b_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:331]
+INFO: [Synth 8-6157] synthesizing module 'bd_34e9_slot_0_b_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_4/synth/bd_34e9_slot_0_b_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_slot_0_b_0' (53#1) [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_4/synth/bd_34e9_slot_0_b_0.v:58]
+INFO: [Synth 8-3491] module 'bd_34e9_slot_0_r_0' declared at 'c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_6/synth/bd_34e9_slot_0_r_0.v:58' bound to instance 'slot_0_r' of component 'bd_34e9_slot_0_r_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:337]
+INFO: [Synth 8-6157] synthesizing module 'bd_34e9_slot_0_r_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_6/synth/bd_34e9_slot_0_r_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_slot_0_r_0' (54#1) [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_6/synth/bd_34e9_slot_0_r_0.v:58]
+INFO: [Synth 8-3491] module 'bd_34e9_slot_0_w_0' declared at 'c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_3/synth/bd_34e9_slot_0_w_0.v:58' bound to instance 'slot_0_w' of component 'bd_34e9_slot_0_w_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:343]
+INFO: [Synth 8-6157] synthesizing module 'bd_34e9_slot_0_w_0' [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_3/synth/bd_34e9_slot_0_w_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_34e9_slot_0_w_0' (55#1) [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_3/synth/bd_34e9_slot_0_w_0.v:58]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_lib'. This will prevent further optimization [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:296]
+INFO: [Synth 8-256] done synthesizing module 'bd_34e9' (56#1) [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/synth/bd_34e9.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'zsys_system_ila_2_0' (57#1) [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/synth/zsys_system_ila_2_0.vhd:83]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In2[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In3[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In4[0]
@@ -4743,7 +4743,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper__parameterized0 has unco
 WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper__parameterized0 has unconnected port DINB[14]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:39 ; elapsed = 00:02:09 . Memory (MB): peak = 1668.004 ; gain = 414.742 ; free physical = 2198 ; free virtual = 7116
+Finished RTL Elaboration : Time (s): cpu = 00:02:37 ; elapsed = 00:03:39 . Memory (MB): peak = 861.750 ; gain = 499.328
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4752,51 +4752,51 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[36] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[35] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[34] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[33] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[32] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[31] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[30] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[29] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[28] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[27] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[26] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[25] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[24] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[23] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[22] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[21] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[20] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[19] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[18] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[17] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[16] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[15] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[14] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[13] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[12] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[11] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[10] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[9] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[8] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[7] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[6] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[5] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[4] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[3] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[2] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[1] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
-INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[0] to constant 0 [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[36] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[35] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[34] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[33] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[32] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[31] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[30] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[29] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[28] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[27] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[26] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[25] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[24] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[23] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[22] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[21] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[20] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[19] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[18] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[17] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[16] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[15] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[14] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[13] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[12] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[11] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[10] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[9] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[8] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[7] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[6] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[5] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[4] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[3] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[2] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[1] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
+INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[0] to constant 0 [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/synth/bd_34e9_ila_lib_0.vhd:4265]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:40 ; elapsed = 00:02:10 . Memory (MB): peak = 1668.004 ; gain = 414.742 ; free physical = 2012 ; free virtual = 6930
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:38 ; elapsed = 00:03:40 . Memory (MB): peak = 861.750 ; gain = 499.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:40 ; elapsed = 00:02:10 . Memory (MB): peak = 1668.004 ; gain = 414.742 ; free physical = 2012 ; free virtual = 6930
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:38 ; elapsed = 00:03:40 . Memory (MB): peak = 861.750 ; gain = 499.328
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 219 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -4805,13 +4805,11 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/zsys_system_ila_2_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/zsys_system_ila_2_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'U0/ila_lib/U0'
-Finished Parsing XDC File [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'U0/ila_lib/U0'
-Parsing XDC File [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zsys_system_ila_2_0_propImpl.xdc].
+Parsing XDC File [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'U0/ila_lib/U0'
+Finished Parsing XDC File [c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'U0/ila_lib/U0'
+Parsing XDC File [C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zsys_system_ila_2_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/zsys_system_ila_2_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 Completed Processing XDC Constraints
@@ -4821,21 +4819,21 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 136 instances
   CFGLUT5 => SRLC32E: 23 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1851.035 ; gain = 0.000 ; free physical = 2132 ; free virtual = 7047
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.240 . Memory (MB): peak = 962.070 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:55 ; elapsed = 00:02:36 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2358 ; free virtual = 7277
+Finished Constraint Validation : Time (s): cpu = 00:03:08 ; elapsed = 00:04:20 . Memory (MB): peak = 962.070 ; gain = 599.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z015clg485-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:55 ; elapsed = 00:02:36 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2358 ; free virtual = 7277
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:08 ; elapsed = 00:04:20 . Memory (MB): peak = 962.070 ; gain = 599.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0/ila_lib/U0. (constraint file  /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/dont_touch.xdc, line 32).
+Applied set_property DONT_TOUCH = true for U0/ila_lib/U0. (constraint file  C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/dont_touch.xdc, line 32).
 Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for U0/ila_lib. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for U0/g_inst. (constraint file  auto generated constraint, line ).
@@ -4845,7 +4843,7 @@ Applied set_property DONT_TOUCH = true for U0/slot_0_b. (constraint file  auto g
 Applied set_property DONT_TOUCH = true for U0/slot_0_ar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for U0/slot_0_r. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:55 ; elapsed = 00:02:37 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2358 ; free virtual = 7280
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:08 ; elapsed = 00:04:20 . Memory (MB): peak = 962.070 ; gain = 599.648
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized19'
 INFO: [Synth 8-5544] ROM "data_out_sel" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -4974,29 +4972,29 @@ INFO: [Synth 8-5546] ROM "adv_drdy" won't be mapped to RAM because it is too spa
 INFO: [Synth 8-5546] ROM "read_addr" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "curr_read_block" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "read_en" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm22D436500'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm26529A200'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm279B55500'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm20E205800'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm29BB8B000'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm2106FEF00'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm2186AB000'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm21B658C00'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm29F058600'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm212C1A700'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm21802F700'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm29DC43700'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm21A20F700'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm20BDAE100'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm21CCA5D00'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm230C84200'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm20E207900'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm2769F9700'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm23D7C0B00'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm23D7E7E00'
-INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm25E68F200'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC0581C00'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC053F100'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC050FA00'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC04D7F00'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC04A0F00'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC086A500'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC0844800'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC080B700'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC0800700'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC077F300'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC073D300'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC06FF500'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC06ACD00'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC0681800'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC0642400'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139AC05F3E00'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139B3693F500'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139B36906F00'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139B368C8600'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139B3687AB00'
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'fsm139B3683B700'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:57 ; elapsed = 00:02:39 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2335 ; free virtual = 7253
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:12 ; elapsed = 00:04:29 . Memory (MB): peak = 962.070 ; gain = 599.648
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6028,7 +6026,7 @@ INFO: [Synth 8-3332] Sequential element (shift_reg0_reg[965]) is unused and will
 INFO: [Synth 8-3332] Sequential element (shift_reg0_reg[964]) is unused and will be removed from module ila_v6_2_7_ila_register.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:02 ; elapsed = 00:02:44 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2275 ; free virtual = 7212
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:26 ; elapsed = 00:04:53 . Memory (MB): peak = 962.070 ; gain = 599.648
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6040,13 +6038,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:07 ; elapsed = 00:02:51 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2153 ; free virtual = 7087
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:47 ; elapsed = 00:05:25 . Memory (MB): peak = 962.070 ; gain = 599.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:02:52 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2130 ; free virtual = 7066
+Finished Timing Optimization : Time (s): cpu = 00:03:48 ; elapsed = 00:05:26 . Memory (MB): peak = 962.070 ; gain = 599.648
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6058,7 +6056,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:08 ; elapsed = 00:02:53 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2038 ; free virtual = 6971
+Finished Technology Mapping : Time (s): cpu = 00:03:50 ; elapsed = 00:05:29 . Memory (MB): peak = 962.570 ; gain = 600.148
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6120,7 +6118,7 @@ INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[2] to constant 0
 INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[1] to constant 0
 INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:09 ; elapsed = 00:02:53 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2010 ; free virtual = 6942
+Finished IO Insertion : Time (s): cpu = 00:03:52 ; elapsed = 00:05:30 . Memory (MB): peak = 962.570 ; gain = 600.148
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -6133,7 +6131,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:09 ; elapsed = 00:02:53 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2010 ; free virtual = 6942
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:52 ; elapsed = 00:05:30 . Memory (MB): peak = 962.570 ; gain = 600.148
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -6145,25 +6143,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:09 ; elapsed = 00:02:53 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2001 ; free virtual = 6933
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:52 ; elapsed = 00:05:31 . Memory (MB): peak = 962.570 ; gain = 600.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:09 ; elapsed = 00:02:53 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2001 ; free virtual = 6934
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:52 ; elapsed = 00:05:31 . Memory (MB): peak = 962.570 ; gain = 600.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:09 ; elapsed = 00:02:53 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2001 ; free virtual = 6933
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:53 ; elapsed = 00:05:31 . Memory (MB): peak = 962.570 ; gain = 600.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:09 ; elapsed = 00:02:53 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2001 ; free virtual = 6933
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:53 ; elapsed = 00:05:31 . Memory (MB): peak = 962.570 ; gain = 600.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -6436,14 +6434,14 @@ Report Instance Areas:
 |216   |    slot_0_w                                                                |bd_34e9_slot_0_w_0                               |     0|
 +------+----------------------------------------------------------------------------+-------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:09 ; elapsed = 00:02:53 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2001 ; free virtual = 6933
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:53 ; elapsed = 00:05:31 . Memory (MB): peak = 962.570 ; gain = 600.148
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1163 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:56 ; elapsed = 00:02:29 . Memory (MB): peak = 1851.035 ; gain = 414.742 ; free physical = 2034 ; free virtual = 6967
-Synthesis Optimization Complete : Time (s): cpu = 00:02:09 ; elapsed = 00:02:53 . Memory (MB): peak = 1851.035 ; gain = 597.773 ; free physical = 2042 ; free virtual = 6974
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:04:59 . Memory (MB): peak = 962.570 ; gain = 499.828
+Synthesis Optimization Complete : Time (s): cpu = 00:03:53 ; elapsed = 00:05:32 . Memory (MB): peak = 962.570 ; gain = 600.148
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 272 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -6454,13 +6452,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 568 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:12 ; elapsed = 00:02:55 . Memory (MB): peak = 1851.035 ; gain = 609.344 ; free physical = 2072 ; free virtual = 7005
+synth_design: Time (s): cpu = 00:03:58 ; elapsed = 00:05:40 . Memory (MB): peak = 962.570 ; gain = 600.148
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/zsys_system_ila_2_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/zsys_system_ila_2_0.xci
+INFO: [Common 17-1381] The checkpoint 'C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/zsys_system_ila_2_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/zsys_system_ila_2_0.xci
 INFO: [Coretcl 2-1174] Renamed 215 cell refs.
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/zsys_system_ila_2_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_system_ila_2_0_synth_1/zsys_system_ila_2_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file zsys_system_ila_2_0_utilization_synth.rpt -pb zsys_system_ila_2_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1875.047 ; gain = 0.000 ; free physical = 2084 ; free virtual = 7040
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 18 12:47:02 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 962.570 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  4 01:10:01 2024...

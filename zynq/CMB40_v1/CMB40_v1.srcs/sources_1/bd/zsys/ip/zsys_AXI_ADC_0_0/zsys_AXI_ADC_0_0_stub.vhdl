@@ -1,11 +1,11 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Tue Nov 21 16:14:50 2023
--- Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top zsys_AXI_ADC_0_0 -prefix
---               zsys_AXI_ADC_0_0_ zsys_AXI_ADC_0_2_stub.vhdl
--- Design      : zsys_AXI_ADC_0_2
+-- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+-- Date        : Mon Nov  4 01:09:39 2024
+-- Host        : lapepuat11 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub
+--               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_AXI_ADC_0_0/zsys_AXI_ADC_0_0_stub.vhdl
+-- Design      : zsys_AXI_ADC_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z015clg485-2
 -- --------------------------------------------------------------------------------
@@ -78,6 +78,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "i_MISO,o_MOSI,o_SCLK,o_nCS,o_ADC_nrst,o_debug[11:0],i_ADclk,i_Lclk,i_data_in_ch0_p,i_data_in_ch0_n,i_data_in_ch1_p,i_data_in_ch1_n,i_data_in_ch2_p,i_data_in_ch2_n,i_data_in_ch3_p,i_data_in_ch3_n,i_data_in_ch4_p,i_data_in_ch4_n,i_data_in_ch5_p,i_data_in_ch5_n,i_data_in_ch6_p,i_data_in_ch6_n,i_data_in_ch7_p,i_data_in_ch7_n,o_data_out_ch0[15:0],o_data_out_ch1[15:0],o_data_out_ch2[15:0],o_data_out_ch3[15:0],o_data_out_ch4[15:0],o_data_out_ch5[15:0],o_data_out_ch6[15:0],o_data_out_ch7[15:0],o_data_clk,s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "AXI_ADC_v3,Vivado 2018.2";
+attribute x_core_info of stub : architecture is "AXI_ADC_v3,Vivado 2018.2.2";
 begin
 end;

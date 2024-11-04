@@ -30630,3 +30630,243 @@ con
 
 17:31:10 INFO  : Launch script is exported to file 'C:\Users\osotosan\Downloads\verDAQ8_uart_default\verDAQ8_uart\verDAQ8_uart.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_1mezz_uart_hw3.elf_on_local.tcl'
 18:10:54 INFO  : Disconnected from the channel tcfchan#4.
+00:12:10 INFO  : Registering command handlers for SDK TCF services
+00:12:10 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\osotosan\charge-monitoring-system\zynq\other\MB16ch\verDAQ8_uart\verDAQ8_uart\verDAQ8_uart.sdk\temp_xsdb_launch_script.tcl
+00:12:12 INFO  : XSCT server has started successfully.
+00:12:14 INFO  : Successfully done setting XSCT server connection channel  
+00:12:14 INFO  : Successfully done setting SDK workspace  
+00:12:14 INFO  : Processing command line option -hwspec C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper.hdf.
+00:13:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:13:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1' command is executed.
+00:13:11 INFO  : FPGA configured successfully with bitstream "C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_1/zsys_wrapper.bit"
+00:13:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1' command is executed.
+00:13:19 INFO  : 'fpga -state' command is executed.
+00:13:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:13:19 INFO  : Jtag cable 'JTAG-ONB4 2516330074E8A' is selected.
+00:13:19 INFO  : 'jtag frequency' command is executed.
+00:13:19 INFO  : Sourcing of 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/ps7_init.tcl' is done.
+00:13:19 INFO  : Context for 'APU' is selected.
+00:13:19 INFO  : Hardware design information is loaded from 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/system.hdf'.
+00:13:19 INFO  : 'configparams force-mem-access 1' command is executed.
+00:13:19 INFO  : Context for 'APU' is selected.
+00:13:19 INFO  : 'stop' command is executed.
+00:13:19 INFO  : 'ps7_init' command is executed.
+00:13:19 INFO  : 'ps7_post_config' command is executed.
+00:13:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:13:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:13:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:13:19 INFO  : The application 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/1mezz_uart_hw3/Debug/1mezz_uart_hw3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:13:19 INFO  : 'configparams force-mem-access 0' command is executed.
+00:13:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+dow C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/1mezz_uart_hw3/Debug/1mezz_uart_hw3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:13:19 INFO  : Memory regions updated for context APU
+00:13:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:13:19 INFO  : 'con' command is executed.
+00:13:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+con
+----------------End of Script----------------
+
+00:13:19 INFO  : Launch script is exported to file 'C:\Users\osotosan\charge-monitoring-system\zynq\other\MB16ch\verDAQ8_uart\verDAQ8_uart\verDAQ8_uart.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_1mezz_uart_hw3.elf_on_local.tcl'
+00:13:32 INFO  : Disconnected from the channel tcfchan#1.
+00:13:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1' command is executed.
+00:13:33 INFO  : 'fpga -state' command is executed.
+00:13:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:13:33 INFO  : Jtag cable 'JTAG-ONB4 2516330074E8A' is selected.
+00:13:33 INFO  : 'jtag frequency' command is executed.
+00:13:33 INFO  : Sourcing of 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/ps7_init.tcl' is done.
+00:13:33 INFO  : Context for 'APU' is selected.
+00:13:34 INFO  : Hardware design information is loaded from 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/system.hdf'.
+00:13:34 INFO  : 'configparams force-mem-access 1' command is executed.
+00:13:34 INFO  : Context for 'APU' is selected.
+00:13:35 INFO  : 'stop' command is executed.
+00:13:35 INFO  : 'ps7_init' command is executed.
+00:13:35 INFO  : 'ps7_post_config' command is executed.
+00:13:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:13:35 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:13:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:13:35 INFO  : The application 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/1mezz_uart_hw3/Debug/1mezz_uart_hw3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:13:35 INFO  : 'configparams force-mem-access 0' command is executed.
+00:13:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+dow C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/1mezz_uart_hw3/Debug/1mezz_uart_hw3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:13:35 INFO  : Memory regions updated for context APU
+00:13:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:13:35 INFO  : 'con' command is executed.
+00:13:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+con
+----------------End of Script----------------
+
+00:13:35 INFO  : Launch script is exported to file 'C:\Users\osotosan\charge-monitoring-system\zynq\other\MB16ch\verDAQ8_uart\verDAQ8_uart\verDAQ8_uart.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_1mezz_uart_hw3.elf_on_local.tcl'
+00:24:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:24:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074DDA" && level==0} -index 1' command is executed.
+00:24:50 INFO  : FPGA configured successfully with bitstream "C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_1/zsys_wrapper.bit"
+00:25:06 INFO  : Disconnected from the channel tcfchan#2.
+00:25:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074DDA" && level==0} -index 1' command is executed.
+00:25:07 INFO  : 'fpga -state' command is executed.
+00:25:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:25:08 INFO  : Jtag cable 'JTAG-ONB4 2516330074DDA' is selected.
+00:25:08 INFO  : 'jtag frequency' command is executed.
+00:25:08 INFO  : Sourcing of 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/ps7_init.tcl' is done.
+00:25:08 INFO  : Context for 'APU' is selected.
+00:25:08 INFO  : Hardware design information is loaded from 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/system.hdf'.
+00:25:08 INFO  : 'configparams force-mem-access 1' command is executed.
+00:25:08 INFO  : Context for 'APU' is selected.
+00:25:08 INFO  : 'stop' command is executed.
+00:25:08 INFO  : 'ps7_init' command is executed.
+00:25:08 INFO  : 'ps7_post_config' command is executed.
+00:25:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:25:08 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:25:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:25:08 INFO  : The application 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/1mezz_uart_hw3/Debug/1mezz_uart_hw3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:25:08 INFO  : 'configparams force-mem-access 0' command is executed.
+00:25:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074DDA"} -index 0
+loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074DDA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074DDA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074DDA"} -index 0
+dow C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/1mezz_uart_hw3/Debug/1mezz_uart_hw3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:25:08 INFO  : Memory regions updated for context APU
+00:25:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:25:08 INFO  : 'con' command is executed.
+00:25:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074DDA"} -index 0
+con
+----------------End of Script----------------
+
+00:25:08 INFO  : Launch script is exported to file 'C:\Users\osotosan\charge-monitoring-system\zynq\other\MB16ch\verDAQ8_uart\verDAQ8_uart\verDAQ8_uart.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_1mezz_uart_hw3.elf_on_local.tcl'
+00:25:42 INFO  : Disconnected from the channel tcfchan#3.
+00:25:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074DDA" && level==0} -index 1' command is executed.
+00:25:43 INFO  : 'fpga -state' command is executed.
+00:25:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:25:43 INFO  : Jtag cable 'JTAG-ONB4 2516330074DDA' is selected.
+00:25:43 INFO  : 'jtag frequency' command is executed.
+00:25:43 INFO  : Sourcing of 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/ps7_init.tcl' is done.
+00:25:43 INFO  : Context for 'APU' is selected.
+00:25:43 INFO  : Hardware design information is loaded from 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/system.hdf'.
+00:25:43 INFO  : 'configparams force-mem-access 1' command is executed.
+00:25:43 INFO  : Context for 'APU' is selected.
+00:25:43 INFO  : 'stop' command is executed.
+00:25:44 INFO  : 'ps7_init' command is executed.
+00:25:44 INFO  : 'ps7_post_config' command is executed.
+00:25:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:25:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:25:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:25:44 INFO  : The application 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/1mezz_uart_hw3/Debug/1mezz_uart_hw3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:25:44 INFO  : 'configparams force-mem-access 0' command is executed.
+00:25:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074DDA"} -index 0
+loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074DDA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074DDA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074DDA"} -index 0
+dow C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/1mezz_uart_hw3/Debug/1mezz_uart_hw3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:25:44 INFO  : Memory regions updated for context APU
+00:25:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:25:44 INFO  : 'con' command is executed.
+00:25:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074DDA"} -index 0
+con
+----------------End of Script----------------
+
+00:25:44 INFO  : Launch script is exported to file 'C:\Users\osotosan\charge-monitoring-system\zynq\other\MB16ch\verDAQ8_uart\verDAQ8_uart\verDAQ8_uart.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_1mezz_uart_hw3.elf_on_local.tcl'
+00:32:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:32:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1' command is executed.
+00:32:31 INFO  : FPGA configured successfully with bitstream "C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_1/zsys_wrapper.bit"
+00:32:52 INFO  : Disconnected from the channel tcfchan#4.
+00:32:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330074E8A" && level==0} -index 1' command is executed.
+00:32:54 INFO  : 'fpga -state' command is executed.
+00:32:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:32:54 INFO  : Jtag cable 'JTAG-ONB4 2516330074E8A' is selected.
+00:32:54 INFO  : 'jtag frequency' command is executed.
+00:32:54 INFO  : Sourcing of 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/ps7_init.tcl' is done.
+00:32:54 INFO  : Context for 'APU' is selected.
+00:32:54 INFO  : Hardware design information is loaded from 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/system.hdf'.
+00:32:54 INFO  : 'configparams force-mem-access 1' command is executed.
+00:32:54 INFO  : Context for 'APU' is selected.
+00:32:54 INFO  : 'stop' command is executed.
+00:32:54 INFO  : 'ps7_init' command is executed.
+00:32:54 INFO  : 'ps7_post_config' command is executed.
+00:32:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:32:54 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:32:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:32:55 INFO  : The application 'C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/1mezz_uart_hw3/Debug/1mezz_uart_hw3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:32:55 INFO  : 'configparams force-mem-access 0' command is executed.
+00:32:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+loadhw -hw C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/zsys_wrapper_hw_platform_3/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+dow C:/Users/osotosan/charge-monitoring-system/zynq/other/MB16ch/verDAQ8_uart/verDAQ8_uart/verDAQ8_uart.sdk/1mezz_uart_hw3/Debug/1mezz_uart_hw3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:32:55 INFO  : Memory regions updated for context APU
+00:32:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:32:55 INFO  : 'con' command is executed.
+00:32:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "JTAG-ONB4 2516330074E8A"} -index 0
+con
+----------------End of Script----------------
+
+00:32:55 INFO  : Launch script is exported to file 'C:\Users\osotosan\charge-monitoring-system\zynq\other\MB16ch\verDAQ8_uart\verDAQ8_uart\verDAQ8_uart.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_1mezz_uart_hw3.elf_on_local.tcl'
+00:40:26 INFO  : Disconnected from the channel tcfchan#5.

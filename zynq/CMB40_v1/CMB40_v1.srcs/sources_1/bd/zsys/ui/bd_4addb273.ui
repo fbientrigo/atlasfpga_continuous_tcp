@@ -54,6 +54,7 @@ preplace portBus MUX_SEL -pg 1 -y 1420 -defaultsOSRD
 preplace portBus Elink_P -pg 1 -y 1790 -defaultsOSRD
 preplace portBus DRS_DTAP1 -pg 1 -y 90 -defaultsOSRD
 preplace portBus DRS_RSLOAD -pg 1 -y 2520 -defaultsOSRD
+preplace inst xlslice_18 -pg 1 -lvl 7 -y 880 -defaultsOSRD
 preplace inst util_ds_buf_1 -pg 1 -lvl 7 -y 1920 -defaultsOSRD
 preplace inst dac_i2c_0 -pg 1 -lvl 6 -y 610 -defaultsOSRD
 preplace inst axi_dma_0 -pg 1 -lvl 4 -y 1570 -defaultsOSRD
@@ -76,7 +77,6 @@ preplace inst xlconcat_0 -pg 1 -lvl 5 -y 1720 -defaultsOSRD
 preplace inst util_vector_logic_0 -pg 1 -lvl 2 -y 1780 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 4 -y 680 -defaultsOSRD
 preplace inst M1to5_1 -pg 1 -lvl 7 -y 2080 -defaultsOSRD
-preplace inst xlslice_5 -pg 1 -lvl 7 -y 880 -defaultsOSRD
 preplace inst axi_gpio_1 -pg 1 -lvl 4 -y 500 -defaultsOSRD
 preplace inst xlconcat_1 -pg 1 -lvl 6 -y 1330 -defaultsOSRD
 preplace inst util_vector_logic_1 -pg 1 -lvl 2 -y 1670 -defaultsOSRD
@@ -122,7 +122,7 @@ preplace netloc CPLD_ctrl_0_CPLD_SPI_MOSI 1 6 2 NJ 440 NJ
 preplace netloc xlslice_3_Dout1 1 2 1 720J
 preplace netloc ADC_refclk_OBUFDS_OBUF_DS_P_1 1 7 1 NJ
 preplace netloc ADC_o_outfifo_wr_en 1 2 3 830 1430 NJ 1430 1950
-preplace netloc axi_gpio_0_gpio2_io_o 1 0 7 0 1840 240 2170 750 1840 1370 990 1980 880 N 880 N
+preplace netloc axi_gpio_0_gpio2_io_o 1 0 7 0 1840 240 2170 740 1830 1370 990 1980 880 N 880 N
 preplace netloc axi_dma_0_mm2s_introut 1 4 1 2020
 preplace netloc ADC_refclk_OBUFDS_OBUF_DS_P_2 1 7 1 NJ
 preplace netloc util_vector_logic_0_Res 1 2 1 660
@@ -131,114 +131,114 @@ preplace netloc processing_system7_0_FIXED_IO 1 6 2 NJ 1710 3750J
 preplace netloc MUXOUT_P_1 1 0 3 NJ 2160 NJ 2160 710J
 preplace netloc axi_gpio_1_gpio_io_o 1 4 1 NJ
 preplace netloc ADC_refclk_OBUFDS_OBUF_DS_N_0 1 7 1 NJ
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 4 770 1120 1350 790 2060 630 2580
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 4 770 1120 1360 790 2060 630 2580
 preplace netloc axi_smc_M00_AXI 1 5 1 2540
 preplace netloc xlconcat_2_dout 1 4 4 2070 680 2620J 810 NJ 810 3740
 preplace netloc ADCLK_MUX_N_1 1 0 3 NJ 490 NJ 490 NJ
 preplace netloc ADC_refclk_OBUFDS_OBUF_DS_N_1 1 7 1 NJ
 preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 1240
 preplace netloc ADC_refclk_OBUFDS_OBUF_DS_N_2 1 7 1 NJ
-preplace netloc fit_timer_0_Interrupt 1 2 4 760 1110 1260J 1020 NJ 1020 2570
-preplace netloc rst_FIFO_100M_peripheral_aresetn 1 2 2 670 1140 1340
+preplace netloc fit_timer_0_Interrupt 1 2 4 760 1110 1270J 1020 NJ 1020 2570
+preplace netloc rst_FIFO_100M_peripheral_aresetn 1 2 2 670 1140 1350
 preplace netloc util_ds_buf_2_OBUF_DS_N 1 7 1 NJ
 preplace netloc xlconcat_1_dout 1 6 1 3310
 preplace netloc ps7_0_axi_periph_M04_AXI 1 3 3 1240 800 2040J 810 2530J
 preplace netloc DRS4_firmware_1_o_refclk_p 1 4 3 2010 2300 NJ 2300 3320J
 preplace netloc DRS4_firmware_1_o_A3_0 1 4 1 2050
 preplace netloc xlslice_2to2_Dout 1 1 1 NJ
-preplace netloc fifo8b_2_axis_0_M00_AXIS 1 3 1 1260
-preplace netloc ADC_o_busy 1 1 4 270 1600 800 1690 1230J 1700 1970
+preplace netloc fifo8b_2_axis_0_M00_AXIS 1 3 1 1330
+preplace netloc ADC_o_busy 1 1 4 270 1600 800 1690 1270J 1700 1970
 preplace netloc util_ds_buf_2_OBUF_DS_P 1 7 1 NJ
 preplace netloc xlconcat_0_dout 1 5 1 2530
 preplace netloc c_counter_binary_1_Q 1 6 1 3300
 preplace netloc axi_dma_0_M_AXI_SG 1 4 1 N
-preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 1250
-preplace netloc DRS4_firmware_1_o_stop_cell_ready 1 3 2 1410 1050 1980
+preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 1260
+preplace netloc DRS4_firmware_1_o_stop_cell_ready 1 3 2 1420 1050 1980
 preplace netloc CPLD_ctrl_0_CPLD_SPI_nCS 1 6 2 3300J 580 NJ
 preplace netloc M1to5_0_out5 1 7 1 NJ
 preplace netloc util_ds_buf_3_OBUF_DS_N 1 7 1 NJ
-preplace netloc CPLD_ctrl_0_CPLD_Mux_sel 1 2 6 810 550 1320J 580 2060J 350 NJ 350 3310 590 3760J
+preplace netloc CPLD_ctrl_0_CPLD_Mux_sel 1 2 6 810 550 1340J 580 2060J 350 NJ 350 3310 590 3760J
 preplace netloc processing_system7_0_DDR 1 6 2 NJ 1690 NJ
 preplace netloc xlslice_5_Dout 1 7 1 N
 preplace netloc util_ds_buf_0_OBUF_DS_N 1 7 1 N
 preplace netloc c_counter_binary_0_Q 1 5 1 2590
 preplace netloc util_ds_buf_4_OBUF_DS_N 1 7 1 NJ
 preplace netloc ROController_0_o_wr_fifo_en 1 4 2 2020 1040 NJ
-preplace netloc util_ds_buf_ADCLK1_IBUF_OUT 1 3 1 1360
-preplace netloc trigger_logic_0_o_out_trigger 1 3 3 1320 980 NJ 980 N
+preplace netloc util_ds_buf_ADCLK1_IBUF_OUT 1 3 1 1380
+preplace netloc trigger_logic_0_o_out_trigger 1 3 3 1240 980 NJ 980 N
 preplace netloc util_ds_buf_3_OBUF_DS_P 1 7 1 NJ
 preplace netloc util_ds_buf_0_OBUF_DS_P 1 7 1 N
-preplace netloc ADC_MISO_1 1 0 4 NJ 1060 NJ 1060 710J 1130 NJ
+preplace netloc ADC_MISO_1 1 0 4 NJ 1060 NJ 1060 730J 1130 NJ
 preplace netloc enable_signal_0_signal_out 1 6 1 3290
 preplace netloc util_ds_buf_4_OBUF_DS_P 1 7 1 NJ
 preplace netloc DRS4_firmware_1_o_srin 1 4 1 1970
 preplace netloc DRS_DTAP4_1 1 0 6 NJ 180 NJ 180 810 250 NJ 250 NJ 250 2590
 preplace netloc xlconstant_1_dout 1 2 1 730J
 preplace netloc LCLK_MUX_N_1 1 0 3 NJ 2530 NJ 2530 670J
-preplace netloc ps7_0_axi_periph_M00_AXI 1 3 3 1300 780 2050J 820 2570J
-preplace netloc DRS_DTAP1_1 1 0 6 NJ 90 NJ 90 720 220 NJ 220 NJ 220 2660
-preplace netloc util_ds_buf_0_BUFH_O 1 3 1 1290
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 3 1320 780 2050J 820 2570J
+preplace netloc DRS_DTAP1_1 1 0 6 NJ 90 NJ 90 690 220 NJ 220 NJ 220 2660
+preplace netloc util_ds_buf_0_BUFH_O 1 3 1 1350
 preplace netloc delay_module_0_signal_out 1 6 1 3320J
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 6 260 2180 740J 1830 NJ 1830 NJ 1830 2530J 1890 3280
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 6 260 2190 660J 2200 1390J 1950 NJ 1950 NJ 1950 3280
 preplace netloc xlslice_1_Dout 1 1 1 NJ
 preplace netloc ADC_ADC_SCLK 1 4 4 2000 830 2580J 820 NJ 820 3750J
 preplace netloc DRS4_firmware_1_o_srclk 1 4 1 N
-preplace netloc reset_50M_0_peripheral_aresetn 1 2 3 690 2210 1410 1980 2010J
-preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 1250
-preplace netloc DRS_DTAP0_1 1 0 6 NJ 60 NJ 60 690 210 NJ 210 NJ 210 2670
+preplace netloc reset_50M_0_peripheral_aresetn 1 2 3 690 1840 1250 1970 2010J
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 1260
+preplace netloc DRS_DTAP0_1 1 0 6 NJ 60 NJ 60 660 210 NJ 210 NJ 210 2670
 preplace netloc ADC_o_data_clk 1 4 2 NJ 1300 2570J
 preplace netloc axi_dma_0_M_AXI_MM2S 1 4 1 N
-preplace netloc CPLD_nCS_1 1 0 6 NJ 270 NJ 270 760J 260 NJ 260 NJ 260 2650J
+preplace netloc CPLD_nCS_1 1 0 6 NJ 270 NJ 270 750J 260 NJ 260 NJ 260 2650J
 preplace netloc xlslice_0_Dout 1 1 1 240
 preplace netloc DRS_A_test_0_o_SRCLK 1 5 1 2550
 preplace netloc LCLK_MUX_P_1 1 0 3 NJ 2510 NJ 2510 780J
 preplace netloc ADC_o_ascii 1 2 3 820 1420 NJ 1420 1960
-preplace netloc DRS4_firmware_1_o_stop_cell 1 3 2 1390 1040 1990
+preplace netloc DRS4_firmware_1_o_stop_cell 1 3 2 1400 1040 1990
 preplace netloc axi_dma_0_M_AXI_S2MM 1 4 1 N
 preplace netloc DRS_A_test_0_o_A_vec 1 5 3 2580J 2020 NJ 2020 NJ
 preplace netloc DRS_DTAP3_1 1 0 6 NJ 150 NJ 150 770 240 NJ 240 NJ 240 2630
 preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 2 1 660
 preplace netloc ADC_ADC_MOSI 1 4 4 2010 840 NJ 840 3300J 800 3770J
-preplace netloc Vibufds_diff_out_0_o_MUXOUT_P 1 3 1 1300
+preplace netloc Vibufds_diff_out_0_o_MUXOUT_P 1 3 1 1320
 preplace netloc Net 1 4 1 N
 preplace netloc i_in_trigger_1 1 0 3 NJ 1080 240J 1450 670J
 preplace netloc xlslice_3to4_Dout 1 4 1 2020J
 preplace netloc MUXOUT_N_1 1 0 3 NJ 1460 NJ 1460 680J
-preplace netloc processing_system7_0_FCLK_CLK1 1 1 6 250 1070 720 390 1290 1710 2010 1640 2600 1900 3290
-preplace netloc MUXOUT_N_2 1 3 1 1330
-preplace netloc processing_system7_0_FCLK_CLK2 1 1 6 270 2490 700 2200 1390 1970 2060 1960 NJ 1960 3300
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 6 250 1070 750 390 1310 1710 2010 1640 2600 1890 3290
+preplace netloc MUXOUT_N_2 1 3 1 1340
+preplace netloc processing_system7_0_FCLK_CLK2 1 1 6 270 2490 700 2210 1400 1980 2060 1960 NJ 1960 3300
 preplace netloc M1to5_2_out5 1 7 1 NJ
 preplace netloc processing_system7_0_FCLK_CLK3 1 6 1 3320
 preplace netloc o_fifo_data_count 1 3 1 N
 preplace netloc xlslice_3to3_Dout 1 5 1 NJ
 preplace netloc ps7_0_axi_periph_M06_AXI 1 3 1 1230
-preplace netloc DRS_DTAP2_1 1 0 6 NJ 120 NJ 120 760 230 NJ 230 NJ 230 2640
+preplace netloc DRS_DTAP2_1 1 0 6 NJ 120 NJ 120 750 230 NJ 230 NJ 230 2640
 preplace netloc util_vector_logic_1_Res 1 2 4 790 1160 1280J 1030 NJ 1030 2580
 preplace netloc ADCLK_MUX_P_1 1 0 3 NJ 470 NJ 470 NJ
 preplace netloc fifo_generator_0_rd_data_count 1 4 2 NJ 1280 2580
-preplace netloc Signal_sel_0_O 1 3 1 1380
-preplace netloc DRS4_firmware_1_o_dwrite_for_trigger 1 3 2 1400 1440 1950
-preplace netloc ps7_0_axi_periph_M05_AXI 1 3 1 1270
+preplace netloc Signal_sel_0_O 1 3 1 1410
+preplace netloc DRS4_firmware_1_o_dwrite_for_trigger 1 3 2 1410 1440 1950
+preplace netloc ps7_0_axi_periph_M05_AXI 1 3 1 1290
 preplace netloc DRS_A_test_0_o_dwrite 1 5 2 2540J 2030 3280J
 preplace netloc rst_FIFO_100M_peripheral_reset 1 2 2 780 1150 NJ
 preplace netloc DRS4_firmware_1_o_rsrload 1 4 1 1960
-preplace netloc xlslice_15_Dout 1 3 1 1240J
+preplace netloc xlslice_15_Dout 1 3 1 1230J
 preplace netloc M1to5_1_out5 1 7 1 NJ
-preplace netloc i_next_fifo_full_1 1 3 1 1280
+preplace netloc i_next_fifo_full_1 1 3 1 1300
 preplace netloc processing_system7_0_M_AXI_GP0 1 2 5 830 0 NJ 0 NJ 0 NJ 0 3280
 preplace netloc DRS_A_test_0_o_SRIN 1 5 3 2540J 2150 3290 2580 NJ
 preplace netloc CPLD_ctrl_0_CPLD_SPI_SCLK 1 6 1 3320
 preplace netloc DRS_A_test_0_o_RSRLOAD 1 5 1 2530
 preplace netloc CPLD_MISO_1 1 0 6 0J 200 NJ 200 NJ 200 NJ 200 NJ 200 2680J
 preplace netloc DRS4_firmware_1_o_dwrite 1 4 1 2070
-preplace netloc xlconstant_0_dout 1 3 1 1400J
+preplace netloc xlconstant_0_dout 1 3 1 1420J
 preplace netloc DRS4_firmware_0_o_srclk_R2 1 4 2 2030 690 2610J
 preplace netloc delay_module_1_signal_out 1 6 1 3280J
 preplace netloc xlslice_2_Dout2 1 2 1 NJ
-preplace netloc DRS_SROUT_1 1 0 3 NJ 2180 240J 2190 660J
+preplace netloc DRS_SROUT_1 1 0 3 NJ 2180 NJ 2180 670J
 preplace netloc axi_dma_0_s2mm_introut 1 4 1 2000
 preplace netloc util_ds_buf_5_OBUF_DS_N 1 7 1 NJ
-preplace netloc util_ds_buf_ADCLK_IBUF_OUT 1 3 1 1310
+preplace netloc util_ds_buf_ADCLK_IBUF_OUT 1 3 1 1330
 preplace netloc util_ds_buf_1_OBUF_DS_N 1 7 1 N
 preplace netloc util_ds_buf_5_OBUF_DS_P 1 7 1 NJ
 preplace cgraphic comment_0 place right -1056 828 textcolor 4 linecolor 3 linewidth 2

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Mon Jun 26 16:45:14 2023
-// Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top zsys_fifo_generator_0_0 -prefix
-//               zsys_fifo_generator_0_0_ zsys_fifo_generator_0_0_sim_netlist.v
+// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+// Date        : Mon Nov  4 01:10:54 2024
+// Host        : lapepuat11 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_fifo_generator_0_0/zsys_fifo_generator_0_0_sim_netlist.v
 // Design      : zsys_fifo_generator_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,9 +12,602 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "zsys_fifo_generator_0_0,fifo_generator_v13_2_2,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "fifo_generator_v13_2_2,Vivado 2018.2.2" *) 
+(* NotValidForBitStream *)
+module zsys_fifo_generator_0_0
+   (rst,
+    wr_clk,
+    rd_clk,
+    din,
+    wr_en,
+    rd_en,
+    dout,
+    full,
+    empty,
+    rd_data_count);
+  input rst;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 write_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME write_clk, FREQ_HZ 16000000, PHASE 0.000, CLK_DOMAIN zsys_ROController_0_0_o_wr_fifo_clk" *) input wr_clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 read_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME read_clk, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input rd_clk;
+  (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA" *) input [96:0]din;
+  (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN" *) input wr_en;
+  (* x_interface_info = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_EN" *) input rd_en;
+  (* x_interface_info = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_DATA" *) output [96:0]dout;
+  (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE FULL" *) output full;
+  (* x_interface_info = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *) output empty;
+  output [11:0]rd_data_count;
+
+  wire [96:0]din;
+  wire [96:0]dout;
+  wire empty;
+  wire full;
+  wire rd_clk;
+  wire [11:0]rd_data_count;
+  wire rd_en;
+  wire rst;
+  wire wr_clk;
+  wire wr_en;
+  wire NLW_U0_almost_empty_UNCONNECTED;
+  wire NLW_U0_almost_full_UNCONNECTED;
+  wire NLW_U0_axi_ar_dbiterr_UNCONNECTED;
+  wire NLW_U0_axi_ar_overflow_UNCONNECTED;
+  wire NLW_U0_axi_ar_prog_empty_UNCONNECTED;
+  wire NLW_U0_axi_ar_prog_full_UNCONNECTED;
+  wire NLW_U0_axi_ar_sbiterr_UNCONNECTED;
+  wire NLW_U0_axi_ar_underflow_UNCONNECTED;
+  wire NLW_U0_axi_aw_dbiterr_UNCONNECTED;
+  wire NLW_U0_axi_aw_overflow_UNCONNECTED;
+  wire NLW_U0_axi_aw_prog_empty_UNCONNECTED;
+  wire NLW_U0_axi_aw_prog_full_UNCONNECTED;
+  wire NLW_U0_axi_aw_sbiterr_UNCONNECTED;
+  wire NLW_U0_axi_aw_underflow_UNCONNECTED;
+  wire NLW_U0_axi_b_dbiterr_UNCONNECTED;
+  wire NLW_U0_axi_b_overflow_UNCONNECTED;
+  wire NLW_U0_axi_b_prog_empty_UNCONNECTED;
+  wire NLW_U0_axi_b_prog_full_UNCONNECTED;
+  wire NLW_U0_axi_b_sbiterr_UNCONNECTED;
+  wire NLW_U0_axi_b_underflow_UNCONNECTED;
+  wire NLW_U0_axi_r_dbiterr_UNCONNECTED;
+  wire NLW_U0_axi_r_overflow_UNCONNECTED;
+  wire NLW_U0_axi_r_prog_empty_UNCONNECTED;
+  wire NLW_U0_axi_r_prog_full_UNCONNECTED;
+  wire NLW_U0_axi_r_sbiterr_UNCONNECTED;
+  wire NLW_U0_axi_r_underflow_UNCONNECTED;
+  wire NLW_U0_axi_w_dbiterr_UNCONNECTED;
+  wire NLW_U0_axi_w_overflow_UNCONNECTED;
+  wire NLW_U0_axi_w_prog_empty_UNCONNECTED;
+  wire NLW_U0_axi_w_prog_full_UNCONNECTED;
+  wire NLW_U0_axi_w_sbiterr_UNCONNECTED;
+  wire NLW_U0_axi_w_underflow_UNCONNECTED;
+  wire NLW_U0_axis_dbiterr_UNCONNECTED;
+  wire NLW_U0_axis_overflow_UNCONNECTED;
+  wire NLW_U0_axis_prog_empty_UNCONNECTED;
+  wire NLW_U0_axis_prog_full_UNCONNECTED;
+  wire NLW_U0_axis_sbiterr_UNCONNECTED;
+  wire NLW_U0_axis_underflow_UNCONNECTED;
+  wire NLW_U0_dbiterr_UNCONNECTED;
+  wire NLW_U0_m_axi_arvalid_UNCONNECTED;
+  wire NLW_U0_m_axi_awvalid_UNCONNECTED;
+  wire NLW_U0_m_axi_bready_UNCONNECTED;
+  wire NLW_U0_m_axi_rready_UNCONNECTED;
+  wire NLW_U0_m_axi_wlast_UNCONNECTED;
+  wire NLW_U0_m_axi_wvalid_UNCONNECTED;
+  wire NLW_U0_m_axis_tlast_UNCONNECTED;
+  wire NLW_U0_m_axis_tvalid_UNCONNECTED;
+  wire NLW_U0_overflow_UNCONNECTED;
+  wire NLW_U0_prog_empty_UNCONNECTED;
+  wire NLW_U0_prog_full_UNCONNECTED;
+  wire NLW_U0_rd_rst_busy_UNCONNECTED;
+  wire NLW_U0_s_axi_arready_UNCONNECTED;
+  wire NLW_U0_s_axi_awready_UNCONNECTED;
+  wire NLW_U0_s_axi_bvalid_UNCONNECTED;
+  wire NLW_U0_s_axi_rlast_UNCONNECTED;
+  wire NLW_U0_s_axi_rvalid_UNCONNECTED;
+  wire NLW_U0_s_axi_wready_UNCONNECTED;
+  wire NLW_U0_s_axis_tready_UNCONNECTED;
+  wire NLW_U0_sbiterr_UNCONNECTED;
+  wire NLW_U0_underflow_UNCONNECTED;
+  wire NLW_U0_valid_UNCONNECTED;
+  wire NLW_U0_wr_ack_UNCONNECTED;
+  wire NLW_U0_wr_rst_busy_UNCONNECTED;
+  wire [4:0]NLW_U0_axi_ar_data_count_UNCONNECTED;
+  wire [4:0]NLW_U0_axi_ar_rd_data_count_UNCONNECTED;
+  wire [4:0]NLW_U0_axi_ar_wr_data_count_UNCONNECTED;
+  wire [4:0]NLW_U0_axi_aw_data_count_UNCONNECTED;
+  wire [4:0]NLW_U0_axi_aw_rd_data_count_UNCONNECTED;
+  wire [4:0]NLW_U0_axi_aw_wr_data_count_UNCONNECTED;
+  wire [4:0]NLW_U0_axi_b_data_count_UNCONNECTED;
+  wire [4:0]NLW_U0_axi_b_rd_data_count_UNCONNECTED;
+  wire [4:0]NLW_U0_axi_b_wr_data_count_UNCONNECTED;
+  wire [10:0]NLW_U0_axi_r_data_count_UNCONNECTED;
+  wire [10:0]NLW_U0_axi_r_rd_data_count_UNCONNECTED;
+  wire [10:0]NLW_U0_axi_r_wr_data_count_UNCONNECTED;
+  wire [10:0]NLW_U0_axi_w_data_count_UNCONNECTED;
+  wire [10:0]NLW_U0_axi_w_rd_data_count_UNCONNECTED;
+  wire [10:0]NLW_U0_axi_w_wr_data_count_UNCONNECTED;
+  wire [10:0]NLW_U0_axis_data_count_UNCONNECTED;
+  wire [10:0]NLW_U0_axis_rd_data_count_UNCONNECTED;
+  wire [10:0]NLW_U0_axis_wr_data_count_UNCONNECTED;
+  wire [11:0]NLW_U0_data_count_UNCONNECTED;
+  wire [31:0]NLW_U0_m_axi_araddr_UNCONNECTED;
+  wire [1:0]NLW_U0_m_axi_arburst_UNCONNECTED;
+  wire [3:0]NLW_U0_m_axi_arcache_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axi_arid_UNCONNECTED;
+  wire [7:0]NLW_U0_m_axi_arlen_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axi_arlock_UNCONNECTED;
+  wire [2:0]NLW_U0_m_axi_arprot_UNCONNECTED;
+  wire [3:0]NLW_U0_m_axi_arqos_UNCONNECTED;
+  wire [3:0]NLW_U0_m_axi_arregion_UNCONNECTED;
+  wire [2:0]NLW_U0_m_axi_arsize_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axi_aruser_UNCONNECTED;
+  wire [31:0]NLW_U0_m_axi_awaddr_UNCONNECTED;
+  wire [1:0]NLW_U0_m_axi_awburst_UNCONNECTED;
+  wire [3:0]NLW_U0_m_axi_awcache_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axi_awid_UNCONNECTED;
+  wire [7:0]NLW_U0_m_axi_awlen_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axi_awlock_UNCONNECTED;
+  wire [2:0]NLW_U0_m_axi_awprot_UNCONNECTED;
+  wire [3:0]NLW_U0_m_axi_awqos_UNCONNECTED;
+  wire [3:0]NLW_U0_m_axi_awregion_UNCONNECTED;
+  wire [2:0]NLW_U0_m_axi_awsize_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axi_awuser_UNCONNECTED;
+  wire [63:0]NLW_U0_m_axi_wdata_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axi_wid_UNCONNECTED;
+  wire [7:0]NLW_U0_m_axi_wstrb_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axi_wuser_UNCONNECTED;
+  wire [7:0]NLW_U0_m_axis_tdata_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axis_tdest_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axis_tid_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axis_tkeep_UNCONNECTED;
+  wire [0:0]NLW_U0_m_axis_tstrb_UNCONNECTED;
+  wire [3:0]NLW_U0_m_axis_tuser_UNCONNECTED;
+  wire [0:0]NLW_U0_s_axi_bid_UNCONNECTED;
+  wire [1:0]NLW_U0_s_axi_bresp_UNCONNECTED;
+  wire [0:0]NLW_U0_s_axi_buser_UNCONNECTED;
+  wire [63:0]NLW_U0_s_axi_rdata_UNCONNECTED;
+  wire [0:0]NLW_U0_s_axi_rid_UNCONNECTED;
+  wire [1:0]NLW_U0_s_axi_rresp_UNCONNECTED;
+  wire [0:0]NLW_U0_s_axi_ruser_UNCONNECTED;
+  wire [11:0]NLW_U0_wr_data_count_UNCONNECTED;
+
+  (* C_ADD_NGC_CONSTRAINT = "0" *) 
+  (* C_APPLICATION_TYPE_AXIS = "0" *) 
+  (* C_APPLICATION_TYPE_RACH = "0" *) 
+  (* C_APPLICATION_TYPE_RDCH = "0" *) 
+  (* C_APPLICATION_TYPE_WACH = "0" *) 
+  (* C_APPLICATION_TYPE_WDCH = "0" *) 
+  (* C_APPLICATION_TYPE_WRCH = "0" *) 
+  (* C_AXIS_TDATA_WIDTH = "8" *) 
+  (* C_AXIS_TDEST_WIDTH = "1" *) 
+  (* C_AXIS_TID_WIDTH = "1" *) 
+  (* C_AXIS_TKEEP_WIDTH = "1" *) 
+  (* C_AXIS_TSTRB_WIDTH = "1" *) 
+  (* C_AXIS_TUSER_WIDTH = "4" *) 
+  (* C_AXIS_TYPE = "0" *) 
+  (* C_AXI_ADDR_WIDTH = "32" *) 
+  (* C_AXI_ARUSER_WIDTH = "1" *) 
+  (* C_AXI_AWUSER_WIDTH = "1" *) 
+  (* C_AXI_BUSER_WIDTH = "1" *) 
+  (* C_AXI_DATA_WIDTH = "64" *) 
+  (* C_AXI_ID_WIDTH = "1" *) 
+  (* C_AXI_LEN_WIDTH = "8" *) 
+  (* C_AXI_LOCK_WIDTH = "1" *) 
+  (* C_AXI_RUSER_WIDTH = "1" *) 
+  (* C_AXI_TYPE = "1" *) 
+  (* C_AXI_WUSER_WIDTH = "1" *) 
+  (* C_COMMON_CLOCK = "0" *) 
+  (* C_COUNT_TYPE = "0" *) 
+  (* C_DATA_COUNT_WIDTH = "12" *) 
+  (* C_DEFAULT_VALUE = "BlankString" *) 
+  (* C_DIN_WIDTH = "97" *) 
+  (* C_DIN_WIDTH_AXIS = "1" *) 
+  (* C_DIN_WIDTH_RACH = "32" *) 
+  (* C_DIN_WIDTH_RDCH = "64" *) 
+  (* C_DIN_WIDTH_WACH = "1" *) 
+  (* C_DIN_WIDTH_WDCH = "64" *) 
+  (* C_DIN_WIDTH_WRCH = "2" *) 
+  (* C_DOUT_RST_VAL = "0" *) 
+  (* C_DOUT_WIDTH = "97" *) 
+  (* C_ENABLE_RLOCS = "0" *) 
+  (* C_ENABLE_RST_SYNC = "1" *) 
+  (* C_EN_SAFETY_CKT = "0" *) 
+  (* C_ERROR_INJECTION_TYPE = "0" *) 
+  (* C_ERROR_INJECTION_TYPE_AXIS = "0" *) 
+  (* C_ERROR_INJECTION_TYPE_RACH = "0" *) 
+  (* C_ERROR_INJECTION_TYPE_RDCH = "0" *) 
+  (* C_ERROR_INJECTION_TYPE_WACH = "0" *) 
+  (* C_ERROR_INJECTION_TYPE_WDCH = "0" *) 
+  (* C_ERROR_INJECTION_TYPE_WRCH = "0" *) 
+  (* C_FAMILY = "zynq" *) 
+  (* C_FULL_FLAGS_RST_VAL = "1" *) 
+  (* C_HAS_ALMOST_EMPTY = "0" *) 
+  (* C_HAS_ALMOST_FULL = "0" *) 
+  (* C_HAS_AXIS_TDATA = "1" *) 
+  (* C_HAS_AXIS_TDEST = "0" *) 
+  (* C_HAS_AXIS_TID = "0" *) 
+  (* C_HAS_AXIS_TKEEP = "0" *) 
+  (* C_HAS_AXIS_TLAST = "0" *) 
+  (* C_HAS_AXIS_TREADY = "1" *) 
+  (* C_HAS_AXIS_TSTRB = "0" *) 
+  (* C_HAS_AXIS_TUSER = "1" *) 
+  (* C_HAS_AXI_ARUSER = "0" *) 
+  (* C_HAS_AXI_AWUSER = "0" *) 
+  (* C_HAS_AXI_BUSER = "0" *) 
+  (* C_HAS_AXI_ID = "0" *) 
+  (* C_HAS_AXI_RD_CHANNEL = "1" *) 
+  (* C_HAS_AXI_RUSER = "0" *) 
+  (* C_HAS_AXI_WR_CHANNEL = "1" *) 
+  (* C_HAS_AXI_WUSER = "0" *) 
+  (* C_HAS_BACKUP = "0" *) 
+  (* C_HAS_DATA_COUNT = "0" *) 
+  (* C_HAS_DATA_COUNTS_AXIS = "0" *) 
+  (* C_HAS_DATA_COUNTS_RACH = "0" *) 
+  (* C_HAS_DATA_COUNTS_RDCH = "0" *) 
+  (* C_HAS_DATA_COUNTS_WACH = "0" *) 
+  (* C_HAS_DATA_COUNTS_WDCH = "0" *) 
+  (* C_HAS_DATA_COUNTS_WRCH = "0" *) 
+  (* C_HAS_INT_CLK = "0" *) 
+  (* C_HAS_MASTER_CE = "0" *) 
+  (* C_HAS_MEMINIT_FILE = "0" *) 
+  (* C_HAS_OVERFLOW = "0" *) 
+  (* C_HAS_PROG_FLAGS_AXIS = "0" *) 
+  (* C_HAS_PROG_FLAGS_RACH = "0" *) 
+  (* C_HAS_PROG_FLAGS_RDCH = "0" *) 
+  (* C_HAS_PROG_FLAGS_WACH = "0" *) 
+  (* C_HAS_PROG_FLAGS_WDCH = "0" *) 
+  (* C_HAS_PROG_FLAGS_WRCH = "0" *) 
+  (* C_HAS_RD_DATA_COUNT = "1" *) 
+  (* C_HAS_RD_RST = "0" *) 
+  (* C_HAS_RST = "1" *) 
+  (* C_HAS_SLAVE_CE = "0" *) 
+  (* C_HAS_SRST = "0" *) 
+  (* C_HAS_UNDERFLOW = "0" *) 
+  (* C_HAS_VALID = "0" *) 
+  (* C_HAS_WR_ACK = "0" *) 
+  (* C_HAS_WR_DATA_COUNT = "0" *) 
+  (* C_HAS_WR_RST = "0" *) 
+  (* C_IMPLEMENTATION_TYPE = "2" *) 
+  (* C_IMPLEMENTATION_TYPE_AXIS = "1" *) 
+  (* C_IMPLEMENTATION_TYPE_RACH = "1" *) 
+  (* C_IMPLEMENTATION_TYPE_RDCH = "1" *) 
+  (* C_IMPLEMENTATION_TYPE_WACH = "1" *) 
+  (* C_IMPLEMENTATION_TYPE_WDCH = "1" *) 
+  (* C_IMPLEMENTATION_TYPE_WRCH = "1" *) 
+  (* C_INIT_WR_PNTR_VAL = "0" *) 
+  (* C_INTERFACE_TYPE = "0" *) 
+  (* C_MEMORY_TYPE = "1" *) 
+  (* C_MIF_FILE_NAME = "BlankString" *) 
+  (* C_MSGON_VAL = "1" *) 
+  (* C_OPTIMIZATION_MODE = "0" *) 
+  (* C_OVERFLOW_LOW = "0" *) 
+  (* C_POWER_SAVING_MODE = "0" *) 
+  (* C_PRELOAD_LATENCY = "1" *) 
+  (* C_PRELOAD_REGS = "0" *) 
+  (* C_PRIM_FIFO_TYPE = "4kx9" *) 
+  (* C_PRIM_FIFO_TYPE_AXIS = "1kx18" *) 
+  (* C_PRIM_FIFO_TYPE_RACH = "512x36" *) 
+  (* C_PRIM_FIFO_TYPE_RDCH = "1kx36" *) 
+  (* C_PRIM_FIFO_TYPE_WACH = "512x36" *) 
+  (* C_PRIM_FIFO_TYPE_WDCH = "1kx36" *) 
+  (* C_PRIM_FIFO_TYPE_WRCH = "512x36" *) 
+  (* C_PROG_EMPTY_THRESH_ASSERT_VAL = "2" *) 
+  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS = "1022" *) 
+  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH = "1022" *) 
+  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH = "1022" *) 
+  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH = "1022" *) 
+  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH = "1022" *) 
+  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH = "1022" *) 
+  (* C_PROG_EMPTY_THRESH_NEGATE_VAL = "3" *) 
+  (* C_PROG_EMPTY_TYPE = "0" *) 
+  (* C_PROG_EMPTY_TYPE_AXIS = "0" *) 
+  (* C_PROG_EMPTY_TYPE_RACH = "0" *) 
+  (* C_PROG_EMPTY_TYPE_RDCH = "0" *) 
+  (* C_PROG_EMPTY_TYPE_WACH = "0" *) 
+  (* C_PROG_EMPTY_TYPE_WDCH = "0" *) 
+  (* C_PROG_EMPTY_TYPE_WRCH = "0" *) 
+  (* C_PROG_FULL_THRESH_ASSERT_VAL = "4093" *) 
+  (* C_PROG_FULL_THRESH_ASSERT_VAL_AXIS = "1023" *) 
+  (* C_PROG_FULL_THRESH_ASSERT_VAL_RACH = "1023" *) 
+  (* C_PROG_FULL_THRESH_ASSERT_VAL_RDCH = "1023" *) 
+  (* C_PROG_FULL_THRESH_ASSERT_VAL_WACH = "1023" *) 
+  (* C_PROG_FULL_THRESH_ASSERT_VAL_WDCH = "1023" *) 
+  (* C_PROG_FULL_THRESH_ASSERT_VAL_WRCH = "1023" *) 
+  (* C_PROG_FULL_THRESH_NEGATE_VAL = "4092" *) 
+  (* C_PROG_FULL_TYPE = "0" *) 
+  (* C_PROG_FULL_TYPE_AXIS = "0" *) 
+  (* C_PROG_FULL_TYPE_RACH = "0" *) 
+  (* C_PROG_FULL_TYPE_RDCH = "0" *) 
+  (* C_PROG_FULL_TYPE_WACH = "0" *) 
+  (* C_PROG_FULL_TYPE_WDCH = "0" *) 
+  (* C_PROG_FULL_TYPE_WRCH = "0" *) 
+  (* C_RACH_TYPE = "0" *) 
+  (* C_RDCH_TYPE = "0" *) 
+  (* C_RD_DATA_COUNT_WIDTH = "12" *) 
+  (* C_RD_DEPTH = "4096" *) 
+  (* C_RD_FREQ = "1" *) 
+  (* C_RD_PNTR_WIDTH = "12" *) 
+  (* C_REG_SLICE_MODE_AXIS = "0" *) 
+  (* C_REG_SLICE_MODE_RACH = "0" *) 
+  (* C_REG_SLICE_MODE_RDCH = "0" *) 
+  (* C_REG_SLICE_MODE_WACH = "0" *) 
+  (* C_REG_SLICE_MODE_WDCH = "0" *) 
+  (* C_REG_SLICE_MODE_WRCH = "0" *) 
+  (* C_SELECT_XPM = "0" *) 
+  (* C_SYNCHRONIZER_STAGE = "2" *) 
+  (* C_UNDERFLOW_LOW = "0" *) 
+  (* C_USE_COMMON_OVERFLOW = "0" *) 
+  (* C_USE_COMMON_UNDERFLOW = "0" *) 
+  (* C_USE_DEFAULT_SETTINGS = "0" *) 
+  (* C_USE_DOUT_RST = "1" *) 
+  (* C_USE_ECC = "0" *) 
+  (* C_USE_ECC_AXIS = "0" *) 
+  (* C_USE_ECC_RACH = "0" *) 
+  (* C_USE_ECC_RDCH = "0" *) 
+  (* C_USE_ECC_WACH = "0" *) 
+  (* C_USE_ECC_WDCH = "0" *) 
+  (* C_USE_ECC_WRCH = "0" *) 
+  (* C_USE_EMBEDDED_REG = "0" *) 
+  (* C_USE_FIFO16_FLAGS = "0" *) 
+  (* C_USE_FWFT_DATA_COUNT = "0" *) 
+  (* C_USE_PIPELINE_REG = "0" *) 
+  (* C_VALID_LOW = "0" *) 
+  (* C_WACH_TYPE = "0" *) 
+  (* C_WDCH_TYPE = "0" *) 
+  (* C_WRCH_TYPE = "0" *) 
+  (* C_WR_ACK_LOW = "0" *) 
+  (* C_WR_DATA_COUNT_WIDTH = "12" *) 
+  (* C_WR_DEPTH = "4096" *) 
+  (* C_WR_DEPTH_AXIS = "1024" *) 
+  (* C_WR_DEPTH_RACH = "16" *) 
+  (* C_WR_DEPTH_RDCH = "1024" *) 
+  (* C_WR_DEPTH_WACH = "16" *) 
+  (* C_WR_DEPTH_WDCH = "1024" *) 
+  (* C_WR_DEPTH_WRCH = "16" *) 
+  (* C_WR_FREQ = "1" *) 
+  (* C_WR_PNTR_WIDTH = "12" *) 
+  (* C_WR_PNTR_WIDTH_AXIS = "10" *) 
+  (* C_WR_PNTR_WIDTH_RACH = "4" *) 
+  (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
+  (* C_WR_PNTR_WIDTH_WACH = "4" *) 
+  (* C_WR_PNTR_WIDTH_WDCH = "10" *) 
+  (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
+  (* C_WR_RESPONSE_LATENCY = "1" *) 
+  zsys_fifo_generator_0_0_fifo_generator_v13_2_2 U0
+       (.almost_empty(NLW_U0_almost_empty_UNCONNECTED),
+        .almost_full(NLW_U0_almost_full_UNCONNECTED),
+        .axi_ar_data_count(NLW_U0_axi_ar_data_count_UNCONNECTED[4:0]),
+        .axi_ar_dbiterr(NLW_U0_axi_ar_dbiterr_UNCONNECTED),
+        .axi_ar_injectdbiterr(1'b0),
+        .axi_ar_injectsbiterr(1'b0),
+        .axi_ar_overflow(NLW_U0_axi_ar_overflow_UNCONNECTED),
+        .axi_ar_prog_empty(NLW_U0_axi_ar_prog_empty_UNCONNECTED),
+        .axi_ar_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0}),
+        .axi_ar_prog_full(NLW_U0_axi_ar_prog_full_UNCONNECTED),
+        .axi_ar_prog_full_thresh({1'b0,1'b0,1'b0,1'b0}),
+        .axi_ar_rd_data_count(NLW_U0_axi_ar_rd_data_count_UNCONNECTED[4:0]),
+        .axi_ar_sbiterr(NLW_U0_axi_ar_sbiterr_UNCONNECTED),
+        .axi_ar_underflow(NLW_U0_axi_ar_underflow_UNCONNECTED),
+        .axi_ar_wr_data_count(NLW_U0_axi_ar_wr_data_count_UNCONNECTED[4:0]),
+        .axi_aw_data_count(NLW_U0_axi_aw_data_count_UNCONNECTED[4:0]),
+        .axi_aw_dbiterr(NLW_U0_axi_aw_dbiterr_UNCONNECTED),
+        .axi_aw_injectdbiterr(1'b0),
+        .axi_aw_injectsbiterr(1'b0),
+        .axi_aw_overflow(NLW_U0_axi_aw_overflow_UNCONNECTED),
+        .axi_aw_prog_empty(NLW_U0_axi_aw_prog_empty_UNCONNECTED),
+        .axi_aw_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0}),
+        .axi_aw_prog_full(NLW_U0_axi_aw_prog_full_UNCONNECTED),
+        .axi_aw_prog_full_thresh({1'b0,1'b0,1'b0,1'b0}),
+        .axi_aw_rd_data_count(NLW_U0_axi_aw_rd_data_count_UNCONNECTED[4:0]),
+        .axi_aw_sbiterr(NLW_U0_axi_aw_sbiterr_UNCONNECTED),
+        .axi_aw_underflow(NLW_U0_axi_aw_underflow_UNCONNECTED),
+        .axi_aw_wr_data_count(NLW_U0_axi_aw_wr_data_count_UNCONNECTED[4:0]),
+        .axi_b_data_count(NLW_U0_axi_b_data_count_UNCONNECTED[4:0]),
+        .axi_b_dbiterr(NLW_U0_axi_b_dbiterr_UNCONNECTED),
+        .axi_b_injectdbiterr(1'b0),
+        .axi_b_injectsbiterr(1'b0),
+        .axi_b_overflow(NLW_U0_axi_b_overflow_UNCONNECTED),
+        .axi_b_prog_empty(NLW_U0_axi_b_prog_empty_UNCONNECTED),
+        .axi_b_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0}),
+        .axi_b_prog_full(NLW_U0_axi_b_prog_full_UNCONNECTED),
+        .axi_b_prog_full_thresh({1'b0,1'b0,1'b0,1'b0}),
+        .axi_b_rd_data_count(NLW_U0_axi_b_rd_data_count_UNCONNECTED[4:0]),
+        .axi_b_sbiterr(NLW_U0_axi_b_sbiterr_UNCONNECTED),
+        .axi_b_underflow(NLW_U0_axi_b_underflow_UNCONNECTED),
+        .axi_b_wr_data_count(NLW_U0_axi_b_wr_data_count_UNCONNECTED[4:0]),
+        .axi_r_data_count(NLW_U0_axi_r_data_count_UNCONNECTED[10:0]),
+        .axi_r_dbiterr(NLW_U0_axi_r_dbiterr_UNCONNECTED),
+        .axi_r_injectdbiterr(1'b0),
+        .axi_r_injectsbiterr(1'b0),
+        .axi_r_overflow(NLW_U0_axi_r_overflow_UNCONNECTED),
+        .axi_r_prog_empty(NLW_U0_axi_r_prog_empty_UNCONNECTED),
+        .axi_r_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .axi_r_prog_full(NLW_U0_axi_r_prog_full_UNCONNECTED),
+        .axi_r_prog_full_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .axi_r_rd_data_count(NLW_U0_axi_r_rd_data_count_UNCONNECTED[10:0]),
+        .axi_r_sbiterr(NLW_U0_axi_r_sbiterr_UNCONNECTED),
+        .axi_r_underflow(NLW_U0_axi_r_underflow_UNCONNECTED),
+        .axi_r_wr_data_count(NLW_U0_axi_r_wr_data_count_UNCONNECTED[10:0]),
+        .axi_w_data_count(NLW_U0_axi_w_data_count_UNCONNECTED[10:0]),
+        .axi_w_dbiterr(NLW_U0_axi_w_dbiterr_UNCONNECTED),
+        .axi_w_injectdbiterr(1'b0),
+        .axi_w_injectsbiterr(1'b0),
+        .axi_w_overflow(NLW_U0_axi_w_overflow_UNCONNECTED),
+        .axi_w_prog_empty(NLW_U0_axi_w_prog_empty_UNCONNECTED),
+        .axi_w_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .axi_w_prog_full(NLW_U0_axi_w_prog_full_UNCONNECTED),
+        .axi_w_prog_full_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .axi_w_rd_data_count(NLW_U0_axi_w_rd_data_count_UNCONNECTED[10:0]),
+        .axi_w_sbiterr(NLW_U0_axi_w_sbiterr_UNCONNECTED),
+        .axi_w_underflow(NLW_U0_axi_w_underflow_UNCONNECTED),
+        .axi_w_wr_data_count(NLW_U0_axi_w_wr_data_count_UNCONNECTED[10:0]),
+        .axis_data_count(NLW_U0_axis_data_count_UNCONNECTED[10:0]),
+        .axis_dbiterr(NLW_U0_axis_dbiterr_UNCONNECTED),
+        .axis_injectdbiterr(1'b0),
+        .axis_injectsbiterr(1'b0),
+        .axis_overflow(NLW_U0_axis_overflow_UNCONNECTED),
+        .axis_prog_empty(NLW_U0_axis_prog_empty_UNCONNECTED),
+        .axis_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .axis_prog_full(NLW_U0_axis_prog_full_UNCONNECTED),
+        .axis_prog_full_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .axis_rd_data_count(NLW_U0_axis_rd_data_count_UNCONNECTED[10:0]),
+        .axis_sbiterr(NLW_U0_axis_sbiterr_UNCONNECTED),
+        .axis_underflow(NLW_U0_axis_underflow_UNCONNECTED),
+        .axis_wr_data_count(NLW_U0_axis_wr_data_count_UNCONNECTED[10:0]),
+        .backup(1'b0),
+        .backup_marker(1'b0),
+        .clk(1'b0),
+        .data_count(NLW_U0_data_count_UNCONNECTED[11:0]),
+        .dbiterr(NLW_U0_dbiterr_UNCONNECTED),
+        .din(din),
+        .dout(dout),
+        .empty(empty),
+        .full(full),
+        .injectdbiterr(1'b0),
+        .injectsbiterr(1'b0),
+        .int_clk(1'b0),
+        .m_aclk(1'b0),
+        .m_aclk_en(1'b0),
+        .m_axi_araddr(NLW_U0_m_axi_araddr_UNCONNECTED[31:0]),
+        .m_axi_arburst(NLW_U0_m_axi_arburst_UNCONNECTED[1:0]),
+        .m_axi_arcache(NLW_U0_m_axi_arcache_UNCONNECTED[3:0]),
+        .m_axi_arid(NLW_U0_m_axi_arid_UNCONNECTED[0]),
+        .m_axi_arlen(NLW_U0_m_axi_arlen_UNCONNECTED[7:0]),
+        .m_axi_arlock(NLW_U0_m_axi_arlock_UNCONNECTED[0]),
+        .m_axi_arprot(NLW_U0_m_axi_arprot_UNCONNECTED[2:0]),
+        .m_axi_arqos(NLW_U0_m_axi_arqos_UNCONNECTED[3:0]),
+        .m_axi_arready(1'b0),
+        .m_axi_arregion(NLW_U0_m_axi_arregion_UNCONNECTED[3:0]),
+        .m_axi_arsize(NLW_U0_m_axi_arsize_UNCONNECTED[2:0]),
+        .m_axi_aruser(NLW_U0_m_axi_aruser_UNCONNECTED[0]),
+        .m_axi_arvalid(NLW_U0_m_axi_arvalid_UNCONNECTED),
+        .m_axi_awaddr(NLW_U0_m_axi_awaddr_UNCONNECTED[31:0]),
+        .m_axi_awburst(NLW_U0_m_axi_awburst_UNCONNECTED[1:0]),
+        .m_axi_awcache(NLW_U0_m_axi_awcache_UNCONNECTED[3:0]),
+        .m_axi_awid(NLW_U0_m_axi_awid_UNCONNECTED[0]),
+        .m_axi_awlen(NLW_U0_m_axi_awlen_UNCONNECTED[7:0]),
+        .m_axi_awlock(NLW_U0_m_axi_awlock_UNCONNECTED[0]),
+        .m_axi_awprot(NLW_U0_m_axi_awprot_UNCONNECTED[2:0]),
+        .m_axi_awqos(NLW_U0_m_axi_awqos_UNCONNECTED[3:0]),
+        .m_axi_awready(1'b0),
+        .m_axi_awregion(NLW_U0_m_axi_awregion_UNCONNECTED[3:0]),
+        .m_axi_awsize(NLW_U0_m_axi_awsize_UNCONNECTED[2:0]),
+        .m_axi_awuser(NLW_U0_m_axi_awuser_UNCONNECTED[0]),
+        .m_axi_awvalid(NLW_U0_m_axi_awvalid_UNCONNECTED),
+        .m_axi_bid(1'b0),
+        .m_axi_bready(NLW_U0_m_axi_bready_UNCONNECTED),
+        .m_axi_bresp({1'b0,1'b0}),
+        .m_axi_buser(1'b0),
+        .m_axi_bvalid(1'b0),
+        .m_axi_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .m_axi_rid(1'b0),
+        .m_axi_rlast(1'b0),
+        .m_axi_rready(NLW_U0_m_axi_rready_UNCONNECTED),
+        .m_axi_rresp({1'b0,1'b0}),
+        .m_axi_ruser(1'b0),
+        .m_axi_rvalid(1'b0),
+        .m_axi_wdata(NLW_U0_m_axi_wdata_UNCONNECTED[63:0]),
+        .m_axi_wid(NLW_U0_m_axi_wid_UNCONNECTED[0]),
+        .m_axi_wlast(NLW_U0_m_axi_wlast_UNCONNECTED),
+        .m_axi_wready(1'b0),
+        .m_axi_wstrb(NLW_U0_m_axi_wstrb_UNCONNECTED[7:0]),
+        .m_axi_wuser(NLW_U0_m_axi_wuser_UNCONNECTED[0]),
+        .m_axi_wvalid(NLW_U0_m_axi_wvalid_UNCONNECTED),
+        .m_axis_tdata(NLW_U0_m_axis_tdata_UNCONNECTED[7:0]),
+        .m_axis_tdest(NLW_U0_m_axis_tdest_UNCONNECTED[0]),
+        .m_axis_tid(NLW_U0_m_axis_tid_UNCONNECTED[0]),
+        .m_axis_tkeep(NLW_U0_m_axis_tkeep_UNCONNECTED[0]),
+        .m_axis_tlast(NLW_U0_m_axis_tlast_UNCONNECTED),
+        .m_axis_tready(1'b0),
+        .m_axis_tstrb(NLW_U0_m_axis_tstrb_UNCONNECTED[0]),
+        .m_axis_tuser(NLW_U0_m_axis_tuser_UNCONNECTED[3:0]),
+        .m_axis_tvalid(NLW_U0_m_axis_tvalid_UNCONNECTED),
+        .overflow(NLW_U0_overflow_UNCONNECTED),
+        .prog_empty(NLW_U0_prog_empty_UNCONNECTED),
+        .prog_empty_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .prog_empty_thresh_assert({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .prog_empty_thresh_negate({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .prog_full(NLW_U0_prog_full_UNCONNECTED),
+        .prog_full_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .prog_full_thresh_assert({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .prog_full_thresh_negate({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .rd_clk(rd_clk),
+        .rd_data_count(rd_data_count),
+        .rd_en(rd_en),
+        .rd_rst(1'b0),
+        .rd_rst_busy(NLW_U0_rd_rst_busy_UNCONNECTED),
+        .rst(rst),
+        .s_aclk(1'b0),
+        .s_aclk_en(1'b0),
+        .s_aresetn(1'b0),
+        .s_axi_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arburst({1'b0,1'b0}),
+        .s_axi_arcache({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arid(1'b0),
+        .s_axi_arlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arlock(1'b0),
+        .s_axi_arprot({1'b0,1'b0,1'b0}),
+        .s_axi_arqos({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arready(NLW_U0_s_axi_arready_UNCONNECTED),
+        .s_axi_arregion({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arsize({1'b0,1'b0,1'b0}),
+        .s_axi_aruser(1'b0),
+        .s_axi_arvalid(1'b0),
+        .s_axi_awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awburst({1'b0,1'b0}),
+        .s_axi_awcache({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awid(1'b0),
+        .s_axi_awlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awlock(1'b0),
+        .s_axi_awprot({1'b0,1'b0,1'b0}),
+        .s_axi_awqos({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awready(NLW_U0_s_axi_awready_UNCONNECTED),
+        .s_axi_awregion({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awsize({1'b0,1'b0,1'b0}),
+        .s_axi_awuser(1'b0),
+        .s_axi_awvalid(1'b0),
+        .s_axi_bid(NLW_U0_s_axi_bid_UNCONNECTED[0]),
+        .s_axi_bready(1'b0),
+        .s_axi_bresp(NLW_U0_s_axi_bresp_UNCONNECTED[1:0]),
+        .s_axi_buser(NLW_U0_s_axi_buser_UNCONNECTED[0]),
+        .s_axi_bvalid(NLW_U0_s_axi_bvalid_UNCONNECTED),
+        .s_axi_rdata(NLW_U0_s_axi_rdata_UNCONNECTED[63:0]),
+        .s_axi_rid(NLW_U0_s_axi_rid_UNCONNECTED[0]),
+        .s_axi_rlast(NLW_U0_s_axi_rlast_UNCONNECTED),
+        .s_axi_rready(1'b0),
+        .s_axi_rresp(NLW_U0_s_axi_rresp_UNCONNECTED[1:0]),
+        .s_axi_ruser(NLW_U0_s_axi_ruser_UNCONNECTED[0]),
+        .s_axi_rvalid(NLW_U0_s_axi_rvalid_UNCONNECTED),
+        .s_axi_wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_wid(1'b0),
+        .s_axi_wlast(1'b0),
+        .s_axi_wready(NLW_U0_s_axi_wready_UNCONNECTED),
+        .s_axi_wstrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_wuser(1'b0),
+        .s_axi_wvalid(1'b0),
+        .s_axis_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_tdest(1'b0),
+        .s_axis_tid(1'b0),
+        .s_axis_tkeep(1'b0),
+        .s_axis_tlast(1'b0),
+        .s_axis_tready(NLW_U0_s_axis_tready_UNCONNECTED),
+        .s_axis_tstrb(1'b0),
+        .s_axis_tuser({1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_tvalid(1'b0),
+        .sbiterr(NLW_U0_sbiterr_UNCONNECTED),
+        .sleep(1'b0),
+        .srst(1'b0),
+        .underflow(NLW_U0_underflow_UNCONNECTED),
+        .valid(NLW_U0_valid_UNCONNECTED),
+        .wr_ack(NLW_U0_wr_ack_UNCONNECTED),
+        .wr_clk(wr_clk),
+        .wr_data_count(NLW_U0_wr_data_count_UNCONNECTED[11:0]),
+        .wr_en(wr_en),
+        .wr_rst(1'b0),
+        .wr_rst_busy(NLW_U0_wr_rst_busy_UNCONNECTED));
+endmodule
+
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) 
-(* INV_DEF_VAL = "1'b1" *) (* RST_ACTIVE_HIGH = "1" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "ASYNC_RST" *) 
+(* INV_DEF_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_cdc_async_rst" *) (* RST_ACTIVE_HIGH = "1" *) 
+(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "ASYNC_RST" *) 
 module zsys_fifo_generator_0_0_xpm_cdc_async_rst
    (src_arst,
     dest_clk,
@@ -92,9 +685,10 @@ module zsys_fifo_generator_0_0_xpm_cdc_async_rst__1
         .Q(arststages_ff[1]));
 endmodule
 
-(* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) (* REG_OUTPUT = "1" *) 
-(* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) (* VERSION = "0" *) 
-(* WIDTH = "12" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "GRAY" *) 
+(* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_gray" *) 
+(* REG_OUTPUT = "1" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
+(* VERSION = "0" *) (* WIDTH = "12" *) (* XPM_MODULE = "TRUE" *) 
+(* xpm_cdc = "GRAY" *) 
 module zsys_fifo_generator_0_0_xpm_cdc_gray
    (src_clk,
     src_in_bin,
@@ -1187,9 +1781,9 @@ module zsys_fifo_generator_0_0_xpm_cdc_gray__1
         .R(1'b0));
 endmodule
 
-(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
-(* xpm_cdc = "SINGLE" *) 
+(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SINGLE" *) 
 module zsys_fifo_generator_0_0_xpm_cdc_single
    (src_clk,
     src_in,
@@ -1299,599 +1893,7 @@ module zsys_fifo_generator_0_0_xpm_cdc_single__1
         .R(1'b0));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "zsys_fifo_generator_0_0,fifo_generator_v13_2_2,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "fifo_generator_v13_2_2,Vivado 2018.2" *) 
-(* NotValidForBitStream *)
-module zsys_fifo_generator_0_0
-   (rst,
-    wr_clk,
-    rd_clk,
-    din,
-    wr_en,
-    rd_en,
-    dout,
-    full,
-    empty,
-    rd_data_count);
-  input rst;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 write_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME write_clk, FREQ_HZ 16000000, PHASE 0.000, CLK_DOMAIN zsys_ROController_0_0_o_wr_fifo_clk" *) input wr_clk;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 read_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME read_clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input rd_clk;
-  (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA" *) input [96:0]din;
-  (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN" *) input wr_en;
-  (* x_interface_info = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_EN" *) input rd_en;
-  (* x_interface_info = "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_DATA" *) output [96:0]dout;
-  (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE FULL" *) output full;
-  (* x_interface_info = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *) output empty;
-  output [11:0]rd_data_count;
-
-  wire [96:0]din;
-  wire [96:0]dout;
-  wire empty;
-  wire full;
-  wire rd_clk;
-  wire [11:0]rd_data_count;
-  wire rd_en;
-  wire rst;
-  wire wr_clk;
-  wire wr_en;
-  wire NLW_U0_almost_empty_UNCONNECTED;
-  wire NLW_U0_almost_full_UNCONNECTED;
-  wire NLW_U0_axi_ar_dbiterr_UNCONNECTED;
-  wire NLW_U0_axi_ar_overflow_UNCONNECTED;
-  wire NLW_U0_axi_ar_prog_empty_UNCONNECTED;
-  wire NLW_U0_axi_ar_prog_full_UNCONNECTED;
-  wire NLW_U0_axi_ar_sbiterr_UNCONNECTED;
-  wire NLW_U0_axi_ar_underflow_UNCONNECTED;
-  wire NLW_U0_axi_aw_dbiterr_UNCONNECTED;
-  wire NLW_U0_axi_aw_overflow_UNCONNECTED;
-  wire NLW_U0_axi_aw_prog_empty_UNCONNECTED;
-  wire NLW_U0_axi_aw_prog_full_UNCONNECTED;
-  wire NLW_U0_axi_aw_sbiterr_UNCONNECTED;
-  wire NLW_U0_axi_aw_underflow_UNCONNECTED;
-  wire NLW_U0_axi_b_dbiterr_UNCONNECTED;
-  wire NLW_U0_axi_b_overflow_UNCONNECTED;
-  wire NLW_U0_axi_b_prog_empty_UNCONNECTED;
-  wire NLW_U0_axi_b_prog_full_UNCONNECTED;
-  wire NLW_U0_axi_b_sbiterr_UNCONNECTED;
-  wire NLW_U0_axi_b_underflow_UNCONNECTED;
-  wire NLW_U0_axi_r_dbiterr_UNCONNECTED;
-  wire NLW_U0_axi_r_overflow_UNCONNECTED;
-  wire NLW_U0_axi_r_prog_empty_UNCONNECTED;
-  wire NLW_U0_axi_r_prog_full_UNCONNECTED;
-  wire NLW_U0_axi_r_sbiterr_UNCONNECTED;
-  wire NLW_U0_axi_r_underflow_UNCONNECTED;
-  wire NLW_U0_axi_w_dbiterr_UNCONNECTED;
-  wire NLW_U0_axi_w_overflow_UNCONNECTED;
-  wire NLW_U0_axi_w_prog_empty_UNCONNECTED;
-  wire NLW_U0_axi_w_prog_full_UNCONNECTED;
-  wire NLW_U0_axi_w_sbiterr_UNCONNECTED;
-  wire NLW_U0_axi_w_underflow_UNCONNECTED;
-  wire NLW_U0_axis_dbiterr_UNCONNECTED;
-  wire NLW_U0_axis_overflow_UNCONNECTED;
-  wire NLW_U0_axis_prog_empty_UNCONNECTED;
-  wire NLW_U0_axis_prog_full_UNCONNECTED;
-  wire NLW_U0_axis_sbiterr_UNCONNECTED;
-  wire NLW_U0_axis_underflow_UNCONNECTED;
-  wire NLW_U0_dbiterr_UNCONNECTED;
-  wire NLW_U0_m_axi_arvalid_UNCONNECTED;
-  wire NLW_U0_m_axi_awvalid_UNCONNECTED;
-  wire NLW_U0_m_axi_bready_UNCONNECTED;
-  wire NLW_U0_m_axi_rready_UNCONNECTED;
-  wire NLW_U0_m_axi_wlast_UNCONNECTED;
-  wire NLW_U0_m_axi_wvalid_UNCONNECTED;
-  wire NLW_U0_m_axis_tlast_UNCONNECTED;
-  wire NLW_U0_m_axis_tvalid_UNCONNECTED;
-  wire NLW_U0_overflow_UNCONNECTED;
-  wire NLW_U0_prog_empty_UNCONNECTED;
-  wire NLW_U0_prog_full_UNCONNECTED;
-  wire NLW_U0_rd_rst_busy_UNCONNECTED;
-  wire NLW_U0_s_axi_arready_UNCONNECTED;
-  wire NLW_U0_s_axi_awready_UNCONNECTED;
-  wire NLW_U0_s_axi_bvalid_UNCONNECTED;
-  wire NLW_U0_s_axi_rlast_UNCONNECTED;
-  wire NLW_U0_s_axi_rvalid_UNCONNECTED;
-  wire NLW_U0_s_axi_wready_UNCONNECTED;
-  wire NLW_U0_s_axis_tready_UNCONNECTED;
-  wire NLW_U0_sbiterr_UNCONNECTED;
-  wire NLW_U0_underflow_UNCONNECTED;
-  wire NLW_U0_valid_UNCONNECTED;
-  wire NLW_U0_wr_ack_UNCONNECTED;
-  wire NLW_U0_wr_rst_busy_UNCONNECTED;
-  wire [4:0]NLW_U0_axi_ar_data_count_UNCONNECTED;
-  wire [4:0]NLW_U0_axi_ar_rd_data_count_UNCONNECTED;
-  wire [4:0]NLW_U0_axi_ar_wr_data_count_UNCONNECTED;
-  wire [4:0]NLW_U0_axi_aw_data_count_UNCONNECTED;
-  wire [4:0]NLW_U0_axi_aw_rd_data_count_UNCONNECTED;
-  wire [4:0]NLW_U0_axi_aw_wr_data_count_UNCONNECTED;
-  wire [4:0]NLW_U0_axi_b_data_count_UNCONNECTED;
-  wire [4:0]NLW_U0_axi_b_rd_data_count_UNCONNECTED;
-  wire [4:0]NLW_U0_axi_b_wr_data_count_UNCONNECTED;
-  wire [10:0]NLW_U0_axi_r_data_count_UNCONNECTED;
-  wire [10:0]NLW_U0_axi_r_rd_data_count_UNCONNECTED;
-  wire [10:0]NLW_U0_axi_r_wr_data_count_UNCONNECTED;
-  wire [10:0]NLW_U0_axi_w_data_count_UNCONNECTED;
-  wire [10:0]NLW_U0_axi_w_rd_data_count_UNCONNECTED;
-  wire [10:0]NLW_U0_axi_w_wr_data_count_UNCONNECTED;
-  wire [10:0]NLW_U0_axis_data_count_UNCONNECTED;
-  wire [10:0]NLW_U0_axis_rd_data_count_UNCONNECTED;
-  wire [10:0]NLW_U0_axis_wr_data_count_UNCONNECTED;
-  wire [11:0]NLW_U0_data_count_UNCONNECTED;
-  wire [31:0]NLW_U0_m_axi_araddr_UNCONNECTED;
-  wire [1:0]NLW_U0_m_axi_arburst_UNCONNECTED;
-  wire [3:0]NLW_U0_m_axi_arcache_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axi_arid_UNCONNECTED;
-  wire [7:0]NLW_U0_m_axi_arlen_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axi_arlock_UNCONNECTED;
-  wire [2:0]NLW_U0_m_axi_arprot_UNCONNECTED;
-  wire [3:0]NLW_U0_m_axi_arqos_UNCONNECTED;
-  wire [3:0]NLW_U0_m_axi_arregion_UNCONNECTED;
-  wire [2:0]NLW_U0_m_axi_arsize_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axi_aruser_UNCONNECTED;
-  wire [31:0]NLW_U0_m_axi_awaddr_UNCONNECTED;
-  wire [1:0]NLW_U0_m_axi_awburst_UNCONNECTED;
-  wire [3:0]NLW_U0_m_axi_awcache_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axi_awid_UNCONNECTED;
-  wire [7:0]NLW_U0_m_axi_awlen_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axi_awlock_UNCONNECTED;
-  wire [2:0]NLW_U0_m_axi_awprot_UNCONNECTED;
-  wire [3:0]NLW_U0_m_axi_awqos_UNCONNECTED;
-  wire [3:0]NLW_U0_m_axi_awregion_UNCONNECTED;
-  wire [2:0]NLW_U0_m_axi_awsize_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axi_awuser_UNCONNECTED;
-  wire [63:0]NLW_U0_m_axi_wdata_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axi_wid_UNCONNECTED;
-  wire [7:0]NLW_U0_m_axi_wstrb_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axi_wuser_UNCONNECTED;
-  wire [7:0]NLW_U0_m_axis_tdata_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axis_tdest_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axis_tid_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axis_tkeep_UNCONNECTED;
-  wire [0:0]NLW_U0_m_axis_tstrb_UNCONNECTED;
-  wire [3:0]NLW_U0_m_axis_tuser_UNCONNECTED;
-  wire [0:0]NLW_U0_s_axi_bid_UNCONNECTED;
-  wire [1:0]NLW_U0_s_axi_bresp_UNCONNECTED;
-  wire [0:0]NLW_U0_s_axi_buser_UNCONNECTED;
-  wire [63:0]NLW_U0_s_axi_rdata_UNCONNECTED;
-  wire [0:0]NLW_U0_s_axi_rid_UNCONNECTED;
-  wire [1:0]NLW_U0_s_axi_rresp_UNCONNECTED;
-  wire [0:0]NLW_U0_s_axi_ruser_UNCONNECTED;
-  wire [11:0]NLW_U0_wr_data_count_UNCONNECTED;
-
-  (* C_ADD_NGC_CONSTRAINT = "0" *) 
-  (* C_APPLICATION_TYPE_AXIS = "0" *) 
-  (* C_APPLICATION_TYPE_RACH = "0" *) 
-  (* C_APPLICATION_TYPE_RDCH = "0" *) 
-  (* C_APPLICATION_TYPE_WACH = "0" *) 
-  (* C_APPLICATION_TYPE_WDCH = "0" *) 
-  (* C_APPLICATION_TYPE_WRCH = "0" *) 
-  (* C_AXIS_TDATA_WIDTH = "8" *) 
-  (* C_AXIS_TDEST_WIDTH = "1" *) 
-  (* C_AXIS_TID_WIDTH = "1" *) 
-  (* C_AXIS_TKEEP_WIDTH = "1" *) 
-  (* C_AXIS_TSTRB_WIDTH = "1" *) 
-  (* C_AXIS_TUSER_WIDTH = "4" *) 
-  (* C_AXIS_TYPE = "0" *) 
-  (* C_AXI_ADDR_WIDTH = "32" *) 
-  (* C_AXI_ARUSER_WIDTH = "1" *) 
-  (* C_AXI_AWUSER_WIDTH = "1" *) 
-  (* C_AXI_BUSER_WIDTH = "1" *) 
-  (* C_AXI_DATA_WIDTH = "64" *) 
-  (* C_AXI_ID_WIDTH = "1" *) 
-  (* C_AXI_LEN_WIDTH = "8" *) 
-  (* C_AXI_LOCK_WIDTH = "1" *) 
-  (* C_AXI_RUSER_WIDTH = "1" *) 
-  (* C_AXI_TYPE = "1" *) 
-  (* C_AXI_WUSER_WIDTH = "1" *) 
-  (* C_COMMON_CLOCK = "0" *) 
-  (* C_COUNT_TYPE = "0" *) 
-  (* C_DATA_COUNT_WIDTH = "12" *) 
-  (* C_DEFAULT_VALUE = "BlankString" *) 
-  (* C_DIN_WIDTH = "97" *) 
-  (* C_DIN_WIDTH_AXIS = "1" *) 
-  (* C_DIN_WIDTH_RACH = "32" *) 
-  (* C_DIN_WIDTH_RDCH = "64" *) 
-  (* C_DIN_WIDTH_WACH = "1" *) 
-  (* C_DIN_WIDTH_WDCH = "64" *) 
-  (* C_DIN_WIDTH_WRCH = "2" *) 
-  (* C_DOUT_RST_VAL = "0" *) 
-  (* C_DOUT_WIDTH = "97" *) 
-  (* C_ENABLE_RLOCS = "0" *) 
-  (* C_ENABLE_RST_SYNC = "1" *) 
-  (* C_EN_SAFETY_CKT = "0" *) 
-  (* C_ERROR_INJECTION_TYPE = "0" *) 
-  (* C_ERROR_INJECTION_TYPE_AXIS = "0" *) 
-  (* C_ERROR_INJECTION_TYPE_RACH = "0" *) 
-  (* C_ERROR_INJECTION_TYPE_RDCH = "0" *) 
-  (* C_ERROR_INJECTION_TYPE_WACH = "0" *) 
-  (* C_ERROR_INJECTION_TYPE_WDCH = "0" *) 
-  (* C_ERROR_INJECTION_TYPE_WRCH = "0" *) 
-  (* C_FAMILY = "zynq" *) 
-  (* C_FULL_FLAGS_RST_VAL = "1" *) 
-  (* C_HAS_ALMOST_EMPTY = "0" *) 
-  (* C_HAS_ALMOST_FULL = "0" *) 
-  (* C_HAS_AXIS_TDATA = "1" *) 
-  (* C_HAS_AXIS_TDEST = "0" *) 
-  (* C_HAS_AXIS_TID = "0" *) 
-  (* C_HAS_AXIS_TKEEP = "0" *) 
-  (* C_HAS_AXIS_TLAST = "0" *) 
-  (* C_HAS_AXIS_TREADY = "1" *) 
-  (* C_HAS_AXIS_TSTRB = "0" *) 
-  (* C_HAS_AXIS_TUSER = "1" *) 
-  (* C_HAS_AXI_ARUSER = "0" *) 
-  (* C_HAS_AXI_AWUSER = "0" *) 
-  (* C_HAS_AXI_BUSER = "0" *) 
-  (* C_HAS_AXI_ID = "0" *) 
-  (* C_HAS_AXI_RD_CHANNEL = "1" *) 
-  (* C_HAS_AXI_RUSER = "0" *) 
-  (* C_HAS_AXI_WR_CHANNEL = "1" *) 
-  (* C_HAS_AXI_WUSER = "0" *) 
-  (* C_HAS_BACKUP = "0" *) 
-  (* C_HAS_DATA_COUNT = "0" *) 
-  (* C_HAS_DATA_COUNTS_AXIS = "0" *) 
-  (* C_HAS_DATA_COUNTS_RACH = "0" *) 
-  (* C_HAS_DATA_COUNTS_RDCH = "0" *) 
-  (* C_HAS_DATA_COUNTS_WACH = "0" *) 
-  (* C_HAS_DATA_COUNTS_WDCH = "0" *) 
-  (* C_HAS_DATA_COUNTS_WRCH = "0" *) 
-  (* C_HAS_INT_CLK = "0" *) 
-  (* C_HAS_MASTER_CE = "0" *) 
-  (* C_HAS_MEMINIT_FILE = "0" *) 
-  (* C_HAS_OVERFLOW = "0" *) 
-  (* C_HAS_PROG_FLAGS_AXIS = "0" *) 
-  (* C_HAS_PROG_FLAGS_RACH = "0" *) 
-  (* C_HAS_PROG_FLAGS_RDCH = "0" *) 
-  (* C_HAS_PROG_FLAGS_WACH = "0" *) 
-  (* C_HAS_PROG_FLAGS_WDCH = "0" *) 
-  (* C_HAS_PROG_FLAGS_WRCH = "0" *) 
-  (* C_HAS_RD_DATA_COUNT = "1" *) 
-  (* C_HAS_RD_RST = "0" *) 
-  (* C_HAS_RST = "1" *) 
-  (* C_HAS_SLAVE_CE = "0" *) 
-  (* C_HAS_SRST = "0" *) 
-  (* C_HAS_UNDERFLOW = "0" *) 
-  (* C_HAS_VALID = "0" *) 
-  (* C_HAS_WR_ACK = "0" *) 
-  (* C_HAS_WR_DATA_COUNT = "0" *) 
-  (* C_HAS_WR_RST = "0" *) 
-  (* C_IMPLEMENTATION_TYPE = "2" *) 
-  (* C_IMPLEMENTATION_TYPE_AXIS = "1" *) 
-  (* C_IMPLEMENTATION_TYPE_RACH = "1" *) 
-  (* C_IMPLEMENTATION_TYPE_RDCH = "1" *) 
-  (* C_IMPLEMENTATION_TYPE_WACH = "1" *) 
-  (* C_IMPLEMENTATION_TYPE_WDCH = "1" *) 
-  (* C_IMPLEMENTATION_TYPE_WRCH = "1" *) 
-  (* C_INIT_WR_PNTR_VAL = "0" *) 
-  (* C_INTERFACE_TYPE = "0" *) 
-  (* C_MEMORY_TYPE = "1" *) 
-  (* C_MIF_FILE_NAME = "BlankString" *) 
-  (* C_MSGON_VAL = "1" *) 
-  (* C_OPTIMIZATION_MODE = "0" *) 
-  (* C_OVERFLOW_LOW = "0" *) 
-  (* C_POWER_SAVING_MODE = "0" *) 
-  (* C_PRELOAD_LATENCY = "1" *) 
-  (* C_PRELOAD_REGS = "0" *) 
-  (* C_PRIM_FIFO_TYPE = "4kx9" *) 
-  (* C_PRIM_FIFO_TYPE_AXIS = "1kx18" *) 
-  (* C_PRIM_FIFO_TYPE_RACH = "512x36" *) 
-  (* C_PRIM_FIFO_TYPE_RDCH = "1kx36" *) 
-  (* C_PRIM_FIFO_TYPE_WACH = "512x36" *) 
-  (* C_PRIM_FIFO_TYPE_WDCH = "1kx36" *) 
-  (* C_PRIM_FIFO_TYPE_WRCH = "512x36" *) 
-  (* C_PROG_EMPTY_THRESH_ASSERT_VAL = "2" *) 
-  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS = "1022" *) 
-  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH = "1022" *) 
-  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH = "1022" *) 
-  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH = "1022" *) 
-  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH = "1022" *) 
-  (* C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH = "1022" *) 
-  (* C_PROG_EMPTY_THRESH_NEGATE_VAL = "3" *) 
-  (* C_PROG_EMPTY_TYPE = "0" *) 
-  (* C_PROG_EMPTY_TYPE_AXIS = "0" *) 
-  (* C_PROG_EMPTY_TYPE_RACH = "0" *) 
-  (* C_PROG_EMPTY_TYPE_RDCH = "0" *) 
-  (* C_PROG_EMPTY_TYPE_WACH = "0" *) 
-  (* C_PROG_EMPTY_TYPE_WDCH = "0" *) 
-  (* C_PROG_EMPTY_TYPE_WRCH = "0" *) 
-  (* C_PROG_FULL_THRESH_ASSERT_VAL = "4093" *) 
-  (* C_PROG_FULL_THRESH_ASSERT_VAL_AXIS = "1023" *) 
-  (* C_PROG_FULL_THRESH_ASSERT_VAL_RACH = "1023" *) 
-  (* C_PROG_FULL_THRESH_ASSERT_VAL_RDCH = "1023" *) 
-  (* C_PROG_FULL_THRESH_ASSERT_VAL_WACH = "1023" *) 
-  (* C_PROG_FULL_THRESH_ASSERT_VAL_WDCH = "1023" *) 
-  (* C_PROG_FULL_THRESH_ASSERT_VAL_WRCH = "1023" *) 
-  (* C_PROG_FULL_THRESH_NEGATE_VAL = "4092" *) 
-  (* C_PROG_FULL_TYPE = "0" *) 
-  (* C_PROG_FULL_TYPE_AXIS = "0" *) 
-  (* C_PROG_FULL_TYPE_RACH = "0" *) 
-  (* C_PROG_FULL_TYPE_RDCH = "0" *) 
-  (* C_PROG_FULL_TYPE_WACH = "0" *) 
-  (* C_PROG_FULL_TYPE_WDCH = "0" *) 
-  (* C_PROG_FULL_TYPE_WRCH = "0" *) 
-  (* C_RACH_TYPE = "0" *) 
-  (* C_RDCH_TYPE = "0" *) 
-  (* C_RD_DATA_COUNT_WIDTH = "12" *) 
-  (* C_RD_DEPTH = "4096" *) 
-  (* C_RD_FREQ = "1" *) 
-  (* C_RD_PNTR_WIDTH = "12" *) 
-  (* C_REG_SLICE_MODE_AXIS = "0" *) 
-  (* C_REG_SLICE_MODE_RACH = "0" *) 
-  (* C_REG_SLICE_MODE_RDCH = "0" *) 
-  (* C_REG_SLICE_MODE_WACH = "0" *) 
-  (* C_REG_SLICE_MODE_WDCH = "0" *) 
-  (* C_REG_SLICE_MODE_WRCH = "0" *) 
-  (* C_SELECT_XPM = "0" *) 
-  (* C_SYNCHRONIZER_STAGE = "2" *) 
-  (* C_UNDERFLOW_LOW = "0" *) 
-  (* C_USE_COMMON_OVERFLOW = "0" *) 
-  (* C_USE_COMMON_UNDERFLOW = "0" *) 
-  (* C_USE_DEFAULT_SETTINGS = "0" *) 
-  (* C_USE_DOUT_RST = "1" *) 
-  (* C_USE_ECC = "0" *) 
-  (* C_USE_ECC_AXIS = "0" *) 
-  (* C_USE_ECC_RACH = "0" *) 
-  (* C_USE_ECC_RDCH = "0" *) 
-  (* C_USE_ECC_WACH = "0" *) 
-  (* C_USE_ECC_WDCH = "0" *) 
-  (* C_USE_ECC_WRCH = "0" *) 
-  (* C_USE_EMBEDDED_REG = "0" *) 
-  (* C_USE_FIFO16_FLAGS = "0" *) 
-  (* C_USE_FWFT_DATA_COUNT = "0" *) 
-  (* C_USE_PIPELINE_REG = "0" *) 
-  (* C_VALID_LOW = "0" *) 
-  (* C_WACH_TYPE = "0" *) 
-  (* C_WDCH_TYPE = "0" *) 
-  (* C_WRCH_TYPE = "0" *) 
-  (* C_WR_ACK_LOW = "0" *) 
-  (* C_WR_DATA_COUNT_WIDTH = "12" *) 
-  (* C_WR_DEPTH = "4096" *) 
-  (* C_WR_DEPTH_AXIS = "1024" *) 
-  (* C_WR_DEPTH_RACH = "16" *) 
-  (* C_WR_DEPTH_RDCH = "1024" *) 
-  (* C_WR_DEPTH_WACH = "16" *) 
-  (* C_WR_DEPTH_WDCH = "1024" *) 
-  (* C_WR_DEPTH_WRCH = "16" *) 
-  (* C_WR_FREQ = "1" *) 
-  (* C_WR_PNTR_WIDTH = "12" *) 
-  (* C_WR_PNTR_WIDTH_AXIS = "10" *) 
-  (* C_WR_PNTR_WIDTH_RACH = "4" *) 
-  (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
-  (* C_WR_PNTR_WIDTH_WACH = "4" *) 
-  (* C_WR_PNTR_WIDTH_WDCH = "10" *) 
-  (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-  (* C_WR_RESPONSE_LATENCY = "1" *) 
-  zsys_fifo_generator_0_0_fifo_generator_v13_2_2 U0
-       (.almost_empty(NLW_U0_almost_empty_UNCONNECTED),
-        .almost_full(NLW_U0_almost_full_UNCONNECTED),
-        .axi_ar_data_count(NLW_U0_axi_ar_data_count_UNCONNECTED[4:0]),
-        .axi_ar_dbiterr(NLW_U0_axi_ar_dbiterr_UNCONNECTED),
-        .axi_ar_injectdbiterr(1'b0),
-        .axi_ar_injectsbiterr(1'b0),
-        .axi_ar_overflow(NLW_U0_axi_ar_overflow_UNCONNECTED),
-        .axi_ar_prog_empty(NLW_U0_axi_ar_prog_empty_UNCONNECTED),
-        .axi_ar_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0}),
-        .axi_ar_prog_full(NLW_U0_axi_ar_prog_full_UNCONNECTED),
-        .axi_ar_prog_full_thresh({1'b0,1'b0,1'b0,1'b0}),
-        .axi_ar_rd_data_count(NLW_U0_axi_ar_rd_data_count_UNCONNECTED[4:0]),
-        .axi_ar_sbiterr(NLW_U0_axi_ar_sbiterr_UNCONNECTED),
-        .axi_ar_underflow(NLW_U0_axi_ar_underflow_UNCONNECTED),
-        .axi_ar_wr_data_count(NLW_U0_axi_ar_wr_data_count_UNCONNECTED[4:0]),
-        .axi_aw_data_count(NLW_U0_axi_aw_data_count_UNCONNECTED[4:0]),
-        .axi_aw_dbiterr(NLW_U0_axi_aw_dbiterr_UNCONNECTED),
-        .axi_aw_injectdbiterr(1'b0),
-        .axi_aw_injectsbiterr(1'b0),
-        .axi_aw_overflow(NLW_U0_axi_aw_overflow_UNCONNECTED),
-        .axi_aw_prog_empty(NLW_U0_axi_aw_prog_empty_UNCONNECTED),
-        .axi_aw_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0}),
-        .axi_aw_prog_full(NLW_U0_axi_aw_prog_full_UNCONNECTED),
-        .axi_aw_prog_full_thresh({1'b0,1'b0,1'b0,1'b0}),
-        .axi_aw_rd_data_count(NLW_U0_axi_aw_rd_data_count_UNCONNECTED[4:0]),
-        .axi_aw_sbiterr(NLW_U0_axi_aw_sbiterr_UNCONNECTED),
-        .axi_aw_underflow(NLW_U0_axi_aw_underflow_UNCONNECTED),
-        .axi_aw_wr_data_count(NLW_U0_axi_aw_wr_data_count_UNCONNECTED[4:0]),
-        .axi_b_data_count(NLW_U0_axi_b_data_count_UNCONNECTED[4:0]),
-        .axi_b_dbiterr(NLW_U0_axi_b_dbiterr_UNCONNECTED),
-        .axi_b_injectdbiterr(1'b0),
-        .axi_b_injectsbiterr(1'b0),
-        .axi_b_overflow(NLW_U0_axi_b_overflow_UNCONNECTED),
-        .axi_b_prog_empty(NLW_U0_axi_b_prog_empty_UNCONNECTED),
-        .axi_b_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0}),
-        .axi_b_prog_full(NLW_U0_axi_b_prog_full_UNCONNECTED),
-        .axi_b_prog_full_thresh({1'b0,1'b0,1'b0,1'b0}),
-        .axi_b_rd_data_count(NLW_U0_axi_b_rd_data_count_UNCONNECTED[4:0]),
-        .axi_b_sbiterr(NLW_U0_axi_b_sbiterr_UNCONNECTED),
-        .axi_b_underflow(NLW_U0_axi_b_underflow_UNCONNECTED),
-        .axi_b_wr_data_count(NLW_U0_axi_b_wr_data_count_UNCONNECTED[4:0]),
-        .axi_r_data_count(NLW_U0_axi_r_data_count_UNCONNECTED[10:0]),
-        .axi_r_dbiterr(NLW_U0_axi_r_dbiterr_UNCONNECTED),
-        .axi_r_injectdbiterr(1'b0),
-        .axi_r_injectsbiterr(1'b0),
-        .axi_r_overflow(NLW_U0_axi_r_overflow_UNCONNECTED),
-        .axi_r_prog_empty(NLW_U0_axi_r_prog_empty_UNCONNECTED),
-        .axi_r_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .axi_r_prog_full(NLW_U0_axi_r_prog_full_UNCONNECTED),
-        .axi_r_prog_full_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .axi_r_rd_data_count(NLW_U0_axi_r_rd_data_count_UNCONNECTED[10:0]),
-        .axi_r_sbiterr(NLW_U0_axi_r_sbiterr_UNCONNECTED),
-        .axi_r_underflow(NLW_U0_axi_r_underflow_UNCONNECTED),
-        .axi_r_wr_data_count(NLW_U0_axi_r_wr_data_count_UNCONNECTED[10:0]),
-        .axi_w_data_count(NLW_U0_axi_w_data_count_UNCONNECTED[10:0]),
-        .axi_w_dbiterr(NLW_U0_axi_w_dbiterr_UNCONNECTED),
-        .axi_w_injectdbiterr(1'b0),
-        .axi_w_injectsbiterr(1'b0),
-        .axi_w_overflow(NLW_U0_axi_w_overflow_UNCONNECTED),
-        .axi_w_prog_empty(NLW_U0_axi_w_prog_empty_UNCONNECTED),
-        .axi_w_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .axi_w_prog_full(NLW_U0_axi_w_prog_full_UNCONNECTED),
-        .axi_w_prog_full_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .axi_w_rd_data_count(NLW_U0_axi_w_rd_data_count_UNCONNECTED[10:0]),
-        .axi_w_sbiterr(NLW_U0_axi_w_sbiterr_UNCONNECTED),
-        .axi_w_underflow(NLW_U0_axi_w_underflow_UNCONNECTED),
-        .axi_w_wr_data_count(NLW_U0_axi_w_wr_data_count_UNCONNECTED[10:0]),
-        .axis_data_count(NLW_U0_axis_data_count_UNCONNECTED[10:0]),
-        .axis_dbiterr(NLW_U0_axis_dbiterr_UNCONNECTED),
-        .axis_injectdbiterr(1'b0),
-        .axis_injectsbiterr(1'b0),
-        .axis_overflow(NLW_U0_axis_overflow_UNCONNECTED),
-        .axis_prog_empty(NLW_U0_axis_prog_empty_UNCONNECTED),
-        .axis_prog_empty_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .axis_prog_full(NLW_U0_axis_prog_full_UNCONNECTED),
-        .axis_prog_full_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .axis_rd_data_count(NLW_U0_axis_rd_data_count_UNCONNECTED[10:0]),
-        .axis_sbiterr(NLW_U0_axis_sbiterr_UNCONNECTED),
-        .axis_underflow(NLW_U0_axis_underflow_UNCONNECTED),
-        .axis_wr_data_count(NLW_U0_axis_wr_data_count_UNCONNECTED[10:0]),
-        .backup(1'b0),
-        .backup_marker(1'b0),
-        .clk(1'b0),
-        .data_count(NLW_U0_data_count_UNCONNECTED[11:0]),
-        .dbiterr(NLW_U0_dbiterr_UNCONNECTED),
-        .din(din),
-        .dout(dout),
-        .empty(empty),
-        .full(full),
-        .injectdbiterr(1'b0),
-        .injectsbiterr(1'b0),
-        .int_clk(1'b0),
-        .m_aclk(1'b0),
-        .m_aclk_en(1'b0),
-        .m_axi_araddr(NLW_U0_m_axi_araddr_UNCONNECTED[31:0]),
-        .m_axi_arburst(NLW_U0_m_axi_arburst_UNCONNECTED[1:0]),
-        .m_axi_arcache(NLW_U0_m_axi_arcache_UNCONNECTED[3:0]),
-        .m_axi_arid(NLW_U0_m_axi_arid_UNCONNECTED[0]),
-        .m_axi_arlen(NLW_U0_m_axi_arlen_UNCONNECTED[7:0]),
-        .m_axi_arlock(NLW_U0_m_axi_arlock_UNCONNECTED[0]),
-        .m_axi_arprot(NLW_U0_m_axi_arprot_UNCONNECTED[2:0]),
-        .m_axi_arqos(NLW_U0_m_axi_arqos_UNCONNECTED[3:0]),
-        .m_axi_arready(1'b0),
-        .m_axi_arregion(NLW_U0_m_axi_arregion_UNCONNECTED[3:0]),
-        .m_axi_arsize(NLW_U0_m_axi_arsize_UNCONNECTED[2:0]),
-        .m_axi_aruser(NLW_U0_m_axi_aruser_UNCONNECTED[0]),
-        .m_axi_arvalid(NLW_U0_m_axi_arvalid_UNCONNECTED),
-        .m_axi_awaddr(NLW_U0_m_axi_awaddr_UNCONNECTED[31:0]),
-        .m_axi_awburst(NLW_U0_m_axi_awburst_UNCONNECTED[1:0]),
-        .m_axi_awcache(NLW_U0_m_axi_awcache_UNCONNECTED[3:0]),
-        .m_axi_awid(NLW_U0_m_axi_awid_UNCONNECTED[0]),
-        .m_axi_awlen(NLW_U0_m_axi_awlen_UNCONNECTED[7:0]),
-        .m_axi_awlock(NLW_U0_m_axi_awlock_UNCONNECTED[0]),
-        .m_axi_awprot(NLW_U0_m_axi_awprot_UNCONNECTED[2:0]),
-        .m_axi_awqos(NLW_U0_m_axi_awqos_UNCONNECTED[3:0]),
-        .m_axi_awready(1'b0),
-        .m_axi_awregion(NLW_U0_m_axi_awregion_UNCONNECTED[3:0]),
-        .m_axi_awsize(NLW_U0_m_axi_awsize_UNCONNECTED[2:0]),
-        .m_axi_awuser(NLW_U0_m_axi_awuser_UNCONNECTED[0]),
-        .m_axi_awvalid(NLW_U0_m_axi_awvalid_UNCONNECTED),
-        .m_axi_bid(1'b0),
-        .m_axi_bready(NLW_U0_m_axi_bready_UNCONNECTED),
-        .m_axi_bresp({1'b0,1'b0}),
-        .m_axi_buser(1'b0),
-        .m_axi_bvalid(1'b0),
-        .m_axi_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .m_axi_rid(1'b0),
-        .m_axi_rlast(1'b0),
-        .m_axi_rready(NLW_U0_m_axi_rready_UNCONNECTED),
-        .m_axi_rresp({1'b0,1'b0}),
-        .m_axi_ruser(1'b0),
-        .m_axi_rvalid(1'b0),
-        .m_axi_wdata(NLW_U0_m_axi_wdata_UNCONNECTED[63:0]),
-        .m_axi_wid(NLW_U0_m_axi_wid_UNCONNECTED[0]),
-        .m_axi_wlast(NLW_U0_m_axi_wlast_UNCONNECTED),
-        .m_axi_wready(1'b0),
-        .m_axi_wstrb(NLW_U0_m_axi_wstrb_UNCONNECTED[7:0]),
-        .m_axi_wuser(NLW_U0_m_axi_wuser_UNCONNECTED[0]),
-        .m_axi_wvalid(NLW_U0_m_axi_wvalid_UNCONNECTED),
-        .m_axis_tdata(NLW_U0_m_axis_tdata_UNCONNECTED[7:0]),
-        .m_axis_tdest(NLW_U0_m_axis_tdest_UNCONNECTED[0]),
-        .m_axis_tid(NLW_U0_m_axis_tid_UNCONNECTED[0]),
-        .m_axis_tkeep(NLW_U0_m_axis_tkeep_UNCONNECTED[0]),
-        .m_axis_tlast(NLW_U0_m_axis_tlast_UNCONNECTED),
-        .m_axis_tready(1'b0),
-        .m_axis_tstrb(NLW_U0_m_axis_tstrb_UNCONNECTED[0]),
-        .m_axis_tuser(NLW_U0_m_axis_tuser_UNCONNECTED[3:0]),
-        .m_axis_tvalid(NLW_U0_m_axis_tvalid_UNCONNECTED),
-        .overflow(NLW_U0_overflow_UNCONNECTED),
-        .prog_empty(NLW_U0_prog_empty_UNCONNECTED),
-        .prog_empty_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .prog_empty_thresh_assert({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .prog_empty_thresh_negate({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .prog_full(NLW_U0_prog_full_UNCONNECTED),
-        .prog_full_thresh({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .prog_full_thresh_assert({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .prog_full_thresh_negate({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .rd_clk(rd_clk),
-        .rd_data_count(rd_data_count),
-        .rd_en(rd_en),
-        .rd_rst(1'b0),
-        .rd_rst_busy(NLW_U0_rd_rst_busy_UNCONNECTED),
-        .rst(rst),
-        .s_aclk(1'b0),
-        .s_aclk_en(1'b0),
-        .s_aresetn(1'b0),
-        .s_axi_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_arburst({1'b0,1'b0}),
-        .s_axi_arcache({1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_arid(1'b0),
-        .s_axi_arlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_arlock(1'b0),
-        .s_axi_arprot({1'b0,1'b0,1'b0}),
-        .s_axi_arqos({1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_arready(NLW_U0_s_axi_arready_UNCONNECTED),
-        .s_axi_arregion({1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_arsize({1'b0,1'b0,1'b0}),
-        .s_axi_aruser(1'b0),
-        .s_axi_arvalid(1'b0),
-        .s_axi_awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awburst({1'b0,1'b0}),
-        .s_axi_awcache({1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awid(1'b0),
-        .s_axi_awlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awlock(1'b0),
-        .s_axi_awprot({1'b0,1'b0,1'b0}),
-        .s_axi_awqos({1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awready(NLW_U0_s_axi_awready_UNCONNECTED),
-        .s_axi_awregion({1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awsize({1'b0,1'b0,1'b0}),
-        .s_axi_awuser(1'b0),
-        .s_axi_awvalid(1'b0),
-        .s_axi_bid(NLW_U0_s_axi_bid_UNCONNECTED[0]),
-        .s_axi_bready(1'b0),
-        .s_axi_bresp(NLW_U0_s_axi_bresp_UNCONNECTED[1:0]),
-        .s_axi_buser(NLW_U0_s_axi_buser_UNCONNECTED[0]),
-        .s_axi_bvalid(NLW_U0_s_axi_bvalid_UNCONNECTED),
-        .s_axi_rdata(NLW_U0_s_axi_rdata_UNCONNECTED[63:0]),
-        .s_axi_rid(NLW_U0_s_axi_rid_UNCONNECTED[0]),
-        .s_axi_rlast(NLW_U0_s_axi_rlast_UNCONNECTED),
-        .s_axi_rready(1'b0),
-        .s_axi_rresp(NLW_U0_s_axi_rresp_UNCONNECTED[1:0]),
-        .s_axi_ruser(NLW_U0_s_axi_ruser_UNCONNECTED[0]),
-        .s_axi_rvalid(NLW_U0_s_axi_rvalid_UNCONNECTED),
-        .s_axi_wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_wid(1'b0),
-        .s_axi_wlast(1'b0),
-        .s_axi_wready(NLW_U0_s_axi_wready_UNCONNECTED),
-        .s_axi_wstrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_wuser(1'b0),
-        .s_axi_wvalid(1'b0),
-        .s_axis_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_tdest(1'b0),
-        .s_axis_tid(1'b0),
-        .s_axis_tkeep(1'b0),
-        .s_axis_tlast(1'b0),
-        .s_axis_tready(NLW_U0_s_axis_tready_UNCONNECTED),
-        .s_axis_tstrb(1'b0),
-        .s_axis_tuser({1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_tvalid(1'b0),
-        .sbiterr(NLW_U0_sbiterr_UNCONNECTED),
-        .sleep(1'b0),
-        .srst(1'b0),
-        .underflow(NLW_U0_underflow_UNCONNECTED),
-        .valid(NLW_U0_valid_UNCONNECTED),
-        .wr_ack(NLW_U0_wr_ack_UNCONNECTED),
-        .wr_clk(wr_clk),
-        .wr_data_count(NLW_U0_wr_data_count_UNCONNECTED[11:0]),
-        .wr_en(wr_en),
-        .wr_rst(1'b0),
-        .wr_rst_busy(NLW_U0_wr_rst_busy_UNCONNECTED));
-endmodule
-
+(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module zsys_fifo_generator_0_0_blk_mem_gen_generic_cstr
    (dout,
     wr_clk,
@@ -2053,6 +2055,7 @@ module zsys_fifo_generator_0_0_blk_mem_gen_generic_cstr
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module zsys_fifo_generator_0_0_blk_mem_gen_prim_width
    (dout,
     wr_clk,
@@ -2565,6 +2568,7 @@ module zsys_fifo_generator_0_0_blk_mem_gen_prim_width__parameterized9
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module zsys_fifo_generator_0_0_blk_mem_gen_prim_wrapper
    (dout,
     wr_clk,
@@ -5379,6 +5383,7 @@ module zsys_fifo_generator_0_0_blk_mem_gen_prim_wrapper__parameterized9
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module zsys_fifo_generator_0_0_blk_mem_gen_top
    (dout,
     wr_clk,
@@ -5433,6 +5438,7 @@ module zsys_fifo_generator_0_0_blk_mem_gen_top
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) 
 module zsys_fifo_generator_0_0_blk_mem_gen_v8_4_1
    (dout,
     wr_clk,
@@ -5487,6 +5493,7 @@ module zsys_fifo_generator_0_0_blk_mem_gen_v8_4_1
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
 module zsys_fifo_generator_0_0_blk_mem_gen_v8_4_1_synth
    (dout,
     wr_clk,
@@ -5541,6 +5548,7 @@ module zsys_fifo_generator_0_0_blk_mem_gen_v8_4_1_synth
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "clk_x_pntrs" *) 
 module zsys_fifo_generator_0_0_clk_x_pntrs
    (S,
     WR_PNTR_RD,
@@ -5673,6 +5681,7 @@ module zsys_fifo_generator_0_0_clk_x_pntrs
         .src_in_bin(\gic0.gc0.count_d2_reg[11] ));
 endmodule
 
+(* ORIG_REF_NAME = "compare" *) 
 module zsys_fifo_generator_0_0_compare
    (comp1,
     RD_PNTR_WR,
@@ -6040,6 +6049,7 @@ module zsys_fifo_generator_0_0_compare_2
         .O(v1_reg[5]));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module zsys_fifo_generator_0_0_fifo_generator_ramfifo
    (wr_rst_busy,
     AR,
@@ -6165,6 +6175,7 @@ module zsys_fifo_generator_0_0_fifo_generator_ramfifo
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module zsys_fifo_generator_0_0_fifo_generator_top
    (wr_rst_busy,
     \syncstages_ff_reg[0] ,
@@ -6286,7 +6297,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "12" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "10" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_2_2" *) 
 module zsys_fifo_generator_0_0_fifo_generator_v13_2_2
    (backup,
     backup_marker,
@@ -7302,6 +7313,7 @@ module zsys_fifo_generator_0_0_fifo_generator_v13_2_2
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_v13_2_2_synth" *) 
 module zsys_fifo_generator_0_0_fifo_generator_v13_2_2_synth
    (wr_rst_busy,
     AR,
@@ -7356,6 +7368,7 @@ module zsys_fifo_generator_0_0_fifo_generator_v13_2_2_synth
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "memory" *) 
 module zsys_fifo_generator_0_0_memory
    (dout,
     wr_clk,
@@ -7421,6 +7434,7 @@ module zsys_fifo_generator_0_0_memory
         .O(tmp_ram_rd_en__0));
 endmodule
 
+(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module zsys_fifo_generator_0_0_rd_bin_cntr
    (D,
     Q,
@@ -7684,6 +7698,7 @@ module zsys_fifo_generator_0_0_rd_bin_cntr
         .Q(D[9]));
 endmodule
 
+(* ORIG_REF_NAME = "rd_dc_as" *) 
 module zsys_fifo_generator_0_0_rd_dc_as
    (rd_data_count,
     WR_PNTR_RD,
@@ -7840,6 +7855,7 @@ module zsys_fifo_generator_0_0_rd_dc_as
         .Q(rd_data_count[9]));
 endmodule
 
+(* ORIG_REF_NAME = "rd_logic" *) 
 module zsys_fifo_generator_0_0_rd_logic
    (empty,
     out,
@@ -7904,6 +7920,7 @@ module zsys_fifo_generator_0_0_rd_logic
         .rd_clk(rd_clk));
 endmodule
 
+(* ORIG_REF_NAME = "rd_status_flags_as" *) 
 module zsys_fifo_generator_0_0_rd_status_flags_as
    (empty,
     out,
@@ -7985,6 +8002,7 @@ module zsys_fifo_generator_0_0_rd_status_flags_as
         .Q(ram_empty_i));
 endmodule
 
+(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
 module zsys_fifo_generator_0_0_reset_blk_ramfifo
    (AR,
     \syncstages_ff_reg[0] ,
@@ -8208,6 +8226,7 @@ module zsys_fifo_generator_0_0_reset_blk_ramfifo
         .src_arst(rst));
 endmodule
 
+(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module zsys_fifo_generator_0_0_wr_bin_cntr
    (D,
     Q,
@@ -8570,6 +8589,7 @@ module zsys_fifo_generator_0_0_wr_bin_cntr
         .Q(D[9]));
 endmodule
 
+(* ORIG_REF_NAME = "wr_logic" *) 
 module zsys_fifo_generator_0_0_wr_logic
    (full,
     WEA,
@@ -8635,6 +8655,7 @@ module zsys_fifo_generator_0_0_wr_logic
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "wr_status_flags_as" *) 
 module zsys_fifo_generator_0_0_wr_status_flags_as
    (full,
     p_20_out,

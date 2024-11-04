@@ -84,16 +84,16 @@ ARCHITECTURE zsys_trigger_logic_0_0_arch OF zsys_trigger_logic_0_0 IS
     );
   END COMPONENT trigger_logic;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF zsys_trigger_logic_0_0_arch: ARCHITECTURE IS "trigger_logic,Vivado 2018.2";
+  ATTRIBUTE X_CORE_INFO OF zsys_trigger_logic_0_0_arch: ARCHITECTURE IS "trigger_logic,Vivado 2018.2.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF zsys_trigger_logic_0_0_arch : ARCHITECTURE IS "zsys_trigger_logic_0_0,trigger_logic,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF zsys_trigger_logic_0_0_arch: ARCHITECTURE IS "zsys_trigger_logic_0_0,trigger_logic,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=trigger_logic,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF zsys_trigger_logic_0_0_arch: ARCHITECTURE IS "zsys_trigger_logic_0_0,trigger_logic,{x_ipProduct=Vivado 2018.2.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=trigger_logic,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF zsys_trigger_logic_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF sys_clk: SIGNAL IS "XIL_INTERFACENAME sys_clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF sys_clk: SIGNAL IS "XIL_INTERFACENAME sys_clk, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
   ATTRIBUTE X_INTERFACE_INFO OF sys_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 sys_clk CLK";
 BEGIN
   U0 : trigger_logic

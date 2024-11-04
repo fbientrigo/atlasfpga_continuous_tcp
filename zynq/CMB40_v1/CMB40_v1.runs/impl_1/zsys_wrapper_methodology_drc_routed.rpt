@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-| Date         : Thu Oct 31 12:15:33 2024
+| Date         : Mon Nov  4 01:18:18 2024
 | Host         : lapepuat11 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file zsys_wrapper_methodology_drc_routed.rpt -pb zsys_wrapper_methodology_drc_routed.pb -rpx zsys_wrapper_methodology_drc_routed.rpx
 | Design       : zsys_wrapper
@@ -143,112 +143,112 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X63Y138 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X59Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X61Y140 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X58Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X62Y140 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X58Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X60Y140 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X59Y117 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X63Y136 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X63Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X61Y135 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X62Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X60Y137 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X61Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X61Y137 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X61Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[4] in site SLICE_X62Y137 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[4] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[4] in site SLICE_X60Y117 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[4] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[12] in site SLICE_X68Y138 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[11] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[12] in site SLICE_X56Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[11] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[20] in site SLICE_X68Y137 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[19] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[20] in site SLICE_X56Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[19] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[4] in site SLICE_X68Y139 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[4] in site SLICE_X56Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#13 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[10] in site SLICE_X69Y133 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[9] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[10] in site SLICE_X65Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[9] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#14 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[2] in site SLICE_X69Y134 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[2] in site SLICE_X65Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#15 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/shift_reg_in_reg[0] in site SLICE_X54Y136 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/shift_reg_in_reg[0] in site SLICE_X60Y114 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#16 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X54Y137 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X60Y115 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#17 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X54Y140 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X61Y115 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#18 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X53Y140 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X59Y115 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#19 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_in_transfer_inst/dout_reg1_reg in site SLICE_X98Y138 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_in_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
+The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_in_transfer_inst/dout_reg1_reg in site SLICE_X84Y129 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_in_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#20 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/dout_reg1_reg in site SLICE_X98Y129 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
+The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/dout_reg1_reg in site SLICE_X92Y135 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#21 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_in_transfer_inst/dout_reg1_reg in site SLICE_X100Y136 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_in_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
+The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_in_transfer_inst/dout_reg1_reg in site SLICE_X85Y129 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_in_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#22 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_out_transfer_inst/dout_reg1_reg in site SLICE_X99Y136 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_out_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
+The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_out_transfer_inst/dout_reg1_reg in site SLICE_X83Y128 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_out_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-2#1 Warning
@@ -1205,93 +1205,93 @@ XDCB-4#1 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions ADC_refclk_1_P[0] and ADC_refclk_1_N[0] found on differential ports ADC_refclk_1_P[0] and ADC_refclk_1_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {ADC_refclk_1_P[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_1_1/zsys_util_ds_buf_1_1.xdc (Line: 4)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_1_1/zsys_util_ds_buf_1_1.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {ADC_refclk_1_N[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_1_1/zsys_util_ds_buf_1_1.xdc (Line: 5)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_1_1/zsys_util_ds_buf_1_1.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#2 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions ADC_refclk_2_P[0] and ADC_refclk_2_N[0] found on differential ports ADC_refclk_2_P[0] and ADC_refclk_2_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {ADC_refclk_2_P[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_1/zsys_util_ds_buf_2_1.xdc (Line: 4)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_1/zsys_util_ds_buf_2_1.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {ADC_refclk_2_N[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_1/zsys_util_ds_buf_2_1.xdc (Line: 5)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_1/zsys_util_ds_buf_2_1.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#3 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions ADC_refclk_3_P[0] and ADC_refclk_3_N[0] found on differential ports ADC_refclk_3_P[0] and ADC_refclk_3_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {ADC_refclk_3_P[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_1/zsys_util_ds_buf_4_1.xdc (Line: 4)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_1/zsys_util_ds_buf_4_1.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {ADC_refclk_3_N[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_1/zsys_util_ds_buf_4_1.xdc (Line: 5)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_1/zsys_util_ds_buf_4_1.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#4 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions ADC_refclk_4_P[0] and ADC_refclk_4_N[0] found on differential ports ADC_refclk_4_P[0] and ADC_refclk_4_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {ADC_refclk_4_P[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_2/zsys_util_ds_buf_4_2.xdc (Line: 4)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_2/zsys_util_ds_buf_4_2.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {ADC_refclk_4_N[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_2/zsys_util_ds_buf_4_2.xdc (Line: 5)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_2/zsys_util_ds_buf_4_2.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#5 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions ADC_refclk_5_P[0] and ADC_refclk_5_N[0] found on differential ports ADC_refclk_5_P[0] and ADC_refclk_5_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {ADC_refclk_5_P[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_0/zsys_util_ds_buf_4_0.xdc (Line: 4)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_0/zsys_util_ds_buf_4_0.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {ADC_refclk_5_N[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_0/zsys_util_ds_buf_4_0.xdc (Line: 5)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_0/zsys_util_ds_buf_4_0.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#6 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions CSR_SCLK_P[0] and CSR_SCLK_N[0] found on differential ports CSR_SCLK_P[0] and CSR_SCLK_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {CSR_SCLK_P[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_3_1/zsys_util_ds_buf_3_1.xdc (Line: 4)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_3_1/zsys_util_ds_buf_3_1.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {CSR_SCLK_N[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_3_1/zsys_util_ds_buf_3_1.xdc (Line: 5)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_3_1/zsys_util_ds_buf_3_1.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#7 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions DRS_REFCLK_P[0] and DRS_REFCLK_N[0] found on differential ports DRS_REFCLK_P[0] and DRS_REFCLK_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {DRS_REFCLK_P[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_0/zsys_util_ds_buf_2_0.xdc (Line: 4)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_0/zsys_util_ds_buf_2_0.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {DRS_REFCLK_N[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_0/zsys_util_ds_buf_2_0.xdc (Line: 5)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_0/zsys_util_ds_buf_2_0.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#8 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions Elink_P[0] and Elink_N[0] found on differential ports Elink_P[0] and Elink_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 25.000 [get_ports {Elink_P[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_0/zsys_util_ds_buf_0_0.xdc (Line: 4)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_0/zsys_util_ds_buf_0_0.xdc (Line: 4)
 create_clock -period 25.000 [get_ports {Elink_N[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_0/zsys_util_ds_buf_0_0.xdc (Line: 5)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_0/zsys_util_ds_buf_0_0.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#9 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions Elink_clk_P[0] and Elink_clk_N[0] found on differential ports Elink_clk_P[0] and Elink_clk_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 25.000 [get_ports {Elink_clk_P[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_2/zsys_util_ds_buf_0_2.xdc (Line: 4)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_2/zsys_util_ds_buf_0_2.xdc (Line: 4)
 create_clock -period 25.000 [get_ports {Elink_clk_N[0]}]
-c:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_2/zsys_util_ds_buf_0_2.xdc (Line: 5)
+c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_2/zsys_util_ds_buf_0_2.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option 'objects : [get_pins -hier -filter {NAME =~ */BUFG_inst_ADCLK/O}]' of constraint 'create_generated_clock' uses inefficient query to find pin objects (see constraint position '198' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: C:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc (Line: 26)
+Current XDC: C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc (Line: 26)
 Related violations: <none>
 
 XDCB-5#2 Warning
 Runtime inefficient way to find pin objects  
 The option 'objects : [get_pins -hier -filter {NAME =~ */BUFG_inst_LCLK/O}]' of constraint 'create_generated_clock' uses inefficient query to find pin objects (see constraint position '197' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: C:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc (Line: 25)
+Current XDC: C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc (Line: 25)
 Related violations: <none>
 
 REQP-1959#1 Advisory

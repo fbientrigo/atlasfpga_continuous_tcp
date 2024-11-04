@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-// Date        : Fri Oct 18 12:47:01 2024
-// Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+// Date        : Mon Nov  4 01:09:59 2024
+// Host        : lapepuat11 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/zsys_system_ila_2_0_sim_netlist.v
+//               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_2_0/zsys_system_ila_2_0_sim_netlist.v
 // Design      : zsys_system_ila_2_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "zsys_system_ila_2_0,bd_34e9,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "bd_34e9,Vivado 2018.2" *) 
+(* CHECK_LICENSE_TYPE = "zsys_system_ila_2_0,bd_34e9,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "bd_34e9,Vivado 2018.2.2" *) 
 (* NotValidForBitStream *)
 module zsys_system_ila_2_0
    (clk,
@@ -37,9 +37,9 @@ module zsys_system_ila_2_0
     SLOT_0_AXI_rvalid,
     SLOT_0_AXI_rready,
     resetn);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF SLOT_0_AXI, ASSOCIATED_RESET resetn" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF SLOT_0_AXI, ASSOCIATED_RESET resetn" *) input clk;
   input [0:0]probe0;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME SLOT_0_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]SLOT_0_AXI_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME SLOT_0_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]SLOT_0_AXI_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWPROT" *) input [2:0]SLOT_0_AXI_awprot;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWVALID" *) input SLOT_0_AXI_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWREADY" *) input SLOT_0_AXI_awready;
@@ -133,7 +133,7 @@ module zsys_system_ila_2_0_bd_34e9
     clk,
     probe0,
     resetn);
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME SLOT_0_AXI, ADDR_WIDTH 4, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [3:0]SLOT_0_AXI_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME SLOT_0_AXI, ADDR_WIDTH 4, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, DATA_WIDTH 32, FREQ_HZ 1e+08, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0" *) input [3:0]SLOT_0_AXI_araddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARPROT" *) input [2:0]SLOT_0_AXI_arprot;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARREADY" *) input SLOT_0_AXI_arready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARVALID" *) input SLOT_0_AXI_arvalid;
@@ -152,7 +152,7 @@ module zsys_system_ila_2_0_bd_34e9
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WREADY" *) input SLOT_0_AXI_wready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WSTRB" *) input [3:0]SLOT_0_AXI_wstrb;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WVALID" *) input SLOT_0_AXI_wvalid;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_0_AXI, ASSOCIATED_RESET resetn, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, PHASE 0.000" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_0_AXI, ASSOCIATED_RESET resetn, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 1e+08, PHASE 0.000" *) input clk;
   input [0:0]probe0;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.RESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.RESETN, POLARITY ACTIVE_LOW" *) input resetn;
 
@@ -210,7 +210,7 @@ module zsys_system_ila_2_0_bd_34e9
   assign probe0_1 = probe0[0];
   (* CHECK_LICENSE_TYPE = "bd_34e9_g_inst_0,bd_34e9_g_inst_0_gigantic_mux,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  (* X_CORE_INFO = "bd_34e9_g_inst_0_gigantic_mux,Vivado 2018.2" *) 
+  (* X_CORE_INFO = "bd_34e9_g_inst_0_gigantic_mux,Vivado 2018.2.2" *) 
   zsys_system_ila_2_0_bd_34e9_g_inst_0 g_inst
        (.aclk(clk),
         .aresetn(resetn),
@@ -258,7 +258,7 @@ module zsys_system_ila_2_0_bd_34e9
         .slot_0_axi_wvalid(SLOT_0_AXI_wvalid));
   (* CHECK_LICENSE_TYPE = "bd_34e9_ila_lib_0,ila_v6_2_7_ila,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  (* X_CORE_INFO = "ila,Vivado 2018.2" *) 
+  (* X_CORE_INFO = "ila,Vivado 2018.2.2" *) 
   zsys_system_ila_2_0_bd_34e9_ila_lib_0 ila_lib
        (.clk(clk),
         .probe0(probe0_1),
@@ -282,35 +282,35 @@ module zsys_system_ila_2_0_bd_34e9
         .probe9(net_slot_0_axi_r_cnt));
   (* CHECK_LICENSE_TYPE = "bd_34e9_slot_0_ar_0,xlconcat_v2_1_1_xlconcat,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2" *) 
+  (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2" *) 
   zsys_system_ila_2_0_bd_34e9_slot_0_ar_0 slot_0_ar
        (.In0(net_slot_0_axi_arvalid),
         .In1(net_slot_0_axi_arready),
         .dout(net_slot_0_axi_ar_ctrl));
   (* CHECK_LICENSE_TYPE = "bd_34e9_slot_0_aw_0,xlconcat_v2_1_1_xlconcat,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2" *) 
+  (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2" *) 
   zsys_system_ila_2_0_bd_34e9_slot_0_aw_0 slot_0_aw
        (.In0(net_slot_0_axi_awvalid),
         .In1(net_slot_0_axi_awready),
         .dout(net_slot_0_axi_aw_ctrl));
   (* CHECK_LICENSE_TYPE = "bd_34e9_slot_0_b_0,xlconcat_v2_1_1_xlconcat,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2" *) 
+  (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2" *) 
   zsys_system_ila_2_0_bd_34e9_slot_0_b_0 slot_0_b
        (.In0(net_slot_0_axi_bvalid),
         .In1(net_slot_0_axi_bready),
         .dout(net_slot_0_axi_b_ctrl));
   (* CHECK_LICENSE_TYPE = "bd_34e9_slot_0_r_0,xlconcat_v2_1_1_xlconcat,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2" *) 
+  (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2" *) 
   zsys_system_ila_2_0_bd_34e9_slot_0_r_0 slot_0_r
        (.In0(net_slot_0_axi_rvalid),
         .In1(net_slot_0_axi_rready),
         .dout(net_slot_0_axi_r_ctrl));
   (* CHECK_LICENSE_TYPE = "bd_34e9_slot_0_w_0,xlconcat_v2_1_1_xlconcat,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2" *) 
+  (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2" *) 
   zsys_system_ila_2_0_bd_34e9_slot_0_w_0 slot_0_w
        (.In0(net_slot_0_axi_wvalid),
         .In1(net_slot_0_axi_wready),
@@ -318,7 +318,7 @@ module zsys_system_ila_2_0_bd_34e9
 endmodule
 
 (* CHECK_LICENSE_TYPE = "bd_34e9_g_inst_0,bd_34e9_g_inst_0_gigantic_mux,{}" *) (* ORIG_REF_NAME = "bd_34e9_g_inst_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "bd_34e9_g_inst_0_gigantic_mux,Vivado 2018.2" *) 
+(* x_core_info = "bd_34e9_g_inst_0_gigantic_mux,Vivado 2018.2.2" *) 
 module zsys_system_ila_2_0_bd_34e9_g_inst_0
    (aclk,
     aresetn,
@@ -364,7 +364,7 @@ module zsys_system_ila_2_0_bd_34e9_g_inst_0
     m_slot_0_axi_rresp,
     m_slot_0_axi_rvalid,
     m_slot_0_axi_rready);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 signal_clock CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME signal_clock, ASSOCIATED_RESET aresetn, ASSOCIATED_BUSIF m_slot_0_axi:m_slot_1_axi:m_slot_2_axi:m_slot_3_axi:m_slot_4_axi:m_slot_5_axi:m_slot_6_axi:m_slot_7_axi:m_slot_8_axi:m_slot_9_axi:m_slot_10_axi:m_slot_11_axi:m_slot_12_axi:m_slot_13_axi:m_slot_14_axi:m_slot_15_axi:m_slot_0_axis:m_slot_1_axis:m_slot_2_axis:m_slot_3_axis:m_slot_4_axis:m_slot_5_axis:m_slot_6_axis:m_slot_7_axis:m_slot_8_axis:m_slot_9_axis:m_slot_10_axis:m_slot_11_axis:m_slot_12_axis:m_slot_13_axis:m_slot_14_axis:m_slot_15_axis:slot_0_axi:slot_1_axi:slot_2_axi:slot_3_axi:slot_4_axi:slot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:slot_12_axi:slot_13_axi:slot_14_axi:slot_15_axi:slot_0_axis:slot_1_axis:slot_2_axis:slot_3_axis:slot_4_axis:slot_5_axis:slot_6_axis:slot_7_axis:slot_8_axis:slot_9_axis:slot_10_axis:slot_11_axis:slot_12_axis:slot_13_axis:slot_14_axis:slot_15_axis:mux_0_axis:mux_1_axis:mux_2_axis:mux_3_axis:mux_0_axi:mux_1_axi:mux_2_axi:mux_3_axi, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input aclk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 signal_clock CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME signal_clock, ASSOCIATED_RESET aresetn, ASSOCIATED_BUSIF m_slot_0_axi:m_slot_1_axi:m_slot_2_axi:m_slot_3_axi:m_slot_4_axi:m_slot_5_axi:m_slot_6_axi:m_slot_7_axi:m_slot_8_axi:m_slot_9_axi:m_slot_10_axi:m_slot_11_axi:m_slot_12_axi:m_slot_13_axi:m_slot_14_axi:m_slot_15_axi:m_slot_0_axis:m_slot_1_axis:m_slot_2_axis:m_slot_3_axis:m_slot_4_axis:m_slot_5_axis:m_slot_6_axis:m_slot_7_axis:m_slot_8_axis:m_slot_9_axis:m_slot_10_axis:m_slot_11_axis:m_slot_12_axis:m_slot_13_axis:m_slot_14_axis:m_slot_15_axis:slot_0_axi:slot_1_axi:slot_2_axi:slot_3_axi:slot_4_axi:slot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:slot_12_axi:slot_13_axi:slot_14_axi:slot_15_axi:slot_0_axis:slot_1_axis:slot_2_axis:slot_3_axis:slot_4_axis:slot_5_axis:slot_6_axis:slot_7_axis:slot_8_axis:slot_9_axis:slot_10_axis:slot_11_axis:slot_12_axis:slot_13_axis:slot_14_axis:slot_15_axis:mux_0_axis:mux_1_axis:mux_2_axis:mux_3_axis:mux_0_axi:mux_1_axi:mux_2_axi:mux_3_axi, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 signal_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME signal_reset, POLARITY ACTIVE_LOW" *) input aresetn;
   output [1:0]m_slot_0_axi_b_cnt;
   output [1:0]m_slot_0_axi_r_cnt;
@@ -388,7 +388,7 @@ module zsys_system_ila_2_0_bd_34e9_g_inst_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 slot_0_axi RDATA" *) input [31:0]slot_0_axi_rdata;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 slot_0_axi RRESP" *) input [1:0]slot_0_axi_rresp;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 slot_0_axi RVALID" *) input slot_0_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 slot_0_axi RREADY" *) (* x_interface_parameter = "XIL_INTERFACENAME slot_0_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input slot_0_axi_rready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 slot_0_axi RREADY" *) (* x_interface_parameter = "XIL_INTERFACENAME slot_0_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input slot_0_axi_rready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 m_slot_0_axi AWADDR" *) output [3:0]m_slot_0_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 m_slot_0_axi AWPROT" *) output [2:0]m_slot_0_axi_awprot;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 m_slot_0_axi AWVALID" *) output m_slot_0_axi_awvalid;
@@ -407,7 +407,7 @@ module zsys_system_ila_2_0_bd_34e9_g_inst_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 m_slot_0_axi RDATA" *) output [31:0]m_slot_0_axi_rdata;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 m_slot_0_axi RRESP" *) output [1:0]m_slot_0_axi_rresp;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 m_slot_0_axi RVALID" *) output m_slot_0_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 m_slot_0_axi RREADY" *) (* x_interface_parameter = "XIL_INTERFACENAME m_slot_0_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output m_slot_0_axi_rready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 m_slot_0_axi RREADY" *) (* x_interface_parameter = "XIL_INTERFACENAME m_slot_0_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output m_slot_0_axi_rready;
 
   wire aclk;
   wire aresetn;
@@ -539,7 +539,7 @@ module zsys_system_ila_2_0_bd_34e9_g_inst_0_gigantic_mux
 endmodule
 
 (* CHECK_LICENSE_TYPE = "bd_34e9_ila_lib_0,ila_v6_2_7_ila,{}" *) (* ORIG_REF_NAME = "bd_34e9_ila_lib_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "ila,Vivado 2018.2" *) 
+(* x_core_info = "ila,Vivado 2018.2.2" *) 
 module zsys_system_ila_2_0_bd_34e9_ila_lib_0
    (clk,
     probe0,
@@ -10932,7 +10932,7 @@ module zsys_system_ila_2_0_bd_34e9_ila_lib_0
 endmodule
 
 (* CHECK_LICENSE_TYPE = "bd_34e9_slot_0_ar_0,xlconcat_v2_1_1_xlconcat,{}" *) (* ORIG_REF_NAME = "bd_34e9_slot_0_ar_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2" *) 
+(* x_core_info = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2" *) 
 module zsys_system_ila_2_0_bd_34e9_slot_0_ar_0
    (In0,
     In1,
@@ -10949,7 +10949,7 @@ module zsys_system_ila_2_0_bd_34e9_slot_0_ar_0
 endmodule
 
 (* CHECK_LICENSE_TYPE = "bd_34e9_slot_0_aw_0,xlconcat_v2_1_1_xlconcat,{}" *) (* ORIG_REF_NAME = "bd_34e9_slot_0_aw_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2" *) 
+(* x_core_info = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2" *) 
 module zsys_system_ila_2_0_bd_34e9_slot_0_aw_0
    (In0,
     In1,
@@ -10966,7 +10966,7 @@ module zsys_system_ila_2_0_bd_34e9_slot_0_aw_0
 endmodule
 
 (* CHECK_LICENSE_TYPE = "bd_34e9_slot_0_b_0,xlconcat_v2_1_1_xlconcat,{}" *) (* ORIG_REF_NAME = "bd_34e9_slot_0_b_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2" *) 
+(* x_core_info = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2" *) 
 module zsys_system_ila_2_0_bd_34e9_slot_0_b_0
    (In0,
     In1,
@@ -10983,7 +10983,7 @@ module zsys_system_ila_2_0_bd_34e9_slot_0_b_0
 endmodule
 
 (* CHECK_LICENSE_TYPE = "bd_34e9_slot_0_r_0,xlconcat_v2_1_1_xlconcat,{}" *) (* ORIG_REF_NAME = "bd_34e9_slot_0_r_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2" *) 
+(* x_core_info = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2" *) 
 module zsys_system_ila_2_0_bd_34e9_slot_0_r_0
    (In0,
     In1,
@@ -11000,7 +11000,7 @@ module zsys_system_ila_2_0_bd_34e9_slot_0_r_0
 endmodule
 
 (* CHECK_LICENSE_TYPE = "bd_34e9_slot_0_w_0,xlconcat_v2_1_1_xlconcat,{}" *) (* ORIG_REF_NAME = "bd_34e9_slot_0_w_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2" *) 
+(* x_core_info = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2.2" *) 
 module zsys_system_ila_2_0_bd_34e9_slot_0_w_0
    (In0,
     In1,
@@ -17584,7 +17584,7 @@ endmodule
 (* ORIG_REF_NAME = "ila_v6_2_7_ila_cap_addrgen" *) 
 module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_addrgen
    (A,
-    \iscnt_reg[9] ,
+    \iscnt_reg[0] ,
     wcnt_hcmp,
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram ,
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0 ,
@@ -17607,7 +17607,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_addrgen
     en_adv_trigger_reg,
     \reset_out_reg[0] );
   output [2:0]A;
-  output [0:0]\iscnt_reg[9] ;
+  output [0:0]\iscnt_reg[0] ;
   output wcnt_hcmp;
   output [9:0]\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram ;
   output \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0 ;
@@ -17653,7 +17653,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_addrgen
   (* DONT_TOUCH *) (* RTL_KEEP = "yes" *) (* async_reg = "true" *) wire [9:0]icap_addr;
   (* DONT_TOUCH *) (* RTL_KEEP = "yes" *) (* async_reg = "true" *) wire icap_wr_en;
   wire [0:0]in0;
-  wire [0:0]\iscnt_reg[9] ;
+  wire [0:0]\iscnt_reg[0] ;
   wire n_0_0;
   wire n_0_1;
   wire n_0_10;
@@ -17697,7 +17697,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_addrgen
         .cfg_data_0(cfg_data_0),
         .cfg_data_1(cfg_data_1),
         .cmp_reset(cmp_reset),
-        .u_scnt_cmp_q(\iscnt_reg[9] ));
+        .u_scnt_cmp_q(\iscnt_reg[0] ));
   FDRE #(
     .INIT(1'b0)) 
     \captured_samples_reg[0] 
@@ -18689,7 +18689,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_addrgen
         .\cfg_data_vec_sync2_reg[10] (cfg_data_vec_sync2[10:1]),
         .cmp_reset(cmp_reset),
         .en_adv_trigger_reg(en_adv_trigger_reg),
-        .\iscnt_reg[9]_0 (\iscnt_reg[9] ),
+        .\iscnt_reg[0]_0 (\iscnt_reg[0] ),
         .out(out),
         .scnt_cmp_temp(scnt_cmp_temp),
         .shift_en_reg(E),
@@ -18878,7 +18878,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_ctrl_legacy
         .\capture_qual_ctrl_reg[1] (\capture_qual_ctrl_reg[1] ),
         .en_adv_trigger_reg(en_adv_trigger_reg),
         .in0(cfg_data_1),
-        .\iscnt_reg[9] (scnt_cmp),
+        .\iscnt_reg[0] (scnt_cmp),
         .out(out),
         .\reset_out_reg[0] (\reset_out_reg[0] ),
         .scnt_cmp_temp(scnt_cmp_temp),
@@ -18894,7 +18894,7 @@ endmodule
 module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter
    (E,
     u_scnt_cmp_q_0,
-    \iscnt_reg[9]_0 ,
+    \iscnt_reg[0]_0 ,
     D,
     DOUT_O,
     SRL_Q_O,
@@ -18912,7 +18912,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter
     Q);
   output [0:0]E;
   output [1:0]u_scnt_cmp_q_0;
-  output [0:0]\iscnt_reg[9]_0 ;
+  output [0:0]\iscnt_reg[0]_0 ;
   output [9:0]D;
   output DOUT_O;
   output SRL_Q_O;
@@ -18947,7 +18947,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter
   wire cmp_reset;
   wire en_adv_trigger_reg;
   wire \iscnt[9]_i_3_n_0 ;
-  wire [0:0]\iscnt_reg[9]_0 ;
+  wire [0:0]\iscnt_reg[0]_0 ;
   wire out;
   wire [9:0]p_0_in;
   wire [9:0]scnt;
@@ -18964,7 +18964,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter
         .cfg_data_1(cfg_data_1),
         .shift_en_reg(shift_en_reg));
   zsys_system_ila_2_0_ltlib_v1_0_0_cfglut5_100 U_SCMPCE
-       (.A({\iscnt_reg[9]_0 ,u_scnt_cmp_q_0,A[1:0]}),
+       (.A({\iscnt_reg[0]_0 ,u_scnt_cmp_q_0,A[1:0]}),
         .S_DCLK_O(S_DCLK_O),
         .cfg_data_0(cfg_data_0),
         .cfg_data_1_0(cfg_data_1_0),
@@ -18981,7 +18981,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter
         .en_adv_trigger_reg(en_adv_trigger_reg),
         .shift_en_reg(shift_en_reg),
         .u_scnt_cmp_q(u_scnt_cmp_q_0),
-        .u_scnt_cmp_q_0(\iscnt_reg[9]_0 ));
+        .u_scnt_cmp_q_0(\iscnt_reg[0]_0 ));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hB8)) 
@@ -19074,7 +19074,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter
         .I1(scnt[1]),
         .I2(scnt[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \iscnt[3]_i_1 
@@ -19083,7 +19083,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter
         .I2(scnt[2]),
         .I3(scnt[3]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \iscnt[4]_i_1 
@@ -19118,7 +19118,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter
         .I1(scnt[6]),
         .I2(scnt[7]),
         .O(p_0_in[7]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \iscnt[8]_i_1 
@@ -19127,7 +19127,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter
         .I2(scnt[7]),
         .I3(scnt[8]),
         .O(p_0_in[8]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \iscnt[9]_i_2 
@@ -19225,7 +19225,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_sample_counter
        (.C(out),
         .CE(scnt_cmp_ce),
         .D(scnt_cmp_temp),
-        .Q(\iscnt_reg[9]_0 ),
+        .Q(\iscnt_reg[0]_0 ),
         .R(cmp_reset));
 endmodule
 
@@ -19329,7 +19329,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_window_counter
         .I1(Q[1]),
         .I2(Q[2]),
         .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \iwcnt[3]_i_1 
@@ -19338,7 +19338,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_window_counter
         .I2(Q[2]),
         .I3(Q[3]),
         .O(p_0_in__0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \iwcnt[4]_i_1 
@@ -19373,7 +19373,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_window_counter
         .I1(Q[6]),
         .I2(Q[7]),
         .O(p_0_in__0[7]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \iwcnt[8]_i_1 
@@ -19382,7 +19382,7 @@ module zsys_system_ila_2_0_ila_v6_2_7_ila_cap_window_counter
         .I2(Q[7]),
         .I3(Q[8]),
         .O(p_0_in__0[8]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \iwcnt[9]_i_1 
@@ -45517,13 +45517,13 @@ module zsys_system_ila_2_0_xsdbs_v1_0_2_reg_ctl__parameterized0
        (.I0(u_scnt_cmp_q),
         .I1(DOUT_O),
         .O(scnt_cmp_temp));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT2 #(
     .INIT(4'h8)) 
     u_wcnt_hcmp_q_i_1
        (.I0(u_scnt_cmp_q),
         .I1(shift_en_reg_0),
         .O(wcnt_hcmp_temp));
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT2 #(
     .INIT(4'h8)) 
     u_wcnt_lcmp_q_i_1

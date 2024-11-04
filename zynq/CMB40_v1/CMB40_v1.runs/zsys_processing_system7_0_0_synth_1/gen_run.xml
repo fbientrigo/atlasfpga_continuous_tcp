@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="zsys_processing_system7_0_0_synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1730372954">
+<GenRun Id="zsys_processing_system7_0_0_synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1730678618">
   <File Type="PA-TCL" Name="zsys_processing_system7_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="zsys_processing_system7_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="zsys_processing_system7_0_0_reports.tcl"/>
@@ -44,9 +44,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

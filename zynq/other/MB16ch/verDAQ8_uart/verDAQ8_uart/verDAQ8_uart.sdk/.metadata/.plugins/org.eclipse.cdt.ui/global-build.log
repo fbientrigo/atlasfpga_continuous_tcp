@@ -3296,3 +3296,28 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
+00:13:18 **** Incremental Build of configuration Debug for project 1mezz_uart_hw3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+00:13:32 **** Incremental Build of configuration Debug for project 1mezz_uart_hw3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+00:25:06 **** Incremental Build of configuration Debug for project 1mezz_uart_hw3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+00:25:41 **** Incremental Build of configuration Debug for project 1mezz_uart_hw3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+00:32:52 **** Incremental Build of configuration Debug for project 1mezz_uart_hw3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

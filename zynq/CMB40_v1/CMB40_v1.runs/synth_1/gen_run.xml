@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1730372955">
+<GenRun Id="synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1730678622">
   <File Type="PA-TCL" Name="zsys_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="zsys_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="zsys_wrapper_reports.tcl"/>
@@ -250,16 +250,20 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="zsys_mapper_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_fifo_generator_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_M1to5_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="zsys_c_counter_binary_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_reset_init_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_c_counter_binary_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_fit_timer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_M1to5_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_fifo8b_2_axis_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_trigger_logic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="zsys_enable_signal_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_util_ds_buf_3_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_enable_signal_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_util_ds_buf_4_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_system_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_util_ds_buf_4_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_CPLD_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_util_ds_buf_4_1"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlconcat_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_util_ds_buf_2_1"/>
@@ -268,15 +272,18 @@
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlconstant_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_M1to5_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlslice_12to14_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_system_ila_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlslice_10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="zsys_xlconcat_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_util_ds_buf_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_xlconcat_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_util_ds_buf_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlconcat_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_util_ds_buf_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_util_vector_logic_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_delay_module_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlslice_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlslice_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_dac_i2c_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_util_ds_buf_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlconcat_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlconstant_1_1"/>
@@ -290,6 +297,7 @@
   <BlockFileSet Type="BlockSrcs" Name="zsys_ADC_readout_buff_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_Elink_output_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_c_counter_binary_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_DRS_A_test_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlslice_2_2"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_Vibufds_diff_out_0_0"/>
@@ -297,6 +305,17 @@
   <BlockFileSet Type="BlockSrcs" Name="zsys_system_ila_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_axi_smc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_clk_mon_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlslice_3to3_2"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_DRS4_firmware_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_rst_ps7_0_100M_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_util_ds_buf_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_AXI_ADC_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_auto_cc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_auto_pc_0"/>
 </GenRun>

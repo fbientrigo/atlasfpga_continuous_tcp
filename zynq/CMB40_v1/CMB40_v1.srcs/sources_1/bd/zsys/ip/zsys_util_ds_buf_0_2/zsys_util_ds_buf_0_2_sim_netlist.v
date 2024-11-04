@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-// Date        : Tue Oct 22 17:39:35 2024
-// Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+// Date        : Mon Nov  4 01:09:36 2024
+// Host        : lapepuat11 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top zsys_util_ds_buf_0_2 -prefix
 //               zsys_util_ds_buf_0_2_ zsys_util_ds_buf_0_0_sim_netlist.v
 // Design      : zsys_util_ds_buf_0_0
@@ -102,15 +102,15 @@ module zsys_util_ds_buf_0_2_util_ds_buf
         .OB(OBUF_DS_N));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "zsys_util_ds_buf_0_0,util_ds_buf,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "util_ds_buf,Vivado 2018.2" *) 
+(* CHECK_LICENSE_TYPE = "zsys_util_ds_buf_0_0,util_ds_buf,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "util_ds_buf,Vivado 2018.2.2" *) 
 (* NotValidForBitStream *)
 module zsys_util_ds_buf_0_2
    (OBUF_IN,
     OBUF_DS_P,
     OBUF_DS_N);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_IN CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_IN, FREQ_HZ 40000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) input [0:0]OBUF_IN;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_DS_P CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_DS_P, FREQ_HZ 40000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) output [0:0]OBUF_DS_P;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_DS_N CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_DS_N, FREQ_HZ 40000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) output [0:0]OBUF_DS_N;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_IN CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_IN, FREQ_HZ 4e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) input [0:0]OBUF_IN;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_DS_P CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_DS_P, FREQ_HZ 4e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) output [0:0]OBUF_DS_P;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_DS_N CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_DS_N, FREQ_HZ 4e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) output [0:0]OBUF_DS_N;
 
   (* SLEW = "SLOW" *) wire [0:0]OBUF_DS_N;
   (* SLEW = "SLOW" *) wire [0:0]OBUF_DS_P;

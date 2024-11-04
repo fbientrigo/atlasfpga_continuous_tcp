@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Tue Sep 26 15:03:06 2023
-// Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top zsys_DRS4_firmware_1_0 -prefix
-//               zsys_DRS4_firmware_1_0_ zsys_DRS4_firmware_1_0_sim_netlist.v
+// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+// Date        : Mon Nov  4 01:07:49 2024
+// Host        : lapepuat11 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_DRS4_firmware_1_0/zsys_DRS4_firmware_1_0_sim_netlist.v
 // Design      : zsys_DRS4_firmware_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,6 +12,170 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "zsys_DRS4_firmware_1_0,DRS4_firmware_v3_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "package_project" *) 
+(* x_core_info = "DRS4_firmware_v3_0,Vivado 2018.2.2" *) 
+(* NotValidForBitStream *)
+module zsys_DRS4_firmware_1_0
+   (o_nReset,
+    o_ROFS,
+    clk_drs4,
+    o_A3_0,
+    o_srclk,
+    o_srin,
+    o_rsrload,
+    o_denable,
+    o_dwrite,
+    o_refclk_p,
+    i_drs4_trigger,
+    i_SROUT,
+    i_PLLLCK,
+    o_stop_cell,
+    o_stop_cell_ready,
+    o_srclk_adc,
+    o_dwrite_for_trigger,
+    s00_axi_aclk,
+    s00_axi_aresetn,
+    s00_axi_awaddr,
+    s00_axi_awprot,
+    s00_axi_awvalid,
+    s00_axi_awready,
+    s00_axi_wdata,
+    s00_axi_wstrb,
+    s00_axi_wvalid,
+    s00_axi_wready,
+    s00_axi_bresp,
+    s00_axi_bvalid,
+    s00_axi_bready,
+    s00_axi_araddr,
+    s00_axi_arprot,
+    s00_axi_arvalid,
+    s00_axi_arready,
+    s00_axi_rdata,
+    s00_axi_rresp,
+    s00_axi_rvalid,
+    s00_axi_rready);
+  output o_nReset;
+  output o_ROFS;
+  input clk_drs4;
+  output [3:0]o_A3_0;
+  output o_srclk;
+  output o_srin;
+  output o_rsrload;
+  output o_denable;
+  output o_dwrite;
+  output o_refclk_p;
+  input i_drs4_trigger;
+  input i_SROUT;
+  input i_PLLLCK;
+  output [9:0]o_stop_cell;
+  output o_stop_cell_ready;
+  output o_srclk_adc;
+  output o_dwrite_for_trigger;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 s00_axi_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME s00_axi_aclk, ASSOCIATED_BUSIF s00_axi, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 5e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1" *) input s00_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 s00_axi_aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME s00_axi_aresetn, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME s00_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 5e+07, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]s00_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi AWPROT" *) input [2:0]s00_axi_awprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi AWVALID" *) input s00_axi_awvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi AWREADY" *) output s00_axi_awready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi WDATA" *) input [31:0]s00_axi_wdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi WSTRB" *) input [3:0]s00_axi_wstrb;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi WVALID" *) input s00_axi_wvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi WREADY" *) output s00_axi_wready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi BRESP" *) output [1:0]s00_axi_bresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi BVALID" *) output s00_axi_bvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi BREADY" *) input s00_axi_bready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi ARADDR" *) input [3:0]s00_axi_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi ARPROT" *) input [2:0]s00_axi_arprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi ARVALID" *) input s00_axi_arvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi ARREADY" *) output s00_axi_arready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi RDATA" *) output [31:0]s00_axi_rdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi RRESP" *) output [1:0]s00_axi_rresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi RVALID" *) output s00_axi_rvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi RREADY" *) input s00_axi_rready;
+
+  wire \<const0> ;
+  wire \<const1> ;
+  wire clk_drs4;
+  wire i_SROUT;
+  wire i_drs4_trigger;
+  wire [2:0]\^o_A3_0 ;
+  wire o_ROFS;
+  wire o_denable;
+  wire o_dwrite;
+  wire o_dwrite_for_trigger;
+  wire o_nReset;
+  wire o_refclk_p;
+  wire o_rsrload;
+  wire o_srclk;
+  wire o_srclk_adc;
+  wire o_srin;
+  wire [9:0]o_stop_cell;
+  wire o_stop_cell_ready;
+  wire s00_axi_aclk;
+  wire [3:0]s00_axi_araddr;
+  wire s00_axi_aresetn;
+  wire s00_axi_arready;
+  wire s00_axi_arvalid;
+  wire [3:0]s00_axi_awaddr;
+  wire s00_axi_awready;
+  wire s00_axi_awvalid;
+  wire s00_axi_bready;
+  wire s00_axi_bvalid;
+  wire [31:0]s00_axi_rdata;
+  wire s00_axi_rready;
+  wire s00_axi_rvalid;
+  wire [31:0]s00_axi_wdata;
+  wire s00_axi_wready;
+  wire [3:0]s00_axi_wstrb;
+  wire s00_axi_wvalid;
+
+  assign o_A3_0[3] = \<const1> ;
+  assign o_A3_0[2:0] = \^o_A3_0 [2:0];
+  assign s00_axi_bresp[1] = \<const0> ;
+  assign s00_axi_bresp[0] = \<const0> ;
+  assign s00_axi_rresp[1] = \<const0> ;
+  assign s00_axi_rresp[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  zsys_DRS4_firmware_1_0_DRS4_firmware_v3_0 U0
+       (.S_AXI_ARREADY(s00_axi_arready),
+        .S_AXI_AWREADY(s00_axi_awready),
+        .S_AXI_WREADY(s00_axi_wready),
+        .clk_drs4(clk_drs4),
+        .i_SROUT(i_SROUT),
+        .i_drs4_trigger(i_drs4_trigger),
+        .o_A3_0(\^o_A3_0 ),
+        .o_ROFS(o_ROFS),
+        .o_denable(o_denable),
+        .o_dwrite(o_dwrite),
+        .o_dwrite_for_trigger(o_dwrite_for_trigger),
+        .o_nReset(o_nReset),
+        .o_refclk_p(o_refclk_p),
+        .o_rsrload(o_rsrload),
+        .o_srclk(o_srclk),
+        .o_srclk_adc(o_srclk_adc),
+        .o_srin(o_srin),
+        .o_stop_cell(o_stop_cell),
+        .o_stop_cell_ready(o_stop_cell_ready),
+        .s00_axi_aclk(s00_axi_aclk),
+        .s00_axi_araddr(s00_axi_araddr[3:2]),
+        .s00_axi_aresetn(s00_axi_aresetn),
+        .s00_axi_arvalid(s00_axi_arvalid),
+        .s00_axi_awaddr(s00_axi_awaddr[3:2]),
+        .s00_axi_awvalid(s00_axi_awvalid),
+        .s00_axi_bready(s00_axi_bready),
+        .s00_axi_bvalid(s00_axi_bvalid),
+        .s00_axi_rdata(s00_axi_rdata),
+        .s00_axi_rready(s00_axi_rready),
+        .s00_axi_rvalid(s00_axi_rvalid),
+        .s00_axi_wdata(s00_axi_wdata),
+        .s00_axi_wstrb(s00_axi_wstrb),
+        .s00_axi_wvalid(s00_axi_wvalid));
+  VCC VCC
+       (.P(\<const1> ));
+endmodule
+
+(* ORIG_REF_NAME = "DRS4_firmware_v3_0" *) 
 module zsys_DRS4_firmware_1_0_DRS4_firmware_v3_0
    (o_srclk,
     o_dwrite,
@@ -354,6 +518,7 @@ module zsys_DRS4_firmware_1_0_DRS4_firmware_v3_0
         .O(trigger_reset_i_1_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "DRS4_firmware_v3_0_S00_AXI" *) 
 module zsys_DRS4_firmware_1_0_DRS4_firmware_v3_0_S00_AXI
    (dwrite_o_reg_P,
     out,
@@ -2502,6 +2667,7 @@ module zsys_DRS4_firmware_1_0_DRS4_firmware_v3_0_S00_AXI
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "drs4_firmware" *) 
 module zsys_DRS4_firmware_1_0_drs4_firmware
    (dwrite_o_reg_P_0,
     out,
@@ -20719,169 +20885,6 @@ module zsys_DRS4_firmware_1_0_drs4_firmware
         .D(\FSM_onehot_drs4_states_reg[14]_0 ),
         .PRE(axi_rst),
         .Q(drs4_trigs_reg_0));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "zsys_DRS4_firmware_1_0,DRS4_firmware_v3_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "package_project" *) 
-(* x_core_info = "DRS4_firmware_v3_0,Vivado 2018.2" *) 
-(* NotValidForBitStream *)
-module zsys_DRS4_firmware_1_0
-   (o_nReset,
-    o_ROFS,
-    clk_drs4,
-    o_A3_0,
-    o_srclk,
-    o_srin,
-    o_rsrload,
-    o_denable,
-    o_dwrite,
-    o_refclk_p,
-    i_drs4_trigger,
-    i_SROUT,
-    i_PLLLCK,
-    o_stop_cell,
-    o_stop_cell_ready,
-    o_srclk_adc,
-    o_dwrite_for_trigger,
-    s00_axi_aclk,
-    s00_axi_aresetn,
-    s00_axi_awaddr,
-    s00_axi_awprot,
-    s00_axi_awvalid,
-    s00_axi_awready,
-    s00_axi_wdata,
-    s00_axi_wstrb,
-    s00_axi_wvalid,
-    s00_axi_wready,
-    s00_axi_bresp,
-    s00_axi_bvalid,
-    s00_axi_bready,
-    s00_axi_araddr,
-    s00_axi_arprot,
-    s00_axi_arvalid,
-    s00_axi_arready,
-    s00_axi_rdata,
-    s00_axi_rresp,
-    s00_axi_rvalid,
-    s00_axi_rready);
-  output o_nReset;
-  output o_ROFS;
-  input clk_drs4;
-  output [3:0]o_A3_0;
-  output o_srclk;
-  output o_srin;
-  output o_rsrload;
-  output o_denable;
-  output o_dwrite;
-  output o_refclk_p;
-  input i_drs4_trigger;
-  input i_SROUT;
-  input i_PLLLCK;
-  output [9:0]o_stop_cell;
-  output o_stop_cell_ready;
-  output o_srclk_adc;
-  output o_dwrite_for_trigger;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 s00_axi_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME s00_axi_aclk, ASSOCIATED_BUSIF s00_axi, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1" *) input s00_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 s00_axi_aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME s00_axi_aresetn, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME s00_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 50000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]s00_axi_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi AWPROT" *) input [2:0]s00_axi_awprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi AWVALID" *) input s00_axi_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi AWREADY" *) output s00_axi_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi WDATA" *) input [31:0]s00_axi_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi WSTRB" *) input [3:0]s00_axi_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi WVALID" *) input s00_axi_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi WREADY" *) output s00_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi BRESP" *) output [1:0]s00_axi_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi BVALID" *) output s00_axi_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi BREADY" *) input s00_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi ARADDR" *) input [3:0]s00_axi_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi ARPROT" *) input [2:0]s00_axi_arprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi ARVALID" *) input s00_axi_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi ARREADY" *) output s00_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi RDATA" *) output [31:0]s00_axi_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi RRESP" *) output [1:0]s00_axi_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi RVALID" *) output s00_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s00_axi RREADY" *) input s00_axi_rready;
-
-  wire \<const0> ;
-  wire \<const1> ;
-  wire clk_drs4;
-  wire i_SROUT;
-  wire i_drs4_trigger;
-  wire [2:0]\^o_A3_0 ;
-  wire o_ROFS;
-  wire o_denable;
-  wire o_dwrite;
-  wire o_dwrite_for_trigger;
-  wire o_nReset;
-  wire o_refclk_p;
-  wire o_rsrload;
-  wire o_srclk;
-  wire o_srclk_adc;
-  wire o_srin;
-  wire [9:0]o_stop_cell;
-  wire o_stop_cell_ready;
-  wire s00_axi_aclk;
-  wire [3:0]s00_axi_araddr;
-  wire s00_axi_aresetn;
-  wire s00_axi_arready;
-  wire s00_axi_arvalid;
-  wire [3:0]s00_axi_awaddr;
-  wire s00_axi_awready;
-  wire s00_axi_awvalid;
-  wire s00_axi_bready;
-  wire s00_axi_bvalid;
-  wire [31:0]s00_axi_rdata;
-  wire s00_axi_rready;
-  wire s00_axi_rvalid;
-  wire [31:0]s00_axi_wdata;
-  wire s00_axi_wready;
-  wire [3:0]s00_axi_wstrb;
-  wire s00_axi_wvalid;
-
-  assign o_A3_0[3] = \<const1> ;
-  assign o_A3_0[2:0] = \^o_A3_0 [2:0];
-  assign s00_axi_bresp[1] = \<const0> ;
-  assign s00_axi_bresp[0] = \<const0> ;
-  assign s00_axi_rresp[1] = \<const0> ;
-  assign s00_axi_rresp[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  zsys_DRS4_firmware_1_0_DRS4_firmware_v3_0 U0
-       (.S_AXI_ARREADY(s00_axi_arready),
-        .S_AXI_AWREADY(s00_axi_awready),
-        .S_AXI_WREADY(s00_axi_wready),
-        .clk_drs4(clk_drs4),
-        .i_SROUT(i_SROUT),
-        .i_drs4_trigger(i_drs4_trigger),
-        .o_A3_0(\^o_A3_0 ),
-        .o_ROFS(o_ROFS),
-        .o_denable(o_denable),
-        .o_dwrite(o_dwrite),
-        .o_dwrite_for_trigger(o_dwrite_for_trigger),
-        .o_nReset(o_nReset),
-        .o_refclk_p(o_refclk_p),
-        .o_rsrload(o_rsrload),
-        .o_srclk(o_srclk),
-        .o_srclk_adc(o_srclk_adc),
-        .o_srin(o_srin),
-        .o_stop_cell(o_stop_cell),
-        .o_stop_cell_ready(o_stop_cell_ready),
-        .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_araddr(s00_axi_araddr[3:2]),
-        .s00_axi_aresetn(s00_axi_aresetn),
-        .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_awaddr(s00_axi_awaddr[3:2]),
-        .s00_axi_awvalid(s00_axi_awvalid),
-        .s00_axi_bready(s00_axi_bready),
-        .s00_axi_bvalid(s00_axi_bvalid),
-        .s00_axi_rdata(s00_axi_rdata),
-        .s00_axi_rready(s00_axi_rready),
-        .s00_axi_rvalid(s00_axi_rvalid),
-        .s00_axi_wdata(s00_axi_wdata),
-        .s00_axi_wstrb(s00_axi_wstrb),
-        .s00_axi_wvalid(s00_axi_wvalid));
-  VCC VCC
-       (.P(\<const1> ));
 endmodule
 `ifndef GLBL
 `define GLBL

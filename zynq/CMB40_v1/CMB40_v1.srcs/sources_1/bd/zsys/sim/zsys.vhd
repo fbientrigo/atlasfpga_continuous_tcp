@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
---Date        : Thu Oct 31 12:08:38 2024
+--Date        : Mon Nov  4 01:02:38 2024
 --Host        : lapepuat11 running 64-bit major release  (build 9200)
 --Command     : generate_target zsys.bd
 --Design      : zsys
@@ -6360,6 +6360,11 @@ xlslice_17: component zsys_xlslice_3to3_1
       Din(31 downto 0) => axi_gpio_0_gpio2_io_o(31 downto 0),
       Dout(0) => xlslice_3to4_Dout(0)
     );
+xlslice_18: component zsys_xlslice_3to3_2
+     port map (
+      Din(31 downto 0) => axi_gpio_0_gpio2_io_o(31 downto 0),
+      Dout(0) => xlslice_5_Dout(0)
+    );
 xlslice_2: component zsys_xlslice_2_2
      port map (
       Din(31 downto 0) => axi_gpio_1_gpio_io_o(31 downto 0),
@@ -6379,11 +6384,6 @@ xlslice_4to6: component zsys_xlslice_2_0
      port map (
       Din(31 downto 0) => axi_gpio_0_gpio2_io_o(31 downto 0),
       Dout(2 downto 0) => xlslice_2_Dout2(2 downto 0)
-    );
-xlslice_5: component zsys_xlslice_3to3_2
-     port map (
-      Din(31 downto 0) => axi_gpio_0_gpio2_io_o(31 downto 0),
-      Dout(0) => xlslice_5_Dout(0)
     );
 xlslice_7to14: component zsys_xlslice_2_1
      port map (

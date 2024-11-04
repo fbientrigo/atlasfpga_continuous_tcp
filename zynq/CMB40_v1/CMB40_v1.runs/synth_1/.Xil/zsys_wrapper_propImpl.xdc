@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc rfile:../../../CMB40_v1.srcs/constrs_1/new/timing.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc rfile:../../../CMB40_v1.srcs/constrs_1/new/timing.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:25 export:INPUT save:INPUT read:READ} [current_design]
 create_generated_clock -name LCLK_bufg -source [get_ports LCLK_MUX_P] -divide_by 1 -add -master_clock Lclk0 [get_pins -hier -filter {NAME =~ */BUFG_inst_LCLK/O}]
 set_property src_info {type:XDC file:1 line:26 export:INPUT save:INPUT read:READ} [current_design]

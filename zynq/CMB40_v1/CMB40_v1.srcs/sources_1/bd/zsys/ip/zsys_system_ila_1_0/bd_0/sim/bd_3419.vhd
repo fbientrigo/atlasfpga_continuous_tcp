@@ -31,7 +31,7 @@ architecture STRUCTURE of bd_3419 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 50000000, PHASE 0.000";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 5e+07, PHASE 0.000";
 begin
   clk_1 <= clk;
   probe0_1(0) <= probe0(0);

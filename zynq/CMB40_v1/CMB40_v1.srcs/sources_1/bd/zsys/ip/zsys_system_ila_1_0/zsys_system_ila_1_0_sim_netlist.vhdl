@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Aug 16 22:34:57 2023
--- Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top zsys_system_ila_1_0 -prefix
---               zsys_system_ila_1_0_ zsys_system_ila_1_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+-- Date        : Mon Nov  4 01:11:24 2024
+-- Host        : lapepuat11 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_1_0/zsys_system_ila_1_0_sim_netlist.vhdl
 -- Design      : zsys_system_ila_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,6 +25,8 @@ entity zsys_system_ila_1_0_blk_mem_gen_prim_wrapper is
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end zsys_system_ila_1_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of zsys_system_ila_1_0_blk_mem_gen_prim_wrapper is
@@ -214,6 +216,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_all_typeA_slice is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_all_typeA_slice : entity is "ltlib_v1_0_0_all_typeA_slice";
 end zsys_system_ila_1_0_ltlib_v1_0_0_all_typeA_slice;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_all_typeA_slice is
@@ -1181,6 +1185,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_async_edge_xfer is
     arm_ctrl : in STD_LOGIC;
     last_din : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_async_edge_xfer : entity is "ltlib_v1_0_0_async_edge_xfer";
 end zsys_system_ila_1_0_ltlib_v1_0_0_async_edge_xfer;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_async_edge_xfer is
@@ -1653,6 +1659,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_cfglut4 is
     A : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_cfglut4 : entity is "ltlib_v1_0_0_cfglut4";
 end zsys_system_ila_1_0_ltlib_v1_0_0_cfglut4;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_cfglut4 is
@@ -1727,6 +1735,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_cfglut5 is
     A : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_cfglut5 : entity is "ltlib_v1_0_0_cfglut5";
 end zsys_system_ila_1_0_ltlib_v1_0_0_cfglut5;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_cfglut5 is
@@ -1837,6 +1847,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_cfglut6 is
     s_dclk_o : in STD_LOGIC;
     u_scnt_cmp_q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_cfglut6 : entity is "ltlib_v1_0_0_cfglut6";
 end zsys_system_ila_1_0_ltlib_v1_0_0_cfglut6;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_cfglut6 is
@@ -2088,6 +2100,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_cfglut7 is
     wcnt_hcmp : in STD_LOGIC;
     u_wcnt_lcmp_q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_cfglut7 : entity is "ltlib_v1_0_0_cfglut7";
 end zsys_system_ila_1_0_ltlib_v1_0_0_cfglut7;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_cfglut7 is
@@ -2341,6 +2355,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_generic_memrd is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_generic_memrd : entity is "ltlib_v1_0_0_generic_memrd";
 end zsys_system_ila_1_0_ltlib_v1_0_0_generic_memrd;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_generic_memrd is
@@ -2973,6 +2989,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_rising_edge_detection is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     dout_reg1_reg : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_rising_edge_detection : entity is "ltlib_v1_0_0_rising_edge_detection";
 end zsys_system_ila_1_0_ltlib_v1_0_0_rising_edge_detection;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_rising_edge_detection is
@@ -3158,6 +3176,8 @@ entity zsys_system_ila_1_0_xsdbs_v1_0_2_reg_ctl is
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_xsdbs_v1_0_2_reg_ctl : entity is "xsdbs_v1_0_2_reg_ctl";
 end zsys_system_ila_1_0_xsdbs_v1_0_2_reg_ctl;
 
 architecture STRUCTURE of zsys_system_ila_1_0_xsdbs_v1_0_2_reg_ctl is
@@ -8450,6 +8470,8 @@ entity zsys_system_ila_1_0_xsdbs_v1_0_2_reg_p2s is
     \G_1PIPE_IFACE.s_daddr_r_reg[5]\ : in STD_LOGIC;
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_xsdbs_v1_0_2_reg_p2s : entity is "xsdbs_v1_0_2_reg_p2s";
 end zsys_system_ila_1_0_xsdbs_v1_0_2_reg_p2s;
 
 architecture STRUCTURE of zsys_system_ila_1_0_xsdbs_v1_0_2_reg_p2s is
@@ -11214,6 +11236,8 @@ entity zsys_system_ila_1_0_xsdbs_v1_0_2_reg_stat is
     s_daddr_o : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \xsdb_reg_reg[1]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_xsdbs_v1_0_2_reg_stat : entity is "xsdbs_v1_0_2_reg_stat";
 end zsys_system_ila_1_0_xsdbs_v1_0_2_reg_stat;
 
 architecture STRUCTURE of zsys_system_ila_1_0_xsdbs_v1_0_2_reg_stat is
@@ -11884,6 +11908,8 @@ entity zsys_system_ila_1_0_xsdbs_v1_0_2_xsdbs is
   attribute C_XDEVICEFAMILY of zsys_system_ila_1_0_xsdbs_v1_0_2_xsdbs : entity is "zynq";
   attribute C_XSDB_SLAVE_TYPE : integer;
   attribute C_XSDB_SLAVE_TYPE of zsys_system_ila_1_0_xsdbs_v1_0_2_xsdbs : entity is 17;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_xsdbs_v1_0_2_xsdbs : entity is "xsdbs_v1_0_2_xsdbs";
   attribute dont_touch : string;
   attribute dont_touch of zsys_system_ila_1_0_xsdbs_v1_0_2_xsdbs : entity is "true";
 end zsys_system_ila_1_0_xsdbs_v1_0_2_xsdbs;
@@ -15422,6 +15448,8 @@ entity zsys_system_ila_1_0_blk_mem_gen_prim_width is
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end zsys_system_ila_1_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of zsys_system_ila_1_0_blk_mem_gen_prim_width is
@@ -15453,6 +15481,8 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila_reset_ctrl is
     halt_ctrl : in STD_LOGIC;
     arm_ctrl : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ila_v6_2_7_ila_reset_ctrl : entity is "ila_v6_2_7_ila_reset_ctrl";
 end zsys_system_ila_1_0_ila_v6_2_7_ila_reset_ctrl;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_reset_ctrl is
@@ -15638,6 +15668,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_all_typeA is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_all_typeA : entity is "ltlib_v1_0_0_all_typeA";
 end zsys_system_ila_1_0_ltlib_v1_0_0_all_typeA;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_all_typeA is
@@ -17339,6 +17371,8 @@ entity zsys_system_ila_1_0_xsdbs_v1_0_2_reg_stream is
     s_di_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_dclk_o : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_xsdbs_v1_0_2_reg_stream : entity is "xsdbs_v1_0_2_reg_stream";
 end zsys_system_ila_1_0_xsdbs_v1_0_2_reg_stream;
 
 architecture STRUCTURE of zsys_system_ila_1_0_xsdbs_v1_0_2_reg_stream is
@@ -17420,6 +17454,8 @@ entity zsys_system_ila_1_0_blk_mem_gen_generic_cstr is
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end zsys_system_ila_1_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of zsys_system_ila_1_0_blk_mem_gen_generic_cstr is
@@ -17484,6 +17520,8 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila_register is
     \captured_samples_reg[9]\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     \I_YESLUT6.I_YES_OREG.O_reg_reg\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ila_v6_2_7_ila_register : entity is "ila_v6_2_7_ila_register";
 end zsys_system_ila_1_0_ila_v6_2_7_ila_register;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_register is
@@ -21628,6 +21666,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_allx_typeA is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_allx_typeA : entity is "ltlib_v1_0_0_allx_typeA";
 end zsys_system_ila_1_0_ltlib_v1_0_0_allx_typeA;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_allx_typeA is
@@ -21734,6 +21774,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_allx_typeA_nodelay is
     SRL_D_I : in STD_LOGIC;
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_allx_typeA_nodelay : entity is "ltlib_v1_0_0_allx_typeA_nodelay";
 end zsys_system_ila_1_0_ltlib_v1_0_0_allx_typeA_nodelay;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_allx_typeA_nodelay is
@@ -22025,6 +22067,8 @@ entity zsys_system_ila_1_0_blk_mem_gen_top is
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end zsys_system_ila_1_0_blk_mem_gen_top;
 
 architecture STRUCTURE of zsys_system_ila_1_0_blk_mem_gen_top is
@@ -22056,6 +22100,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_match is
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_match : entity is "ltlib_v1_0_0_match";
 end zsys_system_ila_1_0_ltlib_v1_0_0_match;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_match is
@@ -22164,6 +22210,8 @@ entity zsys_system_ila_1_0_ltlib_v1_0_0_match_nodelay is
     PROBES_I : in STD_LOGIC_VECTOR ( 19 downto 0 );
     SRL_D_I : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ltlib_v1_0_0_match_nodelay : entity is "ltlib_v1_0_0_match_nodelay";
 end zsys_system_ila_1_0_ltlib_v1_0_0_match_nodelay;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ltlib_v1_0_0_match_nodelay is
@@ -22259,6 +22307,8 @@ entity zsys_system_ila_1_0_blk_mem_gen_v8_3_6_synth is
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_blk_mem_gen_v8_3_6_synth : entity is "blk_mem_gen_v8_3_6_synth";
 end zsys_system_ila_1_0_blk_mem_gen_v8_3_6_synth;
 
 architecture STRUCTURE of zsys_system_ila_1_0_blk_mem_gen_v8_3_6_synth is
@@ -22283,7 +22333,7 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila_cap_sample_counter is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     u_scnt_cmp_q_0 : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \iscnt_reg[9]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \iscnt_reg[0]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     D : out STD_LOGIC_VECTOR ( 9 downto 0 );
     SRL_Q_O : out STD_LOGIC;
     shift_en_reg : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -22299,6 +22349,8 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila_cap_sample_counter is
     \out\ : in STD_LOGIC_VECTOR ( 9 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_sample_counter : entity is "ila_v6_2_7_ila_cap_sample_counter";
 end zsys_system_ila_1_0_ila_v6_2_7_ila_cap_sample_counter;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_sample_counter is
@@ -22308,7 +22360,7 @@ architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_sample_counter 
   signal cfg_data_1_0 : STD_LOGIC;
   signal cfg_data_2 : STD_LOGIC;
   signal \iscnt[9]_i_3_n_0\ : STD_LOGIC;
-  signal \^iscnt_reg[9]_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^iscnt_reg[0]_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \p_0_in__5\ : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal scnt : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal scnt_cmp_ce : STD_LOGIC;
@@ -22319,17 +22371,17 @@ architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_sample_counter 
   attribute SOFT_HLUTNM of \iscnt[0]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \iscnt[1]_i_1\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \iscnt[2]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \iscnt[3]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \iscnt[4]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \iscnt[3]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \iscnt[4]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \iscnt[6]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \iscnt[7]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \iscnt[8]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \iscnt[9]_i_2\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \iscnt[8]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \iscnt[9]_i_2\ : label is "soft_lutpair1";
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of u_scnt_cmp_q : label is "PRIMITIVE";
 begin
   E(0) <= \^e\(0);
-  \iscnt_reg[9]_0\(0) <= \^iscnt_reg[9]_0\(0);
+  \iscnt_reg[0]_0\(0) <= \^iscnt_reg[0]_0\(0);
   u_scnt_cmp_q_0(1 downto 0) <= \^u_scnt_cmp_q_0\(1 downto 0);
 U_SCE: entity work.zsys_system_ila_1_0_ltlib_v1_0_0_cfglut4_30
      port map (
@@ -22343,7 +22395,7 @@ U_SCE: entity work.zsys_system_ila_1_0_ltlib_v1_0_0_cfglut4_30
     );
 U_SCMPCE: entity work.zsys_system_ila_1_0_ltlib_v1_0_0_cfglut5_31
      port map (
-      A(4) => \^iscnt_reg[9]_0\(0),
+      A(4) => \^iscnt_reg[0]_0\(0),
       A(3 downto 2) => \^u_scnt_cmp_q_0\(1 downto 0),
       A(1 downto 0) => A(1 downto 0),
       cfg_data_0 => cfg_data_0,
@@ -22364,7 +22416,7 @@ U_SCRST: entity work.zsys_system_ila_1_0_ltlib_v1_0_0_cfglut6_32
       s_dclk_o => s_dclk_o,
       shift_en_reg(0) => shift_en_reg(0),
       u_scnt_cmp_q(1 downto 0) => \^u_scnt_cmp_q_0\(1 downto 0),
-      u_scnt_cmp_q_0(0) => \^iscnt_reg[9]_0\(0)
+      u_scnt_cmp_q_0(0) => \^iscnt_reg[0]_0\(0)
     );
 \i_intcap.icap_addr[0]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -22686,7 +22738,7 @@ u_scnt_cmp_q: unisim.vcomponents.FDRE
       C => clk,
       CE => scnt_cmp_ce,
       D => scnt_cmp_temp,
-      Q => \^iscnt_reg[9]_0\(0),
+      Q => \^iscnt_reg[0]_0\(0),
       R => cmp_reset
     );
 end STRUCTURE;
@@ -22712,6 +22764,8 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila_cap_window_counter is
     wcnt_hcmp_temp : in STD_LOGIC;
     \reset_out_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_window_counter : entity is "ila_v6_2_7_ila_cap_window_counter";
 end zsys_system_ila_1_0_ila_v6_2_7_ila_cap_window_counter;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_window_counter is
@@ -22731,12 +22785,12 @@ architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_window_counter 
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \iwcnt[1]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \iwcnt[2]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \iwcnt[3]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \iwcnt[4]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \iwcnt[3]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \iwcnt[4]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \iwcnt[6]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \iwcnt[7]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \iwcnt[8]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \iwcnt[9]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \iwcnt[8]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \iwcnt[9]_i_1\ : label is "soft_lutpair6";
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of u_wcnt_hcmp_q : label is "PRIMITIVE";
   attribute BOX_TYPE of u_wcnt_lcmp_q : label is "PRIMITIVE";
@@ -23056,6 +23110,8 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila_trig_match is
     use_probe_debug_circuit_reg : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ila_v6_2_7_ila_trig_match : entity is "ila_v6_2_7_ila_trig_match";
 end zsys_system_ila_1_0_ila_v6_2_7_ila_trig_match;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_trig_match is
@@ -23089,6 +23145,8 @@ entity zsys_system_ila_1_0_blk_mem_gen_v8_3_6 is
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_blk_mem_gen_v8_3_6 : entity is "blk_mem_gen_v8_3_6";
 end zsys_system_ila_1_0_blk_mem_gen_v8_3_6;
 
 architecture STRUCTURE of zsys_system_ila_1_0_blk_mem_gen_v8_3_6 is
@@ -23112,7 +23170,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity zsys_system_ila_1_0_ila_v6_2_7_ila_cap_addrgen is
   port (
     A : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    \iscnt_reg[9]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \iscnt_reg[0]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     wcnt_hcmp : out STD_LOGIC;
     \out\ : out STD_LOGIC_VECTOR ( 9 downto 0 );
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\ : out STD_LOGIC;
@@ -23134,6 +23192,8 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila_cap_addrgen is
     arm_ctrl : in STD_LOGIC;
     \reset_out_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_addrgen : entity is "ila_v6_2_7_ila_cap_addrgen";
 end zsys_system_ila_1_0_ila_v6_2_7_ila_cap_addrgen;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_addrgen is
@@ -23159,7 +23219,7 @@ architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_addrgen is
   attribute DONT_TOUCH of icap_wr_en : signal is std.standard.true;
   attribute RTL_KEEP of icap_wr_en : signal is "yes";
   attribute async_reg of icap_wr_en : signal is "true";
-  signal \^iscnt_reg[9]\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^iscnt_reg[0]\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal n_0_0 : STD_LOGIC;
   signal n_0_1 : STD_LOGIC;
   signal n_0_10 : STD_LOGIC;
@@ -23373,7 +23433,7 @@ architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_addrgen is
   attribute KEEP of icap_wr_en_reg : label is "yes";
 begin
   A(2 downto 0) <= \^a\(2 downto 0);
-  \iscnt_reg[9]\(0) <= \^iscnt_reg[9]\(0);
+  \iscnt_reg[0]\(0) <= \^iscnt_reg[0]\(0);
 CAP_WR_EN_O_reg: unisim.vcomponents.FDRE
      port map (
       C => clk,
@@ -23391,7 +23451,7 @@ U_CMPRESET: entity work.zsys_system_ila_1_0_ltlib_v1_0_0_cfglut6
       cfg_data_1 => cfg_data_1,
       cmp_reset => cmp_reset,
       s_dclk_o => s_dclk_o,
-      u_scnt_cmp_q(0) => \^iscnt_reg[9]\(0)
+      u_scnt_cmp_q(0) => \^iscnt_reg[0]\(0)
     );
 \captured_samples_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -24485,7 +24545,7 @@ u_cap_sample_counter: entity work.zsys_system_ila_1_0_ila_v6_2_7_ila_cap_sample_
       clk => clk,
       cmp_reset => cmp_reset,
       en_adv_trigger_reg => en_adv_trigger_reg,
-      \iscnt_reg[9]_0\(0) => \^iscnt_reg[9]\(0),
+      \iscnt_reg[0]_0\(0) => \^iscnt_reg[0]\(0),
       \out\(9 downto 0) => cfg_data_vec_sync2(10 downto 1),
       s_dclk_o => s_dclk_o,
       shift_en_reg(0) => E(0),
@@ -24531,6 +24591,8 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila_trigger is
     use_probe_debug_circuit_reg : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ila_v6_2_7_ila_trigger : entity is "ila_v6_2_7_ila_trigger";
 end zsys_system_ila_1_0_ila_v6_2_7_ila_trigger;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_trigger is
@@ -24597,6 +24659,8 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila_cap_ctrl_legacy is
     arm_ctrl : in STD_LOGIC;
     \reset_out_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_ctrl_legacy : entity is "ila_v6_2_7_ila_cap_ctrl_legacy";
 end zsys_system_ila_1_0_ila_v6_2_7_ila_cap_ctrl_legacy;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_cap_ctrl_legacy is
@@ -24740,7 +24804,7 @@ u_cap_addrgen: entity work.zsys_system_ila_1_0_ila_v6_2_7_ila_cap_addrgen
       clk => clk,
       en_adv_trigger_reg => en_adv_trigger_reg,
       in0(0) => cfg_data_1,
-      \iscnt_reg[9]\(0) => scnt_cmp,
+      \iscnt_reg[0]\(0) => scnt_cmp,
       \out\(9 downto 0) => \out\(9 downto 0),
       \reset_out_reg[0]\(0) => \reset_out_reg[0]\(0),
       s_dclk_o => s_dclk_o,
@@ -24766,6 +24830,8 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila_trace_memory is
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
     DIADI : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ila_v6_2_7_ila_trace_memory : entity is "ila_v6_2_7_ila_trace_memory";
 end zsys_system_ila_1_0_ila_v6_2_7_ila_trace_memory;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_trace_memory is
@@ -24794,6 +24860,8 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila_core is
     UNCONN_IN : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ila_v6_2_7_ila_core : entity is "ila_v6_2_7_ila_core";
 end zsys_system_ila_1_0_ila_v6_2_7_ila_core;
 
 architecture STRUCTURE of zsys_system_ila_1_0_ila_v6_2_7_ila_core is
@@ -45081,6 +45149,8 @@ entity zsys_system_ila_1_0_ila_v6_2_7_ila is
   attribute LC_TIME_TAG_WIDTH of zsys_system_ila_1_0_ila_v6_2_7_ila : entity is 1;
   attribute LC_TRIG_WIDTH : integer;
   attribute LC_TRIG_WIDTH of zsys_system_ila_1_0_ila_v6_2_7_ila : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_ila_v6_2_7_ila : entity is "ila_v6_2_7_ila";
   attribute dont_touch : string;
   attribute dont_touch of zsys_system_ila_1_0_ila_v6_2_7_ila : entity is "true";
   attribute downgradeipidentifiedwarnings : string;
@@ -45222,10 +45292,12 @@ entity zsys_system_ila_1_0_bd_3419_ila_lib_0 is
   );
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of zsys_system_ila_1_0_bd_3419_ila_lib_0 : entity is "bd_3419_ila_lib_0,ila_v6_2_7_ila,{}";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_bd_3419_ila_lib_0 : entity is "bd_3419_ila_lib_0";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_1_0_bd_3419_ila_lib_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_1_0_bd_3419_ila_lib_0 : entity is "ila,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_1_0_bd_3419_ila_lib_0 : entity is "ila,Vivado 2018.2.2";
 end zsys_system_ila_1_0_bd_3419_ila_lib_0;
 
 architecture STRUCTURE of zsys_system_ila_1_0_bd_3419_ila_lib_0 is
@@ -64855,6 +64927,8 @@ entity zsys_system_ila_1_0_bd_3419 is
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_system_ila_1_0_bd_3419 : entity is "bd_3419";
   attribute hw_handoff : string;
   attribute hw_handoff of zsys_system_ila_1_0_bd_3419 : entity is "zsys_system_ila_1_0.hwdef";
 end zsys_system_ila_1_0_bd_3419;
@@ -64868,11 +64942,11 @@ architecture STRUCTURE of zsys_system_ila_1_0_bd_3419 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of ila_lib : label is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of ila_lib : label is "ila,Vivado 2018.2";
+  attribute x_core_info of ila_lib : label is "ila,Vivado 2018.2.2";
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 50000000, PHASE 0.000";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1, FREQ_HZ 5e+07, PHASE 0.000";
 begin
   probe0_1 <= probe0(0);
 ila_lib: entity work.zsys_system_ila_1_0_bd_3419_ila_lib_0
@@ -64897,7 +64971,7 @@ entity zsys_system_ila_1_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_system_ila_1_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_system_ila_1_0 : entity is "bd_3419,Vivado 2018.2";
+  attribute x_core_info of zsys_system_ila_1_0 : entity is "bd_3419,Vivado 2018.2.2";
 end zsys_system_ila_1_0;
 
 architecture STRUCTURE of zsys_system_ila_1_0 is
@@ -64906,7 +64980,7 @@ architecture STRUCTURE of zsys_system_ila_1_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 CLK.clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.clk, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.clk, FREQ_HZ 5e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1";
 begin
 U0: entity work.zsys_system_ila_1_0_bd_3419
      port map (

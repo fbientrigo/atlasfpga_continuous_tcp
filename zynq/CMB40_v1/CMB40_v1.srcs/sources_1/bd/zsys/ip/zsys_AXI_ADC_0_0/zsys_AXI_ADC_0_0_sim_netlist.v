@@ -1,17 +1,242 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Tue Nov 21 16:14:50 2023
-// Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top zsys_AXI_ADC_0_0 -prefix
-//               zsys_AXI_ADC_0_0_ zsys_AXI_ADC_0_2_sim_netlist.v
-// Design      : zsys_AXI_ADC_0_2
+// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+// Date        : Mon Nov  4 01:09:39 2024
+// Host        : lapepuat11 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_AXI_ADC_0_0/zsys_AXI_ADC_0_0_sim_netlist.v
+// Design      : zsys_AXI_ADC_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z015clg485-2
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "zsys_AXI_ADC_0_0,AXI_ADC_v3,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "AXI_ADC_v3,Vivado 2018.2.2" *) 
+(* NotValidForBitStream *)
+module zsys_AXI_ADC_0_0
+   (i_MISO,
+    o_MOSI,
+    o_SCLK,
+    o_nCS,
+    o_ADC_nrst,
+    o_debug,
+    i_ADclk,
+    i_Lclk,
+    i_data_in_ch0_p,
+    i_data_in_ch0_n,
+    i_data_in_ch1_p,
+    i_data_in_ch1_n,
+    i_data_in_ch2_p,
+    i_data_in_ch2_n,
+    i_data_in_ch3_p,
+    i_data_in_ch3_n,
+    i_data_in_ch4_p,
+    i_data_in_ch4_n,
+    i_data_in_ch5_p,
+    i_data_in_ch5_n,
+    i_data_in_ch6_p,
+    i_data_in_ch6_n,
+    i_data_in_ch7_p,
+    i_data_in_ch7_n,
+    o_data_out_ch0,
+    o_data_out_ch1,
+    o_data_out_ch2,
+    o_data_out_ch3,
+    o_data_out_ch4,
+    o_data_out_ch5,
+    o_data_out_ch6,
+    o_data_out_ch7,
+    o_data_clk,
+    s00_axi_awaddr,
+    s00_axi_awprot,
+    s00_axi_awvalid,
+    s00_axi_awready,
+    s00_axi_wdata,
+    s00_axi_wstrb,
+    s00_axi_wvalid,
+    s00_axi_wready,
+    s00_axi_bresp,
+    s00_axi_bvalid,
+    s00_axi_bready,
+    s00_axi_araddr,
+    s00_axi_arprot,
+    s00_axi_arvalid,
+    s00_axi_arready,
+    s00_axi_rdata,
+    s00_axi_rresp,
+    s00_axi_rvalid,
+    s00_axi_rready,
+    s00_axi_aclk,
+    s00_axi_aresetn);
+  input i_MISO;
+  output o_MOSI;
+  output o_SCLK;
+  output o_nCS;
+  output o_ADC_nrst;
+  output [11:0]o_debug;
+  input i_ADclk;
+  input i_Lclk;
+  input i_data_in_ch0_p;
+  input i_data_in_ch0_n;
+  input i_data_in_ch1_p;
+  input i_data_in_ch1_n;
+  input i_data_in_ch2_p;
+  input i_data_in_ch2_n;
+  input i_data_in_ch3_p;
+  input i_data_in_ch3_n;
+  input i_data_in_ch4_p;
+  input i_data_in_ch4_n;
+  input i_data_in_ch5_p;
+  input i_data_in_ch5_n;
+  input i_data_in_ch6_p;
+  input i_data_in_ch6_n;
+  input i_data_in_ch7_p;
+  input i_data_in_ch7_n;
+  output [15:0]o_data_out_ch0;
+  output [15:0]o_data_out_ch1;
+  output [15:0]o_data_out_ch2;
+  output [15:0]o_data_out_ch3;
+  output [15:0]o_data_out_ch4;
+  output [15:0]o_data_out_ch5;
+  output [15:0]o_data_out_ch6;
+  output [15:0]o_data_out_ch7;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 o_data_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME o_data_clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_AXI_ADC_0_0_o_data_clk" *) output o_data_clk;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]s00_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [3:0]s00_axi_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) input s00_axi_rready;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input s00_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
+
+  wire \<const0> ;
+  wire i_ADclk;
+  wire i_Lclk;
+  wire i_MISO;
+  wire i_data_in_ch0_n;
+  wire i_data_in_ch0_p;
+  wire i_data_in_ch1_n;
+  wire i_data_in_ch1_p;
+  wire i_data_in_ch2_n;
+  wire i_data_in_ch2_p;
+  wire i_data_in_ch3_n;
+  wire i_data_in_ch3_p;
+  wire i_data_in_ch4_n;
+  wire i_data_in_ch4_p;
+  wire i_data_in_ch5_n;
+  wire i_data_in_ch5_p;
+  wire i_data_in_ch6_n;
+  wire i_data_in_ch6_p;
+  wire i_data_in_ch7_n;
+  wire i_data_in_ch7_p;
+  wire o_SCLK;
+  wire [15:0]o_data_out_ch0;
+  wire [15:0]o_data_out_ch1;
+  wire [15:0]o_data_out_ch2;
+  wire [15:0]o_data_out_ch3;
+  wire [15:0]o_data_out_ch4;
+  wire [15:0]o_data_out_ch5;
+  wire [15:0]o_data_out_ch6;
+  wire [15:0]o_data_out_ch7;
+  wire [11:0]\^o_debug ;
+  wire s00_axi_aclk;
+  wire [3:0]s00_axi_araddr;
+  wire s00_axi_aresetn;
+  wire s00_axi_arready;
+  wire s00_axi_arvalid;
+  wire [3:0]s00_axi_awaddr;
+  wire s00_axi_awready;
+  wire s00_axi_awvalid;
+  wire s00_axi_bready;
+  wire s00_axi_bvalid;
+  wire [31:0]s00_axi_rdata;
+  wire s00_axi_rready;
+  wire s00_axi_rvalid;
+  wire [31:0]s00_axi_wdata;
+  wire s00_axi_wready;
+  wire [3:0]s00_axi_wstrb;
+  wire s00_axi_wvalid;
+
+  assign o_ADC_nrst = \^o_debug [11];
+  assign o_MOSI = \^o_debug [5];
+  assign o_data_clk = i_ADclk;
+  assign o_debug[11:7] = \^o_debug [11:7];
+  assign o_debug[6] = o_SCLK;
+  assign o_debug[5] = \^o_debug [5];
+  assign o_debug[4] = i_MISO;
+  assign o_debug[2] = \^o_debug [2];
+  assign o_debug[0] = \^o_debug [0];
+  assign o_nCS = \^o_debug [7];
+  assign s00_axi_bresp[1] = \<const0> ;
+  assign s00_axi_bresp[0] = \<const0> ;
+  assign s00_axi_rresp[1] = \<const0> ;
+  assign s00_axi_rresp[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  zsys_AXI_ADC_0_0_AXI_ADC_v3 U0
+       (.CLKB(i_Lclk),
+        .i_ADclk(i_ADclk),
+        .i_Lclk(i_Lclk),
+        .i_data_in_ch0_n(i_data_in_ch0_n),
+        .i_data_in_ch0_p(i_data_in_ch0_p),
+        .i_data_in_ch1_n(i_data_in_ch1_n),
+        .i_data_in_ch1_p(i_data_in_ch1_p),
+        .i_data_in_ch2_n(i_data_in_ch2_n),
+        .i_data_in_ch2_p(i_data_in_ch2_p),
+        .i_data_in_ch3_n(i_data_in_ch3_n),
+        .i_data_in_ch3_p(i_data_in_ch3_p),
+        .i_data_in_ch4_n(i_data_in_ch4_n),
+        .i_data_in_ch4_p(i_data_in_ch4_p),
+        .i_data_in_ch5_n(i_data_in_ch5_n),
+        .i_data_in_ch5_p(i_data_in_ch5_p),
+        .i_data_in_ch6_n(i_data_in_ch6_n),
+        .i_data_in_ch6_p(i_data_in_ch6_p),
+        .i_data_in_ch7_n(i_data_in_ch7_n),
+        .i_data_in_ch7_p(i_data_in_ch7_p),
+        .o_data_out_ch0(o_data_out_ch0),
+        .o_data_out_ch1(o_data_out_ch1),
+        .o_data_out_ch2(o_data_out_ch2),
+        .o_data_out_ch3(o_data_out_ch3),
+        .o_data_out_ch4(o_data_out_ch4),
+        .o_data_out_ch5(o_data_out_ch5),
+        .o_data_out_ch6(o_data_out_ch6),
+        .o_data_out_ch7(o_data_out_ch7),
+        .o_debug({\^o_debug [11:7],o_SCLK,\^o_debug [5],\^o_debug [2],\^o_debug [0]}),
+        .s00_axi_aclk(s00_axi_aclk),
+        .s00_axi_araddr(s00_axi_araddr[3:2]),
+        .s00_axi_aresetn(s00_axi_aresetn),
+        .s00_axi_arready(s00_axi_arready),
+        .s00_axi_arvalid(s00_axi_arvalid),
+        .s00_axi_awaddr(s00_axi_awaddr[3:2]),
+        .s00_axi_awready(s00_axi_awready),
+        .s00_axi_awvalid(s00_axi_awvalid),
+        .s00_axi_bready(s00_axi_bready),
+        .s00_axi_bvalid(s00_axi_bvalid),
+        .s00_axi_rdata(s00_axi_rdata),
+        .s00_axi_rready(s00_axi_rready),
+        .s00_axi_rvalid(s00_axi_rvalid),
+        .s00_axi_wdata(s00_axi_wdata),
+        .s00_axi_wready(s00_axi_wready),
+        .s00_axi_wstrb(s00_axi_wstrb),
+        .s00_axi_wvalid(s00_axi_wvalid));
+endmodule
+
+(* ORIG_REF_NAME = "ADC_ctrl" *) 
 module zsys_AXI_ADC_0_0_ADC_ctrl
    (o_debug,
     s00_axi_aclk,
@@ -279,6 +504,7 @@ module zsys_AXI_ADC_0_0_ADC_ctrl
         .Q(L[2]));
 endmodule
 
+(* ORIG_REF_NAME = "ADC_readout_3" *) 
 module zsys_AXI_ADC_0_0_ADC_readout_3
    (o_data_out_ch0,
     SR,
@@ -1306,6 +1532,7 @@ module zsys_AXI_ADC_0_0_ADC_readout_3
         .O(SR));
 endmodule
 
+(* ORIG_REF_NAME = "AXI_ADC_v3" *) 
 module zsys_AXI_ADC_0_0_AXI_ADC_v3
    (o_data_out_ch0,
     o_data_out_ch1,
@@ -1492,6 +1719,7 @@ module zsys_AXI_ADC_0_0_AXI_ADC_v3
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "AXI_ADC_v3_0_S00_AXI" *) 
 module zsys_AXI_ADC_0_0_AXI_ADC_v3_0_S00_AXI
    (o_data_out_ch0,
     o_data_out_ch1,
@@ -3461,6 +3689,7 @@ module zsys_AXI_ADC_0_0_AXI_ADC_v3_0_S00_AXI
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "SPI_core_v2" *) 
 module zsys_AXI_ADC_0_0_SPI_core_v2
    (o_SCLK,
     AR,
@@ -4134,230 +4363,6 @@ module zsys_AXI_ADC_0_0_SPI_core_v2
         .I1(write_reg_reg),
         .I2(spi_free),
         .O(spi_start_reg));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "zsys_AXI_ADC_0_2,AXI_ADC_v3,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "AXI_ADC_v3,Vivado 2018.2" *) 
-(* NotValidForBitStream *)
-module zsys_AXI_ADC_0_0
-   (i_MISO,
-    o_MOSI,
-    o_SCLK,
-    o_nCS,
-    o_ADC_nrst,
-    o_debug,
-    i_ADclk,
-    i_Lclk,
-    i_data_in_ch0_p,
-    i_data_in_ch0_n,
-    i_data_in_ch1_p,
-    i_data_in_ch1_n,
-    i_data_in_ch2_p,
-    i_data_in_ch2_n,
-    i_data_in_ch3_p,
-    i_data_in_ch3_n,
-    i_data_in_ch4_p,
-    i_data_in_ch4_n,
-    i_data_in_ch5_p,
-    i_data_in_ch5_n,
-    i_data_in_ch6_p,
-    i_data_in_ch6_n,
-    i_data_in_ch7_p,
-    i_data_in_ch7_n,
-    o_data_out_ch0,
-    o_data_out_ch1,
-    o_data_out_ch2,
-    o_data_out_ch3,
-    o_data_out_ch4,
-    o_data_out_ch5,
-    o_data_out_ch6,
-    o_data_out_ch7,
-    o_data_clk,
-    s00_axi_awaddr,
-    s00_axi_awprot,
-    s00_axi_awvalid,
-    s00_axi_awready,
-    s00_axi_wdata,
-    s00_axi_wstrb,
-    s00_axi_wvalid,
-    s00_axi_wready,
-    s00_axi_bresp,
-    s00_axi_bvalid,
-    s00_axi_bready,
-    s00_axi_araddr,
-    s00_axi_arprot,
-    s00_axi_arvalid,
-    s00_axi_arready,
-    s00_axi_rdata,
-    s00_axi_rresp,
-    s00_axi_rvalid,
-    s00_axi_rready,
-    s00_axi_aclk,
-    s00_axi_aresetn);
-  input i_MISO;
-  output o_MOSI;
-  output o_SCLK;
-  output o_nCS;
-  output o_ADC_nrst;
-  output [11:0]o_debug;
-  input i_ADclk;
-  input i_Lclk;
-  input i_data_in_ch0_p;
-  input i_data_in_ch0_n;
-  input i_data_in_ch1_p;
-  input i_data_in_ch1_n;
-  input i_data_in_ch2_p;
-  input i_data_in_ch2_n;
-  input i_data_in_ch3_p;
-  input i_data_in_ch3_n;
-  input i_data_in_ch4_p;
-  input i_data_in_ch4_n;
-  input i_data_in_ch5_p;
-  input i_data_in_ch5_n;
-  input i_data_in_ch6_p;
-  input i_data_in_ch6_n;
-  input i_data_in_ch7_p;
-  input i_data_in_ch7_n;
-  output [15:0]o_data_out_ch0;
-  output [15:0]o_data_out_ch1;
-  output [15:0]o_data_out_ch2;
-  output [15:0]o_data_out_ch3;
-  output [15:0]o_data_out_ch4;
-  output [15:0]o_data_out_ch5;
-  output [15:0]o_data_out_ch6;
-  output [15:0]o_data_out_ch7;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 o_data_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME o_data_clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_AXI_ADC_0_2_o_data_clk" *) output o_data_clk;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]s00_axi_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [3:0]s00_axi_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) input s00_axi_rready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input s00_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
-
-  wire \<const0> ;
-  wire i_ADclk;
-  wire i_Lclk;
-  wire i_MISO;
-  wire i_data_in_ch0_n;
-  wire i_data_in_ch0_p;
-  wire i_data_in_ch1_n;
-  wire i_data_in_ch1_p;
-  wire i_data_in_ch2_n;
-  wire i_data_in_ch2_p;
-  wire i_data_in_ch3_n;
-  wire i_data_in_ch3_p;
-  wire i_data_in_ch4_n;
-  wire i_data_in_ch4_p;
-  wire i_data_in_ch5_n;
-  wire i_data_in_ch5_p;
-  wire i_data_in_ch6_n;
-  wire i_data_in_ch6_p;
-  wire i_data_in_ch7_n;
-  wire i_data_in_ch7_p;
-  wire o_SCLK;
-  wire [15:0]o_data_out_ch0;
-  wire [15:0]o_data_out_ch1;
-  wire [15:0]o_data_out_ch2;
-  wire [15:0]o_data_out_ch3;
-  wire [15:0]o_data_out_ch4;
-  wire [15:0]o_data_out_ch5;
-  wire [15:0]o_data_out_ch6;
-  wire [15:0]o_data_out_ch7;
-  wire [11:0]\^o_debug ;
-  wire s00_axi_aclk;
-  wire [3:0]s00_axi_araddr;
-  wire s00_axi_aresetn;
-  wire s00_axi_arready;
-  wire s00_axi_arvalid;
-  wire [3:0]s00_axi_awaddr;
-  wire s00_axi_awready;
-  wire s00_axi_awvalid;
-  wire s00_axi_bready;
-  wire s00_axi_bvalid;
-  wire [31:0]s00_axi_rdata;
-  wire s00_axi_rready;
-  wire s00_axi_rvalid;
-  wire [31:0]s00_axi_wdata;
-  wire s00_axi_wready;
-  wire [3:0]s00_axi_wstrb;
-  wire s00_axi_wvalid;
-
-  assign o_ADC_nrst = \^o_debug [11];
-  assign o_MOSI = \^o_debug [5];
-  assign o_data_clk = i_ADclk;
-  assign o_debug[11:7] = \^o_debug [11:7];
-  assign o_debug[6] = o_SCLK;
-  assign o_debug[5] = \^o_debug [5];
-  assign o_debug[4] = i_MISO;
-  assign o_debug[2] = \^o_debug [2];
-  assign o_debug[0] = \^o_debug [0];
-  assign o_nCS = \^o_debug [7];
-  assign s00_axi_bresp[1] = \<const0> ;
-  assign s00_axi_bresp[0] = \<const0> ;
-  assign s00_axi_rresp[1] = \<const0> ;
-  assign s00_axi_rresp[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  zsys_AXI_ADC_0_0_AXI_ADC_v3 U0
-       (.CLKB(i_Lclk),
-        .i_ADclk(i_ADclk),
-        .i_Lclk(i_Lclk),
-        .i_data_in_ch0_n(i_data_in_ch0_n),
-        .i_data_in_ch0_p(i_data_in_ch0_p),
-        .i_data_in_ch1_n(i_data_in_ch1_n),
-        .i_data_in_ch1_p(i_data_in_ch1_p),
-        .i_data_in_ch2_n(i_data_in_ch2_n),
-        .i_data_in_ch2_p(i_data_in_ch2_p),
-        .i_data_in_ch3_n(i_data_in_ch3_n),
-        .i_data_in_ch3_p(i_data_in_ch3_p),
-        .i_data_in_ch4_n(i_data_in_ch4_n),
-        .i_data_in_ch4_p(i_data_in_ch4_p),
-        .i_data_in_ch5_n(i_data_in_ch5_n),
-        .i_data_in_ch5_p(i_data_in_ch5_p),
-        .i_data_in_ch6_n(i_data_in_ch6_n),
-        .i_data_in_ch6_p(i_data_in_ch6_p),
-        .i_data_in_ch7_n(i_data_in_ch7_n),
-        .i_data_in_ch7_p(i_data_in_ch7_p),
-        .o_data_out_ch0(o_data_out_ch0),
-        .o_data_out_ch1(o_data_out_ch1),
-        .o_data_out_ch2(o_data_out_ch2),
-        .o_data_out_ch3(o_data_out_ch3),
-        .o_data_out_ch4(o_data_out_ch4),
-        .o_data_out_ch5(o_data_out_ch5),
-        .o_data_out_ch6(o_data_out_ch6),
-        .o_data_out_ch7(o_data_out_ch7),
-        .o_debug({\^o_debug [11:7],o_SCLK,\^o_debug [5],\^o_debug [2],\^o_debug [0]}),
-        .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_araddr(s00_axi_araddr[3:2]),
-        .s00_axi_aresetn(s00_axi_aresetn),
-        .s00_axi_arready(s00_axi_arready),
-        .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_awaddr(s00_axi_awaddr[3:2]),
-        .s00_axi_awready(s00_axi_awready),
-        .s00_axi_awvalid(s00_axi_awvalid),
-        .s00_axi_bready(s00_axi_bready),
-        .s00_axi_bvalid(s00_axi_bvalid),
-        .s00_axi_rdata(s00_axi_rdata),
-        .s00_axi_rready(s00_axi_rready),
-        .s00_axi_rvalid(s00_axi_rvalid),
-        .s00_axi_wdata(s00_axi_wdata),
-        .s00_axi_wready(s00_axi_wready),
-        .s00_axi_wstrb(s00_axi_wstrb),
-        .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 `ifndef GLBL
 `define GLBL

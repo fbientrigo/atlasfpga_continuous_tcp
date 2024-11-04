@@ -1760,6 +1760,15 @@ proc create_root_design { parentCell } {
    CONFIG.DOUT_WIDTH {1} \
  ] $xlslice_17
 
+  # Create instance: xlslice_18, and set properties
+  set xlslice_18 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_18 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {18} \
+   CONFIG.DIN_TO {18} \
+   CONFIG.DIN_WIDTH {32} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $xlslice_18
+
   # Create instance: xlslice_2to2, and set properties
   set xlslice_2to2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_2to2 ]
   set_property -dict [ list \
@@ -1786,15 +1795,6 @@ proc create_root_design { parentCell } {
    CONFIG.DIN_WIDTH {32} \
    CONFIG.DOUT_WIDTH {3} \
  ] $xlslice_4to6
-
-  # Create instance: xlslice_5, and set properties
-  set xlslice_5 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_5 ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {5} \
-   CONFIG.DIN_TO {5} \
-   CONFIG.DIN_WIDTH {32} \
-   CONFIG.DOUT_WIDTH {1} \
- ] $xlslice_5
 
   # Create instance: xlslice_7to14, and set properties
   set xlslice_7to14 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_7to14 ]
@@ -1900,7 +1900,7 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_net -net Vibufds_diff_out_0_o_MUXOUT_P [get_bd_pins ADC/MUXOUT_P] [get_bd_pins Vibufds_diff_out_0/o_MUXOUT_P]
   connect_bd_net -net axi_dma_0_mm2s_introut [get_bd_pins axi_dma_0/mm2s_introut] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net axi_dma_0_s2mm_introut [get_bd_pins axi_dma_0/s2mm_introut] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net axi_gpio_0_gpio2_io_o [get_bd_pins axi_gpio_0/gpio2_io_o] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_15/Din] [get_bd_pins xlslice_16/Din] [get_bd_pins xlslice_17/Din] [get_bd_pins xlslice_2to2/Din] [get_bd_pins xlslice_3to3/Din] [get_bd_pins xlslice_4to6/Din] [get_bd_pins xlslice_5/Din] [get_bd_pins xlslice_7to14/Din]
+  connect_bd_net -net axi_gpio_0_gpio2_io_o [get_bd_pins axi_gpio_0/gpio2_io_o] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_15/Din] [get_bd_pins xlslice_16/Din] [get_bd_pins xlslice_17/Din] [get_bd_pins xlslice_18/Din] [get_bd_pins xlslice_2to2/Din] [get_bd_pins xlslice_3to3/Din] [get_bd_pins xlslice_4to6/Din] [get_bd_pins xlslice_7to14/Din]
   connect_bd_net -net axi_gpio_1_gpio_io_o [get_bd_pins axi_gpio_1/gpio_io_o] [get_bd_pins xlslice_2/Din]
   connect_bd_net -net c_counter_binary_0_Q [get_bd_pins c_counter_binary_0/Q] [get_bd_pins xlconcat_1/In1]
   connect_bd_net -net c_counter_binary_1_Q [get_bd_pins c_counter_binary_1/Q] [get_bd_pins xlconcat_2/In1]
@@ -1963,7 +1963,7 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_net -net xlslice_3_Dout1 [get_bd_pins trigger_logic_0/i_trigg_mask] [get_bd_pins xlslice_7to14/Dout]
   connect_bd_net -net xlslice_3to3_Dout [get_bd_pins enable_signal_0/enable] [get_bd_pins xlslice_3to3/Dout]
   connect_bd_net -net xlslice_3to4_Dout [get_bd_pins DRS_A_test_0/i_en_test] [get_bd_pins xlslice_17/Dout]
-  connect_bd_net -net xlslice_5_Dout [get_bd_ports DAC_nCLR] [get_bd_pins xlslice_5/Dout]
+  connect_bd_net -net xlslice_5_Dout [get_bd_ports DAC_nCLR] [get_bd_pins xlslice_18/Dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces axi_dma_0/Data_SG] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM

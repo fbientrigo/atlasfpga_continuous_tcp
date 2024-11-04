@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/osotosan/2024_10_25_CMB_editable/CMB40_v1/CMB40_v1.runs/zsys_xlslice_3to3_2_synth_1'
+HD_PWD='C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/zsys_xlslice_3to3_2_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Aug 16 22:34:15 2023
-// Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top zsys_fifo8b_2_axis_0_0 -prefix
-//               zsys_fifo8b_2_axis_0_0_ zsys_fifo8b_2_axis_0_0_sim_netlist.v
+// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+// Date        : Mon Nov  4 01:07:50 2024
+// Host        : lapepuat11 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_fifo8b_2_axis_0_0/zsys_fifo8b_2_axis_0_0_sim_netlist.v
 // Design      : zsys_fifo8b_2_axis_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,6 +12,70 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "zsys_fifo8b_2_axis_0_0,fifo8b_2_axis_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "fifo8b_2_axis_v1_0,Vivado 2018.2.2" *) 
+(* NotValidForBitStream *)
+module zsys_fifo8b_2_axis_0_0
+   (i_fifo_din,
+    o_fifo_full,
+    i_fifo_we,
+    i_sending,
+    o_fifo_data_count,
+    i_force_send,
+    m00_axis_tdata,
+    m00_axis_tstrb,
+    m00_axis_tlast,
+    m00_axis_tvalid,
+    m00_axis_tready,
+    m00_axis_aclk,
+    m00_axis_aresetn);
+  input [7:0]i_fifo_din;
+  output o_fifo_full;
+  input i_fifo_we;
+  input i_sending;
+  output [3:0]o_fifo_data_count;
+  input i_force_send;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef" *) output [31:0]m00_axis_tdata;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TSTRB" *) output [3:0]m00_axis_tstrb;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TLAST" *) output m00_axis_tlast;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TVALID" *) output m00_axis_tvalid;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TREADY" *) input m00_axis_tready;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 M00_AXIS_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input m00_axis_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 M00_AXIS_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS_RST, POLARITY ACTIVE_LOW" *) input m00_axis_aresetn;
+
+  wire \<const1> ;
+  wire [7:0]i_fifo_din;
+  wire i_fifo_we;
+  wire i_sending;
+  wire m00_axis_aclk;
+  wire m00_axis_aresetn;
+  wire [31:0]m00_axis_tdata;
+  wire m00_axis_tlast;
+  wire m00_axis_tready;
+  wire m00_axis_tvalid;
+  wire [3:0]o_fifo_data_count;
+  wire o_fifo_full;
+
+  assign m00_axis_tstrb[3] = \<const1> ;
+  assign m00_axis_tstrb[2] = \<const1> ;
+  assign m00_axis_tstrb[1] = \<const1> ;
+  assign m00_axis_tstrb[0] = \<const1> ;
+  zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0 U0
+       (.i_fifo_din(i_fifo_din),
+        .i_fifo_we(i_fifo_we),
+        .i_sending(i_sending),
+        .m00_axis_aclk(m00_axis_aclk),
+        .m00_axis_aresetn(m00_axis_aresetn),
+        .m00_axis_tdata(m00_axis_tdata),
+        .m00_axis_tlast(m00_axis_tlast),
+        .m00_axis_tready(m00_axis_tready),
+        .m00_axis_tvalid(m00_axis_tvalid),
+        .o_fifo_data_count(o_fifo_data_count),
+        .o_fifo_full(o_fifo_full));
+  VCC VCC
+       (.P(\<const1> ));
+endmodule
+
+(* ORIG_REF_NAME = "fifo8b_2_axis_v1_0" *) 
 module zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0
    (o_fifo_data_count,
     o_fifo_full,
@@ -62,6 +126,7 @@ module zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0
         .o_fifo_full(o_fifo_full));
 endmodule
 
+(* ORIG_REF_NAME = "fifo8b_2_axis_v1_0_M00_AXIS" *) 
 module zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0_M00_AXIS
    (o_fifo_data_count,
     o_fifo_full,
@@ -918,7 +983,8 @@ module zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0_M00_AXIS
         .R(srst));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "fifo_generator_1,fifo_generator_v13_2_2,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "fifo_generator_v13_2_2,Vivado 2018.2" *) 
+(* CHECK_LICENSE_TYPE = "fifo_generator_1,fifo_generator_v13_2_2,{}" *) (* ORIG_REF_NAME = "fifo_generator_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* x_core_info = "fifo_generator_v13_2_2,Vivado 2018.2" *) 
 module zsys_fifo8b_2_axis_0_0_fifo_generator_1
    (clk,
     srst,
@@ -1507,69 +1573,7 @@ module zsys_fifo8b_2_axis_0_0_fifo_generator_1
         .wr_rst_busy(NLW_U0_wr_rst_busy_UNCONNECTED));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "zsys_fifo8b_2_axis_0_0,fifo8b_2_axis_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "fifo8b_2_axis_v1_0,Vivado 2018.2" *) 
-(* NotValidForBitStream *)
-module zsys_fifo8b_2_axis_0_0
-   (i_fifo_din,
-    o_fifo_full,
-    i_fifo_we,
-    i_sending,
-    o_fifo_data_count,
-    i_force_send,
-    m00_axis_tdata,
-    m00_axis_tstrb,
-    m00_axis_tlast,
-    m00_axis_tvalid,
-    m00_axis_tready,
-    m00_axis_aclk,
-    m00_axis_aresetn);
-  input [7:0]i_fifo_din;
-  output o_fifo_full;
-  input i_fifo_we;
-  input i_sending;
-  output [3:0]o_fifo_data_count;
-  input i_force_send;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef" *) output [31:0]m00_axis_tdata;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TSTRB" *) output [3:0]m00_axis_tstrb;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TLAST" *) output m00_axis_tlast;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TVALID" *) output m00_axis_tvalid;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS TREADY" *) input m00_axis_tready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 M00_AXIS_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input m00_axis_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 M00_AXIS_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS_RST, POLARITY ACTIVE_LOW" *) input m00_axis_aresetn;
-
-  wire \<const1> ;
-  wire [7:0]i_fifo_din;
-  wire i_fifo_we;
-  wire i_sending;
-  wire m00_axis_aclk;
-  wire m00_axis_aresetn;
-  wire [31:0]m00_axis_tdata;
-  wire m00_axis_tlast;
-  wire m00_axis_tready;
-  wire m00_axis_tvalid;
-  wire [3:0]o_fifo_data_count;
-  wire o_fifo_full;
-
-  assign m00_axis_tstrb[3] = \<const1> ;
-  assign m00_axis_tstrb[2] = \<const1> ;
-  assign m00_axis_tstrb[1] = \<const1> ;
-  assign m00_axis_tstrb[0] = \<const1> ;
-  zsys_fifo8b_2_axis_0_0_fifo8b_2_axis_v1_0 U0
-       (.i_fifo_din(i_fifo_din),
-        .i_fifo_we(i_fifo_we),
-        .i_sending(i_sending),
-        .m00_axis_aclk(m00_axis_aclk),
-        .m00_axis_aresetn(m00_axis_aresetn),
-        .m00_axis_tdata(m00_axis_tdata),
-        .m00_axis_tlast(m00_axis_tlast),
-        .m00_axis_tready(m00_axis_tready),
-        .m00_axis_tvalid(m00_axis_tvalid),
-        .o_fifo_data_count(o_fifo_data_count),
-        .o_fifo_full(o_fifo_full));
-  VCC VCC
-       (.P(\<const1> ));
-endmodule
-
+(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module zsys_fifo8b_2_axis_0_0_blk_mem_gen_generic_cstr
    (dout,
     clk,
@@ -1608,6 +1612,7 @@ module zsys_fifo8b_2_axis_0_0_blk_mem_gen_generic_cstr
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_width
    (dout,
     clk,
@@ -1646,6 +1651,7 @@ module zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_width
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_wrapper
    (dout,
     clk,
@@ -1827,6 +1833,7 @@ module zsys_fifo8b_2_axis_0_0_blk_mem_gen_prim_wrapper
         .WEBWE({E,E,E,E}));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module zsys_fifo8b_2_axis_0_0_blk_mem_gen_top
    (dout,
     clk,
@@ -1865,6 +1872,7 @@ module zsys_fifo8b_2_axis_0_0_blk_mem_gen_top
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) 
 module zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1
    (dout,
     clk,
@@ -1903,6 +1911,7 @@ module zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
 module zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1_synth
    (dout,
     clk,
@@ -1941,6 +1950,7 @@ module zsys_fifo8b_2_axis_0_0_blk_mem_gen_v8_4_1_synth
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "dc_ss" *) 
 module zsys_fifo8b_2_axis_0_0_dc_ss
    (Q,
     out,
@@ -1971,6 +1981,7 @@ module zsys_fifo8b_2_axis_0_0_dc_ss
         .srst(srst));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module zsys_fifo8b_2_axis_0_0_fifo_generator_ramfifo
    (dout,
     empty,
@@ -2047,6 +2058,7 @@ module zsys_fifo8b_2_axis_0_0_fifo_generator_ramfifo
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module zsys_fifo8b_2_axis_0_0_fifo_generator_top
    (dout,
     empty,
@@ -2156,7 +2168,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "4" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "10" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_2_2" *) 
 module zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2
    (backup,
     backup_marker,
@@ -3152,6 +3164,7 @@ module zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_v13_2_2_synth" *) 
 module zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2_synth
    (dout,
     empty,
@@ -3194,6 +3207,7 @@ module zsys_fifo8b_2_axis_0_0_fifo_generator_v13_2_2_synth
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "memory" *) 
 module zsys_fifo8b_2_axis_0_0_memory
    (dout,
     clk,
@@ -3232,6 +3246,7 @@ module zsys_fifo8b_2_axis_0_0_memory
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module zsys_fifo8b_2_axis_0_0_rd_bin_cntr
    (ram_empty_i_reg,
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram ,
@@ -3367,6 +3382,7 @@ module zsys_fifo8b_2_axis_0_0_rd_bin_cntr
         .O(ram_empty_fb_i_i_3_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "rd_logic" *) 
 module zsys_fifo8b_2_axis_0_0_rd_logic
    (out,
     empty,
@@ -3439,6 +3455,7 @@ module zsys_fifo8b_2_axis_0_0_rd_logic
         .srst(srst));
 endmodule
 
+(* ORIG_REF_NAME = "rd_status_flags_ss" *) 
 module zsys_fifo8b_2_axis_0_0_rd_status_flags_ss
    (out,
     empty,
@@ -3522,6 +3539,7 @@ module zsys_fifo8b_2_axis_0_0_rd_status_flags_ss
         .S(srst));
 endmodule
 
+(* ORIG_REF_NAME = "updn_cntr" *) 
 module zsys_fifo8b_2_axis_0_0_updn_cntr
    (Q,
     out,
@@ -3615,6 +3633,7 @@ module zsys_fifo8b_2_axis_0_0_updn_cntr
         .R(srst));
 endmodule
 
+(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module zsys_fifo8b_2_axis_0_0_wr_bin_cntr
    (ram_full_fb_i_reg,
     ram_empty_i_reg,
@@ -3809,6 +3828,7 @@ module zsys_fifo8b_2_axis_0_0_wr_bin_cntr
         .O(ram_full_fb_i_i_5_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "wr_logic" *) 
 module zsys_fifo8b_2_axis_0_0_wr_logic
    (out,
     full,
@@ -3872,6 +3892,7 @@ module zsys_fifo8b_2_axis_0_0_wr_logic
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "wr_status_flags_ss" *) 
 module zsys_fifo8b_2_axis_0_0_wr_status_flags_ss
    (out,
     full,

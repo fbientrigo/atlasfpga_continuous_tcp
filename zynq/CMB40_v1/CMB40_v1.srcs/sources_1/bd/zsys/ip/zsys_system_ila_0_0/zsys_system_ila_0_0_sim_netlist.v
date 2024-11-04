@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-// Date        : Fri Oct 18 12:47:15 2024
-// Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+// Date        : Mon Nov  4 01:09:41 2024
+// Host        : lapepuat11 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/2024_10_02_proyecto/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_0_0/zsys_system_ila_0_0_sim_netlist.v
+//               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_system_ila_0_0/zsys_system_ila_0_0_sim_netlist.v
 // Design      : zsys_system_ila_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "zsys_system_ila_0_0,bd_f448,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "bd_f448,Vivado 2018.2" *) 
+(* CHECK_LICENSE_TYPE = "zsys_system_ila_0_0,bd_f448,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "bd_f448,Vivado 2018.2.2" *) 
 (* NotValidForBitStream *)
 module zsys_system_ila_0_0
    (clk,
@@ -25,7 +25,7 @@ module zsys_system_ila_0_0
     probe6,
     probe7,
     probe8);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.clk, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input clk;
   input [0:0]probe0;
   input [0:0]probe1;
   input [0:0]probe2;
@@ -73,7 +73,7 @@ module zsys_system_ila_0_0_bd_f448
     probe6,
     probe7,
     probe8);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, PHASE 0.000" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 1e+08, PHASE 0.000" *) input clk;
   input [0:0]probe0;
   input [0:0]probe1;
   input [0:0]probe2;
@@ -106,7 +106,7 @@ module zsys_system_ila_0_0_bd_f448
   assign probe8_1 = probe8[0];
   (* CHECK_LICENSE_TYPE = "bd_f448_ila_lib_0,ila_v6_2_7_ila,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  (* x_core_info = "ila,Vivado 2018.2" *) 
+  (* x_core_info = "ila,Vivado 2018.2.2" *) 
   zsys_system_ila_0_0_bd_f448_ila_lib_0 ila_lib
        (.clk(clk),
         .probe0(probe0_1),
@@ -121,7 +121,7 @@ module zsys_system_ila_0_0_bd_f448
 endmodule
 
 (* CHECK_LICENSE_TYPE = "bd_f448_ila_lib_0,ila_v6_2_7_ila,{}" *) (* ORIG_REF_NAME = "bd_f448_ila_lib_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "ila,Vivado 2018.2" *) 
+(* x_core_info = "ila,Vivado 2018.2.2" *) 
 module zsys_system_ila_0_0_bd_f448_ila_lib_0
    (clk,
     probe0,
@@ -16118,7 +16118,7 @@ endmodule
 (* ORIG_REF_NAME = "ila_v6_2_7_ila_cap_addrgen" *) 
 module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_addrgen
    (A,
-    \iscnt_reg[9] ,
+    \iscnt_reg[0] ,
     wcnt_hcmp,
     out,
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram ,
@@ -16140,7 +16140,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_addrgen
     arm_ctrl,
     \reset_out_reg[0] );
   output [2:0]A;
-  output [0:0]\iscnt_reg[9] ;
+  output [0:0]\iscnt_reg[0] ;
   output wcnt_hcmp;
   output [9:0]out;
   output \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram ;
@@ -16185,7 +16185,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_addrgen
   (* DONT_TOUCH *) (* RTL_KEEP = "yes" *) (* async_reg = "true" *) wire [9:0]icap_addr;
   (* DONT_TOUCH *) (* RTL_KEEP = "yes" *) (* async_reg = "true" *) wire icap_wr_en;
   wire [0:0]in0;
-  wire [0:0]\iscnt_reg[9] ;
+  wire [0:0]\iscnt_reg[0] ;
   wire n_0_0;
   wire n_0_1;
   wire n_0_10;
@@ -16228,7 +16228,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_addrgen
         .cfg_data_1(cfg_data_1),
         .cmp_reset(cmp_reset),
         .s_dclk_o(s_dclk_o),
-        .u_scnt_cmp_q(\iscnt_reg[9] ));
+        .u_scnt_cmp_q(\iscnt_reg[0] ));
   FDRE #(
     .INIT(1'b0)) 
     \captured_samples_reg[0] 
@@ -17219,7 +17219,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_addrgen
         .clk(clk),
         .cmp_reset(cmp_reset),
         .en_adv_trigger_reg(en_adv_trigger_reg),
-        .\iscnt_reg[9]_0 (\iscnt_reg[9] ),
+        .\iscnt_reg[0]_0 (\iscnt_reg[0] ),
         .out(cfg_data_vec_sync2[10:1]),
         .s_dclk_o(s_dclk_o),
         .shift_en_reg(E),
@@ -17402,7 +17402,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_ctrl_legacy
         .clk(clk),
         .en_adv_trigger_reg(en_adv_trigger_reg),
         .in0(cfg_data_1),
-        .\iscnt_reg[9] (scnt_cmp),
+        .\iscnt_reg[0] (scnt_cmp),
         .out(out),
         .\reset_out_reg[0] (\reset_out_reg[0] ),
         .s_dclk_o(s_dclk_o),
@@ -17417,7 +17417,7 @@ endmodule
 module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter
    (E,
     u_scnt_cmp_q_0,
-    \iscnt_reg[9]_0 ,
+    \iscnt_reg[0]_0 ,
     D,
     SRL_Q_O,
     shift_en_reg,
@@ -17434,7 +17434,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter
     Q);
   output [0:0]E;
   output [1:0]u_scnt_cmp_q_0;
-  output [0:0]\iscnt_reg[9]_0 ;
+  output [0:0]\iscnt_reg[0]_0 ;
   output [9:0]D;
   output SRL_Q_O;
   input [0:0]shift_en_reg;
@@ -17467,7 +17467,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter
   wire cmp_reset;
   wire en_adv_trigger_reg;
   wire \iscnt[9]_i_3_n_0 ;
-  wire [0:0]\iscnt_reg[9]_0 ;
+  wire [0:0]\iscnt_reg[0]_0 ;
   wire [9:0]out;
   wire [9:0]p_0_in__13;
   wire s_dclk_o;
@@ -17485,7 +17485,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter
         .s_dclk_o(s_dclk_o),
         .shift_en_reg(shift_en_reg));
   zsys_system_ila_0_0_ltlib_v1_0_0_cfglut5_62 U_SCMPCE
-       (.A({\iscnt_reg[9]_0 ,u_scnt_cmp_q_0,A[1:0]}),
+       (.A({\iscnt_reg[0]_0 ,u_scnt_cmp_q_0,A[1:0]}),
         .cfg_data_0(cfg_data_0),
         .cfg_data_1_0(cfg_data_1_0),
         .s_dclk_o(s_dclk_o),
@@ -17502,7 +17502,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter
         .s_dclk_o(s_dclk_o),
         .shift_en_reg(shift_en_reg),
         .u_scnt_cmp_q(u_scnt_cmp_q_0),
-        .u_scnt_cmp_q_0(\iscnt_reg[9]_0 ));
+        .u_scnt_cmp_q_0(\iscnt_reg[0]_0 ));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hB8)) 
@@ -17595,7 +17595,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter
         .I1(scnt[1]),
         .I2(scnt[2]),
         .O(p_0_in__13[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \iscnt[3]_i_1 
@@ -17604,7 +17604,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter
         .I2(scnt[2]),
         .I3(scnt[3]),
         .O(p_0_in__13[3]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \iscnt[4]_i_1 
@@ -17639,7 +17639,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter
         .I1(scnt[6]),
         .I2(scnt[7]),
         .O(p_0_in__13[7]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \iscnt[8]_i_1 
@@ -17648,7 +17648,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter
         .I2(scnt[7]),
         .I3(scnt[8]),
         .O(p_0_in__13[8]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \iscnt[9]_i_2 
@@ -17747,7 +17747,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_sample_counter
        (.C(clk),
         .CE(scnt_cmp_ce),
         .D(scnt_cmp_temp),
-        .Q(\iscnt_reg[9]_0 ),
+        .Q(\iscnt_reg[0]_0 ),
         .R(cmp_reset));
 endmodule
 
@@ -17851,7 +17851,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_window_counter
         .I1(Q[1]),
         .I2(Q[2]),
         .O(p_0_in__14[2]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \iwcnt[3]_i_1 
@@ -17860,7 +17860,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_window_counter
         .I2(Q[2]),
         .I3(Q[3]),
         .O(p_0_in__14[3]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \iwcnt[4]_i_1 
@@ -17895,7 +17895,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_window_counter
         .I1(Q[6]),
         .I2(Q[7]),
         .O(p_0_in__14[7]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \iwcnt[8]_i_1 
@@ -17904,7 +17904,7 @@ module zsys_system_ila_0_0_ila_v6_2_7_ila_cap_window_counter
         .I2(Q[7]),
         .I3(Q[8]),
         .O(p_0_in__14[8]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \iwcnt[9]_i_1 
