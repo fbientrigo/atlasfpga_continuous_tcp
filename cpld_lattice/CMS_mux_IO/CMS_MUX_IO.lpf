@@ -24,6 +24,7 @@ LOCATE COMP "P3_monitor" SITE "P3";
 LOCATE COMP "P6_monitor" SITE "P6";  
 LOCATE COMP "E14_monitor" SITE "E14"; 
 LOCATE COMP "E15_monitor" SITE "E15";   
+LOCATE COMP "E17_monitor" SITE "E17";   
 
 LOCATE COMP "Mezz1_ADC_ch_i_p[0]" SITE "Y4" ;
 LOCATE COMP "Mezz1_ADC_ch_i_p[1]" SITE "AA5" ;

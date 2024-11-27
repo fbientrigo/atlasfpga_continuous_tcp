@@ -117,6 +117,7 @@ entity top_cms_mux is
         E14_monitor : out std_logic;
         E15_monitor   : out std_logic;
 		F16_monitor : out std_logic;
+		E17_monitor : out std_logic;
 
 		rst	: in std_logic;
 		Mux_sel: in std_logic_vector ( 2 downto 0 )
@@ -503,10 +504,12 @@ end process;
 
 ---------------------------Select process--------------------
 --- osoto mod
-P3_monitor <= DRS4_A_buf(0);
-E15_monitor <= DRS4_A_buf(1);
-P6_monitor <= DRS4_A_buf(2);
-E14_monitor <= DRS4_A_buf(3);
+P3_monitor <= ADC_ADCLK_out;  -- Equal to signal: CPLD_ADC_ADCLK_o_p;
+E15_monitor <= spi_miso_monitor;   -- Equal to signal: CSR_MISO;
+P6_monitor <= ADC_ch_out_sel(0);    -- Equal to ssignal: CPLD_ADC_ch_o_p(0);
+E14_monitor <= ADC_LCLK_out;   -- Equal to signal: CPLD_ADC_LCLK_o_p;
+E17_monitor <= CSR_MOSI;
+
 --- end osoto
 process(Mux_sel)
 begin
