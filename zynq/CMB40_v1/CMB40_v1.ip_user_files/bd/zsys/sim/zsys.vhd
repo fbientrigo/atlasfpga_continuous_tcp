@@ -1,8 +1,8 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
---Date        : Sun Oct 27 00:06:39 2024
---Host        : lapepuat11 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+--Date        : Mon Nov  4 16:07:42 2024
+--Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
 --Command     : generate_target zsys.bd
 --Design      : zsys
 --Purpose     : IP block netlist
@@ -3686,6 +3686,7 @@ use UNISIM.VCOMPONENTS.ALL;
     CSR_SCLK_N : out STD_LOGIC_VECTOR ( 0 to 0 );
     CSR_SCLK_P : out STD_LOGIC_VECTOR ( 0 to 0 );
     CSR_nCS : out STD_LOGIC_VECTOR ( 0 to 0 );
+    DAC_nCLR : out STD_LOGIC_VECTOR ( 0 to 0 );
     DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
     DDR_ba : inout STD_LOGIC_VECTOR ( 2 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
@@ -3737,7 +3738,7 @@ use UNISIM.VCOMPONENTS.ALL;
     MUX_SEL : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of zsys : entity is "zsys,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zsys,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=84,numReposBlks=71,numNonXlnxBlks=0,numHierBlks=13,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=15,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=34,da_board_cnt=3,da_clkrst_cnt=16,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of zsys : entity is "zsys,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zsys,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=85,numReposBlks=72,numNonXlnxBlks=0,numHierBlks=13,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=15,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=34,da_board_cnt=3,da_clkrst_cnt=16,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of zsys : entity is "zsys.hwdef";
 end zsys;
@@ -4415,6 +4416,12 @@ architecture STRUCTURE of zsys is
     OBUF_DS_N : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component zsys_util_ds_buf_0_2;
+  component zsys_xlslice_3to3_2 is
+  port (
+    Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component zsys_xlslice_3to3_2;
   component zsys_axi_dma_0_0 is
   port (
     s_axi_lite_aclk : in STD_LOGIC;
@@ -5113,6 +5120,7 @@ architecture STRUCTURE of zsys is
   signal xlslice_3_Dout1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal xlslice_3to3_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_3to4_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal xlslice_5_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_DRS4_firmware_1_o_ROFS_UNCONNECTED : STD_LOGIC;
   signal NLW_DRS4_firmware_1_o_denable_UNCONNECTED : STD_LOGIC;
   signal NLW_DRS4_firmware_1_o_nReset_UNCONNECTED : STD_LOGIC;
@@ -5243,6 +5251,7 @@ begin
   CSR_SCLK_N(0) <= util_ds_buf_5_OBUF_DS_N(0);
   CSR_SCLK_P(0) <= util_ds_buf_5_OBUF_DS_P(0);
   CSR_nCS(0) <= CPLD_ctrl_0_CPLD_SPI_nCS;
+  DAC_nCLR(0) <= xlslice_5_Dout(0);
   DRS_A(3 downto 0) <= DRS_A_test_0_o_A_vec(3 downto 0);
   DRS_DTAP0_1(0) <= DRS_DTAP0(0);
   DRS_DTAP1_1(0) <= DRS_DTAP1(0);
@@ -6350,6 +6359,11 @@ xlslice_17: component zsys_xlslice_3to3_1
      port map (
       Din(31 downto 0) => axi_gpio_0_gpio2_io_o(31 downto 0),
       Dout(0) => xlslice_3to4_Dout(0)
+    );
+xlslice_18: component zsys_xlslice_3to3_2
+     port map (
+      Din(31 downto 0) => axi_gpio_0_gpio2_io_o(31 downto 0),
+      Dout(0) => xlslice_5_Dout(0)
     );
 xlslice_2: component zsys_xlslice_2_2
      port map (

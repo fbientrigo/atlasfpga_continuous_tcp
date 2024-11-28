@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2018.2.2 (64-bit)
-# SW Build 2348494 on Mon Oct  1 18:25:44 MDT 2018
-# IP Build 2318053 on Mon Oct  1 21:44:26 MDT 2018
-# Start of session at: Mon Nov  4 01:13:04 2024
-# Process ID: 29668
-# Current directory: C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/impl_1
-# Command line: vivado.exe -log zsys_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source zsys_wrapper.tcl -notrace
-# Log file: C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/impl_1/zsys_wrapper.vdi
-# Journal file: C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/impl_1\vivado.jou
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Nov 27 17:40:43 2024
+# Process ID: 73474
+# Current directory: /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/impl_1
+# Command line: vivado -log zsys_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source zsys_wrapper.tcl -notrace
+# Log file: /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/impl_1/zsys_wrapper.vdi
+# Journal file: /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
 source zsys_wrapper.tcl -notrace

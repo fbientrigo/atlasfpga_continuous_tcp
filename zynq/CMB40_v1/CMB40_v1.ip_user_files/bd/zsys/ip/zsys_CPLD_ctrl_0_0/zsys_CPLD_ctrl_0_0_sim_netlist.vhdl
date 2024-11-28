@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Aug 16 22:33:23 2023
--- Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top zsys_CPLD_ctrl_0_0 -prefix
---               zsys_CPLD_ctrl_0_0_ zsys_CPLD_ctrl_0_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+-- Date        : Mon Nov  4 01:07:12 2024
+-- Host        : lapepuat11 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_CPLD_ctrl_0_0/zsys_CPLD_ctrl_0_0_sim_netlist.vhdl
 -- Design      : zsys_CPLD_ctrl_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,7 +20,7 @@ entity zsys_CPLD_ctrl_0_0_CPLD_comm_module is
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     CPLD_SPI_MOSI : out STD_LOGIC;
     CPLD_SPI_nCS : out STD_LOGIC;
-    D : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 14 downto 0 );
     CPLD_Mux_sel : out STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     SPI_MISO : in STD_LOGIC;
@@ -30,11 +30,13 @@ entity zsys_CPLD_ctrl_0_0_CPLD_comm_module is
     axi_awready_reg : in STD_LOGIC;
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 12 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 14 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 13 downto 0 );
     SPI_WR_en : in STD_LOGIC;
     \mezz_mux_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_CPLD_ctrl_0_0_CPLD_comm_module : entity is "CPLD_comm_module";
 end zsys_CPLD_ctrl_0_0_CPLD_comm_module;
 
 architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_comm_module is
@@ -56,10 +58,12 @@ architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_comm_module is
   signal SPI_MOSI_i_2_n_0 : STD_LOGIC;
   signal SPI_MOSI_i_4_n_0 : STD_LOGIC;
   signal SPI_SCLK_i_1_n_0 : STD_LOGIC;
-  signal SPI_WRDATA : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal SPI_WRDATA : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal SPI_WRDATA0 : STD_LOGIC;
   signal \SPI_WRDATA_reg_n_0_[0]\ : STD_LOGIC;
   signal \SPI_WRDATA_reg_n_0_[10]\ : STD_LOGIC;
+  signal \SPI_WRDATA_reg_n_0_[11]\ : STD_LOGIC;
+  signal \SPI_WRDATA_reg_n_0_[12]\ : STD_LOGIC;
   signal \SPI_WRDATA_reg_n_0_[1]\ : STD_LOGIC;
   signal \SPI_WRDATA_reg_n_0_[2]\ : STD_LOGIC;
   signal \SPI_WRDATA_reg_n_0_[3]\ : STD_LOGIC;
@@ -74,6 +78,7 @@ architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_comm_module is
   signal \SPI_bit_counter[1]_i_1_n_0\ : STD_LOGIC;
   signal \SPI_bit_counter[2]_i_1_n_0\ : STD_LOGIC;
   signal \SPI_bit_counter[3]_i_2_n_0\ : STD_LOGIC;
+  signal \SPI_bit_counter[3]_i_3_n_0\ : STD_LOGIC;
   signal \SPI_bit_counter_reg_n_0_[0]\ : STD_LOGIC;
   signal \SPI_bit_counter_reg_n_0_[1]\ : STD_LOGIC;
   signal \SPI_bit_counter_reg_n_0_[2]\ : STD_LOGIC;
@@ -106,13 +111,15 @@ architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_comm_module is
   signal \cpld_count_bit_reg_n_0_[1]\ : STD_LOGIC;
   signal \cpld_count_bit_reg_n_0_[2]\ : STD_LOGIC;
   signal \cpld_count_bit_reg_n_0_[3]\ : STD_LOGIC;
-  signal cpld_data_rec : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal \cpld_data_rec[11]_i_1_n_0\ : STD_LOGIC;
-  signal \data_in[11]_i_1_n_0\ : STD_LOGIC;
-  signal \data_in[11]_i_2_n_0\ : STD_LOGIC;
+  signal cpld_data_rec : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal \cpld_data_rec[13]_i_1_n_0\ : STD_LOGIC;
+  signal \data_in[13]_i_1_n_0\ : STD_LOGIC;
+  signal \data_in[13]_i_2_n_0\ : STD_LOGIC;
   signal \data_in_reg_n_0_[0]\ : STD_LOGIC;
   signal \data_in_reg_n_0_[10]\ : STD_LOGIC;
   signal \data_in_reg_n_0_[11]\ : STD_LOGIC;
+  signal \data_in_reg_n_0_[12]\ : STD_LOGIC;
+  signal \data_in_reg_n_0_[13]\ : STD_LOGIC;
   signal \data_in_reg_n_0_[1]\ : STD_LOGIC;
   signal \data_in_reg_n_0_[2]\ : STD_LOGIC;
   signal \data_in_reg_n_0_[3]\ : STD_LOGIC;
@@ -122,10 +129,7 @@ architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_comm_module is
   signal \data_in_reg_n_0_[7]\ : STD_LOGIC;
   signal \data_in_reg_n_0_[8]\ : STD_LOGIC;
   signal \data_in_reg_n_0_[9]\ : STD_LOGIC;
-  signal flag_end_data : STD_LOGIC;
   signal flag_end_data_i_1_n_0 : STD_LOGIC;
-  signal flag_end_data_i_2_n_0 : STD_LOGIC;
-  signal flag_end_data_i_3_n_0 : STD_LOGIC;
   signal flag_end_data_reg_n_0 : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
   signal start_SPI_com : STD_LOGIC;
@@ -152,16 +156,16 @@ architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_comm_module is
   attribute KEEP of \FSM_sequential_SPI_states_reg[1]\ : label is "yes";
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of SPI_MOSI_i_2 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of SPI_MOSI_i_4 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of SPI_MOSI_i_4 : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of SPI_SCLK_i_1 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \SPI_counter[0]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \SPI_counter[1]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \SPI_counter[0]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \SPI_counter[1]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \SPI_counter[2]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \count_wr[1]_i_2\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \count_wr[1]_i_3\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \count_wr[2]_i_2\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \count_wr[2]_i_3\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of start_SPI_com_i_4 : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \count_wr[2]_i_3\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of start_SPI_com_i_4 : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of wr_en_1_i_1 : label is "soft_lutpair2";
 begin
   CPLD_SPI_MOSI <= \^cpld_spi_mosi\;
@@ -178,17 +182,15 @@ begin
       I2 => CPLD_states_spi(1),
       O => \FSM_sequential_CPLD_states_spi[0]_i_1_n_0\
     );
-\FSM_sequential_CPLD_states_spi[1]_i_1\: unisim.vcomponents.LUT6
+\FSM_sequential_CPLD_states_spi[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"AAAA555DFFFF0008"
+      INIT => X"8DF8"
     )
         port map (
       I0 => CPLD_states_spi(0),
-      I1 => \cpld_count_bit_reg_n_0_[3]\,
-      I2 => \cpld_count_bit_reg_n_0_[2]\,
-      I3 => \FSM_sequential_CPLD_states_spi[1]_i_3_n_0\,
-      I4 => CPLD_states_spi(1),
-      I5 => SPI_MISO,
+      I1 => \FSM_sequential_CPLD_states_spi[1]_i_3_n_0\,
+      I2 => CPLD_states_spi(1),
+      I3 => SPI_MISO,
       O => \FSM_sequential_CPLD_states_spi[1]_i_1_n_0\
     );
 \FSM_sequential_CPLD_states_spi[1]_i_2\: unisim.vcomponents.LUT3
@@ -201,13 +203,16 @@ begin
       I2 => SPI_MISO,
       O => \FSM_sequential_CPLD_states_spi[1]_i_2_n_0\
     );
-\FSM_sequential_CPLD_states_spi[1]_i_3\: unisim.vcomponents.LUT2
+\FSM_sequential_CPLD_states_spi[1]_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7"
+      INIT => X"AAEAAAAA"
     )
         port map (
-      I0 => \cpld_count_bit_reg_n_0_[1]\,
-      I1 => \cpld_count_bit_reg_n_0_[0]\,
+      I0 => CPLD_states_spi(1),
+      I1 => \cpld_count_bit_reg_n_0_[3]\,
+      I2 => \cpld_count_bit_reg_n_0_[0]\,
+      I3 => \cpld_count_bit_reg_n_0_[1]\,
+      I4 => \cpld_count_bit_reg_n_0_[2]\,
       O => \FSM_sequential_CPLD_states_spi[1]_i_3_n_0\
     );
 \FSM_sequential_CPLD_states_spi_reg[0]\: unisim.vcomponents.FDCE
@@ -329,17 +334,16 @@ SPI_MOSI_i_2: unisim.vcomponents.LUT4
       I3 => \^cpld_spi_sclk\,
       O => SPI_MOSI_i_2_n_0
     );
-SPI_MOSI_i_3: unisim.vcomponents.LUT6
+SPI_MOSI_i_3: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FF15FFFFFF0000FF"
+      INIT => X"F4FFF00F"
     )
         port map (
       I0 => \^cpld_spi_sclk\,
-      I1 => \SPI_bit_counter_reg_n_0_[3]\,
-      I2 => \SPI_bit_counter_reg_n_0_[2]\,
-      I3 => \SPI_states__0\(0),
-      I4 => \SPI_states__0\(1),
-      I5 => SPI_MOSI_i_4_n_0,
+      I1 => \SPI_bit_counter[3]_i_3_n_0\,
+      I2 => \SPI_states__0\(0),
+      I3 => \SPI_states__0\(1),
+      I4 => SPI_MOSI_i_4_n_0,
       O => SPI_MOSI
     );
 SPI_MOSI_i_4: unisim.vcomponents.LUT3
@@ -399,20 +403,7 @@ SPI_SCLK_reg: unisim.vcomponents.FDCE
       I2 => Q(10),
       O => SPI_WRDATA(10)
     );
-\SPI_WRDATA[11]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000888CCCC0000"
-    )
-        port map (
-      I0 => SPI_MOSI_i_2_n_0,
-      I1 => s00_axi_aresetn,
-      I2 => \SPI_bit_counter_reg_n_0_[2]\,
-      I3 => \SPI_bit_counter_reg_n_0_[3]\,
-      I4 => \SPI_states__0\(0),
-      I5 => \SPI_states__0\(1),
-      O => SPI_WRDATA0
-    );
-\SPI_WRDATA[11]_i_2\: unisim.vcomponents.LUT3
+\SPI_WRDATA[11]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -421,6 +412,38 @@ SPI_SCLK_reg: unisim.vcomponents.FDCE
       I1 => \SPI_states__0\(1),
       I2 => Q(11),
       O => SPI_WRDATA(11)
+    );
+\SPI_WRDATA[12]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \SPI_WRDATA_reg_n_0_[11]\,
+      I1 => \SPI_states__0\(1),
+      I2 => Q(12),
+      O => SPI_WRDATA(12)
+    );
+\SPI_WRDATA[13]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0C800C00"
+    )
+        port map (
+      I0 => SPI_MOSI_i_2_n_0,
+      I1 => s00_axi_aresetn,
+      I2 => \SPI_states__0\(1),
+      I3 => \SPI_states__0\(0),
+      I4 => \SPI_bit_counter[3]_i_3_n_0\,
+      O => SPI_WRDATA0
+    );
+\SPI_WRDATA[13]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \SPI_WRDATA_reg_n_0_[12]\,
+      I1 => \SPI_states__0\(1),
+      I2 => Q(13),
+      O => SPI_WRDATA(13)
     );
 \SPI_WRDATA[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -533,6 +556,22 @@ SPI_SCLK_reg: unisim.vcomponents.FDCE
       C => s00_axi_aclk,
       CE => SPI_WRDATA0,
       D => SPI_WRDATA(11),
+      Q => \SPI_WRDATA_reg_n_0_[11]\,
+      R => '0'
+    );
+\SPI_WRDATA_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => SPI_WRDATA0,
+      D => SPI_WRDATA(12),
+      Q => \SPI_WRDATA_reg_n_0_[12]\,
+      R => '0'
+    );
+\SPI_WRDATA_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => SPI_WRDATA0,
+      D => SPI_WRDATA(13),
       Q => p_0_in,
       R => '0'
     );
@@ -619,49 +658,58 @@ SPI_SCLK_reg: unisim.vcomponents.FDCE
     );
 \SPI_bit_counter[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"48"
+      INIT => X"60"
     )
         port map (
-      I0 => \SPI_bit_counter_reg_n_0_[0]\,
-      I1 => \SPI_states__0\(1),
-      I2 => \SPI_bit_counter_reg_n_0_[1]\,
+      I0 => \SPI_bit_counter_reg_n_0_[1]\,
+      I1 => \SPI_bit_counter_reg_n_0_[0]\,
+      I2 => \SPI_states__0\(1),
       O => \SPI_bit_counter[1]_i_1_n_0\
     );
 \SPI_bit_counter[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"7080"
+      INIT => X"60C0"
     )
         port map (
-      I0 => \SPI_bit_counter_reg_n_0_[0]\,
-      I1 => \SPI_bit_counter_reg_n_0_[1]\,
+      I0 => \SPI_bit_counter_reg_n_0_[1]\,
+      I1 => \SPI_bit_counter_reg_n_0_[2]\,
       I2 => \SPI_states__0\(1),
-      I3 => \SPI_bit_counter_reg_n_0_[2]\,
+      I3 => \SPI_bit_counter_reg_n_0_[0]\,
       O => \SPI_bit_counter[2]_i_1_n_0\
     );
-\SPI_bit_counter[3]_i_1\: unisim.vcomponents.LUT6
+\SPI_bit_counter[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"05000D000D000D00"
+      INIT => X"0D000500"
     )
         port map (
       I0 => \SPI_states__0\(1),
       I1 => SPI_MOSI_i_2_n_0,
       I2 => \SPI_states__0\(0),
       I3 => s00_axi_aresetn,
-      I4 => \SPI_bit_counter_reg_n_0_[3]\,
-      I5 => \SPI_bit_counter_reg_n_0_[2]\,
+      I4 => \SPI_bit_counter[3]_i_3_n_0\,
       O => SPI_bit_counter0
     );
 \SPI_bit_counter[3]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7F008000"
+      INIT => X"7800F000"
     )
         port map (
-      I0 => \SPI_bit_counter_reg_n_0_[1]\,
-      I1 => \SPI_bit_counter_reg_n_0_[0]\,
-      I2 => \SPI_bit_counter_reg_n_0_[2]\,
+      I0 => \SPI_bit_counter_reg_n_0_[2]\,
+      I1 => \SPI_bit_counter_reg_n_0_[1]\,
+      I2 => \SPI_bit_counter_reg_n_0_[3]\,
       I3 => \SPI_states__0\(1),
-      I4 => \SPI_bit_counter_reg_n_0_[3]\,
+      I4 => \SPI_bit_counter_reg_n_0_[0]\,
       O => \SPI_bit_counter[3]_i_2_n_0\
+    );
+\SPI_bit_counter[3]_i_3\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"7F"
+    )
+        port map (
+      I0 => \SPI_bit_counter_reg_n_0_[2]\,
+      I1 => \SPI_bit_counter_reg_n_0_[1]\,
+      I2 => \SPI_bit_counter_reg_n_0_[3]\,
+      O => \SPI_bit_counter[3]_i_3_n_0\
     );
 \SPI_bit_counter_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -918,26 +966,28 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
       I1 => \cpld_count_bit_reg_n_0_[0]\,
       O => cpld_count_bit(0)
     );
-\cpld_count_bit[1]_i_1\: unisim.vcomponents.LUT3
+\cpld_count_bit[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"28"
-    )
-        port map (
-      I0 => CPLD_states_spi(0),
-      I1 => \cpld_count_bit_reg_n_0_[0]\,
-      I2 => \cpld_count_bit_reg_n_0_[1]\,
-      O => cpld_count_bit(1)
-    );
-\cpld_count_bit[2]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0AAA2000"
+      INIT => X"00AA2A00"
     )
         port map (
       I0 => CPLD_states_spi(0),
       I1 => \cpld_count_bit_reg_n_0_[3]\,
-      I2 => \cpld_count_bit_reg_n_0_[0]\,
-      I3 => \cpld_count_bit_reg_n_0_[1]\,
-      I4 => \cpld_count_bit_reg_n_0_[2]\,
+      I2 => \cpld_count_bit_reg_n_0_[2]\,
+      I3 => \cpld_count_bit_reg_n_0_[0]\,
+      I4 => \cpld_count_bit_reg_n_0_[1]\,
+      O => cpld_count_bit(1)
+    );
+\cpld_count_bit[2]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0AA020A0"
+    )
+        port map (
+      I0 => CPLD_states_spi(0),
+      I1 => \cpld_count_bit_reg_n_0_[3]\,
+      I2 => \cpld_count_bit_reg_n_0_[2]\,
+      I3 => \cpld_count_bit_reg_n_0_[0]\,
+      I4 => \cpld_count_bit_reg_n_0_[1]\,
       O => cpld_count_bit(2)
     );
 \cpld_count_bit[3]_i_1\: unisim.vcomponents.LUT1
@@ -955,9 +1005,9 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
         port map (
       I0 => CPLD_states_spi(0),
       I1 => \cpld_count_bit_reg_n_0_[3]\,
-      I2 => \cpld_count_bit_reg_n_0_[0]\,
-      I3 => \cpld_count_bit_reg_n_0_[1]\,
-      I4 => \cpld_count_bit_reg_n_0_[2]\,
+      I2 => \cpld_count_bit_reg_n_0_[2]\,
+      I3 => \cpld_count_bit_reg_n_0_[0]\,
+      I4 => \cpld_count_bit_reg_n_0_[1]\,
       O => cpld_count_bit(3)
     );
 \cpld_count_bit_reg[0]\: unisim.vcomponents.FDCE
@@ -992,7 +1042,7 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
       D => cpld_count_bit(3),
       Q => \cpld_count_bit_reg_n_0_[3]\
     );
-\cpld_data_rec[11]_i_1\: unisim.vcomponents.LUT4
+\cpld_data_rec[13]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0004"
     )
@@ -1001,12 +1051,12 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
       I1 => CPLD_states_spi(1),
       I2 => CPLD_states_spi(0),
       I3 => nCS_CPLD,
-      O => \cpld_data_rec[11]_i_1_n_0\
+      O => \cpld_data_rec[13]_i_1_n_0\
     );
 \cpld_data_rec_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[0]\,
       Q => cpld_data_rec(0),
       R => '0'
@@ -1014,7 +1064,7 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
 \cpld_data_rec_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[10]\,
       Q => cpld_data_rec(10),
       R => '0'
@@ -1022,15 +1072,31 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
 \cpld_data_rec_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[11]\,
       Q => cpld_data_rec(11),
+      R => '0'
+    );
+\cpld_data_rec_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => \^cpld_spi_sclk\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
+      D => \data_in_reg_n_0_[12]\,
+      Q => cpld_data_rec(12),
+      R => '0'
+    );
+\cpld_data_rec_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => \^cpld_spi_sclk\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
+      D => \data_in_reg_n_0_[13]\,
+      Q => cpld_data_rec(13),
       R => '0'
     );
 \cpld_data_rec_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[1]\,
       Q => cpld_data_rec(1),
       R => '0'
@@ -1038,7 +1104,7 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
 \cpld_data_rec_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[2]\,
       Q => cpld_data_rec(2),
       R => '0'
@@ -1046,7 +1112,7 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
 \cpld_data_rec_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[3]\,
       Q => cpld_data_rec(3),
       R => '0'
@@ -1054,7 +1120,7 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
 \cpld_data_rec_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[4]\,
       Q => cpld_data_rec(4),
       R => '0'
@@ -1062,7 +1128,7 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
 \cpld_data_rec_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[5]\,
       Q => cpld_data_rec(5),
       R => '0'
@@ -1070,7 +1136,7 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
 \cpld_data_rec_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[6]\,
       Q => cpld_data_rec(6),
       R => '0'
@@ -1078,7 +1144,7 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
 \cpld_data_rec_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[7]\,
       Q => cpld_data_rec(7),
       R => '0'
@@ -1086,7 +1152,7 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
 \cpld_data_rec_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[8]\,
       Q => cpld_data_rec(8),
       R => '0'
@@ -1094,12 +1160,12 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
 \cpld_data_rec_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \cpld_data_rec[11]_i_1_n_0\,
+      CE => \cpld_data_rec[13]_i_1_n_0\,
       D => \data_in_reg_n_0_[9]\,
       Q => cpld_data_rec(9),
       R => '0'
     );
-\data_in[11]_i_1\: unisim.vcomponents.LUT3
+\data_in[13]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"01"
     )
@@ -1107,156 +1173,141 @@ SPI_nCS_reg: unisim.vcomponents.FDPE
       I0 => CPLD_states_spi(1),
       I1 => nCS_CPLD,
       I2 => CPLD_states_spi(0),
-      O => \data_in[11]_i_1_n_0\
+      O => \data_in[13]_i_1_n_0\
     );
-\data_in[11]_i_2\: unisim.vcomponents.LUT2
+\data_in[13]_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => nCS_CPLD,
       I1 => CPLD_states_spi(1),
-      O => \data_in[11]_i_2_n_0\
+      O => \data_in[13]_i_2_n_0\
     );
 \data_in_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => SPI_MISO,
       Q => \data_in_reg_n_0_[0]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
     );
 \data_in_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => \data_in_reg_n_0_[9]\,
       Q => \data_in_reg_n_0_[10]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
     );
 \data_in_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => \data_in_reg_n_0_[10]\,
       Q => \data_in_reg_n_0_[11]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
+    );
+\data_in_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => \^cpld_spi_sclk\,
+      CE => \data_in[13]_i_2_n_0\,
+      D => \data_in_reg_n_0_[11]\,
+      Q => \data_in_reg_n_0_[12]\,
+      R => \data_in[13]_i_1_n_0\
+    );
+\data_in_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => \^cpld_spi_sclk\,
+      CE => \data_in[13]_i_2_n_0\,
+      D => \data_in_reg_n_0_[12]\,
+      Q => \data_in_reg_n_0_[13]\,
+      R => \data_in[13]_i_1_n_0\
     );
 \data_in_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => \data_in_reg_n_0_[0]\,
       Q => \data_in_reg_n_0_[1]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
     );
 \data_in_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => \data_in_reg_n_0_[1]\,
       Q => \data_in_reg_n_0_[2]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
     );
 \data_in_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => \data_in_reg_n_0_[2]\,
       Q => \data_in_reg_n_0_[3]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
     );
 \data_in_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => \data_in_reg_n_0_[3]\,
       Q => \data_in_reg_n_0_[4]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
     );
 \data_in_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => \data_in_reg_n_0_[4]\,
       Q => \data_in_reg_n_0_[5]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
     );
 \data_in_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => \data_in_reg_n_0_[5]\,
       Q => \data_in_reg_n_0_[6]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
     );
 \data_in_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => \data_in_reg_n_0_[6]\,
       Q => \data_in_reg_n_0_[7]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
     );
 \data_in_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => \data_in_reg_n_0_[7]\,
       Q => \data_in_reg_n_0_[8]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
     );
 \data_in_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => \^cpld_spi_sclk\,
-      CE => \data_in[11]_i_2_n_0\,
+      CE => \data_in[13]_i_2_n_0\,
       D => \data_in_reg_n_0_[8]\,
       Q => \data_in_reg_n_0_[9]\,
-      R => \data_in[11]_i_1_n_0\
+      R => \data_in[13]_i_1_n_0\
     );
 flag_end_data_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0002FFFF00020000"
+      INIT => X"FFFFAAAA00000200"
     )
         port map (
-      I0 => flag_end_data_i_2_n_0,
-      I1 => \SPI_bit_counter_reg_n_0_[0]\,
-      I2 => \SPI_bit_counter_reg_n_0_[1]\,
-      I3 => flag_end_data_i_3_n_0,
-      I4 => flag_end_data,
+      I0 => \SPI_states__0\(1),
+      I1 => \SPI_bit_counter[3]_i_3_n_0\,
+      I2 => \SPI_bit_counter_reg_n_0_[0]\,
+      I3 => \^cpld_spi_sclk\,
+      I4 => \SPI_states__0\(0),
       I5 => flag_end_data_reg_n_0,
       O => flag_end_data_i_1_n_0
-    );
-flag_end_data_i_2: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \SPI_states__0\(1),
-      I1 => \^cpld_spi_sclk\,
-      O => flag_end_data_i_2_n_0
-    );
-flag_end_data_i_3: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => \SPI_bit_counter_reg_n_0_[2]\,
-      I1 => \SPI_bit_counter_reg_n_0_[3]\,
-      O => flag_end_data_i_3_n_0
-    );
-flag_end_data_i_4: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0055005700550055"
-    )
-        port map (
-      I0 => \SPI_states__0\(1),
-      I1 => flag_end_data_i_3_n_0,
-      I2 => \SPI_bit_counter_reg_n_0_[0]\,
-      I3 => \SPI_states__0\(0),
-      I4 => \SPI_bit_counter_reg_n_0_[1]\,
-      I5 => \^cpld_spi_sclk\,
-      O => flag_end_data
     );
 flag_end_data_reg: unisim.vcomponents.FDCE
     generic map(
@@ -1340,7 +1391,7 @@ flag_end_data_reg: unisim.vcomponents.FDCE
       I5 => s00_axi_wdata(11),
       O => D(11)
     );
-\slv_reg1[12]_i_2\: unisim.vcomponents.LUT6
+\slv_reg1[12]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"EAAAAAAA2AAAAAAA"
     )
@@ -1352,6 +1403,32 @@ flag_end_data_reg: unisim.vcomponents.FDCE
       I4 => s00_axi_awvalid,
       I5 => s00_axi_wdata(12),
       O => D(12)
+    );
+\slv_reg1[13]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAAAAAA2AAAAAAA"
+    )
+        port map (
+      I0 => cpld_data_rec(12),
+      I1 => axi_wready_reg,
+      I2 => axi_awready_reg,
+      I3 => s00_axi_wvalid,
+      I4 => s00_axi_awvalid,
+      I5 => s00_axi_wdata(13),
+      O => D(13)
+    );
+\slv_reg1[14]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAAAAAA2AAAAAAA"
+    )
+        port map (
+      I0 => cpld_data_rec(13),
+      I1 => axi_wready_reg,
+      I2 => axi_awready_reg,
+      I3 => s00_axi_wvalid,
+      I4 => s00_axi_awvalid,
+      I5 => s00_axi_wdata(14),
+      O => D(14)
     );
 \slv_reg1[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1629,11 +1706,13 @@ entity zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI : entity is "CPLD_ctrl_v1_0_S00_AXI";
 end zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI;
 
 architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI is
   signal SPI_WR_en : STD_LOGIC;
-  signal SPI_data : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal SPI_data : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal SPI_data_0 : STD_LOGIC;
   signal \^s_axi_arready\ : STD_LOGIC;
   signal \^s_axi_awready\ : STD_LOGIC;
@@ -1692,8 +1771,6 @@ architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI is
   signal \slv_reg0_reg_n_0_[8]\ : STD_LOGIC;
   signal \slv_reg0_reg_n_0_[9]\ : STD_LOGIC;
   signal slv_reg1 : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \slv_reg1[12]_i_1_n_0\ : STD_LOGIC;
-  signal \slv_reg1[13]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg1[14]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg1[15]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg1[23]_i_1_n_0\ : STD_LOGIC;
@@ -1717,6 +1794,8 @@ architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI is
   signal uut_n_14 : STD_LOGIC;
   signal uut_n_15 : STD_LOGIC;
   signal uut_n_16 : STD_LOGIC;
+  signal uut_n_17 : STD_LOGIC;
+  signal uut_n_18 : STD_LOGIC;
   signal uut_n_4 : STD_LOGIC;
   signal uut_n_5 : STD_LOGIC;
   signal uut_n_6 : STD_LOGIC;
@@ -1740,7 +1819,7 @@ SPI_WR_en_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => SPI_data_0,
-      D => \slv_reg0_reg_n_0_[12]\,
+      D => \slv_reg0_reg_n_0_[14]\,
       Q => SPI_WR_en,
       R => '0'
     );
@@ -1766,6 +1845,22 @@ SPI_WR_en_reg: unisim.vcomponents.FDRE
       CE => SPI_data_0,
       D => \slv_reg0_reg_n_0_[11]\,
       Q => SPI_data(11),
+      R => '0'
+    );
+\SPI_data_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => SPI_data_0,
+      D => \slv_reg0_reg_n_0_[12]\,
+      Q => SPI_data(12),
+      R => '0'
+    );
+\SPI_data_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => SPI_data_0,
+      D => \slv_reg0_reg_n_0_[13]\,
+      Q => SPI_data(13),
       R => '0'
     );
 \SPI_data_reg[1]\: unisim.vcomponents.FDRE
@@ -2709,7 +2804,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => SPI_data_0,
-      D => \slv_reg0_reg_n_0_[13]\,
+      D => \slv_reg0_reg_n_0_[15]\,
       Q => mezz_mux(0),
       R => '0'
     );
@@ -2717,7 +2812,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => SPI_data_0,
-      D => \slv_reg0_reg_n_0_[14]\,
+      D => \slv_reg0_reg_n_0_[16]\,
       Q => mezz_mux(1),
       R => '0'
     );
@@ -2725,7 +2820,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => SPI_data_0,
-      D => \slv_reg0_reg_n_0_[15]\,
+      D => \slv_reg0_reg_n_0_[17]\,
       Q => mezz_mux(2),
       R => '0'
     );
@@ -3040,7 +3135,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       Q => \slv_reg0_reg_n_0_[9]\,
       R => i_rst
     );
-\slv_reg1[12]_i_1\: unisim.vcomponents.LUT4
+\slv_reg1[14]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FF08"
     )
@@ -3049,32 +3144,6 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I1 => s00_axi_wstrb(1),
       I2 => p_0_in(1),
       I3 => \slv_reg0[31]_i_2_n_0\,
-      O => \slv_reg1[12]_i_1_n_0\
-    );
-\slv_reg1[13]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFEFFFFF00200000"
-    )
-        port map (
-      I0 => s00_axi_wdata(13),
-      I1 => p_0_in(1),
-      I2 => s00_axi_wstrb(1),
-      I3 => \slv_reg0[31]_i_2_n_0\,
-      I4 => p_0_in(0),
-      I5 => slv_reg1(13),
-      O => \slv_reg1[13]_i_1_n_0\
-    );
-\slv_reg1[14]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFEFFFFF00200000"
-    )
-        port map (
-      I0 => s00_axi_wdata(14),
-      I1 => p_0_in(1),
-      I2 => s00_axi_wstrb(1),
-      I3 => \slv_reg0[31]_i_2_n_0\,
-      I4 => p_0_in(0),
-      I5 => slv_reg1(14),
       O => \slv_reg1[14]_i_1_n_0\
     );
 \slv_reg1[15]_i_1\: unisim.vcomponents.LUT6
@@ -3127,47 +3196,47 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
-      D => uut_n_16,
+      D => uut_n_18,
       Q => slv_reg1(0),
       R => i_rst
     );
 \slv_reg1_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg1[12]_i_1_n_0\,
-      D => uut_n_6,
+      CE => \slv_reg1[14]_i_1_n_0\,
+      D => uut_n_8,
       Q => slv_reg1(10),
       R => i_rst
     );
 \slv_reg1_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg1[12]_i_1_n_0\,
-      D => uut_n_5,
+      CE => \slv_reg1[14]_i_1_n_0\,
+      D => uut_n_7,
       Q => slv_reg1(11),
       R => i_rst
     );
 \slv_reg1_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg1[12]_i_1_n_0\,
-      D => uut_n_4,
+      CE => \slv_reg1[14]_i_1_n_0\,
+      D => uut_n_6,
       Q => slv_reg1(12),
       R => i_rst
     );
 \slv_reg1_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => '1',
-      D => \slv_reg1[13]_i_1_n_0\,
+      CE => \slv_reg1[14]_i_1_n_0\,
+      D => uut_n_5,
       Q => slv_reg1(13),
       R => i_rst
     );
 \slv_reg1_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => '1',
-      D => \slv_reg1[14]_i_1_n_0\,
+      CE => \slv_reg1[14]_i_1_n_0\,
+      D => uut_n_4,
       Q => slv_reg1(14),
       R => i_rst
     );
@@ -3215,7 +3284,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
-      D => uut_n_15,
+      D => uut_n_17,
       Q => slv_reg1(1),
       R => i_rst
     );
@@ -3303,7 +3372,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
-      D => uut_n_14,
+      D => uut_n_16,
       Q => slv_reg1(2),
       R => i_rst
     );
@@ -3327,7 +3396,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
-      D => uut_n_13,
+      D => uut_n_15,
       Q => slv_reg1(3),
       R => i_rst
     );
@@ -3335,7 +3404,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
-      D => uut_n_12,
+      D => uut_n_14,
       Q => slv_reg1(4),
       R => i_rst
     );
@@ -3343,7 +3412,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
-      D => uut_n_11,
+      D => uut_n_13,
       Q => slv_reg1(5),
       R => i_rst
     );
@@ -3351,7 +3420,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
-      D => uut_n_10,
+      D => uut_n_12,
       Q => slv_reg1(6),
       R => i_rst
     );
@@ -3359,23 +3428,23 @@ axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
-      D => uut_n_9,
+      D => uut_n_11,
       Q => slv_reg1(7),
       R => i_rst
     );
 \slv_reg1_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg1[12]_i_1_n_0\,
-      D => uut_n_8,
+      CE => \slv_reg1[14]_i_1_n_0\,
+      D => uut_n_10,
       Q => slv_reg1(8),
       R => i_rst
     );
 \slv_reg1_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => \slv_reg1[12]_i_1_n_0\,
-      D => uut_n_7,
+      CE => \slv_reg1[14]_i_1_n_0\,
+      D => uut_n_9,
       Q => slv_reg1(9),
       R => i_rst
     );
@@ -3985,20 +4054,22 @@ uut: entity work.zsys_CPLD_ctrl_0_0_CPLD_comm_module
       CPLD_SPI_MOSI => CPLD_SPI_MOSI,
       CPLD_SPI_SCLK => CLK,
       CPLD_SPI_nCS => CPLD_SPI_nCS,
-      D(12) => uut_n_4,
-      D(11) => uut_n_5,
-      D(10) => uut_n_6,
-      D(9) => uut_n_7,
-      D(8) => uut_n_8,
-      D(7) => uut_n_9,
-      D(6) => uut_n_10,
-      D(5) => uut_n_11,
-      D(4) => uut_n_12,
-      D(3) => uut_n_13,
-      D(2) => uut_n_14,
-      D(1) => uut_n_15,
-      D(0) => uut_n_16,
-      Q(11 downto 0) => SPI_data(11 downto 0),
+      D(14) => uut_n_4,
+      D(13) => uut_n_5,
+      D(12) => uut_n_6,
+      D(11) => uut_n_7,
+      D(10) => uut_n_8,
+      D(9) => uut_n_9,
+      D(8) => uut_n_10,
+      D(7) => uut_n_11,
+      D(6) => uut_n_12,
+      D(5) => uut_n_13,
+      D(4) => uut_n_14,
+      D(3) => uut_n_15,
+      D(2) => uut_n_16,
+      D(1) => uut_n_17,
+      D(0) => uut_n_18,
+      Q(13 downto 0) => SPI_data(13 downto 0),
       SPI_MISO => SPI_MISO,
       SPI_WR_en => SPI_WR_en,
       SR(0) => i_rst,
@@ -4009,7 +4080,7 @@ uut: entity work.zsys_CPLD_ctrl_0_0_CPLD_comm_module
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_aresetn => s00_axi_aresetn,
       s00_axi_awvalid => s00_axi_awvalid,
-      s00_axi_wdata(12 downto 0) => s00_axi_wdata(12 downto 0),
+      s00_axi_wdata(14 downto 0) => s00_axi_wdata(14 downto 0),
       s00_axi_wvalid => s00_axi_wvalid
     );
 end STRUCTURE;
@@ -4043,6 +4114,8 @@ entity zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0 : entity is "CPLD_ctrl_v1_0";
 end zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0;
 
 architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0 is
@@ -4115,7 +4188,7 @@ entity zsys_CPLD_ctrl_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_CPLD_ctrl_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_CPLD_ctrl_0_0 : entity is "CPLD_ctrl_v1_0,Vivado 2018.2";
+  attribute x_core_info of zsys_CPLD_ctrl_0_0 : entity is "CPLD_ctrl_v1_0,Vivado 2018.2.2";
 end zsys_CPLD_ctrl_0_0;
 
 architecture STRUCTURE of zsys_CPLD_ctrl_0_0 is
@@ -4123,7 +4196,7 @@ architecture STRUCTURE of zsys_CPLD_ctrl_0_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of s00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of s00_axi_aclk : signal is "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
+  attribute x_interface_parameter of s00_axi_aclk : signal is "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
   attribute x_interface_info of s00_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S00_AXI_RST RST";
   attribute x_interface_parameter of s00_axi_aresetn : signal is "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW";
   attribute x_interface_info of s00_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY";
@@ -4139,7 +4212,7 @@ architecture STRUCTURE of zsys_CPLD_ctrl_0_0 is
   attribute x_interface_info of s00_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR";
   attribute x_interface_info of s00_axi_arprot : signal is "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT";
   attribute x_interface_info of s00_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";
-  attribute x_interface_parameter of s00_axi_awaddr : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  attribute x_interface_parameter of s00_axi_awaddr : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
   attribute x_interface_info of s00_axi_awprot : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT";
   attribute x_interface_info of s00_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BRESP";
   attribute x_interface_info of s00_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RDATA";

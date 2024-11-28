@@ -1,4 +1,62 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Nov  4 16:07:14 2024
+| Host         : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z015clg485-2
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zsys_axi_smc_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of zsys_axi_smc_0 (xilinx.com:ip:smartconnect:1.0 (Rev. 9)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'zsys_axi_smc_0'.
+
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'zsys_axi_smc_0'. These changes may impact your design.
+
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Nov  4 15:08:55 2024
+| Host         : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z015clg485-2
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zsys_axi_dma_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of zsys_axi_dma_0_0 (xilinx.com:ip:axi_dma:7.1 (Rev. 18)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
 | Date         : Sun Oct 27 00:06:02 2024

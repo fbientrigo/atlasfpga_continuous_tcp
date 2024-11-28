@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Mon Nov  4 01:07:09 2024
--- Host        : lapepuat11 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+-- Date        : Thu Aug  3 12:21:48 2023
+-- Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top zsys_rst_ps7_0_100M_1 -prefix
 --               zsys_rst_ps7_0_100M_1_ zsys_rst_ps7_0_100M_0_sim_netlist.vhdl
 -- Design      : zsys_rst_ps7_0_100M_0
@@ -1051,7 +1051,7 @@ entity zsys_rst_ps7_0_100M_1 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_rst_ps7_0_100M_1 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_rst_ps7_0_100M_1 : entity is "proc_sys_reset,Vivado 2018.2.2";
+  attribute x_core_info of zsys_rst_ps7_0_100M_1 : entity is "proc_sys_reset,Vivado 2018.2";
 end zsys_rst_ps7_0_100M_1;
 
 architecture STRUCTURE of zsys_rst_ps7_0_100M_1 is

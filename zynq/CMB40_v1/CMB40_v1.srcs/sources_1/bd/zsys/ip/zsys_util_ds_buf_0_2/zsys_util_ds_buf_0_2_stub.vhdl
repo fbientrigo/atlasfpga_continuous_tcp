@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Mon Nov  4 01:09:36 2024
--- Host        : lapepuat11 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+-- Date        : Tue Nov  5 10:41:08 2024
+-- Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top zsys_util_ds_buf_0_2 -prefix
 --               zsys_util_ds_buf_0_2_ zsys_util_ds_buf_0_0_stub.vhdl
 -- Design      : zsys_util_ds_buf_0_0
@@ -27,6 +27,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "OBUF_IN[0:0],OBUF_DS_P[0:0],OBUF_DS_N[0:0]";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "util_ds_buf,Vivado 2018.2.2";
+attribute x_core_info of stub : architecture is "util_ds_buf,Vivado 2018.2";
 begin
 end;

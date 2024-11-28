@@ -70,11 +70,11 @@ ARCHITECTURE zsys_Elink_output_0_0_arch OF zsys_Elink_output_0_0 IS
     );
   END COMPONENT Elink_output;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF zsys_Elink_output_0_0_arch: ARCHITECTURE IS "Elink_output,Vivado 2018.2.2";
+  ATTRIBUTE X_CORE_INFO OF zsys_Elink_output_0_0_arch: ARCHITECTURE IS "Elink_output,Vivado 2018.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF zsys_Elink_output_0_0_arch : ARCHITECTURE IS "zsys_Elink_output_0_0,Elink_output,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF zsys_Elink_output_0_0_arch: ARCHITECTURE IS "zsys_Elink_output_0_0,Elink_output,{x_ipProduct=Vivado 2018.2.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Elink_output,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF zsys_Elink_output_0_0_arch: ARCHITECTURE IS "zsys_Elink_output_0_0,Elink_output,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Elink_output,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF zsys_Elink_output_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

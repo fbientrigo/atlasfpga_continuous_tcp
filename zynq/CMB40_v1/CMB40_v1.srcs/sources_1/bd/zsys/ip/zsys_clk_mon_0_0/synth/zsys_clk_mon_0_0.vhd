@@ -114,11 +114,11 @@ ARCHITECTURE zsys_clk_mon_0_0_arch OF zsys_clk_mon_0_0 IS
     );
   END COMPONENT clk_mon_v1_0;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF zsys_clk_mon_0_0_arch: ARCHITECTURE IS "clk_mon_v1_0,Vivado 2018.2.2";
+  ATTRIBUTE X_CORE_INFO OF zsys_clk_mon_0_0_arch: ARCHITECTURE IS "clk_mon_v1_0,Vivado 2018.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF zsys_clk_mon_0_0_arch : ARCHITECTURE IS "zsys_clk_mon_0_0,clk_mon_v1_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF zsys_clk_mon_0_0_arch: ARCHITECTURE IS "zsys_clk_mon_0_0,clk_mon_v1_0,{x_ipProduct=Vivado 2018.2.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=clk_mon,x_ipVersion=1.0,x_ipCoreRevision=10,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}";
+  ATTRIBUTE CORE_GENERATION_INFO OF zsys_clk_mon_0_0_arch: ARCHITECTURE IS "zsys_clk_mon_0_0,clk_mon_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=clk_mon,x_ipVersion=1.0,x_ipCoreRevision=10,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_aresetn: SIGNAL IS "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW";

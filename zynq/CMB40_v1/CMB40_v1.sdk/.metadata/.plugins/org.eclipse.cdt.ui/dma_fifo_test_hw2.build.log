@@ -1,7 +1,0 @@
-15:54:19 **** Clean-only build of configuration Debug for project dma_fifo_test_hw2 ****
-make clean 
-rm -rf  ./src/platform.o ./src/xaxidma_example_sg_intr.o  ./src/platform.d ./src/xaxidma_example_sg_intr.d  dma_fifo_test_hw2.elf.size  dma_fifo_test_hw2.elf
-' '
-
-15:54:19 Build Finished (took 175ms)
-

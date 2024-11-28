@@ -146,11 +146,11 @@ ARCHITECTURE zsys_DRS4_firmware_1_0_arch OF zsys_DRS4_firmware_1_0 IS
     );
   END COMPONENT DRS4_firmware_v3_0;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF zsys_DRS4_firmware_1_0_arch: ARCHITECTURE IS "DRS4_firmware_v3_0,Vivado 2018.2.2";
+  ATTRIBUTE X_CORE_INFO OF zsys_DRS4_firmware_1_0_arch: ARCHITECTURE IS "DRS4_firmware_v3_0,Vivado 2018.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF zsys_DRS4_firmware_1_0_arch : ARCHITECTURE IS "zsys_DRS4_firmware_1_0,DRS4_firmware_v3_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF zsys_DRS4_firmware_1_0_arch: ARCHITECTURE IS "zsys_DRS4_firmware_1_0,DRS4_firmware_v3_0,{x_ipProduct=Vivado 2018.2.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=DRS4_firmware,x_ipVersion=4,x_ipCoreRevision=5,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}";
+  ATTRIBUTE CORE_GENERATION_INFO OF zsys_DRS4_firmware_1_0_arch: ARCHITECTURE IS "zsys_DRS4_firmware_1_0,DRS4_firmware_v3_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=DRS4_firmware,x_ipVersion=4,x_ipCoreRevision=5,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF zsys_DRS4_firmware_1_0_arch: ARCHITECTURE IS "package_project";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

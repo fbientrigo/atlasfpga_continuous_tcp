@@ -410,9 +410,6 @@ proc create_hier_cell_ADC { parentCell nameHier } {
   connect_bd_net -net ROController_0_o_rd_fifo_en [get_bd_pins ROController_0/o_rd_fifo_en] [get_bd_pins fifo_generator_0/rd_en]
   connect_bd_net -net ROController_0_o_wr_fifo_clk [get_bd_pins ROController_0/o_wr_fifo_clk] [get_bd_pins fifo_generator_0/wr_clk]
   connect_bd_net -net ROController_0_o_wr_fifo_en [get_bd_pins o_wr_fifo_en] [get_bd_pins ROController_0/o_wr_fifo_en] [get_bd_pins fifo_generator_0/wr_en]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets ROController_0_o_wr_fifo_en]
   connect_bd_net -net fifo_generator_0_empty [get_bd_pins ROController_0/i_rd_fifo_empty] [get_bd_pins fifo_generator_0/empty]
   connect_bd_net -net fifo_generator_0_full [get_bd_pins ROController_0/i_wr_fifo_full] [get_bd_pins fifo_generator_0/full]
   connect_bd_net -net fifo_generator_0_rd_data_count [get_bd_pins rd_data_count] [get_bd_pins ROController_0/i_rd_data_count] [get_bd_pins fifo_generator_0/rd_data_count]
@@ -436,9 +433,6 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_net -net o_ro_proc_st_debug_states [get_bd_pins ROController_0/o_ro_proc_st_debug_states]
   connect_bd_net -net o_send_data_control_debug_states [get_bd_pins ROController_0/o_send_data_control_debug_states]
   connect_bd_net -net s00_axi_aresetn_1 [get_bd_pins s00_axi_aresetn] [get_bd_pins AXI_ADC_0/s00_axi_aresetn]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets s00_axi_aresetn_1]
   connect_bd_net -net s00_axi_ctrl_aclk_1 [get_bd_pins rd_clk] [get_bd_pins AXI_ADC_0/s00_axi_aclk] [get_bd_pins ROController_0/sys_clk] [get_bd_pins fifo_generator_0/rd_clk]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins ROController_0/i_pre_trig_wind] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_2_dout [get_bd_pins ROController_0/i_post_trig_wind] [get_bd_pins xlconstant_2/dout]
@@ -1550,70 +1544,6 @@ proc create_root_design { parentCell } {
   # Create instance: rst_ps7_0_100M, and set properties
   set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
 
-  # Create instance: system_ila_0, and set properties
-  set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
-  set_property -dict [ list \
-   CONFIG.C_MON_TYPE {NATIVE} \
-   CONFIG.C_NUM_MONITOR_SLOTS {1} \
-   CONFIG.C_NUM_OF_PROBES {9} \
-   CONFIG.C_PROBE0_TYPE {0} \
-   CONFIG.C_PROBE10_TYPE {0} \
-   CONFIG.C_PROBE11_TYPE {0} \
-   CONFIG.C_PROBE12_TYPE {0} \
-   CONFIG.C_PROBE13_TYPE {0} \
-   CONFIG.C_PROBE14_TYPE {0} \
-   CONFIG.C_PROBE15_TYPE {0} \
-   CONFIG.C_PROBE16_TYPE {0} \
-   CONFIG.C_PROBE17_TYPE {0} \
-   CONFIG.C_PROBE18_TYPE {0} \
-   CONFIG.C_PROBE1_TYPE {0} \
-   CONFIG.C_PROBE2_TYPE {0} \
-   CONFIG.C_PROBE3_TYPE {0} \
-   CONFIG.C_PROBE4_TYPE {0} \
-   CONFIG.C_PROBE5_TYPE {0} \
-   CONFIG.C_PROBE6_TYPE {0} \
-   CONFIG.C_PROBE7_TYPE {0} \
-   CONFIG.C_PROBE8_TYPE {0} \
-   CONFIG.C_PROBE9_TYPE {0} \
-   CONFIG.C_SLOT_0_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
-   CONFIG.C_SLOT_0_TYPE {0} \
-   CONFIG.C_SLOT_1_INTF_TYPE {xilinx.com:interface:fifo_write_rtl:1.0} \
-   CONFIG.C_SLOT_1_TYPE {0} \
-   CONFIG.C_SLOT_2_APC_EN {0} \
-   CONFIG.C_SLOT_2_AXI_DATA_SEL {1} \
-   CONFIG.C_SLOT_2_AXI_TRIG_SEL {1} \
-   CONFIG.C_SLOT_2_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
- ] $system_ila_0
-
-  # Create instance: system_ila_1, and set properties
-  set system_ila_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_1 ]
-  set_property -dict [ list \
-   CONFIG.C_MON_TYPE {NATIVE} \
-   CONFIG.C_NUM_OF_PROBES {1} \
-   CONFIG.C_PROBE0_TYPE {0} \
- ] $system_ila_1
-
-  # Create instance: system_ila_2, and set properties
-  set system_ila_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_2 ]
-  set_property -dict [ list \
-   CONFIG.C_BRAM_CNT {3.5} \
-   CONFIG.C_MON_TYPE {MIX} \
-   CONFIG.C_NUM_MONITOR_SLOTS {1} \
-   CONFIG.C_NUM_OF_PROBES {1} \
-   CONFIG.C_SLOT_0_APC_EN {0} \
-   CONFIG.C_SLOT_0_AXI_AR_SEL_DATA {1} \
-   CONFIG.C_SLOT_0_AXI_AR_SEL_TRIG {1} \
-   CONFIG.C_SLOT_0_AXI_AW_SEL_DATA {1} \
-   CONFIG.C_SLOT_0_AXI_AW_SEL_TRIG {1} \
-   CONFIG.C_SLOT_0_AXI_B_SEL_DATA {1} \
-   CONFIG.C_SLOT_0_AXI_B_SEL_TRIG {1} \
-   CONFIG.C_SLOT_0_AXI_R_SEL_DATA {1} \
-   CONFIG.C_SLOT_0_AXI_R_SEL_TRIG {1} \
-   CONFIG.C_SLOT_0_AXI_W_SEL_DATA {1} \
-   CONFIG.C_SLOT_0_AXI_W_SEL_TRIG {1} \
-   CONFIG.C_SLOT_0_INTF_TYPE {xilinx.com:interface:aximm_rtl:1.0} \
- ] $system_ila_2
-
   # Create instance: trigger_logic_0, and set properties
   set block_name trigger_logic
   set block_cell_name trigger_logic_0
@@ -1823,7 +1753,6 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M05_AXI [get_bd_intf_pins axi_dma_0/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M05_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M06_AXI [get_bd_intf_pins clk_mon_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M06_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M08_AXI [get_bd_intf_pins ADC/S00_AXI1] [get_bd_intf_pins ps7_0_axi_periph/M08_AXI]
-connect_bd_intf_net -intf_net [get_bd_intf_nets ps7_0_axi_periph_M08_AXI] [get_bd_intf_pins ps7_0_axi_periph/M08_AXI] [get_bd_intf_pins system_ila_2/SLOT_0_AXI]
 
   # Create port connections
   connect_bd_net -net ADCLK_MUX_N_1 [get_bd_ports ADCLK_MUX_N] [get_bd_pins util_ds_buf_ADCLK/IBUF_DS_N]
@@ -1860,31 +1789,13 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets ps7_0_axi_periph_M08_AXI] [get_b
   connect_bd_net -net DRS_A_test_0_o_A_vec [get_bd_ports DRS_A] [get_bd_pins DRS_A_test_0/o_A_vec]
   connect_bd_net -net DRS_A_test_0_o_RSRLOAD [get_bd_pins DRS_A_test_0/o_RSRLOAD] [get_bd_pins delay_module_1/signal_in]
   connect_bd_net -net DRS_A_test_0_o_SRCLK [get_bd_pins DRS_A_test_0/o_SRCLK] [get_bd_pins delay_module_0/signal_in]
-  connect_bd_net -net DRS_A_test_0_o_SRIN [get_bd_ports DRS_SRIN] [get_bd_pins DRS_A_test_0/o_SRIN] [get_bd_pins system_ila_1/probe0]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets DRS_A_test_0_o_SRIN]
+  connect_bd_net -net DRS_A_test_0_o_SRIN [get_bd_ports DRS_SRIN] [get_bd_pins DRS_A_test_0/o_SRIN]
   connect_bd_net -net DRS_A_test_0_o_dwrite [get_bd_pins DRS_A_test_0/o_dwrite] [get_bd_pins M1to5_1/in1]
-  connect_bd_net -net DRS_DTAP0_1 [get_bd_ports DRS_DTAP0] [get_bd_pins system_ila_0/probe4] [get_bd_pins xlconcat_3/In0]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets DRS_DTAP0_1]
-  connect_bd_net -net DRS_DTAP1_1 [get_bd_ports DRS_DTAP1] [get_bd_pins system_ila_0/probe5] [get_bd_pins xlconcat_3/In1]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets DRS_DTAP1_1]
-  connect_bd_net -net DRS_DTAP2_1 [get_bd_ports DRS_DTAP2] [get_bd_pins system_ila_0/probe6] [get_bd_pins xlconcat_3/In2]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets DRS_DTAP2_1]
-  connect_bd_net -net DRS_DTAP3_1 [get_bd_ports DRS_DTAP3] [get_bd_pins system_ila_0/probe7] [get_bd_pins xlconcat_3/In3]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets DRS_DTAP3_1]
-  connect_bd_net -net DRS_DTAP4_1 [get_bd_ports DRS_DTAP4] [get_bd_pins system_ila_0/probe8] [get_bd_pins xlconcat_3/In4]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets DRS_DTAP4_1]
+  connect_bd_net -net DRS_DTAP0_1 [get_bd_ports DRS_DTAP0] [get_bd_pins xlconcat_3/In0]
+  connect_bd_net -net DRS_DTAP1_1 [get_bd_ports DRS_DTAP1] [get_bd_pins xlconcat_3/In1]
+  connect_bd_net -net DRS_DTAP2_1 [get_bd_ports DRS_DTAP2] [get_bd_pins xlconcat_3/In2]
+  connect_bd_net -net DRS_DTAP3_1 [get_bd_ports DRS_DTAP3] [get_bd_pins xlconcat_3/In3]
+  connect_bd_net -net DRS_DTAP4_1 [get_bd_ports DRS_DTAP4] [get_bd_pins xlconcat_3/In4]
   connect_bd_net -net DRS_SROUT_1 [get_bd_ports DRS_SROUT] [get_bd_pins Signal_sel_0/D]
   connect_bd_net -net LCLK_MUX_N_1 [get_bd_ports LCLK_MUX_N] [get_bd_pins util_ds_buf_LCLK/IBUF_DS_N]
   connect_bd_net -net LCLK_MUX_P_1 [get_bd_ports LCLK_MUX_P] [get_bd_pins util_ds_buf_LCLK/IBUF_DS_P]
@@ -1895,7 +1806,7 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_net -net MUXOUT_N_2 [get_bd_pins ADC/MUXOUT_N] [get_bd_pins Vibufds_diff_out_0/o_MUXOUT_N]
   connect_bd_net -net MUXOUT_P_1 [get_bd_ports MUXOUT_P] [get_bd_pins Vibufds_diff_out_0/MUXOUT_P]
   connect_bd_net -net Net -boundary_type upper [get_bd_pins ADC/o_Lclk]
-  connect_bd_net -net ROController_0_o_wr_fifo_en [get_bd_pins ADC/o_wr_fifo_en] [get_bd_pins c_counter_binary_0/CLK] [get_bd_pins system_ila_0/probe3]
+  connect_bd_net -net ROController_0_o_wr_fifo_en [get_bd_pins ADC/o_wr_fifo_en] [get_bd_pins c_counter_binary_0/CLK]
   connect_bd_net -net Signal_sel_0_O [get_bd_pins DRS4_firmware_1/i_SROUT] [get_bd_pins Signal_sel_0/O]
   connect_bd_net -net Vibufds_diff_out_0_o_MUXOUT_P [get_bd_pins ADC/MUXOUT_P] [get_bd_pins Vibufds_diff_out_0/o_MUXOUT_P]
   connect_bd_net -net axi_dma_0_mm2s_introut [get_bd_pins axi_dma_0/mm2s_introut] [get_bd_pins xlconcat_0/In0]
@@ -1908,26 +1819,20 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_net -net delay_module_1_signal_out [get_bd_pins M1to5_2/in1] [get_bd_pins delay_module_1/signal_out]
   connect_bd_net -net enable_signal_0_signal_out [get_bd_pins ADC_refclk_OBUFDS/OBUF_IN] [get_bd_pins enable_signal_0/signal_out]
   connect_bd_net -net fifo_generator_0_rd_data_count [get_bd_pins ADC/rd_data_count] [get_bd_pins xlconcat_1/In0]
-  connect_bd_net -net fit_timer_0_Interrupt [get_bd_pins fit_timer_0/Interrupt] [get_bd_pins system_ila_0/probe1] [get_bd_pins trigger_logic_0/i_soft_trigger]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets fit_timer_0_Interrupt]
+  connect_bd_net -net fit_timer_0_Interrupt [get_bd_pins fit_timer_0/Interrupt] [get_bd_pins trigger_logic_0/i_soft_trigger]
   connect_bd_net -net i_in_trigger_1 [get_bd_ports B0_TRG] [get_bd_pins trigger_logic_0/i_in_trigger]
   connect_bd_net -net i_next_fifo_full_1 [get_bd_pins ADC/i_next_fifo_full] [get_bd_pins fifo8b_2_axis_0/o_fifo_full]
   connect_bd_net -net o_fifo_data_count [get_bd_pins fifo8b_2_axis_0/o_fifo_data_count]
-  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins ADC/rd_clk] [get_bd_pins CPLD_ctrl_0/s00_axi_aclk] [get_bd_pins Elink_output_0/clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/m_axi_sg_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins clk_mon_0/s00_axi_aclk] [get_bd_pins dac_i2c_0/s00_axi_aclk] [get_bd_pins fifo8b_2_axis_0/m00_axis_aclk] [get_bd_pins fit_timer_0/Clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/M06_ACLK] [get_bd_pins ps7_0_axi_periph/M07_ACLK] [get_bd_pins ps7_0_axi_periph/M08_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins reset_init_0/clk] [get_bd_pins rst_FIFO_100M/slowest_sync_clk] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins system_ila_0/clk] [get_bd_pins system_ila_2/clk] [get_bd_pins trigger_logic_0/sys_clk]
-  connect_bd_net -net processing_system7_0_FCLK_CLK2 [get_bd_pins DRS4_firmware_1/clk_drs4] [get_bd_pins DRS4_firmware_1/s00_axi_aclk] [get_bd_pins DRS_A_test_0/i_clk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins reset_50M_0/slowest_sync_clk] [get_bd_pins system_ila_1/clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins ADC/rd_clk] [get_bd_pins CPLD_ctrl_0/s00_axi_aclk] [get_bd_pins Elink_output_0/clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/m_axi_sg_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins clk_mon_0/s00_axi_aclk] [get_bd_pins dac_i2c_0/s00_axi_aclk] [get_bd_pins fifo8b_2_axis_0/m00_axis_aclk] [get_bd_pins fit_timer_0/Clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/M06_ACLK] [get_bd_pins ps7_0_axi_periph/M07_ACLK] [get_bd_pins ps7_0_axi_periph/M08_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins reset_init_0/clk] [get_bd_pins rst_FIFO_100M/slowest_sync_clk] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins trigger_logic_0/sys_clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK2 [get_bd_pins DRS4_firmware_1/clk_drs4] [get_bd_pins DRS4_firmware_1/s00_axi_aclk] [get_bd_pins DRS_A_test_0/i_clk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins reset_50M_0/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_CLK3 [get_bd_pins processing_system7_0/FCLK_CLK2] [get_bd_pins util_ds_buf_0/OBUF_IN] [get_bd_pins util_ds_buf_1/OBUF_IN]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins reset_50M_0/ext_reset_in] [get_bd_pins rst_FIFO_100M/ext_reset_in] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net reset_50M_0_peripheral_aresetn [get_bd_pins DRS4_firmware_1/s00_axi_aresetn] [get_bd_pins DRS_A_test_0/i_nrst] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins reset_50M_0/peripheral_aresetn]
-  connect_bd_net -net rst_FIFO_100M_peripheral_aresetn [get_bd_pins ADC/s00_axi_aresetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins clk_mon_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M06_ARESETN] [get_bd_pins rst_FIFO_100M/peripheral_aresetn] [get_bd_pins system_ila_2/probe0]
+  connect_bd_net -net rst_FIFO_100M_peripheral_aresetn [get_bd_pins ADC/s00_axi_aresetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins clk_mon_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M06_ARESETN] [get_bd_pins rst_FIFO_100M/peripheral_aresetn]
   connect_bd_net -net rst_FIFO_100M_peripheral_reset [get_bd_pins ADC/i_rst] [get_bd_pins rst_FIFO_100M/peripheral_reset] [get_bd_pins trigger_logic_0/areset]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins CPLD_ctrl_0/s00_axi_aresetn] [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins dac_i2c_0/s00_axi_aresetn] [get_bd_pins fifo8b_2_axis_0/m00_axis_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/M07_ARESETN] [get_bd_pins ps7_0_axi_periph/M08_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins system_ila_2/resetn]
-  connect_bd_net -net trigger_logic_0_o_out_trigger [get_bd_pins DRS4_firmware_1/i_drs4_trigger] [get_bd_pins system_ila_0/probe0] [get_bd_pins trigger_logic_0/o_out_trigger]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets trigger_logic_0_o_out_trigger]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins CPLD_ctrl_0/s00_axi_aresetn] [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins dac_i2c_0/s00_axi_aresetn] [get_bd_pins fifo8b_2_axis_0/m00_axis_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/M07_ARESETN] [get_bd_pins ps7_0_axi_periph/M08_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+  connect_bd_net -net trigger_logic_0_o_out_trigger [get_bd_pins DRS4_firmware_1/i_drs4_trigger] [get_bd_pins trigger_logic_0/o_out_trigger]
   connect_bd_net -net util_ds_buf_0_BUFH_O [get_bd_pins clk_mon_0/i_DTAP] [get_bd_pins xlconcat_3/dout]
   connect_bd_net -net util_ds_buf_0_OBUF_DS_N [get_bd_ports Elink_N] [get_bd_pins util_ds_buf_0/OBUF_DS_N]
   connect_bd_net -net util_ds_buf_0_OBUF_DS_P [get_bd_ports Elink_P] [get_bd_pins util_ds_buf_0/OBUF_DS_P]
@@ -1944,10 +1849,7 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_net -net util_ds_buf_ADCLK1_IBUF_OUT [get_bd_pins ADC/i_Lclk] [get_bd_pins util_ds_buf_LCLK/IBUF_OUT]
   connect_bd_net -net util_ds_buf_ADCLK_IBUF_OUT [get_bd_pins ADC/i_ADclk] [get_bd_pins util_ds_buf_ADCLK/IBUF_OUT]
   connect_bd_net -net util_vector_logic_0_Res [get_bd_pins trigger_logic_0/i_en_soft_trigger] [get_bd_pins util_vector_logic_0/Res]
-  connect_bd_net -net util_vector_logic_1_Res [get_bd_pins system_ila_0/probe2] [get_bd_pins trigger_logic_0/i_busy] [get_bd_pins util_vector_logic_1/Res]
-  set_property -dict [ list \
-HDL_ATTRIBUTE.DEBUG {true} \
- ] [get_bd_nets util_vector_logic_1_Res]
+  connect_bd_net -net util_vector_logic_1_Res [get_bd_pins trigger_logic_0/i_busy] [get_bd_pins util_vector_logic_1/Res]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/IRQ_F2P] [get_bd_pins xlconcat_0/dout]
   connect_bd_net -net xlconcat_1_dout [get_bd_pins xlconcat_1/dout] [get_bd_pins xlconcat_2/In0]
   connect_bd_net -net xlconcat_2_dout [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins xlconcat_2/dout]

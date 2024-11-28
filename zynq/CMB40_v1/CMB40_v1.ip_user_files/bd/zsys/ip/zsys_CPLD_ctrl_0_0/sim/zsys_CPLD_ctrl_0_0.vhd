@@ -160,7 +160,7 @@ BEGIN
       C_S00_AXI_ADDR_WIDTH => 4,
       SPI_baud_rate => 10000000,
       input_clock_freq => 100000000,
-      SPI_word_lenght => 12
+      SPI_word_lenght => 14
     )
     PORT MAP (
       CPLD_Mux_sel => CPLD_Mux_sel,

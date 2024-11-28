@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-// Date        : Mon Nov  4 01:11:02 2024
-// Host        : lapepuat11 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_axi_smc_0/zsys_axi_smc_0_stub.v
+// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+// Date        : Thu Aug  3 12:25:00 2023
+// Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub -rename_top zsys_axi_smc_0 -prefix
+//               zsys_axi_smc_0_ zsys_axi_smc_0_stub.v
 // Design      : zsys_axi_smc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z015clg485-2
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* X_CORE_INFO = "bd_fa8c,Vivado 2018.2.2" *)
+(* X_CORE_INFO = "bd_fa8c,Vivado 2018.2" *)
 module zsys_axi_smc_0(aclk, aresetn, S00_AXI_awaddr, S00_AXI_awlen, 
   S00_AXI_awsize, S00_AXI_awburst, S00_AXI_awlock, S00_AXI_awcache, S00_AXI_awprot, 
   S00_AXI_awqos, S00_AXI_awvalid, S00_AXI_awready, S00_AXI_wdata, S00_AXI_wstrb, 

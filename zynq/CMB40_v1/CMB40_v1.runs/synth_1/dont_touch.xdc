@@ -160,9 +160,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_xlslice_12
 # IP: bd/zsys/ip/zsys_xlslice_3to3_0/zsys_xlslice_3to3_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_xlslice_3to3_0 || ORIG_REF_NAME==zsys_xlslice_3to3_0} -quiet] -quiet
 
-# IP: bd/zsys/ip/zsys_system_ila_0_0/zsys_system_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_system_ila_0_0 || ORIG_REF_NAME==zsys_system_ila_0_0} -quiet] -quiet
-
 # IP: bd/zsys/ip/zsys_xlconcat_1_1/zsys_xlconcat_1_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_xlconcat_1_1 || ORIG_REF_NAME==zsys_xlconcat_1_1} -quiet] -quiet
 
@@ -184,9 +181,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_xlslice_2_
 # IP: bd/zsys/ip/zsys_delay_module_0_1/zsys_delay_module_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_delay_module_0_1 || ORIG_REF_NAME==zsys_delay_module_0_1} -quiet] -quiet
 
-# IP: bd/zsys/ip/zsys_system_ila_1_0/zsys_system_ila_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_system_ila_1_0 || ORIG_REF_NAME==zsys_system_ila_1_0} -quiet] -quiet
-
 # IP: bd/zsys/ip/zsys_clk_mon_0_0/zsys_clk_mon_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_clk_mon_0_0 || ORIG_REF_NAME==zsys_clk_mon_0_0} -quiet] -quiet
 
@@ -204,9 +198,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_DRS_A_test
 
 # IP: bd/zsys/ip/zsys_xlslice_3to3_1/zsys_xlslice_3to3_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_xlslice_3to3_1 || ORIG_REF_NAME==zsys_xlslice_3to3_1} -quiet] -quiet
-
-# IP: bd/zsys/ip/zsys_system_ila_2_0/zsys_system_ila_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_system_ila_2_0 || ORIG_REF_NAME==zsys_system_ila_2_0} -quiet] -quiet
 
 # IP: bd/zsys/ip/zsys_AXI_ADC_0_0/zsys_AXI_ADC_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_AXI_ADC_0_0 || ORIG_REF_NAME==zsys_AXI_ADC_0_0} -quiet] -quiet

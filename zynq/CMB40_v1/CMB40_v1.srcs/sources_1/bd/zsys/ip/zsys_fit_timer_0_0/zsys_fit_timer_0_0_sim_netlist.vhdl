@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Mon Nov  4 01:05:16 2024
--- Host        : lapepuat11 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_fit_timer_0_0/zsys_fit_timer_0_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+-- Date        : Thu Aug  3 12:22:39 2023
+-- Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top zsys_fit_timer_0_0 -prefix
+--               zsys_fit_timer_0_0_ zsys_fit_timer_0_0_sim_netlist.vhdl
 -- Design      : zsys_fit_timer_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -42,8 +42,6 @@ entity zsys_fit_timer_0_0_Divide_part is
     loop_Bit_8 : in STD_LOGIC;
     loop_Bit_9 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_fit_timer_0_0_Divide_part : entity is "Divide_part";
 end zsys_fit_timer_0_0_Divide_part;
 
 architecture STRUCTURE of zsys_fit_timer_0_0_Divide_part is
@@ -1106,8 +1104,6 @@ entity zsys_fit_timer_0_0_FIT_timer is
     Rst : in STD_LOGIC;
     Clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_fit_timer_0_0_FIT_timer : entity is "FIT_timer";
 end zsys_fit_timer_0_0_FIT_timer;
 
 architecture STRUCTURE of zsys_fit_timer_0_0_FIT_timer is
@@ -1317,7 +1313,7 @@ entity zsys_fit_timer_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_fit_timer_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_fit_timer_0_0 : entity is "fit_timer,Vivado 2018.2.2";
+  attribute x_core_info of zsys_fit_timer_0_0 : entity is "fit_timer,Vivado 2018.2";
 end zsys_fit_timer_0_0;
 
 architecture STRUCTURE of zsys_fit_timer_0_0 is

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-// Date        : Mon Nov  4 01:05:16 2024
-// Host        : lapepuat11 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_fit_timer_0_0/zsys_fit_timer_0_0_sim_netlist.v
+// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+// Date        : Thu Aug  3 12:22:39 2023
+// Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top zsys_fit_timer_0_0 -prefix
+//               zsys_fit_timer_0_0_ zsys_fit_timer_0_0_sim_netlist.v
 // Design      : zsys_fit_timer_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,27 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "zsys_fit_timer_0_0,fit_timer,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "fit_timer,Vivado 2018.2.2" *) 
-(* NotValidForBitStream *)
-module zsys_fit_timer_0_0
-   (Clk,
-    Rst,
-    Interrupt);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.Clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.Clk, ASSOCIATED_RESET Rst, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input Clk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.Rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.Rst, POLARITY ACTIVE_HIGH" *) input Rst;
-  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTERRUPT.Interrupt INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTERRUPT.Interrupt, SENSITIVITY LEVEL_HIGH, SUGGESTED_PRIORITY HIGH, PortWidth 1" *) output Interrupt;
-
-  wire Clk;
-  wire Interrupt;
-  wire Rst;
-
-  zsys_fit_timer_0_0_FIT_timer U0
-       (.Clk(Clk),
-        .Interrupt(Interrupt),
-        .Rst(Rst));
-endmodule
-
-(* ORIG_REF_NAME = "Divide_part" *) 
 module zsys_fit_timer_0_0_Divide_part
    (loop_Bit,
     Rst_d1,
@@ -999,7 +978,6 @@ module zsys_fit_timer_0_0_Divide_part__parameterized2_6
         .R(Rst));
 endmodule
 
-(* ORIG_REF_NAME = "FIT_timer" *) 
 module zsys_fit_timer_0_0_FIT_timer
    (Interrupt,
     Rst,
@@ -1177,6 +1155,26 @@ module zsys_fit_timer_0_0_FIT_timer
         .Rst_d1(Rst_d1),
         .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_9 ),
         .loop_Bit(loop_Bit_18));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "zsys_fit_timer_0_0,fit_timer,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "fit_timer,Vivado 2018.2" *) 
+(* NotValidForBitStream *)
+module zsys_fit_timer_0_0
+   (Clk,
+    Rst,
+    Interrupt);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.Clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.Clk, ASSOCIATED_RESET Rst, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input Clk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.Rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.Rst, POLARITY ACTIVE_HIGH" *) input Rst;
+  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTERRUPT.Interrupt INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTERRUPT.Interrupt, SENSITIVITY LEVEL_HIGH, SUGGESTED_PRIORITY HIGH, PortWidth 1" *) output Interrupt;
+
+  wire Clk;
+  wire Interrupt;
+  wire Rst;
+
+  zsys_fit_timer_0_0_FIT_timer U0
+       (.Clk(Clk),
+        .Interrupt(Interrupt),
+        .Rst(Rst));
 endmodule
 `ifndef GLBL
 `define GLBL

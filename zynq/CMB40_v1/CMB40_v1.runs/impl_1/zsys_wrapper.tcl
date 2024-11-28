@@ -66,27 +66,27 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   create_project -in_memory -part xc7z015clg485-2
-  set_property board_part_repo_paths C:/Users/osotosan/charge-monitoring-system/zynq/TE0715-test_board/test_board/board_files [current_project]
+  set_property board_part_repo_paths /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/TE0715-test_board/test_board/board_files [current_project]
   set_property board_part trenz.biz:te0715_15_2i:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.cache/wt [current_project]
-  set_property parent.project_path C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.xpr [current_project]
+  set_property webtalk.parent_dir /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.cache/wt [current_project]
+  set_property parent.project_path /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.xpr [current_project]
   set_property ip_repo_paths {
-  C:/Users/osotosan/charge-monitoring-system/zynq/ip_lib/Mult_ADC_IP/Mult_ADC_AXI_1.0
-  C:/Users/osotosan/charge-monitoring-system/zynq/ip_lib
+  /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/ip_lib/Mult_ADC_IP/Mult_ADC_AXI_1.0
+  /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/ip_lib
 } [current_project]
-  set_property ip_output_repo C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.cache/ip [current_project]
+  set_property ip_output_repo /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/synth_1/zsys_wrapper.dcp
+  add_files -quiet /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.runs/synth_1/zsys_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/zsys.bd
+  add_files /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/zsys.bd
   set_param project.isImplRun false
-  read_xdc C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc
-  read_xdc C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/imports/constraints/_i_unused_io.xdc
-  read_xdc C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/new/CMB40_TE0715.xdc
+  read_xdc /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc
+  read_xdc /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/imports/constraints/_i_unused_io.xdc
+  read_xdc /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/new/CMB40_TE0715.xdc
   set_param project.isImplRun true
   link_design -top zsys_wrapper -part xc7z015clg485-2
   set_param project.isImplRun false

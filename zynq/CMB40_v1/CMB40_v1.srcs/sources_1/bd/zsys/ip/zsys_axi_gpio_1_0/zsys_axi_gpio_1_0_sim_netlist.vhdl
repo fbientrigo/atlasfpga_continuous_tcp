@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Mon Nov  4 01:07:16 2024
--- Host        : lapepuat11 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_axi_gpio_1_0/zsys_axi_gpio_1_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+-- Date        : Fri Oct 18 12:21:40 2024
+-- Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+-- Command     : write_vhdl -force -mode funcsim -rename_top zsys_axi_gpio_1_0 -prefix
+--               zsys_axi_gpio_1_0_ zsys_axi_gpio_1_0_sim_netlist.vhdl
 -- Design      : zsys_axi_gpio_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -34,8 +34,6 @@ entity zsys_axi_gpio_1_0_GPIO_Core is
     Bus_RNW_reg : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_gpio_1_0_GPIO_Core : entity is "GPIO_Core";
 end zsys_axi_gpio_1_0_GPIO_Core;
 
 architecture STRUCTURE of zsys_axi_gpio_1_0_GPIO_Core is
@@ -1522,8 +1520,6 @@ entity zsys_axi_gpio_1_0_pselect_f is
     ce_expnd_i_3 : out STD_LOGIC;
     \bus2ip_addr_i_reg[3]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_gpio_1_0_pselect_f : entity is "pselect_f";
 end zsys_axi_gpio_1_0_pselect_f;
 
 architecture STRUCTURE of zsys_axi_gpio_1_0_pselect_f is
@@ -1590,8 +1586,6 @@ entity zsys_axi_gpio_1_0_address_decoder is
     ip2bus_wrack_i_D1 : in STD_LOGIC;
     is_write_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_gpio_1_0_address_decoder : entity is "address_decoder";
 end zsys_axi_gpio_1_0_address_decoder;
 
 architecture STRUCTURE of zsys_axi_gpio_1_0_address_decoder is
@@ -1809,8 +1803,6 @@ entity zsys_axi_gpio_1_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_gpio_1_0_slave_attachment : entity is "slave_attachment";
 end zsys_axi_gpio_1_0_slave_attachment;
 
 architecture STRUCTURE of zsys_axi_gpio_1_0_slave_attachment is
@@ -2737,8 +2729,6 @@ entity zsys_axi_gpio_1_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_gpio_1_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end zsys_axi_gpio_1_0_axi_lite_ipif;
 
 architecture STRUCTURE of zsys_axi_gpio_1_0_axi_lite_ipif is
@@ -2837,8 +2827,6 @@ entity zsys_axi_gpio_1_0_axi_gpio is
   attribute C_TRI_DEFAULT of zsys_axi_gpio_1_0_axi_gpio : entity is -1;
   attribute C_TRI_DEFAULT_2 : integer;
   attribute C_TRI_DEFAULT_2 of zsys_axi_gpio_1_0_axi_gpio : entity is -1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_gpio_1_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_axi_gpio_1_0_axi_gpio : entity is "yes";
   attribute ip_group : string;
@@ -3373,7 +3361,7 @@ entity zsys_axi_gpio_1_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_axi_gpio_1_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_axi_gpio_1_0 : entity is "axi_gpio,Vivado 2018.2.2";
+  attribute x_core_info of zsys_axi_gpio_1_0 : entity is "axi_gpio,Vivado 2018.2";
 end zsys_axi_gpio_1_0;
 
 architecture STRUCTURE of zsys_axi_gpio_1_0 is

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;CMB40_v3/src&apos; to &apos;src_old&apos;" description="Rename resource &apos;src&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src" name="src_old" stamp="1729709130881" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;CMB40_v3/Debug&apos; to &apos;Debug_old&apos;" description="Rename resource &apos;Debug&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Debug" name="Debug_old" stamp="1729709162456" updateReferences="true"/>
-</session>

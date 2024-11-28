@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Mon Nov  4 01:11:03 2024
--- Host        : lapepuat11 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_axi_smc_0/zsys_axi_smc_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+-- Date        : Thu Aug  3 12:25:01 2023
+-- Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top zsys_axi_smc_0 -prefix
+--               zsys_axi_smc_0_ zsys_axi_smc_0_sim_netlist.vhdl
 -- Design      : zsys_axi_smc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity zsys_axi_smc_0_cdc_sync is
     aresetn : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_cdc_sync : entity is "cdc_sync";
 end zsys_axi_smc_0_cdc_sync;
 
 architecture STRUCTURE of zsys_axi_smc_0_cdc_sync is
@@ -109,8 +107,6 @@ entity zsys_axi_smc_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_upcnt_n : entity is "upcnt_n";
 end zsys_axi_smc_0_upcnt_n;
 
 architecture STRUCTURE of zsys_axi_smc_0_upcnt_n is
@@ -326,8 +322,6 @@ entity zsys_axi_smc_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of zsys_axi_smc_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of zsys_axi_smc_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of zsys_axi_smc_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -35482,8 +35476,6 @@ entity zsys_axi_smc_0_sc_exit_v1_0_7_b_downsizer is
     Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
     mr_bvector : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_exit_v1_0_7_b_downsizer : entity is "sc_exit_v1_0_7_b_downsizer";
 end zsys_axi_smc_0_sc_exit_v1_0_7_b_downsizer;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_exit_v1_0_7_b_downsizer is
@@ -35701,8 +35693,6 @@ entity zsys_axi_smc_0_sc_exit_v1_0_7_w_axi3_conv is
     s_axi_wvalid : in STD_LOGIC;
     mr_axi_wready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_exit_v1_0_7_w_axi3_conv : entity is "sc_exit_v1_0_7_w_axi3_conv";
 end zsys_axi_smc_0_sc_exit_v1_0_7_w_axi3_conv;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_exit_v1_0_7_w_axi3_conv is
@@ -36111,8 +36101,6 @@ entity zsys_axi_smc_0_sc_mmu_v1_0_6_decerr_slave is
     \gen_endpoint.w_enable_reg\ : in STD_LOGIC;
     \FSM_onehot_gen_axi.gen_write.write_cs_reg[1]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_mmu_v1_0_6_decerr_slave : entity is "sc_mmu_v1_0_6_decerr_slave";
 end zsys_axi_smc_0_sc_mmu_v1_0_6_decerr_slave;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_mmu_v1_0_6_decerr_slave is
@@ -37788,8 +37776,6 @@ entity zsys_axi_smc_0_sc_node_v1_0_9_arb_alg_rr is
     s_sc_aclk : in STD_LOGIC;
     is_zero_r_reg_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_node_v1_0_9_arb_alg_rr : entity is "sc_node_v1_0_9_arb_alg_rr";
 end zsys_axi_smc_0_sc_node_v1_0_9_arb_alg_rr;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_node_v1_0_9_arb_alg_rr is
@@ -38207,8 +38193,6 @@ entity zsys_axi_smc_0_sc_node_v1_0_9_downsizer is
     m_sc_areset_r_reg : in STD_LOGIC;
     \gen_rd_b.doutb_reg_reg[90]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_node_v1_0_9_downsizer : entity is "sc_node_v1_0_9_downsizer";
 end zsys_axi_smc_0_sc_node_v1_0_9_downsizer;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_node_v1_0_9_downsizer is
@@ -38308,8 +38292,6 @@ entity zsys_axi_smc_0_sc_node_v1_0_9_fi_regulator is
     \gen_normal_area.fifo_node_payld_full_i\ : in STD_LOGIC;
     \gen_normal_area.fifo_node_payld_prog_full_i\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_node_v1_0_9_fi_regulator : entity is "sc_node_v1_0_9_fi_regulator";
 end zsys_axi_smc_0_sc_node_v1_0_9_fi_regulator;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_node_v1_0_9_fi_regulator is
@@ -39938,8 +39920,6 @@ entity zsys_axi_smc_0_sc_util_v1_0_3_axi_reg_stall is
     w_resume : in STD_LOGIC;
     m_axi_awready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_util_v1_0_3_axi_reg_stall : entity is "sc_util_v1_0_3_axi_reg_stall";
 end zsys_axi_smc_0_sc_util_v1_0_3_axi_reg_stall;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_util_v1_0_3_axi_reg_stall is
@@ -69513,8 +69493,6 @@ entity zsys_axi_smc_0_sc_util_v1_0_3_counter is
     s_sc_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     \grant_i_reg[0]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_util_v1_0_3_counter : entity is "sc_util_v1_0_3_counter";
 end zsys_axi_smc_0_sc_util_v1_0_3_counter;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_util_v1_0_3_counter is
@@ -92908,8 +92886,6 @@ entity zsys_axi_smc_0_sc_util_v1_0_3_pipeline is
     s_sc_aclk : in STD_LOGIC;
     s_sc_send : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_util_v1_0_3_pipeline : entity is "sc_util_v1_0_3_pipeline";
 end zsys_axi_smc_0_sc_util_v1_0_3_pipeline;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_util_v1_0_3_pipeline is
@@ -105938,8 +105914,6 @@ entity zsys_axi_smc_0_sc_util_v1_0_3_srl_rtl is
     A : in STD_LOGIC_VECTOR ( 4 downto 0 );
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_util_v1_0_3_srl_rtl : entity is "sc_util_v1_0_3_srl_rtl";
 end zsys_axi_smc_0_sc_util_v1_0_3_srl_rtl;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_util_v1_0_3_srl_rtl is
@@ -109281,8 +109255,6 @@ entity zsys_axi_smc_0_lpf is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_lpf : entity is "lpf";
 end zsys_axi_smc_0_lpf;
 
 architecture STRUCTURE of zsys_axi_smc_0_lpf is
@@ -109359,8 +109331,6 @@ entity zsys_axi_smc_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sequence_psr : entity is "sequence_psr";
 end zsys_axi_smc_0_sequence_psr;
 
 architecture STRUCTURE of zsys_axi_smc_0_sequence_psr is
@@ -109631,8 +109601,6 @@ entity zsys_axi_smc_0_xpm_memory_sdpram is
   attribute MEMORY_SIZE of zsys_axi_smc_0_xpm_memory_sdpram : entity is 32;
   attribute MESSAGE_CONTROL : integer;
   attribute MESSAGE_CONTROL of zsys_axi_smc_0_xpm_memory_sdpram : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_xpm_memory_sdpram : entity is "xpm_memory_sdpram";
   attribute P_CLOCKING_MODE : integer;
   attribute P_CLOCKING_MODE of zsys_axi_smc_0_xpm_memory_sdpram : entity is 0;
   attribute P_ECC_MODE : integer;
@@ -117100,8 +117068,6 @@ entity zsys_axi_smc_0_sc_mmu_v1_0_6_top is
   attribute C_WRITE_ACCEPTANCE of zsys_axi_smc_0_sc_mmu_v1_0_6_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of zsys_axi_smc_0_sc_mmu_v1_0_6_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_mmu_v1_0_6_top : entity is "sc_mmu_v1_0_6_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of zsys_axi_smc_0_sc_mmu_v1_0_6_top : entity is 1;
   attribute P_AXI4 : integer;
@@ -128858,8 +128824,6 @@ entity zsys_axi_smc_0_sc_node_v1_0_9_ingress is
     s_sc_aclk : in STD_LOGIC;
     \grant_i_reg[1]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_node_v1_0_9_ingress : entity is "sc_node_v1_0_9_ingress";
 end zsys_axi_smc_0_sc_node_v1_0_9_ingress;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_node_v1_0_9_ingress is
@@ -129063,8 +129027,6 @@ entity zsys_axi_smc_0_sc_node_v1_0_9_si_handler is
     s_sc_req : in STD_LOGIC_VECTOR ( 1 downto 0 );
     arb_stall : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_node_v1_0_9_si_handler : entity is "sc_node_v1_0_9_si_handler";
 end zsys_axi_smc_0_sc_node_v1_0_9_si_handler;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_node_v1_0_9_si_handler is
@@ -129456,8 +129418,6 @@ entity zsys_axi_smc_0_sc_node_v1_0_9_upsizer is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     ingress_valid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_node_v1_0_9_upsizer : entity is "sc_node_v1_0_9_upsizer";
 end zsys_axi_smc_0_sc_node_v1_0_9_upsizer;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_node_v1_0_9_upsizer is
@@ -132539,8 +132499,6 @@ entity zsys_axi_smc_0_sc_switchboard_v1_0_5_top is
   attribute LP_MUX_IMPL of zsys_axi_smc_0_sc_switchboard_v1_0_5_top : entity is "32'b00000000000000000000000000000000";
   attribute LP_M_SC_SEL_MI_PIPELINE_DEPTH : string;
   attribute LP_M_SC_SEL_MI_PIPELINE_DEPTH of zsys_axi_smc_0_sc_switchboard_v1_0_5_top : entity is "32'b00000000000000000000000000000000";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_switchboard_v1_0_5_top : entity is "sc_switchboard_v1_0_5_top";
 end zsys_axi_smc_0_sc_switchboard_v1_0_5_top;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_switchboard_v1_0_5_top is
@@ -133111,8 +133069,6 @@ entity zsys_axi_smc_0_sc_util_v1_0_3_axic_reg_srl_fifo is
     \length_counter_1_reg[6]\ : in STD_LOGIC;
     \length_counter_1_reg[4]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_util_v1_0_3_axic_reg_srl_fifo : entity is "sc_util_v1_0_3_axic_reg_srl_fifo";
 end zsys_axi_smc_0_sc_util_v1_0_3_axic_reg_srl_fifo;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_util_v1_0_3_axic_reg_srl_fifo is
@@ -138400,8 +138356,6 @@ entity zsys_axi_smc_0_bd_fa8c_arsw_0 is
     s_sc_payld : in STD_LOGIC_VECTOR ( 277 downto 0 );
     S01_SC_AR_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_arsw_0 : entity is "bd_fa8c_arsw_0";
 end zsys_axi_smc_0_bd_fa8c_arsw_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_arsw_0 is
@@ -138470,8 +138424,6 @@ entity zsys_axi_smc_0_bd_fa8c_awsw_0 is
     \gen_rd_b.doutb_reg_reg[139]\ : in STD_LOGIC_VECTOR ( 277 downto 0 );
     S02_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_awsw_0 : entity is "bd_fa8c_awsw_0";
 end zsys_axi_smc_0_bd_fa8c_awsw_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_awsw_0 is
@@ -138537,8 +138489,6 @@ entity zsys_axi_smc_0_bd_fa8c_bsw_0 is
     aclk : in STD_LOGIC;
     S00_SC_B_payld : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_bsw_0 : entity is "bd_fa8c_bsw_0";
 end zsys_axi_smc_0_bd_fa8c_bsw_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_bsw_0 is
@@ -138603,8 +138553,6 @@ entity zsys_axi_smc_0_bd_fa8c_rsw_0 is
     aclk : in STD_LOGIC;
     S00_SC_R_payld : in STD_LOGIC_VECTOR ( 84 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_rsw_0 : entity is "bd_fa8c_rsw_0";
 end zsys_axi_smc_0_bd_fa8c_rsw_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_rsw_0 is
@@ -138715,8 +138663,6 @@ entity zsys_axi_smc_0_bd_fa8c_s00mmu_0 is
     M_SC_R_payld : in STD_LOGIC_VECTOR ( 34 downto 0 );
     M_SC_R_send : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_s00mmu_0 : entity is "bd_fa8c_s00mmu_0";
 end zsys_axi_smc_0_bd_fa8c_s00mmu_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_s00mmu_0 is
@@ -138957,8 +138903,6 @@ entity zsys_axi_smc_0_bd_fa8c_s01mmu_0 is
     M_SC_R_payld : in STD_LOGIC_VECTOR ( 34 downto 0 );
     M_SC_R_send : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_s01mmu_0 : entity is "bd_fa8c_s01mmu_0";
 end zsys_axi_smc_0_bd_fa8c_s01mmu_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_s01mmu_0 is
@@ -139215,8 +139159,6 @@ entity zsys_axi_smc_0_bd_fa8c_s02mmu_0 is
     M_SC_B_payld : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_SC_B_send : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_s02mmu_0 : entity is "bd_fa8c_s02mmu_0";
 end zsys_axi_smc_0_bd_fa8c_s02mmu_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_s02mmu_0 is
@@ -139452,8 +139394,6 @@ entity zsys_axi_smc_0_bd_fa8c_wsw_0 is
     \gen_rd_b.doutb_reg_reg[87]\ : in STD_LOGIC_VECTOR ( 173 downto 0 );
     S02_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_wsw_0 : entity is "bd_fa8c_wsw_0";
 end zsys_axi_smc_0_bd_fa8c_wsw_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_wsw_0 is
@@ -139519,8 +139459,6 @@ entity zsys_axi_smc_0_proc_sys_reset is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_proc_sys_reset : entity is "proc_sys_reset";
 end zsys_axi_smc_0_proc_sys_reset;
 
 architecture STRUCTURE of zsys_axi_smc_0_proc_sys_reset is
@@ -139602,8 +139540,6 @@ entity zsys_axi_smc_0_sc_exit_v1_0_7_a_axi3_conv is
     s_axi_awqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_awcache : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_exit_v1_0_7_a_axi3_conv : entity is "sc_exit_v1_0_7_a_axi3_conv";
 end zsys_axi_smc_0_sc_exit_v1_0_7_a_axi3_conv;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_exit_v1_0_7_a_axi3_conv is
@@ -143853,8 +143789,6 @@ entity zsys_axi_smc_0_sc_exit_v1_0_7_exit is
     s_axi_bready : in STD_LOGIC;
     \state_reg[s_ready_i]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_exit_v1_0_7_exit : entity is "sc_exit_v1_0_7_exit";
 end zsys_axi_smc_0_sc_exit_v1_0_7_exit;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_exit_v1_0_7_exit is
@@ -144047,8 +143981,6 @@ entity zsys_axi_smc_0_sc_si_converter_v1_0_6_splitter is
     s_axi_wvalid : in STD_LOGIC;
     s_axi_awlen : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_si_converter_v1_0_6_splitter : entity is "sc_si_converter_v1_0_6_splitter";
 end zsys_axi_smc_0_sc_si_converter_v1_0_6_splitter;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_si_converter_v1_0_6_splitter is
@@ -149888,8 +149820,6 @@ entity zsys_axi_smc_0_sc_util_v1_0_3_xpm_memory_fifo is
     \gen_normal_area.fifo_node_payld_empty\ : in STD_LOGIC;
     m_sc_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_util_v1_0_3_xpm_memory_fifo : entity is "sc_util_v1_0_3_xpm_memory_fifo";
 end zsys_axi_smc_0_sc_util_v1_0_3_xpm_memory_fifo;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_util_v1_0_3_xpm_memory_fifo is
@@ -159976,8 +159906,6 @@ entity zsys_axi_smc_0_bd_fa8c_psr_aclk_0 is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_psr_aclk_0 : entity is "bd_fa8c_psr_aclk_0";
 end zsys_axi_smc_0_bd_fa8c_psr_aclk_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_psr_aclk_0 is
@@ -160000,8 +159928,6 @@ entity zsys_axi_smc_0_bd_fa8c_s01sic_0 is
     interconnect_aresetn : in STD_LOGIC_VECTOR ( 0 to 0 );
     \m_vector_i_reg[1067]\ : in STD_LOGIC_VECTOR ( 12 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_s01sic_0 : entity is "bd_fa8c_s01sic_0";
 end zsys_axi_smc_0_bd_fa8c_s01sic_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_s01sic_0 is
@@ -160240,17 +160166,15 @@ entity zsys_axi_smc_0_switchboards_imp_1FM75VH is
     \gen_rd_b.doutb_reg_reg[87]\ : in STD_LOGIC_VECTOR ( 173 downto 0 );
     S02_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_switchboards_imp_1FM75VH : entity is "switchboards_imp_1FM75VH";
 end zsys_axi_smc_0_switchboards_imp_1FM75VH;
 
 architecture STRUCTURE of zsys_axi_smc_0_switchboards_imp_1FM75VH is
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of ar_switchboard : label is "sc_switchboard_v1_0_5_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of aw_switchboard : label is "sc_switchboard_v1_0_5_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of b_switchboard : label is "sc_switchboard_v1_0_5_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of r_switchboard : label is "sc_switchboard_v1_0_5_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of w_switchboard : label is "sc_switchboard_v1_0_5_top,Vivado 2018.2.2";
+  attribute X_CORE_INFO of ar_switchboard : label is "sc_switchboard_v1_0_5_top,Vivado 2018.2";
+  attribute X_CORE_INFO of aw_switchboard : label is "sc_switchboard_v1_0_5_top,Vivado 2018.2";
+  attribute X_CORE_INFO of b_switchboard : label is "sc_switchboard_v1_0_5_top,Vivado 2018.2";
+  attribute X_CORE_INFO of r_switchboard : label is "sc_switchboard_v1_0_5_top,Vivado 2018.2";
+  attribute X_CORE_INFO of w_switchboard : label is "sc_switchboard_v1_0_5_top,Vivado 2018.2";
 begin
 ar_switchboard: entity work.zsys_axi_smc_0_bd_fa8c_arsw_0
      port map (
@@ -160373,8 +160297,6 @@ entity zsys_axi_smc_0_sc_exit_v1_0_7_axi3_conv is
     s_axi_arqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_arcache : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_exit_v1_0_7_axi3_conv : entity is "sc_exit_v1_0_7_axi3_conv";
 end zsys_axi_smc_0_sc_exit_v1_0_7_axi3_conv;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_exit_v1_0_7_axi3_conv is
@@ -160555,8 +160477,6 @@ entity zsys_axi_smc_0_sc_node_v1_0_9_fifo is
     \gen_normal_area.fifo_node_payld_empty\ : in STD_LOGIC;
     m_sc_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_node_v1_0_9_fifo : entity is "sc_node_v1_0_9_fifo";
 end zsys_axi_smc_0_sc_node_v1_0_9_fifo;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_node_v1_0_9_fifo is
@@ -161918,8 +161838,6 @@ entity zsys_axi_smc_0_sc_si_converter_v1_0_6_top is
   attribute C_WRITE_ACCEPTANCE of zsys_axi_smc_0_sc_si_converter_v1_0_6_top : entity is 32;
   attribute C_WRITE_WATERMARK : integer;
   attribute C_WRITE_WATERMARK of zsys_axi_smc_0_sc_si_converter_v1_0_6_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_si_converter_v1_0_6_top : entity is "sc_si_converter_v1_0_6_top";
   attribute P_EXOK : string;
   attribute P_EXOK of zsys_axi_smc_0_sc_si_converter_v1_0_6_top : entity is "2'b01";
   attribute P_FULLY_PIPELINED : integer;
@@ -173212,8 +173130,6 @@ entity zsys_axi_smc_0_bd_fa8c_s00sic_0 is
     S_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 );
     S_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_s00sic_0 : entity is "bd_fa8c_s00sic_0";
 end zsys_axi_smc_0_bd_fa8c_s00sic_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_s00sic_0 is
@@ -173455,8 +173371,6 @@ entity zsys_axi_smc_0_bd_fa8c_s02sic_0 is
     S_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 );
     S_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_s02sic_0 : entity is "bd_fa8c_s02sic_0";
 end zsys_axi_smc_0_bd_fa8c_s02sic_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_s02sic_0 is
@@ -173681,8 +173595,6 @@ entity zsys_axi_smc_0_clk_map_imp_1H7Y08B is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_clk_map_imp_1H7Y08B : entity is "clk_map_imp_1H7Y08B";
 end zsys_axi_smc_0_clk_map_imp_1H7Y08B;
 
 architecture STRUCTURE of zsys_axi_smc_0_clk_map_imp_1H7Y08B is
@@ -173723,15 +173635,13 @@ entity zsys_axi_smc_0_s01_entry_pipeline_imp_QF7VDZ is
     M_SC_R_payld : in STD_LOGIC_VECTOR ( 34 downto 0 );
     M_SC_R_send : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_s01_entry_pipeline_imp_QF7VDZ : entity is "s01_entry_pipeline_imp_QF7VDZ";
 end zsys_axi_smc_0_s01_entry_pipeline_imp_QF7VDZ;
 
 architecture STRUCTURE of zsys_axi_smc_0_s01_entry_pipeline_imp_QF7VDZ is
   signal \^s_sc_ar_payld\ : STD_LOGIC_VECTOR ( 64 downto 0 );
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of s01_mmu : label is "sc_mmu_v1_0_6_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of s01_si_converter : label is "sc_si_converter_v1_0_6_top,Vivado 2018.2.2";
+  attribute X_CORE_INFO of s01_mmu : label is "sc_mmu_v1_0_6_top,Vivado 2018.2";
+  attribute X_CORE_INFO of s01_si_converter : label is "sc_si_converter_v1_0_6_top,Vivado 2018.2";
 begin
   S_SC_AR_payld(64 downto 0) <= \^s_sc_ar_payld\(64 downto 0);
 s01_mmu: entity work.zsys_axi_smc_0_bd_fa8c_s01mmu_0
@@ -173855,8 +173765,6 @@ entity zsys_axi_smc_0_sc_exit_v1_0_7_splitter is
     s_axi_arcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \m_vector_i_reg[1058]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_exit_v1_0_7_splitter : entity is "sc_exit_v1_0_7_splitter";
 end zsys_axi_smc_0_sc_exit_v1_0_7_splitter;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_exit_v1_0_7_splitter is
@@ -174055,8 +173963,6 @@ entity zsys_axi_smc_0_sc_node_v1_0_9_mi_handler is
     s_sc_aresetn : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_node_v1_0_9_mi_handler : entity is "sc_node_v1_0_9_mi_handler";
 end zsys_axi_smc_0_sc_node_v1_0_9_mi_handler;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_node_v1_0_9_mi_handler is
@@ -176339,8 +176245,6 @@ entity zsys_axi_smc_0_s00_entry_pipeline_imp_1IGNGJ7 is
     S_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 );
     S_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_s00_entry_pipeline_imp_1IGNGJ7 : entity is "s00_entry_pipeline_imp_1IGNGJ7";
 end zsys_axi_smc_0_s00_entry_pipeline_imp_1IGNGJ7;
 
 architecture STRUCTURE of zsys_axi_smc_0_s00_entry_pipeline_imp_1IGNGJ7 is
@@ -176352,8 +176256,8 @@ architecture STRUCTURE of zsys_axi_smc_0_s00_entry_pipeline_imp_1IGNGJ7 is
   signal s00_transaction_regulator_M_AXI_AWREADY : STD_LOGIC;
   signal s00_transaction_regulator_M_AXI_WREADY : STD_LOGIC;
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of s00_mmu : label is "sc_mmu_v1_0_6_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of s00_si_converter : label is "sc_si_converter_v1_0_6_top,Vivado 2018.2.2";
+  attribute X_CORE_INFO of s00_mmu : label is "sc_mmu_v1_0_6_top,Vivado 2018.2";
+  attribute X_CORE_INFO of s00_si_converter : label is "sc_si_converter_v1_0_6_top,Vivado 2018.2";
 begin
   S_SC_AR_payld(64 downto 0) <= \^s_sc_ar_payld\(64 downto 0);
   S_SC_AW_payld(64 downto 0) <= \^s_sc_aw_payld\(64 downto 0);
@@ -176470,8 +176374,6 @@ entity zsys_axi_smc_0_s02_entry_pipeline_imp_BM9CBE is
     S_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 );
     S_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_s02_entry_pipeline_imp_BM9CBE : entity is "s02_entry_pipeline_imp_BM9CBE";
 end zsys_axi_smc_0_s02_entry_pipeline_imp_BM9CBE;
 
 architecture STRUCTURE of zsys_axi_smc_0_s02_entry_pipeline_imp_BM9CBE is
@@ -176482,8 +176384,8 @@ architecture STRUCTURE of zsys_axi_smc_0_s02_entry_pipeline_imp_BM9CBE is
   signal s02_transaction_regulator_M_AXI_AWREADY : STD_LOGIC;
   signal s02_transaction_regulator_M_AXI_WREADY : STD_LOGIC;
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of s02_mmu : label is "sc_mmu_v1_0_6_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of s02_si_converter : label is "sc_si_converter_v1_0_6_top,Vivado 2018.2.2";
+  attribute X_CORE_INFO of s02_mmu : label is "sc_mmu_v1_0_6_top,Vivado 2018.2";
+  attribute X_CORE_INFO of s02_si_converter : label is "sc_si_converter_v1_0_6_top,Vivado 2018.2";
 begin
   S_SC_AW_payld(64 downto 0) <= \^s_sc_aw_payld\(64 downto 0);
   S_SC_W_payld(50 downto 0) <= \^s_sc_w_payld\(50 downto 0);
@@ -176688,8 +176590,6 @@ entity zsys_axi_smc_0_sc_exit_v1_0_7_top is
   attribute C_WRITE_ACCEPTANCE of zsys_axi_smc_0_sc_exit_v1_0_7_top : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of zsys_axi_smc_0_sc_exit_v1_0_7_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_exit_v1_0_7_top : entity is "sc_exit_v1_0_7_top";
   attribute P_BYPASS : integer;
   attribute P_BYPASS of zsys_axi_smc_0_sc_exit_v1_0_7_top : entity is 0;
   attribute P_FULLY_PIPELINED : integer;
@@ -179322,8 +179222,6 @@ entity zsys_axi_smc_0_sc_node_v1_0_9_top is
   attribute LP_S_STATIC_DWIDTH of zsys_axi_smc_0_sc_node_v1_0_9_top : entity is 1;
   attribute LP_ZERO_ROUTE_WIDTH : integer;
   attribute LP_ZERO_ROUTE_WIDTH of zsys_axi_smc_0_sc_node_v1_0_9_top : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_sc_node_v1_0_9_top : entity is "sc_node_v1_0_9_top";
 end zsys_axi_smc_0_sc_node_v1_0_9_top;
 
 architecture STRUCTURE of zsys_axi_smc_0_sc_node_v1_0_9_top is
@@ -182821,8 +182719,6 @@ entity zsys_axi_smc_0_bd_fa8c_m00arn_0 is
     M00_SC_AR_payld : in STD_LOGIC_VECTOR ( 138 downto 0 );
     M_SC_AR_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_m00arn_0 : entity is "bd_fa8c_m00arn_0";
 end zsys_axi_smc_0_bd_fa8c_m00arn_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_m00arn_0 is
@@ -182998,8 +182894,6 @@ entity zsys_axi_smc_0_bd_fa8c_m00awn_0 is
     M_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axis_arb_tready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_m00awn_0 : entity is "bd_fa8c_m00awn_0";
 end zsys_axi_smc_0_bd_fa8c_m00awn_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_m00awn_0 is
@@ -183174,8 +183068,6 @@ entity zsys_axi_smc_0_bd_fa8c_m00bn_0 is
     S_SC_B_payld : in STD_LOGIC_VECTOR ( 6 downto 0 );
     M_SC_B_recv : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_m00bn_0 : entity is "bd_fa8c_m00bn_0";
 end zsys_axi_smc_0_bd_fa8c_m00bn_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_m00bn_0 is
@@ -183379,8 +183271,6 @@ entity zsys_axi_smc_0_bd_fa8c_m00e_0 is
     M00_AXI_rlast : in STD_LOGIC;
     M00_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_m00e_0 : entity is "bd_fa8c_m00e_0";
 end zsys_axi_smc_0_bd_fa8c_m00e_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_m00e_0 is
@@ -183586,8 +183476,6 @@ entity zsys_axi_smc_0_bd_fa8c_m00rn_0 is
     S_SC_R_payld : in STD_LOGIC_VECTOR ( 85 downto 0 );
     M_SC_R_recv : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_m00rn_0 : entity is "bd_fa8c_m00rn_0";
 end zsys_axi_smc_0_bd_fa8c_m00rn_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_m00rn_0 is
@@ -183756,8 +183644,6 @@ entity zsys_axi_smc_0_bd_fa8c_m00wn_0 is
     m_axis_arb_tvalid : in STD_LOGIC;
     m_axis_arb_tdata : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_m00wn_0 : entity is "bd_fa8c_m00wn_0";
 end zsys_axi_smc_0_bd_fa8c_m00wn_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_m00wn_0 is
@@ -183931,8 +183817,6 @@ entity zsys_axi_smc_0_bd_fa8c_sarn_0 is
     S_SC_AR_payld : in STD_LOGIC_VECTOR ( 64 downto 0 );
     M_SC_AR_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_sarn_0 : entity is "bd_fa8c_sarn_0";
 end zsys_axi_smc_0_bd_fa8c_sarn_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_sarn_0 is
@@ -184100,8 +183984,6 @@ entity zsys_axi_smc_0_bd_fa8c_sarn_1 is
     S_SC_AR_payld : in STD_LOGIC_VECTOR ( 64 downto 0 );
     M00_SC_AR_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_sarn_1 : entity is "bd_fa8c_sarn_1";
 end zsys_axi_smc_0_bd_fa8c_sarn_1;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_sarn_1 is
@@ -184269,8 +184151,6 @@ entity zsys_axi_smc_0_bd_fa8c_sawn_0 is
     S_SC_AW_payld : in STD_LOGIC_VECTOR ( 64 downto 0 );
     M_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_sawn_0 : entity is "bd_fa8c_sawn_0";
 end zsys_axi_smc_0_bd_fa8c_sawn_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_sawn_0 is
@@ -184438,8 +184318,6 @@ entity zsys_axi_smc_0_bd_fa8c_sawn_1 is
     S_SC_AW_payld : in STD_LOGIC_VECTOR ( 64 downto 0 );
     M00_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_sawn_1 : entity is "bd_fa8c_sawn_1";
 end zsys_axi_smc_0_bd_fa8c_sawn_1;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_sawn_1 is
@@ -184606,8 +184484,6 @@ entity zsys_axi_smc_0_bd_fa8c_sbn_0 is
     M00_SC_B_payld : in STD_LOGIC_VECTOR ( 6 downto 0 );
     M_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_sbn_0 : entity is "bd_fa8c_sbn_0";
 end zsys_axi_smc_0_bd_fa8c_sbn_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_sbn_0 is
@@ -184769,8 +184645,6 @@ entity zsys_axi_smc_0_bd_fa8c_sbn_1 is
     M02_SC_B_payld : in STD_LOGIC_VECTOR ( 6 downto 0 );
     M_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_sbn_1 : entity is "bd_fa8c_sbn_1";
 end zsys_axi_smc_0_bd_fa8c_sbn_1;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_sbn_1 is
@@ -184932,8 +184806,6 @@ entity zsys_axi_smc_0_bd_fa8c_srn_0 is
     M00_SC_R_payld : in STD_LOGIC_VECTOR ( 84 downto 0 );
     M_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_srn_0 : entity is "bd_fa8c_srn_0";
 end zsys_axi_smc_0_bd_fa8c_srn_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_srn_0 is
@@ -185096,8 +184968,6 @@ entity zsys_axi_smc_0_bd_fa8c_srn_1 is
     M01_SC_R_payld : in STD_LOGIC_VECTOR ( 84 downto 0 );
     M_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_srn_1 : entity is "bd_fa8c_srn_1";
 end zsys_axi_smc_0_bd_fa8c_srn_1;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_srn_1 is
@@ -185262,8 +185132,6 @@ entity zsys_axi_smc_0_bd_fa8c_swn_0 is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 50 downto 0 );
     M_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_swn_0 : entity is "bd_fa8c_swn_0";
 end zsys_axi_smc_0_bd_fa8c_swn_0;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_swn_0 is
@@ -185426,8 +185294,6 @@ entity zsys_axi_smc_0_bd_fa8c_swn_1 is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 50 downto 0 );
     M00_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c_swn_1 : entity is "bd_fa8c_swn_1";
 end zsys_axi_smc_0_bd_fa8c_swn_1;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c_swn_1 is
@@ -185624,13 +185490,11 @@ entity zsys_axi_smc_0_m00_exit_pipeline_imp_JSZ1PS is
     M00_AXI_rlast : in STD_LOGIC;
     M00_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_m00_exit_pipeline_imp_JSZ1PS : entity is "m00_exit_pipeline_imp_JSZ1PS";
 end zsys_axi_smc_0_m00_exit_pipeline_imp_JSZ1PS;
 
 architecture STRUCTURE of zsys_axi_smc_0_m00_exit_pipeline_imp_JSZ1PS is
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of m00_exit : label is "sc_exit_v1_0_7_top,Vivado 2018.2.2";
+  attribute X_CORE_INFO of m00_exit : label is "sc_exit_v1_0_7_top,Vivado 2018.2";
 begin
 m00_exit: entity work.zsys_axi_smc_0_bd_fa8c_m00e_0
      port map (
@@ -185723,8 +185587,6 @@ entity zsys_axi_smc_0_m00_nodes_imp_6H39ZW is
     M00_SC_W_payld : in STD_LOGIC_VECTOR ( 86 downto 0 );
     M_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_m00_nodes_imp_6H39ZW : entity is "m00_nodes_imp_6H39ZW";
 end zsys_axi_smc_0_m00_nodes_imp_6H39ZW;
 
 architecture STRUCTURE of zsys_axi_smc_0_m00_nodes_imp_6H39ZW is
@@ -185732,11 +185594,11 @@ architecture STRUCTURE of zsys_axi_smc_0_m00_nodes_imp_6H39ZW is
   signal m00_aw_node_M_AXIS_ARB_TREADY : STD_LOGIC;
   signal m00_aw_node_M_AXIS_ARB_TVALID : STD_LOGIC;
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of m00_ar_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of m00_aw_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of m00_b_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of m00_r_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of m00_w_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
+  attribute X_CORE_INFO of m00_ar_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
+  attribute X_CORE_INFO of m00_aw_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
+  attribute X_CORE_INFO of m00_b_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
+  attribute X_CORE_INFO of m00_r_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
+  attribute X_CORE_INFO of m00_w_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
 begin
 m00_ar_node: entity work.zsys_axi_smc_0_bd_fa8c_m00arn_0
      port map (
@@ -185849,17 +185711,15 @@ entity zsys_axi_smc_0_s00_nodes_imp_1M90DPL is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 50 downto 0 );
     M_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_s00_nodes_imp_1M90DPL : entity is "s00_nodes_imp_1M90DPL";
 end zsys_axi_smc_0_s00_nodes_imp_1M90DPL;
 
 architecture STRUCTURE of zsys_axi_smc_0_s00_nodes_imp_1M90DPL is
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of s00_ar_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of s00_aw_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of s00_b_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of s00_r_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of s00_w_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
+  attribute X_CORE_INFO of s00_ar_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
+  attribute X_CORE_INFO of s00_aw_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
+  attribute X_CORE_INFO of s00_b_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
+  attribute X_CORE_INFO of s00_r_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
+  attribute X_CORE_INFO of s00_w_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
 begin
 s00_ar_node: entity work.zsys_axi_smc_0_bd_fa8c_sarn_0
      port map (
@@ -185943,14 +185803,12 @@ entity zsys_axi_smc_0_s01_nodes_imp_LD4OPR is
     M01_SC_R_payld : in STD_LOGIC_VECTOR ( 84 downto 0 );
     M_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_s01_nodes_imp_LD4OPR : entity is "s01_nodes_imp_LD4OPR";
 end zsys_axi_smc_0_s01_nodes_imp_LD4OPR;
 
 architecture STRUCTURE of zsys_axi_smc_0_s01_nodes_imp_LD4OPR is
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of s01_ar_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of s01_r_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
+  attribute X_CORE_INFO of s01_ar_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
+  attribute X_CORE_INFO of s01_r_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
 begin
 s01_ar_node: entity work.zsys_axi_smc_0_bd_fa8c_sarn_1
      port map (
@@ -186006,15 +185864,13 @@ entity zsys_axi_smc_0_s02_nodes_imp_DHNLQC is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 50 downto 0 );
     M00_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_s02_nodes_imp_DHNLQC : entity is "s02_nodes_imp_DHNLQC";
 end zsys_axi_smc_0_s02_nodes_imp_DHNLQC;
 
 architecture STRUCTURE of zsys_axi_smc_0_s02_nodes_imp_DHNLQC is
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of s02_aw_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of s02_b_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
-  attribute X_CORE_INFO of s02_w_node : label is "sc_node_v1_0_9_top,Vivado 2018.2.2";
+  attribute X_CORE_INFO of s02_aw_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
+  attribute X_CORE_INFO of s02_b_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
+  attribute X_CORE_INFO of s02_w_node : label is "sc_node_v1_0_9_top,Vivado 2018.2";
 begin
 s02_aw_node: entity work.zsys_axi_smc_0_bd_fa8c_sawn_1
      port map (
@@ -186163,8 +186019,6 @@ entity zsys_axi_smc_0_bd_fa8c is
   );
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of zsys_axi_smc_0_bd_fa8c : entity is "zsys_axi_smc_0.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_axi_smc_0_bd_fa8c : entity is "bd_fa8c";
 end zsys_axi_smc_0_bd_fa8c;
 
 architecture STRUCTURE of zsys_axi_smc_0_bd_fa8c is
@@ -186973,7 +186827,7 @@ entity zsys_axi_smc_0 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of zsys_axi_smc_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of zsys_axi_smc_0 : entity is "bd_fa8c,Vivado 2018.2.2";
+  attribute X_CORE_INFO of zsys_axi_smc_0 : entity is "bd_fa8c,Vivado 2018.2";
 end zsys_axi_smc_0;
 
 architecture STRUCTURE of zsys_axi_smc_0 is

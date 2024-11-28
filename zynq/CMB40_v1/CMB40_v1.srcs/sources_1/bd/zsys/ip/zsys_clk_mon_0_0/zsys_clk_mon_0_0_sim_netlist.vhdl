@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Mon Nov  4 01:09:17 2024
--- Host        : lapepuat11 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_clk_mon_0_0/zsys_clk_mon_0_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+-- Date        : Fri Oct 18 12:22:49 2024
+-- Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+-- Command     : write_vhdl -force -mode funcsim -rename_top zsys_clk_mon_0_0 -prefix
+--               zsys_clk_mon_0_0_ zsys_clk_mon_0_0_sim_netlist.vhdl
 -- Design      : zsys_clk_mon_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,8 +27,6 @@ entity zsys_clk_mon_0_0_clk_monitor is
     s00_axi_wvalid : in STD_LOGIC;
     i_DTAP : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_clk_mon_0_0_clk_monitor : entity is "clk_monitor";
 end zsys_clk_mon_0_0_clk_monitor;
 
 architecture STRUCTURE of zsys_clk_mon_0_0_clk_monitor is
@@ -13805,8 +13803,6 @@ entity zsys_clk_mon_0_0_clk_mon_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_clk_mon_0_0_clk_mon_v1_0_S00_AXI : entity is "clk_mon_v1_0_S00_AXI";
 end zsys_clk_mon_0_0_clk_mon_v1_0_S00_AXI;
 
 architecture STRUCTURE of zsys_clk_mon_0_0_clk_mon_v1_0_S00_AXI is
@@ -16204,8 +16200,6 @@ entity zsys_clk_mon_0_0_clk_mon_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_clk_mon_0_0_clk_mon_v1_0 : entity is "clk_mon_v1_0";
 end zsys_clk_mon_0_0_clk_mon_v1_0;
 
 architecture STRUCTURE of zsys_clk_mon_0_0_clk_mon_v1_0 is
@@ -16268,7 +16262,7 @@ entity zsys_clk_mon_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_clk_mon_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_clk_mon_0_0 : entity is "clk_mon_v1_0,Vivado 2018.2.2";
+  attribute x_core_info of zsys_clk_mon_0_0 : entity is "clk_mon_v1_0,Vivado 2018.2";
 end zsys_clk_mon_0_0;
 
 architecture STRUCTURE of zsys_clk_mon_0_0 is

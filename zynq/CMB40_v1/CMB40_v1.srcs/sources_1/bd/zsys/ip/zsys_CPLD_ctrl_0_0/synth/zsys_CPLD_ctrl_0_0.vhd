@@ -127,11 +127,11 @@ ARCHITECTURE zsys_CPLD_ctrl_0_0_arch OF zsys_CPLD_ctrl_0_0 IS
     );
   END COMPONENT CPLD_ctrl_v1_0;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF zsys_CPLD_ctrl_0_0_arch: ARCHITECTURE IS "CPLD_ctrl_v1_0,Vivado 2018.2.2";
+  ATTRIBUTE X_CORE_INFO OF zsys_CPLD_ctrl_0_0_arch: ARCHITECTURE IS "CPLD_ctrl_v1_0,Vivado 2018.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF zsys_CPLD_ctrl_0_0_arch : ARCHITECTURE IS "zsys_CPLD_ctrl_0_0,CPLD_ctrl_v1_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF zsys_CPLD_ctrl_0_0_arch: ARCHITECTURE IS "zsys_CPLD_ctrl_0_0,CPLD_ctrl_v1_0,{x_ipProduct=Vivado 2018.2.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=CPLD_ctrl,x_ipVersion=1.0,x_ipCoreRevision=15,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4,SPI_baud_rate=10000000,input_clock_freq=100000000,SPI_word_lenght=14}";
+  ATTRIBUTE CORE_GENERATION_INFO OF zsys_CPLD_ctrl_0_0_arch: ARCHITECTURE IS "zsys_CPLD_ctrl_0_0,CPLD_ctrl_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=CPLD_ctrl,x_ipVersion=1.0,x_ipCoreRevision=15,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4,SPI_baud_rate=10000000,input_clock_freq=100000000,SPI_word_lenght=14}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axi_aresetn: SIGNAL IS "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW";

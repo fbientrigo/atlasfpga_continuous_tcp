@@ -112,9 +112,10 @@ begin
     if(areset = '1') then
         count_delay <= 0;
         o_out_trigger <= '0';
-        unset_input <= '0';
+        unset_input <= '1';
     elsif(rising_edge(sys_clk))then
         unset_input <= not unset_input;
+        --unset_input <= '0';
         if((samp_out = '1' and  i_en_soft_trigger='0') or (i_soft_trigger = '1' and i_en_soft_trigger='1')) then --add delay to the out for long the trigger           
             if(count_delay = 5) then
                 o_out_trigger <= '0';

@@ -17,7 +17,7 @@ src/nand.o src/nand.o: ../src/nand.c \
  ../../CMB40_FSBL_bsp/ps7_cortexa9_0/include/xstatus.h \
  ../../CMB40_FSBL_bsp/ps7_cortexa9_0/include/xil_assert.h \
  ../src/fsbl_debug.h \
- C:\Users\osotosan\charge-monitoring-system\zynq\CMB40_v1\CMB40_v1.sdk\zsys_wrapper_hw_platform_5/ps7_init.h
+ /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_5/ps7_init.h
 
 ../../CMB40_FSBL_bsp/ps7_cortexa9_0/include/xparameters.h:
 
@@ -59,4 +59,4 @@ src/nand.o src/nand.o: ../src/nand.c \
 
 ../src/fsbl_debug.h:
 
-C:\Users\osotosan\charge-monitoring-system\zynq\CMB40_v1\CMB40_v1.sdk\zsys_wrapper_hw_platform_5/ps7_init.h:
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/zsys_wrapper_hw_platform_5/ps7_init.h:

@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Mon Nov  4 01:07:50 2024
--- Host        : lapepuat11 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_xbar_0/zsys_xbar_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+-- Date        : Tue Nov  5 10:41:22 2024
+-- Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+-- Command     : write_vhdl -force -mode funcsim -rename_top zsys_xbar_0 -prefix
+--               zsys_xbar_0_ zsys_xbar_0_sim_netlist.vhdl
 -- Design      : zsys_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -73,8 +73,6 @@ entity zsys_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd is
     mi_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_18_addr_arbiter_sasd";
 end zsys_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd;
 
 architecture STRUCTURE of zsys_xbar_0_axi_crossbar_v2_1_18_addr_arbiter_sasd is
@@ -2041,8 +2039,6 @@ entity zsys_xbar_0_axi_crossbar_v2_1_18_decerr_slave is
     \m_atarget_enc_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     aa_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_xbar_0_axi_crossbar_v2_1_18_decerr_slave : entity is "axi_crossbar_v2_1_18_decerr_slave";
 end zsys_xbar_0_axi_crossbar_v2_1_18_decerr_slave;
 
 architecture STRUCTURE of zsys_xbar_0_axi_crossbar_v2_1_18_decerr_slave is
@@ -2284,8 +2280,6 @@ entity zsys_xbar_0_axi_crossbar_v2_1_18_splitter is
     m_ready_d0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_xbar_0_axi_crossbar_v2_1_18_splitter : entity is "axi_crossbar_v2_1_18_splitter";
 end zsys_xbar_0_axi_crossbar_v2_1_18_splitter;
 
 architecture STRUCTURE of zsys_xbar_0_axi_crossbar_v2_1_18_splitter is
@@ -2616,8 +2610,6 @@ entity zsys_xbar_0_axi_register_slice_v2_1_17_axic_register_slice is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_xbar_0_axi_register_slice_v2_1_17_axic_register_slice : entity is "axi_register_slice_v2_1_17_axic_register_slice";
 end zsys_xbar_0_axi_register_slice_v2_1_17_axic_register_slice;
 
 architecture STRUCTURE of zsys_xbar_0_axi_register_slice_v2_1_17_axic_register_slice is
@@ -5996,8 +5988,6 @@ entity zsys_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd : entity is "axi_crossbar_v2_1_18_crossbar_sasd";
 end zsys_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd;
 
 architecture STRUCTURE of zsys_xbar_0_axi_crossbar_v2_1_18_crossbar_sasd is
@@ -6559,8 +6549,6 @@ entity zsys_xbar_0_axi_crossbar_v2_1_18_axi_crossbar is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_xbar_0_axi_crossbar_v2_1_18_axi_crossbar : entity is "axi_crossbar_v2_1_18_axi_crossbar";
 end zsys_xbar_0_axi_crossbar_v2_1_18_axi_crossbar;
 
 architecture STRUCTURE of zsys_xbar_0_axi_crossbar_v2_1_18_axi_crossbar is
@@ -6656,7 +6644,7 @@ entity zsys_xbar_0 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of zsys_xbar_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of zsys_xbar_0 : entity is "axi_crossbar_v2_1_18_axi_crossbar,Vivado 2018.2.2";
+  attribute X_CORE_INFO of zsys_xbar_0 : entity is "axi_crossbar_v2_1_18_axi_crossbar,Vivado 2018.2";
 end zsys_xbar_0;
 
 architecture STRUCTURE of zsys_xbar_0 is

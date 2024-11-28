@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Mon Nov  4 01:07:14 2024
--- Host        : lapepuat11 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_dac_i2c_0_0/zsys_dac_i2c_0_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+-- Date        : Thu Aug  3 12:21:57 2023
+-- Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top zsys_dac_i2c_0_0 -prefix
+--               zsys_dac_i2c_0_0_ zsys_dac_i2c_0_0_sim_netlist.vhdl
 -- Design      : zsys_dac_i2c_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -55,8 +55,6 @@ entity zsys_dac_i2c_0_0_i2c_dac is
     in0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_dac_i2c_0_0_i2c_dac : entity is "i2c_dac";
 end zsys_dac_i2c_0_0_i2c_dac;
 
 architecture STRUCTURE of zsys_dac_i2c_0_0_i2c_dac is
@@ -2277,8 +2275,6 @@ entity zsys_dac_i2c_0_0_i2c_control is
     Q : in STD_LOGIC_VECTOR ( 11 downto 0 );
     \command_access_byte_i_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_dac_i2c_0_0_i2c_control : entity is "i2c_control";
 end zsys_dac_i2c_0_0_i2c_control;
 
 architecture STRUCTURE of zsys_dac_i2c_0_0_i2c_control is
@@ -2917,8 +2913,6 @@ entity zsys_dac_i2c_0_0_dac_i2c_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_dac_i2c_0_0_dac_i2c_v1_0_S00_AXI : entity is "dac_i2c_v1_0_S00_AXI";
 end zsys_dac_i2c_0_0_dac_i2c_v1_0_S00_AXI;
 
 architecture STRUCTURE of zsys_dac_i2c_0_0_dac_i2c_v1_0_S00_AXI is
@@ -5398,8 +5392,6 @@ entity zsys_dac_i2c_0_0_dac_i2c_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_dac_i2c_0_0_dac_i2c_v1_0 : entity is "dac_i2c_v1_0";
 end zsys_dac_i2c_0_0_dac_i2c_v1_0;
 
 architecture STRUCTURE of zsys_dac_i2c_0_0_dac_i2c_v1_0 is
@@ -5472,7 +5464,7 @@ entity zsys_dac_i2c_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_dac_i2c_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_dac_i2c_0_0 : entity is "dac_i2c_v1_0,Vivado 2018.2.2";
+  attribute x_core_info of zsys_dac_i2c_0_0 : entity is "dac_i2c_v1_0,Vivado 2018.2";
 end zsys_dac_i2c_0_0;
 
 architecture STRUCTURE of zsys_dac_i2c_0_0 is

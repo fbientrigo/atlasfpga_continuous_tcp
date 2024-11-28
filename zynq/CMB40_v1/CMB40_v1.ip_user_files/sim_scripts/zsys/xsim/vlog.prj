@@ -71,6 +71,7 @@ verilog xil_defaultlib --include "../../../../CMB40_v1.srcs/sources_1/bd/zsys/ip
 "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_4/sim/bd_34e9_slot_0_b_0.v" \
 "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_5/sim/bd_34e9_slot_0_ar_0.v" \
 "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_6/sim/bd_34e9_slot_0_r_0.v" \
+"../../../bd/zsys/ip/zsys_xlslice_3to3_2/sim/zsys_xlslice_3to3_2.v" \
 "../../../bd/zsys/ip/zsys_auto_cc_0/sim/zsys_auto_cc_0.v" \
 "../../../bd/zsys/ip/zsys_auto_pc_0/sim/zsys_auto_pc_0.v" \
 

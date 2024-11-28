@@ -103,11 +103,11 @@ ARCHITECTURE zsys_util_ds_buf_0_2_arch OF zsys_util_ds_buf_0_2 IS
     );
   END COMPONENT util_ds_buf;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF zsys_util_ds_buf_0_2_arch: ARCHITECTURE IS "util_ds_buf,Vivado 2018.2.2";
+  ATTRIBUTE X_CORE_INFO OF zsys_util_ds_buf_0_2_arch: ARCHITECTURE IS "util_ds_buf,Vivado 2018.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF zsys_util_ds_buf_0_2_arch : ARCHITECTURE IS "zsys_util_ds_buf_0_2,util_ds_buf,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF zsys_util_ds_buf_0_2_arch: ARCHITECTURE IS "zsys_util_ds_buf_0_2,util_ds_buf,{x_ipProduct=Vivado 2018.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=util_ds_buf,x_ipVersion=2.1,x_ipCoreRevision=10,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_BUF_TYPE=OBUFDS,C_SIZE=1}";
+  ATTRIBUTE CORE_GENERATION_INFO OF zsys_util_ds_buf_0_2_arch: ARCHITECTURE IS "zsys_util_ds_buf_0_2,util_ds_buf,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=util_ds_buf,x_ipVersion=2.1,x_ipCoreRevision=10,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_BUF_TYPE=OBUFDS,C_SIZE=1}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF OBUF_DS_N: SIGNAL IS "XIL_INTERFACENAME OBUF_DS_N, FREQ_HZ 4e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2";

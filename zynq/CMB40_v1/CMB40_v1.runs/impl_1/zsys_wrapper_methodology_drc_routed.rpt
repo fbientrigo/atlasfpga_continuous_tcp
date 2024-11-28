@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-| Date         : Mon Nov  4 01:18:18 2024
-| Host         : lapepuat11 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Wed Nov 27 17:47:01 2024
+| Host         : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_methodology -file zsys_wrapper_methodology_drc_routed.rpt -pb zsys_wrapper_methodology_drc_routed.pb -rpx zsys_wrapper_methodology_drc_routed.rpx
 | Design       : zsys_wrapper
 | Device       : xc7z015clg485-2
@@ -23,20 +23,19 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 258
+             Violations found: 246
 +-----------+----------+------------------------------------------------------------------+------------+
 | Rule      | Severity | Description                                                      | Violations |
 +-----------+----------+------------------------------------------------------------------+------------+
 | CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 13         |
 | LUTAR-1   | Warning  | LUT drives async reset alert                                     | 6          |
-| PDRC-190  | Warning  | Suboptimally placed synchronized register chain                  | 22         |
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain                  | 16         |
 | TIMING-2  | Warning  | Invalid primary clock source pin                                 | 2          |
 | TIMING-4  | Warning  | Invalid primary clock redefinition on a clock tree               | 2          |
 | TIMING-6  | Warning  | No common primary clock between related clocks                   | 5          |
 | TIMING-7  | Warning  | No common node between related clocks                            | 5          |
-| TIMING-9  | Warning  | Unknown CDC Logic                                                | 1          |
 | TIMING-17 | Warning  | Non-clocked sequential cell                                      | 137        |
-| TIMING-18 | Warning  | Missing input or output delay                                    | 35         |
+| TIMING-18 | Warning  | Missing input or output delay                                    | 30         |
 | TIMING-20 | Warning  | Non-clocked latch                                                | 1          |
 | TIMING-36 | Warning  | Invalid Generated Clock due to missing edge propagation          | 2          |
 | XDCB-4    | Warning  | create_clock constraint set on both sides of diff pair port      | 9          |
@@ -143,112 +142,82 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X59Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X65Y86 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X58Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X61Y88 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X58Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X64Y86 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X59Y117 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X65Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X63Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X66Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X62Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X65Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X61Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X64Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X61Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[12] in site SLICE_X59Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[11] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[4] in site SLICE_X60Y117 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[4] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[20] in site SLICE_X59Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[19] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[12] in site SLICE_X56Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[11] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[4] in site SLICE_X59Y85 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[20] in site SLICE_X56Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[19] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[10] in site SLICE_X66Y89 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[9] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[4] in site SLICE_X56Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[2] in site SLICE_X66Y90 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#13 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[10] in site SLICE_X65Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[9] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/shift_reg_in_reg[0] in site SLICE_X74Y81 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#14 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[2] in site SLICE_X65Y122 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X74Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#15 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/shift_reg_in_reg[0] in site SLICE_X60Y114 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X77Y86 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#16 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X60Y115 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#17 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X61Y115 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#18 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X59Y115 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#19 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_in_transfer_inst/dout_reg1_reg in site SLICE_X84Y129 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_in_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#20 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/dout_reg1_reg in site SLICE_X92Y135 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.arm_out_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#21 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_in_transfer_inst/dout_reg1_reg in site SLICE_X85Y129 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_in_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#22 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_out_transfer_inst/dout_reg1_reg in site SLICE_X83Y128 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell zsys_i/system_ila_1/U0/ila_lib/U0/ila_core_inst/u_ila_reset_ctrl/asyncrounous_transfer.halt_out_transfer_inst/temp_reg0_reg is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X76Y87 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-2#1 Warning
@@ -319,11 +288,6 @@ Related violations: <none>
 TIMING-7#5 Warning
 No common node between related clocks  
 The clocks clk_fpga_1 and clk_fpga_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_1] -to [get_clocks clk_fpga_0]
-Related violations: <none>
-
-TIMING-9#1 Warning
-Unknown CDC Logic  
-One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
 Related violations: <none>
 
 TIMING-17#1 Warning
@@ -1013,175 +977,150 @@ Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An input delay is missing on DRS_DTAP0[0] relative to clock(s) clk_fpga_0
+An input delay is missing on I2C_0_scl_io relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An input delay is missing on DRS_DTAP1[0] relative to clock(s) clk_fpga_0
+An input delay is missing on I2C_0_sda_io relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An input delay is missing on DRS_DTAP2[0] relative to clock(s) clk_fpga_0
+An output delay is missing on ADC_MOSI relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An input delay is missing on DRS_DTAP3[0] relative to clock(s) clk_fpga_0
+An output delay is missing on ADC_SCLK relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An input delay is missing on DRS_DTAP4[0] relative to clock(s) clk_fpga_0
+An output delay is missing on CSR_MOSI[0] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An input delay is missing on I2C_0_scl_io relative to clock(s) clk_fpga_0
+An output delay is missing on CSR_nCS[0] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An input delay is missing on I2C_0_sda_io relative to clock(s) clk_fpga_0
+An output delay is missing on DAC_nCLR[0] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An output delay is missing on ADC_MOSI relative to clock(s) clk_fpga_0
+An output delay is missing on DRS_A[0] relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An output delay is missing on ADC_SCLK relative to clock(s) clk_fpga_0
+An output delay is missing on DRS_A[1] relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#10 Warning
 Missing input or output delay  
-An output delay is missing on CSR_MOSI[0] relative to clock(s) clk_fpga_0
+An output delay is missing on DRS_A[2] relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#11 Warning
 Missing input or output delay  
-An output delay is missing on CSR_nCS[0] relative to clock(s) clk_fpga_0
+An output delay is missing on DRS_A[3] relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#12 Warning
 Missing input or output delay  
-An output delay is missing on DAC_nCLR[0] relative to clock(s) clk_fpga_0
+An output delay is missing on DRS_DWRITE[0] relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#13 Warning
 Missing input or output delay  
-An output delay is missing on DRS_A[0] relative to clock(s) clk_fpga_1
+An output delay is missing on DRS_DWRITE[1] relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#14 Warning
 Missing input or output delay  
-An output delay is missing on DRS_A[1] relative to clock(s) clk_fpga_1
+An output delay is missing on DRS_DWRITE[2] relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#15 Warning
 Missing input or output delay  
-An output delay is missing on DRS_A[2] relative to clock(s) clk_fpga_1
+An output delay is missing on DRS_DWRITE[3] relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#16 Warning
 Missing input or output delay  
-An output delay is missing on DRS_A[3] relative to clock(s) clk_fpga_1
+An output delay is missing on DRS_DWRITE[4] relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#17 Warning
 Missing input or output delay  
-An output delay is missing on DRS_DWRITE[0] relative to clock(s) clk_fpga_1
+An output delay is missing on DRS_RSLOAD[0] relative to clock(s) clk_fpga_0, clk_fpga_1
 Related violations: <none>
 
 TIMING-18#18 Warning
 Missing input or output delay  
-An output delay is missing on DRS_DWRITE[1] relative to clock(s) clk_fpga_1
+An output delay is missing on DRS_RSLOAD[1] relative to clock(s) clk_fpga_0, clk_fpga_1
 Related violations: <none>
 
 TIMING-18#19 Warning
 Missing input or output delay  
-An output delay is missing on DRS_DWRITE[2] relative to clock(s) clk_fpga_1
+An output delay is missing on DRS_RSLOAD[2] relative to clock(s) clk_fpga_0, clk_fpga_1
 Related violations: <none>
 
 TIMING-18#20 Warning
 Missing input or output delay  
-An output delay is missing on DRS_DWRITE[3] relative to clock(s) clk_fpga_1
+An output delay is missing on DRS_RSLOAD[3] relative to clock(s) clk_fpga_0, clk_fpga_1
 Related violations: <none>
 
 TIMING-18#21 Warning
 Missing input or output delay  
-An output delay is missing on DRS_DWRITE[4] relative to clock(s) clk_fpga_1
+An output delay is missing on DRS_RSLOAD[4] relative to clock(s) clk_fpga_0, clk_fpga_1
 Related violations: <none>
 
 TIMING-18#22 Warning
 Missing input or output delay  
-An output delay is missing on DRS_RSLOAD[0] relative to clock(s) clk_fpga_0, clk_fpga_1
+An output delay is missing on DRS_SRCLK[0] relative to clock(s) clk_fpga_0, clk_fpga_1
 Related violations: <none>
 
 TIMING-18#23 Warning
 Missing input or output delay  
-An output delay is missing on DRS_RSLOAD[1] relative to clock(s) clk_fpga_0, clk_fpga_1
+An output delay is missing on DRS_SRCLK[1] relative to clock(s) clk_fpga_0, clk_fpga_1
 Related violations: <none>
 
 TIMING-18#24 Warning
 Missing input or output delay  
-An output delay is missing on DRS_RSLOAD[2] relative to clock(s) clk_fpga_0, clk_fpga_1
+An output delay is missing on DRS_SRCLK[2] relative to clock(s) clk_fpga_0, clk_fpga_1
 Related violations: <none>
 
 TIMING-18#25 Warning
 Missing input or output delay  
-An output delay is missing on DRS_RSLOAD[3] relative to clock(s) clk_fpga_0, clk_fpga_1
+An output delay is missing on DRS_SRCLK[3] relative to clock(s) clk_fpga_0, clk_fpga_1
 Related violations: <none>
 
 TIMING-18#26 Warning
 Missing input or output delay  
-An output delay is missing on DRS_RSLOAD[4] relative to clock(s) clk_fpga_0, clk_fpga_1
+An output delay is missing on DRS_SRCLK[4] relative to clock(s) clk_fpga_0, clk_fpga_1
 Related violations: <none>
 
 TIMING-18#27 Warning
 Missing input or output delay  
-An output delay is missing on DRS_SRCLK[0] relative to clock(s) clk_fpga_0, clk_fpga_1
+An output delay is missing on DRS_SRIN relative to clock(s) clk_fpga_1
 Related violations: <none>
 
 TIMING-18#28 Warning
 Missing input or output delay  
-An output delay is missing on DRS_SRCLK[1] relative to clock(s) clk_fpga_0, clk_fpga_1
+An output delay is missing on MUX_SEL[0] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#29 Warning
 Missing input or output delay  
-An output delay is missing on DRS_SRCLK[2] relative to clock(s) clk_fpga_0, clk_fpga_1
-Related violations: <none>
-
-TIMING-18#30 Warning
-Missing input or output delay  
-An output delay is missing on DRS_SRCLK[3] relative to clock(s) clk_fpga_0, clk_fpga_1
-Related violations: <none>
-
-TIMING-18#31 Warning
-Missing input or output delay  
-An output delay is missing on DRS_SRCLK[4] relative to clock(s) clk_fpga_0, clk_fpga_1
-Related violations: <none>
-
-TIMING-18#32 Warning
-Missing input or output delay  
-An output delay is missing on DRS_SRIN relative to clock(s) clk_fpga_1
-Related violations: <none>
-
-TIMING-18#33 Warning
-Missing input or output delay  
-An output delay is missing on MUX_SEL[0] relative to clock(s) clk_fpga_0
-Related violations: <none>
-
-TIMING-18#34 Warning
-Missing input or output delay  
 An output delay is missing on MUX_SEL[1] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
-TIMING-18#35 Warning
+TIMING-18#30 Warning
 Missing input or output delay  
 An output delay is missing on MUX_SEL[2] relative to clock(s) clk_fpga_0
 Related violations: <none>
@@ -1205,93 +1144,93 @@ XDCB-4#1 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions ADC_refclk_1_P[0] and ADC_refclk_1_N[0] found on differential ports ADC_refclk_1_P[0] and ADC_refclk_1_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {ADC_refclk_1_P[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_1_1/zsys_util_ds_buf_1_1.xdc (Line: 4)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_1_1/zsys_util_ds_buf_1_1.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {ADC_refclk_1_N[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_1_1/zsys_util_ds_buf_1_1.xdc (Line: 5)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_1_1/zsys_util_ds_buf_1_1.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#2 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions ADC_refclk_2_P[0] and ADC_refclk_2_N[0] found on differential ports ADC_refclk_2_P[0] and ADC_refclk_2_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {ADC_refclk_2_P[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_1/zsys_util_ds_buf_2_1.xdc (Line: 4)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_1/zsys_util_ds_buf_2_1.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {ADC_refclk_2_N[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_1/zsys_util_ds_buf_2_1.xdc (Line: 5)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_1/zsys_util_ds_buf_2_1.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#3 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions ADC_refclk_3_P[0] and ADC_refclk_3_N[0] found on differential ports ADC_refclk_3_P[0] and ADC_refclk_3_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {ADC_refclk_3_P[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_1/zsys_util_ds_buf_4_1.xdc (Line: 4)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_1/zsys_util_ds_buf_4_1.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {ADC_refclk_3_N[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_1/zsys_util_ds_buf_4_1.xdc (Line: 5)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_1/zsys_util_ds_buf_4_1.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#4 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions ADC_refclk_4_P[0] and ADC_refclk_4_N[0] found on differential ports ADC_refclk_4_P[0] and ADC_refclk_4_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {ADC_refclk_4_P[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_2/zsys_util_ds_buf_4_2.xdc (Line: 4)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_2/zsys_util_ds_buf_4_2.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {ADC_refclk_4_N[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_2/zsys_util_ds_buf_4_2.xdc (Line: 5)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_2/zsys_util_ds_buf_4_2.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#5 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions ADC_refclk_5_P[0] and ADC_refclk_5_N[0] found on differential ports ADC_refclk_5_P[0] and ADC_refclk_5_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {ADC_refclk_5_P[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_0/zsys_util_ds_buf_4_0.xdc (Line: 4)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_0/zsys_util_ds_buf_4_0.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {ADC_refclk_5_N[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_0/zsys_util_ds_buf_4_0.xdc (Line: 5)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_4_0/zsys_util_ds_buf_4_0.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#6 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions CSR_SCLK_P[0] and CSR_SCLK_N[0] found on differential ports CSR_SCLK_P[0] and CSR_SCLK_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {CSR_SCLK_P[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_3_1/zsys_util_ds_buf_3_1.xdc (Line: 4)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_3_1/zsys_util_ds_buf_3_1.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {CSR_SCLK_N[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_3_1/zsys_util_ds_buf_3_1.xdc (Line: 5)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_3_1/zsys_util_ds_buf_3_1.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#7 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions DRS_REFCLK_P[0] and DRS_REFCLK_N[0] found on differential ports DRS_REFCLK_P[0] and DRS_REFCLK_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 10.000 [get_ports {DRS_REFCLK_P[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_0/zsys_util_ds_buf_2_0.xdc (Line: 4)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_0/zsys_util_ds_buf_2_0.xdc (Line: 4)
 create_clock -period 10.000 [get_ports {DRS_REFCLK_N[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_0/zsys_util_ds_buf_2_0.xdc (Line: 5)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_2_0/zsys_util_ds_buf_2_0.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#8 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions Elink_P[0] and Elink_N[0] found on differential ports Elink_P[0] and Elink_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 25.000 [get_ports {Elink_P[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_0/zsys_util_ds_buf_0_0.xdc (Line: 4)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_0/zsys_util_ds_buf_0_0.xdc (Line: 4)
 create_clock -period 25.000 [get_ports {Elink_N[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_0/zsys_util_ds_buf_0_0.xdc (Line: 5)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_0/zsys_util_ds_buf_0_0.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-4#9 Warning
 create_clock constraint set on both sides of diff pair port  
 Two clock definitions Elink_clk_P[0] and Elink_clk_N[0] found on differential ports Elink_clk_P[0] and Elink_clk_N[0]. It is recommended to only create a clock on port P.
 create_clock -period 25.000 [get_ports {Elink_clk_P[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_2/zsys_util_ds_buf_0_2.xdc (Line: 4)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_2/zsys_util_ds_buf_0_2.xdc (Line: 4)
 create_clock -period 25.000 [get_ports {Elink_clk_N[0]}]
-c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_2/zsys_util_ds_buf_0_2.xdc (Line: 5)
+/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_2/zsys_util_ds_buf_0_2.xdc (Line: 5)
 Related violations: <none>
 
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
-The option 'objects : [get_pins -hier -filter {NAME =~ */BUFG_inst_ADCLK/O}]' of constraint 'create_generated_clock' uses inefficient query to find pin objects (see constraint position '198' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc (Line: 26)
+The option 'objects : [get_pins -hier -filter {NAME =~ */BUFG_inst_ADCLK/O}]' of constraint 'create_generated_clock' uses inefficient query to find pin objects (see constraint position '36' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc (Line: 26)
 Related violations: <none>
 
 XDCB-5#2 Warning
 Runtime inefficient way to find pin objects  
-The option 'objects : [get_pins -hier -filter {NAME =~ */BUFG_inst_LCLK/O}]' of constraint 'create_generated_clock' uses inefficient query to find pin objects (see constraint position '197' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc (Line: 25)
+The option 'objects : [get_pins -hier -filter {NAME =~ */BUFG_inst_LCLK/O}]' of constraint 'create_generated_clock' uses inefficient query to find pin objects (see constraint position '35' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/constrs_1/new/timing.xdc (Line: 25)
 Related violations: <none>
 
 REQP-1959#1 Advisory

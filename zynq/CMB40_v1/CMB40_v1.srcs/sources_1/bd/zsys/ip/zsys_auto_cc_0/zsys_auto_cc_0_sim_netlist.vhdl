@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Mon Nov  4 01:10:06 2024
--- Host        : lapepuat11 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_auto_cc_0/zsys_auto_cc_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+-- Date        : Thu Aug  3 12:23:47 2023
+-- Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top zsys_auto_cc_0 -prefix
+--               zsys_auto_cc_0_ zsys_auto_cc_0_sim_netlist.vhdl
 -- Design      : zsys_auto_cc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity zsys_auto_cc_0_xpm_cdc_single is
   attribute DEST_SYNC_FF of zsys_auto_cc_0_xpm_cdc_single : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of zsys_auto_cc_0_xpm_cdc_single : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_auto_cc_0_xpm_cdc_single : entity is "xpm_cdc_single";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of zsys_auto_cc_0_xpm_cdc_single : entity is 0;
   attribute SRC_INPUT_REG : integer;
@@ -771,8 +769,6 @@ entity zsys_auto_cc_0_xpm_cdc_handshake is
   attribute DEST_SYNC_FF of zsys_auto_cc_0_xpm_cdc_handshake : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of zsys_auto_cc_0_xpm_cdc_handshake : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_auto_cc_0_xpm_cdc_handshake : entity is "xpm_cdc_handshake";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of zsys_auto_cc_0_xpm_cdc_handshake : entity is 0;
   attribute SRC_SYNC_FF : integer;
@@ -2916,8 +2912,6 @@ entity zsys_auto_cc_0_axi_clock_converter_v2_1_16_lite_async is
     m_axi_arready : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_auto_cc_0_axi_clock_converter_v2_1_16_lite_async : entity is "axi_clock_converter_v2_1_16_lite_async";
 end zsys_auto_cc_0_axi_clock_converter_v2_1_16_lite_async;
 
 architecture STRUCTURE of zsys_auto_cc_0_axi_clock_converter_v2_1_16_lite_async is
@@ -4729,8 +4723,6 @@ entity zsys_auto_cc_0_axi_clock_converter_v2_1_16_axi_clock_converter is
   attribute C_W_WIDTH of zsys_auto_cc_0_axi_clock_converter_v2_1_16_axi_clock_converter : entity is 36;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of zsys_auto_cc_0_axi_clock_converter_v2_1_16_axi_clock_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_auto_cc_0_axi_clock_converter_v2_1_16_axi_clock_converter : entity is "axi_clock_converter_v2_1_16_axi_clock_converter";
   attribute P_ACLK_RATIO : integer;
   attribute P_ACLK_RATIO of zsys_auto_cc_0_axi_clock_converter_v2_1_16_axi_clock_converter : entity is 2;
   attribute P_AXI3 : integer;
@@ -4961,7 +4953,7 @@ entity zsys_auto_cc_0 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of zsys_auto_cc_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of zsys_auto_cc_0 : entity is "axi_clock_converter_v2_1_16_axi_clock_converter,Vivado 2018.2.2";
+  attribute X_CORE_INFO of zsys_auto_cc_0 : entity is "axi_clock_converter_v2_1_16_axi_clock_converter,Vivado 2018.2";
 end zsys_auto_cc_0;
 
 architecture STRUCTURE of zsys_auto_cc_0 is

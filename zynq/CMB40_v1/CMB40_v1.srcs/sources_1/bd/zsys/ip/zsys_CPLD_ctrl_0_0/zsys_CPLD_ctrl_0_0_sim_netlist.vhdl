@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Mon Nov  4 01:07:12 2024
--- Host        : lapepuat11 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_CPLD_ctrl_0_0/zsys_CPLD_ctrl_0_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+-- Date        : Tue Nov  5 10:40:18 2024
+-- Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+-- Command     : write_vhdl -force -mode funcsim -rename_top zsys_CPLD_ctrl_0_0 -prefix
+--               zsys_CPLD_ctrl_0_0_ zsys_CPLD_ctrl_0_0_sim_netlist.vhdl
 -- Design      : zsys_CPLD_ctrl_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,8 +35,6 @@ entity zsys_CPLD_ctrl_0_0_CPLD_comm_module is
     SPI_WR_en : in STD_LOGIC;
     \mezz_mux_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_CPLD_ctrl_0_0_CPLD_comm_module : entity is "CPLD_comm_module";
 end zsys_CPLD_ctrl_0_0_CPLD_comm_module;
 
 architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_comm_module is
@@ -1706,8 +1704,6 @@ entity zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI : entity is "CPLD_ctrl_v1_0_S00_AXI";
 end zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI;
 
 architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI is
@@ -4114,8 +4110,6 @@ entity zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0 : entity is "CPLD_ctrl_v1_0";
 end zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0;
 
 architecture STRUCTURE of zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0 is
@@ -4188,7 +4182,7 @@ entity zsys_CPLD_ctrl_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of zsys_CPLD_ctrl_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_CPLD_ctrl_0_0 : entity is "CPLD_ctrl_v1_0,Vivado 2018.2.2";
+  attribute x_core_info of zsys_CPLD_ctrl_0_0 : entity is "CPLD_ctrl_v1_0,Vivado 2018.2";
 end zsys_CPLD_ctrl_0_0;
 
 architecture STRUCTURE of zsys_CPLD_ctrl_0_0 is

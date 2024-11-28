@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
-// Date        : Mon Nov  4 01:09:37 2024
-// Host        : lapepuat11 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_util_ds_buf_0_0/zsys_util_ds_buf_0_0_sim_netlist.v
+// Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+// Date        : Tue Nov  5 10:41:08 2024
+// Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
+// Command     : write_verilog -force -mode funcsim -rename_top zsys_util_ds_buf_0_0 -prefix
+//               zsys_util_ds_buf_0_0_ zsys_util_ds_buf_0_0_sim_netlist.v
 // Design      : zsys_util_ds_buf_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,67 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "zsys_util_ds_buf_0_0,util_ds_buf,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "util_ds_buf,Vivado 2018.2.2" *) 
-(* NotValidForBitStream *)
-module zsys_util_ds_buf_0_0
-   (OBUF_IN,
-    OBUF_DS_P,
-    OBUF_DS_N);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_IN CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_IN, FREQ_HZ 4e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) input [0:0]OBUF_IN;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_DS_P CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_DS_P, FREQ_HZ 4e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) output [0:0]OBUF_DS_P;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_DS_N CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_DS_N, FREQ_HZ 4e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) output [0:0]OBUF_DS_N;
-
-  (* SLEW = "SLOW" *) wire [0:0]OBUF_DS_N;
-  (* SLEW = "SLOW" *) wire [0:0]OBUF_DS_P;
-  (* SLEW = "SLOW" *) wire [0:0]OBUF_IN;
-  wire [0:0]NLW_U0_BUFGCE_O_UNCONNECTED;
-  wire [0:0]NLW_U0_BUFG_GT_O_UNCONNECTED;
-  wire [0:0]NLW_U0_BUFG_O_UNCONNECTED;
-  wire [0:0]NLW_U0_BUFHCE_O_UNCONNECTED;
-  wire [0:0]NLW_U0_BUFH_O_UNCONNECTED;
-  wire [0:0]NLW_U0_IBUF_DS_ODIV2_UNCONNECTED;
-  wire [0:0]NLW_U0_IBUF_OUT_UNCONNECTED;
-  wire [0:0]NLW_U0_IOBUF_DS_N_UNCONNECTED;
-  wire [0:0]NLW_U0_IOBUF_DS_P_UNCONNECTED;
-  wire [0:0]NLW_U0_IOBUF_IO_IO_UNCONNECTED;
-  wire [0:0]NLW_U0_IOBUF_IO_O_UNCONNECTED;
-
-  (* C_BUF_TYPE = "OBUFDS" *) 
-  (* C_SIZE = "1" *) 
-  zsys_util_ds_buf_0_0_util_ds_buf U0
-       (.BUFGCE_CE(1'b0),
-        .BUFGCE_I(1'b0),
-        .BUFGCE_O(NLW_U0_BUFGCE_O_UNCONNECTED[0]),
-        .BUFG_GT_CE(1'b0),
-        .BUFG_GT_CEMASK(1'b0),
-        .BUFG_GT_CLR(1'b0),
-        .BUFG_GT_CLRMASK(1'b0),
-        .BUFG_GT_DIV({1'b0,1'b0,1'b0}),
-        .BUFG_GT_I(1'b0),
-        .BUFG_GT_O(NLW_U0_BUFG_GT_O_UNCONNECTED[0]),
-        .BUFG_I(1'b0),
-        .BUFG_O(NLW_U0_BUFG_O_UNCONNECTED[0]),
-        .BUFHCE_CE(1'b0),
-        .BUFHCE_I(1'b0),
-        .BUFHCE_O(NLW_U0_BUFHCE_O_UNCONNECTED[0]),
-        .BUFH_I(1'b0),
-        .BUFH_O(NLW_U0_BUFH_O_UNCONNECTED[0]),
-        .IBUF_DS_N(1'b0),
-        .IBUF_DS_ODIV2(NLW_U0_IBUF_DS_ODIV2_UNCONNECTED[0]),
-        .IBUF_DS_P(1'b0),
-        .IBUF_OUT(NLW_U0_IBUF_OUT_UNCONNECTED[0]),
-        .IOBUF_DS_N(NLW_U0_IOBUF_DS_N_UNCONNECTED[0]),
-        .IOBUF_DS_P(NLW_U0_IOBUF_DS_P_UNCONNECTED[0]),
-        .IOBUF_IO_I(1'b0),
-        .IOBUF_IO_IO(NLW_U0_IOBUF_IO_IO_UNCONNECTED[0]),
-        .IOBUF_IO_O(NLW_U0_IOBUF_IO_O_UNCONNECTED[0]),
-        .IOBUF_IO_T(1'b0),
-        .OBUF_DS_N(OBUF_DS_N),
-        .OBUF_DS_P(OBUF_DS_P),
-        .OBUF_IN(OBUF_IN));
-endmodule
-
-(* C_BUF_TYPE = "OBUFDS" *) (* C_SIZE = "1" *) (* ORIG_REF_NAME = "util_ds_buf" *) 
+(* C_BUF_TYPE = "OBUFDS" *) (* C_SIZE = "1" *) 
 module zsys_util_ds_buf_0_0_util_ds_buf
    (IBUF_DS_P,
     IBUF_DS_N,
@@ -160,6 +100,66 @@ module zsys_util_ds_buf_0_0_util_ds_buf
        (.I(OBUF_IN),
         .O(OBUF_DS_P),
         .OB(OBUF_DS_N));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "zsys_util_ds_buf_0_0,util_ds_buf,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "util_ds_buf,Vivado 2018.2" *) 
+(* NotValidForBitStream *)
+module zsys_util_ds_buf_0_0
+   (OBUF_IN,
+    OBUF_DS_P,
+    OBUF_DS_N);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_IN CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_IN, FREQ_HZ 4e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) input [0:0]OBUF_IN;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_DS_P CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_DS_P, FREQ_HZ 4e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) output [0:0]OBUF_DS_P;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 OBUF_DS_N CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME OBUF_DS_N, FREQ_HZ 4e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK2" *) output [0:0]OBUF_DS_N;
+
+  (* SLEW = "SLOW" *) wire [0:0]OBUF_DS_N;
+  (* SLEW = "SLOW" *) wire [0:0]OBUF_DS_P;
+  (* SLEW = "SLOW" *) wire [0:0]OBUF_IN;
+  wire [0:0]NLW_U0_BUFGCE_O_UNCONNECTED;
+  wire [0:0]NLW_U0_BUFG_GT_O_UNCONNECTED;
+  wire [0:0]NLW_U0_BUFG_O_UNCONNECTED;
+  wire [0:0]NLW_U0_BUFHCE_O_UNCONNECTED;
+  wire [0:0]NLW_U0_BUFH_O_UNCONNECTED;
+  wire [0:0]NLW_U0_IBUF_DS_ODIV2_UNCONNECTED;
+  wire [0:0]NLW_U0_IBUF_OUT_UNCONNECTED;
+  wire [0:0]NLW_U0_IOBUF_DS_N_UNCONNECTED;
+  wire [0:0]NLW_U0_IOBUF_DS_P_UNCONNECTED;
+  wire [0:0]NLW_U0_IOBUF_IO_IO_UNCONNECTED;
+  wire [0:0]NLW_U0_IOBUF_IO_O_UNCONNECTED;
+
+  (* C_BUF_TYPE = "OBUFDS" *) 
+  (* C_SIZE = "1" *) 
+  zsys_util_ds_buf_0_0_util_ds_buf U0
+       (.BUFGCE_CE(1'b0),
+        .BUFGCE_I(1'b0),
+        .BUFGCE_O(NLW_U0_BUFGCE_O_UNCONNECTED[0]),
+        .BUFG_GT_CE(1'b0),
+        .BUFG_GT_CEMASK(1'b0),
+        .BUFG_GT_CLR(1'b0),
+        .BUFG_GT_CLRMASK(1'b0),
+        .BUFG_GT_DIV({1'b0,1'b0,1'b0}),
+        .BUFG_GT_I(1'b0),
+        .BUFG_GT_O(NLW_U0_BUFG_GT_O_UNCONNECTED[0]),
+        .BUFG_I(1'b0),
+        .BUFG_O(NLW_U0_BUFG_O_UNCONNECTED[0]),
+        .BUFHCE_CE(1'b0),
+        .BUFHCE_I(1'b0),
+        .BUFHCE_O(NLW_U0_BUFHCE_O_UNCONNECTED[0]),
+        .BUFH_I(1'b0),
+        .BUFH_O(NLW_U0_BUFH_O_UNCONNECTED[0]),
+        .IBUF_DS_N(1'b0),
+        .IBUF_DS_ODIV2(NLW_U0_IBUF_DS_ODIV2_UNCONNECTED[0]),
+        .IBUF_DS_P(1'b0),
+        .IBUF_OUT(NLW_U0_IBUF_OUT_UNCONNECTED[0]),
+        .IOBUF_DS_N(NLW_U0_IOBUF_DS_N_UNCONNECTED[0]),
+        .IOBUF_DS_P(NLW_U0_IOBUF_DS_P_UNCONNECTED[0]),
+        .IOBUF_IO_I(1'b0),
+        .IOBUF_IO_IO(NLW_U0_IOBUF_IO_IO_UNCONNECTED[0]),
+        .IOBUF_IO_O(NLW_U0_IOBUF_IO_O_UNCONNECTED[0]),
+        .IOBUF_IO_T(1'b0),
+        .OBUF_DS_N(OBUF_DS_N),
+        .OBUF_DS_P(OBUF_DS_P),
+        .OBUF_IN(OBUF_IN));
 endmodule
 module xVIA(.a(w),.b(w));
 inout w;

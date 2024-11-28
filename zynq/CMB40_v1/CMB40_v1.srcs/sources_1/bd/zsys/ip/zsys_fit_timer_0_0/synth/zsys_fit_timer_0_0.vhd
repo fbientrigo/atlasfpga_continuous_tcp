@@ -81,11 +81,11 @@ ARCHITECTURE zsys_fit_timer_0_0_arch OF zsys_fit_timer_0_0 IS
     );
   END COMPONENT fit_timer;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF zsys_fit_timer_0_0_arch: ARCHITECTURE IS "fit_timer,Vivado 2018.2.2";
+  ATTRIBUTE X_CORE_INFO OF zsys_fit_timer_0_0_arch: ARCHITECTURE IS "fit_timer,Vivado 2018.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF zsys_fit_timer_0_0_arch : ARCHITECTURE IS "zsys_fit_timer_0_0,fit_timer,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF zsys_fit_timer_0_0_arch: ARCHITECTURE IS "zsys_fit_timer_0_0,fit_timer,{x_ipProduct=Vivado 2018.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=fit_timer,x_ipVersion=2.0,x_ipCoreRevision=8,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_NO_CLOCKS=700000000,C_INACCURACY=0,C_EXT_RESET_HIGH=1}";
+  ATTRIBUTE CORE_GENERATION_INFO OF zsys_fit_timer_0_0_arch: ARCHITECTURE IS "zsys_fit_timer_0_0,fit_timer,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=fit_timer,x_ipVersion=2.0,x_ipCoreRevision=8,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_NO_CLOCKS=700000000,C_INACCURACY=0,C_EXT_RESET_HIGH=1}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF Interrupt: SIGNAL IS "XIL_INTERFACENAME INTERRUPT.Interrupt, SENSITIVITY LEVEL_HIGH, SUGGESTED_PRIORITY HIGH, PortWidth 1";

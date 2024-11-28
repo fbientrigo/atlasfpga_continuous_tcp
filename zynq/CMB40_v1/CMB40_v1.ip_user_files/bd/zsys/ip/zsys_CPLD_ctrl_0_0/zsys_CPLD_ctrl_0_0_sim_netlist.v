@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Aug 16 22:33:23 2023
-// Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top zsys_CPLD_ctrl_0_0 -prefix
-//               zsys_CPLD_ctrl_0_0_ zsys_CPLD_ctrl_0_0_sim_netlist.v
+// Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
+// Date        : Mon Nov  4 01:07:12 2024
+// Host        : lapepuat11 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_CPLD_ctrl_0_0/zsys_CPLD_ctrl_0_0_sim_netlist.v
 // Design      : zsys_CPLD_ctrl_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,6 +12,122 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "zsys_CPLD_ctrl_0_0,CPLD_ctrl_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "CPLD_ctrl_v1_0,Vivado 2018.2.2" *) 
+(* NotValidForBitStream *)
+module zsys_CPLD_ctrl_0_0
+   (CPLD_Mux_sel,
+    CPLD_SPI_MOSI,
+    CPLD_SPI_SCLK,
+    CPLD_SPI_nCS,
+    SPI_MISO,
+    nCS_CPLD,
+    s00_axi_awaddr,
+    s00_axi_awprot,
+    s00_axi_awvalid,
+    s00_axi_awready,
+    s00_axi_wdata,
+    s00_axi_wstrb,
+    s00_axi_wvalid,
+    s00_axi_wready,
+    s00_axi_bresp,
+    s00_axi_bvalid,
+    s00_axi_bready,
+    s00_axi_araddr,
+    s00_axi_arprot,
+    s00_axi_arvalid,
+    s00_axi_arready,
+    s00_axi_rdata,
+    s00_axi_rresp,
+    s00_axi_rvalid,
+    s00_axi_rready,
+    s00_axi_aclk,
+    s00_axi_aresetn);
+  output [2:0]CPLD_Mux_sel;
+  output CPLD_SPI_MOSI;
+  output CPLD_SPI_SCLK;
+  output CPLD_SPI_nCS;
+  input SPI_MISO;
+  input nCS_CPLD;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]s00_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [3:0]s00_axi_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) input s00_axi_rready;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input s00_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
+
+  wire \<const0> ;
+  wire [2:0]CPLD_Mux_sel;
+  wire CPLD_SPI_MOSI;
+  wire CPLD_SPI_SCLK;
+  wire CPLD_SPI_nCS;
+  wire SPI_MISO;
+  wire nCS_CPLD;
+  wire s00_axi_aclk;
+  wire [3:0]s00_axi_araddr;
+  wire s00_axi_aresetn;
+  wire s00_axi_arready;
+  wire s00_axi_arvalid;
+  wire [3:0]s00_axi_awaddr;
+  wire s00_axi_awready;
+  wire s00_axi_awvalid;
+  wire s00_axi_bready;
+  wire s00_axi_bvalid;
+  wire [31:0]s00_axi_rdata;
+  wire s00_axi_rready;
+  wire s00_axi_rvalid;
+  wire [31:0]s00_axi_wdata;
+  wire s00_axi_wready;
+  wire [3:0]s00_axi_wstrb;
+  wire s00_axi_wvalid;
+
+  assign s00_axi_bresp[1] = \<const0> ;
+  assign s00_axi_bresp[0] = \<const0> ;
+  assign s00_axi_rresp[1] = \<const0> ;
+  assign s00_axi_rresp[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0 U0
+       (.CPLD_Mux_sel(CPLD_Mux_sel),
+        .CPLD_SPI_MOSI(CPLD_SPI_MOSI),
+        .CPLD_SPI_SCLK(CPLD_SPI_SCLK),
+        .CPLD_SPI_nCS(CPLD_SPI_nCS),
+        .SPI_MISO(SPI_MISO),
+        .S_AXI_ARREADY(s00_axi_arready),
+        .S_AXI_AWREADY(s00_axi_awready),
+        .S_AXI_WREADY(s00_axi_wready),
+        .nCS_CPLD(nCS_CPLD),
+        .s00_axi_aclk(s00_axi_aclk),
+        .s00_axi_araddr(s00_axi_araddr[3:2]),
+        .s00_axi_aresetn(s00_axi_aresetn),
+        .s00_axi_arvalid(s00_axi_arvalid),
+        .s00_axi_awaddr(s00_axi_awaddr[3:2]),
+        .s00_axi_awvalid(s00_axi_awvalid),
+        .s00_axi_bready(s00_axi_bready),
+        .s00_axi_bvalid(s00_axi_bvalid),
+        .s00_axi_rdata(s00_axi_rdata),
+        .s00_axi_rready(s00_axi_rready),
+        .s00_axi_rvalid(s00_axi_rvalid),
+        .s00_axi_wdata(s00_axi_wdata),
+        .s00_axi_wstrb(s00_axi_wstrb),
+        .s00_axi_wvalid(s00_axi_wvalid));
+endmodule
+
+(* ORIG_REF_NAME = "CPLD_comm_module" *) 
 module zsys_CPLD_ctrl_0_0_CPLD_comm_module
    (CPLD_SPI_SCLK,
     SR,
@@ -35,7 +151,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
   output [0:0]SR;
   output CPLD_SPI_MOSI;
   output CPLD_SPI_nCS;
-  output [12:0]D;
+  output [14:0]D;
   output [2:0]CPLD_Mux_sel;
   input s00_axi_aclk;
   input SPI_MISO;
@@ -45,8 +161,8 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
   input axi_awready_reg;
   input s00_axi_wvalid;
   input s00_axi_awvalid;
-  input [12:0]s00_axi_wdata;
-  input [11:0]Q;
+  input [14:0]s00_axi_wdata;
+  input [13:0]Q;
   input SPI_WR_en;
   input [2:0]\mezz_mux_reg[2] ;
 
@@ -55,7 +171,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
   wire CPLD_SPI_SCLK;
   wire CPLD_SPI_nCS;
   (* RTL_KEEP = "yes" *) wire [1:0]CPLD_states_spi;
-  wire [12:0]D;
+  wire [14:0]D;
   wire \FSM_sequential_CPLD_states_spi[0]_i_1_n_0 ;
   wire \FSM_sequential_CPLD_states_spi[1]_i_1_n_0 ;
   wire \FSM_sequential_CPLD_states_spi[1]_i_2_n_0 ;
@@ -63,17 +179,19 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
   wire \FSM_sequential_SPI_states[0]_i_1_n_0 ;
   wire \FSM_sequential_SPI_states[1]_i_1_n_0 ;
   wire \FSM_sequential_SPI_states[1]_i_3_n_0 ;
-  wire [11:0]Q;
+  wire [13:0]Q;
   wire SPI_MISO;
   wire SPI_MOSI;
   wire SPI_MOSI_i_1_n_0;
   wire SPI_MOSI_i_2_n_0;
   wire SPI_MOSI_i_4_n_0;
   wire SPI_SCLK_i_1_n_0;
-  wire [11:0]SPI_WRDATA;
+  wire [13:0]SPI_WRDATA;
   wire SPI_WRDATA0;
   wire \SPI_WRDATA_reg_n_0_[0] ;
   wire \SPI_WRDATA_reg_n_0_[10] ;
+  wire \SPI_WRDATA_reg_n_0_[11] ;
+  wire \SPI_WRDATA_reg_n_0_[12] ;
   wire \SPI_WRDATA_reg_n_0_[1] ;
   wire \SPI_WRDATA_reg_n_0_[2] ;
   wire \SPI_WRDATA_reg_n_0_[3] ;
@@ -89,6 +207,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
   wire \SPI_bit_counter[1]_i_1_n_0 ;
   wire \SPI_bit_counter[2]_i_1_n_0 ;
   wire \SPI_bit_counter[3]_i_2_n_0 ;
+  wire \SPI_bit_counter[3]_i_3_n_0 ;
   wire \SPI_bit_counter_reg_n_0_[0] ;
   wire \SPI_bit_counter_reg_n_0_[1] ;
   wire \SPI_bit_counter_reg_n_0_[2] ;
@@ -122,13 +241,15 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
   wire \cpld_count_bit_reg_n_0_[1] ;
   wire \cpld_count_bit_reg_n_0_[2] ;
   wire \cpld_count_bit_reg_n_0_[3] ;
-  wire [11:0]cpld_data_rec;
-  wire \cpld_data_rec[11]_i_1_n_0 ;
-  wire \data_in[11]_i_1_n_0 ;
-  wire \data_in[11]_i_2_n_0 ;
+  wire [13:0]cpld_data_rec;
+  wire \cpld_data_rec[13]_i_1_n_0 ;
+  wire \data_in[13]_i_1_n_0 ;
+  wire \data_in[13]_i_2_n_0 ;
   wire \data_in_reg_n_0_[0] ;
   wire \data_in_reg_n_0_[10] ;
   wire \data_in_reg_n_0_[11] ;
+  wire \data_in_reg_n_0_[12] ;
+  wire \data_in_reg_n_0_[13] ;
   wire \data_in_reg_n_0_[1] ;
   wire \data_in_reg_n_0_[2] ;
   wire \data_in_reg_n_0_[3] ;
@@ -138,10 +259,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
   wire \data_in_reg_n_0_[7] ;
   wire \data_in_reg_n_0_[8] ;
   wire \data_in_reg_n_0_[9] ;
-  wire flag_end_data;
   wire flag_end_data_i_1_n_0;
-  wire flag_end_data_i_2_n_0;
-  wire flag_end_data_i_3_n_0;
   wire flag_end_data_reg_n_0;
   wire [2:0]\mezz_mux_reg[2] ;
   wire nCS_CPLD;
@@ -149,7 +267,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
   wire s00_axi_aclk;
   wire s00_axi_aresetn;
   wire s00_axi_awvalid;
-  wire [12:0]s00_axi_wdata;
+  wire [14:0]s00_axi_wdata;
   wire s00_axi_wvalid;
   wire start_SPI_com;
   wire start_SPI_com_i_1_n_0;
@@ -171,15 +289,13 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .I1(SPI_MISO),
         .I2(CPLD_states_spi[1]),
         .O(\FSM_sequential_CPLD_states_spi[0]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAA555DFFFF0008)) 
+  LUT4 #(
+    .INIT(16'h8DF8)) 
     \FSM_sequential_CPLD_states_spi[1]_i_1 
        (.I0(CPLD_states_spi[0]),
-        .I1(\cpld_count_bit_reg_n_0_[3] ),
-        .I2(\cpld_count_bit_reg_n_0_[2] ),
-        .I3(\FSM_sequential_CPLD_states_spi[1]_i_3_n_0 ),
-        .I4(CPLD_states_spi[1]),
-        .I5(SPI_MISO),
+        .I1(\FSM_sequential_CPLD_states_spi[1]_i_3_n_0 ),
+        .I2(CPLD_states_spi[1]),
+        .I3(SPI_MISO),
         .O(\FSM_sequential_CPLD_states_spi[1]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h62)) 
@@ -188,11 +304,14 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .I1(CPLD_states_spi[1]),
         .I2(SPI_MISO),
         .O(\FSM_sequential_CPLD_states_spi[1]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h7)) 
+  LUT5 #(
+    .INIT(32'hAAEAAAAA)) 
     \FSM_sequential_CPLD_states_spi[1]_i_3 
-       (.I0(\cpld_count_bit_reg_n_0_[1] ),
-        .I1(\cpld_count_bit_reg_n_0_[0] ),
+       (.I0(CPLD_states_spi[1]),
+        .I1(\cpld_count_bit_reg_n_0_[3] ),
+        .I2(\cpld_count_bit_reg_n_0_[0] ),
+        .I3(\cpld_count_bit_reg_n_0_[1] ),
+        .I4(\cpld_count_bit_reg_n_0_[2] ),
         .O(\FSM_sequential_CPLD_states_spi[1]_i_3_n_0 ));
   (* FSM_ENCODED_STATES = "receaving_data:01,end_bit:10,wait_start:00,iSTATE:11" *) 
   (* KEEP = "yes" *) 
@@ -292,17 +411,16 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .I2(SPI_counter[0]),
         .I3(CPLD_SPI_SCLK),
         .O(SPI_MOSI_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hFF15FFFFFF0000FF)) 
+  LUT5 #(
+    .INIT(32'hF4FFF00F)) 
     SPI_MOSI_i_3
        (.I0(CPLD_SPI_SCLK),
-        .I1(\SPI_bit_counter_reg_n_0_[3] ),
-        .I2(\SPI_bit_counter_reg_n_0_[2] ),
-        .I3(SPI_states__0[0]),
-        .I4(SPI_states__0[1]),
-        .I5(SPI_MOSI_i_4_n_0),
+        .I1(\SPI_bit_counter[3]_i_3_n_0 ),
+        .I2(SPI_states__0[0]),
+        .I3(SPI_states__0[1]),
+        .I4(SPI_MOSI_i_4_n_0),
         .O(SPI_MOSI));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h04)) 
     SPI_MOSI_i_4
@@ -345,23 +463,36 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .I1(SPI_states__0[1]),
         .I2(Q[10]),
         .O(SPI_WRDATA[10]));
-  LUT6 #(
-    .INIT(64'h00000888CCCC0000)) 
-    \SPI_WRDATA[11]_i_1 
-       (.I0(SPI_MOSI_i_2_n_0),
-        .I1(s00_axi_aresetn),
-        .I2(\SPI_bit_counter_reg_n_0_[2] ),
-        .I3(\SPI_bit_counter_reg_n_0_[3] ),
-        .I4(SPI_states__0[0]),
-        .I5(SPI_states__0[1]),
-        .O(SPI_WRDATA0));
   LUT3 #(
     .INIT(8'hB8)) 
-    \SPI_WRDATA[11]_i_2 
+    \SPI_WRDATA[11]_i_1 
        (.I0(\SPI_WRDATA_reg_n_0_[10] ),
         .I1(SPI_states__0[1]),
         .I2(Q[11]),
         .O(SPI_WRDATA[11]));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \SPI_WRDATA[12]_i_1 
+       (.I0(\SPI_WRDATA_reg_n_0_[11] ),
+        .I1(SPI_states__0[1]),
+        .I2(Q[12]),
+        .O(SPI_WRDATA[12]));
+  LUT5 #(
+    .INIT(32'h0C800C00)) 
+    \SPI_WRDATA[13]_i_1 
+       (.I0(SPI_MOSI_i_2_n_0),
+        .I1(s00_axi_aresetn),
+        .I2(SPI_states__0[1]),
+        .I3(SPI_states__0[0]),
+        .I4(\SPI_bit_counter[3]_i_3_n_0 ),
+        .O(SPI_WRDATA0));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \SPI_WRDATA[13]_i_2 
+       (.I0(\SPI_WRDATA_reg_n_0_[12] ),
+        .I1(SPI_states__0[1]),
+        .I2(Q[13]),
+        .O(SPI_WRDATA[13]));
   LUT3 #(
     .INIT(8'hB8)) 
     \SPI_WRDATA[1]_i_1 
@@ -441,6 +572,18 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
        (.C(s00_axi_aclk),
         .CE(SPI_WRDATA0),
         .D(SPI_WRDATA[11]),
+        .Q(\SPI_WRDATA_reg_n_0_[11] ),
+        .R(1'b0));
+  FDRE \SPI_WRDATA_reg[12] 
+       (.C(s00_axi_aclk),
+        .CE(SPI_WRDATA0),
+        .D(SPI_WRDATA[12]),
+        .Q(\SPI_WRDATA_reg_n_0_[12] ),
+        .R(1'b0));
+  FDRE \SPI_WRDATA_reg[13] 
+       (.C(s00_axi_aclk),
+        .CE(SPI_WRDATA0),
+        .D(SPI_WRDATA[13]),
         .Q(p_0_in),
         .R(1'b0));
   FDRE \SPI_WRDATA_reg[1] 
@@ -504,39 +647,45 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .I1(\SPI_bit_counter_reg_n_0_[0] ),
         .O(\SPI_bit_counter[0]_i_1_n_0 ));
   LUT3 #(
-    .INIT(8'h48)) 
+    .INIT(8'h60)) 
     \SPI_bit_counter[1]_i_1 
-       (.I0(\SPI_bit_counter_reg_n_0_[0] ),
-        .I1(SPI_states__0[1]),
-        .I2(\SPI_bit_counter_reg_n_0_[1] ),
+       (.I0(\SPI_bit_counter_reg_n_0_[1] ),
+        .I1(\SPI_bit_counter_reg_n_0_[0] ),
+        .I2(SPI_states__0[1]),
         .O(\SPI_bit_counter[1]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h7080)) 
+    .INIT(16'h60C0)) 
     \SPI_bit_counter[2]_i_1 
-       (.I0(\SPI_bit_counter_reg_n_0_[0] ),
-        .I1(\SPI_bit_counter_reg_n_0_[1] ),
+       (.I0(\SPI_bit_counter_reg_n_0_[1] ),
+        .I1(\SPI_bit_counter_reg_n_0_[2] ),
         .I2(SPI_states__0[1]),
-        .I3(\SPI_bit_counter_reg_n_0_[2] ),
+        .I3(\SPI_bit_counter_reg_n_0_[0] ),
         .O(\SPI_bit_counter[2]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h05000D000D000D00)) 
+  LUT5 #(
+    .INIT(32'h0D000500)) 
     \SPI_bit_counter[3]_i_1 
        (.I0(SPI_states__0[1]),
         .I1(SPI_MOSI_i_2_n_0),
         .I2(SPI_states__0[0]),
         .I3(s00_axi_aresetn),
-        .I4(\SPI_bit_counter_reg_n_0_[3] ),
-        .I5(\SPI_bit_counter_reg_n_0_[2] ),
+        .I4(\SPI_bit_counter[3]_i_3_n_0 ),
         .O(SPI_bit_counter0));
   LUT5 #(
-    .INIT(32'h7F008000)) 
+    .INIT(32'h7800F000)) 
     \SPI_bit_counter[3]_i_2 
-       (.I0(\SPI_bit_counter_reg_n_0_[1] ),
-        .I1(\SPI_bit_counter_reg_n_0_[0] ),
-        .I2(\SPI_bit_counter_reg_n_0_[2] ),
+       (.I0(\SPI_bit_counter_reg_n_0_[2] ),
+        .I1(\SPI_bit_counter_reg_n_0_[1] ),
+        .I2(\SPI_bit_counter_reg_n_0_[3] ),
         .I3(SPI_states__0[1]),
-        .I4(\SPI_bit_counter_reg_n_0_[3] ),
+        .I4(\SPI_bit_counter_reg_n_0_[0] ),
         .O(\SPI_bit_counter[3]_i_2_n_0 ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \SPI_bit_counter[3]_i_3 
+       (.I0(\SPI_bit_counter_reg_n_0_[2] ),
+        .I1(\SPI_bit_counter_reg_n_0_[1] ),
+        .I2(\SPI_bit_counter_reg_n_0_[3] ),
+        .O(\SPI_bit_counter[3]_i_3_n_0 ));
   FDRE \SPI_bit_counter_reg[0] 
        (.C(s00_axi_aclk),
         .CE(SPI_bit_counter0),
@@ -575,13 +724,13 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .D(SPI_busy_i_1_n_0),
         .Q(SPI_busy),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \SPI_counter[0]_i_1 
        (.I0(SPI_counter[0]),
         .O(\SPI_counter[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h34)) 
     \SPI_counter[1]_i_1 
@@ -693,7 +842,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .I2(SPI_counter[2]),
         .I3(\count_wr_reg_n_0_[1] ),
         .O(\count_wr[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \count_wr[2]_i_3 
@@ -730,21 +879,23 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
        (.I0(CPLD_states_spi[0]),
         .I1(\cpld_count_bit_reg_n_0_[0] ),
         .O(cpld_count_bit[0]));
-  LUT3 #(
-    .INIT(8'h28)) 
+  LUT5 #(
+    .INIT(32'h00AA2A00)) 
     \cpld_count_bit[1]_i_1 
        (.I0(CPLD_states_spi[0]),
-        .I1(\cpld_count_bit_reg_n_0_[0] ),
-        .I2(\cpld_count_bit_reg_n_0_[1] ),
+        .I1(\cpld_count_bit_reg_n_0_[3] ),
+        .I2(\cpld_count_bit_reg_n_0_[2] ),
+        .I3(\cpld_count_bit_reg_n_0_[0] ),
+        .I4(\cpld_count_bit_reg_n_0_[1] ),
         .O(cpld_count_bit[1]));
   LUT5 #(
-    .INIT(32'h0AAA2000)) 
+    .INIT(32'h0AA020A0)) 
     \cpld_count_bit[2]_i_1 
        (.I0(CPLD_states_spi[0]),
         .I1(\cpld_count_bit_reg_n_0_[3] ),
-        .I2(\cpld_count_bit_reg_n_0_[0] ),
-        .I3(\cpld_count_bit_reg_n_0_[1] ),
-        .I4(\cpld_count_bit_reg_n_0_[2] ),
+        .I2(\cpld_count_bit_reg_n_0_[2] ),
+        .I3(\cpld_count_bit_reg_n_0_[0] ),
+        .I4(\cpld_count_bit_reg_n_0_[1] ),
         .O(cpld_count_bit[2]));
   LUT1 #(
     .INIT(2'h1)) 
@@ -756,9 +907,9 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
     \cpld_count_bit[3]_i_2 
        (.I0(CPLD_states_spi[0]),
         .I1(\cpld_count_bit_reg_n_0_[3] ),
-        .I2(\cpld_count_bit_reg_n_0_[0] ),
-        .I3(\cpld_count_bit_reg_n_0_[1] ),
-        .I4(\cpld_count_bit_reg_n_0_[2] ),
+        .I2(\cpld_count_bit_reg_n_0_[2] ),
+        .I3(\cpld_count_bit_reg_n_0_[0] ),
+        .I4(\cpld_count_bit_reg_n_0_[1] ),
         .O(cpld_count_bit[3]));
   FDCE \cpld_count_bit_reg[0] 
        (.C(CPLD_SPI_SCLK),
@@ -786,201 +937,203 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .Q(\cpld_count_bit_reg_n_0_[3] ));
   LUT4 #(
     .INIT(16'h0004)) 
-    \cpld_data_rec[11]_i_1 
+    \cpld_data_rec[13]_i_1 
        (.I0(SPI_MISO),
         .I1(CPLD_states_spi[1]),
         .I2(CPLD_states_spi[0]),
         .I3(nCS_CPLD),
-        .O(\cpld_data_rec[11]_i_1_n_0 ));
+        .O(\cpld_data_rec[13]_i_1_n_0 ));
   FDRE \cpld_data_rec_reg[0] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[0] ),
         .Q(cpld_data_rec[0]),
         .R(1'b0));
   FDRE \cpld_data_rec_reg[10] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[10] ),
         .Q(cpld_data_rec[10]),
         .R(1'b0));
   FDRE \cpld_data_rec_reg[11] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[11] ),
         .Q(cpld_data_rec[11]),
         .R(1'b0));
+  FDRE \cpld_data_rec_reg[12] 
+       (.C(CPLD_SPI_SCLK),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
+        .D(\data_in_reg_n_0_[12] ),
+        .Q(cpld_data_rec[12]),
+        .R(1'b0));
+  FDRE \cpld_data_rec_reg[13] 
+       (.C(CPLD_SPI_SCLK),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
+        .D(\data_in_reg_n_0_[13] ),
+        .Q(cpld_data_rec[13]),
+        .R(1'b0));
   FDRE \cpld_data_rec_reg[1] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[1] ),
         .Q(cpld_data_rec[1]),
         .R(1'b0));
   FDRE \cpld_data_rec_reg[2] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[2] ),
         .Q(cpld_data_rec[2]),
         .R(1'b0));
   FDRE \cpld_data_rec_reg[3] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[3] ),
         .Q(cpld_data_rec[3]),
         .R(1'b0));
   FDRE \cpld_data_rec_reg[4] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[4] ),
         .Q(cpld_data_rec[4]),
         .R(1'b0));
   FDRE \cpld_data_rec_reg[5] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[5] ),
         .Q(cpld_data_rec[5]),
         .R(1'b0));
   FDRE \cpld_data_rec_reg[6] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[6] ),
         .Q(cpld_data_rec[6]),
         .R(1'b0));
   FDRE \cpld_data_rec_reg[7] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[7] ),
         .Q(cpld_data_rec[7]),
         .R(1'b0));
   FDRE \cpld_data_rec_reg[8] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[8] ),
         .Q(cpld_data_rec[8]),
         .R(1'b0));
   FDRE \cpld_data_rec_reg[9] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\cpld_data_rec[11]_i_1_n_0 ),
+        .CE(\cpld_data_rec[13]_i_1_n_0 ),
         .D(\data_in_reg_n_0_[9] ),
         .Q(cpld_data_rec[9]),
         .R(1'b0));
   LUT3 #(
     .INIT(8'h01)) 
-    \data_in[11]_i_1 
+    \data_in[13]_i_1 
        (.I0(CPLD_states_spi[1]),
         .I1(nCS_CPLD),
         .I2(CPLD_states_spi[0]),
-        .O(\data_in[11]_i_1_n_0 ));
+        .O(\data_in[13]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h1)) 
-    \data_in[11]_i_2 
+    \data_in[13]_i_2 
        (.I0(nCS_CPLD),
         .I1(CPLD_states_spi[1]),
-        .O(\data_in[11]_i_2_n_0 ));
+        .O(\data_in[13]_i_2_n_0 ));
   FDRE \data_in_reg[0] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(SPI_MISO),
         .Q(\data_in_reg_n_0_[0] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
   FDRE \data_in_reg[10] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(\data_in_reg_n_0_[9] ),
         .Q(\data_in_reg_n_0_[10] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
   FDRE \data_in_reg[11] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(\data_in_reg_n_0_[10] ),
         .Q(\data_in_reg_n_0_[11] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
+  FDRE \data_in_reg[12] 
+       (.C(CPLD_SPI_SCLK),
+        .CE(\data_in[13]_i_2_n_0 ),
+        .D(\data_in_reg_n_0_[11] ),
+        .Q(\data_in_reg_n_0_[12] ),
+        .R(\data_in[13]_i_1_n_0 ));
+  FDRE \data_in_reg[13] 
+       (.C(CPLD_SPI_SCLK),
+        .CE(\data_in[13]_i_2_n_0 ),
+        .D(\data_in_reg_n_0_[12] ),
+        .Q(\data_in_reg_n_0_[13] ),
+        .R(\data_in[13]_i_1_n_0 ));
   FDRE \data_in_reg[1] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(\data_in_reg_n_0_[0] ),
         .Q(\data_in_reg_n_0_[1] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
   FDRE \data_in_reg[2] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(\data_in_reg_n_0_[1] ),
         .Q(\data_in_reg_n_0_[2] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
   FDRE \data_in_reg[3] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(\data_in_reg_n_0_[2] ),
         .Q(\data_in_reg_n_0_[3] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
   FDRE \data_in_reg[4] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(\data_in_reg_n_0_[3] ),
         .Q(\data_in_reg_n_0_[4] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
   FDRE \data_in_reg[5] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(\data_in_reg_n_0_[4] ),
         .Q(\data_in_reg_n_0_[5] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
   FDRE \data_in_reg[6] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(\data_in_reg_n_0_[5] ),
         .Q(\data_in_reg_n_0_[6] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
   FDRE \data_in_reg[7] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(\data_in_reg_n_0_[6] ),
         .Q(\data_in_reg_n_0_[7] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
   FDRE \data_in_reg[8] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(\data_in_reg_n_0_[7] ),
         .Q(\data_in_reg_n_0_[8] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
   FDRE \data_in_reg[9] 
        (.C(CPLD_SPI_SCLK),
-        .CE(\data_in[11]_i_2_n_0 ),
+        .CE(\data_in[13]_i_2_n_0 ),
         .D(\data_in_reg_n_0_[8] ),
         .Q(\data_in_reg_n_0_[9] ),
-        .R(\data_in[11]_i_1_n_0 ));
+        .R(\data_in[13]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0002FFFF00020000)) 
+    .INIT(64'hFFFFAAAA00000200)) 
     flag_end_data_i_1
-       (.I0(flag_end_data_i_2_n_0),
-        .I1(\SPI_bit_counter_reg_n_0_[0] ),
-        .I2(\SPI_bit_counter_reg_n_0_[1] ),
-        .I3(flag_end_data_i_3_n_0),
-        .I4(flag_end_data),
+       (.I0(SPI_states__0[1]),
+        .I1(\SPI_bit_counter[3]_i_3_n_0 ),
+        .I2(\SPI_bit_counter_reg_n_0_[0] ),
+        .I3(CPLD_SPI_SCLK),
+        .I4(SPI_states__0[0]),
         .I5(flag_end_data_reg_n_0),
         .O(flag_end_data_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    flag_end_data_i_2
-       (.I0(SPI_states__0[1]),
-        .I1(CPLD_SPI_SCLK),
-        .O(flag_end_data_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h7)) 
-    flag_end_data_i_3
-       (.I0(\SPI_bit_counter_reg_n_0_[2] ),
-        .I1(\SPI_bit_counter_reg_n_0_[3] ),
-        .O(flag_end_data_i_3_n_0));
-  LUT6 #(
-    .INIT(64'h0055005700550055)) 
-    flag_end_data_i_4
-       (.I0(SPI_states__0[1]),
-        .I1(flag_end_data_i_3_n_0),
-        .I2(\SPI_bit_counter_reg_n_0_[0] ),
-        .I3(SPI_states__0[0]),
-        .I4(\SPI_bit_counter_reg_n_0_[1] ),
-        .I5(CPLD_SPI_SCLK),
-        .O(flag_end_data));
   FDCE #(
     .INIT(1'b0)) 
     flag_end_data_reg
@@ -1044,7 +1197,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .O(D[11]));
   LUT6 #(
     .INIT(64'hEAAAAAAA2AAAAAAA)) 
-    \slv_reg1[12]_i_2 
+    \slv_reg1[12]_i_1 
        (.I0(cpld_data_rec[11]),
         .I1(axi_wready_reg),
         .I2(axi_awready_reg),
@@ -1052,6 +1205,26 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .I4(s00_axi_awvalid),
         .I5(s00_axi_wdata[12]),
         .O(D[12]));
+  LUT6 #(
+    .INIT(64'hEAAAAAAA2AAAAAAA)) 
+    \slv_reg1[13]_i_1 
+       (.I0(cpld_data_rec[12]),
+        .I1(axi_wready_reg),
+        .I2(axi_awready_reg),
+        .I3(s00_axi_wvalid),
+        .I4(s00_axi_awvalid),
+        .I5(s00_axi_wdata[13]),
+        .O(D[13]));
+  LUT6 #(
+    .INIT(64'hEAAAAAAA2AAAAAAA)) 
+    \slv_reg1[14]_i_2 
+       (.I0(cpld_data_rec[13]),
+        .I1(axi_wready_reg),
+        .I2(axi_awready_reg),
+        .I3(s00_axi_wvalid),
+        .I4(s00_axi_awvalid),
+        .I5(s00_axi_wdata[14]),
+        .O(D[14]));
   LUT6 #(
     .INIT(64'hEAAAAAAA2AAAAAAA)) 
     \slv_reg1[1]_i_1 
@@ -1172,7 +1345,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .I4(SPI_counter[1]),
         .I5(CPLD_SPI_SCLK),
         .O(start_SPI_com_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hAE)) 
     start_SPI_com_i_4
@@ -1242,6 +1415,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_comm_module
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "CPLD_ctrl_v1_0" *) 
 module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0
    (CPLD_SPI_SCLK,
     S_AXI_AWREADY,
@@ -1340,6 +1514,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "CPLD_ctrl_v1_0_S00_AXI" *) 
 module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
    (CLK,
     S_AXI_AWREADY,
@@ -1394,7 +1569,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
   wire CPLD_SPI_nCS;
   wire SPI_MISO;
   wire SPI_WR_en;
-  wire [11:0]SPI_data;
+  wire [13:0]SPI_data;
   wire SPI_data_0;
   wire S_AXI_ARREADY;
   wire S_AXI_AWREADY;
@@ -1466,8 +1641,6 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
   wire \slv_reg0_reg_n_0_[8] ;
   wire \slv_reg0_reg_n_0_[9] ;
   wire [31:0]slv_reg1;
-  wire \slv_reg1[12]_i_1_n_0 ;
-  wire \slv_reg1[13]_i_1_n_0 ;
   wire \slv_reg1[14]_i_1_n_0 ;
   wire \slv_reg1[15]_i_1_n_0 ;
   wire \slv_reg1[23]_i_1_n_0 ;
@@ -1491,6 +1664,8 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
   wire uut_n_14;
   wire uut_n_15;
   wire uut_n_16;
+  wire uut_n_17;
+  wire uut_n_18;
   wire uut_n_4;
   wire uut_n_5;
   wire uut_n_6;
@@ -1501,7 +1676,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
   FDRE SPI_WR_en_reg
        (.C(s00_axi_aclk),
         .CE(SPI_data_0),
-        .D(\slv_reg0_reg_n_0_[12] ),
+        .D(\slv_reg0_reg_n_0_[14] ),
         .Q(SPI_WR_en),
         .R(1'b0));
   FDRE \SPI_data_reg[0] 
@@ -1521,6 +1696,18 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
         .CE(SPI_data_0),
         .D(\slv_reg0_reg_n_0_[11] ),
         .Q(SPI_data[11]),
+        .R(1'b0));
+  FDRE \SPI_data_reg[12] 
+       (.C(s00_axi_aclk),
+        .CE(SPI_data_0),
+        .D(\slv_reg0_reg_n_0_[12] ),
+        .Q(SPI_data[12]),
+        .R(1'b0));
+  FDRE \SPI_data_reg[13] 
+       (.C(s00_axi_aclk),
+        .CE(SPI_data_0),
+        .D(\slv_reg0_reg_n_0_[13] ),
+        .Q(SPI_data[13]),
         .R(1'b0));
   FDRE \SPI_data_reg[1] 
        (.C(s00_axi_aclk),
@@ -2238,19 +2425,19 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
   FDRE \mezz_mux_reg[0] 
        (.C(s00_axi_aclk),
         .CE(SPI_data_0),
-        .D(\slv_reg0_reg_n_0_[13] ),
+        .D(\slv_reg0_reg_n_0_[15] ),
         .Q(mezz_mux[0]),
         .R(1'b0));
   FDRE \mezz_mux_reg[1] 
        (.C(s00_axi_aclk),
         .CE(SPI_data_0),
-        .D(\slv_reg0_reg_n_0_[14] ),
+        .D(\slv_reg0_reg_n_0_[16] ),
         .Q(mezz_mux[1]),
         .R(1'b0));
   FDRE \mezz_mux_reg[2] 
        (.C(s00_axi_aclk),
         .CE(SPI_data_0),
-        .D(\slv_reg0_reg_n_0_[15] ),
+        .D(\slv_reg0_reg_n_0_[17] ),
         .Q(mezz_mux[2]),
         .R(1'b0));
   LUT4 #(
@@ -2488,31 +2675,11 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
         .R(i_rst));
   LUT4 #(
     .INIT(16'hFF08)) 
-    \slv_reg1[12]_i_1 
+    \slv_reg1[14]_i_1 
        (.I0(p_0_in[0]),
         .I1(s00_axi_wstrb[1]),
         .I2(p_0_in[1]),
         .I3(\slv_reg0[31]_i_2_n_0 ),
-        .O(\slv_reg1[12]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFEFFFFF00200000)) 
-    \slv_reg1[13]_i_1 
-       (.I0(s00_axi_wdata[13]),
-        .I1(p_0_in[1]),
-        .I2(s00_axi_wstrb[1]),
-        .I3(\slv_reg0[31]_i_2_n_0 ),
-        .I4(p_0_in[0]),
-        .I5(slv_reg1[13]),
-        .O(\slv_reg1[13]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFEFFFFF00200000)) 
-    \slv_reg1[14]_i_1 
-       (.I0(s00_axi_wdata[14]),
-        .I1(p_0_in[1]),
-        .I2(s00_axi_wstrb[1]),
-        .I3(\slv_reg0[31]_i_2_n_0 ),
-        .I4(p_0_in[0]),
-        .I5(slv_reg1[14]),
         .O(\slv_reg1[14]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFEFFFFF00200000)) 
@@ -2551,37 +2718,37 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
   FDRE \slv_reg1_reg[0] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
-        .D(uut_n_16),
+        .D(uut_n_18),
         .Q(slv_reg1[0]),
         .R(i_rst));
   FDRE \slv_reg1_reg[10] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg1[12]_i_1_n_0 ),
-        .D(uut_n_6),
+        .CE(\slv_reg1[14]_i_1_n_0 ),
+        .D(uut_n_8),
         .Q(slv_reg1[10]),
         .R(i_rst));
   FDRE \slv_reg1_reg[11] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg1[12]_i_1_n_0 ),
-        .D(uut_n_5),
+        .CE(\slv_reg1[14]_i_1_n_0 ),
+        .D(uut_n_7),
         .Q(slv_reg1[11]),
         .R(i_rst));
   FDRE \slv_reg1_reg[12] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg1[12]_i_1_n_0 ),
-        .D(uut_n_4),
+        .CE(\slv_reg1[14]_i_1_n_0 ),
+        .D(uut_n_6),
         .Q(slv_reg1[12]),
         .R(i_rst));
   FDRE \slv_reg1_reg[13] 
        (.C(s00_axi_aclk),
-        .CE(1'b1),
-        .D(\slv_reg1[13]_i_1_n_0 ),
+        .CE(\slv_reg1[14]_i_1_n_0 ),
+        .D(uut_n_5),
         .Q(slv_reg1[13]),
         .R(i_rst));
   FDRE \slv_reg1_reg[14] 
        (.C(s00_axi_aclk),
-        .CE(1'b1),
-        .D(\slv_reg1[14]_i_1_n_0 ),
+        .CE(\slv_reg1[14]_i_1_n_0 ),
+        .D(uut_n_4),
         .Q(slv_reg1[14]),
         .R(i_rst));
   FDRE \slv_reg1_reg[15] 
@@ -2617,7 +2784,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
   FDRE \slv_reg1_reg[1] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
-        .D(uut_n_15),
+        .D(uut_n_17),
         .Q(slv_reg1[1]),
         .R(i_rst));
   FDRE \slv_reg1_reg[20] 
@@ -2683,7 +2850,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
   FDRE \slv_reg1_reg[2] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
-        .D(uut_n_14),
+        .D(uut_n_16),
         .Q(slv_reg1[2]),
         .R(i_rst));
   FDRE \slv_reg1_reg[30] 
@@ -2701,43 +2868,43 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
   FDRE \slv_reg1_reg[3] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
-        .D(uut_n_13),
+        .D(uut_n_15),
         .Q(slv_reg1[3]),
         .R(i_rst));
   FDRE \slv_reg1_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
-        .D(uut_n_12),
+        .D(uut_n_14),
         .Q(slv_reg1[4]),
         .R(i_rst));
   FDRE \slv_reg1_reg[5] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
-        .D(uut_n_11),
+        .D(uut_n_13),
         .Q(slv_reg1[5]),
         .R(i_rst));
   FDRE \slv_reg1_reg[6] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
-        .D(uut_n_10),
+        .D(uut_n_12),
         .Q(slv_reg1[6]),
         .R(i_rst));
   FDRE \slv_reg1_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
-        .D(uut_n_9),
+        .D(uut_n_11),
         .Q(slv_reg1[7]),
         .R(i_rst));
   FDRE \slv_reg1_reg[8] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg1[12]_i_1_n_0 ),
-        .D(uut_n_8),
+        .CE(\slv_reg1[14]_i_1_n_0 ),
+        .D(uut_n_10),
         .Q(slv_reg1[8]),
         .R(i_rst));
   FDRE \slv_reg1_reg[9] 
        (.C(s00_axi_aclk),
-        .CE(\slv_reg1[12]_i_1_n_0 ),
-        .D(uut_n_7),
+        .CE(\slv_reg1[14]_i_1_n_0 ),
+        .D(uut_n_9),
         .Q(slv_reg1[9]),
         .R(i_rst));
   LUT4 #(
@@ -3193,7 +3360,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
         .CPLD_SPI_MOSI(CPLD_SPI_MOSI),
         .CPLD_SPI_SCLK(CLK),
         .CPLD_SPI_nCS(CPLD_SPI_nCS),
-        .D({uut_n_4,uut_n_5,uut_n_6,uut_n_7,uut_n_8,uut_n_9,uut_n_10,uut_n_11,uut_n_12,uut_n_13,uut_n_14,uut_n_15,uut_n_16}),
+        .D({uut_n_4,uut_n_5,uut_n_6,uut_n_7,uut_n_8,uut_n_9,uut_n_10,uut_n_11,uut_n_12,uut_n_13,uut_n_14,uut_n_15,uut_n_16,uut_n_17,uut_n_18}),
         .Q(SPI_data),
         .SPI_MISO(SPI_MISO),
         .SPI_WR_en(SPI_WR_en),
@@ -3205,122 +3372,7 @@ module zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0_S00_AXI
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_aresetn(s00_axi_aresetn),
         .s00_axi_awvalid(s00_axi_awvalid),
-        .s00_axi_wdata(s00_axi_wdata[12:0]),
-        .s00_axi_wvalid(s00_axi_wvalid));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "zsys_CPLD_ctrl_0_0,CPLD_ctrl_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "CPLD_ctrl_v1_0,Vivado 2018.2" *) 
-(* NotValidForBitStream *)
-module zsys_CPLD_ctrl_0_0
-   (CPLD_Mux_sel,
-    CPLD_SPI_MOSI,
-    CPLD_SPI_SCLK,
-    CPLD_SPI_nCS,
-    SPI_MISO,
-    nCS_CPLD,
-    s00_axi_awaddr,
-    s00_axi_awprot,
-    s00_axi_awvalid,
-    s00_axi_awready,
-    s00_axi_wdata,
-    s00_axi_wstrb,
-    s00_axi_wvalid,
-    s00_axi_wready,
-    s00_axi_bresp,
-    s00_axi_bvalid,
-    s00_axi_bready,
-    s00_axi_araddr,
-    s00_axi_arprot,
-    s00_axi_arvalid,
-    s00_axi_arready,
-    s00_axi_rdata,
-    s00_axi_rresp,
-    s00_axi_rvalid,
-    s00_axi_rready,
-    s00_axi_aclk,
-    s00_axi_aresetn);
-  output [2:0]CPLD_Mux_sel;
-  output CPLD_SPI_MOSI;
-  output CPLD_SPI_SCLK;
-  output CPLD_SPI_nCS;
-  input SPI_MISO;
-  input nCS_CPLD;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]s00_axi_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [3:0]s00_axi_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) input s00_axi_rready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input s00_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
-
-  wire \<const0> ;
-  wire [2:0]CPLD_Mux_sel;
-  wire CPLD_SPI_MOSI;
-  wire CPLD_SPI_SCLK;
-  wire CPLD_SPI_nCS;
-  wire SPI_MISO;
-  wire nCS_CPLD;
-  wire s00_axi_aclk;
-  wire [3:0]s00_axi_araddr;
-  wire s00_axi_aresetn;
-  wire s00_axi_arready;
-  wire s00_axi_arvalid;
-  wire [3:0]s00_axi_awaddr;
-  wire s00_axi_awready;
-  wire s00_axi_awvalid;
-  wire s00_axi_bready;
-  wire s00_axi_bvalid;
-  wire [31:0]s00_axi_rdata;
-  wire s00_axi_rready;
-  wire s00_axi_rvalid;
-  wire [31:0]s00_axi_wdata;
-  wire s00_axi_wready;
-  wire [3:0]s00_axi_wstrb;
-  wire s00_axi_wvalid;
-
-  assign s00_axi_bresp[1] = \<const0> ;
-  assign s00_axi_bresp[0] = \<const0> ;
-  assign s00_axi_rresp[1] = \<const0> ;
-  assign s00_axi_rresp[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  zsys_CPLD_ctrl_0_0_CPLD_ctrl_v1_0 U0
-       (.CPLD_Mux_sel(CPLD_Mux_sel),
-        .CPLD_SPI_MOSI(CPLD_SPI_MOSI),
-        .CPLD_SPI_SCLK(CPLD_SPI_SCLK),
-        .CPLD_SPI_nCS(CPLD_SPI_nCS),
-        .SPI_MISO(SPI_MISO),
-        .S_AXI_ARREADY(s00_axi_arready),
-        .S_AXI_AWREADY(s00_axi_awready),
-        .S_AXI_WREADY(s00_axi_wready),
-        .nCS_CPLD(nCS_CPLD),
-        .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_araddr(s00_axi_araddr[3:2]),
-        .s00_axi_aresetn(s00_axi_aresetn),
-        .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_awaddr(s00_axi_awaddr[3:2]),
-        .s00_axi_awvalid(s00_axi_awvalid),
-        .s00_axi_bready(s00_axi_bready),
-        .s00_axi_bvalid(s00_axi_bvalid),
-        .s00_axi_rdata(s00_axi_rdata),
-        .s00_axi_rready(s00_axi_rready),
-        .s00_axi_rvalid(s00_axi_rvalid),
-        .s00_axi_wdata(s00_axi_wdata),
-        .s00_axi_wstrb(s00_axi_wstrb),
+        .s00_axi_wdata(s00_axi_wdata[14:0]),
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 `ifndef GLBL

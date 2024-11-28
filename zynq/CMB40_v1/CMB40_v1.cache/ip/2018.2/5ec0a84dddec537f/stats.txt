@@ -1,4 +1,4 @@
-NumberHits:2
-Timestamp: Fri Oct 18 15:42:58 UTC 2024
+NumberHits:6
+Timestamp: Thu Nov 21 14:25:31 UTC 2024
 VLNV: xilinx.com:ip:proc_sys_reset:5.0
 SynthRuntime: 43

@@ -95,11 +95,11 @@ ARCHITECTURE zsys_fifo8b_2_axis_0_0_arch OF zsys_fifo8b_2_axis_0_0 IS
     );
   END COMPONENT fifo8b_2_axis_v1_0;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF zsys_fifo8b_2_axis_0_0_arch: ARCHITECTURE IS "fifo8b_2_axis_v1_0,Vivado 2018.2.2";
+  ATTRIBUTE X_CORE_INFO OF zsys_fifo8b_2_axis_0_0_arch: ARCHITECTURE IS "fifo8b_2_axis_v1_0,Vivado 2018.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF zsys_fifo8b_2_axis_0_0_arch : ARCHITECTURE IS "zsys_fifo8b_2_axis_0_0,fifo8b_2_axis_v1_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF zsys_fifo8b_2_axis_0_0_arch: ARCHITECTURE IS "zsys_fifo8b_2_axis_0_0,fifo8b_2_axis_v1_0,{x_ipProduct=Vivado 2018.2.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=fifo8b_2_axis,x_ipVersion=1.0,x_ipCoreRevision=8,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_M00_AXIS_TDATA_WIDTH=32}";
+  ATTRIBUTE CORE_GENERATION_INFO OF zsys_fifo8b_2_axis_0_0_arch: ARCHITECTURE IS "zsys_fifo8b_2_axis_0_0,fifo8b_2_axis_v1_0,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=fifo8b_2_axis,x_ipVersion=1.0,x_ipCoreRevision=8,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_M00_AXIS_TDATA_WIDTH=32}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF m00_axis_aresetn: SIGNAL IS "XIL_INTERFACENAME M00_AXIS_RST, POLARITY ACTIVE_LOW";
