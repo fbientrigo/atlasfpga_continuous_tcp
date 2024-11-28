@@ -1,4 +1,0 @@
-NumberHits:4
-Timestamp: Fri Nov 22 20:56:01 UTC 2024
-VLNV: xilinx.com:ip:axi_gpio:2.0
-SynthRuntime: 88

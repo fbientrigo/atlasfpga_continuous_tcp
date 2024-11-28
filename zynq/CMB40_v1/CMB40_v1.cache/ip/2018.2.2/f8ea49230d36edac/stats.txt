@@ -1,4 +1,0 @@
-NumberHits:1
-Timestamp: Mon Oct 28 14:03:50 UTC 2024
-VLNV: xilinx.com:user:CPLD_ctrl:1.0
-SynthRuntime: 21

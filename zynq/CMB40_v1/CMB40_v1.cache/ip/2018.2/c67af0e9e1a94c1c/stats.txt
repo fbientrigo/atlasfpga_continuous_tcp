@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Tue Nov 21 14:45:04 UTC 2023
-VLNV: xilinx.com:user:AXI_ADC:3.0
-SynthRuntime: 28

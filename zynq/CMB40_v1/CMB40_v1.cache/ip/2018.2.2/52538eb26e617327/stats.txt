@@ -1,4 +1,0 @@
-NumberHits:5
-Timestamp: Thu Oct 31 11:09:02 UTC 2024
-VLNV: xilinx.com:ip:axi_clock_converter:2.1
-SynthRuntime: 67

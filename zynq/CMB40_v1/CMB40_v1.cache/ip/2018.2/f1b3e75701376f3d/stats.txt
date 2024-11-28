@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Mon Jun 26 14:47:21 UTC 2023
-VLNV: xilinx.com:user:fifo8b_2_axis:1.0
-SynthRuntime: 131

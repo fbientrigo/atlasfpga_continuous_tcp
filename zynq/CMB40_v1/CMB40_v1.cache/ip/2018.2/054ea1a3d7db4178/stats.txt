@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Thu Aug 03 10:21:06 UTC 2023
-VLNV: xilinx.com:ip:axi_gpio:2.0
-SynthRuntime: 35

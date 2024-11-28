@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Mon Nov 04 00:09:15 UTC 2024
-VLNV: xilinx.com:user:clk_mon:1.0
-SynthRuntime: 95

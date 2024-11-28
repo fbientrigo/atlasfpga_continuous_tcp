@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Tue Nov 12 20:41:10 UTC 2024
-VLNV: xilinx.com:ip:ila:6.2
-SynthRuntime: 79

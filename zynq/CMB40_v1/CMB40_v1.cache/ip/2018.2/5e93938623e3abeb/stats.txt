@@ -1,4 +1,0 @@
-NumberHits:5
-Timestamp: Thu Nov 21 14:25:33 UTC 2024
-VLNV: xilinx.com:user:DRS4_firmware:4
-SynthRuntime: 38

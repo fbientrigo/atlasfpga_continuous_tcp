@@ -1,4 +1,0 @@
-NumberHits:9
-Timestamp: Thu Nov 21 14:25:35 UTC 2024
-VLNV: xilinx.com:user:dac_i2c:1.0
-SynthRuntime: 47

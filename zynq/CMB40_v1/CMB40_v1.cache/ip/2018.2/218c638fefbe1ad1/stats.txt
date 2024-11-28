@@ -1,4 +1,0 @@
-NumberHits:7
-Timestamp: Tue Oct 22 20:38:51 UTC 2024
-VLNV: xilinx.com:ip:axi_mmu:2.1
-SynthRuntime: 39

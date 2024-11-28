@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Mon Nov 04 00:05:15 UTC 2024
-VLNV: xilinx.com:ip:fit_timer:2.0
-SynthRuntime: 78
