@@ -60,7 +60,7 @@ class DATA_MONITOR:
     def __init__(self,fname):
         print ("reading file: "+fname)   
         self.fname = fname
-        self.df = pd.read_csv(fname,delimiter=' ',skiprows=2, header=None,on_bad_lines='skip')
+        self.df = pd.read_csv(fname,delimiter=' ',skiprows=6, header=None,on_bad_lines='skip')
         self.df = self.df[self.df[0].apply(lambda x : "#" not in str(x))]
         self.df = self.df[self.df[1].apply(lambda x : "#" not in str(x))]
         self.dfint = self.df.loc[:,self.df.columns!=0].applymap(lambda x: HEX2INT(x,0))
