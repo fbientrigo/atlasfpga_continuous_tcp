@@ -199,9 +199,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_DRS_A_test
 # IP: bd/zsys/ip/zsys_xlslice_3to3_1/zsys_xlslice_3to3_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_xlslice_3to3_1 || ORIG_REF_NAME==zsys_xlslice_3to3_1} -quiet] -quiet
 
-# IP: bd/zsys/ip/zsys_AXI_ADC_0_0/zsys_AXI_ADC_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_AXI_ADC_0_0 || ORIG_REF_NAME==zsys_AXI_ADC_0_0} -quiet] -quiet
-
 # IP: bd/zsys/ip/zsys_Elink_output_0_0/zsys_Elink_output_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_Elink_output_0_0 || ORIG_REF_NAME==zsys_Elink_output_0_0} -quiet] -quiet
 
@@ -213,6 +210,18 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_util_ds_bu
 
 # IP: bd/zsys/ip/zsys_xlslice_3to3_2/zsys_xlslice_3to3_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_xlslice_3to3_2 || ORIG_REF_NAME==zsys_xlslice_3to3_2} -quiet] -quiet
+
+# IP: bd/zsys/ip/zsys_Lvds_Rx_top_0_0/zsys_Lvds_Rx_top_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_Lvds_Rx_top_0_0 || ORIG_REF_NAME==zsys_Lvds_Rx_top_0_0} -quiet] -quiet
+
+# IP: bd/zsys/ip/zsys_util_vector_logic_2_0_1/zsys_util_vector_logic_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_util_vector_logic_2_0 || ORIG_REF_NAME==zsys_util_vector_logic_2_0} -quiet] -quiet
+
+# IP: bd/zsys/ip/zsys_util_vector_logic_0_2/zsys_util_vector_logic_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_util_vector_logic_0_2 || ORIG_REF_NAME==zsys_util_vector_logic_0_2} -quiet] -quiet
+
+# IP: bd/zsys/ip/zsys_AXI_ADC_1_0/zsys_AXI_ADC_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_AXI_ADC_1_0 || ORIG_REF_NAME==zsys_AXI_ADC_1_0} -quiet] -quiet
 
 # IP: bd/zsys/ip/zsys_auto_cc_0/zsys_auto_cc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zsys_auto_cc_0 || ORIG_REF_NAME==zsys_auto_cc_0} -quiet] -quiet

@@ -1,4 +1,4 @@
-17:34:50 **** Build of configuration Debug for project MB40ch_wTCP_server ****
+15:23:33 **** Build of configuration Debug for project MB40ch_wTCP_server ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -583,5 +583,5 @@ arm-none-eabi-size MB40ch_wTCP_server.elf  |tee "MB40ch_wTCP_server.elf.size"
 Finished building: MB40ch_wTCP_server.elf.size
  
 
-17:34:52 Build Finished (took 1s.947ms)
+15:23:34 Build Finished (took 870ms)
 

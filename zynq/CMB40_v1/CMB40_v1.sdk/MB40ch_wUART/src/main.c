@@ -238,7 +238,7 @@ int setup_system ()
 	setup_DACs();
 	xil_printf("Setup DACs voltages\n");
 	xil_printf("Initialize SPI of ADC\n");
-	//ADC_SPI_init();
+
 	Xil_In32(XPAR_CPLD_CTRL_0_S00_AXI_BASEADDR+8);
    	//Fifo resets
 	XGpio_DiscreteClear(&gpio,2,rst_FIFO_mask);
@@ -277,6 +277,11 @@ int setup_system ()
 	//xil_printf("ADC nCS pull down: Cpld status: %d \n\n",cpld_status);
 
 	//ADC setup register routine here!
+	//////////////////////////////////////////
+	xil_printf("Valor en el registro slv_reg0: %d", AXI_ADC_check_status());
+	ADC_SPI_init();
+	xil_printf("Valor en el registro slv_reg0: %d", AXI_ADC_check_status());
+	//////////////////////////////////////////
 
 	XGpio_DiscreteSet(&gpio,2,busy_trigger_mask);
 
@@ -285,17 +290,209 @@ int setup_system ()
 
 void ADC_SPI_init()
 {
-	//u32 AXI_ADC_write_reg (u16 ptr_tbw, u16 data)
 	u16 pt_addr;
 	u16 spi_data;
 	u32 result;
-	//First, enable LVDS on ADS5287.
-	pt_addr = 0x0042;
-	spi_data = 0x8001; //Enable diff_CLK for LVDS. Default is disable.
+	u32 cpld_status;
+
+	xil_printf("Empieza configuracion del ADC\n");
+
+	/*while(1){
+		xil_printf("nCS low:\n");
+		ADC_nCS_low();
+		usleep(500);
+		xil_printf("nCS high:\n");
+		ADC_nCS_high();
+		usleep(500);
+	}*/
+
+	CPLD_ADC_nCS = 0;
+	cpld_status = write_CPLD_signals();
+	CPLD_ADC_nCS = 1;
+	cpld_status = write_CPLD_signals();
+
+	// Enables data write
+	AXI_ADC_mWriteReg(
+			AXI_ADC_BaseAddress,
+			AXI_ADC_S00_action_reg_offset,
+			1 << AXI_ADC_S00_ready_state_bit_offset);
+	//ADC_nCS_low();
+	CPLD_ADC_nCS = 0;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+	pt_addr = 0x00;
+	spi_data = 0x0001;
+	result = AXI_ADC_write_reg(pt_addr,spi_data);
+	xil_printf("Result: %d\n",result);
+	//ADC_nCS_high();
+	CPLD_ADC_nCS = 1;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+
+	// Enables data write
+	AXI_ADC_mWriteReg(
+			AXI_ADC_BaseAddress,
+			AXI_ADC_S00_action_reg_offset,
+			1 << AXI_ADC_S00_ready_state_bit_offset);
+	//ADC_nCS_low();
+	CPLD_ADC_nCS = 0;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+	pt_addr = 0x00;
+	spi_data = 0x0000;
+	result = AXI_ADC_write_reg(pt_addr,spi_data);
+	xil_printf("Result: %d\n",result);
+	usleep(500);
+	//ADC_nCS_high();
+	CPLD_ADC_nCS = 1;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+
+	// Enables data write
+	AXI_ADC_mWriteReg(
+			AXI_ADC_BaseAddress,
+			AXI_ADC_S00_action_reg_offset,
+			1 << AXI_ADC_S00_ready_state_bit_offset);
+	//ADC_nCS_low();
+	CPLD_ADC_nCS = 0;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+	pt_addr = 0x45;
+	spi_data = 0x0010;
+	result = AXI_ADC_write_reg(pt_addr,spi_data);
+	xil_printf("Result: %d\n",result);
+	usleep(500);
+	//ADC_nCS_high();
+	CPLD_ADC_nCS = 1;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+
+	// Enables data write
+	AXI_ADC_mWriteReg(
+			AXI_ADC_BaseAddress,
+			AXI_ADC_S00_action_reg_offset,
+			1 << AXI_ADC_S00_ready_state_bit_offset);
+	//ADC_nCS_low();
+	CPLD_ADC_nCS = 0;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+	pt_addr = 0x25;
+	//spi_data = 0b0000000101001111; // Ramp pattern
+	spi_data = 0b0000000100010011; // Single constant value pattern
+	//spi_data = 0b0000000100100011; // 2 constant values pattern
+	result = AXI_ADC_write_reg(pt_addr,spi_data);
+	xil_printf("Result: %d\n",result);
+	usleep(500);
+	//ADC_nCS_high();
+	CPLD_ADC_nCS = 1;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+
+
+	// Enables data write
+	AXI_ADC_mWriteReg(
+			AXI_ADC_BaseAddress,
+			AXI_ADC_S00_action_reg_offset,
+			1 << AXI_ADC_S00_ready_state_bit_offset);
+	//ADC_nCS_low();
+	CPLD_ADC_nCS = 0;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+	pt_addr = 0x26;
+	spi_data = 0b1111000000000000;
+	result = AXI_ADC_write_reg(pt_addr,spi_data);
+	xil_printf("Result: %d\n",result);
+	usleep(500);
+	//ADC_nCS_high();
+	CPLD_ADC_nCS = 1;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+
+	// Enables data write
+	AXI_ADC_mWriteReg(
+			AXI_ADC_BaseAddress,
+			AXI_ADC_S00_action_reg_offset,
+			1 << AXI_ADC_S00_ready_state_bit_offset);
+	//ADC_nCS_low();
+	CPLD_ADC_nCS = 0;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+	pt_addr = 0x46;
+	//spi_data = 0x8208; //MSB first and 12 bits data communication
+	spi_data = 0x8200;  //LSB first and 12 bits data communication
+	result = AXI_ADC_write_reg(pt_addr,spi_data);
+	xil_printf("Result: %d\n",result);
+	usleep(500);
+	//ADC_nCS_high();
+	CPLD_ADC_nCS = 1;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+
+	// Enables data write
+	AXI_ADC_mWriteReg(
+			AXI_ADC_BaseAddress,
+			AXI_ADC_S00_action_reg_offset,
+			1 << AXI_ADC_S00_ready_state_bit_offset);
+	//ADC_nCS_low();
+	CPLD_ADC_nCS = 0;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+	pt_addr = 0x07;
+	spi_data = 0x0000; // Disables interleave; see table 55 (page 79) of the ADS5296's datasheet.
+	result = AXI_ADC_write_reg(pt_addr,spi_data);
+	xil_printf("Result: %d\n",result);
+	usleep(500);
+	//ADC_nCS_high();
+	CPLD_ADC_nCS = 1;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+
+	// Enables data write
+	AXI_ADC_mWriteReg(
+			AXI_ADC_BaseAddress,
+			AXI_ADC_S00_action_reg_offset,
+			1 << AXI_ADC_S00_ready_state_bit_offset);
+	//ADC_nCS_low();
+	CPLD_ADC_nCS = 0;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+	pt_addr = 0x40;
+	spi_data = 0x8000; // Disables interleave; see table 55 (page 79) of the ADS5296's datasheet.
+	result = AXI_ADC_write_reg(pt_addr,spi_data);
+	xil_printf("Result: %d\n",result);
+	usleep(500);
+	//ADC_nCS_high();
+	CPLD_ADC_nCS = 1;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+
+	///////////////////
+	//Read registers values
+	/*pt_addr = 0x01;
+	spi_data = 0x0001; // Disables interleave; see table 55 (page 79) of the ADS5296's datasheet.
+	result = AXI_ADC_write_reg(pt_addr,spi_data);
+	xil_printf("Result: %d\n",result);
+	usleep(500);
+	xil_printf("El valor escrito en el registro 0x00 es:\n");
+	result = AXI_ADC_read_ptr(0x40);
+	xil_printf("valor hexadecimal: %x\n",result);
+	usleep(50000);*/
+
+	// Disables data write
+	AXI_ADC_mWriteReg(
+			AXI_ADC_BaseAddress,
+			AXI_ADC_S00_action_reg_offset, 0);
+
+	xil_printf("Termina configuracion del ADC\n");
+
+	/*xil_printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+	xil_printf("Estatus del ADC");
+	xil_printf(AXI_ADC_check_status());
 
 	result = AXI_ADC_write_reg(pt_addr,spi_data);
 	xil_printf("ADC SPI R:%u", result);
 
+	AXI_ADC_check_status();*/
 
 }
 void init_DACs()
@@ -341,6 +538,7 @@ int setup_DACs(void){
 int loop_routine(void){
 
 	xil_printf("---------------------\n\n starting command mode, no more than 15 characters per line!\n");
+
 
 	/*
 	//////////////////////////////////////////////////////////////////////////////////////////////
@@ -408,6 +606,26 @@ int loop_routine(void){
     xil_printf("Pasa hacia el while infinito.\n");
 
 	while (1) {
+
+				//ADC_SPI_init();
+
+				/*//First, enable LVDS on ADS5296.
+				xil_printf("Escribo ADC\n");
+				u16 pt_addr;
+				u16 spi_data;
+				u32 result;
+
+				pt_addr = 0x26;
+				spi_data = 0b0000111111000000;
+				result = AXI_ADC_write_reg(pt_addr,spi_data);
+				xil_printf(result);
+				usleep(500);
+
+				pt_addr = 0x25;
+				spi_data = 0b0000000100010000;
+				result = AXI_ADC_write_reg(pt_addr,spi_data);
+				xil_printf(result);
+				usleep(500);*/
 
 				if (TcpFastTmrFlag) {
 					tcp_fasttmr();
@@ -634,12 +852,14 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 			process_n_send_data(c_glob_ev,1);
 			c_glob_ev++;
 			//start_send_event = 1;
-			flag_senddata= 1 ;
+			//flag_senddata = 1 ;
+			flag_senddata = 0 ;
 			xil_printf("\n# sending data\n");
 //					XGpio_DiscreteWrite(&gpio,2,0x0);
 //					state = XGpio_DiscreteRead(&gpio,1);
 //					xil_printf("\n# state = %x", state);
 //					trigger_counter = (state >> 12) & 0xFFF;
+			xil_printf("TCP Buffer to be sent:<----\n%s\n--->\n",buffer);
 		}
 		if (command_is(RecvBuffer,"-check")) {
 //					state = XGpio_DiscreteRead(&gpio,1);

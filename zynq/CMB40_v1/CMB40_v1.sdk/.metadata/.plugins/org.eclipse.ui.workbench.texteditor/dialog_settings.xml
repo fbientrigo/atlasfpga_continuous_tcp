@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="flag_senddata" key="selection"/>
+		<item value="xil_print" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="flag_senddata"/>
-			<item value="process_n_send_data"/>
-			<item value="auto"/>
-			<item value="ipaddr"/>
-			<item value="print_ip_settings"/>
-			<item value="Board IP"/>
-			<item value="Waiting for PHY to complete autonegotiation"/>
-			<item value="ip and port"/>
+			<item value="xil_print"/>
+			<item value="cpld_status"/>
+			<item value="CPLD_ADC_nCS"/>
+			<item value="ADC_SPI_init"/>
+			<item value="wird"/>
+			<item value="ctrl_signal"/>
+			<item value="read_cpld_word"/>
+			<item value="CPLD_gain_mux"/>
 		</list>
 		<list key="replacehistory">
 		</list>

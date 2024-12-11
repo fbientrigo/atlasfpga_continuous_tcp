@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-// Date        : Tue Nov  5 10:40:17 2024
+// Date        : Mon Nov  4 16:09:19 2024
 // Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top zsys_CPLD_ctrl_0_0 -prefix
 //               zsys_CPLD_ctrl_0_0_ zsys_CPLD_ctrl_0_0_stub.v

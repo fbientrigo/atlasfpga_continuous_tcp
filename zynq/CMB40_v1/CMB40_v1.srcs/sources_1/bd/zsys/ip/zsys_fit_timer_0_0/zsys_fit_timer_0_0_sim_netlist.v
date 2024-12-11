@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Thu Aug  3 12:22:39 2023
+// Date        : Mon Jun 26 16:48:02 2023
 // Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top zsys_fit_timer_0_0 -prefix
 //               zsys_fit_timer_0_0_ zsys_fit_timer_0_0_sim_netlist.v
@@ -15,6 +15,7 @@
 module zsys_fit_timer_0_0_Divide_part
    (loop_Bit,
     Rst_d1,
+    CE,
     \not_First.Out1_reg ,
     \not_First.Out1_reg_0 ,
     \not_First.Out1_reg_1 ,
@@ -25,7 +26,6 @@ module zsys_fit_timer_0_0_Divide_part
     \not_First.Out1_reg_6 ,
     \not_First.Out1_reg_7 ,
     \not_First.Out1_reg_8 ,
-    CE,
     Clk,
     Rst,
     loop_Bit_0,
@@ -40,6 +40,7 @@ module zsys_fit_timer_0_0_Divide_part
     loop_Bit_9);
   output loop_Bit;
   output Rst_d1;
+  output CE;
   output \not_First.Out1_reg ;
   output \not_First.Out1_reg_0 ;
   output \not_First.Out1_reg_1 ;
@@ -50,7 +51,6 @@ module zsys_fit_timer_0_0_Divide_part
   output \not_First.Out1_reg_6 ;
   output \not_First.Out1_reg_7 ;
   output \not_First.Out1_reg_8 ;
-  output CE;
   input Clk;
   input Rst;
   input loop_Bit_0;
@@ -92,8 +92,8 @@ module zsys_fit_timer_0_0_Divide_part
   wire \not_First.Out1_reg_8 ;
 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "\U0/Using_SRL16s.SRL16s " *) 
-  (* srl_name = "\U0/Using_SRL16s.SRL16s[1].Divide_I/One_SRL16.SRL16E_I " *) 
+  (* srl_bus_name = "U0/\Using_SRL16s.SRL16s " *) 
+  (* srl_name = "U0/\Using_SRL16s.SRL16s[1].Divide_I/One_SRL16.SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0001),
     .IS_CLK_INVERTED(1'b0)) 
@@ -244,8 +244,8 @@ module zsys_fit_timer_0_0_Divide_part__parameterized0
   wire \not_First.Clk_En_Out_i_i_1_n_0 ;
 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "\U0/Using_SRL16s.SRL16s " *) 
-  (* srl_name = "\U0/Using_SRL16s.SRL16s[2].Divide_I/One_SRL16.SRL16E_I " *) 
+  (* srl_bus_name = "U0/\Using_SRL16s.SRL16s " *) 
+  (* srl_name = "U0/\Using_SRL16s.SRL16s[2].Divide_I/One_SRL16.SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0001),
     .IS_CLK_INVERTED(1'b0)) 
@@ -323,8 +323,8 @@ module zsys_fit_timer_0_0_Divide_part__parameterized1
   wire \not_First.Out1_reg_n_0 ;
 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "\U0/Using_SRL16s.SRL16s " *) 
-  (* srl_name = "\U0/Using_SRL16s.SRL16s[3].Divide_I/One_SRL16.SRL16E_I " *) 
+  (* srl_bus_name = "U0/\Using_SRL16s.SRL16s " *) 
+  (* srl_name = "U0/\Using_SRL16s.SRL16s[3].Divide_I/One_SRL16.SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0001),
     .IS_CLK_INVERTED(1'b0)) 
@@ -401,8 +401,8 @@ module zsys_fit_timer_0_0_Divide_part__parameterized2
   wire \not_First.Out1_reg_n_0 ;
 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "\U0/Using_SRL16s.SRL16s " *) 
-  (* srl_name = "\U0/Using_SRL16s.SRL16s[10].Divide_I/One_SRL16.SRL16E_I " *) 
+  (* srl_bus_name = "U0/\Using_SRL16s.SRL16s " *) 
+  (* srl_name = "U0/\Using_SRL16s.SRL16s[10].Divide_I/One_SRL16.SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0001),
     .IS_CLK_INVERTED(1'b0)) 
@@ -473,8 +473,8 @@ module zsys_fit_timer_0_0_Divide_part__parameterized2_0
   wire \not_First.Out1_reg_n_0 ;
 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "\U0/Using_SRL16s.SRL16s " *) 
-  (* srl_name = "\U0/Using_SRL16s.SRL16s[11].Divide_I/One_SRL16.SRL16E_I " *) 
+  (* srl_bus_name = "U0/\Using_SRL16s.SRL16s " *) 
+  (* srl_name = "U0/\Using_SRL16s.SRL16s[11].Divide_I/One_SRL16.SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0001),
     .IS_CLK_INVERTED(1'b0)) 
@@ -544,8 +544,8 @@ module zsys_fit_timer_0_0_Divide_part__parameterized2_1
   wire \not_First.Out1_reg_n_0 ;
 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "\U0/Using_SRL16s.SRL16s " *) 
-  (* srl_name = "\U0/Using_SRL16s.SRL16s[4].Divide_I/One_SRL16.SRL16E_I " *) 
+  (* srl_bus_name = "U0/\Using_SRL16s.SRL16s " *) 
+  (* srl_name = "U0/\Using_SRL16s.SRL16s[4].Divide_I/One_SRL16.SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0001),
     .IS_CLK_INVERTED(1'b0)) 
@@ -622,8 +622,8 @@ module zsys_fit_timer_0_0_Divide_part__parameterized2_2
   wire \not_First.Out1_reg_n_0 ;
 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "\U0/Using_SRL16s.SRL16s " *) 
-  (* srl_name = "\U0/Using_SRL16s.SRL16s[5].Divide_I/One_SRL16.SRL16E_I " *) 
+  (* srl_bus_name = "U0/\Using_SRL16s.SRL16s " *) 
+  (* srl_name = "U0/\Using_SRL16s.SRL16s[5].Divide_I/One_SRL16.SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0001),
     .IS_CLK_INVERTED(1'b0)) 
@@ -700,8 +700,8 @@ module zsys_fit_timer_0_0_Divide_part__parameterized2_3
   wire \not_First.Out1_reg_n_0 ;
 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "\U0/Using_SRL16s.SRL16s " *) 
-  (* srl_name = "\U0/Using_SRL16s.SRL16s[6].Divide_I/One_SRL16.SRL16E_I " *) 
+  (* srl_bus_name = "U0/\Using_SRL16s.SRL16s " *) 
+  (* srl_name = "U0/\Using_SRL16s.SRL16s[6].Divide_I/One_SRL16.SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0001),
     .IS_CLK_INVERTED(1'b0)) 
@@ -778,8 +778,8 @@ module zsys_fit_timer_0_0_Divide_part__parameterized2_4
   wire \not_First.Out1_reg_n_0 ;
 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "\U0/Using_SRL16s.SRL16s " *) 
-  (* srl_name = "\U0/Using_SRL16s.SRL16s[7].Divide_I/One_SRL16.SRL16E_I " *) 
+  (* srl_bus_name = "U0/\Using_SRL16s.SRL16s " *) 
+  (* srl_name = "U0/\Using_SRL16s.SRL16s[7].Divide_I/One_SRL16.SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0001),
     .IS_CLK_INVERTED(1'b0)) 
@@ -856,8 +856,8 @@ module zsys_fit_timer_0_0_Divide_part__parameterized2_5
   wire \not_First.Out1_reg_n_0 ;
 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "\U0/Using_SRL16s.SRL16s " *) 
-  (* srl_name = "\U0/Using_SRL16s.SRL16s[8].Divide_I/One_SRL16.SRL16E_I " *) 
+  (* srl_bus_name = "U0/\Using_SRL16s.SRL16s " *) 
+  (* srl_name = "U0/\Using_SRL16s.SRL16s[8].Divide_I/One_SRL16.SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0001),
     .IS_CLK_INVERTED(1'b0)) 
@@ -934,8 +934,8 @@ module zsys_fit_timer_0_0_Divide_part__parameterized2_6
   wire \not_First.Out1_reg_n_0 ;
 
   (* box_type = "PRIMITIVE" *) 
-  (* srl_bus_name = "\U0/Using_SRL16s.SRL16s " *) 
-  (* srl_name = "\U0/Using_SRL16s.SRL16s[9].Divide_I/One_SRL16.SRL16E_I " *) 
+  (* srl_bus_name = "U0/\Using_SRL16s.SRL16s " *) 
+  (* srl_name = "U0/\Using_SRL16s.SRL16s[9].Divide_I/One_SRL16.SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0001),
     .IS_CLK_INVERTED(1'b0)) 
@@ -978,13 +978,15 @@ module zsys_fit_timer_0_0_Divide_part__parameterized2_6
         .R(Rst));
 endmodule
 
+(* C_EXT_RESET_HIGH = "1" *) (* C_FAMILY = "zynq" *) (* C_INACCURACY = "0" *) 
+(* C_NO_CLOCKS = "700000000" *) 
 module zsys_fit_timer_0_0_FIT_timer
-   (Interrupt,
+   (Clk,
     Rst,
-    Clk);
-  output Interrupt;
-  input Rst;
+    Interrupt);
   input Clk;
+  input Rst;
+  output Interrupt;
 
   wire CE;
   wire CE_1;
@@ -1011,7 +1013,7 @@ module zsys_fit_timer_0_0_FIT_timer
   wire Rst_d1;
   wire \Using_SRL16s.SRL16s[1].Divide_I_n_10 ;
   wire \Using_SRL16s.SRL16s[1].Divide_I_n_11 ;
-  wire \Using_SRL16s.SRL16s[1].Divide_I_n_2 ;
+  wire \Using_SRL16s.SRL16s[1].Divide_I_n_12 ;
   wire \Using_SRL16s.SRL16s[1].Divide_I_n_3 ;
   wire \Using_SRL16s.SRL16s[1].Divide_I_n_4 ;
   wire \Using_SRL16s.SRL16s[1].Divide_I_n_5 ;
@@ -1039,7 +1041,7 @@ module zsys_fit_timer_0_0_FIT_timer
         .Clk_En_I_2(Clk_En_I_2),
         .Rst(Rst),
         .Rst_d1(Rst_d1),
-        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_10 ),
+        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_11 ),
         .loop_Bit(loop_Bit));
   zsys_fit_timer_0_0_Divide_part__parameterized2_0 \Using_SRL16s.SRL16s[11].Divide_I 
        (.CE(CE),
@@ -1047,7 +1049,7 @@ module zsys_fit_timer_0_0_FIT_timer
         .Clk_En_I_1(Clk_En_I_1),
         .Interrupt(Interrupt),
         .Rst(Rst),
-        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_11 ),
+        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_12 ),
         .loop_Bit(loop_Bit_0));
   zsys_fit_timer_0_0_Divide_part \Using_SRL16s.SRL16s[1].Divide_I 
        (.CE(CE_1),
@@ -1065,16 +1067,16 @@ module zsys_fit_timer_0_0_FIT_timer
         .loop_Bit_7(loop_Bit_18),
         .loop_Bit_8(loop_Bit),
         .loop_Bit_9(loop_Bit_0),
-        .\not_First.Out1_reg (\Using_SRL16s.SRL16s[1].Divide_I_n_2 ),
-        .\not_First.Out1_reg_0 (\Using_SRL16s.SRL16s[1].Divide_I_n_3 ),
-        .\not_First.Out1_reg_1 (\Using_SRL16s.SRL16s[1].Divide_I_n_4 ),
-        .\not_First.Out1_reg_2 (\Using_SRL16s.SRL16s[1].Divide_I_n_5 ),
-        .\not_First.Out1_reg_3 (\Using_SRL16s.SRL16s[1].Divide_I_n_6 ),
-        .\not_First.Out1_reg_4 (\Using_SRL16s.SRL16s[1].Divide_I_n_7 ),
-        .\not_First.Out1_reg_5 (\Using_SRL16s.SRL16s[1].Divide_I_n_8 ),
-        .\not_First.Out1_reg_6 (\Using_SRL16s.SRL16s[1].Divide_I_n_9 ),
-        .\not_First.Out1_reg_7 (\Using_SRL16s.SRL16s[1].Divide_I_n_10 ),
-        .\not_First.Out1_reg_8 (\Using_SRL16s.SRL16s[1].Divide_I_n_11 ));
+        .\not_First.Out1_reg (\Using_SRL16s.SRL16s[1].Divide_I_n_3 ),
+        .\not_First.Out1_reg_0 (\Using_SRL16s.SRL16s[1].Divide_I_n_4 ),
+        .\not_First.Out1_reg_1 (\Using_SRL16s.SRL16s[1].Divide_I_n_5 ),
+        .\not_First.Out1_reg_2 (\Using_SRL16s.SRL16s[1].Divide_I_n_6 ),
+        .\not_First.Out1_reg_3 (\Using_SRL16s.SRL16s[1].Divide_I_n_7 ),
+        .\not_First.Out1_reg_4 (\Using_SRL16s.SRL16s[1].Divide_I_n_8 ),
+        .\not_First.Out1_reg_5 (\Using_SRL16s.SRL16s[1].Divide_I_n_9 ),
+        .\not_First.Out1_reg_6 (\Using_SRL16s.SRL16s[1].Divide_I_n_10 ),
+        .\not_First.Out1_reg_7 (\Using_SRL16s.SRL16s[1].Divide_I_n_11 ),
+        .\not_First.Out1_reg_8 (\Using_SRL16s.SRL16s[1].Divide_I_n_12 ));
   zsys_fit_timer_0_0_Divide_part__parameterized0 \Using_SRL16s.SRL16s[2].Divide_I 
        (.CE(CE_3),
         .CE_0(CE_1),
@@ -1082,7 +1084,7 @@ module zsys_fit_timer_0_0_FIT_timer
         .Clk_En_I_9(Clk_En_I_9),
         .Rst(Rst),
         .Rst_d1(Rst_d1),
-        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_2 ),
+        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_3 ),
         .loop_Bit(loop_Bit_4),
         .loop_Bit_1(loop_Bit_2));
   zsys_fit_timer_0_0_Divide_part__parameterized1 \Using_SRL16s.SRL16s[3].Divide_I 
@@ -1093,7 +1095,7 @@ module zsys_fit_timer_0_0_FIT_timer
         .Clk_En_I_9(Clk_En_I_9),
         .Rst(Rst),
         .Rst_d1(Rst_d1),
-        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_3 ),
+        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_4 ),
         .loop_Bit(loop_Bit_6));
   zsys_fit_timer_0_0_Divide_part__parameterized2_1 \Using_SRL16s.SRL16s[4].Divide_I 
        (.CE(CE_7),
@@ -1103,7 +1105,7 @@ module zsys_fit_timer_0_0_FIT_timer
         .Clk_En_I_8(Clk_En_I_8),
         .Rst(Rst),
         .Rst_d1(Rst_d1),
-        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_4 ),
+        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_5 ),
         .loop_Bit(loop_Bit_8));
   zsys_fit_timer_0_0_Divide_part__parameterized2_2 \Using_SRL16s.SRL16s[5].Divide_I 
        (.CE(CE_9),
@@ -1113,7 +1115,7 @@ module zsys_fit_timer_0_0_FIT_timer
         .Clk_En_I_7(Clk_En_I_7),
         .Rst(Rst),
         .Rst_d1(Rst_d1),
-        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_5 ),
+        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_6 ),
         .loop_Bit(loop_Bit_10));
   zsys_fit_timer_0_0_Divide_part__parameterized2_3 \Using_SRL16s.SRL16s[6].Divide_I 
        (.CE(CE_11),
@@ -1123,7 +1125,7 @@ module zsys_fit_timer_0_0_FIT_timer
         .Clk_En_I_6(Clk_En_I_6),
         .Rst(Rst),
         .Rst_d1(Rst_d1),
-        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_6 ),
+        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_7 ),
         .loop_Bit(loop_Bit_12));
   zsys_fit_timer_0_0_Divide_part__parameterized2_4 \Using_SRL16s.SRL16s[7].Divide_I 
        (.CE(CE_13),
@@ -1133,7 +1135,7 @@ module zsys_fit_timer_0_0_FIT_timer
         .Clk_En_I_5(Clk_En_I_5),
         .Rst(Rst),
         .Rst_d1(Rst_d1),
-        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_7 ),
+        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_8 ),
         .loop_Bit(loop_Bit_14));
   zsys_fit_timer_0_0_Divide_part__parameterized2_5 \Using_SRL16s.SRL16s[8].Divide_I 
        (.CE(CE_15),
@@ -1143,7 +1145,7 @@ module zsys_fit_timer_0_0_FIT_timer
         .Clk_En_I_4(Clk_En_I_4),
         .Rst(Rst),
         .Rst_d1(Rst_d1),
-        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_8 ),
+        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_9 ),
         .loop_Bit(loop_Bit_16));
   zsys_fit_timer_0_0_Divide_part__parameterized2_6 \Using_SRL16s.SRL16s[9].Divide_I 
        (.CE(CE_17),
@@ -1153,7 +1155,7 @@ module zsys_fit_timer_0_0_FIT_timer
         .Clk_En_I_3(Clk_En_I_3),
         .Rst(Rst),
         .Rst_d1(Rst_d1),
-        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_9 ),
+        .Rst_d1_reg(\Using_SRL16s.SRL16s[1].Divide_I_n_10 ),
         .loop_Bit(loop_Bit_18));
 endmodule
 
@@ -1163,7 +1165,7 @@ module zsys_fit_timer_0_0
    (Clk,
     Rst,
     Interrupt);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.Clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.Clk, ASSOCIATED_RESET Rst, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input Clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.Clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.Clk, ASSOCIATED_RESET Rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input Clk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.Rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.Rst, POLARITY ACTIVE_HIGH" *) input Rst;
   (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTERRUPT.Interrupt INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTERRUPT.Interrupt, SENSITIVITY LEVEL_HIGH, SUGGESTED_PRIORITY HIGH, PortWidth 1" *) output Interrupt;
 
@@ -1171,6 +1173,10 @@ module zsys_fit_timer_0_0
   wire Interrupt;
   wire Rst;
 
+  (* C_EXT_RESET_HIGH = "1" *) 
+  (* C_FAMILY = "zynq" *) 
+  (* C_INACCURACY = "0" *) 
+  (* C_NO_CLOCKS = "700000000" *) 
   zsys_fit_timer_0_0_FIT_timer U0
        (.Clk(Clk),
         .Interrupt(Interrupt),

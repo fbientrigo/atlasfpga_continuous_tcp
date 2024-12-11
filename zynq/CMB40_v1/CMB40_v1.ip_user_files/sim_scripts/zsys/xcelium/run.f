@@ -210,6 +210,9 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/zsys/ip/zsys_axi_dma_0_0/sim/zsys_axi_dma_0_0.vhd" \
 -endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/zsys/ip/zsys_axi_smc_0/bd_0/sim/bd_fa8c.v" \
+-endlib
 -makelib xcelium_lib/smartconnect_v1_0 -sv \
   "../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/5160/hdl/sc_axi2sc_v1_0_vl_rfs.sv" \
 -endlib
@@ -289,11 +292,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/zsys/ip/zsys_axi_smc_0/bd_0/ip/ip_1/sim/bd_fa8c_psr_aclk_0.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/zsys/ip/zsys_axi_smc_0/bd_0/sim/bd_fa8c.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
   "../../../bd/zsys/ip/zsys_axi_smc_0/sim/zsys_axi_smc_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
@@ -337,13 +335,6 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/zsys/ip/zsys_xlslice_12to14_0/sim/zsys_xlslice_12to14_0.v" \
   "../../../bd/zsys/ip/zsys_xlslice_3to3_0/sim/zsys_xlslice_3to3_0.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/zsys/ip/zsys_system_ila_0_0/bd_0/sim/bd_f448.vhd" \
-  "../../../bd/zsys/ip/zsys_system_ila_0_0/bd_0/ip/ip_0/sim/bd_f448_ila_lib_0.vhd" \
-  "../../../bd/zsys/ip/zsys_system_ila_0_0/sim/zsys_system_ila_0_0.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
   "../../../bd/zsys/ip/zsys_xlconcat_1_1/sim/zsys_xlconcat_1_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
@@ -357,9 +348,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/zsys/ip/zsys_delay_module_0_1/sim/zsys_delay_module_0_1.vhd" \
-  "../../../bd/zsys/ip/zsys_system_ila_1_0/bd_0/sim/bd_3419.vhd" \
-  "../../../bd/zsys/ip/zsys_system_ila_1_0/bd_0/ip/ip_0/sim/bd_3419_ila_lib_0.vhd" \
-  "../../../bd/zsys/ip/zsys_system_ila_1_0/sim/zsys_system_ila_1_0.vhd" \
   "../../../bd/zsys/ipshared/b2a8/hdl/clk_mon_v1_0_S00_AXI.vhd" \
   "../../../bd/zsys/ipshared/b2a8/src/clk_monitor.vhd" \
   "../../../bd/zsys/ipshared/b2a8/hdl/clk_mon_v1_0.vhd" \
@@ -377,35 +365,33 @@
   "../../../bd/zsys/ip/zsys_xlslice_3to3_1/sim/zsys_xlslice_3to3_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/sim/bd_34e9.vhd" \
-  "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_0/sim/bd_34e9_ila_lib_0.vhd" \
--endlib
--makelib xcelium_lib/gigantic_mux \
-  "../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/d322/hdl/gigantic_mux_v1_0_cntr.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/bd_34e9_g_inst_0_gigantic_mux.v" \
-  "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_1/sim/bd_34e9_g_inst_0.v" \
-  "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_2/sim/bd_34e9_slot_0_aw_0.v" \
-  "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_3/sim/bd_34e9_slot_0_w_0.v" \
-  "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_4/sim/bd_34e9_slot_0_b_0.v" \
-  "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_5/sim/bd_34e9_slot_0_ar_0.v" \
-  "../../../bd/zsys/ip/zsys_system_ila_2_0/bd_0/ip/ip_6/sim/bd_34e9_slot_0_r_0.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/zsys/ip/zsys_system_ila_2_0/sim/zsys_system_ila_2_0.vhd" \
-  "../../../bd/zsys/ipshared/1531/hdl/AXI_ADC_v3_0_S00_AXI.vhd" \
-  "../../../bd/zsys/ipshared/1531/src/SPI_core_v2.vhd" \
-  "../../../bd/zsys/ipshared/1531/src/ADC_ctrl.vhd" \
-  "../../../bd/zsys/ipshared/1531/src/ADC_readout_3.vhd" \
-  "../../../bd/zsys/ipshared/1531/hdl/AXI_ADC_v3_0.vhd" \
-  "../../../bd/zsys/ip/zsys_AXI_ADC_0_0/sim/zsys_AXI_ADC_0_0.vhd" \
   "../../../bd/zsys/ip/zsys_Elink_output_0_0/sim/zsys_Elink_output_0_0.vhd" \
   "../../../bd/zsys/ip/zsys_util_ds_buf_0_0/sim/zsys_util_ds_buf_0_0.vhd" \
   "../../../bd/zsys/ip/zsys_util_ds_buf_0_2/sim/zsys_util_ds_buf_0_2.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/zsys/ip/zsys_xlslice_3to3_2/sim/zsys_xlslice_3to3_2.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/zsys/ip/zsys_Lvds_Rx_top_0_0/sim/zsys_Lvds_Rx_top_0_0.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/zsys/ip/zsys_util_vector_logic_2_0_1/sim/zsys_util_vector_logic_2_0.v" \
+  "../../../bd/zsys/ip/zsys_util_vector_logic_0_2/sim/zsys_util_vector_logic_0_2.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/zsys/ipshared/ec81/hdl/AXI_ADC_v3_0_S00_AXI.vhd" \
+  "../../../bd/zsys/ipshared/ec81/src/SPI_core_v2.vhd" \
+  "../../../bd/zsys/ipshared/ec81/src/ADC_ctrl.vhd" \
+  "../../../bd/zsys/ipshared/ec81/src/ADC_readout_3.vhd" \
+  "../../../bd/zsys/ipshared/ec81/hdl/AXI_ADC_v3_0.vhd" \
+  "../../../bd/zsys/ip/zsys_AXI_ADC_1_0/sim/zsys_AXI_ADC_1_0.vhd" \
+-endlib
+-makelib xcelium_lib/axi_mmu_v2_1_15 \
+  "../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/3048/hdl/axi_mmu_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/zsys/ip/zsys_s00_mmu_0/sim/zsys_s00_mmu_0.v" \
 -endlib
 -makelib xcelium_lib/axi_clock_converter_v2_1_16 \
   "../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/e9a5/hdl/axi_clock_converter_v2_1_vl_rfs.v" \

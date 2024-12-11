@@ -39,7 +39,7 @@ u32 write_CPLD_signals()
 				| (CPLD_mux0_1<<7) | (CPLD_mux0_0 <<6) | (CPLD_Tcal <<5)| (CPLD_nRst <<4) | (CPLD_dac_sel1 <<3) |(CPLD_dac_sel0 << 2)
 				| (CPLD_nshdn << 1) | CPLD_denable;
 
-	xil_printf("CPLD word:%x\n",ctrl_signal);
+	//xil_printf("CPLD word:%x\n",ctrl_signal);
 	ctrl_signal_comp = ctrl_signal & 0x00000fff;
 	Xil_Out32(CPLD_ctrl_BaseAddr+0,ctrl_signal);
 	usleep(20);
@@ -47,7 +47,7 @@ u32 write_CPLD_signals()
 
 	while(ctrl_signal_comp != cpld_ans)
 	{
-		xil_printf("Attempt: %d\n sent :%x - rec:%x\n",i,ctrl_signal_comp ,cpld_ans);
+		//xil_printf("Attempt: %d\n sent :%x - rec:%x\n",i,ctrl_signal_comp ,cpld_ans);
 		//At 10 MHz SPI SCLK sending 13 bit, should sent the word in 1.6 us. Then CPLD answer back 10 bit confirmation in 1.2 us
 		Xil_Out32(CPLD_ctrl_BaseAddr+0,ctrl_signal);
 		usleep(20);
@@ -56,8 +56,8 @@ u32 write_CPLD_signals()
 		i++;
 		if (i>100) break;
 	}
-	if (i>100) xil_printf("cpld_spi_wr_en 1 FAILED!!!!\n");
-	else xil_printf(">>>>>>> cpld_spi_wr_en 1 SUCCESS!\n");
+	//if (i>100) xil_printf("cpld_spi_wr_en 1 FAILED!!!!\n");
+	//else xil_printf(">>>>>>> cpld_spi_wr_en 1 SUCCESS!\n");
 
 	//Check if the word is the same that have been sent;
 	i = 0;
@@ -71,14 +71,14 @@ u32 write_CPLD_signals()
 
 	ctrl_signal_comp = ctrl_signal & 0x00000fff;
 	cpld_ans = 0;
-	xil_printf("CPLD word:%x\n",ctrl_signal);
+	//xil_printf("CPLD word:%x\n",ctrl_signal);
 	Xil_Out32(CPLD_ctrl_BaseAddr+0,ctrl_signal);
 	usleep(20);
 	cpld_ans = read_cpld_word();
 
 	while(ctrl_signal_comp != cpld_ans)
 	{
-		xil_printf("Attempt: %d\n sent :%x - rec:%x\n",i,ctrl_signal & 0x00000fff ,cpld_ans);
+		//xil_printf("Attempt: %d\n sent :%x - rec:%x\n",i,ctrl_signal & 0x00000fff ,cpld_ans);
 		//At 10 MHz SPI SCLK sending 13 bit, should sent the word in 1.6 us. Then CPLD answer back 10 bit confirmation in 1.2 us
 		Xil_Out32(CPLD_ctrl_BaseAddr+0,ctrl_signal);
 		usleep(20);
@@ -86,8 +86,8 @@ u32 write_CPLD_signals()
 		i++;
 		if (i>100) break;
 	}
-	if (i>100) xil_printf("cpld_spi_wr_en 0 FAILED!!!!\n");
-	else xil_printf(">>>>>>> cpld_spi_wr_en 0 SUCCESS!\n");
+	//if (i>100) xil_printf("cpld_spi_wr_en 0 FAILED!!!!\n");
+	//else xil_printf(">>>>>>> cpld_spi_wr_en 0 SUCCESS!\n");
 	return ctrl_signal;
 
 }
@@ -103,6 +103,7 @@ u16 read_cpld_word()
 {
 	u16 cpld_word;
 	cpld_word = (Xil_In32(CPLD_ctrl_BaseAddr+4) & 0x00001ffe)>>1;
+	//cpld_word = (Xil_In32(CPLD_ctrl_BaseAddr+4) & 0x00007ffe)>>1;
 	return cpld_word;
 }
 /*
@@ -174,5 +175,97 @@ void CPLD_mezz_power_off(u8 mezz_sel)
 	usleep(100);
 
 }
+
+u32 ADC_nCS_high() {
+	u16 cpld_ans = 0;
+	u16 new_cpld_word = 0;
+
+	cpld_ans = read_cpld_word();
+	int i = 0;
+	new_cpld_word = cpld_ans | (1 << 7); // ADC nCS to high
+	new_cpld_word = new_cpld_word | 1; // Enables write in the CPLD
+	while(new_cpld_word != cpld_ans)
+	{
+		xil_printf("cpld_ans: %x\n", cpld_ans);
+		xil_printf("new_cpld_word: %x\n", new_cpld_word);
+
+		//At 10 MHz SPI SCLK sending 13 bit, should sent the word in 1.6 us. Then CPLD answer back 10 bit confirmation in 1.2 us
+		Xil_Out32(CPLD_ctrl_BaseAddr+0,new_cpld_word);
+		usleep(20);
+		cpld_ans = read_cpld_word();
+
+		i++;
+		if (i>100) break;
+	}
+	if (i>100) xil_printf("cpld_spi_wr_en 1 FAILED!!!!\n");
+	else xil_printf(">>>>>>> cpld_spi_wr_en 1 SUCCESS!\n");
+
+	//Disable cpld_write;
+	cpld_ans = read_cpld_word();
+	i = 0;
+	CPLD_SPI_wr_en = 0;
+	new_cpld_word = new_cpld_word & ~(1 << 0); // Disables write in the CPLD
+
+	while(new_cpld_word != cpld_ans)
+	{
+		//At 10 MHz SPI SCLK sending 13 bit, should sent the word in 1.6 us. Then CPLD answer back 10 bit confirmation in 1.2 us
+		Xil_Out32(CPLD_ctrl_BaseAddr+0,new_cpld_word);
+		usleep(20);
+		cpld_ans = read_cpld_word();
+
+		i++;
+		if (i>100) break;
+	}
+	if (i>100) xil_printf("cpld_spi_wr_en 1 FAILED!!!!\n");
+	else xil_printf(">>>>>>> cpld_spi_wr_en 1 SUCCESS!\n");
+
+	return new_cpld_word;
+
+};
+
+int ADC_nCS_low() {
+
+	u16 cpld_ans = 0;
+	cpld_ans = read_cpld_word();
+	u16 new_cpld_word = 0;
+
+	int i = 0;
+	new_cpld_word = cpld_ans & ~(1 << 7); // ADC nCS to low
+	new_cpld_word = new_cpld_word | 1; // Enables write in the CPLD
+	while(new_cpld_word != cpld_ans)
+	{
+		//At 10 MHz SPI SCLK sending 13 bit, should sent the word in 1.6 us. Then CPLD answer back 10 bit confirmation in 1.2 us
+		Xil_Out32(CPLD_ctrl_BaseAddr+0,new_cpld_word);
+		usleep(20);
+		cpld_ans = read_cpld_word();
+
+		i++;
+		if (i>100) break;
+	}
+	if (i>100) xil_printf("cpld_spi_wr_en 1 FAILED!!!!\n");
+	else xil_printf(">>>>>>> cpld_spi_wr_en 1 SUCCESS!\n");
+
+	//Disable cpld_write;
+	cpld_ans = read_cpld_word();
+	i = 0;
+	CPLD_SPI_wr_en = 0;
+	new_cpld_word = new_cpld_word & ~(1 << 0); // Disables write in the CPLD
+
+	while(new_cpld_word != cpld_ans)
+	{
+		//At 10 MHz SPI SCLK sending 13 bit, should sent the word in 1.6 us. Then CPLD answer back 10 bit confirmation in 1.2 us
+		Xil_Out32(CPLD_ctrl_BaseAddr+0,new_cpld_word);
+		usleep(20);
+		cpld_ans = read_cpld_word();
+
+		i++;
+		if (i>100) break;
+	}
+	if (i>100) xil_printf("cpld_spi_wr_en 1 FAILED!!!!\n");
+	else xil_printf(">>>>>>> cpld_spi_wr_en 1 SUCCESS!\n");
+
+	return new_cpld_word;
+
+};
 
 

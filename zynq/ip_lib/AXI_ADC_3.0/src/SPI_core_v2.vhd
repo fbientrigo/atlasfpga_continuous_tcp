@@ -207,7 +207,8 @@ process (sys_clk, reset) begin
 --      end if;
     when st_write_add =>
       core_state <= "10";
-      if (bit_cntr < (24 + 1)) then -- 1 extra clk for safety and ensure slave asserted last bit
+      --if (bit_cntr < (24 + 1)) then -- 1 extra clk for safety and ensure slave asserted last bit
+      if (bit_cntr < (24)) then
           sm_master <= st_write_add;
       else
           sm_master <= st_stop;

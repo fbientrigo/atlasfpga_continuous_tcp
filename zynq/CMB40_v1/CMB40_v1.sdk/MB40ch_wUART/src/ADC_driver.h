@@ -9,7 +9,7 @@
 #include "xparameters.h"
 #include "sleep.h"
 
-#define AXI_ADC_BaseAddress XPAR_ADC_AXI_ADC_0_S00_AXI_BASEADDR
+#define AXI_ADC_BaseAddress XPAR_ADC_AXI_ADC_1_S00_AXI_BASEADDR
 #define AXI_ADC_S00_AXI_ctrl_SLV_REG0_OFFSET 0
 #define AXI_ADC_S00_AXI_ctrl_SLV_REG1_OFFSET 4
 #define AXI_ADC_S00_AXI_ctrl_SLV_REG2_OFFSET 8

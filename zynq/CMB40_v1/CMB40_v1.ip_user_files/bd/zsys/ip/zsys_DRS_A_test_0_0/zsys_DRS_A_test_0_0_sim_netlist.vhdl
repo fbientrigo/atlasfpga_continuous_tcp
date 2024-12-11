@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
--- Date        : Mon Nov  4 01:05:14 2024
--- Host        : lapepuat11 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+-- Date        : Wed Dec  4 12:19:06 2024
+-- Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               C:/Users/osotosan/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_DRS_A_test_0_0/zsys_DRS_A_test_0_0_sim_netlist.vhdl
+--               /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_DRS_A_test_0_0/zsys_DRS_A_test_0_0_sim_netlist.vhdl
 -- Design      : zsys_DRS_A_test_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -318,14 +318,14 @@ entity zsys_DRS_A_test_0_0 is
   attribute ip_definition_source : string;
   attribute ip_definition_source of zsys_DRS_A_test_0_0 : entity is "module_ref";
   attribute x_core_info : string;
-  attribute x_core_info of zsys_DRS_A_test_0_0 : entity is "DRS_A_test,Vivado 2018.2.2";
+  attribute x_core_info of zsys_DRS_A_test_0_0 : entity is "DRS_A_test,Vivado 2018.2";
 end zsys_DRS_A_test_0_0;
 
 architecture STRUCTURE of zsys_DRS_A_test_0_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of i_clk : signal is "xilinx.com:signal:clock:1.0 i_clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of i_clk : signal is "XIL_INTERFACENAME i_clk, FREQ_HZ 5e+07, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1";
+  attribute x_interface_parameter of i_clk : signal is "XIL_INTERFACENAME i_clk, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK1";
 begin
 U0: entity work.zsys_DRS_A_test_0_0_DRS_A_test
      port map (

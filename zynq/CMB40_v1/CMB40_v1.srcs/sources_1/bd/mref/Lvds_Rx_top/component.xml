@@ -15,7 +15,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>182df635</spirit:value>
+            <spirit:value>955c2ce9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -28,7 +28,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>182df635</spirit:value>
+            <spirit:value>955c2ce9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -182,7 +182,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>PhaseControl</spirit:name>
         <spirit:displayName>Phasecontrol</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PhaseControl">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PhaseControl">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector(6 downto 0)">
         <spirit:name>LclkOffsetK</spirit:name>
@@ -222,7 +222,7 @@
     <spirit:parameter>
       <spirit:name>PhaseControl</spirit:name>
       <spirit:displayName>Phasecontrol</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PhaseControl">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PhaseControl">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>LclkOffsetK</spirit:name>
@@ -249,7 +249,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-11-21T20:19:22Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-12-10T21:11:55Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>

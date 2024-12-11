@@ -536,7 +536,7 @@ ARCHITECTURE zsys_fifo_generator_0_0_arch OF zsys_fifo_generator_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF rd_en: SIGNAL IS "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_EN";
   ATTRIBUTE X_INTERFACE_INFO OF wr_en: SIGNAL IS "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN";
   ATTRIBUTE X_INTERFACE_INFO OF din: SIGNAL IS "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF rd_clk: SIGNAL IS "XIL_INTERFACENAME read_clk, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF rd_clk: SIGNAL IS "XIL_INTERFACENAME read_clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
   ATTRIBUTE X_INTERFACE_INFO OF rd_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 read_clk CLK";
   ATTRIBUTE X_INTERFACE_PARAMETER OF wr_clk: SIGNAL IS "XIL_INTERFACENAME write_clk, FREQ_HZ 16000000, PHASE 0.000, CLK_DOMAIN zsys_ROController_0_0_o_wr_fifo_clk";
   ATTRIBUTE X_INTERFACE_INFO OF wr_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 write_clk CLK";

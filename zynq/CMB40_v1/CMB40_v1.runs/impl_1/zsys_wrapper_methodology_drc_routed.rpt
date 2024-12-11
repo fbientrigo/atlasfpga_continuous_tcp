@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Wed Nov 27 17:47:01 2024
+| Date         : Wed Dec 11 11:33:38 2024
 | Host         : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_methodology -file zsys_wrapper_methodology_drc_routed.rpt -pb zsys_wrapper_methodology_drc_routed.pb -rpx zsys_wrapper_methodology_drc_routed.rpx
 | Design       : zsys_wrapper
@@ -132,7 +132,7 @@ Related violations: <none>
 
 LUTAR-1#5 Warning
 LUT drives async reset alert  
-LUT cell zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC/spi_core/FSM_sequential_sm_master[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC/spi_core/FSM_sequential_sm_master_reg[0]/CLR, zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC/spi_core/FSM_sequential_sm_master_reg[1]/CLR, zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC/spi_core/free_i_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC/spi_core/FSM_sequential_sm_master[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC/spi_core/FSM_sequential_sm_master_reg[0]/CLR, zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC/spi_core/FSM_sequential_sm_master_reg[1]/CLR, zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC/spi_core/free_i_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#6 Warning
@@ -142,82 +142,82 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X65Y86 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X65Y89 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X61Y88 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X64Y88 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X64Y86 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X63Y90 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X65Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X66Y88 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X66Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X64Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X65Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X65Y86 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X64Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X65Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[12] in site SLICE_X59Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[11] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[12] in site SLICE_X62Y86 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[11] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[20] in site SLICE_X59Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[19] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[20] in site SLICE_X62Y85 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[19] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[4] in site SLICE_X59Y85 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[4] in site SLICE_X62Y87 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[10] in site SLICE_X66Y89 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[9] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[10] in site SLICE_X67Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[9] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[2] in site SLICE_X66Y90 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[2] in site SLICE_X67Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#13 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/shift_reg_in_reg[0] in site SLICE_X74Y81 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/shift_reg_in_reg[0] in site SLICE_X62Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#14 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X74Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X62Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#15 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X77Y86 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X60Y81 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#16 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X76Y87 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X61Y81 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-2#1 Warning
@@ -1235,82 +1235,82 @@ Related violations: <none>
 
 REQP-1959#1 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_even: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_even: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#2 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_odd: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_odd: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#3 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_n: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_n: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#4 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_p: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_p: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#5 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_n: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_n: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#6 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_p: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_p: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#7 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_n: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_n: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#8 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_p: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_p: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#9 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_n: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_n: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#10 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_p: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_p: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#11 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_n: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_n: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#12 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_p: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_p: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#13 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_n: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_n: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#14 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_p: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_p: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#15 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_n: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_n: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 REQP-1959#16 Advisory
 connects_SERDES_RST_driver_not_FF  
-zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_p: The RST pin should only be driven by a Flip-flop.
+zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_p: The RST pin should only be driven by a Flip-flop.
 Related violations: <none>
 
 

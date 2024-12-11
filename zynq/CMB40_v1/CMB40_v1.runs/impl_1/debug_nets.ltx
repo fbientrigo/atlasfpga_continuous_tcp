@@ -5,7 +5,7 @@
       <probeOptions Id="DebugProbeParams">
         <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
         <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="CORE_UUID" value="23e7d65a79bc59f7bc47406c1714dfae"/>
+        <Option Id="CORE_UUID" value="23E7D65A79BC59F7BC47406C1714DFAE"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="100000000"/>
         <Option Id="HW_ILA" value="u_ila_0"/>
         <Option Id="PROBE_PORT" value="0"/>
@@ -13,25 +13,25 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="12"/>
       </probeOptions>
       <nets>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[11]"/>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[10]"/>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[9]"/>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[8]"/>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[7]"/>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[6]"/>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[5]"/>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[4]"/>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[3]"/>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[2]"/>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[1]"/>
-        <net name="zsys_i/ADC/mapper_0_o_out_7[0]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[11]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[10]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[9]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[8]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[7]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[6]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[5]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[4]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[3]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[2]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[1]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_0[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
         <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="CORE_UUID" value="23e7d65a79bc59f7bc47406c1714dfae"/>
+        <Option Id="CORE_UUID" value="23E7D65A79BC59F7BC47406C1714DFAE"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="100000000"/>
         <Option Id="HW_ILA" value="u_ila_0"/>
         <Option Id="PROBE_PORT" value="1"/>
@@ -57,21 +57,101 @@
       <probeOptions Id="DebugProbeParams">
         <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
         <Option Id="CORE_LOCATION" value="1:0"/>
-        <Option Id="CORE_UUID" value="23e7d65a79bc59f7bc47406c1714dfae"/>
+        <Option Id="CORE_UUID" value="23E7D65A79BC59F7BC47406C1714DFAE"/>
         <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="100000000"/>
         <Option Id="HW_ILA" value="u_ila_0"/>
         <Option Id="PROBE_PORT" value="2"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="7"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="12"/>
       </probeOptions>
       <nets>
-        <net name="zsys_i/ADC/ROController_0/o_ascii[6]"/>
-        <net name="zsys_i/ADC/ROController_0/o_ascii[5]"/>
-        <net name="zsys_i/ADC/ROController_0/o_ascii[4]"/>
-        <net name="zsys_i/ADC/ROController_0/o_ascii[3]"/>
-        <net name="zsys_i/ADC/ROController_0/o_ascii[2]"/>
-        <net name="zsys_i/ADC/ROController_0/o_ascii[1]"/>
-        <net name="zsys_i/ADC/ROController_0/o_ascii[0]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[11]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[10]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[9]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[8]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[7]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[6]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[5]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[4]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[3]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[2]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[1]"/>
+        <net name="zsys_i/ADC/mapper_0_o_out_7[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="23E7D65A79BC59F7BC47406C1714DFAE"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="100000000"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="3"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="zsys_i/ADC_MISO"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="23E7D65A79BC59F7BC47406C1714DFAE"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="100000000"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="4"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="zsys_i/ADC/ADC_MISO"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="23E7D65A79BC59F7BC47406C1714DFAE"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="100000000"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="5"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="zsys_i/ADC_MOSI"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="23E7D65A79BC59F7BC47406C1714DFAE"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="100000000"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="6"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="zsys_i/ADC_SCLK"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="CORE_UUID" value="23E7D65A79BC59F7BC47406C1714DFAE"/>
+        <Option Id="HUB_CLK_INPUT_FREQ_HZ" value="100000000"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="7"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="zsys_i/trigger_logic_0_o_out_trigger"/>
       </nets>
     </probe>
   </probeset>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1732739963">
+<GenRun Id="synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1733927011">
   <File Type="VDS-TIMING-PB" Name="zsys_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="zsys_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="zsys_wrapper.dcp"/>
@@ -93,6 +93,42 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/AdcReceiver.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Bcd35FullRange.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PhaseControlFullRange.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Receiver.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RxTiming.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Lvds_Rx_top.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/zsys/zsys.bd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../TE0715-test_board/test_board/vivado/test_board.srcs/sources_1/bd/zsys/zsys.bd"/>
@@ -104,34 +140,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/zsys/hdl/zsys_wrapper.vhd">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/AdcReceiver.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/Receiver.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/RxTiming.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/Lvds_Rx_top.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -277,6 +285,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_AXI_ADC_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_Lvds_Rx_top_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_fit_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_rst_ps7_0_100M_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlslice_3to3_2"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_DRS_A_test_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlslice_3to3_1"/>
@@ -302,9 +316,11 @@
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlslice_10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_Vibufds_diff_out_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_M1to5_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_fifo_generator_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlslice_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlslice_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_xlconstant_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zsys_util_vector_logic_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_c_counter_binary_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_trigger_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_Elink_output_0_0"/>

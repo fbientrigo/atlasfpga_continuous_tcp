@@ -10,42 +10,59 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1024001fs"></ZoomEndTime>
-      <Cursor1Time time="228000fs"></Cursor1Time>
+      <ZoomEndTime time="32768001fs"></ZoomEndTime>
+      <Cursor1Time time="12473000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="337"></NameColumnWidth>
-      <ValueColumnWidth column_width="95"></ValueColumnWidth>
+      <NameColumnWidth column_width="267"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="3" />
+   <WVObjectSize size="6" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="array" fp_name="zsys_i/ADC/mapper_0_o_out_7">
+   <wvobject type="logic" fp_name="zsys_i/ADC_MOSI">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">zsys_i/ADC/mapper_0_o_out_7[0:11]</obj_property>
-      <obj_property name="ObjectShortName">mapper_0_o_out_7[0:11]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">zsys_i/ADC_MOSI</obj_property>
+      <obj_property name="ObjectShortName">ADC_MOSI</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="Reversed">true</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="zsys_i/ADC_SCLK">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">zsys_i/ADC_SCLK</obj_property>
+      <obj_property name="ObjectShortName">ADC_SCLK</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="zsys_i/trigger_logic_0_o_out_trigger">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">zsys_i/trigger_logic_0_o_out_trigger</obj_property>
+      <obj_property name="ObjectShortName">trigger_logic_0_o_out_trigger</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="zsys_i/ADC/mapper_0_o_out_0">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">zsys_i/ADC/mapper_0_o_out_0[11:0]</obj_property>
+      <obj_property name="ObjectShortName">mapper_0_o_out_0[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="zsys_i/ADC/mapper_0_o_out_3">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">zsys_i/ADC/mapper_0_o_out_3[0:11]</obj_property>
-      <obj_property name="ObjectShortName">mapper_0_o_out_3[0:11]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="Reversed">true</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="zsys_i/ADC/ROController_0/o_ascii">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">zsys_i/ADC/ROController_0/o_ascii[6:0]</obj_property>
-      <obj_property name="ObjectShortName">o_ascii[6:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">zsys_i/ADC/mapper_0_o_out_3[11:0]</obj_property>
+      <obj_property name="ObjectShortName">mapper_0_o_out_3[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="zsys_i/ADC/mapper_0_o_out_7">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">zsys_i/ADC/mapper_0_o_out_7[11:0]</obj_property>
+      <obj_property name="ObjectShortName">mapper_0_o_out_7[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
    </wvobject>
 </wave_config>

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# DRS_A_test, Elink_output, M1to5, M1to5, M1to5, Signal_sel, Vibufds_diff_out, delay_module, delay_module, enable_signal, reset_init, trigger_logic, ADC_readout_buff, ROController, mapper
+# DRS_A_test, Elink_output, Lvds_Rx_top, M1to5, M1to5, M1to5, Signal_sel, Vibufds_diff_out, delay_module, delay_module, enable_signal, reset_init, trigger_logic, ADC_readout_buff, ROController, mapper
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -301,8 +301,8 @@ proc create_hier_cell_ADC { parentCell nameHier } {
      return 1
    }
   
-  # Create instance: AXI_ADC_0, and set properties
-  set AXI_ADC_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:AXI_ADC:3.0 AXI_ADC_0 ]
+  # Create instance: AXI_ADC_1, and set properties
+  set AXI_ADC_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:AXI_ADC:3.0 AXI_ADC_1 ]
 
   # Create instance: ROController_0, and set properties
   set block_name ROController
@@ -345,6 +345,14 @@ proc create_hier_cell_ADC { parentCell nameHier } {
      return 1
    }
   
+  # Create instance: util_vector_logic_0, and set properties
+  set util_vector_logic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0 ]
+  set_property -dict [ list \
+   CONFIG.C_OPERATION {or} \
+   CONFIG.C_SIZE {12} \
+   CONFIG.LOGO_FILE {data/sym_orgate.png} \
+ ] $util_vector_logic_0
+
   # Create instance: xlconstant_1, and set properties
   set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
   set_property -dict [ list \
@@ -369,39 +377,39 @@ proc create_hier_cell_ADC { parentCell nameHier } {
   # Create interface connections
   connect_bd_intf_net -intf_net ROController_0_i_rd_fifo [get_bd_intf_pins ROController_0/i_rd_fifo] [get_bd_intf_pins fifo_generator_0/FIFO_READ]
   connect_bd_intf_net -intf_net ROController_0_o_wr_fifo [get_bd_intf_pins ROController_0/o_wr_fifo] [get_bd_intf_pins fifo_generator_0/FIFO_WRITE]
-  connect_bd_intf_net -intf_net S00_AXI1_1 [get_bd_intf_pins S00_AXI1] [get_bd_intf_pins AXI_ADC_0/S00_AXI]
+  connect_bd_intf_net -intf_net S00_AXI1_1 [get_bd_intf_pins S00_AXI1] [get_bd_intf_pins AXI_ADC_1/S00_AXI]
 
   # Create port connections
-  connect_bd_net -net ADC_MISO_1 [get_bd_pins ADC_MISO] [get_bd_pins AXI_ADC_0/i_MISO]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch0_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch0_n] [get_bd_pins AXI_ADC_0/i_data_in_ch0_n]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch0_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch0_p] [get_bd_pins AXI_ADC_0/i_data_in_ch0_p]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch1_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch1_n] [get_bd_pins AXI_ADC_0/i_data_in_ch1_n]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch1_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch1_p] [get_bd_pins AXI_ADC_0/i_data_in_ch1_p]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch2_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch2_n] [get_bd_pins AXI_ADC_0/i_data_in_ch2_n]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch2_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch2_p] [get_bd_pins AXI_ADC_0/i_data_in_ch2_p]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch3_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch3_n] [get_bd_pins AXI_ADC_0/i_data_in_ch3_n]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch3_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch3_p] [get_bd_pins AXI_ADC_0/i_data_in_ch3_p]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch4_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch4_n] [get_bd_pins AXI_ADC_0/i_data_in_ch4_n]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch4_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch4_p] [get_bd_pins AXI_ADC_0/i_data_in_ch4_p]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch5_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch5_n] [get_bd_pins AXI_ADC_0/i_data_in_ch5_n]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch5_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch5_p] [get_bd_pins AXI_ADC_0/i_data_in_ch5_p]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch6_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch6_n] [get_bd_pins AXI_ADC_0/i_data_in_ch6_n]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch6_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch6_p] [get_bd_pins AXI_ADC_0/i_data_in_ch6_p]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch7_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch7_n] [get_bd_pins AXI_ADC_0/i_data_in_ch7_n]
-  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch7_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch7_p] [get_bd_pins AXI_ADC_0/i_data_in_ch7_p]
-  connect_bd_net -net ADC_readout_buff_0_o_Lclk [get_bd_pins o_Lclk] [get_bd_pins ADC_readout_buff_0/o_Lclk] [get_bd_pins AXI_ADC_0/i_Lclk]
-  connect_bd_net -net AXI_ADC_0_o_MOSI [get_bd_pins ADC_MOSI] [get_bd_pins AXI_ADC_0/o_MOSI]
-  connect_bd_net -net AXI_ADC_0_o_SCLK [get_bd_pins ADC_SCLK] [get_bd_pins AXI_ADC_0/o_SCLK]
-  connect_bd_net -net AXI_ADC_0_o_data_clk [get_bd_pins o_data_clk] [get_bd_pins ADC_readout_buff_0/o_ADclk] [get_bd_pins AXI_ADC_0/i_ADclk] [get_bd_pins ROController_0/i_data_clk]
-  connect_bd_net -net AXI_ADC_0_o_data_out_ch0 [get_bd_pins AXI_ADC_0/o_data_out_ch0] [get_bd_pins mapper_0/i_in_0]
-  connect_bd_net -net AXI_ADC_0_o_data_out_ch1 [get_bd_pins AXI_ADC_0/o_data_out_ch1] [get_bd_pins mapper_0/i_in_1]
-  connect_bd_net -net AXI_ADC_0_o_data_out_ch2 [get_bd_pins AXI_ADC_0/o_data_out_ch2] [get_bd_pins mapper_0/i_in_2]
-  connect_bd_net -net AXI_ADC_0_o_data_out_ch3 [get_bd_pins AXI_ADC_0/o_data_out_ch3] [get_bd_pins mapper_0/i_in_3]
-  connect_bd_net -net AXI_ADC_0_o_data_out_ch4 [get_bd_pins AXI_ADC_0/o_data_out_ch4] [get_bd_pins mapper_0/i_in_4]
-  connect_bd_net -net AXI_ADC_0_o_data_out_ch5 [get_bd_pins AXI_ADC_0/o_data_out_ch5] [get_bd_pins mapper_0/i_in_5]
-  connect_bd_net -net AXI_ADC_0_o_data_out_ch6 [get_bd_pins AXI_ADC_0/o_data_out_ch6] [get_bd_pins mapper_0/i_in_6]
-  connect_bd_net -net AXI_ADC_0_o_data_out_ch7 [get_bd_pins AXI_ADC_0/o_data_out_ch7] [get_bd_pins mapper_0/i_in_7]
-  connect_bd_net -net AXI_ADC_0_o_debug [get_bd_pins AXI_ADC_0/o_debug]
+  connect_bd_net -net ADC_MISO_1 [get_bd_pins ADC_MISO] [get_bd_pins AXI_ADC_1/i_MISO]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch0_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch0_n] [get_bd_pins AXI_ADC_1/i_data_in_ch0_n]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch0_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch0_p] [get_bd_pins AXI_ADC_1/i_data_in_ch0_p]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch1_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch1_n] [get_bd_pins AXI_ADC_1/i_data_in_ch1_n]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch1_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch1_p] [get_bd_pins AXI_ADC_1/i_data_in_ch1_p]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch2_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch2_n] [get_bd_pins AXI_ADC_1/i_data_in_ch2_n]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch2_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch2_p] [get_bd_pins AXI_ADC_1/i_data_in_ch2_p]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch3_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch3_n] [get_bd_pins AXI_ADC_1/i_data_in_ch3_n]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch3_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch3_p] [get_bd_pins AXI_ADC_1/i_data_in_ch3_p]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch4_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch4_n] [get_bd_pins AXI_ADC_1/i_data_in_ch4_n]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch4_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch4_p] [get_bd_pins AXI_ADC_1/i_data_in_ch4_p]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch5_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch5_n] [get_bd_pins AXI_ADC_1/i_data_in_ch5_n]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch5_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch5_p] [get_bd_pins AXI_ADC_1/i_data_in_ch5_p]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch6_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch6_n] [get_bd_pins AXI_ADC_1/i_data_in_ch6_n]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch6_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch6_p] [get_bd_pins AXI_ADC_1/i_data_in_ch6_p]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch7_n [get_bd_pins ADC_readout_buff_0/o_ADC_ch7_n] [get_bd_pins AXI_ADC_1/i_data_in_ch7_n]
+  connect_bd_net -net ADC_readout_buff_0_o_ADC_ch7_p [get_bd_pins ADC_readout_buff_0/o_ADC_ch7_p] [get_bd_pins AXI_ADC_1/i_data_in_ch7_p]
+  connect_bd_net -net ADC_readout_buff_0_o_Lclk [get_bd_pins o_Lclk] [get_bd_pins ADC_readout_buff_0/o_Lclk] [get_bd_pins AXI_ADC_1/i_Lclk]
+  connect_bd_net -net AXI_ADC_0_o_data_clk [get_bd_pins o_data_clk] [get_bd_pins ADC_readout_buff_0/o_ADclk] [get_bd_pins AXI_ADC_1/i_ADclk] [get_bd_pins ROController_0/i_data_clk]
+  connect_bd_net -net AXI_ADC_1_o_MOSI [get_bd_pins ADC_MOSI] [get_bd_pins AXI_ADC_1/o_MOSI]
+  connect_bd_net -net AXI_ADC_1_o_SCLK [get_bd_pins ADC_SCLK] [get_bd_pins AXI_ADC_1/o_SCLK]
+  connect_bd_net -net AXI_ADC_1_o_data_out_ch0 [get_bd_pins AXI_ADC_1/o_data_out_ch0] [get_bd_pins mapper_0/i_in_0]
+  connect_bd_net -net AXI_ADC_1_o_data_out_ch1 [get_bd_pins AXI_ADC_1/o_data_out_ch1] [get_bd_pins mapper_0/i_in_1]
+  connect_bd_net -net AXI_ADC_1_o_data_out_ch2 [get_bd_pins AXI_ADC_1/o_data_out_ch2] [get_bd_pins mapper_0/i_in_2]
+  connect_bd_net -net AXI_ADC_1_o_data_out_ch3 [get_bd_pins AXI_ADC_1/o_data_out_ch3] [get_bd_pins mapper_0/i_in_3]
+  connect_bd_net -net AXI_ADC_1_o_data_out_ch4 [get_bd_pins AXI_ADC_1/o_data_out_ch4] [get_bd_pins mapper_0/i_in_4]
+  connect_bd_net -net AXI_ADC_1_o_data_out_ch5 [get_bd_pins AXI_ADC_1/o_data_out_ch5] [get_bd_pins mapper_0/i_in_5]
+  connect_bd_net -net AXI_ADC_1_o_data_out_ch6 [get_bd_pins AXI_ADC_1/o_data_out_ch6] [get_bd_pins mapper_0/i_in_6]
+  connect_bd_net -net AXI_ADC_1_o_data_out_ch7 [get_bd_pins AXI_ADC_1/o_data_out_ch7] [get_bd_pins mapper_0/i_in_7]
+  connect_bd_net -net AXI_ADC_1_o_debug [get_bd_pins AXI_ADC_1/o_debug] [get_bd_pins util_vector_logic_0/Op2]
   connect_bd_net -net MUXOUT_N_1 [get_bd_pins MUXOUT_N] [get_bd_pins ADC_readout_buff_0/i_ADC_ch_n]
   connect_bd_net -net MUXOUT_P_1 [get_bd_pins MUXOUT_P] [get_bd_pins ADC_readout_buff_0/i_ADC_ch_p]
   connect_bd_net -net ROController_0_o_ascii [get_bd_pins o_ascii] [get_bd_pins ROController_0/o_ascii]
@@ -421,7 +429,7 @@ proc create_hier_cell_ADC { parentCell nameHier } {
   connect_bd_net -net i_stop_cell_1 [get_bd_pins i_stop_cell] [get_bd_pins ROController_0/i_stop_cell]
   connect_bd_net -net i_stop_cell_ready_1 [get_bd_pins i_stop_cell_ready] [get_bd_pins ROController_0/i_stop_cell_ready]
   connect_bd_net -net i_veto_1 [get_bd_pins i_veto] [get_bd_pins ROController_0/i_veto]
-  connect_bd_net -net mapper_0_o_out_0 [get_bd_pins ROController_0/i_data_ch0] [get_bd_pins mapper_0/o_out_0]
+  connect_bd_net -net mapper_0_o_out_0 [get_bd_pins ROController_0/i_data_ch0] [get_bd_pins mapper_0/o_out_0] [get_bd_pins util_vector_logic_0/Op1]
   connect_bd_net -net mapper_0_o_out_1 [get_bd_pins ROController_0/i_data_ch1] [get_bd_pins mapper_0/o_out_1]
   connect_bd_net -net mapper_0_o_out_2 [get_bd_pins ROController_0/i_data_ch2] [get_bd_pins mapper_0/o_out_2]
   connect_bd_net -net mapper_0_o_out_3 [get_bd_pins ROController_0/i_data_ch3] [get_bd_pins mapper_0/o_out_3]
@@ -432,8 +440,8 @@ proc create_hier_cell_ADC { parentCell nameHier } {
   connect_bd_net -net o_read_proc_st_debug_states [get_bd_pins ROController_0/o_read_proc_st_debug_states]
   connect_bd_net -net o_ro_proc_st_debug_states [get_bd_pins ROController_0/o_ro_proc_st_debug_states]
   connect_bd_net -net o_send_data_control_debug_states [get_bd_pins ROController_0/o_send_data_control_debug_states]
-  connect_bd_net -net s00_axi_aresetn_1 [get_bd_pins s00_axi_aresetn] [get_bd_pins AXI_ADC_0/s00_axi_aresetn]
-  connect_bd_net -net s00_axi_ctrl_aclk_1 [get_bd_pins rd_clk] [get_bd_pins AXI_ADC_0/s00_axi_aclk] [get_bd_pins ROController_0/sys_clk] [get_bd_pins fifo_generator_0/rd_clk]
+  connect_bd_net -net s00_axi_aresetn_1 [get_bd_pins s00_axi_aresetn] [get_bd_pins AXI_ADC_1/s00_axi_aresetn]
+  connect_bd_net -net s00_axi_ctrl_aclk_1 [get_bd_pins rd_clk] [get_bd_pins AXI_ADC_1/s00_axi_aclk] [get_bd_pins ROController_0/sys_clk] [get_bd_pins fifo_generator_0/rd_clk]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins ROController_0/i_pre_trig_wind] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_2_dout [get_bd_pins ROController_0/i_post_trig_wind] [get_bd_pins xlconstant_2/dout]
   connect_bd_net -net xlconstant_3_dout [get_bd_pins ROController_0/i_trigger] [get_bd_pins xlconstant_3/dout]
@@ -560,6 +568,17 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $Elink_output_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: Lvds_Rx_top_0, and set properties
+  set block_name Lvds_Rx_top
+  set block_cell_name Lvds_Rx_top_0
+  if { [catch {set Lvds_Rx_top_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $Lvds_Rx_top_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -1601,6 +1620,12 @@ proc create_root_design { parentCell } {
    CONFIG.LOGO_FILE {data/sym_orgate.png} \
  ] $util_vector_logic_1
 
+  # Create instance: util_vector_logic_2, and set properties
+  set util_vector_logic_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_2 ]
+  set_property -dict [ list \
+   CONFIG.C_SIZE {12} \
+ ] $util_vector_logic_2
+
   # Create instance: xlconcat_0, and set properties
   set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
 
@@ -1799,15 +1824,17 @@ proc create_root_design { parentCell } {
   connect_bd_net -net DRS_SROUT_1 [get_bd_ports DRS_SROUT] [get_bd_pins Signal_sel_0/D]
   connect_bd_net -net LCLK_MUX_N_1 [get_bd_ports LCLK_MUX_N] [get_bd_pins util_ds_buf_LCLK/IBUF_DS_N]
   connect_bd_net -net LCLK_MUX_P_1 [get_bd_ports LCLK_MUX_P] [get_bd_pins util_ds_buf_LCLK/IBUF_DS_P]
+  connect_bd_net -net Lvds_Rx_top_0_ChOut_0 [get_bd_pins Lvds_Rx_top_0/ChOut_0] [get_bd_pins util_vector_logic_2/Op1]
+  connect_bd_net -net Lvds_Rx_top_0_ChOut_1 [get_bd_pins Lvds_Rx_top_0/ChOut_1] [get_bd_pins util_vector_logic_2/Op2]
   connect_bd_net -net M1to5_0_out5 [get_bd_ports DRS_SRCLK] [get_bd_pins M1to5_0/out5]
   connect_bd_net -net M1to5_1_out5 [get_bd_ports DRS_DWRITE] [get_bd_pins M1to5_1/out5]
   connect_bd_net -net M1to5_2_out5 [get_bd_ports DRS_RSLOAD] [get_bd_pins M1to5_2/out5]
   connect_bd_net -net MUXOUT_N_1 [get_bd_ports MUXOUT_N] [get_bd_pins Vibufds_diff_out_0/MUXOUT_N]
-  connect_bd_net -net MUXOUT_N_2 [get_bd_pins ADC/MUXOUT_N] [get_bd_pins Vibufds_diff_out_0/o_MUXOUT_N]
   connect_bd_net -net MUXOUT_P_1 [get_bd_ports MUXOUT_P] [get_bd_pins Vibufds_diff_out_0/MUXOUT_P]
   connect_bd_net -net Net -boundary_type upper [get_bd_pins ADC/o_Lclk]
   connect_bd_net -net ROController_0_o_wr_fifo_en [get_bd_pins ADC/o_wr_fifo_en] [get_bd_pins c_counter_binary_0/CLK]
   connect_bd_net -net Signal_sel_0_O [get_bd_pins DRS4_firmware_1/i_SROUT] [get_bd_pins Signal_sel_0/O]
+  connect_bd_net -net Vibufds_diff_out_0_o_MUXOUT_N [get_bd_pins ADC/MUXOUT_N] [get_bd_pins Vibufds_diff_out_0/o_MUXOUT_N]
   connect_bd_net -net Vibufds_diff_out_0_o_MUXOUT_P [get_bd_pins ADC/MUXOUT_P] [get_bd_pins Vibufds_diff_out_0/o_MUXOUT_P]
   connect_bd_net -net axi_dma_0_mm2s_introut [get_bd_pins axi_dma_0/mm2s_introut] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net axi_dma_0_s2mm_introut [get_bd_pins axi_dma_0/s2mm_introut] [get_bd_pins xlconcat_0/In1]
@@ -1829,7 +1856,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins reset_50M_0/ext_reset_in] [get_bd_pins rst_FIFO_100M/ext_reset_in] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net reset_50M_0_peripheral_aresetn [get_bd_pins DRS4_firmware_1/s00_axi_aresetn] [get_bd_pins DRS_A_test_0/i_nrst] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins reset_50M_0/peripheral_aresetn]
   connect_bd_net -net rst_FIFO_100M_peripheral_aresetn [get_bd_pins ADC/s00_axi_aresetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins clk_mon_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M06_ARESETN] [get_bd_pins rst_FIFO_100M/peripheral_aresetn]
-  connect_bd_net -net rst_FIFO_100M_peripheral_reset [get_bd_pins ADC/i_rst] [get_bd_pins rst_FIFO_100M/peripheral_reset] [get_bd_pins trigger_logic_0/areset]
+  connect_bd_net -net rst_FIFO_100M_peripheral_reset [get_bd_pins ADC/i_rst] [get_bd_pins Lvds_Rx_top_0/SysRst] [get_bd_pins rst_FIFO_100M/peripheral_reset] [get_bd_pins trigger_logic_0/areset]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins CPLD_ctrl_0/s00_axi_aresetn] [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins dac_i2c_0/s00_axi_aresetn] [get_bd_pins fifo8b_2_axis_0/m00_axis_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/M07_ARESETN] [get_bd_pins ps7_0_axi_periph/M08_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
   connect_bd_net -net trigger_logic_0_o_out_trigger [get_bd_pins DRS4_firmware_1/i_drs4_trigger] [get_bd_pins trigger_logic_0/o_out_trigger]
@@ -1846,8 +1873,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net util_ds_buf_4_OBUF_DS_P [get_bd_ports ADC_refclk_2_P] [get_bd_pins ADC_refclk_OBUFDS/ADC_refclk_2_P]
   connect_bd_net -net util_ds_buf_5_OBUF_DS_N [get_bd_ports CSR_SCLK_N] [get_bd_pins util_ds_buf_5/OBUF_DS_N]
   connect_bd_net -net util_ds_buf_5_OBUF_DS_P [get_bd_ports CSR_SCLK_P] [get_bd_pins util_ds_buf_5/OBUF_DS_P]
-  connect_bd_net -net util_ds_buf_ADCLK1_IBUF_OUT [get_bd_pins ADC/i_Lclk] [get_bd_pins util_ds_buf_LCLK/IBUF_OUT]
-  connect_bd_net -net util_ds_buf_ADCLK_IBUF_OUT [get_bd_pins ADC/i_ADclk] [get_bd_pins util_ds_buf_ADCLK/IBUF_OUT]
+  connect_bd_net -net util_ds_buf_ADCLK1_IBUF_OUT [get_bd_pins ADC/i_Lclk] [get_bd_pins Lvds_Rx_top_0/Lclk] [get_bd_pins util_ds_buf_LCLK/IBUF_OUT]
+  connect_bd_net -net util_ds_buf_ADCLK_IBUF_OUT [get_bd_pins ADC/i_ADclk] [get_bd_pins Lvds_Rx_top_0/AdClk] [get_bd_pins util_ds_buf_ADCLK/IBUF_OUT]
   connect_bd_net -net util_vector_logic_0_Res [get_bd_pins trigger_logic_0/i_en_soft_trigger] [get_bd_pins util_vector_logic_0/Res]
   connect_bd_net -net util_vector_logic_1_Res [get_bd_pins trigger_logic_0/i_busy] [get_bd_pins util_vector_logic_1/Res]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/IRQ_F2P] [get_bd_pins xlconcat_0/dout]
@@ -1871,7 +1898,7 @@ proc create_root_design { parentCell } {
   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces axi_dma_0/Data_SG] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM
   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces axi_dma_0/Data_MM2S] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM
   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces axi_dma_0/Data_S2MM] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM
-  create_bd_addr_seg -range 0x00010000 -offset 0x43C10000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs ADC/AXI_ADC_0/S00_AXI/S00_AXI_reg] SEG_AXI_ADC_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C10000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs ADC/AXI_ADC_1/S00_AXI/S00_AXI_reg] SEG_AXI_ADC_1_S00_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C30000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs CPLD_ctrl_0/S00_AXI/S00_AXI_reg] SEG_CPLD_ctrl_0_S00_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C20000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs DRS4_firmware_1/s00_axi/reg0] SEG_DRS4_firmware_1_reg0
   create_bd_addr_seg -range 0x00010000 -offset 0x40400000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_dma_0/S_AXI_LITE/Reg] SEG_axi_dma_0_Reg

@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Thu Aug  3 12:22:39 2023
+-- Date        : Mon Jun 26 16:48:02 2023
 -- Host        : LAPTOP-VLHMPBL0 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top zsys_fit_timer_0_0 -prefix
 --               zsys_fit_timer_0_0_ zsys_fit_timer_0_0_sim_netlist.vhdl
@@ -18,6 +18,7 @@ entity zsys_fit_timer_0_0_Divide_part is
   port (
     loop_Bit : out STD_LOGIC;
     Rst_d1 : out STD_LOGIC;
+    CE : out STD_LOGIC;
     \not_First.Out1_reg\ : out STD_LOGIC;
     \not_First.Out1_reg_0\ : out STD_LOGIC;
     \not_First.Out1_reg_1\ : out STD_LOGIC;
@@ -28,7 +29,6 @@ entity zsys_fit_timer_0_0_Divide_part is
     \not_First.Out1_reg_6\ : out STD_LOGIC;
     \not_First.Out1_reg_7\ : out STD_LOGIC;
     \not_First.Out1_reg_8\ : out STD_LOGIC;
-    CE : out STD_LOGIC;
     Clk : in STD_LOGIC;
     Rst : in STD_LOGIC;
     loop_Bit_0 : in STD_LOGIC;
@@ -51,9 +51,9 @@ architecture STRUCTURE of zsys_fit_timer_0_0_Divide_part is
   attribute box_type : string;
   attribute box_type of \One_SRL16.SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s ";
+  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s ";
   attribute srl_name : string;
-  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s[1].Divide_I/One_SRL16.SRL16E_I ";
+  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s[1].Divide_I/One_SRL16.SRL16E_I ";
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \One_SRL16.SRL16E_I_i_1__9\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \One_SRL16.SRL16E_I_i_2\ : label is "soft_lutpair0";
@@ -243,9 +243,9 @@ architecture STRUCTURE of \zsys_fit_timer_0_0_Divide_part__parameterized0\ is
   attribute box_type : string;
   attribute box_type of \One_SRL16.SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s ";
+  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s ";
   attribute srl_name : string;
-  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s[2].Divide_I/One_SRL16.SRL16E_I ";
+  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s[2].Divide_I/One_SRL16.SRL16E_I ";
 begin
   Clk_En_I_9 <= \^clk_en_i_9\;
   loop_Bit <= \^loop_bit\;
@@ -333,9 +333,9 @@ architecture STRUCTURE of \zsys_fit_timer_0_0_Divide_part__parameterized1\ is
   attribute box_type : string;
   attribute box_type of \One_SRL16.SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s ";
+  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s ";
   attribute srl_name : string;
-  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s[3].Divide_I/One_SRL16.SRL16E_I ";
+  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s[3].Divide_I/One_SRL16.SRL16E_I ";
 begin
   Clk_En_I_8 <= \^clk_en_i_8\;
   loop_Bit <= \^loop_bit\;
@@ -422,9 +422,9 @@ architecture STRUCTURE of \zsys_fit_timer_0_0_Divide_part__parameterized2\ is
   attribute box_type : string;
   attribute box_type of \One_SRL16.SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s ";
+  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s ";
   attribute srl_name : string;
-  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s[10].Divide_I/One_SRL16.SRL16E_I ";
+  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s[10].Divide_I/One_SRL16.SRL16E_I ";
 begin
   Clk_En_I_1 <= \^clk_en_i_1\;
   loop_Bit <= \^loop_bit\;
@@ -509,9 +509,9 @@ architecture STRUCTURE of \zsys_fit_timer_0_0_Divide_part__parameterized2_0\ is
   attribute box_type : string;
   attribute box_type of \One_SRL16.SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s ";
+  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s ";
   attribute srl_name : string;
-  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s[11].Divide_I/One_SRL16.SRL16E_I ";
+  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s[11].Divide_I/One_SRL16.SRL16E_I ";
 begin
   Interrupt <= \^interrupt\;
   loop_Bit <= \^loop_bit\;
@@ -588,9 +588,9 @@ architecture STRUCTURE of \zsys_fit_timer_0_0_Divide_part__parameterized2_1\ is
   attribute box_type : string;
   attribute box_type of \One_SRL16.SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s ";
+  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s ";
   attribute srl_name : string;
-  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s[4].Divide_I/One_SRL16.SRL16E_I ";
+  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s[4].Divide_I/One_SRL16.SRL16E_I ";
 begin
   Clk_En_I_7 <= \^clk_en_i_7\;
   loop_Bit <= \^loop_bit\;
@@ -677,9 +677,9 @@ architecture STRUCTURE of \zsys_fit_timer_0_0_Divide_part__parameterized2_2\ is
   attribute box_type : string;
   attribute box_type of \One_SRL16.SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s ";
+  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s ";
   attribute srl_name : string;
-  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s[5].Divide_I/One_SRL16.SRL16E_I ";
+  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s[5].Divide_I/One_SRL16.SRL16E_I ";
 begin
   Clk_En_I_6 <= \^clk_en_i_6\;
   loop_Bit <= \^loop_bit\;
@@ -766,9 +766,9 @@ architecture STRUCTURE of \zsys_fit_timer_0_0_Divide_part__parameterized2_3\ is
   attribute box_type : string;
   attribute box_type of \One_SRL16.SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s ";
+  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s ";
   attribute srl_name : string;
-  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s[6].Divide_I/One_SRL16.SRL16E_I ";
+  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s[6].Divide_I/One_SRL16.SRL16E_I ";
 begin
   Clk_En_I_5 <= \^clk_en_i_5\;
   loop_Bit <= \^loop_bit\;
@@ -855,9 +855,9 @@ architecture STRUCTURE of \zsys_fit_timer_0_0_Divide_part__parameterized2_4\ is
   attribute box_type : string;
   attribute box_type of \One_SRL16.SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s ";
+  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s ";
   attribute srl_name : string;
-  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s[7].Divide_I/One_SRL16.SRL16E_I ";
+  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s[7].Divide_I/One_SRL16.SRL16E_I ";
 begin
   Clk_En_I_4 <= \^clk_en_i_4\;
   loop_Bit <= \^loop_bit\;
@@ -944,9 +944,9 @@ architecture STRUCTURE of \zsys_fit_timer_0_0_Divide_part__parameterized2_5\ is
   attribute box_type : string;
   attribute box_type of \One_SRL16.SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s ";
+  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s ";
   attribute srl_name : string;
-  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s[8].Divide_I/One_SRL16.SRL16E_I ";
+  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s[8].Divide_I/One_SRL16.SRL16E_I ";
 begin
   Clk_En_I_3 <= \^clk_en_i_3\;
   loop_Bit <= \^loop_bit\;
@@ -1033,9 +1033,9 @@ architecture STRUCTURE of \zsys_fit_timer_0_0_Divide_part__parameterized2_6\ is
   attribute box_type : string;
   attribute box_type of \One_SRL16.SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s ";
+  attribute srl_bus_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s ";
   attribute srl_name : string;
-  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "\U0/Using_SRL16s.SRL16s[9].Divide_I/One_SRL16.SRL16E_I ";
+  attribute srl_name of \One_SRL16.SRL16E_I\ : label is "U0/\Using_SRL16s.SRL16s[9].Divide_I/One_SRL16.SRL16E_I ";
 begin
   Clk_En_I_2 <= \^clk_en_i_2\;
   loop_Bit <= \^loop_bit\;
@@ -1100,10 +1100,18 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity zsys_fit_timer_0_0_FIT_timer is
   port (
-    Interrupt : out STD_LOGIC;
+    Clk : in STD_LOGIC;
     Rst : in STD_LOGIC;
-    Clk : in STD_LOGIC
+    Interrupt : out STD_LOGIC
   );
+  attribute C_EXT_RESET_HIGH : integer;
+  attribute C_EXT_RESET_HIGH of zsys_fit_timer_0_0_FIT_timer : entity is 1;
+  attribute C_FAMILY : string;
+  attribute C_FAMILY of zsys_fit_timer_0_0_FIT_timer : entity is "zynq";
+  attribute C_INACCURACY : integer;
+  attribute C_INACCURACY of zsys_fit_timer_0_0_FIT_timer : entity is 0;
+  attribute C_NO_CLOCKS : integer;
+  attribute C_NO_CLOCKS of zsys_fit_timer_0_0_FIT_timer : entity is 700000000;
 end zsys_fit_timer_0_0_FIT_timer;
 
 architecture STRUCTURE of zsys_fit_timer_0_0_FIT_timer is
@@ -1129,7 +1137,7 @@ architecture STRUCTURE of zsys_fit_timer_0_0_FIT_timer is
   signal Rst_d1 : STD_LOGIC;
   signal \Using_SRL16s.SRL16s[1].Divide_I_n_10\ : STD_LOGIC;
   signal \Using_SRL16s.SRL16s[1].Divide_I_n_11\ : STD_LOGIC;
-  signal \Using_SRL16s.SRL16s[1].Divide_I_n_2\ : STD_LOGIC;
+  signal \Using_SRL16s.SRL16s[1].Divide_I_n_12\ : STD_LOGIC;
   signal \Using_SRL16s.SRL16s[1].Divide_I_n_3\ : STD_LOGIC;
   signal \Using_SRL16s.SRL16s[1].Divide_I_n_4\ : STD_LOGIC;
   signal \Using_SRL16s.SRL16s[1].Divide_I_n_5\ : STD_LOGIC;
@@ -1158,7 +1166,7 @@ begin
       Clk_En_I_2 => Clk_En_I_2,
       Rst => Rst,
       Rst_d1 => Rst_d1,
-      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_10\,
+      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_11\,
       loop_Bit => loop_Bit
     );
 \Using_SRL16s.SRL16s[11].Divide_I\: entity work.\zsys_fit_timer_0_0_Divide_part__parameterized2_0\
@@ -1168,7 +1176,7 @@ begin
       Clk_En_I_1 => Clk_En_I_1,
       Interrupt => Interrupt,
       Rst => Rst,
-      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_11\,
+      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_12\,
       loop_Bit => loop_Bit_0
     );
 \Using_SRL16s.SRL16s[1].Divide_I\: entity work.zsys_fit_timer_0_0_Divide_part
@@ -1188,16 +1196,16 @@ begin
       loop_Bit_7 => loop_Bit_18,
       loop_Bit_8 => loop_Bit,
       loop_Bit_9 => loop_Bit_0,
-      \not_First.Out1_reg\ => \Using_SRL16s.SRL16s[1].Divide_I_n_2\,
-      \not_First.Out1_reg_0\ => \Using_SRL16s.SRL16s[1].Divide_I_n_3\,
-      \not_First.Out1_reg_1\ => \Using_SRL16s.SRL16s[1].Divide_I_n_4\,
-      \not_First.Out1_reg_2\ => \Using_SRL16s.SRL16s[1].Divide_I_n_5\,
-      \not_First.Out1_reg_3\ => \Using_SRL16s.SRL16s[1].Divide_I_n_6\,
-      \not_First.Out1_reg_4\ => \Using_SRL16s.SRL16s[1].Divide_I_n_7\,
-      \not_First.Out1_reg_5\ => \Using_SRL16s.SRL16s[1].Divide_I_n_8\,
-      \not_First.Out1_reg_6\ => \Using_SRL16s.SRL16s[1].Divide_I_n_9\,
-      \not_First.Out1_reg_7\ => \Using_SRL16s.SRL16s[1].Divide_I_n_10\,
-      \not_First.Out1_reg_8\ => \Using_SRL16s.SRL16s[1].Divide_I_n_11\
+      \not_First.Out1_reg\ => \Using_SRL16s.SRL16s[1].Divide_I_n_3\,
+      \not_First.Out1_reg_0\ => \Using_SRL16s.SRL16s[1].Divide_I_n_4\,
+      \not_First.Out1_reg_1\ => \Using_SRL16s.SRL16s[1].Divide_I_n_5\,
+      \not_First.Out1_reg_2\ => \Using_SRL16s.SRL16s[1].Divide_I_n_6\,
+      \not_First.Out1_reg_3\ => \Using_SRL16s.SRL16s[1].Divide_I_n_7\,
+      \not_First.Out1_reg_4\ => \Using_SRL16s.SRL16s[1].Divide_I_n_8\,
+      \not_First.Out1_reg_5\ => \Using_SRL16s.SRL16s[1].Divide_I_n_9\,
+      \not_First.Out1_reg_6\ => \Using_SRL16s.SRL16s[1].Divide_I_n_10\,
+      \not_First.Out1_reg_7\ => \Using_SRL16s.SRL16s[1].Divide_I_n_11\,
+      \not_First.Out1_reg_8\ => \Using_SRL16s.SRL16s[1].Divide_I_n_12\
     );
 \Using_SRL16s.SRL16s[2].Divide_I\: entity work.\zsys_fit_timer_0_0_Divide_part__parameterized0\
      port map (
@@ -1207,7 +1215,7 @@ begin
       Clk_En_I_9 => Clk_En_I_9,
       Rst => Rst,
       Rst_d1 => Rst_d1,
-      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_2\,
+      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_3\,
       loop_Bit => loop_Bit_4,
       loop_Bit_1 => loop_Bit_2
     );
@@ -1220,7 +1228,7 @@ begin
       Clk_En_I_9 => Clk_En_I_9,
       Rst => Rst,
       Rst_d1 => Rst_d1,
-      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_3\,
+      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_4\,
       loop_Bit => loop_Bit_6
     );
 \Using_SRL16s.SRL16s[4].Divide_I\: entity work.\zsys_fit_timer_0_0_Divide_part__parameterized2_1\
@@ -1232,7 +1240,7 @@ begin
       Clk_En_I_8 => Clk_En_I_8,
       Rst => Rst,
       Rst_d1 => Rst_d1,
-      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_4\,
+      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_5\,
       loop_Bit => loop_Bit_8
     );
 \Using_SRL16s.SRL16s[5].Divide_I\: entity work.\zsys_fit_timer_0_0_Divide_part__parameterized2_2\
@@ -1244,7 +1252,7 @@ begin
       Clk_En_I_7 => Clk_En_I_7,
       Rst => Rst,
       Rst_d1 => Rst_d1,
-      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_5\,
+      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_6\,
       loop_Bit => loop_Bit_10
     );
 \Using_SRL16s.SRL16s[6].Divide_I\: entity work.\zsys_fit_timer_0_0_Divide_part__parameterized2_3\
@@ -1256,7 +1264,7 @@ begin
       Clk_En_I_6 => Clk_En_I_6,
       Rst => Rst,
       Rst_d1 => Rst_d1,
-      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_6\,
+      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_7\,
       loop_Bit => loop_Bit_12
     );
 \Using_SRL16s.SRL16s[7].Divide_I\: entity work.\zsys_fit_timer_0_0_Divide_part__parameterized2_4\
@@ -1268,7 +1276,7 @@ begin
       Clk_En_I_5 => Clk_En_I_5,
       Rst => Rst,
       Rst_d1 => Rst_d1,
-      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_7\,
+      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_8\,
       loop_Bit => loop_Bit_14
     );
 \Using_SRL16s.SRL16s[8].Divide_I\: entity work.\zsys_fit_timer_0_0_Divide_part__parameterized2_5\
@@ -1280,7 +1288,7 @@ begin
       Clk_En_I_4 => Clk_En_I_4,
       Rst => Rst,
       Rst_d1 => Rst_d1,
-      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_8\,
+      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_9\,
       loop_Bit => loop_Bit_16
     );
 \Using_SRL16s.SRL16s[9].Divide_I\: entity work.\zsys_fit_timer_0_0_Divide_part__parameterized2_6\
@@ -1292,7 +1300,7 @@ begin
       Clk_En_I_3 => Clk_En_I_3,
       Rst => Rst,
       Rst_d1 => Rst_d1,
-      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_9\,
+      Rst_d1_reg => \Using_SRL16s.SRL16s[1].Divide_I_n_10\,
       loop_Bit => loop_Bit_18
     );
 end STRUCTURE;
@@ -1317,10 +1325,18 @@ entity zsys_fit_timer_0_0 is
 end zsys_fit_timer_0_0;
 
 architecture STRUCTURE of zsys_fit_timer_0_0 is
+  attribute C_EXT_RESET_HIGH : integer;
+  attribute C_EXT_RESET_HIGH of U0 : label is 1;
+  attribute C_FAMILY : string;
+  attribute C_FAMILY of U0 : label is "zynq";
+  attribute C_INACCURACY : integer;
+  attribute C_INACCURACY of U0 : label is 0;
+  attribute C_NO_CLOCKS : integer;
+  attribute C_NO_CLOCKS of U0 : label is 700000000;
   attribute x_interface_info : string;
   attribute x_interface_info of Clk : signal is "xilinx.com:signal:clock:1.0 CLK.Clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of Clk : signal is "XIL_INTERFACENAME CLK.Clk, ASSOCIATED_RESET Rst, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
+  attribute x_interface_parameter of Clk : signal is "XIL_INTERFACENAME CLK.Clk, ASSOCIATED_RESET Rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0";
   attribute x_interface_info of Interrupt : signal is "xilinx.com:signal:interrupt:1.0 INTERRUPT.Interrupt INTERRUPT";
   attribute x_interface_parameter of Interrupt : signal is "XIL_INTERFACENAME INTERRUPT.Interrupt, SENSITIVITY LEVEL_HIGH, SUGGESTED_PRIORITY HIGH, PortWidth 1";
   attribute x_interface_info of Rst : signal is "xilinx.com:signal:reset:1.0 RST.Rst RST";

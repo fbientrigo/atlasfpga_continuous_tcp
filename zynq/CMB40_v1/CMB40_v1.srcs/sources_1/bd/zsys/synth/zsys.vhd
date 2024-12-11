@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
---Date        : Wed Nov 27 17:39:05 2024
+--Date        : Tue Dec 10 18:29:18 2024
 --Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
 --Command     : generate_target zsys.bd
 --Design      : zsys
@@ -172,7 +172,14 @@ architecture STRUCTURE of ADC_imp_KCKAR9 is
     o_ro_proc_st_debug_states : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component zsys_ROController_0_0;
-  component zsys_AXI_ADC_0_0 is
+  component zsys_util_vector_logic_0_2 is
+  port (
+    Op1 : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    Op2 : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    Res : out STD_LOGIC_VECTOR ( 11 downto 0 )
+  );
+  end component zsys_util_vector_logic_0_2;
+  component zsys_AXI_ADC_1_0 is
   port (
     i_MISO : in STD_LOGIC;
     o_MOSI : out STD_LOGIC;
@@ -229,7 +236,7 @@ architecture STRUCTURE of ADC_imp_KCKAR9 is
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC
   );
-  end component zsys_AXI_ADC_0_0;
+  end component zsys_AXI_ADC_1_0;
   signal ADC_MISO_1 : STD_LOGIC;
   signal ADC_readout_buff_0_o_ADC_ch0_n : STD_LOGIC;
   signal ADC_readout_buff_0_o_ADC_ch0_p : STD_LOGIC;
@@ -248,18 +255,18 @@ architecture STRUCTURE of ADC_imp_KCKAR9 is
   signal ADC_readout_buff_0_o_ADC_ch7_n : STD_LOGIC;
   signal ADC_readout_buff_0_o_ADC_ch7_p : STD_LOGIC;
   signal ADC_readout_buff_0_o_Lclk : STD_LOGIC;
-  signal AXI_ADC_0_o_MOSI : STD_LOGIC;
-  signal AXI_ADC_0_o_SCLK : STD_LOGIC;
   signal AXI_ADC_0_o_data_clk : STD_LOGIC;
-  signal AXI_ADC_0_o_data_out_ch0 : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal AXI_ADC_0_o_data_out_ch1 : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal AXI_ADC_0_o_data_out_ch2 : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal AXI_ADC_0_o_data_out_ch3 : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal AXI_ADC_0_o_data_out_ch4 : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal AXI_ADC_0_o_data_out_ch5 : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal AXI_ADC_0_o_data_out_ch6 : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal AXI_ADC_0_o_data_out_ch7 : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal AXI_ADC_0_o_debug : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal AXI_ADC_1_o_MOSI : STD_LOGIC;
+  signal AXI_ADC_1_o_SCLK : STD_LOGIC;
+  signal AXI_ADC_1_o_data_out_ch0 : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal AXI_ADC_1_o_data_out_ch1 : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal AXI_ADC_1_o_data_out_ch2 : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal AXI_ADC_1_o_data_out_ch3 : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal AXI_ADC_1_o_data_out_ch4 : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal AXI_ADC_1_o_data_out_ch5 : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal AXI_ADC_1_o_data_out_ch6 : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal AXI_ADC_1_o_data_out_ch7 : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal AXI_ADC_1_o_debug : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal MUXOUT_N_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal MUXOUT_P_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal ROController_0_i_rd_fifo_RD_DATA : STD_LOGIC_VECTOR ( 96 downto 0 );
@@ -316,15 +323,16 @@ architecture STRUCTURE of ADC_imp_KCKAR9 is
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal xlconstant_2_dout : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal xlconstant_3_dout : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_AXI_ADC_0_o_ADC_nrst_UNCONNECTED : STD_LOGIC;
-  signal NLW_AXI_ADC_0_o_data_clk_UNCONNECTED : STD_LOGIC;
-  signal NLW_AXI_ADC_0_o_nCS_UNCONNECTED : STD_LOGIC;
+  signal NLW_AXI_ADC_1_o_ADC_nrst_UNCONNECTED : STD_LOGIC;
+  signal NLW_AXI_ADC_1_o_data_clk_UNCONNECTED : STD_LOGIC;
+  signal NLW_AXI_ADC_1_o_nCS_UNCONNECTED : STD_LOGIC;
   signal NLW_ROController_0_o_rd_fifo_clk_UNCONNECTED : STD_LOGIC;
   signal NLW_ROController_0_o_trig_RO_end_UNCONNECTED : STD_LOGIC;
+  signal NLW_util_vector_logic_0_Res_UNCONNECTED : STD_LOGIC_VECTOR ( 11 downto 0 );
 begin
   ADC_MISO_1 <= ADC_MISO;
-  ADC_MOSI <= AXI_ADC_0_o_MOSI;
-  ADC_SCLK <= AXI_ADC_0_o_SCLK;
+  ADC_MOSI <= AXI_ADC_1_o_MOSI;
+  ADC_SCLK <= AXI_ADC_1_o_SCLK;
   MUXOUT_N_1(7 downto 0) <= MUXOUT_N(7 downto 0);
   MUXOUT_P_1(7 downto 0) <= MUXOUT_P(7 downto 0);
   S00_AXI1_1_ARADDR(31 downto 0) <= S00_AXI1_araddr(31 downto 0);
@@ -388,7 +396,7 @@ ADC_readout_buff_0: component zsys_ADC_readout_buff_0_0
       o_ADclk => AXI_ADC_0_o_data_clk,
       o_Lclk => ADC_readout_buff_0_o_Lclk
     );
-AXI_ADC_0: component zsys_AXI_ADC_0_0
+AXI_ADC_1: component zsys_AXI_ADC_1_0
      port map (
       i_ADclk => AXI_ADC_0_o_data_clk,
       i_Lclk => ADC_readout_buff_0_o_Lclk,
@@ -409,20 +417,20 @@ AXI_ADC_0: component zsys_AXI_ADC_0_0
       i_data_in_ch6_p => ADC_readout_buff_0_o_ADC_ch6_p,
       i_data_in_ch7_n => ADC_readout_buff_0_o_ADC_ch7_n,
       i_data_in_ch7_p => ADC_readout_buff_0_o_ADC_ch7_p,
-      o_ADC_nrst => NLW_AXI_ADC_0_o_ADC_nrst_UNCONNECTED,
-      o_MOSI => AXI_ADC_0_o_MOSI,
-      o_SCLK => AXI_ADC_0_o_SCLK,
-      o_data_clk => NLW_AXI_ADC_0_o_data_clk_UNCONNECTED,
-      o_data_out_ch0(15 downto 0) => AXI_ADC_0_o_data_out_ch0(15 downto 0),
-      o_data_out_ch1(15 downto 0) => AXI_ADC_0_o_data_out_ch1(15 downto 0),
-      o_data_out_ch2(15 downto 0) => AXI_ADC_0_o_data_out_ch2(15 downto 0),
-      o_data_out_ch3(15 downto 0) => AXI_ADC_0_o_data_out_ch3(15 downto 0),
-      o_data_out_ch4(15 downto 0) => AXI_ADC_0_o_data_out_ch4(15 downto 0),
-      o_data_out_ch5(15 downto 0) => AXI_ADC_0_o_data_out_ch5(15 downto 0),
-      o_data_out_ch6(15 downto 0) => AXI_ADC_0_o_data_out_ch6(15 downto 0),
-      o_data_out_ch7(15 downto 0) => AXI_ADC_0_o_data_out_ch7(15 downto 0),
-      o_debug(11 downto 0) => AXI_ADC_0_o_debug(11 downto 0),
-      o_nCS => NLW_AXI_ADC_0_o_nCS_UNCONNECTED,
+      o_ADC_nrst => NLW_AXI_ADC_1_o_ADC_nrst_UNCONNECTED,
+      o_MOSI => AXI_ADC_1_o_MOSI,
+      o_SCLK => AXI_ADC_1_o_SCLK,
+      o_data_clk => NLW_AXI_ADC_1_o_data_clk_UNCONNECTED,
+      o_data_out_ch0(15 downto 0) => AXI_ADC_1_o_data_out_ch0(15 downto 0),
+      o_data_out_ch1(15 downto 0) => AXI_ADC_1_o_data_out_ch1(15 downto 0),
+      o_data_out_ch2(15 downto 0) => AXI_ADC_1_o_data_out_ch2(15 downto 0),
+      o_data_out_ch3(15 downto 0) => AXI_ADC_1_o_data_out_ch3(15 downto 0),
+      o_data_out_ch4(15 downto 0) => AXI_ADC_1_o_data_out_ch4(15 downto 0),
+      o_data_out_ch5(15 downto 0) => AXI_ADC_1_o_data_out_ch5(15 downto 0),
+      o_data_out_ch6(15 downto 0) => AXI_ADC_1_o_data_out_ch6(15 downto 0),
+      o_data_out_ch7(15 downto 0) => AXI_ADC_1_o_data_out_ch7(15 downto 0),
+      o_debug(11 downto 0) => AXI_ADC_1_o_debug(11 downto 0),
+      o_nCS => NLW_AXI_ADC_1_o_nCS_UNCONNECTED,
       s00_axi_aclk => s00_axi_ctrl_aclk_1,
       s00_axi_araddr(3 downto 0) => S00_AXI1_1_ARADDR(3 downto 0),
       s00_axi_aresetn => s00_axi_aresetn_1,
@@ -498,14 +506,14 @@ fifo_generator_0: component zsys_fifo_generator_0_0
     );
 mapper_0: component zsys_mapper_0_0
      port map (
-      i_in_0(15 downto 0) => AXI_ADC_0_o_data_out_ch0(15 downto 0),
-      i_in_1(15 downto 0) => AXI_ADC_0_o_data_out_ch1(15 downto 0),
-      i_in_2(15 downto 0) => AXI_ADC_0_o_data_out_ch2(15 downto 0),
-      i_in_3(15 downto 0) => AXI_ADC_0_o_data_out_ch3(15 downto 0),
-      i_in_4(15 downto 0) => AXI_ADC_0_o_data_out_ch4(15 downto 0),
-      i_in_5(15 downto 0) => AXI_ADC_0_o_data_out_ch5(15 downto 0),
-      i_in_6(15 downto 0) => AXI_ADC_0_o_data_out_ch6(15 downto 0),
-      i_in_7(15 downto 0) => AXI_ADC_0_o_data_out_ch7(15 downto 0),
+      i_in_0(15 downto 0) => AXI_ADC_1_o_data_out_ch0(15 downto 0),
+      i_in_1(15 downto 0) => AXI_ADC_1_o_data_out_ch1(15 downto 0),
+      i_in_2(15 downto 0) => AXI_ADC_1_o_data_out_ch2(15 downto 0),
+      i_in_3(15 downto 0) => AXI_ADC_1_o_data_out_ch3(15 downto 0),
+      i_in_4(15 downto 0) => AXI_ADC_1_o_data_out_ch4(15 downto 0),
+      i_in_5(15 downto 0) => AXI_ADC_1_o_data_out_ch5(15 downto 0),
+      i_in_6(15 downto 0) => AXI_ADC_1_o_data_out_ch6(15 downto 0),
+      i_in_7(15 downto 0) => AXI_ADC_1_o_data_out_ch7(15 downto 0),
       o_out_0(11 downto 0) => mapper_0_o_out_0(11 downto 0),
       o_out_1(11 downto 0) => mapper_0_o_out_1(11 downto 0),
       o_out_2(11 downto 0) => mapper_0_o_out_2(11 downto 0),
@@ -514,6 +522,12 @@ mapper_0: component zsys_mapper_0_0
       o_out_5(11 downto 0) => mapper_0_o_out_5(11 downto 0),
       o_out_6(11 downto 0) => mapper_0_o_out_6(11 downto 0),
       o_out_7(11 downto 0) => mapper_0_o_out_7(11 downto 0)
+    );
+util_vector_logic_0: component zsys_util_vector_logic_0_2
+     port map (
+      Op1(11 downto 0) => mapper_0_o_out_0(11 downto 0),
+      Op2(11 downto 0) => AXI_ADC_1_o_debug(11 downto 0),
+      Res(11 downto 0) => NLW_util_vector_logic_0_Res_UNCONNECTED(11 downto 0)
     );
 xlconstant_1: component zsys_xlconstant_1_0
      port map (
@@ -3713,7 +3727,7 @@ use UNISIM.VCOMPONENTS.ALL;
     MUX_SEL : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of zsys : entity is "zsys,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zsys,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=82,numReposBlks=69,numNonXlnxBlks=0,numHierBlks=13,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=15,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=34,da_board_cnt=3,da_clkrst_cnt=16,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of zsys : entity is "zsys,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zsys,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=85,numReposBlks=72,numNonXlnxBlks=0,numHierBlks=13,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=16,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=34,da_board_cnt=3,da_clkrst_cnt=16,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of zsys : entity is "zsys.hwdef";
 end zsys;
@@ -4553,6 +4567,25 @@ architecture STRUCTURE of zsys is
     o_out_trigger : out STD_LOGIC
   );
   end component zsys_trigger_logic_0_0;
+  component zsys_util_vector_logic_2_0 is
+  port (
+    Op1 : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    Op2 : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    Res : out STD_LOGIC_VECTOR ( 11 downto 0 )
+  );
+  end component zsys_util_vector_logic_2_0;
+  component zsys_Lvds_Rx_top_0_0 is
+  port (
+    SysRst : in STD_LOGIC;
+    Lclk : in STD_LOGIC;
+    AdClk : in STD_LOGIC;
+    DataInChP : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    DataInChN : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    AnalyseOut : out STD_LOGIC;
+    ChOut_0 : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    ChOut_1 : out STD_LOGIC_VECTOR ( 11 downto 0 )
+  );
+  end component zsys_Lvds_Rx_top_0_0;
   signal ADCLK_MUX_N_1 : STD_LOGIC;
   signal ADCLK_MUX_P_1 : STD_LOGIC;
   signal ADC_ADC_MOSI : STD_LOGIC;
@@ -4597,15 +4630,17 @@ architecture STRUCTURE of zsys is
   signal DRS_SROUT_1 : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal LCLK_MUX_N_1 : STD_LOGIC;
   signal LCLK_MUX_P_1 : STD_LOGIC;
+  signal Lvds_Rx_top_0_ChOut_0 : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal Lvds_Rx_top_0_ChOut_1 : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal M1to5_0_out5 : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal M1to5_1_out5 : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal M1to5_2_out5 : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal MUXOUT_N_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal MUXOUT_N_2 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal MUXOUT_P_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal Net : STD_LOGIC;
   signal ROController_0_o_wr_fifo_en : STD_LOGIC;
   signal Signal_sel_0_O : STD_LOGIC;
+  signal Vibufds_diff_out_0_o_MUXOUT_N : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal Vibufds_diff_out_0_o_MUXOUT_P : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_dma_0_M_AXI_MM2S_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_dma_0_M_AXI_MM2S_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -4973,6 +5008,7 @@ architecture STRUCTURE of zsys is
   signal NLW_DRS4_firmware_1_o_denable_UNCONNECTED : STD_LOGIC;
   signal NLW_DRS4_firmware_1_o_nReset_UNCONNECTED : STD_LOGIC;
   signal NLW_Elink_output_0_lvds_UNCONNECTED : STD_LOGIC;
+  signal NLW_Lvds_Rx_top_0_AnalyseOut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_m_axis_mm2s_tlast_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_m_axis_mm2s_tvalid_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_mm2s_prmry_reset_out_n_UNCONNECTED : STD_LOGIC;
@@ -5010,6 +5046,7 @@ architecture STRUCTURE of zsys is
   signal NLW_rst_ps7_0_100M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_ps7_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_util_vector_logic_2_Res_UNCONNECTED : STD_LOGIC_VECTOR ( 11 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
   attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
@@ -5134,7 +5171,7 @@ ADC: entity work.ADC_imp_KCKAR9
       ADC_MISO => ADC_MISO_1,
       ADC_MOSI => ADC_ADC_MOSI,
       ADC_SCLK => ADC_ADC_SCLK,
-      MUXOUT_N(7 downto 0) => MUXOUT_N_2(7 downto 0),
+      MUXOUT_N(7 downto 0) => Vibufds_diff_out_0_o_MUXOUT_N(7 downto 0),
       MUXOUT_P(7 downto 0) => Vibufds_diff_out_0_o_MUXOUT_P(7 downto 0),
       S00_AXI1_araddr(31 downto 0) => ps7_0_axi_periph_M08_AXI_ARADDR(31 downto 0),
       S00_AXI1_arprot(2 downto 0) => ps7_0_axi_periph_M08_AXI_ARPROT(2 downto 0),
@@ -5279,6 +5316,17 @@ Elink_output_0: component zsys_Elink_output_0_0
       clk => processing_system7_0_FCLK_CLK1,
       lvds => NLW_Elink_output_0_lvds_UNCONNECTED
     );
+Lvds_Rx_top_0: component zsys_Lvds_Rx_top_0_0
+     port map (
+      AdClk => util_ds_buf_ADCLK_IBUF_OUT(0),
+      AnalyseOut => NLW_Lvds_Rx_top_0_AnalyseOut_UNCONNECTED,
+      ChOut_0(11 downto 0) => Lvds_Rx_top_0_ChOut_0(11 downto 0),
+      ChOut_1(11 downto 0) => Lvds_Rx_top_0_ChOut_1(11 downto 0),
+      DataInChN(7 downto 0) => B"00000000",
+      DataInChP(7 downto 0) => B"00000000",
+      Lclk => util_ds_buf_ADCLK1_IBUF_OUT(0),
+      SysRst => rst_FIFO_100M_peripheral_reset(0)
+    );
 M1to5_0: component zsys_M1to5_0_0
      port map (
       in1 => delay_module_0_signal_out,
@@ -5304,7 +5352,7 @@ Vibufds_diff_out_0: component zsys_Vibufds_diff_out_0_0
      port map (
       MUXOUT_N(7 downto 0) => MUXOUT_N_1(7 downto 0),
       MUXOUT_P(7 downto 0) => MUXOUT_P_1(7 downto 0),
-      o_MUXOUT_N(7 downto 0) => MUXOUT_N_2(7 downto 0),
+      o_MUXOUT_N(7 downto 0) => Vibufds_diff_out_0_o_MUXOUT_N(7 downto 0),
       o_MUXOUT_P(7 downto 0) => Vibufds_diff_out_0_o_MUXOUT_P(7 downto 0)
     );
 axi_dma_0: component zsys_axi_dma_0_0
@@ -6104,6 +6152,12 @@ util_vector_logic_1: component zsys_util_vector_logic_0_1
       Op1(0) => ADC_o_busy,
       Op2(0) => xlslice_2to2_Dout(0),
       Res(0) => util_vector_logic_1_Res(0)
+    );
+util_vector_logic_2: component zsys_util_vector_logic_2_0
+     port map (
+      Op1(11 downto 0) => Lvds_Rx_top_0_ChOut_0(11 downto 0),
+      Op2(11 downto 0) => Lvds_Rx_top_0_ChOut_1(11 downto 0),
+      Res(11 downto 0) => NLW_util_vector_logic_2_Res_UNCONNECTED(11 downto 0)
     );
 xlconcat_0: component zsys_xlconcat_0_0
      port map (

@@ -22,6 +22,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_UNSIGNED.all;
+library UNISIM;
+use UNISIM.all;
 
 
 -- Uncomment the following library declaration if using
@@ -48,7 +50,7 @@ entity Lvds_Rx_top is
 											--			1		0		Normal FFs register (look out for extra BUFG's).
 											--			1		1		DO NOT USE !
 											--
-		PhaseControl	: integer := 0;		-- 1 = YES, 0 = NO
+		PhaseControl	: integer := 1;		-- 1 = YES, 0 = NO
 		LclkOffsetK 	: std_logic_vector (6 downto 0) := "0111111"
 											-- This is the value indicating the mismatch between clock and data.
 											-- This value depends on the PCB routing and layout.
@@ -94,7 +96,29 @@ component BUFG				port (I : in std_logic;	O : out std_logic);	end component;
 component IBUFDS	port (I	: in std_logic;	IB : in std_logic;	O : out std_logic);	end component;
 
 
-
+component IDELAYE2
+    generic (
+        CINVCTRL_SEL        : string := "FALSE";
+        DELAY_SRC           : string := "IDATAIN";
+        HIGH_PERFORMANCE_MODE : string := "FALSE";
+        IDELAY_TYPE         : string := "FIXED";
+        IDELAY_VALUE        : integer := 0;
+        REFCLK_FREQUENCY    : real := 200.0;
+        PIPE_SEL            : string := "FALSE";
+        SIGNAL_PATTERN      : string := "DATA"
+    );
+    port (
+        C                  : in std_logic;
+        CE                 : in std_logic;
+        CINVCTRL           : in std_logic;
+        CNTVALUEIN         : in std_logic_vector(4 downto 0);
+        INC                : in std_logic;
+        LD                 : in std_logic;
+        IDATAIN            : in std_logic;
+        DATAOUT            : out std_logic;
+        CNTVALUEOUT        : out std_logic_vector(4 downto 0)
+    );
+end component;
 
 
 component AdcReceiver is
@@ -151,8 +175,37 @@ component DCM
 		CLKFX180	: out std_logic ;
 		LOCKED  	: out std_logic ;
 		PSDONE  	: out std_logic ;
-		STATUS  	: out std_logic_vector(7 downto 0)); 
+		STATUS  	: out std_logic_vector(7 downto 0)); 	
 end component;
+
+component PhaseControlFullRange
+	port (
+		Enable			: in std_logic;				-- Enable input, allows function to be bypassed for simulation when Low
+		MonClkIn		: in std_logic;				-- Clock to be monitored
+		RxClkIn			: in std_logic;				-- Clock from DCM
+		CtlClk			: in std_logic;				-- PhaseControlFullRange clocK
+		LocKedIn		: in std_logic;				-- dcm locked in
+		Rst				: in std_logic;				-- Reset
+		PsDone			: in std_logic;				-- High when dcm has changed phase
+		ForceUp			: in std_logic;				-- Forces phase value up when High
+		ForceDown		: in std_logic;				-- Forces phase value down when High
+		DcmDiv2Used		: in std_logic;				-- Normally '0', set to '1' if DCM divide_by_2 option
+													-- is used (SDR designs)
+		K 				: in std_logic_vector(6 downto 0);	-- constant to be modified in the case where the data
+													-- and clock do not arrive at the part exactly aligned
+													-- permissable values 0 to 127 (0 to 180 degrees),
+													-- set default to "0000000"
+		LockedOut		: out std_logic;			-- locKed out
+		PsIncDec		: out std_logic ;			-- move phase up (not)down
+		PsEn			: out std_logic ;			-- phase shift Enable
+		PsClk			: out std_logic ;			-- phase shift clocK
+		BinOut			: out std_logic_vector(8 downto 0);	-- binary current phase  value (0 to 511)
+		BcdOut			: out std_logic_vector(39 downto 0) -- ( -255 to +255)
+		);													-- 12 downto 0  : BCD current phase value
+															-- 26 downto 14 : BCD for IntPs0
+															-- 39 downto 27 : BCD for IntPs1
+end component;
+
 
 -- Signals
 
@@ -182,9 +235,28 @@ signal IntDatCh4                : std_logic;
 signal IntDatCh5                : std_logic;
 signal IntDatCh6                : std_logic;
 signal IntDatCh7                : std_logic;
+signal IntFpgaSystemRst         : std_logic;
+signal IntLclkDcmPhaseDone		: std_logic;
 
+----- Delays
+--signal IntDatCh0_delayed : std_logic;
+--signal IntDatCh1_delayed : std_logic;
+--signal IntDatCh2_delayed : std_logic;
+--signal IntDatCh3_delayed : std_logic;
+--signal IntDatCh4_delayed : std_logic;
+--signal IntDatCh5_delayed : std_logic;
+--signal IntDatCh6_delayed : std_logic;
+--signal IntDatCh7_delayed : std_logic;
+--signal IntDatCh10_delayed : std_logic_vector (1 downto 0);
 
-
+--signal AdClk_delayed   : std_logic;
+--signal delay_enable    : std_logic := '0';       -- Enable signal
+--signal delay_increment : std_logic := '0';       -- Increment/decrement signal
+--signal delay_load      : std_logic := '0';       -- Load signal
+--signal delay_value     : std_logic_vector(4 downto 0) := "00010"; -- 2 taps
+--signal alignment_done : std_logic := '0';        -- Indicates completion of alignment process
+--signal feedback_signal : std_logic := '0';      -- Feedback signal for alignment status
+--signal alignment_direction : std_logic := '1';  -- '1' to increment, '0' to decrement delay
 
 
 begin
@@ -192,19 +264,19 @@ begin
 -------------------------------------------------------
 -- Reset f-f with async preset
 -- Assuming PhaseControl = 0 is fixed
-IntLclkDcmPhaseUpDwn <= '0';
-IntLclkDcmPhaseEna <= '0';
-IntLclkDcmPhaseClk <= '0';
-IntLclkDcmPhsClkLocked <= IntLclkDcmLocked;
-IntLclkDcmPhsClkLockedNot <= not IntLclkDcmPhsClkLocked;
+--IntLclkDcmPhaseUpDwn <= '0';
+--IntLclkDcmPhaseEna <= '0';
+--IntLclkDcmPhaseClk <= '0';
+--IntLclkDcmPhsClkLocked <= IntLclkDcmLocked;
+--IntLclkDcmPhsClkLockedNot <= not IntLclkDcmPhsClkLocked;
 
-RxRstFf : FDP
-    port map (
-        D    => IntLclkDcmPhsClkLockedNot,
-        C     => IntRxClk,
-        PRE => SysRst,
-        Q     => IntReceiverRst         -- Reset for the receiver interface.
-        );
+--RxRstFf : FDP
+--    port map (
+--        D    => IntLclkDcmPhsClkLockedNot,
+--        C     => IntRxClk,
+--        PRE => SysRst,
+--        Q     => IntReceiverRst         -- Reset for the receiver interface.
+--        );
 
 --IntReceiverRst <= SysRst;
 
@@ -231,6 +303,7 @@ IntDatCh7 <= DataInChP(7);
 ---------------------------------------------
 -- Channel 1 and 0 LVDS decoder
 IntDatCh10 <= IntDatCh1 & IntDatCh0;
+--IntDatCh10_delayed <= IntDatCh1_delayed & IntDatCh0_delayed;
 
 AdcCh10 : AdcReceiver
 	generic map (
@@ -242,7 +315,9 @@ AdcCh10 : AdcReceiver
 		RxClkNot	=> IntRxClkNot,
 		RxRst		=> IntReceiverRst,
 		RxDatIn		=> IntDatCh10,
+		--RxDatIn => IntDatCh10_delayed, -- Use delayed signals
 		RxSyncIn	=> AdClk,			-- Input of the external sync
+		--RxSyncIn => AdClk_delayed,     -- Use delayed clock
 		PreSyncInP	=> '0',					-- input from lower module.
 		PreSyncInN	=> '0',					-- input from lower module.
 		PostSyncOutP	=> not_used_1,	-- output to upper module.
@@ -296,7 +371,7 @@ ChOut_0(0) <= IntDatRec10(0);
 -------------------------------------------------------
 --  DCM
 
---IntFpgaSystemRst <= IntReset;
+IntFpgaSystemRst <= SysRst;
 
 
 -- This DCM can be phase shifted to allign into the middle of the data bits.
@@ -328,13 +403,140 @@ LclkDcm : DCM
 		CLKFX   	=> open,
 		CLKFX180	=> open,
 		LOCKED  	=> IntLclkDcmLocked,
-		PSDONE  	=> open,
+		PSDONE  	=> IntLclkDcmPhaseDone,
 		STATUS  	=> open
 	);
 LclkBufg :		BUFG	port map (I => IntLclkDcmBufg,		O => IntRxClk);
 LclkNotBufg :	BUFG	port map (I => IntLclkDcmNotBufg,	O => IntRxClkNot);
 LclkDvBufg :	BUFG 	port map (I => IntLclkDcmDvBufg,	O => IntRxClkDv);
 
+
+--------------------------------------------------------------------------
+----- Phase Control to repair out of phase clocks
+
+--
+--	ButUpIbuf : IBUF_LVCMOS33	port map (I => ButtonUp,	O => IntButtonUp);
+--	IntButtonUpNot <= not IntButtonUp;
+--	ButDwnIbuf : IBUF_LVCMOS33	port map (I => ButtonDwn,	O => IntButtonDwn);
+--	IntButtonDwnNot <= not IntButtonDwn;
+--	
+	ThePhaseCtrl : PhaseControlFullRange
+		port map (
+			Enable		=> '1',
+			MonClkIn	=> Lclk,			-- Incoming clock
+			RxClkIn		=> IntRxClk,				-- Clock after the DCM
+			CtlClk		=> IntRxClkDv,				-- IntSysClk2X = Lclk/6,
+			LocKedIn	=> IntLclkDcmLocked,		-- Rx DCM locked.
+			Rst			=> SysRst,		-- Reset from application.
+			PsDone		=> IntLclkDcmPhaseDone,		-- Phase shift Status from Rx DCM
+			ForceUp		=> '0', --IntButtonUpNot,	-- Force a phase shift, to demo board buttons.
+			ForceDown	=> '0', --IntButtonDwnNot,	-- Force a phase shift, to demo board buttons.
+			DcmDiv2Used	=> '0',						-- Div2 is not used.
+			K			=> LclkOffsetK,				-- Clk and Data nets all same length, all 0.
+			LockedOut	=> IntLclkDcmPhsClkLocked,	-- Replacement for the locked DCM output.
+			PsIncDec	=> IntLclkDcmPhaseUpDwn,
+			PsEn		=> IntLclkDcmPhaseEna,
+			PsClk		=> IntLclkDcmPhaseClk,
+			BinOut		=> open,
+			BcdOut		=> open
+			);
+	--------------------------------------------------------------------------------
+	IntLclkDcmPhsClkLockedNot <= not IntLclkDcmPhsClkLocked;
+	--
+	RxRstFf : FDP
+		port map (
+			--D	=> IntLclkDcmPhsClkLockedNot,
+			D	=> IntLclkDcmPhsClkLocked,
+			C 	=> IntRxClk,
+			PRE => SysRst,
+			Q 	=> IntReceiverRst		-- Reset for the receiver interface.
+			);
+
+
+-----------------------------------
+---- Delays
+
+--Ch0Iob : IBUFDS
+--    port map (I => DataInChP(0), IB => DataInChN(0), O => IntDatCh0);
+
+--Ch0Delay : IDELAYE2
+--    generic map (
+--        DELAY_SRC => "IDATAIN",
+--        IDELAY_TYPE => "VARIABLE", -- Or "FIXED" if you want a static delay
+--        IDELAY_VALUE => 0,         -- Set to 0 for dynamic delay tuning
+--        REFCLK_FREQUENCY => 150.0  -- Adjust to your reference clock frequency
+--    )
+--    port map (
+--        IDATAIN => IntDatCh0,
+--        DATAOUT => IntDatCh0_delayed,
+--        C => IntRxClk,             -- Clock for dynamic control
+--        CE => delay_enable,        -- Enable for delay adjustment
+--        INC => delay_increment,    -- Increment signal
+--        LD => delay_load,          -- Load signal for static tuning
+--        CNTVALUEIN => (others => '0'), -- Control input for delay taps
+--        CNTVALUEOUT => open ,       -- Optional: Connect for monitoring
+--        CINVCTRL => '0'             -- Explicitly tie CINVCTRL to '0'
+--    );
+    
+--Ch1Iob : IBUFDS
+--        port map (I => DataInChP(1), IB => DataInChN(1), O => IntDatCh1);
+    
+--Ch1Delay : IDELAYE2
+--    generic map (
+--        DELAY_SRC => "IDATAIN",
+--        IDELAY_TYPE => "VARIABLE", -- Or "FIXED" if you want a static delay
+--        IDELAY_VALUE => 0,         -- Set to 0 for dynamic delay tuning
+--        REFCLK_FREQUENCY => 150.0  -- Adjust to your reference clock frequency
+--    )
+--    port map (
+--        IDATAIN => IntDatCh1,
+--        DATAOUT => IntDatCh1_delayed,
+--        C => IntRxClk,             -- Clock for dynamic control
+--        CE => delay_enable,        -- Enable for delay adjustment
+--        INC => delay_increment,    -- Increment signal
+--        LD => delay_load,          -- Load signal for static tuning
+--        CNTVALUEIN => (others => '0'), -- Control input for delay taps
+--        CNTVALUEOUT => open ,       -- Optional: Connect for monitoring
+--        CINVCTRL => '0'             -- Explicitly tie CINVCTRL to '0'
+--    );
+
+
+--AdClkDelay : IDELAYE2
+--    generic map (
+--        DELAY_SRC => "IDATAIN",
+--        IDELAY_TYPE => "FIXED", -- Use "VARIABLE" if calibration is needed
+--        IDELAY_VALUE => 64,    -- Example delay for alignment
+--        REFCLK_FREQUENCY => 150.0
+--    )
+--    port map (
+--        IDATAIN => AdClk,
+--        DATAOUT => AdClk_delayed,
+--        C => '0',
+--        CE => '0',
+--        INC => '0',
+--        LD => '0',
+--        CNTVALUEIN => (others => '0'),
+--        CNTVALUEOUT => open,
+--        CINVCTRL => '0'             -- Explicitly tie CINVCTRL to '0'
+--    );
+
+
+
+--process (IntRxClk)
+--begin
+--    if rising_edge(IntRxClk) then
+--        if alignment_done = '0' then
+--            -- Check feedback signal to determine alignment
+--            if feedback_signal = '1' then
+--                alignment_done <= '1'; -- Stop alignment
+--                delay_enable <= '0';   -- Disable IDELAY adjustment
+--            else
+--                delay_enable <= '1';   -- Enable delay adjustment
+--                delay_increment <= alignment_direction; -- Adjust delay
+--            end if;
+--        end if;
+--    end if;
+--end process;
 
 
 end Lvds_Rx_top_arch;

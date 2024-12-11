@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Wed Nov 27 17:44:58 2024
+| Date         : Wed Dec 11 11:31:15 2024
 | Host         : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_drc -file zsys_wrapper_drc_opted.rpt -pb zsys_wrapper_drc_opted.pb -rpx zsys_wrapper_drc_opted.rpx
 | Design       : zsys_wrapper
@@ -72,82 +72,82 @@ Related violations: <none>
 
 REQP-1580#1 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_even. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_even/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_even/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_even. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_even/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_even/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#2 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_odd. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_odd/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_odd/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_odd. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_odd/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes0_odd/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#3 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_n/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_n/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#4 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_p/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_p/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes1_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#5 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_n/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_n/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#6 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_p/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_p/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes2_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#7 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_n/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_n/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#8 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_p/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_p/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes3_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#9 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_n/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_n/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#10 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_p/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_p/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes4_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#11 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_n/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_n/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#12 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_p/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_p/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes5_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#13 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_n/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_n/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#14 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_p/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_p/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes6_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#15 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_n/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_n. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_n/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_n/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#16 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_p/CLK / zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_p/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1839#1 Warning
