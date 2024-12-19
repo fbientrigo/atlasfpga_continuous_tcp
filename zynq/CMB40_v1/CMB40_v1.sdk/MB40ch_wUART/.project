@@ -3,7 +3,7 @@
 	<name>MB40ch_wUART</name>
 	<comment></comment>
 	<projects>
-		<project>MB40CH_wUART_bsp_3</project>
+		<project>MB40CH_wUART_bsp_4</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

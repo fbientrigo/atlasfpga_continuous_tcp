@@ -156,6 +156,7 @@ Generic(
   FRAME_PATTERN : std_logic_vector (5 downto 0) := FRAME_PATTERN
 );
   Port (
+    sys_clk      : in STD_LOGIC;
     i_ADclk        : in std_logic;
     --i_ADclk_n        : in std_logic;
     i_Lclk        : in std_logic;
@@ -563,6 +564,7 @@ Inst_ADC_readout_12bit: ADC_readout_3
       FRAME_PATTERN => FRAME_PATTERN
       )
       Port map (
+      sys_clk       => S_AXI_ACLK,
       i_ADclk        => i_ADclk,
       --i_ADclk_n        => i_ADclk_n,
       i_Lclk  => i_Lclk,

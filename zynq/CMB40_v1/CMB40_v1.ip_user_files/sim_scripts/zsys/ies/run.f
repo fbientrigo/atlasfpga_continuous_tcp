@@ -380,18 +380,12 @@
   "../../../bd/zsys/ip/zsys_util_vector_logic_0_2/sim/zsys_util_vector_logic_0_2.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/zsys/ipshared/ec81/hdl/AXI_ADC_v3_0_S00_AXI.vhd" \
-  "../../../bd/zsys/ipshared/ec81/src/SPI_core_v2.vhd" \
-  "../../../bd/zsys/ipshared/ec81/src/ADC_ctrl.vhd" \
-  "../../../bd/zsys/ipshared/ec81/src/ADC_readout_3.vhd" \
-  "../../../bd/zsys/ipshared/ec81/hdl/AXI_ADC_v3_0.vhd" \
+  "../../../bd/zsys/ipshared/a552/hdl/AXI_ADC_v3_0_S00_AXI.vhd" \
+  "../../../bd/zsys/ipshared/a552/src/SPI_core_v2.vhd" \
+  "../../../bd/zsys/ipshared/a552/src/ADC_ctrl.vhd" \
+  "../../../bd/zsys/ipshared/a552/src/ADC_readout_3.vhd" \
+  "../../../bd/zsys/ipshared/a552/hdl/AXI_ADC_v3_0.vhd" \
   "../../../bd/zsys/ip/zsys_AXI_ADC_1_0/sim/zsys_AXI_ADC_1_0.vhd" \
--endlib
--makelib ies_lib/axi_mmu_v2_1_15 \
-  "../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/3048/hdl/axi_mmu_v2_1_vl_rfs.v" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/zsys/ip/zsys_s00_mmu_0/sim/zsys_s00_mmu_0.v" \
 -endlib
 -makelib ies_lib/axi_clock_converter_v2_1_16 \
   "../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/e9a5/hdl/axi_clock_converter_v2_1_vl_rfs.v" \

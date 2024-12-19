@@ -302,7 +302,7 @@ proc create_hier_cell_ADC { parentCell nameHier } {
    }
   
   # Create instance: AXI_ADC_1, and set properties
-  set AXI_ADC_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:AXI_ADC:3.0 AXI_ADC_1 ]
+  set AXI_ADC_1 [ create_bd_cell -type ip -vlnv xilinx.com:user:AXI_ADC:4.0 AXI_ADC_1 ]
 
   # Create instance: ROController_0, and set properties
   set block_name ROController

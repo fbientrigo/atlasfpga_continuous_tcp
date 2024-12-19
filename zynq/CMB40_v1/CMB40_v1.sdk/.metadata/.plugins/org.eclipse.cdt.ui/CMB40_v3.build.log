@@ -1,4 +1,4 @@
-15:22:54 **** Build of configuration Debug for project CMB40_v3 ****
+12:22:39 **** Build of configuration Debug for project CMB40_v3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -515,5 +515,5 @@ arm-none-eabi-size CMB40_v3.elf  |tee "CMB40_v3.elf.size"
 Finished building: CMB40_v3.elf.size
  
 
-15:22:54 Build Finished (took 868ms)
+12:22:40 Build Finished (took 1s.473ms)
 

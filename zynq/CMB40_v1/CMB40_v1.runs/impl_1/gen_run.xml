@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z015clg485-2" LaunchTime="1733927123">
+<GenRun Id="impl_1" LaunchPart="xc7z015clg485-2" LaunchTime="1734126767">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="zsys_wrapper.drc"/>
   <File Type="BG-BGN" Name="zsys_wrapper.bgn"/>
@@ -359,7 +359,6 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="zsys_AXI_ADC_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_Lvds_Rx_top_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_fit_timer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zsys_rst_ps7_0_100M_1"/>

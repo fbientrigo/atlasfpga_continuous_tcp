@@ -46,8 +46,8 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: xilinx.com:user:AXI_ADC:3.0
--- IP Revision: 17
+-- IP VLNV: xilinx.com:user:AXI_ADC:4.0
+-- IP Revision: 19
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

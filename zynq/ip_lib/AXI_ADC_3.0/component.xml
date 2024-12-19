@@ -3,7 +3,7 @@
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>user</spirit:library>
   <spirit:name>AXI_ADC</spirit:name>
-  <spirit:version>3.0</spirit:version>
+  <spirit:version>4.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>S00_AXI</spirit:name>
@@ -282,7 +282,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>95c8ca39</spirit:value>
+            <spirit:value>92bdc3d2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -298,7 +298,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>95c8ca39</spirit:value>
+            <spirit:value>92bdc3d2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1287,7 +1287,7 @@
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>New version with clock monitor</spirit:description>
+  <spirit:description>New version with bitslip for compensate data misalign in LVDS communication</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
@@ -1362,18 +1362,22 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>AXI_ADC_v3.0</xilinx:displayName>
-      <xilinx:coreRevision>17</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-12-10T21:13:49Z</xilinx:coreCreationDateTime>
+      <xilinx:displayName>AXI_ADC_v4.0</xilinx:displayName>
+      <xilinx:coreRevision>19</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>xilinx.com:user:AXI_ADC:3.0</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2024-12-13T21:25:30Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:user:AXI_ADC:3.0_ARCHIVE_LOCATION">/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/ip_lib/AXI_ADC_3.0</xilinx:tag>
+        <xilinx:tag xilinx:name="xilinx.com:user:AXI_ADC:4.0_ARCHIVE_LOCATION">/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/ip_lib/AXI_ADC_3.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3b9c163e"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1341371a"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9c6bb027"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="5ce36f25"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="05333051"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="3be290ea"/>

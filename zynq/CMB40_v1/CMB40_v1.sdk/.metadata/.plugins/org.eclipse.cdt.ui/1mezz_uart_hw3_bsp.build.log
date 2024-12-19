@@ -1,4 +1,4 @@
-15:22:19 **** Build of project 1mezz_uart_hw3_bsp ****
+12:21:25 **** Build of project 1mezz_uart_hw3_bsp ****
 make -k all 
 Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -45,14 +45,14 @@ make -C ps7_cortexa9_0/libsrc/dac_i2c_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILE
 Compiling dac_i2c...
 dac_i2c_selftest.c: In function 'DAC_I2C_Reg_SelfTest':
 dac_i2c_selftest.c:52:56: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
     if ( DAC_I2C_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
                                                         ^~
 dac_i2c_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-Compiling ddrps
   int Index;
       ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
 Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
 make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 Compiling devcfg
@@ -101,5 +101,5 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER
 Compiling xadcps
 Finished building libraries
 
-15:22:24 Build Finished (took 4s.890ms)
+12:21:31 Build Finished (took 5s.976ms)
 

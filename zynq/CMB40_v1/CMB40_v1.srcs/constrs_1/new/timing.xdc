@@ -137,7 +137,6 @@ set_property MARK_DEBUG false [get_nets {zsys_i/ADC/rd_data_count[8]}]
 set_property MARK_DEBUG false [get_nets {zsys_i/ADC/rd_data_count[9]}]
 set_property MARK_DEBUG false [get_nets {zsys_i/ADC/rd_data_count[10]}]
 set_property MARK_DEBUG false [get_nets {zsys_i/ADC/rd_data_count[11]}]
-set_property MARK_DEBUG true [get_nets zsys_i/ADC/ADC_MISO]
 
 set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/reg_data_out[7]}]
 set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_0/U0/AXI_ADC_v3_0_S00_AXI_inst/reg_data_out[3]}]
@@ -403,18 +402,85 @@ set_property MARK_DEBUG true [get_nets {zsys_i/ADC/mapper_0_o_out_7[11]}]
 
 
 
-set_property MARK_DEBUG true [get_nets zsys_i/ADC_MOSI]
-set_property MARK_DEBUG true [get_nets zsys_i/ADC_SCLK]
-set_property MARK_DEBUG true [get_nets zsys_i/ADC_MISO]
+set_property MARK_DEBUG false [get_nets zsys_i/ADC_SCLK]
 
 connect_debug_port u_ila_0/probe3 [get_nets [list {zsys_i/ADC/AXI_ADC_0/o_debug[9]} {zsys_i/ADC/AXI_ADC_0/o_debug[10]}]]
 
+
+
+
+
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[0]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[1]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[2]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[3]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[4]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[5]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[6]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[7]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[8]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[14]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[15]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[12]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[13]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[9]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[10]}]
+set_property MARK_DEBUG true [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/o_data_out_ch0[11]}]
+
+set_property MARK_DEBUG false [get_nets zsys_i/ADC/ADC_MISO]
+set_property MARK_DEBUG false [get_nets zsys_i/ADC_MOSI]
+set_property MARK_DEBUG false [get_nets zsys_i/ADC_MISO]
+
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[0]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[1]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[2]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[14]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[11]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[15]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[3]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[4]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[5]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[6]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[12]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[13]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[7]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[8]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[9]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/o_data_out_ch0[10]}]
+
+
+
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[1]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[14]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[4]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[15]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[7]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[10]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[11]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[12]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[0]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[13]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[2]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[3]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[5]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[9]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[6]}]
+set_property MARK_DEBUG false [get_nets {zsys_i/ADC/AXI_ADC_1_o_data_out_ch0[8]}]
+
+
+
+set_property MARK_DEBUG false [get_nets zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/misaligned]
+set_property MARK_DEBUG false [get_nets zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/BITSLIP]
+set_property MARK_DEBUG false [get_nets zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/bitslip_even_reg_n_0]
+
+connect_debug_port u_ila_0/probe3 [get_nets [list zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/BITSLIP]]
+connect_debug_port u_ila_0/probe4 [get_nets [list zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/bitslip_even_reg_n_0]]
 
 create_debug_core u_ila_0 ila
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
 set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
-set_property C_DATA_DEPTH 32768 [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
 set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
 set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
 set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
@@ -423,7 +489,7 @@ set_property port_width 1 [get_debug_ports u_ila_0/clk]
 connect_debug_port u_ila_0/clk [get_nets [list zsys_i/processing_system7_0/inst/FCLK_CLK0]]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
 set_property port_width 12 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {zsys_i/ADC/mapper_0_o_out_0[0]} {zsys_i/ADC/mapper_0_o_out_0[1]} {zsys_i/ADC/mapper_0_o_out_0[2]} {zsys_i/ADC/mapper_0_o_out_0[3]} {zsys_i/ADC/mapper_0_o_out_0[4]} {zsys_i/ADC/mapper_0_o_out_0[5]} {zsys_i/ADC/mapper_0_o_out_0[6]} {zsys_i/ADC/mapper_0_o_out_0[7]} {zsys_i/ADC/mapper_0_o_out_0[8]} {zsys_i/ADC/mapper_0_o_out_0[9]} {zsys_i/ADC/mapper_0_o_out_0[10]} {zsys_i/ADC/mapper_0_o_out_0[11]}]]
+connect_debug_port u_ila_0/probe0 [get_nets [list {zsys_i/ADC/mapper_0_o_out_7[0]} {zsys_i/ADC/mapper_0_o_out_7[1]} {zsys_i/ADC/mapper_0_o_out_7[2]} {zsys_i/ADC/mapper_0_o_out_7[3]} {zsys_i/ADC/mapper_0_o_out_7[4]} {zsys_i/ADC/mapper_0_o_out_7[5]} {zsys_i/ADC/mapper_0_o_out_7[6]} {zsys_i/ADC/mapper_0_o_out_7[7]} {zsys_i/ADC/mapper_0_o_out_7[8]} {zsys_i/ADC/mapper_0_o_out_7[9]} {zsys_i/ADC/mapper_0_o_out_7[10]} {zsys_i/ADC/mapper_0_o_out_7[11]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
 set_property port_width 12 [get_debug_ports u_ila_0/probe1]
@@ -431,27 +497,11 @@ connect_debug_port u_ila_0/probe1 [get_nets [list {zsys_i/ADC/mapper_0_o_out_3[0
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
 set_property port_width 12 [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list {zsys_i/ADC/mapper_0_o_out_7[0]} {zsys_i/ADC/mapper_0_o_out_7[1]} {zsys_i/ADC/mapper_0_o_out_7[2]} {zsys_i/ADC/mapper_0_o_out_7[3]} {zsys_i/ADC/mapper_0_o_out_7[4]} {zsys_i/ADC/mapper_0_o_out_7[5]} {zsys_i/ADC/mapper_0_o_out_7[6]} {zsys_i/ADC/mapper_0_o_out_7[7]} {zsys_i/ADC/mapper_0_o_out_7[8]} {zsys_i/ADC/mapper_0_o_out_7[9]} {zsys_i/ADC/mapper_0_o_out_7[10]} {zsys_i/ADC/mapper_0_o_out_7[11]}]]
+connect_debug_port u_ila_0/probe2 [get_nets [list {zsys_i/ADC/mapper_0_o_out_0[0]} {zsys_i/ADC/mapper_0_o_out_0[1]} {zsys_i/ADC/mapper_0_o_out_0[2]} {zsys_i/ADC/mapper_0_o_out_0[3]} {zsys_i/ADC/mapper_0_o_out_0[4]} {zsys_i/ADC/mapper_0_o_out_0[5]} {zsys_i/ADC/mapper_0_o_out_0[6]} {zsys_i/ADC/mapper_0_o_out_0[7]} {zsys_i/ADC/mapper_0_o_out_0[8]} {zsys_i/ADC/mapper_0_o_out_0[9]} {zsys_i/ADC/mapper_0_o_out_0[10]} {zsys_i/ADC/mapper_0_o_out_0[11]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
 set_property port_width 1 [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list zsys_i/ADC_MISO]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
-set_property port_width 1 [get_debug_ports u_ila_0/probe4]
-connect_debug_port u_ila_0/probe4 [get_nets [list zsys_i/ADC/ADC_MISO]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
-set_property port_width 1 [get_debug_ports u_ila_0/probe5]
-connect_debug_port u_ila_0/probe5 [get_nets [list zsys_i/ADC_MOSI]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
-set_property port_width 1 [get_debug_ports u_ila_0/probe6]
-connect_debug_port u_ila_0/probe6 [get_nets [list zsys_i/ADC_SCLK]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
-set_property port_width 1 [get_debug_ports u_ila_0/probe7]
-connect_debug_port u_ila_0/probe7 [get_nets [list zsys_i/trigger_logic_0_o_out_trigger]]
+connect_debug_port u_ila_0/probe3 [get_nets [list zsys_i/trigger_logic_0_o_out_trigger]]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

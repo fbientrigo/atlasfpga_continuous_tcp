@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-// Date        : Tue Dec 10 18:15:32 2024
+// Date        : Fri Dec 13 18:27:00 2024
 // Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_AXI_ADC_1_0/zsys_AXI_ADC_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top zsys_AXI_ADC_1_0 -prefix
+//               zsys_AXI_ADC_1_0_ zsys_AXI_ADC_1_0_sim_netlist.v
 // Design      : zsys_AXI_ADC_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,231 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "zsys_AXI_ADC_1_0,AXI_ADC_v3,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "AXI_ADC_v3,Vivado 2018.2" *) 
-(* NotValidForBitStream *)
-module zsys_AXI_ADC_1_0
-   (i_MISO,
-    o_MOSI,
-    o_SCLK,
-    o_nCS,
-    o_ADC_nrst,
-    o_debug,
-    i_ADclk,
-    i_Lclk,
-    i_data_in_ch0_p,
-    i_data_in_ch0_n,
-    i_data_in_ch1_p,
-    i_data_in_ch1_n,
-    i_data_in_ch2_p,
-    i_data_in_ch2_n,
-    i_data_in_ch3_p,
-    i_data_in_ch3_n,
-    i_data_in_ch4_p,
-    i_data_in_ch4_n,
-    i_data_in_ch5_p,
-    i_data_in_ch5_n,
-    i_data_in_ch6_p,
-    i_data_in_ch6_n,
-    i_data_in_ch7_p,
-    i_data_in_ch7_n,
-    o_data_out_ch0,
-    o_data_out_ch1,
-    o_data_out_ch2,
-    o_data_out_ch3,
-    o_data_out_ch4,
-    o_data_out_ch5,
-    o_data_out_ch6,
-    o_data_out_ch7,
-    o_data_clk,
-    s00_axi_awaddr,
-    s00_axi_awprot,
-    s00_axi_awvalid,
-    s00_axi_awready,
-    s00_axi_wdata,
-    s00_axi_wstrb,
-    s00_axi_wvalid,
-    s00_axi_wready,
-    s00_axi_bresp,
-    s00_axi_bvalid,
-    s00_axi_bready,
-    s00_axi_araddr,
-    s00_axi_arprot,
-    s00_axi_arvalid,
-    s00_axi_arready,
-    s00_axi_rdata,
-    s00_axi_rresp,
-    s00_axi_rvalid,
-    s00_axi_rready,
-    s00_axi_aclk,
-    s00_axi_aresetn);
-  input i_MISO;
-  output o_MOSI;
-  output o_SCLK;
-  output o_nCS;
-  output o_ADC_nrst;
-  output [11:0]o_debug;
-  input i_ADclk;
-  input i_Lclk;
-  input i_data_in_ch0_p;
-  input i_data_in_ch0_n;
-  input i_data_in_ch1_p;
-  input i_data_in_ch1_n;
-  input i_data_in_ch2_p;
-  input i_data_in_ch2_n;
-  input i_data_in_ch3_p;
-  input i_data_in_ch3_n;
-  input i_data_in_ch4_p;
-  input i_data_in_ch4_n;
-  input i_data_in_ch5_p;
-  input i_data_in_ch5_n;
-  input i_data_in_ch6_p;
-  input i_data_in_ch6_n;
-  input i_data_in_ch7_p;
-  input i_data_in_ch7_n;
-  output [15:0]o_data_out_ch0;
-  output [15:0]o_data_out_ch1;
-  output [15:0]o_data_out_ch2;
-  output [15:0]o_data_out_ch3;
-  output [15:0]o_data_out_ch4;
-  output [15:0]o_data_out_ch5;
-  output [15:0]o_data_out_ch6;
-  output [15:0]o_data_out_ch7;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 o_data_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME o_data_clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_AXI_ADC_1_0_o_data_clk" *) output o_data_clk;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]s00_axi_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [3:0]s00_axi_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) input s00_axi_rready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input s00_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
-
-  wire \<const0> ;
-  wire i_ADclk;
-  wire i_Lclk;
-  wire i_MISO;
-  wire i_data_in_ch0_n;
-  wire i_data_in_ch0_p;
-  wire i_data_in_ch1_n;
-  wire i_data_in_ch1_p;
-  wire i_data_in_ch2_n;
-  wire i_data_in_ch2_p;
-  wire i_data_in_ch3_n;
-  wire i_data_in_ch3_p;
-  wire i_data_in_ch4_n;
-  wire i_data_in_ch4_p;
-  wire i_data_in_ch5_n;
-  wire i_data_in_ch5_p;
-  wire i_data_in_ch6_n;
-  wire i_data_in_ch6_p;
-  wire i_data_in_ch7_n;
-  wire i_data_in_ch7_p;
-  wire o_SCLK;
-  wire [15:0]o_data_out_ch0;
-  wire [15:0]o_data_out_ch1;
-  wire [15:0]o_data_out_ch2;
-  wire [15:0]o_data_out_ch3;
-  wire [15:0]o_data_out_ch4;
-  wire [15:0]o_data_out_ch5;
-  wire [15:0]o_data_out_ch6;
-  wire [15:0]o_data_out_ch7;
-  wire [11:0]\^o_debug ;
-  wire s00_axi_aclk;
-  wire [3:0]s00_axi_araddr;
-  wire s00_axi_aresetn;
-  wire s00_axi_arready;
-  wire s00_axi_arvalid;
-  wire [3:0]s00_axi_awaddr;
-  wire s00_axi_awready;
-  wire s00_axi_awvalid;
-  wire s00_axi_bready;
-  wire s00_axi_bvalid;
-  wire [31:0]s00_axi_rdata;
-  wire s00_axi_rready;
-  wire s00_axi_rvalid;
-  wire [31:0]s00_axi_wdata;
-  wire s00_axi_wready;
-  wire [3:0]s00_axi_wstrb;
-  wire s00_axi_wvalid;
-
-  assign o_ADC_nrst = \^o_debug [11];
-  assign o_MOSI = \^o_debug [5];
-  assign o_data_clk = i_ADclk;
-  assign o_debug[11:7] = \^o_debug [11:7];
-  assign o_debug[6] = o_SCLK;
-  assign o_debug[5] = \^o_debug [5];
-  assign o_debug[4] = i_MISO;
-  assign o_debug[2] = \^o_debug [2];
-  assign o_debug[0] = \^o_debug [0];
-  assign o_nCS = \^o_debug [7];
-  assign s00_axi_bresp[1] = \<const0> ;
-  assign s00_axi_bresp[0] = \<const0> ;
-  assign s00_axi_rresp[1] = \<const0> ;
-  assign s00_axi_rresp[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  zsys_AXI_ADC_1_0_AXI_ADC_v3 U0
-       (.CLKB(i_Lclk),
-        .i_ADclk(i_ADclk),
-        .i_Lclk(i_Lclk),
-        .i_data_in_ch0_n(i_data_in_ch0_n),
-        .i_data_in_ch0_p(i_data_in_ch0_p),
-        .i_data_in_ch1_n(i_data_in_ch1_n),
-        .i_data_in_ch1_p(i_data_in_ch1_p),
-        .i_data_in_ch2_n(i_data_in_ch2_n),
-        .i_data_in_ch2_p(i_data_in_ch2_p),
-        .i_data_in_ch3_n(i_data_in_ch3_n),
-        .i_data_in_ch3_p(i_data_in_ch3_p),
-        .i_data_in_ch4_n(i_data_in_ch4_n),
-        .i_data_in_ch4_p(i_data_in_ch4_p),
-        .i_data_in_ch5_n(i_data_in_ch5_n),
-        .i_data_in_ch5_p(i_data_in_ch5_p),
-        .i_data_in_ch6_n(i_data_in_ch6_n),
-        .i_data_in_ch6_p(i_data_in_ch6_p),
-        .i_data_in_ch7_n(i_data_in_ch7_n),
-        .i_data_in_ch7_p(i_data_in_ch7_p),
-        .o_data_out_ch0(o_data_out_ch0),
-        .o_data_out_ch1(o_data_out_ch1),
-        .o_data_out_ch2(o_data_out_ch2),
-        .o_data_out_ch3(o_data_out_ch3),
-        .o_data_out_ch4(o_data_out_ch4),
-        .o_data_out_ch5(o_data_out_ch5),
-        .o_data_out_ch6(o_data_out_ch6),
-        .o_data_out_ch7(o_data_out_ch7),
-        .o_debug({\^o_debug [11:7],o_SCLK,\^o_debug [5],\^o_debug [2],\^o_debug [0]}),
-        .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_araddr(s00_axi_araddr[3:2]),
-        .s00_axi_aresetn(s00_axi_aresetn),
-        .s00_axi_arready(s00_axi_arready),
-        .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_awaddr(s00_axi_awaddr[3:2]),
-        .s00_axi_awready(s00_axi_awready),
-        .s00_axi_awvalid(s00_axi_awvalid),
-        .s00_axi_bready(s00_axi_bready),
-        .s00_axi_bvalid(s00_axi_bvalid),
-        .s00_axi_rdata(s00_axi_rdata),
-        .s00_axi_rready(s00_axi_rready),
-        .s00_axi_rvalid(s00_axi_rvalid),
-        .s00_axi_wdata(s00_axi_wdata),
-        .s00_axi_wready(s00_axi_wready),
-        .s00_axi_wstrb(s00_axi_wstrb),
-        .s00_axi_wvalid(s00_axi_wvalid));
-endmodule
-
-(* ORIG_REF_NAME = "ADC_ctrl" *) 
 module zsys_AXI_ADC_1_0_ADC_ctrl
    (o_debug,
     s00_axi_aclk,
@@ -504,10 +279,9 @@ module zsys_AXI_ADC_1_0_ADC_ctrl
         .Q(L[2]));
 endmodule
 
-(* ORIG_REF_NAME = "ADC_readout_3" *) 
 module zsys_AXI_ADC_1_0_ADC_readout_3
-   (o_data_out_ch0,
-    SR,
+   (SR,
+    o_data_out_ch0,
     o_data_out_ch1,
     o_data_out_ch2,
     o_data_out_ch3,
@@ -535,8 +309,8 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     i_data_in_ch7_p,
     i_data_in_ch7_n,
     s00_axi_aresetn);
-  output [15:0]o_data_out_ch0;
   output [0:0]SR;
+  output [15:0]o_data_out_ch0;
   output [15:0]o_data_out_ch1;
   output [15:0]o_data_out_ch2;
   output [15:0]o_data_out_ch3;
@@ -565,10 +339,25 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
   input i_data_in_ch7_n;
   input s00_axi_aresetn;
 
+  wire BITSLIP;
   wire CLKB;
+  wire Q1;
+  wire Q2;
+  wire Q3;
+  wire Q4;
+  wire Q5;
+  wire Q6;
+  wire Q7;
   wire [0:0]SR;
-  wire bitslip_even;
-  wire bitslip_odd;
+  wire bitslip_even_i_1_n_0;
+  wire bitslip_even_reg_n_0;
+  wire bitslip_odd_i_1_n_0;
+  wire flag1;
+  wire flag1_i_1_n_0;
+  wire flag1_i_2_n_0;
+  wire flag2;
+  wire flag2_i_1_n_0;
+  wire flag2_i_2_n_0;
   wire i_ADclk;
   wire i_Lclk;
   wire i_data_in_ch0_n;
@@ -587,6 +376,13 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
   wire i_data_in_ch6_p;
   wire i_data_in_ch7_n;
   wire i_data_in_ch7_p;
+  wire iserdes_frame_p_odd_n_1;
+  wire iserdes_frame_p_odd_n_2;
+  wire iserdes_frame_p_odd_n_3;
+  wire iserdes_frame_p_odd_n_4;
+  wire iserdes_frame_p_odd_n_5;
+  wire iserdes_frame_p_odd_n_6;
+  wire iserdes_frame_p_odd_n_7;
   wire [15:0]o_data_out_ch0;
   wire [15:0]o_data_out_ch1;
   wire [15:0]o_data_out_ch2;
@@ -596,6 +392,14 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
   wire [15:0]o_data_out_ch6;
   wire [15:0]o_data_out_ch7;
   wire s00_axi_aresetn;
+  wire \t_wait1[0]_i_1_n_0 ;
+  wire \t_wait1[1]_i_1_n_0 ;
+  wire \t_wait1_reg_n_0_[0] ;
+  wire \t_wait1_reg_n_0_[1] ;
+  wire \t_wait2[0]_i_1_n_0 ;
+  wire \t_wait2[1]_i_1_n_0 ;
+  wire \t_wait2_reg_n_0_[0] ;
+  wire \t_wait2_reg_n_0_[1] ;
   wire NLW_iserdes0_even_O_UNCONNECTED;
   wire NLW_iserdes0_even_SHIFTOUT1_UNCONNECTED;
   wire NLW_iserdes0_even_SHIFTOUT2_UNCONNECTED;
@@ -644,7 +448,103 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
   wire NLW_iserdes7_p_O_UNCONNECTED;
   wire NLW_iserdes7_p_SHIFTOUT1_UNCONNECTED;
   wire NLW_iserdes7_p_SHIFTOUT2_UNCONNECTED;
+  wire NLW_iserdes_frame_n_even_O_UNCONNECTED;
+  wire NLW_iserdes_frame_n_even_Q8_UNCONNECTED;
+  wire NLW_iserdes_frame_n_even_SHIFTOUT1_UNCONNECTED;
+  wire NLW_iserdes_frame_n_even_SHIFTOUT2_UNCONNECTED;
+  wire NLW_iserdes_frame_p_odd_O_UNCONNECTED;
+  wire NLW_iserdes_frame_p_odd_Q8_UNCONNECTED;
+  wire NLW_iserdes_frame_p_odd_SHIFTOUT1_UNCONNECTED;
+  wire NLW_iserdes_frame_p_odd_SHIFTOUT2_UNCONNECTED;
 
+  LUT6 #(
+    .INIT(64'hFFF0EEEE0000EEEE)) 
+    bitslip_even_i_1
+       (.I0(Q7),
+        .I1(flag2_i_2_n_0),
+        .I2(\t_wait2_reg_n_0_[0] ),
+        .I3(\t_wait2_reg_n_0_[1] ),
+        .I4(flag2),
+        .I5(bitslip_even_reg_n_0),
+        .O(bitslip_even_i_1_n_0));
+  FDCE bitslip_even_reg
+       (.C(i_ADclk),
+        .CE(1'b1),
+        .CLR(SR),
+        .D(bitslip_even_i_1_n_0),
+        .Q(bitslip_even_reg_n_0));
+  LUT6 #(
+    .INIT(64'hFFF0DDDD0000DDDD)) 
+    bitslip_odd_i_1
+       (.I0(iserdes_frame_p_odd_n_5),
+        .I1(flag1_i_2_n_0),
+        .I2(\t_wait1_reg_n_0_[0] ),
+        .I3(\t_wait1_reg_n_0_[1] ),
+        .I4(flag1),
+        .I5(BITSLIP),
+        .O(bitslip_odd_i_1_n_0));
+  FDCE bitslip_odd_reg
+       (.C(i_ADclk),
+        .CE(1'b1),
+        .CLR(SR),
+        .D(bitslip_odd_i_1_n_0),
+        .Q(BITSLIP));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT5 #(
+    .INIT(32'hBFB0BFBF)) 
+    flag1_i_1
+       (.I0(\t_wait1_reg_n_0_[0] ),
+        .I1(\t_wait1_reg_n_0_[1] ),
+        .I2(flag1),
+        .I3(flag1_i_2_n_0),
+        .I4(iserdes_frame_p_odd_n_5),
+        .O(flag1_i_1_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFDFFFFFFFF)) 
+    flag1_i_2
+       (.I0(iserdes_frame_p_odd_n_4),
+        .I1(iserdes_frame_p_odd_n_3),
+        .I2(iserdes_frame_p_odd_n_7),
+        .I3(iserdes_frame_p_odd_n_1),
+        .I4(iserdes_frame_p_odd_n_2),
+        .I5(iserdes_frame_p_odd_n_6),
+        .O(flag1_i_2_n_0));
+  FDCE #(
+    .INIT(1'b0)) 
+    flag1_reg
+       (.C(i_ADclk),
+        .CE(1'b1),
+        .CLR(SR),
+        .D(flag1_i_1_n_0),
+        .Q(flag1));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT5 #(
+    .INIT(32'hBFBFBFB0)) 
+    flag2_i_1
+       (.I0(\t_wait2_reg_n_0_[0] ),
+        .I1(\t_wait2_reg_n_0_[1] ),
+        .I2(flag2),
+        .I3(flag2_i_2_n_0),
+        .I4(Q7),
+        .O(flag2_i_1_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFBFFF)) 
+    flag2_i_2
+       (.I0(Q5),
+        .I1(Q1),
+        .I2(Q3),
+        .I3(Q2),
+        .I4(Q4),
+        .I5(Q6),
+        .O(flag2_i_2_n_0));
+  FDCE #(
+    .INIT(1'b0)) 
+    flag2_reg
+       (.C(i_ADclk),
+        .CE(1'b1),
+        .CLR(SR),
+        .D(flag2_i_1_n_0),
+        .Q(flag2));
   (* box_type = "PRIMITIVE" *) 
   ISERDESE2 #(
     .DATA_RATE("SDR"),
@@ -672,7 +572,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes0_even
-       (.BITSLIP(bitslip_even),
+       (.BITSLIP(bitslip_even_reg_n_0),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -727,7 +627,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes0_odd
-       (.BITSLIP(bitslip_odd),
+       (.BITSLIP(BITSLIP),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -782,7 +682,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes1_n
-       (.BITSLIP(bitslip_even),
+       (.BITSLIP(bitslip_even_reg_n_0),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -837,7 +737,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes1_p
-       (.BITSLIP(bitslip_odd),
+       (.BITSLIP(BITSLIP),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -892,7 +792,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes2_n
-       (.BITSLIP(bitslip_even),
+       (.BITSLIP(bitslip_even_reg_n_0),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -947,7 +847,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes2_p
-       (.BITSLIP(bitslip_odd),
+       (.BITSLIP(BITSLIP),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -1002,7 +902,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes3_n
-       (.BITSLIP(bitslip_even),
+       (.BITSLIP(bitslip_even_reg_n_0),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -1057,7 +957,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes3_p
-       (.BITSLIP(bitslip_odd),
+       (.BITSLIP(BITSLIP),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -1112,7 +1012,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes4_n
-       (.BITSLIP(bitslip_even),
+       (.BITSLIP(bitslip_even_reg_n_0),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -1167,7 +1067,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes4_p
-       (.BITSLIP(bitslip_odd),
+       (.BITSLIP(BITSLIP),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -1222,7 +1122,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes5_n
-       (.BITSLIP(bitslip_even),
+       (.BITSLIP(bitslip_even_reg_n_0),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -1277,7 +1177,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes5_p
-       (.BITSLIP(bitslip_odd),
+       (.BITSLIP(BITSLIP),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -1332,7 +1232,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes6_n
-       (.BITSLIP(bitslip_even),
+       (.BITSLIP(bitslip_even_reg_n_0),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -1387,7 +1287,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes6_p
-       (.BITSLIP(bitslip_odd),
+       (.BITSLIP(BITSLIP),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -1442,7 +1342,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes7_n
-       (.BITSLIP(bitslip_even),
+       (.BITSLIP(bitslip_even_reg_n_0),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -1497,7 +1397,7 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
     .SRVAL_Q3(1'b0),
     .SRVAL_Q4(1'b0)) 
     iserdes7_p
-       (.BITSLIP(bitslip_odd),
+       (.BITSLIP(BITSLIP),
         .CE1(1'b1),
         .CE2(1'b1),
         .CLK(i_Lclk),
@@ -1525,14 +1425,185 @@ module zsys_AXI_ADC_1_0_ADC_readout_3
         .SHIFTIN2(1'b0),
         .SHIFTOUT1(NLW_iserdes7_p_SHIFTOUT1_UNCONNECTED),
         .SHIFTOUT2(NLW_iserdes7_p_SHIFTOUT2_UNCONNECTED));
+  (* box_type = "PRIMITIVE" *) 
+  ISERDESE2 #(
+    .DATA_RATE("SDR"),
+    .DATA_WIDTH(6),
+    .DYN_CLKDIV_INV_EN("FALSE"),
+    .DYN_CLK_INV_EN("FALSE"),
+    .INIT_Q1(1'b0),
+    .INIT_Q2(1'b0),
+    .INIT_Q3(1'b0),
+    .INIT_Q4(1'b0),
+    .INTERFACE_TYPE("NETWORKING"),
+    .IOBDELAY("NONE"),
+    .IS_CLKB_INVERTED(1'b1),
+    .IS_CLKDIVP_INVERTED(1'b0),
+    .IS_CLKDIV_INVERTED(1'b0),
+    .IS_CLK_INVERTED(1'b0),
+    .IS_D_INVERTED(1'b1),
+    .IS_OCLKB_INVERTED(1'b0),
+    .IS_OCLK_INVERTED(1'b0),
+    .NUM_CE(2),
+    .OFB_USED("FALSE"),
+    .SERDES_MODE("MASTER"),
+    .SRVAL_Q1(1'b0),
+    .SRVAL_Q2(1'b0),
+    .SRVAL_Q3(1'b0),
+    .SRVAL_Q4(1'b0)) 
+    iserdes_frame_n_even
+       (.BITSLIP(bitslip_even_reg_n_0),
+        .CE1(1'b1),
+        .CE2(1'b1),
+        .CLK(i_Lclk),
+        .CLKB(CLKB),
+        .CLKDIV(i_ADclk),
+        .CLKDIVP(1'b0),
+        .D(i_ADclk),
+        .DDLY(1'b0),
+        .DYNCLKDIVSEL(1'b0),
+        .DYNCLKSEL(1'b0),
+        .O(NLW_iserdes_frame_n_even_O_UNCONNECTED),
+        .OCLK(1'b0),
+        .OCLKB(1'b0),
+        .OFB(1'b0),
+        .Q1(Q1),
+        .Q2(Q2),
+        .Q3(Q3),
+        .Q4(Q4),
+        .Q5(Q5),
+        .Q6(Q6),
+        .Q7(Q7),
+        .Q8(NLW_iserdes_frame_n_even_Q8_UNCONNECTED),
+        .RST(SR),
+        .SHIFTIN1(1'b0),
+        .SHIFTIN2(1'b0),
+        .SHIFTOUT1(NLW_iserdes_frame_n_even_SHIFTOUT1_UNCONNECTED),
+        .SHIFTOUT2(NLW_iserdes_frame_n_even_SHIFTOUT2_UNCONNECTED));
+  (* box_type = "PRIMITIVE" *) 
+  ISERDESE2 #(
+    .DATA_RATE("SDR"),
+    .DATA_WIDTH(6),
+    .DYN_CLKDIV_INV_EN("FALSE"),
+    .DYN_CLK_INV_EN("TRUE"),
+    .INIT_Q1(1'b0),
+    .INIT_Q2(1'b0),
+    .INIT_Q3(1'b0),
+    .INIT_Q4(1'b0),
+    .INTERFACE_TYPE("NETWORKING"),
+    .IOBDELAY("NONE"),
+    .IS_CLKB_INVERTED(1'b1),
+    .IS_CLKDIVP_INVERTED(1'b0),
+    .IS_CLKDIV_INVERTED(1'b0),
+    .IS_CLK_INVERTED(1'b0),
+    .IS_D_INVERTED(1'b0),
+    .IS_OCLKB_INVERTED(1'b0),
+    .IS_OCLK_INVERTED(1'b0),
+    .NUM_CE(2),
+    .OFB_USED("FALSE"),
+    .SERDES_MODE("MASTER"),
+    .SRVAL_Q1(1'b0),
+    .SRVAL_Q2(1'b0),
+    .SRVAL_Q3(1'b0),
+    .SRVAL_Q4(1'b0)) 
+    iserdes_frame_p_odd
+       (.BITSLIP(BITSLIP),
+        .CE1(1'b1),
+        .CE2(1'b1),
+        .CLK(i_Lclk),
+        .CLKB(CLKB),
+        .CLKDIV(i_ADclk),
+        .CLKDIVP(1'b0),
+        .D(i_ADclk),
+        .DDLY(1'b0),
+        .DYNCLKDIVSEL(1'b0),
+        .DYNCLKSEL(1'b0),
+        .O(NLW_iserdes_frame_p_odd_O_UNCONNECTED),
+        .OCLK(1'b0),
+        .OCLKB(1'b0),
+        .OFB(1'b0),
+        .Q1(iserdes_frame_p_odd_n_1),
+        .Q2(iserdes_frame_p_odd_n_2),
+        .Q3(iserdes_frame_p_odd_n_3),
+        .Q4(iserdes_frame_p_odd_n_4),
+        .Q5(iserdes_frame_p_odd_n_5),
+        .Q6(iserdes_frame_p_odd_n_6),
+        .Q7(iserdes_frame_p_odd_n_7),
+        .Q8(NLW_iserdes_frame_p_odd_Q8_UNCONNECTED),
+        .RST(SR),
+        .SHIFTIN1(1'b0),
+        .SHIFTIN2(1'b0),
+        .SHIFTOUT1(NLW_iserdes_frame_p_odd_SHIFTOUT1_UNCONNECTED),
+        .SHIFTOUT2(NLW_iserdes_frame_p_odd_SHIFTOUT2_UNCONNECTED));
   LUT1 #(
     .INIT(2'h1)) 
     ready_i_i_2
        (.I0(s00_axi_aresetn),
         .O(SR));
+  LUT3 #(
+    .INIT(8'h34)) 
+    \t_wait1[0]_i_1 
+       (.I0(\t_wait1_reg_n_0_[1] ),
+        .I1(flag1),
+        .I2(\t_wait1_reg_n_0_[0] ),
+        .O(\t_wait1[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'h38)) 
+    \t_wait1[1]_i_1 
+       (.I0(\t_wait1_reg_n_0_[0] ),
+        .I1(flag1),
+        .I2(\t_wait1_reg_n_0_[1] ),
+        .O(\t_wait1[1]_i_1_n_0 ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \t_wait1_reg[0] 
+       (.C(i_ADclk),
+        .CE(1'b1),
+        .CLR(SR),
+        .D(\t_wait1[0]_i_1_n_0 ),
+        .Q(\t_wait1_reg_n_0_[0] ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \t_wait1_reg[1] 
+       (.C(i_ADclk),
+        .CE(1'b1),
+        .CLR(SR),
+        .D(\t_wait1[1]_i_1_n_0 ),
+        .Q(\t_wait1_reg_n_0_[1] ));
+  LUT3 #(
+    .INIT(8'h34)) 
+    \t_wait2[0]_i_1 
+       (.I0(\t_wait2_reg_n_0_[1] ),
+        .I1(flag2),
+        .I2(\t_wait2_reg_n_0_[0] ),
+        .O(\t_wait2[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'h38)) 
+    \t_wait2[1]_i_1 
+       (.I0(\t_wait2_reg_n_0_[0] ),
+        .I1(flag2),
+        .I2(\t_wait2_reg_n_0_[1] ),
+        .O(\t_wait2[1]_i_1_n_0 ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \t_wait2_reg[0] 
+       (.C(i_ADclk),
+        .CE(1'b1),
+        .CLR(SR),
+        .D(\t_wait2[0]_i_1_n_0 ),
+        .Q(\t_wait2_reg_n_0_[0] ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \t_wait2_reg[1] 
+       (.C(i_ADclk),
+        .CE(1'b1),
+        .CLR(SR),
+        .D(\t_wait2[1]_i_1_n_0 ),
+        .Q(\t_wait2_reg_n_0_[1] ));
 endmodule
 
-(* ORIG_REF_NAME = "AXI_ADC_v3" *) 
 module zsys_AXI_ADC_1_0_AXI_ADC_v3
    (o_data_out_ch0,
     o_data_out_ch1,
@@ -1719,7 +1790,6 @@ module zsys_AXI_ADC_1_0_AXI_ADC_v3
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "AXI_ADC_v3_0_S00_AXI" *) 
 module zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI
    (o_data_out_ch0,
     o_data_out_ch1,
@@ -1994,7 +2064,7 @@ module zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI
         .D(\axi_araddr[3]_i_1_n_0 ),
         .Q(axi_araddr[3]),
         .S(i_rst));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
@@ -2007,7 +2077,7 @@ module zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI
         .D(axi_arready0),
         .Q(s00_axi_arready),
         .R(i_rst));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'hFFBF0080)) 
     \axi_awaddr[2]_i_1 
@@ -2038,7 +2108,7 @@ module zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI
         .D(\axi_awaddr[3]_i_1_n_0 ),
         .Q(axi_awaddr[3]),
         .R(i_rst));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'h08)) 
     axi_awready_i_1
@@ -2587,7 +2657,7 @@ module zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI
         .D(reg_data_out[9]),
         .Q(s00_axi_rdata[9]),
         .R(i_rst));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'h08F8)) 
     axi_rvalid_i_1
@@ -2602,7 +2672,7 @@ module zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(s00_axi_rvalid),
         .R(i_rst));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'h08)) 
     axi_wready_i_1
@@ -2688,7 +2758,7 @@ module zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI
         .I2(s00_axi_wstrb[3]),
         .I3(axi_awaddr[2]),
         .O(\slv_reg0[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg0[31]_i_2 
@@ -3689,7 +3759,6 @@ module zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "SPI_core_v2" *) 
 module zsys_AXI_ADC_1_0_SPI_core_v2
    (o_SCLK,
     AR,
@@ -4361,6 +4430,230 @@ module zsys_AXI_ADC_1_0_SPI_core_v2
         .I1(write_reg_reg),
         .I2(spi_free),
         .O(spi_start_reg));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "zsys_AXI_ADC_1_0,AXI_ADC_v3,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "AXI_ADC_v3,Vivado 2018.2" *) 
+(* NotValidForBitStream *)
+module zsys_AXI_ADC_1_0
+   (i_MISO,
+    o_MOSI,
+    o_SCLK,
+    o_nCS,
+    o_ADC_nrst,
+    o_debug,
+    i_ADclk,
+    i_Lclk,
+    i_data_in_ch0_p,
+    i_data_in_ch0_n,
+    i_data_in_ch1_p,
+    i_data_in_ch1_n,
+    i_data_in_ch2_p,
+    i_data_in_ch2_n,
+    i_data_in_ch3_p,
+    i_data_in_ch3_n,
+    i_data_in_ch4_p,
+    i_data_in_ch4_n,
+    i_data_in_ch5_p,
+    i_data_in_ch5_n,
+    i_data_in_ch6_p,
+    i_data_in_ch6_n,
+    i_data_in_ch7_p,
+    i_data_in_ch7_n,
+    o_data_out_ch0,
+    o_data_out_ch1,
+    o_data_out_ch2,
+    o_data_out_ch3,
+    o_data_out_ch4,
+    o_data_out_ch5,
+    o_data_out_ch6,
+    o_data_out_ch7,
+    o_data_clk,
+    s00_axi_awaddr,
+    s00_axi_awprot,
+    s00_axi_awvalid,
+    s00_axi_awready,
+    s00_axi_wdata,
+    s00_axi_wstrb,
+    s00_axi_wvalid,
+    s00_axi_wready,
+    s00_axi_bresp,
+    s00_axi_bvalid,
+    s00_axi_bready,
+    s00_axi_araddr,
+    s00_axi_arprot,
+    s00_axi_arvalid,
+    s00_axi_arready,
+    s00_axi_rdata,
+    s00_axi_rresp,
+    s00_axi_rvalid,
+    s00_axi_rready,
+    s00_axi_aclk,
+    s00_axi_aresetn);
+  input i_MISO;
+  output o_MOSI;
+  output o_SCLK;
+  output o_nCS;
+  output o_ADC_nrst;
+  output [11:0]o_debug;
+  input i_ADclk;
+  input i_Lclk;
+  input i_data_in_ch0_p;
+  input i_data_in_ch0_n;
+  input i_data_in_ch1_p;
+  input i_data_in_ch1_n;
+  input i_data_in_ch2_p;
+  input i_data_in_ch2_n;
+  input i_data_in_ch3_p;
+  input i_data_in_ch3_n;
+  input i_data_in_ch4_p;
+  input i_data_in_ch4_n;
+  input i_data_in_ch5_p;
+  input i_data_in_ch5_n;
+  input i_data_in_ch6_p;
+  input i_data_in_ch6_n;
+  input i_data_in_ch7_p;
+  input i_data_in_ch7_n;
+  output [15:0]o_data_out_ch0;
+  output [15:0]o_data_out_ch1;
+  output [15:0]o_data_out_ch2;
+  output [15:0]o_data_out_ch3;
+  output [15:0]o_data_out_ch4;
+  output [15:0]o_data_out_ch5;
+  output [15:0]o_data_out_ch6;
+  output [15:0]o_data_out_ch7;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 o_data_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME o_data_clk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_AXI_ADC_1_0_o_data_clk" *) output o_data_clk;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]s00_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [3:0]s00_axi_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) input s00_axi_rready;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN zsys_processing_system7_0_0_FCLK_CLK0" *) input s00_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
+
+  wire \<const0> ;
+  wire i_ADclk;
+  wire i_Lclk;
+  wire i_MISO;
+  wire i_data_in_ch0_n;
+  wire i_data_in_ch0_p;
+  wire i_data_in_ch1_n;
+  wire i_data_in_ch1_p;
+  wire i_data_in_ch2_n;
+  wire i_data_in_ch2_p;
+  wire i_data_in_ch3_n;
+  wire i_data_in_ch3_p;
+  wire i_data_in_ch4_n;
+  wire i_data_in_ch4_p;
+  wire i_data_in_ch5_n;
+  wire i_data_in_ch5_p;
+  wire i_data_in_ch6_n;
+  wire i_data_in_ch6_p;
+  wire i_data_in_ch7_n;
+  wire i_data_in_ch7_p;
+  wire o_SCLK;
+  wire [15:0]o_data_out_ch0;
+  wire [15:0]o_data_out_ch1;
+  wire [15:0]o_data_out_ch2;
+  wire [15:0]o_data_out_ch3;
+  wire [15:0]o_data_out_ch4;
+  wire [15:0]o_data_out_ch5;
+  wire [15:0]o_data_out_ch6;
+  wire [15:0]o_data_out_ch7;
+  wire [11:0]\^o_debug ;
+  wire s00_axi_aclk;
+  wire [3:0]s00_axi_araddr;
+  wire s00_axi_aresetn;
+  wire s00_axi_arready;
+  wire s00_axi_arvalid;
+  wire [3:0]s00_axi_awaddr;
+  wire s00_axi_awready;
+  wire s00_axi_awvalid;
+  wire s00_axi_bready;
+  wire s00_axi_bvalid;
+  wire [31:0]s00_axi_rdata;
+  wire s00_axi_rready;
+  wire s00_axi_rvalid;
+  wire [31:0]s00_axi_wdata;
+  wire s00_axi_wready;
+  wire [3:0]s00_axi_wstrb;
+  wire s00_axi_wvalid;
+
+  assign o_ADC_nrst = \^o_debug [11];
+  assign o_MOSI = \^o_debug [5];
+  assign o_data_clk = i_ADclk;
+  assign o_debug[11:7] = \^o_debug [11:7];
+  assign o_debug[6] = o_SCLK;
+  assign o_debug[5] = \^o_debug [5];
+  assign o_debug[4] = i_MISO;
+  assign o_debug[2] = \^o_debug [2];
+  assign o_debug[0] = \^o_debug [0];
+  assign o_nCS = \^o_debug [7];
+  assign s00_axi_bresp[1] = \<const0> ;
+  assign s00_axi_bresp[0] = \<const0> ;
+  assign s00_axi_rresp[1] = \<const0> ;
+  assign s00_axi_rresp[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  zsys_AXI_ADC_1_0_AXI_ADC_v3 U0
+       (.CLKB(i_Lclk),
+        .i_ADclk(i_ADclk),
+        .i_Lclk(i_Lclk),
+        .i_data_in_ch0_n(i_data_in_ch0_n),
+        .i_data_in_ch0_p(i_data_in_ch0_p),
+        .i_data_in_ch1_n(i_data_in_ch1_n),
+        .i_data_in_ch1_p(i_data_in_ch1_p),
+        .i_data_in_ch2_n(i_data_in_ch2_n),
+        .i_data_in_ch2_p(i_data_in_ch2_p),
+        .i_data_in_ch3_n(i_data_in_ch3_n),
+        .i_data_in_ch3_p(i_data_in_ch3_p),
+        .i_data_in_ch4_n(i_data_in_ch4_n),
+        .i_data_in_ch4_p(i_data_in_ch4_p),
+        .i_data_in_ch5_n(i_data_in_ch5_n),
+        .i_data_in_ch5_p(i_data_in_ch5_p),
+        .i_data_in_ch6_n(i_data_in_ch6_n),
+        .i_data_in_ch6_p(i_data_in_ch6_p),
+        .i_data_in_ch7_n(i_data_in_ch7_n),
+        .i_data_in_ch7_p(i_data_in_ch7_p),
+        .o_data_out_ch0(o_data_out_ch0),
+        .o_data_out_ch1(o_data_out_ch1),
+        .o_data_out_ch2(o_data_out_ch2),
+        .o_data_out_ch3(o_data_out_ch3),
+        .o_data_out_ch4(o_data_out_ch4),
+        .o_data_out_ch5(o_data_out_ch5),
+        .o_data_out_ch6(o_data_out_ch6),
+        .o_data_out_ch7(o_data_out_ch7),
+        .o_debug({\^o_debug [11:7],o_SCLK,\^o_debug [5],\^o_debug [2],\^o_debug [0]}),
+        .s00_axi_aclk(s00_axi_aclk),
+        .s00_axi_araddr(s00_axi_araddr[3:2]),
+        .s00_axi_aresetn(s00_axi_aresetn),
+        .s00_axi_arready(s00_axi_arready),
+        .s00_axi_arvalid(s00_axi_arvalid),
+        .s00_axi_awaddr(s00_axi_awaddr[3:2]),
+        .s00_axi_awready(s00_axi_awready),
+        .s00_axi_awvalid(s00_axi_awvalid),
+        .s00_axi_bready(s00_axi_bready),
+        .s00_axi_bvalid(s00_axi_bvalid),
+        .s00_axi_rdata(s00_axi_rdata),
+        .s00_axi_rready(s00_axi_rready),
+        .s00_axi_rvalid(s00_axi_rvalid),
+        .s00_axi_wdata(s00_axi_wdata),
+        .s00_axi_wready(s00_axi_wready),
+        .s00_axi_wstrb(s00_axi_wstrb),
+        .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -36,6 +36,7 @@ Generic(
   FRAME_PATTERN : std_logic_vector (5 downto 0) := "111000"
 );
   Port (
+  sys_clk      : in STD_LOGIC;
   i_ADclk        : in std_logic;
   --i_ADclk_n        : in std_logic;
   i_Lclk         : in std_logic;
@@ -65,8 +66,13 @@ Generic(
   o_ch6 : out std_logic_vector (15 downto 0);
   o_ch7 : out std_logic_vector (15 downto 0);
 
+  flag_odd : out std_logic;
+  flag_even : out std_logic;
+
   i_rst       : in std_logic;
   o_data_clk  : out std_logic
+  
+  
   ------
  );
 
@@ -113,7 +119,205 @@ signal bitslip_odd : std_logic;
 signal delay_even : std_logic_vector(2 downto 0);
 signal bitslip_even : std_logic;
 signal not_i_ADclk : std_logic;
+
+-- Delay adjustment
+signal i_ch0_p_delayed, i_ch0_n_delayed : std_logic;
+signal i_ch1_p_delayed, i_ch1_n_delayed : std_logic;
+signal i_ch2_p_delayed, i_ch2_n_delayed : std_logic;
+signal i_ch3_p_delayed, i_ch3_n_delayed : std_logic;
+signal i_ch4_p_delayed, i_ch4_n_delayed : std_logic;
+signal i_ch5_p_delayed, i_ch5_n_delayed : std_logic;
+signal i_ch6_p_delayed, i_ch6_n_delayed : std_logic;
+signal i_ch7_p_delayed, i_ch7_n_delayed : std_logic;
+signal delay_clk : std_logic;
+signal delay_ce : std_logic;
+signal delay_inc : std_logic;
+signal delay_ld : std_logic;
+signal misaligned : std_logic;
+signal idelay_ready : std_logic;  -- Calibration ready signal
+
+
+
+
 begin
+
+-- Try some bitslip 
+
+------------------------------------
+----------- Alineacion 2 -----------
+align_odd_1: process(adclk_i, i_rst)
+variable flag1 : std_logic := '0';
+variable t_wait1 : std_logic_vector(1 downto 0) := "00";
+
+begin
+    if (i_rst = '1')then  -- se utilizo el reset
+        bitslip_odd <= '0';
+        flag1 := '0';
+       -- flag1_odd<='0';           -- debug 
+        t_wait1:="00";
+       -- t_wait1_odd<="00";         -- debug 
+        --flag_odd <='0';            -- se han alineado los frame reset
+    --end if;
+    elsif rising_edge(adclk_i) then  -- no se uso el reset
+        ----- Se esta en tiempo de espera -----
+        if (flag1 = '1') then      -- condicion de que se esta en espera de tiempo para acentar datos
+            t_wait1 := t_wait1 +1;      
+       --     t_wait1_odd<=t_wait1_odd +1;    -- debug 
+             
+            if (t_wait1="01") then -- Se espera un ciclo de reloj para bajar bitslip odd  
+                bitslip_odd <= '0';                 
+                end if;               
+            if (t_wait1="11") then -- Se espero el tiempo necesario 
+                 t_wait1:="00";
+        --         t_wait1_odd<="00"; -- debug 
+                 flag1 := '0';
+        --         flag1_odd <= '0';  -- debug 
+            end if; 
+        else
+        if (frame(5 downto 0) = FRAME_PATTERN) then  -- 
+                  bitslip_odd <= '0';
+                  flag1:='0';
+                 --   flag1_odd <= '0';  -- debug
+                  flag_odd <='1';            -- se han alineado los frame
+        else 
+                  bitslip_odd <= '1';
+                  --bitslip_odd <= '0'; -- Only for debug
+                  flag1 := '1';               -- para tiempo de espera para que sea validos los datos despues del bitslip
+                  flag_odd <= '0';  -- debug        
+        end if;
+        end if;
+    end if;
+
+end process; 
+
+------------------------------------
+------------------------------------
+align_even_1: process(adclk_i, i_rst)
+variable flag2 : std_logic := '0';
+variable t_wait2 : std_logic_vector(1 downto 0) := "00";
+
+begin
+    if (i_rst = '1')then  -- se utilizo el reset
+        bitslip_even <= '0';
+        flag2 := '0';
+        --flag1_odd<='0';           -- debug 
+        t_wait2:="00";
+        --t_wait1_odd<="00";         -- debug 
+        --flag_even <='0';            -- se han alineado los frame reset
+    --end if;
+    elsif rising_edge(adclk_i) then  -- no se uso el reset
+        ----- Se esta en tiempo de espera -----
+        if (flag2 = '1') then      -- condicion de que se esta en espera de tiempo para acentar datos
+            t_wait2 := t_wait2 +1;      
+            --t_wait1_odd<=t_wait1_odd +1;    -- debug 
+             
+            if (t_wait2="01") then -- Se espera un ciclo de reloj para bajar bitslip odd  
+                bitslip_even <= '0';                 
+                end if;               
+            if (t_wait2="11") then -- Se espero el tiempo necesario 
+                 t_wait2:="00";
+                 --t_wait1_odd<="00"; -- debug 
+                 flag2 := '0';
+                 --flag1_odd <= '0';  -- debug 
+            end if; 
+        else
+        if (frame(13 downto 8) = not(FRAME_PATTERN)) then  -- 
+                  bitslip_even <= '0';
+                  flag2:='0';
+                  --flag1_odd <= '0';  -- debug
+                  flag_even <='1';            -- se han alineado los frame
+        else 
+                  bitslip_even <= '1';
+                  --bitslip_even <= '0'; -- Only for debug
+                  flag2 := '1';               -- para tiempo de espera para que sea validos los datos despues del bitslip
+                  flag_even <= '0';  -- debug        
+        end if;
+        end if;
+    end if;
+
+end process;
+
+
+iserdes_frame_p_odd : ISERDESE2 generic map(
+  DATA_WIDTH         => 6,       
+  DATA_RATE          => "SDR",     
+  SERDES_MODE        => "MASTER",     
+  --IOBDELAY        => "IFD",
+  DYN_CLK_INV_EN    => "TRUE",     
+  DYN_CLKDIV_INV_EN    => "FALSE",   
+  INTERFACE_TYPE     => "NETWORKING")   
+port map (                      
+  D           => i_ADclk,
+  DDLY         => '0',
+  CE1         => '1',
+  CE2         => '1',
+  CLK         => lclk_sys,
+  CLKB        => not_lclk_sys,
+  RST         => i_rst,
+  CLKDIV      => adclk_i,
+  CLKDIVP      => '0',
+  OCLK        => '0',
+  OCLKB        => '0',
+  DYNCLKSEL        => '0',
+  DYNCLKDIVSEL      => '0',
+  SHIFTIN1     => '0',
+  SHIFTIN2     => '0',
+  BITSLIP     => bitslip_odd,
+  O       => open,
+  Q8        => frame(7),
+  Q7        => frame(6),
+  Q6        => frame(5),
+  Q5        => frame(4),
+  Q4        => frame(3),
+  Q3        => frame(2),
+  Q2        => frame(1),
+  Q1        => frame(0),
+  OFB       => '0',
+  SHIFTOUT1    => open,
+  SHIFTOUT2     => open);
+
+iserdes_frame_n_even : ISERDESE2 generic map(
+  DATA_WIDTH         => 6,       
+  DATA_RATE          => "SDR",     
+--  SERDES_MODE        => "MASTER",     
+  --IOBDELAY        => "IFD",
+  DYN_CLK_INV_EN    => "FALSE",   
+  DYN_CLKDIV_INV_EN    => "FALSE",     
+  INTERFACE_TYPE     => "NETWORKING")   
+port map (                      
+  D           => not_i_ADclk,
+  DDLY         => '0',
+  CE1         => '1',
+  CE2         => '1',
+  CLK         => lclk_sys,
+  CLKB        => not_lclk_sys,
+  RST         => i_rst,
+  CLKDIV      => adclk_i,
+  CLKDIVP      => '0',
+  OCLK        => '0',
+  OCLKB        => '0',
+  DYNCLKSEL        => '0',
+  DYNCLKDIVSEL      => '0',
+  SHIFTIN1     => '0',
+  SHIFTIN2     => '0',
+  BITSLIP     => bitslip_even,
+  O       => open,
+  Q8        => frame(15),
+  Q7        => frame(14),
+  Q6        => frame(13),
+  Q5        => frame(12),
+  Q4        => frame(11),
+  Q3        => frame(10),
+  Q2        => frame(9),
+  Q1        => frame(8),
+  OFB       => '0',
+  SHIFTOUT1    => open,
+  SHIFTOUT2     => open);
+
+
+
+---------------------------------------------
+
 Lclk <= i_Lclk;
 not_i_ADclk <= not (i_ADclk);
 --  Lclk_IBUFDS_inst : IBUFDS
@@ -251,6 +455,388 @@ o_ch5 <= ch5;
 o_ch6 <= ch6; 
 o_ch7 <= ch7; 
 
+---- DELAYs
+
+-- Instantiate IDELAYCTRL; for stable IDELAYE2 operation. Vivado connects it automatically
+--idelay_ctrl_inst : IDELAYCTRL
+--port map (
+--    REFCLK => sys_clk,  -- Reference clock (200 MHz)
+--    RST    => i_rst,     -- System reset
+--    RDY    => idelay_ready -- Calibration ready signal
+--);
+
+--delay_clk <= adclk_i;
+--delay_ld <= i_rst;
+
+--IDELAYE2_inst_ch0_p : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",      -- Delay applied to input data
+--    IDELAY_TYPE => "VARIABLE",     -- Dynamically adjustable delay
+--    IDELAY_VALUE => 0              -- Initial delay value (0-31 taps)
+--)
+--port map (
+--    IDATAIN    => i_ch0_p,         -- Input LVDS data
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch0_p_delayed, -- Delayed output
+--    C          => delay_clk,       -- Clock for delay control
+--    CE         => delay_ce,        -- Enable delay adjustment
+--    INC        => delay_inc,       -- Increment delay
+--    LD         => delay_ld,        -- Load default delay
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'), -- Not used in this example
+--    CNTVALUEOUT => open            -- Optional feedback
+--);
+
+--IDELAYE2_inst_ch0_n : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",
+--    IDELAY_TYPE => "VARIABLE",
+--    IDELAY_VALUE => 0
+--)
+--port map (
+--    IDATAIN    => i_ch0_n,
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch0_n_delayed,
+--    C          => delay_clk,
+--    CE         => delay_ce,
+--    INC        => delay_inc,
+--    LD         => delay_ld,
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'),
+--    CNTVALUEOUT => open
+--);
+
+--IDELAYE2_inst_ch1_p : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",      -- Delay applied to input data
+--    IDELAY_TYPE => "VARIABLE",     -- Dynamically adjustable delay
+--    IDELAY_VALUE => 0              -- Initial delay value (0-31 taps)
+--)
+--port map (
+--    IDATAIN    => i_ch1_p,         -- Input LVDS data
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch1_p_delayed, -- Delayed output
+--    C          => delay_clk,       -- Clock for delay control
+--    CE         => delay_ce,        -- Enable delay adjustment
+--    INC        => delay_inc,       -- Increment delay
+--    LD         => delay_ld,        -- Load default delay
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'), -- Not used in this example
+--    CNTVALUEOUT => open            -- Optional feedback
+--);
+
+--IDELAYE2_inst_ch1_n : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",
+--    IDELAY_TYPE => "VARIABLE",
+--    IDELAY_VALUE => 0
+--)
+--port map (
+--    IDATAIN    => i_ch1_n,
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch1_n_delayed,
+--    C          => delay_clk,
+--    CE         => delay_ce,
+--    INC        => delay_inc,
+--    LD         => delay_ld,
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'),
+--    CNTVALUEOUT => open
+--);
+
+--IDELAYE2_inst_ch2_p : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",      -- Delay applied to input data
+--    IDELAY_TYPE => "VARIABLE",     -- Dynamically adjustable delay
+--    IDELAY_VALUE => 0              -- Initial delay value (0-31 taps)
+--)
+--port map (
+--    IDATAIN    => i_ch2_p,         -- Input LVDS data
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch2_p_delayed, -- Delayed output
+--    C          => delay_clk,       -- Clock for delay control
+--    CE         => delay_ce,        -- Enable delay adjustment
+--    INC        => delay_inc,       -- Increment delay
+--    LD         => delay_ld,        -- Load default delay
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'), -- Not used in this example
+--    CNTVALUEOUT => open            -- Optional feedback
+--);
+
+--IDELAYE2_inst_ch2_n : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",
+--    IDELAY_TYPE => "VARIABLE",
+--    IDELAY_VALUE => 0
+--)
+--port map (
+--    IDATAIN    => i_ch2_n,
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch2_n_delayed,
+--    C          => delay_clk,
+--    CE         => delay_ce,
+--    INC        => delay_inc,
+--    LD         => delay_ld,
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'),
+--    CNTVALUEOUT => open
+--);
+
+--IDELAYE2_inst_ch3_p : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",      -- Delay applied to input data
+--    IDELAY_TYPE => "VARIABLE",     -- Dynamically adjustable delay
+--    IDELAY_VALUE => 0              -- Initial delay value (0-31 taps)
+--)
+--port map (
+--    IDATAIN    => i_ch3_p,         -- Input LVDS data
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch3_p_delayed, -- Delayed output
+--    C          => delay_clk,       -- Clock for delay control
+--    CE         => delay_ce,        -- Enable delay adjustment
+--    INC        => delay_inc,       -- Increment delay
+--    LD         => delay_ld,        -- Load default delay
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'), -- Not used in this example
+--    CNTVALUEOUT => open            -- Optional feedback
+--);
+
+--IDELAYE2_inst_ch3_n : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",
+--    IDELAY_TYPE => "VARIABLE",
+--    IDELAY_VALUE => 0
+--)
+--port map (
+--    IDATAIN    => i_ch3_n,
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch3_n_delayed,
+--    C          => delay_clk,
+--    CE         => delay_ce,
+--    INC        => delay_inc,
+--    LD         => delay_ld,
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'),
+--    CNTVALUEOUT => open
+--);
+
+--IDELAYE2_inst_ch4_p : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",      -- Delay applied to input data
+--    IDELAY_TYPE => "VARIABLE",     -- Dynamically adjustable delay
+--    IDELAY_VALUE => 0              -- Initial delay value (0-31 taps)
+--)
+--port map (
+--    IDATAIN    => i_ch4_p,         -- Input LVDS data
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch4_p_delayed, -- Delayed output
+--    C          => delay_clk,       -- Clock for delay control
+--    CE         => delay_ce,        -- Enable delay adjustment
+--    INC        => delay_inc,       -- Increment delay
+--    LD         => delay_ld,        -- Load default delay
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'), -- Not used in this example
+--    CNTVALUEOUT => open            -- Optional feedback
+--);
+
+--IDELAYE2_inst_ch4_n : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",
+--    IDELAY_TYPE => "VARIABLE",
+--    IDELAY_VALUE => 0
+--)
+--port map (
+--    IDATAIN    => i_ch4_n,
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch4_n_delayed,
+--    C          => delay_clk,
+--    CE         => delay_ce,
+--    INC        => delay_inc,
+--    LD         => delay_ld,
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'),
+--    CNTVALUEOUT => open
+--);
+
+--IDELAYE2_inst_ch5_p : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",      -- Delay applied to input data
+--    IDELAY_TYPE => "VARIABLE",     -- Dynamically adjustable delay
+--    IDELAY_VALUE => 0              -- Initial delay value (0-31 taps)
+--)
+--port map (
+--    IDATAIN    => i_ch5_p,         -- Input LVDS data
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch5_p_delayed, -- Delayed output
+--    C          => delay_clk,       -- Clock for delay control
+--    CE         => delay_ce,        -- Enable delay adjustment
+--    INC        => delay_inc,       -- Increment delay
+--    LD         => delay_ld,        -- Load default delay
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'), -- Not used in this example
+--    CNTVALUEOUT => open            -- Optional feedback
+--);
+
+--IDELAYE2_inst_ch5_n : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",
+--    IDELAY_TYPE => "VARIABLE",
+--    IDELAY_VALUE => 0
+--)
+--port map (
+--    IDATAIN    => i_ch5_n,
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch5_n_delayed,
+--    C          => delay_clk,
+--    CE         => delay_ce,
+--    INC        => delay_inc,
+--    LD         => delay_ld,
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'),
+--    CNTVALUEOUT => open
+--);
+
+--IDELAYE2_inst_ch6_p : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",      -- Delay applied to input data
+--    IDELAY_TYPE => "VARIABLE",     -- Dynamically adjustable delay
+--    IDELAY_VALUE => 0              -- Initial delay value (0-31 taps)
+--)
+--port map (
+--    IDATAIN    => i_ch6_p,         -- Input LVDS data
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch6_p_delayed, -- Delayed output
+--    C          => delay_clk,       -- Clock for delay control
+--    CE         => delay_ce,        -- Enable delay adjustment
+--    INC        => delay_inc,       -- Increment delay
+--    LD         => delay_ld,        -- Load default delay
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'), -- Not used in this example
+--    CNTVALUEOUT => open            -- Optional feedback
+--);
+
+--IDELAYE2_inst_ch6_n : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",
+--    IDELAY_TYPE => "VARIABLE",
+--    IDELAY_VALUE => 0
+--)
+--port map (
+--    IDATAIN    => i_ch6_n,
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch6_n_delayed,
+--    C          => delay_clk,
+--    CE         => delay_ce,
+--    INC        => delay_inc,
+--    LD         => delay_ld,
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'),
+--    CNTVALUEOUT => open
+--);
+
+--IDELAYE2_inst_ch7_p : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",      -- Delay applied to input data
+--    IDELAY_TYPE => "VARIABLE",     -- Dynamically adjustable delay
+--    IDELAY_VALUE => 0              -- Initial delay value (0-31 taps)
+--)
+--port map (
+--    IDATAIN    => i_ch7_p,         -- Input LVDS data
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch7_p_delayed, -- Delayed output
+--    C          => delay_clk,       -- Clock for delay control
+--    CE         => delay_ce,        -- Enable delay adjustment
+--    INC        => delay_inc,       -- Increment delay
+--    LD         => delay_ld,        -- Load default delay
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'), -- Not used in this example
+--    CNTVALUEOUT => open            -- Optional feedback
+--);
+
+--IDELAYE2_inst_ch7_n : IDELAYE2
+--generic map (
+--    DELAY_SRC   => "IDATAIN",
+--    IDELAY_TYPE => "VARIABLE",
+--    IDELAY_VALUE => 0
+--)
+--port map (
+--    IDATAIN    => i_ch7_n,
+--    DATAIN     => '0',
+--    DATAOUT    => i_ch7_n_delayed,
+--    C          => delay_clk,
+--    CE         => delay_ce,
+--    INC        => delay_inc,
+--    LD         => delay_ld,
+--    LDPIPEEN   => '0',
+--    REGRST     => i_rst,
+--    CINVCTRL   => '0',
+--    CNTVALUEIN => (others => '0'),
+--    CNTVALUEOUT => open
+--);
+
+
+--process(delay_clk)
+--begin
+--    if rising_edge(delay_clk) then
+--        if misaligned = '1' then
+--            delay_ce <= '1';     -- Enable delay adjustment
+--            delay_inc <= '1';    -- Increment delay
+--        else
+--            delay_ce <= '0';     -- Stop delay adjustment
+--            --delay_inc <= '1';    -- Stop increment delay
+--        end if;
+--    end if;
+--end process;
+
+--process(adclk_i)
+
+--constant MASK : std_logic_vector(15 downto 0) := "0011111100111111";
+--constant VALUE_TO_COMPARE : std_logic_vector(15 downto 0) := "0011100000000111";
+
+--begin
+--    if rising_edge(adclk_i) then
+--        if (ch0 and MASK) /= (VALUE_TO_COMPARE and MASK) then
+--            misaligned <= '1'; -- Data misaligned
+--            --misaligned <= '0'; -- Just for debug purposes.
+--        else
+--            misaligned <= '0'; -- Data aligned
+--        end if;
+--    end if;
+--end process;
+
+
+--- ISERDESE
+
 iserdes0_odd : ISERDESE2 generic map(
 	DATA_WIDTH     		=> 6, 			
 	DATA_RATE      		=> "SDR", 		
@@ -260,6 +846,8 @@ iserdes0_odd : ISERDESE2 generic map(
 	INTERFACE_TYPE 		=> "NETWORKING") 	
 port map (                      
 	D       		=> i_ch0_p,
+	--D       		=> '0',	
+	--DDLY     		=> i_ch0_p_delayed,
 	DDLY     		=> '0',
 	CE1     		=> '1',
 	CE2     		=> '1',
@@ -297,6 +885,8 @@ iserdes0_even : ISERDESE2 generic map(
 	INTERFACE_TYPE 		=> "NETWORKING") 	
 port map (                      
 	D       		=> i_ch0_n,
+	--D       		=> '0',
+	--DDLY     		=> i_ch0_n_delayed,
 	DDLY     		=> '0',
 	CE1     		=> '1',
 	CE2     		=> '1',
@@ -333,7 +923,9 @@ iserdes1_p : ISERDESE2 generic map(
 	DYN_CLK_INV_EN		=> "TRUE", 		
 	INTERFACE_TYPE 		=> "NETWORKING") 	
 port map (                      
-	D       		=> i_ch1_p,
+    D       		=> i_ch1_p,
+    --D       		=> '0',
+	--DDLY     		=> i_ch1_p_delayed,
 	DDLY     		=> '0',
 	CE1     		=> '1',
 	CE2     		=> '1',
@@ -371,6 +963,8 @@ iserdes1_n : ISERDESE2 generic map(
 	INTERFACE_TYPE 		=> "NETWORKING") 	
 port map (                      
 	D       		=> i_ch1_n,
+	--D       		=> '0',
+	--DDLY     		=> i_ch1_n_delayed,
 	DDLY     		=> '0',
 	CE1     		=> '1',
 	CE2     		=> '1',
@@ -409,6 +1003,8 @@ iserdes2_p : ISERDESE2 generic map(
 	INTERFACE_TYPE 		=> "NETWORKING") 	
 port map (                      
 	D       		=> i_ch2_p,
+	--D       		=> '0',
+	--DDLY     		=> i_ch2_p_delayed,
 	DDLY     		=> '0',
 	CE1     		=> '1',
 	CE2     		=> '1',
@@ -446,6 +1042,8 @@ iserdes2_n : ISERDESE2 generic map(
 	INTERFACE_TYPE 		=> "NETWORKING") 	
 port map (                      
 	D       		=> i_ch2_n,
+	--D       		=> '0',
+	--DDLY     		=> i_ch2_n_delayed,
 	DDLY     		=> '0',
 	CE1     		=> '1',
 	CE2     		=> '1',
@@ -482,7 +1080,9 @@ iserdes3_p : ISERDESE2 generic map(
   INTERFACE_TYPE     => "NETWORKING")   
 port map (                      
   D           => i_ch3_p,
-  DDLY         => '0',
+  --D       		=> '0',
+  --DDLY         => i_ch3_p_delayed,
+  DDLY     		=> '0',
   CE1         => '1',
   CE2         => '1',
   CLK         => lclk_sys,
@@ -519,7 +1119,9 @@ iserdes3_n : ISERDESE2 generic map(
   INTERFACE_TYPE     => "NETWORKING")   
 port map (                      
   D           => i_ch3_n,
-  DDLY         => '0',
+  --D       	  => '0',
+  --DDLY        => i_ch3_n_delayed,
+  DDLY     		=> '0',
   CE1         => '1',
   CE2         => '1',
   CLK         => lclk_sys,
@@ -556,7 +1158,9 @@ iserdes4_p : ISERDESE2 generic map(
     INTERFACE_TYPE     => "NETWORKING")   
   port map (                      
     D           => i_ch4_p,
-    DDLY         => '0',
+    --D       	=> '0',
+    --DDLY        => i_ch4_p_delayed,
+    DDLY     		=> '0',
     CE1         => '1',
     CE2         => '1',
     CLK         => lclk_sys,
@@ -593,7 +1197,9 @@ iserdes4_n : ISERDESE2 generic map(
     INTERFACE_TYPE     => "NETWORKING")   
   port map (                      
     D           => i_ch4_n,
-    DDLY         => '0',
+    --D       	=> '0',
+    --DDLY        => i_ch4_n_delayed,
+    DDLY     		=> '0',
     CE1         => '1',
     CE2         => '1',
     CLK         => lclk_sys,
@@ -629,7 +1235,9 @@ iserdes5_p : ISERDESE2 generic map(
   INTERFACE_TYPE     => "NETWORKING")   
 port map (                      
   D           => i_ch5_p,
-  DDLY         => '0',
+  --D       		=> '0',
+  --DDLY         => i_ch5_p_delayed,
+  DDLY     		=> '0',
   CE1         => '1',
   CE2         => '1',
   CLK         => lclk_sys,
@@ -666,7 +1274,9 @@ iserdes5_n : ISERDESE2 generic map(
   INTERFACE_TYPE     => "NETWORKING")   
 port map (                      
   D           => i_ch5_n,
-  DDLY         => '0',
+  --D       		=> '0',
+  --DDLY         => i_ch5_n_delayed,
+  DDLY     		=> '0',
   CE1         => '1',
   CE2         => '1',
   CLK         => lclk_sys,
@@ -703,7 +1313,9 @@ iserdes6_p : ISERDESE2 generic map(
   INTERFACE_TYPE     => "NETWORKING")   
 port map (                      
   D           => i_ch6_p,
-  DDLY         => '0',
+  --D       		=> '0',
+  --DDLY         => i_ch6_p_delayed,
+  DDLY     		=> '0',
   CE1         => '1',
   CE2         => '1',
   CLK         => lclk_sys,
@@ -740,7 +1352,9 @@ iserdes6_n : ISERDESE2 generic map(
   INTERFACE_TYPE     => "NETWORKING")   
 port map (                      
   D           => i_ch6_n,
-  DDLY         => '0',
+  --D       		=> '0',
+  --DDLY         => i_ch6_n_delayed,
+  DDLY     		=> '0',
   CE1         => '1',
   CE2         => '1',
   CLK         => lclk_sys,
@@ -776,7 +1390,9 @@ iserdes7_p : ISERDESE2 generic map(
   INTERFACE_TYPE     => "NETWORKING")   
 port map (                      
   D           => i_ch7_p,
-  DDLY         => '0',
+  --D       		=> '0',
+  --DDLY         => i_ch7_p_delayed,
+  DDLY     		=> '0',
   CE1         => '1',
   CE2         => '1',
   CLK         => lclk_sys,
@@ -813,7 +1429,9 @@ iserdes7_n : ISERDESE2 generic map(
   INTERFACE_TYPE     => "NETWORKING")   
 port map (                      
   D           => i_ch7_n,
-  DDLY         => '0',
+  --D       		=> '0',
+  --DDLY         => i_ch7_n_delayed,
+  DDLY     		=> '0',
   CE1         => '1',
   CE2         => '1',
   CLK         => lclk_sys,
@@ -841,81 +1459,7 @@ port map (
   SHIFTOUT1    => open,
   SHIFTOUT2     => open);
 
---iserdes_frame_p_odd : ISERDESE2 generic map(
---  DATA_WIDTH         => 6,       
---  DATA_RATE          => "SDR",     
---  SERDES_MODE        => "MASTER",     
---  --IOBDELAY        => "IFD",
---  DYN_CLK_INV_EN    => "TRUE",     
---  DYN_CLKDIV_INV_EN    => "FALSE",   
---  INTERFACE_TYPE     => "NETWORKING")   
---port map (                      
---  D           => i_ADclk,
---  DDLY         => '0',
---  CE1         => '1',
---  CE2         => '1',
---  CLK         => lclk_sys,
---  CLKB        => not_lclk_sys,
---  RST         => i_rst,
---  CLKDIV      => adclk_i,
---  CLKDIVP      => '0',
---  OCLK        => '0',
---  OCLKB        => '0',
---  DYNCLKSEL        => '0',
---  DYNCLKDIVSEL      => '0',
---  SHIFTIN1     => '0',
---  SHIFTIN2     => '0',
---  BITSLIP     => bitslip_odd,
---  O       => open,
---  Q8        => frame(7),
---  Q7        => frame(6),
---  Q6        => frame(5),
---  Q5        => frame(4),
---  Q4        => frame(3),
---  Q3        => frame(2),
---  Q2        => frame(1),
---  Q1        => frame(0),
---  OFB       => '0',
---  SHIFTOUT1    => open,
---  SHIFTOUT2     => open);
 
---iserdes_frame_n_even : ISERDESE2 generic map(
---  DATA_WIDTH         => 6,       
---  DATA_RATE          => "SDR",     
-----  SERDES_MODE        => "MASTER",     
---  --IOBDELAY        => "IFD",
---  DYN_CLK_INV_EN    => "FALSE",   
---  DYN_CLKDIV_INV_EN    => "FALSE",     
---  INTERFACE_TYPE     => "NETWORKING")   
---port map (                      
---  D           => not_i_ADclk,
---  DDLY         => '0',
---  CE1         => '1',
---  CE2         => '1',
---  CLK         => lclk_sys,
---  CLKB        => not_lclk_sys,
---  RST         => i_rst,
---  CLKDIV      => adclk_i,
---  CLKDIVP      => '0',
---  OCLK        => '0',
---  OCLKB        => '0',
---  DYNCLKSEL        => '0',
---  DYNCLKDIVSEL      => '0',
---  SHIFTIN1     => '0',
---  SHIFTIN2     => '0',
---  BITSLIP     => bitslip_even,
---  O       => open,
---  Q8        => frame(15),
---  Q7        => frame(14),
---  Q6        => frame(13),
---  Q5        => frame(12),
---  Q4        => frame(11),
---  Q3        => frame(10),
---  Q2        => frame(9),
---  Q1        => frame(8),
---  OFB       => '0',
---  SHIFTOUT1    => open,
---  SHIFTOUT2     => open);
   
  end Behavioral;
 

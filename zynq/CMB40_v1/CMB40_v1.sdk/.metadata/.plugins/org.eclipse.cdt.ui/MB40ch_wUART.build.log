@@ -1,8 +1,8 @@
-14:15:41 **** Incremental Build of configuration Debug for project MB40ch_wUART ****
+17:09:15 **** Incremental Build of configuration Debug for project MB40ch_wUART ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
 
-14:15:41 Build Finished (took 176ms)
+17:09:16 Build Finished (took 337ms)
 

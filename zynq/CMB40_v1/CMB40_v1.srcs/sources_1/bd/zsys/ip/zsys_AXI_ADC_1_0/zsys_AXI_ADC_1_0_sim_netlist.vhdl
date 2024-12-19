@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Tue Dec 10 18:15:32 2024
+-- Date        : Fri Dec 13 18:27:01 2024
 -- Host        : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.srcs/sources_1/bd/zsys/ip/zsys_AXI_ADC_1_0/zsys_AXI_ADC_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top zsys_AXI_ADC_1_0 -prefix
+--               zsys_AXI_ADC_1_0_ zsys_AXI_ADC_1_0_sim_netlist.vhdl
 -- Design      : zsys_AXI_ADC_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,8 +16,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity zsys_AXI_ADC_1_0_ADC_readout_3 is
   port (
-    o_data_out_ch0 : out STD_LOGIC_VECTOR ( 15 downto 0 );
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
+    o_data_out_ch0 : out STD_LOGIC_VECTOR ( 15 downto 0 );
     o_data_out_ch1 : out STD_LOGIC_VECTOR ( 15 downto 0 );
     o_data_out_ch2 : out STD_LOGIC_VECTOR ( 15 downto 0 );
     o_data_out_ch3 : out STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -46,14 +46,42 @@ entity zsys_AXI_ADC_1_0_ADC_readout_3 is
     i_data_in_ch7_n : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_AXI_ADC_1_0_ADC_readout_3 : entity is "ADC_readout_3";
 end zsys_AXI_ADC_1_0_ADC_readout_3;
 
 architecture STRUCTURE of zsys_AXI_ADC_1_0_ADC_readout_3 is
+  signal BITSLIP : STD_LOGIC;
+  signal Q1 : STD_LOGIC;
+  signal Q2 : STD_LOGIC;
+  signal Q3 : STD_LOGIC;
+  signal Q4 : STD_LOGIC;
+  signal Q5 : STD_LOGIC;
+  signal Q6 : STD_LOGIC;
+  signal Q7 : STD_LOGIC;
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal bitslip_even : STD_LOGIC;
-  signal bitslip_odd : STD_LOGIC;
+  signal bitslip_even_i_1_n_0 : STD_LOGIC;
+  signal bitslip_even_reg_n_0 : STD_LOGIC;
+  signal bitslip_odd_i_1_n_0 : STD_LOGIC;
+  signal flag1 : STD_LOGIC;
+  signal flag1_i_1_n_0 : STD_LOGIC;
+  signal flag1_i_2_n_0 : STD_LOGIC;
+  signal flag2 : STD_LOGIC;
+  signal flag2_i_1_n_0 : STD_LOGIC;
+  signal flag2_i_2_n_0 : STD_LOGIC;
+  signal iserdes_frame_p_odd_n_1 : STD_LOGIC;
+  signal iserdes_frame_p_odd_n_2 : STD_LOGIC;
+  signal iserdes_frame_p_odd_n_3 : STD_LOGIC;
+  signal iserdes_frame_p_odd_n_4 : STD_LOGIC;
+  signal iserdes_frame_p_odd_n_5 : STD_LOGIC;
+  signal iserdes_frame_p_odd_n_6 : STD_LOGIC;
+  signal iserdes_frame_p_odd_n_7 : STD_LOGIC;
+  signal \t_wait1[0]_i_1_n_0\ : STD_LOGIC;
+  signal \t_wait1[1]_i_1_n_0\ : STD_LOGIC;
+  signal \t_wait1_reg_n_0_[0]\ : STD_LOGIC;
+  signal \t_wait1_reg_n_0_[1]\ : STD_LOGIC;
+  signal \t_wait2[0]_i_1_n_0\ : STD_LOGIC;
+  signal \t_wait2[1]_i_1_n_0\ : STD_LOGIC;
+  signal \t_wait2_reg_n_0_[0]\ : STD_LOGIC;
+  signal \t_wait2_reg_n_0_[1]\ : STD_LOGIC;
   signal NLW_iserdes0_even_O_UNCONNECTED : STD_LOGIC;
   signal NLW_iserdes0_even_SHIFTOUT1_UNCONNECTED : STD_LOGIC;
   signal NLW_iserdes0_even_SHIFTOUT2_UNCONNECTED : STD_LOGIC;
@@ -102,6 +130,17 @@ architecture STRUCTURE of zsys_AXI_ADC_1_0_ADC_readout_3 is
   signal NLW_iserdes7_p_O_UNCONNECTED : STD_LOGIC;
   signal NLW_iserdes7_p_SHIFTOUT1_UNCONNECTED : STD_LOGIC;
   signal NLW_iserdes7_p_SHIFTOUT2_UNCONNECTED : STD_LOGIC;
+  signal NLW_iserdes_frame_n_even_O_UNCONNECTED : STD_LOGIC;
+  signal NLW_iserdes_frame_n_even_Q8_UNCONNECTED : STD_LOGIC;
+  signal NLW_iserdes_frame_n_even_SHIFTOUT1_UNCONNECTED : STD_LOGIC;
+  signal NLW_iserdes_frame_n_even_SHIFTOUT2_UNCONNECTED : STD_LOGIC;
+  signal NLW_iserdes_frame_p_odd_O_UNCONNECTED : STD_LOGIC;
+  signal NLW_iserdes_frame_p_odd_Q8_UNCONNECTED : STD_LOGIC;
+  signal NLW_iserdes_frame_p_odd_SHIFTOUT1_UNCONNECTED : STD_LOGIC;
+  signal NLW_iserdes_frame_p_odd_SHIFTOUT2_UNCONNECTED : STD_LOGIC;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of flag1_i_1 : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of flag2_i_1 : label is "soft_lutpair6";
   attribute box_type : string;
   attribute box_type of iserdes0_even : label is "PRIMITIVE";
   attribute box_type of iserdes0_odd : label is "PRIMITIVE";
@@ -119,10 +158,126 @@ architecture STRUCTURE of zsys_AXI_ADC_1_0_ADC_readout_3 is
   attribute box_type of iserdes6_p : label is "PRIMITIVE";
   attribute box_type of iserdes7_n : label is "PRIMITIVE";
   attribute box_type of iserdes7_p : label is "PRIMITIVE";
+  attribute box_type of iserdes_frame_n_even : label is "PRIMITIVE";
+  attribute box_type of iserdes_frame_p_odd : label is "PRIMITIVE";
+  attribute SOFT_HLUTNM of \t_wait1[1]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \t_wait2[1]_i_1\ : label is "soft_lutpair6";
 begin
   SR(0) <= \^sr\(0);
-  bitslip_even <= 'Z';
-  bitslip_odd <= 'Z';
+bitslip_even_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFF0EEEE0000EEEE"
+    )
+        port map (
+      I0 => Q7,
+      I1 => flag2_i_2_n_0,
+      I2 => \t_wait2_reg_n_0_[0]\,
+      I3 => \t_wait2_reg_n_0_[1]\,
+      I4 => flag2,
+      I5 => bitslip_even_reg_n_0,
+      O => bitslip_even_i_1_n_0
+    );
+bitslip_even_reg: unisim.vcomponents.FDCE
+     port map (
+      C => i_ADclk,
+      CE => '1',
+      CLR => \^sr\(0),
+      D => bitslip_even_i_1_n_0,
+      Q => bitslip_even_reg_n_0
+    );
+bitslip_odd_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFF0DDDD0000DDDD"
+    )
+        port map (
+      I0 => iserdes_frame_p_odd_n_5,
+      I1 => flag1_i_2_n_0,
+      I2 => \t_wait1_reg_n_0_[0]\,
+      I3 => \t_wait1_reg_n_0_[1]\,
+      I4 => flag1,
+      I5 => BITSLIP,
+      O => bitslip_odd_i_1_n_0
+    );
+bitslip_odd_reg: unisim.vcomponents.FDCE
+     port map (
+      C => i_ADclk,
+      CE => '1',
+      CLR => \^sr\(0),
+      D => bitslip_odd_i_1_n_0,
+      Q => BITSLIP
+    );
+flag1_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"BFB0BFBF"
+    )
+        port map (
+      I0 => \t_wait1_reg_n_0_[0]\,
+      I1 => \t_wait1_reg_n_0_[1]\,
+      I2 => flag1,
+      I3 => flag1_i_2_n_0,
+      I4 => iserdes_frame_p_odd_n_5,
+      O => flag1_i_1_n_0
+    );
+flag1_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFDFFFFFFFF"
+    )
+        port map (
+      I0 => iserdes_frame_p_odd_n_4,
+      I1 => iserdes_frame_p_odd_n_3,
+      I2 => iserdes_frame_p_odd_n_7,
+      I3 => iserdes_frame_p_odd_n_1,
+      I4 => iserdes_frame_p_odd_n_2,
+      I5 => iserdes_frame_p_odd_n_6,
+      O => flag1_i_2_n_0
+    );
+flag1_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => i_ADclk,
+      CE => '1',
+      CLR => \^sr\(0),
+      D => flag1_i_1_n_0,
+      Q => flag1
+    );
+flag2_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"BFBFBFB0"
+    )
+        port map (
+      I0 => \t_wait2_reg_n_0_[0]\,
+      I1 => \t_wait2_reg_n_0_[1]\,
+      I2 => flag2,
+      I3 => flag2_i_2_n_0,
+      I4 => Q7,
+      O => flag2_i_1_n_0
+    );
+flag2_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFBFFF"
+    )
+        port map (
+      I0 => Q5,
+      I1 => Q1,
+      I2 => Q3,
+      I3 => Q2,
+      I4 => Q4,
+      I5 => Q6,
+      O => flag2_i_2_n_0
+    );
+flag2_reg: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => i_ADclk,
+      CE => '1',
+      CLR => \^sr\(0),
+      D => flag2_i_1_n_0,
+      Q => flag2
+    );
 iserdes0_even: unisim.vcomponents.ISERDESE2
     generic map(
       DATA_RATE => "SDR",
@@ -151,7 +306,7 @@ iserdes0_even: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_even,
+      BITSLIP => bitslip_even_reg_n_0,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -208,7 +363,7 @@ iserdes0_odd: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_odd,
+      BITSLIP => BITSLIP,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -265,7 +420,7 @@ iserdes1_n: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_even,
+      BITSLIP => bitslip_even_reg_n_0,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -322,7 +477,7 @@ iserdes1_p: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_odd,
+      BITSLIP => BITSLIP,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -379,7 +534,7 @@ iserdes2_n: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_even,
+      BITSLIP => bitslip_even_reg_n_0,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -436,7 +591,7 @@ iserdes2_p: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_odd,
+      BITSLIP => BITSLIP,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -493,7 +648,7 @@ iserdes3_n: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_even,
+      BITSLIP => bitslip_even_reg_n_0,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -550,7 +705,7 @@ iserdes3_p: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_odd,
+      BITSLIP => BITSLIP,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -607,7 +762,7 @@ iserdes4_n: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_even,
+      BITSLIP => bitslip_even_reg_n_0,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -664,7 +819,7 @@ iserdes4_p: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_odd,
+      BITSLIP => BITSLIP,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -721,7 +876,7 @@ iserdes5_n: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_even,
+      BITSLIP => bitslip_even_reg_n_0,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -778,7 +933,7 @@ iserdes5_p: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_odd,
+      BITSLIP => BITSLIP,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -835,7 +990,7 @@ iserdes6_n: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_even,
+      BITSLIP => bitslip_even_reg_n_0,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -892,7 +1047,7 @@ iserdes6_p: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_odd,
+      BITSLIP => BITSLIP,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -949,7 +1104,7 @@ iserdes7_n: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_even,
+      BITSLIP => bitslip_even_reg_n_0,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -1006,7 +1161,7 @@ iserdes7_p: unisim.vcomponents.ISERDESE2
       SRVAL_Q4 => '0'
     )
         port map (
-      BITSLIP => bitslip_odd,
+      BITSLIP => BITSLIP,
       CE1 => '1',
       CE2 => '1',
       CLK => i_Lclk,
@@ -1035,6 +1190,120 @@ iserdes7_p: unisim.vcomponents.ISERDESE2
       SHIFTOUT1 => NLW_iserdes7_p_SHIFTOUT1_UNCONNECTED,
       SHIFTOUT2 => NLW_iserdes7_p_SHIFTOUT2_UNCONNECTED
     );
+iserdes_frame_n_even: unisim.vcomponents.ISERDESE2
+    generic map(
+      DATA_RATE => "SDR",
+      DATA_WIDTH => 6,
+      DYN_CLKDIV_INV_EN => "FALSE",
+      DYN_CLK_INV_EN => "FALSE",
+      INIT_Q1 => '0',
+      INIT_Q2 => '0',
+      INIT_Q3 => '0',
+      INIT_Q4 => '0',
+      INTERFACE_TYPE => "NETWORKING",
+      IOBDELAY => "NONE",
+      IS_CLKB_INVERTED => '1',
+      IS_CLKDIVP_INVERTED => '0',
+      IS_CLKDIV_INVERTED => '0',
+      IS_CLK_INVERTED => '0',
+      IS_D_INVERTED => '1',
+      IS_OCLKB_INVERTED => '0',
+      IS_OCLK_INVERTED => '0',
+      NUM_CE => 2,
+      OFB_USED => "FALSE",
+      SERDES_MODE => "MASTER",
+      SRVAL_Q1 => '0',
+      SRVAL_Q2 => '0',
+      SRVAL_Q3 => '0',
+      SRVAL_Q4 => '0'
+    )
+        port map (
+      BITSLIP => bitslip_even_reg_n_0,
+      CE1 => '1',
+      CE2 => '1',
+      CLK => i_Lclk,
+      CLKB => CLKB,
+      CLKDIV => i_ADclk,
+      CLKDIVP => '0',
+      D => i_ADclk,
+      DDLY => '0',
+      DYNCLKDIVSEL => '0',
+      DYNCLKSEL => '0',
+      O => NLW_iserdes_frame_n_even_O_UNCONNECTED,
+      OCLK => '0',
+      OCLKB => '0',
+      OFB => '0',
+      Q1 => Q1,
+      Q2 => Q2,
+      Q3 => Q3,
+      Q4 => Q4,
+      Q5 => Q5,
+      Q6 => Q6,
+      Q7 => Q7,
+      Q8 => NLW_iserdes_frame_n_even_Q8_UNCONNECTED,
+      RST => \^sr\(0),
+      SHIFTIN1 => '0',
+      SHIFTIN2 => '0',
+      SHIFTOUT1 => NLW_iserdes_frame_n_even_SHIFTOUT1_UNCONNECTED,
+      SHIFTOUT2 => NLW_iserdes_frame_n_even_SHIFTOUT2_UNCONNECTED
+    );
+iserdes_frame_p_odd: unisim.vcomponents.ISERDESE2
+    generic map(
+      DATA_RATE => "SDR",
+      DATA_WIDTH => 6,
+      DYN_CLKDIV_INV_EN => "FALSE",
+      DYN_CLK_INV_EN => "TRUE",
+      INIT_Q1 => '0',
+      INIT_Q2 => '0',
+      INIT_Q3 => '0',
+      INIT_Q4 => '0',
+      INTERFACE_TYPE => "NETWORKING",
+      IOBDELAY => "NONE",
+      IS_CLKB_INVERTED => '1',
+      IS_CLKDIVP_INVERTED => '0',
+      IS_CLKDIV_INVERTED => '0',
+      IS_CLK_INVERTED => '0',
+      IS_D_INVERTED => '0',
+      IS_OCLKB_INVERTED => '0',
+      IS_OCLK_INVERTED => '0',
+      NUM_CE => 2,
+      OFB_USED => "FALSE",
+      SERDES_MODE => "MASTER",
+      SRVAL_Q1 => '0',
+      SRVAL_Q2 => '0',
+      SRVAL_Q3 => '0',
+      SRVAL_Q4 => '0'
+    )
+        port map (
+      BITSLIP => BITSLIP,
+      CE1 => '1',
+      CE2 => '1',
+      CLK => i_Lclk,
+      CLKB => CLKB,
+      CLKDIV => i_ADclk,
+      CLKDIVP => '0',
+      D => i_ADclk,
+      DDLY => '0',
+      DYNCLKDIVSEL => '0',
+      DYNCLKSEL => '0',
+      O => NLW_iserdes_frame_p_odd_O_UNCONNECTED,
+      OCLK => '0',
+      OCLKB => '0',
+      OFB => '0',
+      Q1 => iserdes_frame_p_odd_n_1,
+      Q2 => iserdes_frame_p_odd_n_2,
+      Q3 => iserdes_frame_p_odd_n_3,
+      Q4 => iserdes_frame_p_odd_n_4,
+      Q5 => iserdes_frame_p_odd_n_5,
+      Q6 => iserdes_frame_p_odd_n_6,
+      Q7 => iserdes_frame_p_odd_n_7,
+      Q8 => NLW_iserdes_frame_p_odd_Q8_UNCONNECTED,
+      RST => \^sr\(0),
+      SHIFTIN1 => '0',
+      SHIFTIN2 => '0',
+      SHIFTOUT1 => NLW_iserdes_frame_p_odd_SHIFTOUT1_UNCONNECTED,
+      SHIFTOUT2 => NLW_iserdes_frame_p_odd_SHIFTOUT2_UNCONNECTED
+    );
 ready_i_i_2: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -1042,6 +1311,90 @@ ready_i_i_2: unisim.vcomponents.LUT1
         port map (
       I0 => s00_axi_aresetn,
       O => \^sr\(0)
+    );
+\t_wait1[0]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"34"
+    )
+        port map (
+      I0 => \t_wait1_reg_n_0_[1]\,
+      I1 => flag1,
+      I2 => \t_wait1_reg_n_0_[0]\,
+      O => \t_wait1[0]_i_1_n_0\
+    );
+\t_wait1[1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"38"
+    )
+        port map (
+      I0 => \t_wait1_reg_n_0_[0]\,
+      I1 => flag1,
+      I2 => \t_wait1_reg_n_0_[1]\,
+      O => \t_wait1[1]_i_1_n_0\
+    );
+\t_wait1_reg[0]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => i_ADclk,
+      CE => '1',
+      CLR => \^sr\(0),
+      D => \t_wait1[0]_i_1_n_0\,
+      Q => \t_wait1_reg_n_0_[0]\
+    );
+\t_wait1_reg[1]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => i_ADclk,
+      CE => '1',
+      CLR => \^sr\(0),
+      D => \t_wait1[1]_i_1_n_0\,
+      Q => \t_wait1_reg_n_0_[1]\
+    );
+\t_wait2[0]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"34"
+    )
+        port map (
+      I0 => \t_wait2_reg_n_0_[1]\,
+      I1 => flag2,
+      I2 => \t_wait2_reg_n_0_[0]\,
+      O => \t_wait2[0]_i_1_n_0\
+    );
+\t_wait2[1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"38"
+    )
+        port map (
+      I0 => \t_wait2_reg_n_0_[0]\,
+      I1 => flag2,
+      I2 => \t_wait2_reg_n_0_[1]\,
+      O => \t_wait2[1]_i_1_n_0\
+    );
+\t_wait2_reg[0]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => i_ADclk,
+      CE => '1',
+      CLR => \^sr\(0),
+      D => \t_wait2[0]_i_1_n_0\,
+      Q => \t_wait2_reg_n_0_[0]\
+    );
+\t_wait2_reg[1]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => i_ADclk,
+      CE => '1',
+      CLR => \^sr\(0),
+      D => \t_wait2[1]_i_1_n_0\,
+      Q => \t_wait2_reg_n_0_[1]\
     );
 end STRUCTURE;
 library IEEE;
@@ -1065,8 +1418,6 @@ entity zsys_AXI_ADC_1_0_SPI_core_v2 is
     \adc_action_ctrl_state_reg[2]_0\ : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_AXI_ADC_1_0_SPI_core_v2 : entity is "SPI_core_v2";
 end zsys_AXI_ADC_1_0_SPI_core_v2;
 
 architecture STRUCTURE of zsys_AXI_ADC_1_0_SPI_core_v2 is
@@ -1909,8 +2260,6 @@ entity zsys_AXI_ADC_1_0_ADC_ctrl is
     Q : in STD_LOGIC_VECTOR ( 15 downto 0 );
     \pointer_tbr_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_AXI_ADC_1_0_ADC_ctrl : entity is "ADC_ctrl";
 end zsys_AXI_ADC_1_0_ADC_ctrl;
 
 architecture STRUCTURE of zsys_AXI_ADC_1_0_ADC_ctrl is
@@ -2290,8 +2639,6 @@ entity zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI is
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI : entity is "AXI_ADC_v3_0_S00_AXI";
 end zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI;
 
 architecture STRUCTURE of zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI is
@@ -2372,12 +2719,12 @@ architecture STRUCTURE of zsys_AXI_ADC_1_0_AXI_ADC_v3_0_S00_AXI is
   signal write_reg : STD_LOGIC;
   signal write_reg_i_1_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \axi_awaddr[2]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of axi_awready_i_1 : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \slv_reg0[31]_i_2\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \axi_awaddr[2]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of axi_awready_i_1 : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \slv_reg0[31]_i_2\ : label is "soft_lutpair10";
 begin
   o_debug(8 downto 0) <= \^o_debug\(8 downto 0);
   s00_axi_arready <= \^s00_axi_arready\;
@@ -4767,8 +5114,6 @@ entity zsys_AXI_ADC_1_0_AXI_ADC_v3 is
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zsys_AXI_ADC_1_0_AXI_ADC_v3 : entity is "AXI_ADC_v3";
 end zsys_AXI_ADC_1_0_AXI_ADC_v3;
 
 architecture STRUCTURE of zsys_AXI_ADC_1_0_AXI_ADC_v3 is

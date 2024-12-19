@@ -40,7 +40,6 @@ vlib riviera/generic_baseblocks_v2_1_0
 vlib riviera/axi_register_slice_v2_1_17
 vlib riviera/axi_data_fifo_v2_1_16
 vlib riviera/axi_crossbar_v2_1_18
-vlib riviera/axi_mmu_v2_1_15
 vlib riviera/axi_clock_converter_v2_1_16
 vlib riviera/axi_protocol_converter_v2_1_17
 
@@ -83,7 +82,6 @@ vmap generic_baseblocks_v2_1_0 riviera/generic_baseblocks_v2_1_0
 vmap axi_register_slice_v2_1_17 riviera/axi_register_slice_v2_1_17
 vmap axi_data_fifo_v2_1_16 riviera/axi_data_fifo_v2_1_16
 vmap axi_crossbar_v2_1_18 riviera/axi_crossbar_v2_1_18
-vmap axi_mmu_v2_1_15 riviera/axi_mmu_v2_1_15
 vmap axi_clock_converter_v2_1_16 riviera/axi_clock_converter_v2_1_16
 vmap axi_protocol_converter_v2_1_17 riviera/axi_protocol_converter_v2_1_17
 
@@ -469,18 +467,12 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../CMB40_v1.srcs/sources_1/bd
 "../../../bd/zsys/ip/zsys_util_vector_logic_0_2/sim/zsys_util_vector_logic_0_2.v" \
 
 vcom -work xil_defaultlib -93 \
-"../../../bd/zsys/ipshared/ec81/hdl/AXI_ADC_v3_0_S00_AXI.vhd" \
-"../../../bd/zsys/ipshared/ec81/src/SPI_core_v2.vhd" \
-"../../../bd/zsys/ipshared/ec81/src/ADC_ctrl.vhd" \
-"../../../bd/zsys/ipshared/ec81/src/ADC_readout_3.vhd" \
-"../../../bd/zsys/ipshared/ec81/hdl/AXI_ADC_v3_0.vhd" \
+"../../../bd/zsys/ipshared/a552/hdl/AXI_ADC_v3_0_S00_AXI.vhd" \
+"../../../bd/zsys/ipshared/a552/src/SPI_core_v2.vhd" \
+"../../../bd/zsys/ipshared/a552/src/ADC_ctrl.vhd" \
+"../../../bd/zsys/ipshared/a552/src/ADC_readout_3.vhd" \
+"../../../bd/zsys/ipshared/a552/hdl/AXI_ADC_v3_0.vhd" \
 "../../../bd/zsys/ip/zsys_AXI_ADC_1_0/sim/zsys_AXI_ADC_1_0.vhd" \
-
-vlog -work axi_mmu_v2_1_15  -v2k5 "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/ec67/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/5bb9/hdl/verilog" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/70fd/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/f90c/hdl/verilog" "+incdir+/opt/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/ec67/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/5bb9/hdl/verilog" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/70fd/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/f90c/hdl/verilog" "+incdir+/opt/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
-"../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/3048/hdl/axi_mmu_v2_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/ec67/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/5bb9/hdl/verilog" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/70fd/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/f90c/hdl/verilog" "+incdir+/opt/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/ec67/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/5bb9/hdl/verilog" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/70fd/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/f90c/hdl/verilog" "+incdir+/opt/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
-"../../../bd/zsys/ip/zsys_s00_mmu_0/sim/zsys_s00_mmu_0.v" \
 
 vlog -work axi_clock_converter_v2_1_16  -v2k5 "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/ec67/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/5bb9/hdl/verilog" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/70fd/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/f90c/hdl/verilog" "+incdir+/opt/Xilinx/Vivado/2018.2/data/xilinx_vip/include" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/ec67/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/5bb9/hdl/verilog" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/70fd/hdl" "+incdir+../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/f90c/hdl/verilog" "+incdir+/opt/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
 "../../../../CMB40_v1.srcs/sources_1/bd/zsys/ipshared/e9a5/hdl/axi_clock_converter_v2_1_vl_rfs.v" \

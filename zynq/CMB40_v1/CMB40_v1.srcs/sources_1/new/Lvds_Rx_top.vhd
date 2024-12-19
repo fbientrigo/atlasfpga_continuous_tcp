@@ -96,29 +96,29 @@ component BUFG				port (I : in std_logic;	O : out std_logic);	end component;
 component IBUFDS	port (I	: in std_logic;	IB : in std_logic;	O : out std_logic);	end component;
 
 
-component IDELAYE2
-    generic (
-        CINVCTRL_SEL        : string := "FALSE";
-        DELAY_SRC           : string := "IDATAIN";
-        HIGH_PERFORMANCE_MODE : string := "FALSE";
-        IDELAY_TYPE         : string := "FIXED";
-        IDELAY_VALUE        : integer := 0;
-        REFCLK_FREQUENCY    : real := 200.0;
-        PIPE_SEL            : string := "FALSE";
-        SIGNAL_PATTERN      : string := "DATA"
-    );
-    port (
-        C                  : in std_logic;
-        CE                 : in std_logic;
-        CINVCTRL           : in std_logic;
-        CNTVALUEIN         : in std_logic_vector(4 downto 0);
-        INC                : in std_logic;
-        LD                 : in std_logic;
-        IDATAIN            : in std_logic;
-        DATAOUT            : out std_logic;
-        CNTVALUEOUT        : out std_logic_vector(4 downto 0)
-    );
-end component;
+--component IDELAYE2
+--    generic (
+--        CINVCTRL_SEL        : string := "FALSE";
+--        DELAY_SRC           : string := "IDATAIN";
+--        HIGH_PERFORMANCE_MODE : string := "FALSE";
+--        IDELAY_TYPE         : string := "FIXED";
+--        IDELAY_VALUE        : integer := 0;
+--        REFCLK_FREQUENCY    : real := 200.0;
+--        PIPE_SEL            : string := "FALSE";
+--        SIGNAL_PATTERN      : string := "DATA"
+--    );
+--    port (
+--        C                  : in std_logic;
+--        CE                 : in std_logic;
+--        CINVCTRL           : in std_logic;
+--        CNTVALUEIN         : in std_logic_vector(4 downto 0);
+--        INC                : in std_logic;
+--        LD                 : in std_logic;
+--        IDATAIN            : in std_logic;
+--        DATAOUT            : out std_logic;
+--        CNTVALUEOUT        : out std_logic_vector(4 downto 0)
+--    );
+--end component;
 
 
 component AdcReceiver is

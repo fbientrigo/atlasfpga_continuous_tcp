@@ -6626,7 +6626,7 @@ Signals are controlled by CPLD</bd:user_comments>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>AXI_ADC_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="AXI_ADC" spirit:vendor="xilinx.com" spirit:version="3.0"/>
+        <spirit:componentRef spirit:library="user" spirit:name="AXI_ADC" spirit:vendor="xilinx.com" spirit:version="4.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">zsys_AXI_ADC_1_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>

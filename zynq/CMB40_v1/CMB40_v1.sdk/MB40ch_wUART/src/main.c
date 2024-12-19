@@ -466,17 +466,42 @@ void ADC_SPI_init()
 	cpld_status = write_CPLD_signals();
 	usleep(500);
 
-	///////////////////
-	//Read registers values
-	/*pt_addr = 0x01;
-	spi_data = 0x0001; // Disables interleave; see table 55 (page 79) of the ADS5296's datasheet.
+	/*// Delays data
+	// Enables data write
+	AXI_ADC_mWriteReg(
+			AXI_ADC_BaseAddress,
+			AXI_ADC_S00_action_reg_offset,
+			1 << AXI_ADC_S00_ready_state_bit_offset);
+	CPLD_ADC_nCS = 0;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+	pt_addr = 0xBE;
+	spi_data = 0x8000; // No delay set
+	//spi_data = 0x80E7;
 	result = AXI_ADC_write_reg(pt_addr,spi_data);
 	xil_printf("Result: %d\n",result);
 	usleep(500);
-	xil_printf("El valor escrito en el registro 0x00 es:\n");
-	result = AXI_ADC_read_ptr(0x40);
-	xil_printf("valor hexadecimal: %x\n",result);
-	usleep(50000);*/
+	CPLD_ADC_nCS = 1;
+	cpld_status = write_CPLD_signals();
+	usleep(500);*/
+
+	// Invert channels that are inverted by hardware
+	// Enables data write
+	AXI_ADC_mWriteReg(
+			AXI_ADC_BaseAddress,
+			AXI_ADC_S00_action_reg_offset,
+			1 << AXI_ADC_S00_ready_state_bit_offset);
+	CPLD_ADC_nCS = 0;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
+	pt_addr = 0x24;
+	spi_data = 0x00CE;
+	result = AXI_ADC_write_reg(pt_addr,spi_data);
+	xil_printf("Result: %d\n",result);
+	usleep(500);
+	CPLD_ADC_nCS = 1;
+	cpld_status = write_CPLD_signals();
+	usleep(500);
 
 	// Disables data write
 	AXI_ADC_mWriteReg(

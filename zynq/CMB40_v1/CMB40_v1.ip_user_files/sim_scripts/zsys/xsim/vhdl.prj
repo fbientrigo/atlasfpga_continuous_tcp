@@ -57,11 +57,11 @@ vhdl xil_defaultlib  \
 "../../../bd/zsys/ip/zsys_util_ds_buf_0_0/sim/zsys_util_ds_buf_0_0.vhd" \
 "../../../bd/zsys/ip/zsys_util_ds_buf_0_2/sim/zsys_util_ds_buf_0_2.vhd" \
 "../../../bd/zsys/ip/zsys_Lvds_Rx_top_0_0/sim/zsys_Lvds_Rx_top_0_0.vhd" \
-"../../../bd/zsys/ipshared/ec81/hdl/AXI_ADC_v3_0_S00_AXI.vhd" \
-"../../../bd/zsys/ipshared/ec81/src/SPI_core_v2.vhd" \
-"../../../bd/zsys/ipshared/ec81/src/ADC_ctrl.vhd" \
-"../../../bd/zsys/ipshared/ec81/src/ADC_readout_3.vhd" \
-"../../../bd/zsys/ipshared/ec81/hdl/AXI_ADC_v3_0.vhd" \
+"../../../bd/zsys/ipshared/a552/hdl/AXI_ADC_v3_0_S00_AXI.vhd" \
+"../../../bd/zsys/ipshared/a552/src/SPI_core_v2.vhd" \
+"../../../bd/zsys/ipshared/a552/src/ADC_ctrl.vhd" \
+"../../../bd/zsys/ipshared/a552/src/ADC_readout_3.vhd" \
+"../../../bd/zsys/ipshared/a552/hdl/AXI_ADC_v3_0.vhd" \
 "../../../bd/zsys/ip/zsys_AXI_ADC_1_0/sim/zsys_AXI_ADC_1_0.vhd" \
 
 nosort

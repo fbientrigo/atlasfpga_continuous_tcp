@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Wed Dec 11 11:31:15 2024
+| Date         : Fri Dec 13 18:55:24 2024
 | Host         : ifraba-HP-Pavilion-Laptop-15-eg2xxx running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_drc -file zsys_wrapper_drc_opted.rpt -pb zsys_wrapper_drc_opted.pb -rpx zsys_wrapper_drc_opted.rpx
 | Design       : zsys_wrapper
@@ -24,14 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 42
+             Violations found: 44
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
 | BUFC-1      | Warning  | Input Buffer Connections                                    | 1          |
 | CHECK-3     | Warning  | Report rule limit reached                                   | 1          |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
-| REQP-1580   | Warning  | Phase alignment                                             | 16         |
+| REQP-1580   | Warning  | Phase alignment                                             | 18         |
 | REQP-1839   | Warning  | RAMB36 async control check                                  | 20         |
 | REQP-181    | Advisory | writefirst                                                  | 2          |
 +-------------+----------+-------------------------------------------------------------+------------+
@@ -148,6 +148,16 @@ Related violations: <none>
 REQP-1580#16 Warning
 Phase alignment  
 Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_p. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_p/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes7_p/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Related violations: <none>
+
+REQP-1580#17 Warning
+Phase alignment  
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes_frame_n_even. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes_frame_n_even/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes_frame_n_even/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Related violations: <none>
+
+REQP-1580#18 Warning
+Phase alignment  
+Unsupported clocking topology used for ISERDESE2 zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes_frame_p_odd. This can result in corrupted data. The zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes_frame_p_odd/CLK / zsys_i/ADC/AXI_ADC_1/U0/AXI_ADC_v3_0_S00_AXI_inst/Inst_ADC_readout_12bit/iserdes_frame_p_odd/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1839#1 Warning
