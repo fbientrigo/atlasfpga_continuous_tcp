@@ -14125,3 +14125,8 @@ con
 
 17:09:33 INFO  : Launch script is exported to file '/home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_mb40ch_wuart.elf_on_local.tcl'
 18:59:17 INFO  : Disconnected from the channel tcfchan#8.
+18:48:33 INFO  : Registering command handlers for SDK TCF services
+18:48:34 INFO  : Launching XSCT server: xsct -n -interactive /home/ifraba/Desktop/Laboral/SAPHIR/Pruebas_tecnicas/CMB_project/CMB_project_Gitlab_Orlando/charge-monitoring-system/zynq/CMB40_v1/CMB40_v1.sdk/temp_xsdb_launch_script.tcl
+18:48:35 INFO  : XSCT server has started successfully.
+18:48:35 INFO  : Successfully done setting XSCT server connection channel  
+18:48:35 INFO  : Successfully done setting SDK workspace  

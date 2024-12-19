@@ -297,15 +297,6 @@ void ADC_SPI_init()
 
 	xil_printf("Empieza configuracion del ADC\n");
 
-	/*while(1){
-		xil_printf("nCS low:\n");
-		ADC_nCS_low();
-		usleep(500);
-		xil_printf("nCS high:\n");
-		ADC_nCS_high();
-		usleep(500);
-	}*/
-
 	CPLD_ADC_nCS = 0;
 	cpld_status = write_CPLD_signals();
 	CPLD_ADC_nCS = 1;
@@ -316,7 +307,7 @@ void ADC_SPI_init()
 			AXI_ADC_BaseAddress,
 			AXI_ADC_S00_action_reg_offset,
 			1 << AXI_ADC_S00_ready_state_bit_offset);
-	//ADC_nCS_low();
+	//Reset by software
 	CPLD_ADC_nCS = 0;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -324,7 +315,6 @@ void ADC_SPI_init()
 	spi_data = 0x0001;
 	result = AXI_ADC_write_reg(pt_addr,spi_data);
 	xil_printf("Result: %d\n",result);
-	//ADC_nCS_high();
 	CPLD_ADC_nCS = 1;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -334,7 +324,7 @@ void ADC_SPI_init()
 			AXI_ADC_BaseAddress,
 			AXI_ADC_S00_action_reg_offset,
 			1 << AXI_ADC_S00_ready_state_bit_offset);
-	//ADC_nCS_low();
+	// Return from reset
 	CPLD_ADC_nCS = 0;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -343,7 +333,6 @@ void ADC_SPI_init()
 	result = AXI_ADC_write_reg(pt_addr,spi_data);
 	xil_printf("Result: %d\n",result);
 	usleep(500);
-	//ADC_nCS_high();
 	CPLD_ADC_nCS = 1;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -353,7 +342,7 @@ void ADC_SPI_init()
 			AXI_ADC_BaseAddress,
 			AXI_ADC_S00_action_reg_offset,
 			1 << AXI_ADC_S00_ready_state_bit_offset);
-	//ADC_nCS_low();
+	// Sync pattern enabled; all the channels should send the test pattern at the same time
 	CPLD_ADC_nCS = 0;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -362,7 +351,6 @@ void ADC_SPI_init()
 	result = AXI_ADC_write_reg(pt_addr,spi_data);
 	xil_printf("Result: %d\n",result);
 	usleep(500);
-	//ADC_nCS_high();
 	CPLD_ADC_nCS = 1;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -372,7 +360,7 @@ void ADC_SPI_init()
 			AXI_ADC_BaseAddress,
 			AXI_ADC_S00_action_reg_offset,
 			1 << AXI_ADC_S00_ready_state_bit_offset);
-	//ADC_nCS_low();
+	// Configuration of test pattern
 	CPLD_ADC_nCS = 0;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -383,18 +371,16 @@ void ADC_SPI_init()
 	result = AXI_ADC_write_reg(pt_addr,spi_data);
 	xil_printf("Result: %d\n",result);
 	usleep(500);
-	//ADC_nCS_high();
 	CPLD_ADC_nCS = 1;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
-
 
 	// Enables data write
 	AXI_ADC_mWriteReg(
 			AXI_ADC_BaseAddress,
 			AXI_ADC_S00_action_reg_offset,
 			1 << AXI_ADC_S00_ready_state_bit_offset);
-	//ADC_nCS_low();
+	// Second register to configurate test pattern
 	CPLD_ADC_nCS = 0;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -403,7 +389,6 @@ void ADC_SPI_init()
 	result = AXI_ADC_write_reg(pt_addr,spi_data);
 	xil_printf("Result: %d\n",result);
 	usleep(500);
-	//ADC_nCS_high();
 	CPLD_ADC_nCS = 1;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -413,7 +398,7 @@ void ADC_SPI_init()
 			AXI_ADC_BaseAddress,
 			AXI_ADC_S00_action_reg_offset,
 			1 << AXI_ADC_S00_ready_state_bit_offset);
-	//ADC_nCS_low();
+	// Set LSB first sent, or MSB first sent.
 	CPLD_ADC_nCS = 0;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -423,7 +408,6 @@ void ADC_SPI_init()
 	result = AXI_ADC_write_reg(pt_addr,spi_data);
 	xil_printf("Result: %d\n",result);
 	usleep(500);
-	//ADC_nCS_high();
 	CPLD_ADC_nCS = 1;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -433,7 +417,7 @@ void ADC_SPI_init()
 			AXI_ADC_BaseAddress,
 			AXI_ADC_S00_action_reg_offset,
 			1 << AXI_ADC_S00_ready_state_bit_offset);
-	//ADC_nCS_low();
+	// Interleaved mode disabled
 	CPLD_ADC_nCS = 0;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -442,7 +426,6 @@ void ADC_SPI_init()
 	result = AXI_ADC_write_reg(pt_addr,spi_data);
 	xil_printf("Result: %d\n",result);
 	usleep(500);
-	//ADC_nCS_high();
 	CPLD_ADC_nCS = 1;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -452,7 +435,7 @@ void ADC_SPI_init()
 			AXI_ADC_BaseAddress,
 			AXI_ADC_S00_action_reg_offset,
 			1 << AXI_ADC_S00_ready_state_bit_offset);
-	//ADC_nCS_low();
+	// Interleaved mode disabled
 	CPLD_ADC_nCS = 0;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -461,36 +444,16 @@ void ADC_SPI_init()
 	result = AXI_ADC_write_reg(pt_addr,spi_data);
 	xil_printf("Result: %d\n",result);
 	usleep(500);
-	//ADC_nCS_high();
 	CPLD_ADC_nCS = 1;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
 
-	/*// Delays data
 	// Enables data write
 	AXI_ADC_mWriteReg(
 			AXI_ADC_BaseAddress,
 			AXI_ADC_S00_action_reg_offset,
 			1 << AXI_ADC_S00_ready_state_bit_offset);
-	CPLD_ADC_nCS = 0;
-	cpld_status = write_CPLD_signals();
-	usleep(500);
-	pt_addr = 0xBE;
-	spi_data = 0x8000; // No delay set
-	//spi_data = 0x80E7;
-	result = AXI_ADC_write_reg(pt_addr,spi_data);
-	xil_printf("Result: %d\n",result);
-	usleep(500);
-	CPLD_ADC_nCS = 1;
-	cpld_status = write_CPLD_signals();
-	usleep(500);*/
-
-	// Invert channels that are inverted by hardware
-	// Enables data write
-	AXI_ADC_mWriteReg(
-			AXI_ADC_BaseAddress,
-			AXI_ADC_S00_action_reg_offset,
-			1 << AXI_ADC_S00_ready_state_bit_offset);
+	// Invert channels that are inverted by hardware are inverted again to compensate.
 	CPLD_ADC_nCS = 0;
 	cpld_status = write_CPLD_signals();
 	usleep(500);
@@ -509,15 +472,6 @@ void ADC_SPI_init()
 			AXI_ADC_S00_action_reg_offset, 0);
 
 	xil_printf("Termina configuracion del ADC\n");
-
-	/*xil_printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-	xil_printf("Estatus del ADC");
-	xil_printf(AXI_ADC_check_status());
-
-	result = AXI_ADC_write_reg(pt_addr,spi_data);
-	xil_printf("ADC SPI R:%u", result);
-
-	AXI_ADC_check_status();*/
 
 }
 void init_DACs()
@@ -564,93 +518,7 @@ int loop_routine(void){
 
 	xil_printf("---------------------\n\n starting command mode, no more than 15 characters per line!\n");
 
-
-	/*
-	//////////////////////////////////////////////////////////////////////////////////////////////
-	/// DRS4 safe restart
-	DRS4_restart_ROI();
-	memset(buffer, 0, strlen(buffer));
-	snprintf(buffer,40,"DRS4 restarting\n");
-	flag_senddata = 1;
-	///////////////////////////////////////////////////////////////////////////////////////////////
-
-	///////////////////////////////////////////////////////////////////////////////////////////////
-	/// Auto trigger enable
-	snprintf(buffer,40,"\nAUTO trigger on. Every 7s app.\n");
-	flag_senddata = 1;
-	usleep(10);
-	soft_trig = 0;
-	XGpio_DiscreteClear(&gpio,2,soft_trigger_mask); //clear reset in FIT, interrupt enabled
-	////////////////////////////////////////////////////////////////////////////////////////////////
-
-	////////////////////////////////////////////////////////////////////////////////////////////////
-	//// Check register
-	//					state = XGpio_DiscreteRead(&gpio,1);
-				xil_printf("\n# event buffer = %x\n", RxDone);
-	//					trigger_counter = (state >> 12) & 0xFFF;
-				memset(buffer, 0, strlen(buffer));
-				snprintf(buffer,40,"\n# event buffer = %x\n", RxDone);
-				flag_senddata = 1;
-	////////////////////////////////////////////////////////////////////////////////////////////////
-
-	/////////////////////////////////////////////////////////////////////////////////////////////
-	///// DMA debug
-	u32 status = XAxiDma_ReadReg(XPAR_AXI_DMA_0_BASEADDR, XAXIDMA_SR_OFFSET);
-
-	xil_printf("\n DMA status: 0x%08x\n", status);;
-
-	if (status & XAXIDMA_HALTED_MASK) {
-	    xil_printf("DMA halted.\n");
-	}
-	if (status & XAXIDMA_ERR_INTERNAL_MASK) {
-	    xil_printf("Internal DMA error.\n");
-	}
-	if (status & XAXIDMA_ERR_SLAVE_MASK) {
-	    xil_printf("Slave error in DMA.\n");
-	}
-	if (status & XAXIDMA_ERR_DECODE_MASK) {
-	    xil_printf("Address decode error.\n");
-	}
-	/////////////////////////////////////////////////////////////////////////////////////////////
-
-	//////////////////////////////////////////////////////////////////////////////////////////////
-	// Sending data by UART
-    // Directly call ADC acquisition function as if -get_event were received
-    c_glob_ev = 0;
-    xil_printf("Previo a funcion process_n_send_data.\n");
-    process_n_send_data(c_glob_ev, 1);  // Simulate ADC data acquisition
-    xil_printf("Post a funcion process_n_send_data.\n");
-    c_glob_ev++;
-    // Print ADC data (assuming it's stored in 'buffer' or a relevant variable)
-    xil_printf("ADC Data for event: %d\n", buffer);
-    // Delay or add condition to prevent flooding the output (e.g., usleep or counter-based delay)
-    //usleep(1000000);  // Delay 1 second for readability
-	//////////////////////////////////////////////////////////////////////////////////////////////
-	 *
-	 */
-    xil_printf("Pasa hacia el while infinito.\n");
-
 	while (1) {
-
-				//ADC_SPI_init();
-
-				/*//First, enable LVDS on ADS5296.
-				xil_printf("Escribo ADC\n");
-				u16 pt_addr;
-				u16 spi_data;
-				u32 result;
-
-				pt_addr = 0x26;
-				spi_data = 0b0000111111000000;
-				result = AXI_ADC_write_reg(pt_addr,spi_data);
-				xil_printf(result);
-				usleep(500);
-
-				pt_addr = 0x25;
-				spi_data = 0b0000000100010000;
-				result = AXI_ADC_write_reg(pt_addr,spi_data);
-				xil_printf(result);
-				usleep(500);*/
 
 				if (TcpFastTmrFlag) {
 					tcp_fasttmr();

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="zsys_util_vector_logic_0_2_synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1733422174">
-  <File Type="RDS-UTIL-PB" Name="zsys_util_vector_logic_0_2_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="zsys_util_vector_logic_0_2_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="zsys_util_vector_logic_0_2_utilization_synth.pb"/>
   <File Type="RDS-RDS" Name="zsys_util_vector_logic_0_2.vds"/>
   <File Type="RDS-DCP" Name="zsys_util_vector_logic_0_2.dcp"/>
   <File Type="PA-TCL" Name="zsys_util_vector_logic_0_2.tcl"/>

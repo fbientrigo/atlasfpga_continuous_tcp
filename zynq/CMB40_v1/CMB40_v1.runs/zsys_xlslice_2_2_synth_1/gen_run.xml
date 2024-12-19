@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="zsys_xlslice_2_2_synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1694610727">
-  <File Type="PA-TCL" Name="zsys_xlslice_2_2.tcl"/>
   <File Type="RDS-DCP" Name="zsys_xlslice_2_2.dcp"/>
+  <File Type="PA-TCL" Name="zsys_xlslice_2_2.tcl"/>
   <File Type="REPORTS-TCL" Name="zsys_xlslice_2_2_reports.tcl"/>
   <File Type="RDS-RDS" Name="zsys_xlslice_2_2.vds"/>
   <File Type="RDS-UTIL" Name="zsys_xlslice_2_2_utilization_synth.rpt"/>

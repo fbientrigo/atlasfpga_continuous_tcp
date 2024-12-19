@@ -3267,3 +3267,2480 @@ make pre-build main-build
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
+18:52:38 **** Auto Build of configuration Debug for project MB40ch_wUART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:26:0,
+                 from ../src/main.c:36:
+../src/DRS4_driver.h:29:2: warning: #warning CHECK FOR the right DRS4 base address the one xparameters is wrong [-Wcpp]
+ #warning CHECK FOR the right DRS4 base address the one xparameters is wrong
+  ^~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:54:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:107:11: warning: implicit declaration of function 'setup_dma_and_timer' [-Wimplicit-function-declaration]
+  Status = setup_dma_and_timer();
+           ^~~~~~~~~~~~~~~~~~~
+../src/main.c:117:2: warning: implicit declaration of function 'print_app_header'; did you mean 'pbuf_header'? [-Wimplicit-function-declaration]
+  print_app_header();
+  ^~~~~~~~~~~~~~~~
+  pbuf_header
+../src/main.c:120:12: warning: implicit declaration of function 'setup_interrupt_dma_timer' [-Wimplicit-function-declaration]
+  Status =  setup_interrupt_dma_timer();
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:164:2: warning: implicit declaration of function 'print_ip_settings' [-Wimplicit-function-declaration]
+  print_ip_settings(&ipaddr, &netmask, &gw);
+  ^~~~~~~~~~~~~~~~~
+../src/main.c:172:48: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+     xil_printf("buffer length %d \n \n",strlen(buffer));
+                                                ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c: In function 'setup_system':
+../src/main.c:282:2: warning: implicit declaration of function 'ADC_SPI_init'; did you mean 'DRS4_Init'? [-Wimplicit-function-declaration]
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+  DRS4_Init
+../src/main.c:202:18: warning: unused variable 'Config' [-Wunused-variable]
+  XUartPs_Config *Config;
+                  ^~~~~~
+../src/main.c: At top level:
+../src/main.c:291:6: warning: conflicting types for 'ADC_SPI_init'
+ void ADC_SPI_init()
+      ^~~~~~~~~~~~
+../src/main.c:282:2: note: previous implicit declaration of 'ADC_SPI_init' was here
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+../src/main.c: In function 'ADC_SPI_init':
+../src/main.c:296:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  u32 cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'loop_routine':
+../src/main.c:642:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:643:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nDRS4 was shuted down... \nEnd program");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c: In function 'DRS4_restart_ROI':
+../src/main.c:748:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  int cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'recv_callback':
+../src/main.c:794:27: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(buffer, 0, strlen(buffer));
+                           ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:795:43: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  xil_printf("strlen:%d, mess:%s\n",strlen(RecvBuffer),RecvBuffer);
+                                           ^~~~~~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:799:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:800:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:808:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:809:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nDRS4 was shuted down, state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:815:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:816:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 restarting\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:840:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:841:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# event buffer = %x\n", RxDone);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:847:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:848:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# VETO set to FALSE");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:856:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:857:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# cleaning up the event buffer");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:864:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:865:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# state = %x\n", state >> 24);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:871:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:872:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\n# state = %x\n", state);
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:876:17: warning: pointer targets in passing argument 1 of 'atoi' differ in signedness [-Wpointer-sign]
+    value = atoi(&(RecvBuffer[13]));
+                 ^
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdlib.h:77:5: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int _EXFUN(atoi,(const char *__nptr));
+     ^
+../src/main.c:884:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:885:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# n events set to  = %d", n_events);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:891:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:892:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,372,"\nList of available commands:\n"
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:913:15: warning: pointer targets in passing argument 1 of 'xil_printf' differ in signedness [-Wpointer-sign]
+    xil_printf(buffer);
+               ^~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:27:13: note: expected 'const char8 * {aka const char *}' but argument is of type 'unsigned char *'
+ extern void xil_printf(const char *format, ...);
+             ^~~~~~~~~~
+../src/main.c:918:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nSoft_trig command\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:934:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nSoft_trig is OFF\n");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:941:17: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+        snprintf(buffer,40,"\nAUTO trigger on. Every 7s app.\n");
+                 ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:950:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nManual trigger RO\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:777:17: warning: unused variable 'mess' [-Wunused-variable]
+   unsigned char mess[40];
+                 ^~~~
+../src/main.c:776:7: warning: unused variable 'Status' [-Wunused-variable]
+   int Status;
+       ^~~~~~
+../src/main.c:775:7: warning: unused variable 'ch' [-Wunused-variable]
+   int ch=0;
+       ^~
+../src/main.c:772:15: warning: unused variable 'ReceivedCount' [-Wunused-variable]
+  unsigned int ReceivedCount = 0;
+               ^~~~~~~~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+At top level:
+../src/xaxidma_controller.h:173:12: warning: 'read_pointer' defined but not used [-Wunused-variable]
+ static u8 *read_pointer = (u8 *) RX_BUFFER_BASE;
+            ^~~~~~~~~~~~
+../src/xaxidma_controller.h:170:13: warning: 'Packet' defined but not used [-Wunused-variable]
+ static u32 *Packet = (u32 *) TX_BUFFER_BASE;
+             ^~~~~~
+../src/xaxidma_controller.h:157:13: warning: 'Intc' defined but not used [-Wunused-variable]
+ static INTC Intc; /* Instance of the Interrupt Controller */
+             ^~~~
+../src/main.c: In function 'setup_system':
+../src/main.c:266:2: warning: 'cpld_status' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  xil_printf("Cpld status: %d \n\n",cpld_status);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: MB40ch_wUART.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/lib -o "MB40ch_wUART.elf" ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: MB40ch_wUART.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size MB40ch_wUART.elf  |tee "MB40ch_wUART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 198884	   4504	2105344	2308732	 233a7c	MB40ch_wUART.elf
+Finished building: MB40ch_wUART.elf.size
+ 
+18:53:16 **** Auto Build of configuration Debug for project MB40ch_wUART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/CPLD_driver.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPLD_driver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/include -MMD -MP -MF"src/CPLD_driver.d" -MT"src/CPLD_driver.o" -o "src/CPLD_driver.o" "../src/CPLD_driver.c"
+../src/CPLD_driver.c: In function 'Mezz_CPLD_init':
+../src/CPLD_driver.c:114:6: warning: unused variable 'ack_cpld' [-Wunused-variable]
+  u32 ack_cpld;
+      ^~~~~~~~
+../src/CPLD_driver.c:113:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  u32 status;
+      ^~~~~~
+../src/CPLD_driver.c: In function 'CPLD_mezz_power_off':
+../src/CPLD_driver.c:160:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  u32 status;
+      ^~~~~~
+Finished building: ../src/CPLD_driver.c
+ 
+Building target: MB40ch_wUART.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/lib -o "MB40ch_wUART.elf" ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: MB40ch_wUART.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size MB40ch_wUART.elf  |tee "MB40ch_wUART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 198436	   4504	2105344	2308284	 2338bc	MB40ch_wUART.elf
+Finished building: MB40ch_wUART.elf.size
+ 
+18:53:37 **** Auto Build of configuration Debug for project MB40ch_wUART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/CPLD_driver.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPLD_driver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/include -MMD -MP -MF"src/CPLD_driver.d" -MT"src/CPLD_driver.o" -o "src/CPLD_driver.o" "../src/CPLD_driver.c"
+../src/CPLD_driver.c: In function 'Mezz_CPLD_init':
+../src/CPLD_driver.c:114:6: warning: unused variable 'ack_cpld' [-Wunused-variable]
+  u32 ack_cpld;
+      ^~~~~~~~
+../src/CPLD_driver.c:113:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  u32 status;
+      ^~~~~~
+../src/CPLD_driver.c: In function 'CPLD_mezz_power_off':
+../src/CPLD_driver.c:160:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  u32 status;
+      ^~~~~~
+Finished building: ../src/CPLD_driver.c
+ 
+Building target: MB40ch_wUART.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/lib -o "MB40ch_wUART.elf" ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: MB40ch_wUART.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size MB40ch_wUART.elf  |tee "MB40ch_wUART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 197884	   4504	2105344	2307732	 233694	MB40ch_wUART.elf
+Finished building: MB40ch_wUART.elf.size
+ 
+19:00:26 **** Auto Build of configuration Debug for project MB40ch_wUART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:26:0,
+                 from ../src/main.c:36:
+../src/DRS4_driver.h:29:2: warning: #warning CHECK FOR the right DRS4 base address the one xparameters is wrong [-Wcpp]
+ #warning CHECK FOR the right DRS4 base address the one xparameters is wrong
+  ^~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:54:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:107:11: warning: implicit declaration of function 'setup_dma_and_timer' [-Wimplicit-function-declaration]
+  Status = setup_dma_and_timer();
+           ^~~~~~~~~~~~~~~~~~~
+../src/main.c:117:2: warning: implicit declaration of function 'print_app_header'; did you mean 'pbuf_header'? [-Wimplicit-function-declaration]
+  print_app_header();
+  ^~~~~~~~~~~~~~~~
+  pbuf_header
+../src/main.c:120:12: warning: implicit declaration of function 'setup_interrupt_dma_timer' [-Wimplicit-function-declaration]
+  Status =  setup_interrupt_dma_timer();
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:164:2: warning: implicit declaration of function 'print_ip_settings' [-Wimplicit-function-declaration]
+  print_ip_settings(&ipaddr, &netmask, &gw);
+  ^~~~~~~~~~~~~~~~~
+../src/main.c:172:48: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+     xil_printf("buffer length %d \n \n",strlen(buffer));
+                                                ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c: In function 'setup_system':
+../src/main.c:282:2: warning: implicit declaration of function 'ADC_SPI_init'; did you mean 'DRS4_Init'? [-Wimplicit-function-declaration]
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+  DRS4_Init
+../src/main.c:202:18: warning: unused variable 'Config' [-Wunused-variable]
+  XUartPs_Config *Config;
+                  ^~~~~~
+../src/main.c: At top level:
+../src/main.c:291:6: warning: conflicting types for 'ADC_SPI_init'
+ void ADC_SPI_init()
+      ^~~~~~~~~~~~
+../src/main.c:282:2: note: previous implicit declaration of 'ADC_SPI_init' was here
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+../src/main.c: In function 'ADC_SPI_init':
+../src/main.c:296:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  u32 cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'loop_routine':
+../src/main.c:645:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:646:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nDRS4 was shuted down... \nEnd program");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c: In function 'DRS4_restart_ROI':
+../src/main.c:751:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  int cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'recv_callback':
+../src/main.c:797:27: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(buffer, 0, strlen(buffer));
+                           ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:798:43: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  xil_printf("strlen:%d, mess:%s\n",strlen(RecvBuffer),RecvBuffer);
+                                           ^~~~~~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:802:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:803:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:811:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:812:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nDRS4 was shuted down, state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:818:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:819:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 restarting\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:843:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:844:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# event buffer = %x\n", RxDone);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:850:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:851:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# VETO set to FALSE");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:859:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:860:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# cleaning up the event buffer");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:867:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:868:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# state = %x\n", state >> 24);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:874:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:875:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\n# state = %x\n", state);
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:879:17: warning: pointer targets in passing argument 1 of 'atoi' differ in signedness [-Wpointer-sign]
+    value = atoi(&(RecvBuffer[13]));
+                 ^
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdlib.h:77:5: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int _EXFUN(atoi,(const char *__nptr));
+     ^
+../src/main.c:887:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:888:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# n events set to  = %d", n_events);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:894:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:895:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,372,"\nList of available commands:\n"
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:916:15: warning: pointer targets in passing argument 1 of 'xil_printf' differ in signedness [-Wpointer-sign]
+    xil_printf(buffer);
+               ^~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:27:13: note: expected 'const char8 * {aka const char *}' but argument is of type 'unsigned char *'
+ extern void xil_printf(const char *format, ...);
+             ^~~~~~~~~~
+../src/main.c:921:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nSoft_trig command\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:937:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nSoft_trig is OFF\n");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:944:17: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+        snprintf(buffer,40,"\nAUTO trigger on. Every 7s app.\n");
+                 ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:953:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nManual trigger RO\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:780:17: warning: unused variable 'mess' [-Wunused-variable]
+   unsigned char mess[40];
+                 ^~~~
+../src/main.c:779:7: warning: unused variable 'Status' [-Wunused-variable]
+   int Status;
+       ^~~~~~
+../src/main.c:778:7: warning: unused variable 'ch' [-Wunused-variable]
+   int ch=0;
+       ^~
+../src/main.c:775:15: warning: unused variable 'ReceivedCount' [-Wunused-variable]
+  unsigned int ReceivedCount = 0;
+               ^~~~~~~~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+At top level:
+../src/xaxidma_controller.h:173:12: warning: 'read_pointer' defined but not used [-Wunused-variable]
+ static u8 *read_pointer = (u8 *) RX_BUFFER_BASE;
+            ^~~~~~~~~~~~
+../src/xaxidma_controller.h:170:13: warning: 'Packet' defined but not used [-Wunused-variable]
+ static u32 *Packet = (u32 *) TX_BUFFER_BASE;
+             ^~~~~~
+../src/xaxidma_controller.h:157:13: warning: 'Intc' defined but not used [-Wunused-variable]
+ static INTC Intc; /* Instance of the Interrupt Controller */
+             ^~~~
+../src/main.c: In function 'setup_system':
+../src/main.c:266:2: warning: 'cpld_status' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  xil_printf("Cpld status: %d \n\n",cpld_status);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: MB40ch_wUART.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/lib -o "MB40ch_wUART.elf" ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: MB40ch_wUART.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size MB40ch_wUART.elf  |tee "MB40ch_wUART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 197884	   4504	2105344	2307732	 233694	MB40ch_wUART.elf
+Finished building: MB40ch_wUART.elf.size
+ 
+19:00:58 **** Auto Build of configuration Debug for project MB40ch_wUART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:26:0,
+                 from ../src/main.c:36:
+../src/DRS4_driver.h:29:2: warning: #warning CHECK FOR the right DRS4 base address the one xparameters is wrong [-Wcpp]
+ #warning CHECK FOR the right DRS4 base address the one xparameters is wrong
+  ^~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:54:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:107:11: warning: implicit declaration of function 'setup_dma_and_timer' [-Wimplicit-function-declaration]
+  Status = setup_dma_and_timer();
+           ^~~~~~~~~~~~~~~~~~~
+../src/main.c:117:2: warning: implicit declaration of function 'print_app_header'; did you mean 'pbuf_header'? [-Wimplicit-function-declaration]
+  print_app_header();
+  ^~~~~~~~~~~~~~~~
+  pbuf_header
+../src/main.c:120:12: warning: implicit declaration of function 'setup_interrupt_dma_timer' [-Wimplicit-function-declaration]
+  Status =  setup_interrupt_dma_timer();
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:164:2: warning: implicit declaration of function 'print_ip_settings' [-Wimplicit-function-declaration]
+  print_ip_settings(&ipaddr, &netmask, &gw);
+  ^~~~~~~~~~~~~~~~~
+../src/main.c:172:48: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+     xil_printf("buffer length %d \n \n",strlen(buffer));
+                                                ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c: In function 'setup_system':
+../src/main.c:282:2: warning: implicit declaration of function 'ADC_SPI_init'; did you mean 'DRS4_Init'? [-Wimplicit-function-declaration]
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+  DRS4_Init
+../src/main.c:202:18: warning: unused variable 'Config' [-Wunused-variable]
+  XUartPs_Config *Config;
+                  ^~~~~~
+../src/main.c: At top level:
+../src/main.c:291:6: warning: conflicting types for 'ADC_SPI_init'
+ void ADC_SPI_init()
+      ^~~~~~~~~~~~
+../src/main.c:282:2: note: previous implicit declaration of 'ADC_SPI_init' was here
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+../src/main.c: In function 'ADC_SPI_init':
+../src/main.c:296:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  u32 cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'loop_routine':
+../src/main.c:646:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:647:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nDRS4 was shuted down... \nEnd program");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c: In function 'DRS4_restart_ROI':
+../src/main.c:752:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  int cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'recv_callback':
+../src/main.c:798:27: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(buffer, 0, strlen(buffer));
+                           ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:799:43: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  xil_printf("strlen:%d, mess:%s\n",strlen(RecvBuffer),RecvBuffer);
+                                           ^~~~~~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:803:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:804:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:812:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:813:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nDRS4 was shuted down, state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:819:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:820:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 restarting\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:844:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:845:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# event buffer = %x\n", RxDone);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:851:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:852:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# VETO set to FALSE");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:860:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:861:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# cleaning up the event buffer");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:868:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:869:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# state = %x\n", state >> 24);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:875:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:876:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\n# state = %x\n", state);
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:880:17: warning: pointer targets in passing argument 1 of 'atoi' differ in signedness [-Wpointer-sign]
+    value = atoi(&(RecvBuffer[13]));
+                 ^
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdlib.h:77:5: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int _EXFUN(atoi,(const char *__nptr));
+     ^
+../src/main.c:888:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:889:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# n events set to  = %d", n_events);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:895:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:896:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,372,"\nList of available commands:\n"
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:917:15: warning: pointer targets in passing argument 1 of 'xil_printf' differ in signedness [-Wpointer-sign]
+    xil_printf(buffer);
+               ^~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:27:13: note: expected 'const char8 * {aka const char *}' but argument is of type 'unsigned char *'
+ extern void xil_printf(const char *format, ...);
+             ^~~~~~~~~~
+../src/main.c:922:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nSoft_trig command\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:938:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nSoft_trig is OFF\n");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:945:17: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+        snprintf(buffer,40,"\nAUTO trigger on. Every 7s app.\n");
+                 ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:954:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nManual trigger RO\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:781:17: warning: unused variable 'mess' [-Wunused-variable]
+   unsigned char mess[40];
+                 ^~~~
+../src/main.c:780:7: warning: unused variable 'Status' [-Wunused-variable]
+   int Status;
+       ^~~~~~
+../src/main.c:779:7: warning: unused variable 'ch' [-Wunused-variable]
+   int ch=0;
+       ^~
+../src/main.c:776:15: warning: unused variable 'ReceivedCount' [-Wunused-variable]
+  unsigned int ReceivedCount = 0;
+               ^~~~~~~~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+At top level:
+../src/xaxidma_controller.h:173:12: warning: 'read_pointer' defined but not used [-Wunused-variable]
+ static u8 *read_pointer = (u8 *) RX_BUFFER_BASE;
+            ^~~~~~~~~~~~
+../src/xaxidma_controller.h:170:13: warning: 'Packet' defined but not used [-Wunused-variable]
+ static u32 *Packet = (u32 *) TX_BUFFER_BASE;
+             ^~~~~~
+../src/xaxidma_controller.h:157:13: warning: 'Intc' defined but not used [-Wunused-variable]
+ static INTC Intc; /* Instance of the Interrupt Controller */
+             ^~~~
+../src/main.c: In function 'setup_system':
+../src/main.c:266:2: warning: 'cpld_status' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  xil_printf("Cpld status: %d \n\n",cpld_status);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: MB40ch_wUART.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/lib -o "MB40ch_wUART.elf" ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: MB40ch_wUART.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size MB40ch_wUART.elf  |tee "MB40ch_wUART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 197884	   4504	2105344	2307732	 233694	MB40ch_wUART.elf
+Finished building: MB40ch_wUART.elf.size
+ 
+19:01:30 **** Auto Build of configuration Debug for project MB40ch_wUART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:26:0,
+                 from ../src/main.c:36:
+../src/DRS4_driver.h:29:2: warning: #warning CHECK FOR the right DRS4 base address the one xparameters is wrong [-Wcpp]
+ #warning CHECK FOR the right DRS4 base address the one xparameters is wrong
+  ^~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:54:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:107:11: warning: implicit declaration of function 'setup_dma_and_timer' [-Wimplicit-function-declaration]
+  Status = setup_dma_and_timer();
+           ^~~~~~~~~~~~~~~~~~~
+../src/main.c:117:2: warning: implicit declaration of function 'print_app_header'; did you mean 'pbuf_header'? [-Wimplicit-function-declaration]
+  print_app_header();
+  ^~~~~~~~~~~~~~~~
+  pbuf_header
+../src/main.c:120:12: warning: implicit declaration of function 'setup_interrupt_dma_timer' [-Wimplicit-function-declaration]
+  Status =  setup_interrupt_dma_timer();
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:164:2: warning: implicit declaration of function 'print_ip_settings' [-Wimplicit-function-declaration]
+  print_ip_settings(&ipaddr, &netmask, &gw);
+  ^~~~~~~~~~~~~~~~~
+../src/main.c:172:48: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+     xil_printf("buffer length %d \n \n",strlen(buffer));
+                                                ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c: In function 'setup_system':
+../src/main.c:282:2: warning: implicit declaration of function 'ADC_SPI_init'; did you mean 'DRS4_Init'? [-Wimplicit-function-declaration]
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+  DRS4_Init
+../src/main.c:202:18: warning: unused variable 'Config' [-Wunused-variable]
+  XUartPs_Config *Config;
+                  ^~~~~~
+../src/main.c: At top level:
+../src/main.c:291:6: warning: conflicting types for 'ADC_SPI_init'
+ void ADC_SPI_init()
+      ^~~~~~~~~~~~
+../src/main.c:282:2: note: previous implicit declaration of 'ADC_SPI_init' was here
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+../src/main.c: In function 'ADC_SPI_init':
+../src/main.c:296:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  u32 cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'loop_routine':
+../src/main.c:647:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:648:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nDRS4 was shuted down... \nEnd program");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c: In function 'DRS4_restart_ROI':
+../src/main.c:753:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  int cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'recv_callback':
+../src/main.c:799:27: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(buffer, 0, strlen(buffer));
+                           ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:800:43: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  xil_printf("strlen:%d, mess:%s\n",strlen(RecvBuffer),RecvBuffer);
+                                           ^~~~~~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:804:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:805:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:813:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:814:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nDRS4 was shuted down, state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:820:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:821:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 restarting\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:845:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:846:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# event buffer = %x\n", RxDone);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:852:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:853:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# VETO set to FALSE");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:861:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:862:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# cleaning up the event buffer");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:869:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:870:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# state = %x\n", state >> 24);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:876:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:877:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\n# state = %x\n", state);
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:881:17: warning: pointer targets in passing argument 1 of 'atoi' differ in signedness [-Wpointer-sign]
+    value = atoi(&(RecvBuffer[13]));
+                 ^
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdlib.h:77:5: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int _EXFUN(atoi,(const char *__nptr));
+     ^
+../src/main.c:889:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:890:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# n events set to  = %d", n_events);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:896:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:897:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,372,"\nList of available commands:\n"
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:918:15: warning: pointer targets in passing argument 1 of 'xil_printf' differ in signedness [-Wpointer-sign]
+    xil_printf(buffer);
+               ^~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:27:13: note: expected 'const char8 * {aka const char *}' but argument is of type 'unsigned char *'
+ extern void xil_printf(const char *format, ...);
+             ^~~~~~~~~~
+../src/main.c:923:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nSoft_trig command\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:939:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nSoft_trig is OFF\n");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:946:17: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+        snprintf(buffer,40,"\nAUTO trigger on. Every 7s app.\n");
+                 ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:955:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nManual trigger RO\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:782:17: warning: unused variable 'mess' [-Wunused-variable]
+   unsigned char mess[40];
+                 ^~~~
+../src/main.c:781:7: warning: unused variable 'Status' [-Wunused-variable]
+   int Status;
+       ^~~~~~
+../src/main.c:780:7: warning: unused variable 'ch' [-Wunused-variable]
+   int ch=0;
+       ^~
+../src/main.c:777:15: warning: unused variable 'ReceivedCount' [-Wunused-variable]
+  unsigned int ReceivedCount = 0;
+               ^~~~~~~~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+At top level:
+../src/xaxidma_controller.h:173:12: warning: 'read_pointer' defined but not used [-Wunused-variable]
+ static u8 *read_pointer = (u8 *) RX_BUFFER_BASE;
+            ^~~~~~~~~~~~
+../src/xaxidma_controller.h:170:13: warning: 'Packet' defined but not used [-Wunused-variable]
+ static u32 *Packet = (u32 *) TX_BUFFER_BASE;
+             ^~~~~~
+../src/xaxidma_controller.h:157:13: warning: 'Intc' defined but not used [-Wunused-variable]
+ static INTC Intc; /* Instance of the Interrupt Controller */
+             ^~~~
+../src/main.c: In function 'setup_system':
+../src/main.c:266:2: warning: 'cpld_status' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  xil_printf("Cpld status: %d \n\n",cpld_status);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: MB40ch_wUART.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/lib -o "MB40ch_wUART.elf" ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: MB40ch_wUART.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size MB40ch_wUART.elf  |tee "MB40ch_wUART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 197884	   4504	2105344	2307732	 233694	MB40ch_wUART.elf
+Finished building: MB40ch_wUART.elf.size
+ 
+19:02:06 **** Auto Build of configuration Debug for project MB40ch_wUART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:26:0,
+                 from ../src/main.c:36:
+../src/DRS4_driver.h:29:2: warning: #warning CHECK FOR the right DRS4 base address the one xparameters is wrong [-Wcpp]
+ #warning CHECK FOR the right DRS4 base address the one xparameters is wrong
+  ^~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:54:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:107:11: warning: implicit declaration of function 'setup_dma_and_timer' [-Wimplicit-function-declaration]
+  Status = setup_dma_and_timer();
+           ^~~~~~~~~~~~~~~~~~~
+../src/main.c:117:2: warning: implicit declaration of function 'print_app_header'; did you mean 'pbuf_header'? [-Wimplicit-function-declaration]
+  print_app_header();
+  ^~~~~~~~~~~~~~~~
+  pbuf_header
+../src/main.c:120:12: warning: implicit declaration of function 'setup_interrupt_dma_timer' [-Wimplicit-function-declaration]
+  Status =  setup_interrupt_dma_timer();
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:164:2: warning: implicit declaration of function 'print_ip_settings' [-Wimplicit-function-declaration]
+  print_ip_settings(&ipaddr, &netmask, &gw);
+  ^~~~~~~~~~~~~~~~~
+../src/main.c:172:48: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+     xil_printf("buffer length %d \n \n",strlen(buffer));
+                                                ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c: In function 'setup_system':
+../src/main.c:282:2: warning: implicit declaration of function 'ADC_SPI_init'; did you mean 'DRS4_Init'? [-Wimplicit-function-declaration]
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+  DRS4_Init
+../src/main.c:202:18: warning: unused variable 'Config' [-Wunused-variable]
+  XUartPs_Config *Config;
+                  ^~~~~~
+../src/main.c: At top level:
+../src/main.c:291:6: warning: conflicting types for 'ADC_SPI_init'
+ void ADC_SPI_init()
+      ^~~~~~~~~~~~
+../src/main.c:282:2: note: previous implicit declaration of 'ADC_SPI_init' was here
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+../src/main.c: In function 'ADC_SPI_init':
+../src/main.c:296:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  u32 cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'loop_routine':
+../src/main.c:648:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:649:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nDRS4 was shuted down... \nEnd program");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c: In function 'DRS4_restart_ROI':
+../src/main.c:754:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  int cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'recv_callback':
+../src/main.c:800:27: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(buffer, 0, strlen(buffer));
+                           ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:801:43: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  xil_printf("strlen:%d, mess:%s\n",strlen(RecvBuffer),RecvBuffer);
+                                           ^~~~~~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:805:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:806:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:814:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:815:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nDRS4 was shuted down, state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:821:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:822:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 restarting\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:846:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:847:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# event buffer = %x\n", RxDone);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:853:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:854:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# VETO set to FALSE");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:862:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:863:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# cleaning up the event buffer");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:870:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:871:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# state = %x\n", state >> 24);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:877:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:878:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\n# state = %x\n", state);
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:882:17: warning: pointer targets in passing argument 1 of 'atoi' differ in signedness [-Wpointer-sign]
+    value = atoi(&(RecvBuffer[13]));
+                 ^
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdlib.h:77:5: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int _EXFUN(atoi,(const char *__nptr));
+     ^
+../src/main.c:890:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:891:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# n events set to  = %d", n_events);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:897:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:898:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,372,"\nList of available commands:\n"
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:919:15: warning: pointer targets in passing argument 1 of 'xil_printf' differ in signedness [-Wpointer-sign]
+    xil_printf(buffer);
+               ^~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:27:13: note: expected 'const char8 * {aka const char *}' but argument is of type 'unsigned char *'
+ extern void xil_printf(const char *format, ...);
+             ^~~~~~~~~~
+../src/main.c:924:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nSoft_trig command\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:940:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nSoft_trig is OFF\n");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:947:17: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+        snprintf(buffer,40,"\nAUTO trigger on. Every 7s app.\n");
+                 ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:956:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nManual trigger RO\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:783:17: warning: unused variable 'mess' [-Wunused-variable]
+   unsigned char mess[40];
+                 ^~~~
+../src/main.c:782:7: warning: unused variable 'Status' [-Wunused-variable]
+   int Status;
+       ^~~~~~
+../src/main.c:781:7: warning: unused variable 'ch' [-Wunused-variable]
+   int ch=0;
+       ^~
+../src/main.c:778:15: warning: unused variable 'ReceivedCount' [-Wunused-variable]
+  unsigned int ReceivedCount = 0;
+               ^~~~~~~~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+At top level:
+../src/xaxidma_controller.h:173:12: warning: 'read_pointer' defined but not used [-Wunused-variable]
+ static u8 *read_pointer = (u8 *) RX_BUFFER_BASE;
+            ^~~~~~~~~~~~
+../src/xaxidma_controller.h:170:13: warning: 'Packet' defined but not used [-Wunused-variable]
+ static u32 *Packet = (u32 *) TX_BUFFER_BASE;
+             ^~~~~~
+../src/xaxidma_controller.h:157:13: warning: 'Intc' defined but not used [-Wunused-variable]
+ static INTC Intc; /* Instance of the Interrupt Controller */
+             ^~~~
+../src/main.c: In function 'setup_system':
+../src/main.c:266:2: warning: 'cpld_status' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  xil_printf("Cpld status: %d \n\n",cpld_status);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: MB40ch_wUART.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/lib -o "MB40ch_wUART.elf" ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: MB40ch_wUART.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size MB40ch_wUART.elf  |tee "MB40ch_wUART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 197884	   4504	2105344	2307732	 233694	MB40ch_wUART.elf
+Finished building: MB40ch_wUART.elf.size
+ 
+19:03:06 **** Auto Build of configuration Debug for project MB40ch_wUART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:26:0,
+                 from ../src/main.c:36:
+../src/DRS4_driver.h:29:2: warning: #warning CHECK FOR the right DRS4 base address the one xparameters is wrong [-Wcpp]
+ #warning CHECK FOR the right DRS4 base address the one xparameters is wrong
+  ^~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:54:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:107:11: warning: implicit declaration of function 'setup_dma_and_timer' [-Wimplicit-function-declaration]
+  Status = setup_dma_and_timer();
+           ^~~~~~~~~~~~~~~~~~~
+../src/main.c:117:2: warning: implicit declaration of function 'print_app_header'; did you mean 'pbuf_header'? [-Wimplicit-function-declaration]
+  print_app_header();
+  ^~~~~~~~~~~~~~~~
+  pbuf_header
+../src/main.c:120:12: warning: implicit declaration of function 'setup_interrupt_dma_timer' [-Wimplicit-function-declaration]
+  Status =  setup_interrupt_dma_timer();
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:164:2: warning: implicit declaration of function 'print_ip_settings' [-Wimplicit-function-declaration]
+  print_ip_settings(&ipaddr, &netmask, &gw);
+  ^~~~~~~~~~~~~~~~~
+../src/main.c:172:48: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+     xil_printf("buffer length %d \n \n",strlen(buffer));
+                                                ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c: In function 'setup_system':
+../src/main.c:282:2: warning: implicit declaration of function 'ADC_SPI_init'; did you mean 'DRS4_Init'? [-Wimplicit-function-declaration]
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+  DRS4_Init
+../src/main.c:202:18: warning: unused variable 'Config' [-Wunused-variable]
+  XUartPs_Config *Config;
+                  ^~~~~~
+../src/main.c: At top level:
+../src/main.c:291:6: warning: conflicting types for 'ADC_SPI_init'
+ void ADC_SPI_init()
+      ^~~~~~~~~~~~
+../src/main.c:282:2: note: previous implicit declaration of 'ADC_SPI_init' was here
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+../src/main.c: In function 'ADC_SPI_init':
+../src/main.c:296:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  u32 cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'loop_routine':
+../src/main.c:649:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:650:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nDRS4 was shuted down... \nEnd program");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c: In function 'DRS4_restart_ROI':
+../src/main.c:755:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  int cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'recv_callback':
+../src/main.c:801:27: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(buffer, 0, strlen(buffer));
+                           ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:802:43: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  xil_printf("strlen:%d, mess:%s\n",strlen(RecvBuffer),RecvBuffer);
+                                           ^~~~~~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:806:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:807:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:815:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:816:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nDRS4 was shuted down, state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:822:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:823:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 restarting\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:847:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:848:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# event buffer = %x\n", RxDone);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:854:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:855:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# VETO set to FALSE");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:863:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:864:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# cleaning up the event buffer");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:871:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:872:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# state = %x\n", state >> 24);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:878:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:879:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\n# state = %x\n", state);
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:883:17: warning: pointer targets in passing argument 1 of 'atoi' differ in signedness [-Wpointer-sign]
+    value = atoi(&(RecvBuffer[13]));
+                 ^
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdlib.h:77:5: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int _EXFUN(atoi,(const char *__nptr));
+     ^
+../src/main.c:891:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:892:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# n events set to  = %d", n_events);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:898:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:899:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,372,"\nList of available commands:\n"
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:920:15: warning: pointer targets in passing argument 1 of 'xil_printf' differ in signedness [-Wpointer-sign]
+    xil_printf(buffer);
+               ^~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:27:13: note: expected 'const char8 * {aka const char *}' but argument is of type 'unsigned char *'
+ extern void xil_printf(const char *format, ...);
+             ^~~~~~~~~~
+../src/main.c:925:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nSoft_trig command\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:941:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nSoft_trig is OFF\n");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:948:17: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+        snprintf(buffer,40,"\nAUTO trigger on. Every 7s app.\n");
+                 ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:957:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nManual trigger RO\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:784:17: warning: unused variable 'mess' [-Wunused-variable]
+   unsigned char mess[40];
+                 ^~~~
+../src/main.c:783:7: warning: unused variable 'Status' [-Wunused-variable]
+   int Status;
+       ^~~~~~
+../src/main.c:782:7: warning: unused variable 'ch' [-Wunused-variable]
+   int ch=0;
+       ^~
+../src/main.c:779:15: warning: unused variable 'ReceivedCount' [-Wunused-variable]
+  unsigned int ReceivedCount = 0;
+               ^~~~~~~~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+At top level:
+../src/xaxidma_controller.h:173:12: warning: 'read_pointer' defined but not used [-Wunused-variable]
+ static u8 *read_pointer = (u8 *) RX_BUFFER_BASE;
+            ^~~~~~~~~~~~
+../src/xaxidma_controller.h:170:13: warning: 'Packet' defined but not used [-Wunused-variable]
+ static u32 *Packet = (u32 *) TX_BUFFER_BASE;
+             ^~~~~~
+../src/xaxidma_controller.h:157:13: warning: 'Intc' defined but not used [-Wunused-variable]
+ static INTC Intc; /* Instance of the Interrupt Controller */
+             ^~~~
+../src/main.c: In function 'setup_system':
+../src/main.c:266:2: warning: 'cpld_status' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  xil_printf("Cpld status: %d \n\n",cpld_status);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: MB40ch_wUART.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/lib -o "MB40ch_wUART.elf" ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: MB40ch_wUART.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size MB40ch_wUART.elf  |tee "MB40ch_wUART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 197884	   4504	2105344	2307732	 233694	MB40ch_wUART.elf
+Finished building: MB40ch_wUART.elf.size
+ 
+19:03:54 **** Auto Build of configuration Debug for project MB40ch_wUART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.h:26:0,
+                 from ../src/main.c:36:
+../src/DRS4_driver.h:29:2: warning: #warning CHECK FOR the right DRS4 base address the one xparameters is wrong [-Wcpp]
+ #warning CHECK FOR the right DRS4 base address the one xparameters is wrong
+  ^~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:54:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+ #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:107:11: warning: implicit declaration of function 'setup_dma_and_timer' [-Wimplicit-function-declaration]
+  Status = setup_dma_and_timer();
+           ^~~~~~~~~~~~~~~~~~~
+../src/main.c:117:2: warning: implicit declaration of function 'print_app_header'; did you mean 'pbuf_header'? [-Wimplicit-function-declaration]
+  print_app_header();
+  ^~~~~~~~~~~~~~~~
+  pbuf_header
+../src/main.c:120:12: warning: implicit declaration of function 'setup_interrupt_dma_timer' [-Wimplicit-function-declaration]
+  Status =  setup_interrupt_dma_timer();
+            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:164:2: warning: implicit declaration of function 'print_ip_settings' [-Wimplicit-function-declaration]
+  print_ip_settings(&ipaddr, &netmask, &gw);
+  ^~~~~~~~~~~~~~~~~
+../src/main.c:172:48: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+     xil_printf("buffer length %d \n \n",strlen(buffer));
+                                                ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c: In function 'setup_system':
+../src/main.c:282:2: warning: implicit declaration of function 'ADC_SPI_init'; did you mean 'DRS4_Init'? [-Wimplicit-function-declaration]
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+  DRS4_Init
+../src/main.c:202:18: warning: unused variable 'Config' [-Wunused-variable]
+  XUartPs_Config *Config;
+                  ^~~~~~
+../src/main.c: At top level:
+../src/main.c:291:6: warning: conflicting types for 'ADC_SPI_init'
+ void ADC_SPI_init()
+      ^~~~~~~~~~~~
+../src/main.c:282:2: note: previous implicit declaration of 'ADC_SPI_init' was here
+  ADC_SPI_init();
+  ^~~~~~~~~~~~
+../src/main.c: In function 'ADC_SPI_init':
+../src/main.c:296:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  u32 cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'loop_routine':
+../src/main.c:563:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:564:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nDRS4 was shuted down... \nEnd program");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c: In function 'DRS4_restart_ROI':
+../src/main.c:669:6: warning: variable 'cpld_status' set but not used [-Wunused-but-set-variable]
+  int cpld_status;
+      ^~~~~~~~~~~
+../src/main.c: In function 'recv_callback':
+../src/main.c:715:27: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  memset(buffer, 0, strlen(buffer));
+                           ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:716:43: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  xil_printf("strlen:%d, mess:%s\n",strlen(RecvBuffer),RecvBuffer);
+                                           ^~~~~~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:720:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:721:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:729:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:730:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nDRS4 was shuted down, state is %x\n", state);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:736:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:737:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"DRS4 restarting\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:761:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:762:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# event buffer = %x\n", RxDone);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:768:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:769:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# VETO set to FALSE");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:777:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:778:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# cleaning up the event buffer");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:785:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:786:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# state = %x\n", state >> 24);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:792:31: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+      memset(buffer, 0, strlen(buffer));
+                               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:793:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\n# state = %x\n", state);
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:797:17: warning: pointer targets in passing argument 1 of 'atoi' differ in signedness [-Wpointer-sign]
+    value = atoi(&(RecvBuffer[13]));
+                 ^
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdlib.h:77:5: note: expected 'const char *' but argument is of type 'u8 * {aka unsigned char *}'
+ int _EXFUN(atoi,(const char *__nptr));
+     ^
+../src/main.c:805:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:806:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\n# n events set to  = %d", n_events);
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:812:29: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+    memset(buffer, 0, strlen(buffer));
+                             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/string.h:33:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+ size_t  _EXFUN(strlen,(const char *));
+         ^
+../src/main.c:813:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,372,"\nList of available commands:\n"
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:834:15: warning: pointer targets in passing argument 1 of 'xil_printf' differ in signedness [-Wpointer-sign]
+    xil_printf(buffer);
+               ^~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+../src/xaxidma_controller.h:27:13: note: expected 'const char8 * {aka const char *}' but argument is of type 'unsigned char *'
+ extern void xil_printf(const char *format, ...);
+             ^~~~~~~~~~
+../src/main.c:839:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nSoft_trig command\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:855:15: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+      snprintf(buffer,40,"\nSoft_trig is OFF\n");
+               ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:862:17: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+        snprintf(buffer,40,"\nAUTO trigger on. Every 7s app.\n");
+                 ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:871:13: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+    snprintf(buffer,40,"\nManual trigger RO\n");
+             ^~~~~~
+In file included from /opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:29:0,
+                 from ../src/main.c:33:
+/opt/Xilinx/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/stdio.h:247:5: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+ int _EXFUN(snprintf, (char *__restrict, size_t, const char *__restrict, ...)
+     ^
+../src/main.c:698:17: warning: unused variable 'mess' [-Wunused-variable]
+   unsigned char mess[40];
+                 ^~~~
+../src/main.c:697:7: warning: unused variable 'Status' [-Wunused-variable]
+   int Status;
+       ^~~~~~
+../src/main.c:696:7: warning: unused variable 'ch' [-Wunused-variable]
+   int ch=0;
+       ^~
+../src/main.c:693:15: warning: unused variable 'ReceivedCount' [-Wunused-variable]
+  unsigned int ReceivedCount = 0;
+               ^~~~~~~~~~~~~
+In file included from ../src/main.h:28:0,
+                 from ../src/main.c:36:
+At top level:
+../src/xaxidma_controller.h:173:12: warning: 'read_pointer' defined but not used [-Wunused-variable]
+ static u8 *read_pointer = (u8 *) RX_BUFFER_BASE;
+            ^~~~~~~~~~~~
+../src/xaxidma_controller.h:170:13: warning: 'Packet' defined but not used [-Wunused-variable]
+ static u32 *Packet = (u32 *) TX_BUFFER_BASE;
+             ^~~~~~
+../src/xaxidma_controller.h:157:13: warning: 'Intc' defined but not used [-Wunused-variable]
+ static INTC Intc; /* Instance of the Interrupt Controller */
+             ^~~~
+../src/main.c: In function 'setup_system':
+../src/main.c:266:2: warning: 'cpld_status' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  xil_printf("Cpld status: %d \n\n",cpld_status);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: MB40ch_wUART.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../MB40CH_wUART_bsp_4/ps7_cortexa9_0/lib -o "MB40ch_wUART.elf" ./src/ADC_driver.o ./src/CPLD_driver.o ./src/DRS4_driver.o ./src/echo.o ./src/gpio_handler.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o ./src/tcp_com.o ./src/xaxidma_controller.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: MB40ch_wUART.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size MB40ch_wUART.elf  |tee "MB40ch_wUART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 197852	   4504	2105344	2307700	 233674	MB40ch_wUART.elf
+Finished building: MB40ch_wUART.elf.size
+ 
