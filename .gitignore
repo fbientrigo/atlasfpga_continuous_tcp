@@ -1,4 +1,91 @@
+# -----------------------------------------------------------------------------
+# Charge Monitoring System - Vivado 2018.2 / Xilinx SDK hygiene
+# Keep source code, HDL/XDC/IP source and SDK application src/.
+# Ignore generated Vivado, SDK/Eclipse, build, cache and analysis artifacts.
+# -----------------------------------------------------------------------------
 
-# Ignore cache
+# OS / editors
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
 
-zynq/CMB40_v1/CMB40_v1.cache/
+# Local agent / analysis outputs
+graphify-out/
+.code-review-graph/
+.rtk/
+*.db
+
+# Vivado top-level generated state
+**/.Xil/
+**/*.cache/
+**/*.hw/
+**/*.ip_user_files/
+**/*.runs/
+**/*.sim/
+**/*.tmp/
+**/*.gen/
+
+# Vivado journals, webtalk, transient logs
+*.jou
+*.str
+*.backup.jou
+*.backup.log
+webtalk/
+**/webtalk/
+usage_statistics_webtalk.*
+webtalk*.jou
+webtalk*.log
+webtalk*.xml
+
+# Vivado generated implementation/synthesis products
+*.dcp
+*.bit
+*.ltx
+*.mcs
+*.bin
+*.mmi
+*.rpt
+*.rpx
+*.pb
+*.wdb
+*.wcfg
+*.vdi
+*.vds
+*.wdf
+
+# Generated simulation collateral
+*.vcd
+*.wlf
+xsim.dir/
+work/
+
+# Xilinx SDK / Eclipse workspace metadata
+**/.metadata/
+**/.sdk/
+**/.temp/
+**/RemoteSystemsTempFiles/
+
+# SDK application build outputs
+**/Debug/
+**/Release/
+**/*.elf
+**/*.elf.size
+**/*.o
+**/*.d
+**/*.a
+**/*.map
+
+# BSP compiled outputs, but do not blindly hide BSP source/config yet
+**/*_bsp/**/lib/
+**/*_bsp/**/libsrc/**/*.o
+**/*_bsp/**/libsrc/**/*.d
+**/*_bsp/**/libsrc/**/*.a
+
+# Python generated files
+__pycache__/
+*.pyc
+.venv/
+venv/
