@@ -192,7 +192,7 @@ int main()
 void shutdown_all()
 {
 	DRS4_Safe_shutdown();
-	tcp_server_close(pcb);
+	tcp_server_shutdown();
 	CPLD_mezz_power_off((u8)7);
 }
 int setup_system ()
@@ -307,7 +307,7 @@ void init_DACs()
 	//DAC 0
 	write_dac(dac_baseaddr,command_access_b,data_byte,0);
 	usleep(1000);
-	while(is_active(dac_baseaddr)==1); // Espero que modulo DAC termine rutina de envío de datos
+	while(is_active(dac_baseaddr)==1); // Espero que modulo DAC termine rutina de envï¿½o de datos
 
 	//DAC 1
 	write_dac(dac_baseaddr,command_access_b,data_byte,1);
@@ -317,8 +317,8 @@ void init_DACs()
 
 int setup_DACs(void){
 	  	usleep (1000);
-	  	//DAC 0 será el del DRS4
-	  	//DAC 1 será el del comparador para triggers
+	  	//DAC 0 serï¿½ el del DRS4
+	  	//DAC 1 serï¿½ el del comparador para triggers
 	  	for (u32 i=0; i<8; i++){
 			write_dac_voltage(dac_baseaddr,i,dac_values[i],0);
 			while(is_active(dac_baseaddr)==1);
@@ -365,7 +365,7 @@ int loop_routine(void){
 					}
 
 							//Cuando los flags esten habilitados se envian los datos con la funcion transfer_data()
-							//Deberia suponer que esto se ejecutará a un tiempo suficiente?
+							//Deberia suponer que esto se ejecutarï¿½ a un tiempo suficiente?
 				}
 
 				if(flag_senddata && flag_ready2sent)
@@ -378,6 +378,7 @@ int loop_routine(void){
 
 									}
 				xemacif_input(echo_netif); //recepcion de paquetes constantemente
+				tcp_send_pump(); //bounded: at most one tcp_write per iteration
 
 
 				if (RecvBuffer[0] == '-' && RecvBuffer[1] == 'q') {
@@ -509,20 +510,22 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 		unsigned char mess[40];
 	//unsigned char rec_msg[10]; //Mensajes de comm con el pc, de 5 caracteres,
 	//unsigned long hash_msg; //codificacion de mensajes recibidos en tabla hash...en este caso primero se envian mensajes y se lee el numero y luego se crea el mensaje
-	//int comp_string; //No funciono la comparación de string, al parecer python y C operan distinto...cosas extrañas al usar strcmp() en el procesador;
-	/* do not read the packet if we are not in ESTABLISHED state */
+	//int comp_string; //No funciono la comparaciï¿½n de string, al parecer python y C operan distinto...cosas extraï¿½as al usar strcmp() en el procesador;
+	/* remote side closed the connection */
 	if (!p) {
-		tcp_close(tpcb);
-		tcp_recv(tpcb, NULL);
+		/* if the close aborted THIS pcb, we must not touch it again
+		 * and must tell lwIP with ERR_ABRT */
+		if (tcp_client_drop())
+			return ERR_ABRT;
 		return ERR_OK;
 	}
 
 	/* indicate that the packet has been received */
-	 //De donde viene p ? en que momento se inicializa ? se pasa por argumento a la funcion pero esta funcion en algun lado se debe incializar
-	tcp_recved(tpcb, p->len);
+	tcp_recved(tpcb, p->tot_len);
 
-	//Lectura de mensaje recibido
-	memcpy(RecvBuffer, p -> payload, 16);
+	//Lectura de mensaje recibido, acotada al tamano real del paquete
+	u16_t copied = pbuf_copy_partial(p, RecvBuffer, 16, 0);
+	RecvBuffer[copied] = 0;
 	memset(buffer, 0, strlen(buffer));
 	xil_printf("strlen:%d, mess:%s\n",strlen(RecvBuffer),RecvBuffer);
 		if (command_is(RecvBuffer,"-DRS4GetState")){ // state return

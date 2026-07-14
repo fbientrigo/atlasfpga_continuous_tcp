@@ -30,27 +30,30 @@
 #define PORT 6543
 
 #define N_lines buffer_length/Char_per_line
-unsigned char buffer[buffer_length];
-//unsigned port;
-short flag_accept_conn;
-int flag_ready2sent;
-int flag_senddata ;
-int flag_tcp_done;
-static struct tcp_pcb *pcb;
-
-struct pbuf* p;
-//Values for hash table of receibing message
-int *datos_PL;
-
-
+extern unsigned char buffer[buffer_length];
+extern short flag_accept_conn;
+extern int flag_ready2sent;
+extern int flag_senddata;
+extern int flag_tcp_done;
+/* The listening and client PCBs are owned by tcp_com.c and are not
+ * exposed here: interact through the functions below. */
+extern int *datos_PL;
 
 int start_application();
 
+/* Non-blocking: copies buffer into the sender snapshot, returns -1 if no client or busy. */
 int transfer_data(unsigned char*);
+/* Bounded sender, call once per main-loop iteration. */
+void tcp_send_pump(void);
+/* Close the active client connection (if any) and reset sender state.
+ * Returns 1 if the PCB was aborted (callback context must return ERR_ABRT). */
+int tcp_client_drop(void);
+/* Drop the client and close the listening PCB. */
+void tcp_server_shutdown(void);
 err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err);
 err_t recv_callback(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err);
-tcp_sent_fn sent_callback(void *arg, struct tcp_pcb *tpcb, u16_t len);
+err_t sent_callback(void *arg, struct tcp_pcb *tpcb, u16_t len);
 void tcp_server_err(void *arg, err_t err);
-void tcp_server_close(struct tcp_pcb *pcb);
+int tcp_server_close(struct tcp_pcb *pcb);
 void packer();
 #endif /* SRC_TCP_COM_H_ */

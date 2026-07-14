@@ -11,6 +11,45 @@
 #define kaliv 264652860
 #define recok 273088441
 
+unsigned char buffer[buffer_length];
+short flag_accept_conn;
+int flag_ready2sent;
+int flag_senddata;
+int flag_tcp_done;
+int *datos_PL;
+
+/* PCB ownership: both live only in this file (main.c held a separate
+ * per-TU copy when these were static in the header). */
+static struct tcp_pcb *listen_pcb;
+static struct tcp_pcb *client_pcb;
+
+/* Single-event sender state machine:
+ * IDLE -> SENDING (payload+terminator queued in bounded chunks)
+ *      -> DRAINING (all queued, waiting for peer ACKs) -> IDLE
+ */
+enum { S_IDLE, S_SENDING, S_DRAINING };
+static int s_state = S_IDLE;
+/* Sender-owned immutable payload copy: the pump reads only from here, so
+ * recv_callback/command handlers may overwrite the global buffer mid-send. */
+static u8_t s_snapshot[buffer_length];
+static const u8_t *s_data;   /* -> s_snapshot, immutable until IDLE */
+static u32_t s_len;          /* payload bytes */
+static u32_t s_off;          /* payload bytes queued to lwIP */
+static u8_t s_term_off;      /* terminator bytes queued, 0..3 */
+static u32_t s_acked;        /* bytes ACKed by peer */
+
+/* End-of-response marker, wire-compatible with the previous protocol. */
+static const char TCP_TERM[3] = {'!', '#', '\n'};
+
+static void sender_reset(void)
+{
+	s_state = S_IDLE;
+	s_data = NULL;
+	s_len = 0;
+	s_off = 0;
+	s_term_off = 0;
+	s_acked = 0;
+}
 
 void rand_data()
 {
@@ -49,19 +88,8 @@ void packer() //
 	}
 
 	strncpy(buffer,line,N_lines*Char_per_line);
-	//xil_printf("\nLines\n%s\n\nBuffer:\n%s\n\n",line,buffer);
-	//printf("%s\n",line);
-	//strcpy(buffer,*line);
-	//free(line);
-	//free(line2);
 	xil_printf("\nend_packer\n");
 }
-
-
-
-/*
- *
- */
 
 
 unsigned long hash(unsigned char *str)
@@ -74,15 +102,6 @@ unsigned long hash(unsigned char *str)
 
     return hash;
 }
-
-
-
-
-/*
- * Callback cuando se recibe un mensaje correctamente, actualmente retorna informacion de buffer
- */
-
-
 
 
 void print_ip(char *msg, ip_addr_t *ip)
@@ -100,160 +119,198 @@ void print_ip_settings(ip_addr_t *ip, ip_addr_t *mask, ip_addr_t *gw)
 	print_ip("Gateway : ", gw);
 }
 
-int transfer_data_bkup(unsigned char *buffer)
-{
-		err_t err;
-		struct pbuf * p;
-		p = pbuf_alloc(PBUF_TRANSPORT,PBUF_LENGTH,PBUF_RAM);
-
-			//tcp_arg(tpcb, NULL);
-			if (!p) {
-					tcp_close(pcb);
-					tcp_recv(pcb, NULL);
-					return ERR_OK;
-				}
-		xil_printf("TCP Buffer to be sent:<----\n%s\n--->\n",buffer);
-		p->payload = buffer;
-		p->len = (uint16_t)strlen(buffer);
-		xil_printf("tcp_sndbuf:%d;p->len=%d\n", tcp_sndbuf(pcb),p->len);
-		if (tcp_sndbuf(pcb) > p->len)
-			{
-				err = tcp_write(pcb,p->payload,p->len, TCP_WRITE_FLAG_COPY);
-
-				if(err != ERR_OK)
-					xil_printf("error write %d\n", err);
-			}
-			pbuf_free(p);
-		usleep(200);
-		return 0;
-}
-
+/*
+ * Non-blocking send initiate: copies buf into the sender-owned snapshot,
+ * so the caller may reuse buf immediately after this returns 0.
+ */
 int transfer_data(unsigned char *buffer)
 {
-	u16_t total = (uint16_t)strlen(buffer);
-	u16_t remaining = total;
-	u8_t *data_ptr = buffer;
-	xil_printf("TCP Buffer to be sent:<----\n%s\n--->\n",buffer);
-	xil_printf("tcp_sndbuf size/ buffer size --- %d/%d\n", tcp_sndbuf(pcb),remaining);
-
-	while (remaining > 0) {
-		u16_t available_space = tcp_sndbuf(pcb);
-		u16_t to_send = LWIP_MIN(remaining, available_space);
-
-		err_t err = tcp_write(pcb, data_ptr, to_send, TCP_WRITE_FLAG_COPY);
-		if (err == ERR_OK && available_space>0) {
-			tcp_output(pcb);      // force send as soon as possible
-			remaining -= to_send;
-			data_ptr += to_send;
-			xil_printf("msg sent, remaining/total/available ----  %d/%d/%d\n",remaining,total,available_space);
-		} else if (err == ERR_MEM) {
-			// if the snd buff is full, wait to send
-			usleep(10000);
-		} else if (err != ERR_OK){
-			xil_printf("Error sending,error code: %d\n",err);
-			break;
-		}
-		usleep(100);
+	if (client_pcb == NULL) {
+		xil_printf("TCP send refused: no client connected\n");
+		return -1;
 	}
-	usleep(100);
-	memset(data_ptr, 0, strlen(data_ptr));
-	snprintf(data_ptr,40,"!#\n"); //end character sequence
-	remaining = (uint16_t)strlen(data_ptr);
-	//sending end characters sequence
-	while (remaining > 0) {
-			u16_t available_space = tcp_sndbuf(pcb);
-			u16_t to_send = LWIP_MIN(remaining, available_space);
-
-			err_t err = tcp_write(pcb, data_ptr, to_send, TCP_WRITE_FLAG_COPY);
-			if (err == ERR_OK) {
-				tcp_output(pcb);      // force send as soon as possible
-				remaining -= to_send;
-				data_ptr += to_send;
-			} else if (err == ERR_MEM) {
-				// if the snd buff is full, wait to send
-				usleep(10000);
-			} else {
-				xil_printf("Error sending,error code: %d\n",err);
-				break;
-			}
+	if (s_state != S_IDLE) {
+		xil_printf("TCP send refused: previous send still in flight\n");
+		return -1;
 	}
-	usleep(100);
+	u32_t len = strnlen((const char *)buffer, buffer_length);
+	if (len > sizeof(s_snapshot)) {
+		xil_printf("TCP send refused: payload %u > snapshot %u\n",
+		           (unsigned)len, (unsigned)sizeof(s_snapshot));
+		return -1;
+	}
+	memcpy(s_snapshot, buffer, len); /* copy once; terminator stays out */
+	s_data = s_snapshot;
+	s_len = len;
+	s_off = 0;
+	s_term_off = 0;
+	s_acked = 0;
+	s_state = S_SENDING;
+	flag_ready2sent = 0;
+	return 0;
 }
 
-void tcp_server_close(struct tcp_pcb *pcb)
+/*
+ * Bounded sender: at most one tcp_write + one tcp_output per call.
+ * Called once per main-loop iteration; ACK processing between calls
+ * (xemacif_input / tcp timers) frees send-buffer space.
+ */
+void tcp_send_pump(void)
 {
+	const u8_t *src;
+	u32_t remaining;
+	u16_t chunk;
 	err_t err;
 
+	if (s_state != S_SENDING || client_pcb == NULL)
+		return;
+
+	if (s_off < s_len) {
+		src = s_data + s_off;
+		remaining = s_len - s_off;
+	} else {
+		src = (const u8_t *)TCP_TERM + s_term_off;
+		remaining = sizeof(TCP_TERM) - s_term_off;
+	}
+
+	chunk = (u16_t)LWIP_MIN(remaining, tcp_sndbuf(client_pcb));
+	if (chunk == 0)
+		return; /* send buffer full: retry next iteration, no wait */
+
+	err = tcp_write(client_pcb, src, chunk, TCP_WRITE_FLAG_COPY);
+	if (err == ERR_MEM)
+		return; /* segment/pbuf pool pressure: retry next iteration */
+	if (err != ERR_OK) {
+		xil_printf("TCP send aborted: tcp_write error %d\n", err);
+		tcp_client_drop();
+		return;
+	}
+
+	if (s_off < s_len)
+		s_off += chunk;
+	else
+		s_term_off += (u8_t)chunk;
+	tcp_output(client_pcb);
+
+	if (s_off == s_len && s_term_off == sizeof(TCP_TERM))
+		s_state = S_DRAINING;
+}
+
+/*
+ * Close a client connection PCB: callbacks cleared first so no callback
+ * (including tcp_err from tcp_abort) can re-enter with a dying PCB.
+ * Not for the listening PCB (tcp_recv/tcp_sent are invalid on LISTEN).
+ * Returns 1 if the PCB was aborted (caller must not touch it and, if in
+ * callback context, must return ERR_ABRT), 0 if it closed cleanly.
+ */
+int tcp_server_close(struct tcp_pcb *pcb)
+{
+	err_t err;
+	int aborted = 0;
+
 	if (pcb != NULL) {
+		tcp_arg(pcb, NULL);
 		tcp_recv(pcb, NULL);
+		tcp_sent(pcb, NULL);
 		tcp_err(pcb, NULL);
 		err = tcp_close(pcb);
 		if (err != ERR_OK) {
 			/* Free memory with abort */
 			tcp_abort(pcb);
+			aborted = 1;
 		}
+	}
+	return aborted;
+}
+
+/* Returns 1 if the client PCB was aborted, else 0. */
+int tcp_client_drop(void)
+{
+	int aborted = 0;
+
+	if (client_pcb != NULL) {
+		aborted = tcp_server_close(client_pcb);
+		client_pcb = NULL;
+		xil_printf("TCP client dropped\n\r");
+	}
+	sender_reset();
+	flag_ready2sent = 0;
+	flag_senddata = 0;
+	return aborted;
+}
+
+void tcp_server_shutdown(void)
+{
+	tcp_client_drop();
+	if (listen_pcb != NULL) {
+		tcp_close(listen_pcb); /* cannot fail on a LISTEN pcb */
+		listen_pcb = NULL;
 	}
 }
 
+/*
+ * lwIP has already freed the PCB when this runs: only drop the
+ * reference and reset state, never tcp_close/tcp_abort here.
+ */
 void tcp_server_err(void *arg, err_t err)
 {
+	LWIP_UNUSED_ARG(arg);
 	LWIP_UNUSED_ARG(err);
-	tcp_server_close(pcb);
-	pcb = NULL;
-	//tcp_conn_report(diff_ms, TCP_ABORTED_REMOTE);
+	client_pcb = NULL;
+	sender_reset();
+	flag_ready2sent = 0;
+	flag_senddata = 0;
 	xil_printf("TCP connection aborted\n\r");
-	//start_application();
 }
 
 err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err)
 {
 	static int connection = 1;
+
+	LWIP_UNUSED_ARG(arg);
+	LWIP_UNUSED_ARG(err);
 	xil_printf("*Conexion aceptada\n");
-	/* set the receive callback for this connection */
-	////
-	pcb = newpcb;
-	/////
+
+	/* new connection wins: a stale/dead client must not block reconnect */
+	if (client_pcb != NULL)
+		tcp_client_drop();
+
+	client_pcb = newpcb;
 	/* just use an integer number indicating the connection id as the
 	   callback argument */
-	tcp_arg(pcb, (void*)(UINTPTR)connection);
+	tcp_arg(client_pcb, (void*)(UINTPTR)connection);
+	tcp_recv(client_pcb, recv_callback);
+	tcp_sent(client_pcb, sent_callback);
+	tcp_err(client_pcb, tcp_server_err);
+	/* nagle must be disabled per connection: it is not inherited from
+	   the listening pcb */
+	tcp_nagle_disable(client_pcb);
 
-	//transfer_data(newpcb);
-
-	/* increment for subsequent accepted connections */
-	/*
-	tcp_recv(newpcb, recv_callback);
-	tcp_sent(newpcb, (tcp_sent_fn)sent_callback);
-	tcp_err(newpcb, tcp_server_err);
-	*/
-	tcp_recv(pcb, recv_callback);
-	tcp_sent(pcb, (tcp_sent_fn)sent_callback);
-	tcp_err(pcb, tcp_server_err);
+	sender_reset();
 	flag_accept_conn = 1;
 	connection++;
 	flag_ready2sent = 1;
 	return ERR_OK;
 }
+
 int start_application()
 {
-
 	err_t err;
 	unsigned port = PORT;
-	flag_ready2sent =0;
+	struct tcp_pcb *pcb;
+
+	flag_ready2sent = 0;
 	flag_senddata = 0;
 	flag_accept_conn = 0;
+	sender_reset();
+
 	/* create new TCP PCB structure */
-	//pcb = tcp_new_ip_type(IPADDR_TYPE_ANY);
 	pcb = tcp_new();
 	if (!pcb) {
 		xil_printf("Error creating PCB. Out of Memory\n\r");
 		return -1;
 	}
-	tcp_nagle_disable(pcb);
-	//For keep alive
-	//pcb->keep_cnt = 1;
-	//pcb->keep_intvl = 4;
-	//pcb->keep_idle = 1;
-	//
+
 	/* bind to specified @port */
 	err = tcp_bind(pcb, IP_ANY_TYPE, port);
 	if (err != ERR_OK) {
@@ -264,34 +321,35 @@ int start_application()
 	/* we do not need any arguments to callback functions */
 	tcp_arg(pcb, NULL);
 	/* listen for connections */
-	pcb = tcp_listen(pcb);
-	if (!pcb) {
+	listen_pcb = tcp_listen(pcb);
+	if (!listen_pcb) {
 		xil_printf("Out of memory while tcp_listen\n\r");
 		return -3;
 	}
 
 	/* specify callback to use for incoming connections */
-
-
-	tcp_accept(pcb, accept_callback);
+	tcp_accept(listen_pcb, accept_callback);
 	xil_printf("TCP server started @ port %d\n\r", port);
 	flag_tcp_done=1;
-
-
 
 	return 0;
 }
 
 /*
- * callback cuando se envia un mensaje correctamente
- *
+ * ACK accounting: len is the number of newly acknowledged bytes.
+ * The send is complete only when payload + terminator are fully ACKed.
  */
-tcp_sent_fn sent_callback(void *arg, struct tcp_pcb *tpcb, u16_t len)
+err_t sent_callback(void *arg, struct tcp_pcb *tpcb, u16_t len)
 {
-	flag_ready2sent = 1;
-	//flag_sentdata = 1;
-	//pcb = tpcb;
+	LWIP_UNUSED_ARG(arg);
+	LWIP_UNUSED_ARG(tpcb);
+
+	if (s_state == S_IDLE)
+		return ERR_OK;
+	s_acked += len;
+	if (s_state == S_DRAINING && s_acked >= s_len + sizeof(TCP_TERM)) {
+		sender_reset();
+		flag_ready2sent = 1;
+	}
 	return ERR_OK;
-
 }
-
