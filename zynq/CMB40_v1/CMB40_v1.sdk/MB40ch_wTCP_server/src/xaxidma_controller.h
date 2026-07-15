@@ -118,6 +118,15 @@ extern void xil_printf(const char *format, ...);
 #endif
 
 /**************************** Type Definitions *******************************/
+typedef enum {
+	DMA_EVENT_OK = 0,
+	DMA_EVENT_EMPTY = 1,
+	DMA_EVENT_TRUNCATED = 2,
+	DMA_EVENT_ERR_BD = -1,
+	DMA_EVENT_ERR_LENGTH = -2,
+	DMA_EVENT_ERR_RECYCLE = -3,
+	DMA_EVENT_ERR_PARAM = -4
+} dma_event_result_t;
 
 
 /***************** Macros (Inline Functions) Definitions *********************/
@@ -135,6 +144,8 @@ void RxCallBack(XAxiDma_BdRing * RxRingPtr);
 void RxIntrHandler(void *Callback);
 void process_n_send_data(int cont,int max_counts);
 void cleanup_buffer();
+dma_event_result_t dma_copy_next_event(unsigned char *dst, u32 dst_capacity,
+		u32 *payload_len);
 
 int setup_DMA(void);
 

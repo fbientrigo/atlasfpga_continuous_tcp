@@ -88,6 +88,7 @@
  */
 /***************************** Include Files *********************************/
 #include "xaxidma_controller.h"
+#include <string.h>
 
 
 /*****************************************************************************/
@@ -541,26 +542,171 @@ void process_n_send_data(int cont,int max_count){
 
 
 }
-void cleanup_buffer(){
 
-	int BdCount;
-	XAxiDma_Bd *BdPtr;
+static int rx_bd_buffer_valid(XAxiDma_Bd *BdPtr, UINTPTR BufferAddr)
+{
+	UINTPTR BufferId = XAxiDma_BdGetId(BdPtr);
+	UINTPTR RxBase = (UINTPTR)RX_BUFFER_BASE;
+	UINTPTR LastBuffer = (UINTPTR)RX_BUFFER_HIGH - MAX_PKT_LEN + 1U;
 
-	while (RxDone != 0){
-		XAxiDma_BdRing *RxRingPtr = XAxiDma_GetRxRing(&AxiDma);
-		/* Get finished BDs from hardware */
-		BdCount = XAxiDma_BdRingFromHw(RxRingPtr, NUMBER_OF_BDS_PER_PKT, &BdPtr);
-		//Xil_DCacheInvalidateRange((UINTPTR)read_pointer, NUMBER_OF_BDS_PER_PKT * MAX_PKT_LEN);
-//		Xil_DCacheFlushRange((UINTPTR)read_pointer, NUMBER_OF_BDS_PER_PKT * MAX_PKT_LEN);
-		//move the read pointer to the next event
-//		read_pointer = read_pointer + MAX_PKT_LEN;
-//		if (read_pointer >= RX_BUFFER_HIGH){
-//			read_pointer = RX_BUFFER_BASE;
-//		}
-		// free the space already read
-		XAxiDma_BdRingFree(RxRingPtr, NUMBER_OF_BDS_PER_PKT, BdPtr);
-		RxDone -= 1;
+	return (BufferAddr != 0U) && (BufferAddr == BufferId) &&
+			(BufferAddr >= RxBase) && (BufferAddr <= LastBuffer) &&
+			(((BufferAddr - RxBase) % MAX_PKT_LEN) == 0U);
+}
+
+static int recycle_rx_bd(XAxiDma_BdRing *RxRingPtr, XAxiDma_Bd *BdPtr,
+		UINTPTR BufferAddr)
+{
+	XAxiDma_Bd *NewBdPtr = NULL;
+	int Status;
+	int UnAllocStatus;
+
+	if (!rx_bd_buffer_valid(BdPtr, BufferAddr)) {
+		xil_printf("DMA RX unrecoverable ring state buffer/id %x/%x\r\n",
+				(unsigned int)BufferAddr,
+				(unsigned int)XAxiDma_BdGetId(BdPtr));
+		return XST_FAILURE;
 	}
+
+	Status = XAxiDma_BdRingFree(RxRingPtr, 1, BdPtr);
+	if (Status != XST_SUCCESS) {
+		xil_printf("DMA RX free failed %d\r\n", Status);
+		return XST_FAILURE;
+	}
+
+	Status = XAxiDma_BdRingAlloc(RxRingPtr, 1, &NewBdPtr);
+	if (Status != XST_SUCCESS) {
+		xil_printf("DMA RX alloc failed %d\r\n", Status);
+		return XST_FAILURE;
+	}
+	if (NewBdPtr != BdPtr) {
+		xil_printf("DMA RX recycled BD changed %x/%x\r\n",
+				(UINTPTR)BdPtr, (UINTPTR)NewBdPtr);
+	}
+
+	Status = XAxiDma_BdSetBufAddr(NewBdPtr, BufferAddr);
+	if (Status != XST_SUCCESS) {
+		xil_printf("DMA RX set buffer failed %d\r\n", Status);
+		goto unalloc;
+	}
+	Status = XAxiDma_BdSetLength(NewBdPtr, MAX_PKT_LEN,
+			RxRingPtr->MaxTransferLen);
+	if (Status != XST_SUCCESS) {
+		xil_printf("DMA RX set length failed %d\r\n", Status);
+		goto unalloc;
+	}
+	XAxiDma_BdSetCtrl(NewBdPtr, 0);
+	XAxiDma_BdSetId(NewBdPtr, BufferAddr);
+
+	Status = XAxiDma_BdRingToHw(RxRingPtr, 1, NewBdPtr);
+	if (Status == XST_SUCCESS) {
+		return XST_SUCCESS;
+	}
+	xil_printf("DMA RX ToHw failed %d\r\n", Status);
+
+unalloc:
+	UnAllocStatus = XAxiDma_BdRingUnAlloc(RxRingPtr, 1, NewBdPtr);
+	if (UnAllocStatus != XST_SUCCESS) {
+		xil_printf("DMA RX unalloc failed %d\r\n", UnAllocStatus);
+	}
+	return XST_FAILURE;
+}
+
+dma_event_result_t dma_copy_next_event(unsigned char *dst, u32 dst_capacity,
+		u32 *payload_len)
+{
+	XAxiDma_BdRing *RxRingPtr;
+	XAxiDma_Bd *BdPtr = NULL;
+	dma_event_result_t Result = DMA_EVENT_OK;
+	UINTPTR BufferAddr;
+	u32 BdSts;
+	u32 ActualLen;
+	int BdCount;
+
+	if ((dst == NULL) || (payload_len == NULL) || (dst_capacity == 0U)) {
+		return DMA_EVENT_ERR_PARAM;
+	}
+	*payload_len = 0U;
+
+	RxRingPtr = XAxiDma_GetRxRing(&AxiDma);
+	BdCount = XAxiDma_BdRingFromHw(RxRingPtr, 1, &BdPtr);
+	if (BdCount == 0) {
+		return DMA_EVENT_EMPTY;
+	}
+	if (BdPtr == NULL) {
+		xil_printf("DMA RX invalid BD count/pointer %d/%x\r\n",
+				BdCount, (UINTPTR)BdPtr);
+		return DMA_EVENT_ERR_BD;
+	}
+
+	BdSts = XAxiDma_BdGetSts(BdPtr);
+	xil_printf("DMA RX BD SOF=%d EOF=%d\r\n",
+			(BdSts & XAXIDMA_BD_STS_RXSOF_MASK) != 0U,
+			(BdSts & XAXIDMA_BD_STS_RXEOF_MASK) != 0U);
+	BufferAddr = XAxiDma_BdGetBufAddr(BdPtr);
+	if (!rx_bd_buffer_valid(BdPtr, BufferAddr)) {
+		xil_printf("DMA RX unrecoverable ring state buffer/id %x/%x\r\n",
+				(unsigned int)BufferAddr,
+				(unsigned int)XAxiDma_BdGetId(BdPtr));
+		return DMA_EVENT_ERR_BD;
+	}
+
+	if ((BdSts & XAXIDMA_BD_STS_ALL_ERR_MASK) != 0U ||
+			(BdSts & XAXIDMA_BD_STS_COMPLETE_MASK) == 0U) {
+		Result = DMA_EVENT_ERR_BD;
+	/* ponytail: one event per BD; aggregate through EOF if hardware changes. */
+	} else if ((BdSts & (XAXIDMA_BD_STS_RXSOF_MASK |
+			XAXIDMA_BD_STS_RXEOF_MASK)) !=
+			(XAXIDMA_BD_STS_RXSOF_MASK | XAXIDMA_BD_STS_RXEOF_MASK)) {
+		xil_printf("DMA RX rejected non-single-BD event\r\n");
+		Result = DMA_EVENT_ERR_BD;
+	} else {
+		ActualLen = XAxiDma_BdGetActualLength(BdPtr,
+				RxRingPtr->MaxTransferLen);
+		if ((ActualLen == 0U) || (ActualLen > MAX_PKT_LEN)) {
+			Result = DMA_EVENT_ERR_LENGTH;
+		} else if (ActualLen > dst_capacity) {
+			xil_printf("DMA RX event rejected actual/capacity %d/%d\r\n",
+					ActualLen, dst_capacity);
+			Result = DMA_EVENT_TRUNCATED;
+		} else {
+			Xil_DCacheInvalidateRange(BufferAddr, ActualLen);
+			memcpy(dst, (const void *)BufferAddr, ActualLen);
+			*payload_len = ActualLen;
+		}
+	}
+
+	if (recycle_rx_bd(RxRingPtr, BdPtr, BufferAddr) != XST_SUCCESS) {
+		return DMA_EVENT_ERR_RECYCLE;
+	}
+	return Result;
+}
+
+void cleanup_buffer(){
+	XAxiDma_BdRing *RxRingPtr = XAxiDma_GetRxRing(&AxiDma);
+	XAxiDma_Bd *BdPtr;
+	UINTPTR BufferAddr;
+	int BdCount;
+	int Index;
+
+	for (Index = 0; Index < RxRingPtr->AllCnt; Index++) {
+		BdPtr = NULL;
+		BdCount = XAxiDma_BdRingFromHw(RxRingPtr, 1, &BdPtr);
+		if (BdCount == 0) {
+			break;
+		}
+		if (BdPtr == NULL) {
+			xil_printf("DMA RX cleanup invalid BD %d/%x\r\n",
+					BdCount, (UINTPTR)BdPtr);
+			return;
+		}
+		BufferAddr = XAxiDma_BdGetBufAddr(BdPtr);
+		if (recycle_rx_bd(RxRingPtr, BdPtr, BufferAddr) != XST_SUCCESS) {
+			xil_printf("DMA RX cleanup recycle failed\r\n");
+			return;
+		}
+	}
+	RxDone = 0;
 }
 
 

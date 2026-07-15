@@ -553,18 +553,19 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 
 		}
 		if (command_is(RecvBuffer,"-get_event")) {
-//					XGpio_DiscreteWrite(&gpio,2,0x20);
-			//usleep (30);
-			c_glob_ev = 0;
-			process_n_send_data(c_glob_ev,1);
-			c_glob_ev++;
-			//start_send_event = 1;
-			flag_senddata= 1 ;
-			xil_printf("\n# sending data\n");
-//					XGpio_DiscreteWrite(&gpio,2,0x0);
-//					state = XGpio_DiscreteRead(&gpio,1);
-//					xil_printf("\n# state = %x", state);
-//					trigger_counter = (state >> 12) & 0xFFF;
+			u32 event_len = 0;
+			dma_event_result_t result =
+					dma_copy_next_event(buffer, buffer_length - 1, &event_len);
+
+			if (result == DMA_EVENT_OK) {
+				buffer[event_len] = '\0';
+			} else if (result == DMA_EVENT_EMPTY) {
+				memcpy(buffer, "#NO_EVENT", sizeof("#NO_EVENT"));
+			} else {
+				snprintf((char *)buffer, buffer_length,
+						"#DMA_ERROR:%d", (int)result);
+			}
+			flag_senddata = 1;
 		}
 		if (command_is(RecvBuffer,"-check")) {
 //					state = XGpio_DiscreteRead(&gpio,1);
@@ -726,5 +727,3 @@ float DRS4_DTAP_meas(int sel_mezz)
 	return(DTAP_freq);
 
 }
-
-
