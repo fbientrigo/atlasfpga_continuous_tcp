@@ -10,6 +10,15 @@ Consequently, a legacy `-get_event` payload containing the complete terminator
 byte sequence cannot be represented unambiguously. Production continuous
 streaming is not supported.
 
+Every host command is serialized as ASCII followed by one newline byte
+(`command.encode("ascii") + b"\n"`). This intentional framing transition lets
+the receiver parse exact commands across arbitrary TCP receive boundaries and
+handle multiple commands from one receive without prefix dispatch.
+During the firmware transition, a complete unframed static command may still
+be accepted when it is fully contained in one callback. Bare `-get_event` is
+intentionally excluded because it is a prefix of `-get_event_v2`; parameterized
+commands also require the newline. This client always sends the newline.
+
 ## v2 event framing
 
 `-get_event_v2` removes the sentinel ambiguity with a length-framed event

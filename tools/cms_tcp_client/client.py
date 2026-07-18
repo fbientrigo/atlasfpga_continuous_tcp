@@ -72,15 +72,15 @@ class CmsClient:
         return self.connect()
 
     @staticmethod
-    def _validate_command(command):
+    def _serialize_command(command):
         if not isinstance(command, str):
             raise TypeError("command must be a string")
         if command not in READ_ONLY_COMMANDS:
             raise ValueError("command is not allowed by the read-only API")
-        return command.encode("ascii")
+        return command.encode("ascii") + b"\n"
 
     def send_command(self, command, expected_event=False):
-        wire_command = self._validate_command(command)
+        wire_command = self._serialize_command(command)
         return self._exchange(wire_command, expected_event=expected_event)
 
     def _exchange(self, wire_command, *, expected_event=False,
@@ -149,7 +149,7 @@ class CmsClient:
     def _acceptance_exchange(self, command, *, expected_event=False,
                              read_delay=0.0, abort_after_bytes=None):
         """Private transport perturbation hook for board acceptance tests."""
-        wire_command = self._validate_command(command)
+        wire_command = self._serialize_command(command)
         return self._exchange(
             wire_command,
             expected_event=expected_event,
@@ -185,5 +185,5 @@ class CmsClient:
         return self.send_command("-get_event", expected_event=True)
 
     def get_event_v2(self):
-        wire_command = self._validate_command("-get_event_v2")
+        wire_command = self._serialize_command("-get_event_v2")
         return self._exchange(wire_command, v2=True)

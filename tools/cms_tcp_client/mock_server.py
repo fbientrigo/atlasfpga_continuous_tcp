@@ -16,6 +16,7 @@ COMMANDS = {
     b"-get_event",
     b"-get_event_v2",
 }
+MAX_COMMAND_BYTES = max(map(len, COMMANDS))
 SCENARIOS = {
     "normal",
     "binary",
@@ -129,6 +130,7 @@ class MockZynqServer:
         conn.settimeout(0.1)
         incoming = bytearray()
         prefetched = 0
+        discarding = False
         while not self._stop.is_set():
             try:
                 chunk = conn.recv(64)
@@ -137,12 +139,25 @@ class MockZynqServer:
             if not chunk:
                 return
             incoming.extend(chunk)
-            command = bytes(incoming)
-            # ponytail: "-get_event" dispatches on exact match even though it
-            # is a prefix of "-get_event_v2"; each client command is one
-            # sendall of <16 bytes, which loopback delivers in one recv.
-            if command in COMMANDS:
-                incoming.clear()
+            while True:
+                if discarding:
+                    newline = incoming.find(b"\n")
+                    if newline < 0:
+                        incoming.clear()
+                        break
+                    del incoming[:newline + 1]
+                    discarding = False
+                    continue
+                newline = incoming.find(b"\n")
+                if newline < 0:
+                    if len(incoming) > MAX_COMMAND_BYTES:
+                        incoming.clear()
+                        discarding = True
+                    break
+                command = bytes(incoming[:newline])
+                del incoming[:newline + 1]
+                if len(command) > MAX_COMMAND_BYTES or command not in COMMANDS:
+                    continue
                 self.commands_received.append(command)
                 if prefetched:
                     prefetched -= 1
@@ -155,9 +170,6 @@ class MockZynqServer:
                     continue
                 if not self._send(conn, command, payload):
                     return
-            elif not any(candidate.startswith(command)
-                         for candidate in COMMANDS):
-                return
 
     def _response(self, command):
         if command == b"-check":

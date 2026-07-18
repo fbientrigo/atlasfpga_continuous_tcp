@@ -1,4 +1,5 @@
 import gc
+import socket
 import tracemalloc
 import unittest
 
@@ -7,6 +8,7 @@ from tools.cms_tcp_client.mock_server import (
     EVENT_PATTERN_V2,
     MockZynqServer,
 )
+from tools.cms_tcp_client.protocol import read_response, read_response_v2
 
 
 def v2_payload(size):
@@ -62,6 +64,16 @@ class ClientTests(unittest.TestCase):
                 self.assertEqual(cms.get_help().kind, ResponseKind.TEXT)
                 self.assertEqual(cms.get_drs4_state().kind,
                                  ResponseKind.TEXT)
+
+    def test_command_serialization_has_trailing_newline(self):
+        self.assertEqual(CmsClient._serialize_command("-check"),
+                         b"-check\n")
+
+    def test_client_sends_newline_terminated_command(self):
+        with MockZynqServer() as server:
+            with self.client(server) as cms:
+                self.assertEqual(cms.check().kind, ResponseKind.TEXT)
+            self.assertEqual(server.commands_received, [b"-check"])
 
     def test_response_remainder(self):
         with MockZynqServer(scenario="two-responses") as server:
@@ -158,6 +170,90 @@ class ClientTests(unittest.TestCase):
                     tracemalloc.stop()
                 self.assertLess(current - baseline, 2 * 1024 * 1024)
                 self.assertLess(peak - baseline, 8 * 1024 * 1024)
+
+
+class MockCommandParsingTests(unittest.TestCase):
+    @staticmethod
+    def connect(server):
+        sock = socket.create_connection(server.address, timeout=1)
+        sock.settimeout(1)
+        return sock
+
+    def test_exact_legacy_and_v2_commands(self):
+        with MockZynqServer(event_size=8, event_count=2) as server:
+            with self.connect(server) as sock:
+                sock.sendall(b"-get_event\n")
+                legacy, remainder = read_response(
+                    sock, timeout=1, max_response_bytes=1024,
+                    expected_event=True)
+                sock.sendall(b"-get_event_v2\n")
+                v2, remainder = read_response_v2(
+                    sock, remainder=remainder, timeout=1,
+                    max_response_bytes=1024)
+            self.assertEqual(legacy.kind, ResponseKind.EVENT)
+            self.assertEqual(v2.kind, ResponseKind.EVENT)
+            self.assertEqual(server.commands_received,
+                             [b"-get_event", b"-get_event_v2"])
+
+    def test_v2_command_at_every_byte_split(self):
+        wire = b"-get_event_v2\n"
+        for split in range(len(wire) + 1):
+            with self.subTest(split=split):
+                with MockZynqServer(event_size=8) as server:
+                    with self.connect(server) as sock:
+                        sock.sendall(wire[:split])
+                        sock.sendall(wire[split:])
+                        response, _ = read_response_v2(
+                            sock, timeout=1, max_response_bytes=1024)
+                    self.assertEqual(response.kind, ResponseKind.EVENT)
+                    self.assertEqual(server.commands_received,
+                                     [b"-get_event_v2"])
+
+    def test_get_event_prefix_split_does_not_dispatch_legacy(self):
+        with MockZynqServer(event_size=8) as server:
+            with self.connect(server) as sock:
+                sock.sendall(b"-get_event")
+                sock.sendall(b"_v2\n")
+                response, _ = read_response_v2(
+                    sock, timeout=1, max_response_bytes=1024)
+            self.assertEqual(response.kind, ResponseKind.EVENT)
+            self.assertEqual(server.commands_received, [b"-get_event_v2"])
+
+    def test_two_commands_in_one_write(self):
+        with MockZynqServer() as server:
+            with self.connect(server) as sock:
+                sock.sendall(b"-check\n-DRS4GetState\n")
+                first, remainder = read_response(
+                    sock, timeout=1, max_response_bytes=1024)
+                second, remainder = read_response(
+                    sock, remainder=remainder, timeout=1,
+                    max_response_bytes=1024)
+            self.assertIn(b"event buffer", first.payload)
+            self.assertEqual(second.payload, b"DRS4 state is 3\n")
+            self.assertEqual(remainder, b"")
+            self.assertEqual(server.commands_received,
+                             [b"-check", b"-DRS4GetState"])
+
+    def test_partial_command_is_discarded_on_disconnect(self):
+        with MockZynqServer() as server:
+            with self.connect(server) as sock:
+                sock.sendall(b"-get_event")
+            with self.connect(server) as sock:
+                sock.sendall(b"-check\n")
+                response, _ = read_response(
+                    sock, timeout=1, max_response_bytes=1024)
+            self.assertIn(b"event buffer", response.payload)
+            self.assertEqual(server.commands_received, [b"-check"])
+
+    def test_invalid_suffix_is_not_dispatched(self):
+        with MockZynqServer() as server:
+            with self.connect(server) as sock:
+                sock.sendall(b"-get_eventXYZ\n-check\n")
+                response, remainder = read_response(
+                    sock, timeout=1, max_response_bytes=1024)
+            self.assertIn(b"event buffer", response.payload)
+            self.assertEqual(remainder, b"")
+            self.assertEqual(server.commands_received, [b"-check"])
 
 
 class ClientV2Tests(unittest.TestCase):
