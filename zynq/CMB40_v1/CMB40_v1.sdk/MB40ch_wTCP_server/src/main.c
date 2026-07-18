@@ -82,15 +82,31 @@ u32 delay_GPIO = 4;
 int update_delay = 0;
 int en_A = 0;
 void init_DACs();
-int command_is (u8 *buf, const char *command){
-	for (int i=0; i< strlen(command);i++){
-		if (buf[i] != command[i])
-			return 0;
+/* Stage the formatted text in the global buffer as the next response.
+ * Text only: the bounded scan measures a string this code just wrote.
+ * Event handlers set response_data/response_len directly from the DMA
+ * ActualLen and must never come through here. */
+static void stage_text_response(void)
+{
+	response_data = buffer;
+	response_len = (u32_t)strnlen((const char *)buffer, buffer_length);
+	flag_senddata = 1;
+}
+/* Stage the shared #NO_EVENT / #DMA_ERROR control responses used by both
+ * -get_event and -get_event_v2 (control responses keep legacy framing). */
+static void stage_dma_control_response(dma_event_result_t result)
+{
+	if (result == DMA_EVENT_EMPTY) {
+		memcpy(buffer, "#NO_EVENT", sizeof("#NO_EVENT"));
+	} else {
+		snprintf((char *)buffer, buffer_length,
+				"#DMA_ERROR:%d", (int)result);
 	}
-	return 1;
+	stage_text_response();
 }
 void DRS4_restart_ROI();
 void shutdown_all();
+static void cmd_queue_pump(void);
 int main()
 {
 	//define gain bits
@@ -353,8 +369,9 @@ int loop_routine(void){
 					TcpSlowTmrFlag = 0;
 					if(start_send_event==1 && c_glob_ev <=1 && flag_ready2sent)
 					{
-						flag_senddata = 1;
 						process_n_send_data(c_glob_ev,1);
+						/* legacy path: buffer holds a NUL-padded copy */
+						stage_text_response();
 						usleep(100);
 						if(c_glob_ev >= 1)
 						{
@@ -374,11 +391,12 @@ int loop_routine(void){
 
 										flag_ready2sent = 0;
 
-										transfer_data(buffer);
+										transfer_data(response_data, response_len);
 
 									}
 				xemacif_input(echo_netif); //recepcion de paquetes constantemente
 				tcp_send_pump(); //bounded: at most one tcp_write per iteration
+				cmd_queue_pump(); //bounded: dispatch queued commands once the response slot is free
 
 
 				if (RecvBuffer[0] == '-' && RecvBuffer[1] == 'q') {
@@ -386,7 +404,7 @@ int loop_routine(void){
 
 					memset(buffer, 0, strlen(buffer));
 					snprintf(buffer,40,"\nDRS4 was shuted down... \nEnd program");
-					flag_senddata = 1;
+					stage_text_response();
 					shutdown_all();
 					break;
 				}
@@ -499,20 +517,286 @@ void DRS4_restart_ROI(){
 }
 
 
+/* ---- Command-line accumulator (blocker #2: TCP command fragmentation) ----
+ * Static, bounded, no heap. Wire commands are newline-terminated; complete
+ * lines are matched exactly (never by prefix) and dispatched in order.
+ * A single response-slot queue defers a command instead of overwriting a
+ * response that is staged or still in flight. */
+#define CMD_LINE_MAX 32
+#define CMD_QUEUE_DEPTH 4
+
+static char cmd_line[CMD_LINE_MAX];
+static unsigned cmd_line_len = 0;
+static int cmd_line_overflow = 0;
+
+static char cmd_queue[CMD_QUEUE_DEPTH][CMD_LINE_MAX];
+static unsigned cmd_queue_len[CMD_QUEUE_DEPTH];
+static unsigned cmd_queue_head = 0;
+static unsigned cmd_queue_count = 0;
+
+/* Called by tcp_com.c on any connection teardown/takeover so no command
+ * left over from a prior connection is dispatched against a new one. */
+void tcp_cmd_state_reset(void)
+{
+	cmd_line_len = 0;
+	cmd_line_overflow = 0;
+	cmd_queue_head = 0;
+	cmd_queue_count = 0;
+}
+
+static int response_busy(void)
+{
+	return flag_senddata || tcp_com_response_busy();
+}
+
+static int line_equals(const char *line, unsigned len, const char *cmd)
+{
+	unsigned clen = (unsigned)strlen(cmd);
+	return len == clen && memcmp(line, cmd, clen) == 0;
+}
+
+/* Commands eligible for the legacy (no-newline) compatibility fast path:
+ * exact static commands only. "-get_event" is excluded because it is a
+ * strict prefix of "-get_event_v2"; parameterized commands are excluded
+ * because their complete argument cannot be known without a terminator. */
+static int is_unambiguous_known_command(const char *line, unsigned len)
+{
+	static const char *const cmds[] = {
+		"-DRS4GetState", "-Shutdown", "-DRS4Restart", "-get_event_v2",
+		"-check", "-VETO 0", "-cleanup", "-get_trig_state",
+		"-get_gpio_conf", "-h", "-soft_trig", "-auto_trig_off",
+		"-auto_trig_on", "-rst_fifo"
+	};
+	unsigned i;
+
+	for (i = 0; i < sizeof(cmds) / sizeof(cmds[0]); i++)
+		if (line_equals(line, len, cmds[i]))
+			return 1;
+	return 0;
+}
+
+/* Executes exactly one command line (no trailing newline). Never called
+ * while a response is staged or the sender is SENDING/DRAINING. */
+static void dispatch_command(const char *line, unsigned len)
+{
+	int value = 0;
+	int state = 0;
+
+	if (line_equals(line, len, "-DRS4GetState")) { // state return
+		state = get_states_machine();
+		xil_printf("DRS4 state is %x\n", state);
+		snprintf(buffer,40,"DRS4 state is %x\n", state);
+		stage_text_response();
+
+	}
+	if (line_equals(line, len, "-Shutdown")) { //DRS4 safe shutdown
+		DRS4_Safe_shutdown();
+		state = get_states_machine();
+		xil_printf("DRS4 was shuted down, state is %x\n", state);
+		snprintf(buffer,40,"\nDRS4 was shuted down, state is %x\n", state);
+		stage_text_response();
+	}
+	if (line_equals(line, len, "-DRS4Restart")) { //DRS4 safe restart
+		DRS4_restart_ROI();
+
+		snprintf(buffer,40,"DRS4 restarting\n");
+		stage_text_response();
+
+	}
+	if (line_equals(line, len, "-get_event")) {
+		u32 event_len = 0;
+		dma_event_result_t result =
+				dma_copy_next_event(buffer, buffer_length - 1, &event_len);
+
+		if (result == DMA_EVENT_OK) {
+			buffer[event_len] = '\0';
+			/* exact DMA ActualLen: embedded NUL bytes are payload.
+			 * Legacy framing stays terminator-delimited, so a payload
+			 * containing "!#\n" is only unambiguous through v2. */
+			response_data = buffer;
+			response_len = event_len;
+			flag_senddata = 1;
+		} else {
+			stage_dma_control_response(result);
+		}
+	}
+	if (line_equals(line, len, "-get_event_v2")) {
+		/* Response: "#EVENT:<decimal ActualLen>\n" + payload, then the
+		 * pump appends the trailing "!#\n" terminator as usual. */
+		enum { V2_HDR_MAX = sizeof("#EVENT:4294967295\n") - 1 };
+		char hdr[V2_HDR_MAX + 1];
+		u32 event_len = 0;
+		int hdr_len;
+		dma_event_result_t result = dma_copy_next_event(
+				buffer + V2_HDR_MAX,
+				buffer_length - V2_HDR_MAX - 1, &event_len);
+
+		if (result == DMA_EVENT_OK) {
+			hdr_len = snprintf(hdr, sizeof(hdr), "#EVENT:%u\n",
+					(unsigned)event_len);
+			/* keep the global buffer NUL-terminated for the
+			 * strlen-based memset pattern used by text handlers */
+			buffer[V2_HDR_MAX + event_len] = '\0';
+			memcpy(buffer + V2_HDR_MAX - hdr_len, hdr, hdr_len);
+			response_data = buffer + V2_HDR_MAX - hdr_len;
+			response_len = (u32)hdr_len + event_len;
+			flag_senddata = 1;
+		} else {
+			stage_dma_control_response(result);
+		}
+	}
+	if (line_equals(line, len, "-check")) {
+//					state = XGpio_DiscreteRead(&gpio,1);
+		xil_printf("\n# event buffer = %x\n", RxDone);
+//					trigger_counter = (state >> 12) & 0xFFF;
+		snprintf(buffer,40,"\n# event buffer = %x\n", RxDone);
+		stage_text_response();
+	}
+
+	if (line_equals(line, len, "-VETO 0")) {
+		xil_printf("\n# VETO set to FALSE");
+		snprintf(buffer,40,"\n# VETO set to FALSE");
+		stage_text_response();
+		user_VETO = FALSE;
+		XGpio_DiscreteClear(&gpio,2,VETO_mask);
+		//gpio_write_reg(VETO_mask,VETO_offset,0);
+	}
+	if (line_equals(line, len, "-cleanup")) {
+		xil_printf("\n# cleaning up the event buffer");
+		snprintf(buffer,40,"\n# cleaning up the event buffer");
+		stage_text_response();
+		cleanup_buffer();
+	}
+	if (line_equals(line, len, "-get_trig_state")) {
+		state = XGpio_DiscreteRead(&gpio,1);
+		xil_printf("\n# state = %x\n", state >> 24);
+		snprintf(buffer,40,"\n# state = %x\n", state >> 24);
+		stage_text_response();
+	}
+	if (line_equals(line, len, "-get_gpio_conf")) {
+				state = XGpio_DiscreteRead(&gpio,2);
+				xil_printf("\n# state = %x\n", state);
+				snprintf(buffer,40,"\n# state = %x\n", state);
+				stage_text_response();
+	}
+	if (len >= strlen("-set_n_event ") &&
+			memcmp(line, "-set_n_event ", strlen("-set_n_event ")) == 0) {
+		value = atoi(line + strlen("-set_n_event "));
+		if (value > 1024) {
+			n_events = 1024;
+		}else if (value < 1) {
+			n_events = 1;
+		} else{
+			n_events = value;
+		}
+		snprintf(buffer,40,"\n# n events set to  = %d", n_events);
+		stage_text_response();
+		xil_printf("\n# n events set to  = %d", n_events);
+	}
+
+	if (line_equals(line, len, "-h")) { //return a list of commands
+		snprintf(buffer,372,"\nList of available commands:\n"
+				"-DRS4Shutdown\n"
+				"-DRS4Restart\n"
+				"-DRS4GetState\n"
+				"-q : exit and shutdown system\n"
+				"-get_event : get the event\n"
+				"-get_event_v2 : get one event, length-framed\n"
+				"-check : check status of the buffer\n"
+				"-auto_trig_on : set auto trigger on, every 7s app.\n"
+				"-auto_trig_off : set auto trigger off\n");
+
+		xil_printf(buffer);
+		stage_text_response();
+	}
+	if (line_equals(line, len, "-soft_trig")) {
+
+		snprintf(buffer,40,"\nSoft_trig command\n");
+		stage_text_response();
+		usleep(10);
+		if(soft_trig == 1)
+		{
+			XGpio_DiscreteClear(&gpio,2,soft_trigger_mask);
+			soft_trig = 0;
+		}
+			else
+		{
+			soft_trig = 1;
+			XGpio_DiscreteSet(&gpio,2,soft_trigger_mask);
+		}
+
+	}
+	if (line_equals(line, len, "-auto_trig_off")) {
+				snprintf(buffer,40,"\nSoft_trig is OFF\n");
+				stage_text_response();
+				usleep(10);
+				soft_trig = 1;
+				XGpio_DiscreteSet(&gpio,2,soft_trigger_mask);//assert reset in FIT, interrupt disable
+	}
+	if (line_equals(line, len, "-auto_trig_on")) {
+						snprintf(buffer,40,"\nAUTO trigger on. Every 7s app.\n");
+						stage_text_response();
+						usleep(10);
+						soft_trig = 0;
+						XGpio_DiscreteClear(&gpio,2,soft_trigger_mask); //clear reset in FIT, interrupt enabled
+	}
+	if (line_equals(line, len, "-rst_fifo")) {
+
+		XGpio_DiscreteSet(&gpio,2,rst_FIFO_mask);
+		snprintf(buffer,40,"\nManual trigger RO\n");
+		stage_text_response();
+		usleep(10);
+		XGpio_DiscreteClear(&gpio,2,rst_FIFO_mask);
+
+
+	}
+}
+
+static void cmd_enqueue(const char *line, unsigned len)
+{
+	unsigned idx;
+
+	if (cmd_queue_count >= CMD_QUEUE_DEPTH) {
+		xil_printf("TCP cmd queue full, command dropped\n");
+		return;
+	}
+	idx = (cmd_queue_head + cmd_queue_count) % CMD_QUEUE_DEPTH;
+	memcpy(cmd_queue[idx], line, len);
+	cmd_queue_len[idx] = len;
+	cmd_queue_count++;
+}
+
+/* Drains queued commands as soon as the response slot frees up. Safe to
+ * call from recv_callback and from the main loop (no waits inside). */
+static void cmd_queue_pump(void)
+{
+	while (cmd_queue_count > 0 && !response_busy()) {
+		dispatch_command(cmd_queue[cmd_queue_head], cmd_queue_len[cmd_queue_head]);
+		cmd_queue_head = (cmd_queue_head + 1) % CMD_QUEUE_DEPTH;
+		cmd_queue_count--;
+	}
+}
+
+/* A complete command line is ready: run it now if the response slot is
+ * free and no older command is still queued ahead of it, else buffer it
+ * (never silently dropped, and never overwrites an in-flight response). */
+static void cmd_submit(const char *line, unsigned len)
+{
+	if (cmd_queue_count == 0 && !response_busy())
+		dispatch_command(line, len);
+	else
+		cmd_enqueue(line, len);
+}
+
 err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
                                struct pbuf *p, err_t err)
 {
-	unsigned int ReceivedCount = 0;
-		int value = 0;
-		int state = 0;
-		int ch=0;
-		int Status;
-		unsigned char mess[40];
-	//unsigned char rec_msg[10]; //Mensajes de comm con el pc, de 5 caracteres,
-	//unsigned long hash_msg; //codificacion de mensajes recibidos en tabla hash...en este caso primero se envian mensajes y se lee el numero y luego se crea el mensaje
-	//int comp_string; //No funciono la comparaci�n de string, al parecer python y C operan distinto...cosas extra�as al usar strcmp() en el procesador;
-	/* remote side closed the connection */
+	struct pbuf *q;
+	u16_t copied;
+
+	/* remote side closed the connection: discard any partial command */
 	if (!p) {
+		tcp_cmd_state_reset();
 		/* if the close aborted THIS pcb, we must not touch it again
 		 * and must tell lwIP with ERR_ABRT */
 		if (tcp_client_drop())
@@ -520,177 +804,63 @@ err_t recv_callback(void *arg, struct tcp_pcb *tpcb,
 		return ERR_OK;
 	}
 
+	if (err != ERR_OK) {
+		tcp_cmd_state_reset();
+		pbuf_free(p);
+		tcp_client_drop();
+		return err;
+	}
+
 	/* indicate that the packet has been received */
 	tcp_recved(tpcb, p->tot_len);
 
-	//Lectura de mensaje recibido, acotada al tamano real del paquete
-	u16_t copied = pbuf_copy_partial(p, RecvBuffer, 16, 0);
+	/* Legacy "-q" detection snapshot: unchanged from the prior behavior,
+	 * independent of the command-line accumulator below. */
+	copied = pbuf_copy_partial(p, RecvBuffer, 16, 0);
 	RecvBuffer[copied] = 0;
-	memset(buffer, 0, strlen(buffer));
 	xil_printf("strlen:%d, mess:%s\n",strlen(RecvBuffer),RecvBuffer);
-		if (command_is(RecvBuffer,"-DRS4GetState")){ // state return
-			state = get_states_machine();
-			xil_printf("DRS4 state is %x\n", state);
-			memset(buffer, 0, strlen(buffer));
-			snprintf(buffer,40,"DRS4 state is %x\n", state);
-			flag_senddata = 1;
 
-		}
-		if (command_is(RecvBuffer,"-Shutdown")){ //DRS4 safe shutdown
-			DRS4_Safe_shutdown();
-			state = get_states_machine();
-			xil_printf("DRS4 was shuted down, state is %x\n", state);
-			memset(buffer, 0, strlen(buffer));
-			snprintf(buffer,40,"\nDRS4 was shuted down, state is %x\n", state);
-			flag_senddata = 1;
-		}
-		if (command_is(RecvBuffer,"-DRS4Restart")){ //DRS4 safe restart
-			DRS4_restart_ROI();
+	/* Compatibility fast path: this callback carries no newline, no line
+	 * is already accumulating, this pbuf's entire content fit in the
+	 * snapshot above (nothing truncated), and it is exactly one
+	 * unambiguous known command. Anything else falls through to the
+	 * newline-framed accumulator so a split command is never misfired. */
+	if (cmd_line_len == 0 && !cmd_line_overflow &&
+			p->tot_len == copied &&
+			memchr(RecvBuffer, '\n', copied) == NULL &&
+			is_unambiguous_known_command((const char *)RecvBuffer, copied)) {
+		cmd_submit((const char *)RecvBuffer, copied);
+		pbuf_free(p);
+		return ERR_OK;
+	}
 
-			memset(buffer, 0, strlen(buffer));
-			snprintf(buffer,40,"DRS4 restarting\n");
-			flag_senddata = 1;
+	/* Append every byte of every pbuf in the chain, across callbacks,
+	 * splitting complete lines on '\n' and preserving the trailing
+	 * incomplete line for the next callback. */
+	for (q = p; q != NULL; q = q->next) {
+		const unsigned char *src = (const unsigned char *)q->payload;
+		u16_t i;
 
-		}
-		if (command_is(RecvBuffer,"-get_event")) {
-			u32 event_len = 0;
-			dma_event_result_t result =
-					dma_copy_next_event(buffer, buffer_length - 1, &event_len);
+		for (i = 0; i < q->len; i++) {
+			unsigned char c = src[i];
 
-			if (result == DMA_EVENT_OK) {
-				buffer[event_len] = '\0';
-			} else if (result == DMA_EVENT_EMPTY) {
-				memcpy(buffer, "#NO_EVENT", sizeof("#NO_EVENT"));
-			} else {
-				snprintf((char *)buffer, buffer_length,
-						"#DMA_ERROR:%d", (int)result);
+			if (c == '\n') {
+				if (!cmd_line_overflow)
+					cmd_submit(cmd_line, cmd_line_len);
+				cmd_line_len = 0;
+				cmd_line_overflow = 0;
+				continue;
 			}
-			flag_senddata = 1;
-		}
-		if (command_is(RecvBuffer,"-check")) {
-//					state = XGpio_DiscreteRead(&gpio,1);
-			xil_printf("\n# event buffer = %x\n", RxDone);
-//					trigger_counter = (state >> 12) & 0xFFF;
-			memset(buffer, 0, strlen(buffer));
-			snprintf(buffer,40,"\n# event buffer = %x\n", RxDone);
-			flag_senddata = 1;
-		}
-
-		if (command_is(RecvBuffer,"-VETO 0")) {
-			xil_printf("\n# VETO set to FALSE");
-			memset(buffer, 0, strlen(buffer));
-			snprintf(buffer,40,"\n# VETO set to FALSE");
-			flag_senddata = 1;
-			user_VETO = FALSE;
-			XGpio_DiscreteClear(&gpio,2,VETO_mask);
-			//gpio_write_reg(VETO_mask,VETO_offset,0);
-		}
-		if (command_is(RecvBuffer,"-cleanup")) {
-			xil_printf("\n# cleaning up the event buffer");
-			memset(buffer, 0, strlen(buffer));
-			snprintf(buffer,40,"\n# cleaning up the event buffer");
-			flag_senddata = 1;
-			cleanup_buffer();
-		}
-		if (command_is(RecvBuffer,"-get_trig_state")) {
-			state = XGpio_DiscreteRead(&gpio,1);
-			xil_printf("\n# state = %x\n", state >> 24);
-			memset(buffer, 0, strlen(buffer));
-			snprintf(buffer,40,"\n# state = %x\n", state >> 24);
-			flag_senddata = 1;
-		}
-		if (command_is(RecvBuffer,"-get_gpio_conf")) {
-					state = XGpio_DiscreteRead(&gpio,2);
-					xil_printf("\n# state = %x\n", state);
-					memset(buffer, 0, strlen(buffer));
-					snprintf(buffer,40,"\n# state = %x\n", state);
-					flag_senddata = 1;
-		}
-		if (command_is(RecvBuffer,"-set_n_event ")) {
-			value = atoi(&(RecvBuffer[13]));
-			if (value > 1024) {
-				n_events = 1024;
-			}else if (value < 1) {
-				n_events = 1;
-			} else{
-				n_events = value;
+			if (cmd_line_overflow)
+				continue;
+			if (cmd_line_len >= CMD_LINE_MAX - 1) {
+				cmd_line_overflow = 1;
+				xil_printf("TCP cmd line too long, discarded\n");
+				continue;
 			}
-			memset(buffer, 0, strlen(buffer));
-			snprintf(buffer,40,"\n# n events set to  = %d", n_events);
-			flag_senddata = 1;
-			xil_printf("\n# n events set to  = %d", n_events);
+			cmd_line[cmd_line_len++] = (char)c;
 		}
-
-		if (command_is(RecvBuffer,"-h")){ //return a list of commands
-			memset(buffer, 0, strlen(buffer));
-			snprintf(buffer,372,"\nList of available commands:\n"
-					"-DRS4Shutdown\n"
-					"-DRS4Restart\n"
-					"-DRS4GetState\n"
-					"-q : exit and shutdown system\n"
-					"-get_event : get the event\n"
-					"-check : check status of the buffer\n"
-					"-auto_trig_on : set auto trigger on, every 7s app.\n"
-					"-auto_trig_off : set auto trigger off\n");
-
-			/*
-			xil_printf("\nList of available commands:\n");
-			xil_printf("-DRS4Shutdown\n");
-			xil_printf("-DRS4Restart\n");
-			xil_printf("-DRS4GetState\n");
-			xil_printf("-q : exit and shutdown system\n");
-			xil_printf("-get_event : get the event\n");
-			xil_printf("-check : check status\n");
-			xil_printf("-auto_trig_on : set auto trigger on, every 7s app.\n");
-			xil_printf("-auto_trig_off : set auto trigger off\n");
-			*/
-			xil_printf(buffer);
-			flag_senddata = 1;
-		}
-		if (command_is(RecvBuffer,"-soft_trig")){
-
-			snprintf(buffer,40,"\nSoft_trig command\n");
-			flag_senddata = 1;
-			usleep(10);
-			if(soft_trig == 1)
-			{
-				XGpio_DiscreteClear(&gpio,2,soft_trigger_mask);
-				soft_trig = 0;
-			}
-				else
-			{
-				soft_trig = 1;
-				XGpio_DiscreteSet(&gpio,2,soft_trigger_mask);
-			}
-
-		}
-		if (command_is(RecvBuffer,"-auto_trig_off")){
-					snprintf(buffer,40,"\nSoft_trig is OFF\n");
-					flag_senddata = 1;
-					usleep(10);
-					soft_trig = 1;
-					XGpio_DiscreteSet(&gpio,2,soft_trigger_mask);//assert reset in FIT, interrupt disable
-		}
-		if (command_is(RecvBuffer,"-auto_trig_on")){
-							snprintf(buffer,40,"\nAUTO trigger on. Every 7s app.\n");
-							flag_senddata = 1;
-							usleep(10);
-							soft_trig = 0;
-							XGpio_DiscreteClear(&gpio,2,soft_trigger_mask); //clear reset in FIT, interrupt enabled
-		}
-		if (command_is(RecvBuffer,"-rst_fifo")){
-
-			XGpio_DiscreteSet(&gpio,2,rst_FIFO_mask);
-			snprintf(buffer,40,"\nManual trigger RO\n");
-			flag_senddata = 1;
-			usleep(10);
-			XGpio_DiscreteClear(&gpio,2,rst_FIFO_mask);
-
-
-		}
-
-
-	//				XUartLite_EnableInterrupt(&UartLite);
+	}
 
 	pbuf_free(p);
 

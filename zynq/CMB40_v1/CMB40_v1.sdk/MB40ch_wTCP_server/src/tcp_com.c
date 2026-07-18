@@ -12,6 +12,8 @@
 #define recok 273088441
 
 unsigned char buffer[buffer_length];
+const unsigned char *response_data = NULL;
+u32_t response_len = 0;
 short flag_accept_conn;
 int flag_ready2sent;
 int flag_senddata;
@@ -120,10 +122,12 @@ void print_ip_settings(ip_addr_t *ip, ip_addr_t *mask, ip_addr_t *gw)
 }
 
 /*
- * Non-blocking send initiate: copies buf into the sender-owned snapshot,
- * so the caller may reuse buf immediately after this returns 0.
+ * Non-blocking send initiate: copies exactly len bytes from data into the
+ * sender-owned snapshot, so the caller may reuse the source immediately
+ * after this returns 0. len is authoritative: the sender never scans for
+ * NUL, so binary payloads with embedded NUL or "!#\n" pass through intact.
  */
-int transfer_data(unsigned char *buffer)
+int transfer_data(const unsigned char *data, u32_t len)
 {
 	if (client_pcb == NULL) {
 		xil_printf("TCP send refused: no client connected\n");
@@ -133,13 +137,16 @@ int transfer_data(unsigned char *buffer)
 		xil_printf("TCP send refused: previous send still in flight\n");
 		return -1;
 	}
-	u32_t len = strnlen((const char *)buffer, buffer_length);
+	if (data == NULL) {
+		xil_printf("TCP send refused: no response staged\n");
+		return -1;
+	}
 	if (len > sizeof(s_snapshot)) {
 		xil_printf("TCP send refused: payload %u > snapshot %u\n",
 		           (unsigned)len, (unsigned)sizeof(s_snapshot));
 		return -1;
 	}
-	memcpy(s_snapshot, buffer, len); /* copy once; terminator stays out */
+	memcpy(s_snapshot, data, len); /* copy once; terminator stays out */
 	s_data = s_snapshot;
 	s_len = len;
 	s_off = 0;
@@ -196,6 +203,11 @@ void tcp_send_pump(void)
 		s_state = S_DRAINING;
 }
 
+int tcp_com_response_busy(void)
+{
+	return s_state != S_IDLE;
+}
+
 /*
  * Close a client connection PCB: callbacks cleared first so no callback
  * (including tcp_err from tcp_abort) can re-enter with a dying PCB.
@@ -236,6 +248,7 @@ int tcp_client_drop(void)
 	sender_reset();
 	flag_ready2sent = 0;
 	flag_senddata = 0;
+	tcp_cmd_state_reset();
 	return aborted;
 }
 
@@ -260,6 +273,7 @@ void tcp_server_err(void *arg, err_t err)
 	sender_reset();
 	flag_ready2sent = 0;
 	flag_senddata = 0;
+	tcp_cmd_state_reset();
 	xil_printf("TCP connection aborted\n\r");
 }
 
@@ -287,6 +301,7 @@ err_t accept_callback(void *arg, struct tcp_pcb *newpcb, err_t err)
 	tcp_nagle_disable(client_pcb);
 
 	sender_reset();
+	tcp_cmd_state_reset();
 	flag_accept_conn = 1;
 	connection++;
 	flag_ready2sent = 1;
