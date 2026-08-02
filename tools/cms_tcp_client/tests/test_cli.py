@@ -1,8 +1,11 @@
 import contextlib
 import io
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
+from unittest import mock
 
 from tools.cms_tcp_client import TERM, cli
 from tools.cms_tcp_client.mock_server import (
@@ -33,7 +36,7 @@ class CliTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "event.bin"
             with MockZynqServer(event_size=64) as server:
-                status, out, err = self.run_cli(
+                status, out, err = CliTests.run_cli(
                     server, command, "--output", str(path),
                     "--preview-bytes", "8")
             self.assertEqual(status, 0, err)
@@ -74,6 +77,103 @@ class CliTests(unittest.TestCase):
             with MockZynqServer(event_size=32) as server:
                 status, out, err = self.run_cli(server, "get-event-v2")
             self.assertEqual(status, 0, err)
+            self.assertEqual(list(Path(directory).iterdir()), [])
+
+
+class CliSubprocessTests(unittest.TestCase):
+    @staticmethod
+    def run_subprocess(server, *args):
+        host, port = server.address
+        return subprocess.run(
+            [sys.executable, "-m", "tools.cms_tcp_client.cli", "--host", host,
+             "--port", str(port), "--timeout", "0.5", *args],
+            cwd=Path(__file__).parents[3], capture_output=True, text=True,
+            timeout=5)
+
+    def test_real_module_success_classes(self):
+        with MockZynqServer(event_size=32, event_count=5) as server:
+            for command in ("preflight", "check", "help", "state", "get-event-v2"):
+                with self.subTest(command=command):
+                    result = self.run_subprocess(server, command)
+                    self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_real_module_no_event(self):
+        with MockZynqServer(scenario="no-event") as server:
+            result = self.run_subprocess(server, "get-event-v2")
+        self.assertEqual(result.returncode, 0); self.assertIn("NO_EVENT", result.stdout)
+
+    def test_real_module_dma_and_empty(self):
+        for scenario, expected in (("dma-error", "DMA_ERROR"), ("empty", "EMPTY")):
+            with self.subTest(scenario=scenario), MockZynqServer(scenario=scenario) as server:
+                result = self.run_subprocess(server, "get-event")
+                self.assertEqual(result.returncode, 1); self.assertIn(expected, result.stderr)
+
+    def test_real_module_malformed_and_transport_failure(self):
+        with MockZynqServer(scenario="v2-malformed-length") as server:
+            result = self.run_subprocess(server, "get-event-v2")
+        self.assertEqual(result.returncode, 1); self.assertIn("ERROR", result.stderr)
+        with MockZynqServer() as server:
+            host, port = server.address
+        result = subprocess.run(
+            [sys.executable, "-m", "tools.cms_tcp_client.cli", "--host", host,
+             "--port", str(port), "--timeout", "0.1", "check"],
+            cwd=Path(__file__).parents[3], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 1)
+
+    def test_real_module_output_and_argument_failures(self):
+        with tempfile.TemporaryDirectory() as directory, MockZynqServer() as server:
+            result = self.run_subprocess(server, "get-event-v2", "--output", directory)
+            self.assertEqual(result.returncode, 1); self.assertEqual(server.commands_received, [])
+        result = subprocess.run(
+            [sys.executable, "-m", "tools.cms_tcp_client.cli", "--port", "0", "check"],
+            cwd=Path(__file__).parents[3], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2)
+
+    def test_nested_output_parent_is_created_before_request(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "new" / "nested" / "event.bin"
+            with MockZynqServer(event_size=17) as server:
+                status, out, err = CliTests.run_cli(
+                    server, "get-event-v2", "--output", str(path))
+            self.assertEqual(status, 0, err)
+            self.assertEqual(path.read_bytes(), expected_payload(EVENT_PATTERN_V2, 17))
+
+    def test_directory_destination_fails_without_consuming_event(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with MockZynqServer() as server:
+                status, out, err = CliTests.run_cli(
+                    server, "get-event-v2", "--output", directory)
+                self.assertEqual(server.commands_received, [])
+            self.assertEqual(status, 1)
+            self.assertNotIn("EVENT", out)
+
+    def test_no_event_and_dma_error_remove_reserved_file(self):
+        for scenario in ("no-event", "dma-error"):
+            with self.subTest(scenario=scenario), tempfile.TemporaryDirectory() as directory:
+                path = Path(directory) / "event.bin"
+                with MockZynqServer(scenario=scenario) as server:
+                    CliTests.run_cli(server, "get-event-v2", "--output", str(path))
+                self.assertEqual(list(Path(directory).iterdir()), [])
+
+    def test_existing_output_is_atomically_replaced(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "event.bin"
+            path.write_bytes(b"old")
+            with MockZynqServer(event_size=19) as server:
+                status, out, err = CliTests.run_cli(server, "get-event-v2", "--output", str(path))
+            self.assertEqual(status, 0, err)
+            self.assertEqual(path.read_bytes(), expected_payload(EVENT_PATTERN_V2, 19))
+            self.assertEqual(list(Path(directory).glob(".*.tmp")), [])
+
+    def test_replace_failure_prints_no_event_and_cleans_temporary(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "event.bin"
+            with MockZynqServer(event_size=19) as server, \
+                    mock.patch("tools.cms_tcp_client.atomic_output.os.replace",
+                               side_effect=PermissionError("denied")):
+                status, out, err = CliTests.run_cli(server, "get-event-v2", "--output", str(path))
+            self.assertEqual(status, 1)
+            self.assertNotIn("EVENT", out)
             self.assertEqual(list(Path(directory).iterdir()), [])
 
 

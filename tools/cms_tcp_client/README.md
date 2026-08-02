@@ -7,8 +7,9 @@ acquisition, DMA, VETO, trigger, or continuous-streaming behavior.
 The legacy firmware protocol ends each response with `!#\n`. The client
 extracts the first terminator and preserves later bytes for the next command.
 Consequently, a legacy `-get_event` payload containing the complete terminator
-byte sequence cannot be represented unambiguously. Production continuous
-streaming is not supported.
+byte sequence cannot be represented unambiguously. Autonomous production
+streaming is not supported; the bounded host-pull mode below is a validation
+and operational mode, not firmware streaming.
 
 Every host command is serialized as ASCII followed by one newline byte
 (`command.encode("ascii") + b"\n"`). This intentional framing transition lets
@@ -48,12 +49,15 @@ python -m tools.cms_tcp_client.cli --host 192.168.1.10 state
 python -m tools.cms_tcp_client.cli --host 192.168.1.10 get-event
 python -m tools.cms_tcp_client.cli --host 192.168.1.10 get-event --output event.bin --preview-bytes 16
 python -m tools.cms_tcp_client.cli --host 192.168.1.10 get-event-v2 --output event.bin --preview-bytes 16
+python -m tools.cms_tcp_client.host_pull_soak --host 192.168.1.10 --interval-ms 250 --max-events 100 --max-duration-seconds 60
 ```
 
 `get-event` and `get-event-v2` report `NO_EVENT` and DMA errors separately.
 Binary event data is never printed in full. A payload file is created only
 when `--output` is given and a real event is received; it contains exactly
-the declared event payload, byte for byte.
+the declared event payload, byte for byte. `host_pull_soak` runs a bounded
+host-pull soak loop over a single TCP connection and prints a human-readable
+and optional atomic JSON summary.
 
 ## Python API
 
@@ -94,3 +98,83 @@ simulator.
 
 Physical board validation remains pending. A future GUI or notebook must use
 `CmsClient`; it must not duplicate socket or framing logic.
+
+## Acquisition modes
+
+- **One-shot request-response:** one host command requests one event and waits
+  for its complete v2 response. Existing CLI and console one-shot actions use
+  this path unchanged.
+- **Continuous acquisition — host pull:** the web console performs a bounded
+  loop of `request one v2 event -> await the complete response -> register
+  metadata -> wait -> request the next event`. Exactly one HTTP/TCP operation
+  is outstanding at a time. It requires an explicit successful preflight,
+  finite count and duration limits, and is disabled until the operator starts
+  it. Its conservative 100 ms interval floor prevents a tight host request
+  loop. Payload saving is opt-in and uses deterministic, atomic, no-overwrite
+  files; no default output directory is selected. Host request indices are not
+  firmware sequence numbers and cannot detect events dropped before TCP
+  transmission. DMA errors and transport errors fault the run; NO_EVENT follows
+  the selected stop policy. No automatic reconnect occurs.
+- **Future autonomous firmware streaming:** not implemented. That future mode
+  would require a firmware protocol/state-machine mission and must not be
+  confused with host pull.
+
+The localhost mock remains request-response only. Its finite event count,
+fragmentation/delay, configurable event size, DMA-error cadence, and EOF/RST/
+malformed-v2 fault-after controls model repeated host requests, not
+board-autonomous acquisition or streaming.
+
+## Web console
+
+```powershell
+python -m tools.cms_tcp_client.mock_server --host 127.0.0.1 --port 65430 --scenario normal --event-size 4096 --event-count 20
+python -m tools.cms_tcp_client.web_launcher --target-mode mock --target-host 127.0.0.1 --target-port 65430 --http-port 8765 --open-browser
+```
+
+`web_launcher.py` serves a loopback-only HTTP bridge (`web_api.py`) that
+proxies to `CmsClient`; the browser never opens a raw TCP socket. Build the
+frontend once (or after editing `web/src/*.ts`) with:
+
+```powershell
+cd tools/cms_tcp_client/web
+npm install
+npm run build
+```
+
+The console follows the operator workflow: **Configure → Connect →
+Preflight → Commands → Event acquisition → Inspect → Visualize → Export**.
+
+- The left workflow rail orders **Target configuration** (Step 1) before
+  **Connection** (Step 2) and **Liveness** (Step 3); controls are disabled
+  until their prerequisite step is satisfied.
+- Socket connection state and liveness (preflight) are tracked and displayed
+  separately — a connected socket does not imply a verified-live target.
+- The inspector (right/bottom pane) has four tabs: **Summary** (structured
+  result fields, full SHA-256 with copy-to-clipboard, exact download),
+  **Visualizer**, **Raw bytes** (bounded hex dump), and **Operation log**
+  (bounded to the most recent 500 rows, exportable as CSV or JSON —
+  metadata only, payload bytes are never exported).
+- Event bytes for the Raw bytes / Visualizer tabs are fetched on demand
+  (only when that tab is opened for the current event), not automatically
+  for every acquisition; at most 3 recent event buffers are cached
+  in-memory and never persisted to `localStorage`.
+- The rail and inspector panes are resized with the browser's native
+  `resize` handles; pane widths/heights, the collapsed state of the
+  inspector, and the active inspector tab persist to `localStorage` (with a
+  **Reset layout** action) and degrade gracefully when storage is
+  unavailable.
+- **Visualizer boundaries:** the event payload's internal structure
+  (channel count, sample width, endianness, header layout) is not verified
+  anywhere in this codebase — only the outer length-framing is verified.
+  Implemented visualizers therefore operate on raw bytes only: a bounded
+  hex dump, a byte-value histogram, and a raw byte-value-by-index plot
+  (explicitly labelled as raw bytes, not a waveform). A disabled
+  "Channel waveform" entry documents the unsupported state
+  ("Event decoding schema not yet verified.") rather than fabricating a
+  decoded graph. New visualizers register in
+  `web/src/visualizers/registry.ts` without touching the application shell.
+- Continuous acquisition — host pull is explicit, bounded, and disabled by
+  default. It does not add firmware sequence numbers, and the console never
+  performs automatic reconnect or repeated preflight.
+- Physical board validation is pending; the console has only been
+  exercised against `MockZynqServer`.

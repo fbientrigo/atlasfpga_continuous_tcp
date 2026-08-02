@@ -155,6 +155,22 @@ class ClientTests(unittest.TestCase):
                 self.assertEqual(cms.get_event().kind,
                                  ResponseKind.NO_EVENT)
 
+    def test_mock_fault_after_normal_events(self):
+        with MockZynqServer(scenario="eof", event_count=5,
+                            fault_after=2) as server:
+            with self.client(server) as cms:
+                self.assertEqual(cms.get_event_v2().kind, ResponseKind.EVENT)
+                self.assertEqual(cms.get_event_v2().kind, ResponseKind.EVENT)
+                with self.assertRaises(ConnectionError):
+                    cms.get_event_v2()
+
+    def test_mock_periodic_dma_error(self):
+        with MockZynqServer(event_count=4, dma_error_every=3) as server:
+            with self.client(server) as cms:
+                self.assertEqual(cms.get_event_v2().kind, ResponseKind.EVENT)
+                self.assertEqual(cms.get_event_v2().kind, ResponseKind.EVENT)
+                self.assertEqual(cms.get_event_v2().kind, ResponseKind.DMA_ERROR)
+
     def test_bounded_memory(self):
         with MockZynqServer(event_size=128, event_count=1000) as server:
             with self.client(server) as cms:
@@ -339,6 +355,15 @@ class ClientV2Tests(unittest.TestCase):
                     with self.assertRaises(exception):
                         cms.get_event_v2()
                     self.assertFalse(cms.is_connected)
+
+    def test_v2_malformed_fault_after_two_events(self):
+        with MockZynqServer(scenario="v2-malformed-length", event_count=5,
+                            fault_after=2) as server:
+            with self.client(server) as cms:
+                self.assertEqual(cms.get_event_v2().kind, ResponseKind.EVENT)
+                self.assertEqual(cms.get_event_v2().kind, ResponseKind.EVENT)
+                with self.assertRaises(ValueError):
+                    cms.get_event_v2()
 
     def test_v2_oversized_declared_length_closes_connection(self):
         with MockZynqServer(event_size=4096) as server:

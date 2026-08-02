@@ -5,6 +5,7 @@ from pathlib import Path
 import sys
 
 from .client import CmsClient
+from .atomic_output import AtomicOutput
 from .protocol import ResponseKind
 
 
@@ -60,6 +61,13 @@ def print_text(response):
 
 def main(argv=None):
     args = parse_args(argv)
+    output = None
+    try:
+        if getattr(args, "output", None) is not None:
+            output = AtomicOutput(args.output).prepare()
+    except Exception as exc:
+        print("ERROR: %s" % exc, file=sys.stderr)
+        return 1
     client = CmsClient(args.host, args.port, args.timeout,
                        args.max_response_bytes)
     try:
@@ -83,25 +91,34 @@ def main(argv=None):
             else:
                 response = client.get_event()
             if response.kind is ResponseKind.NO_EVENT:
+                if output:
+                    output.abort()
                 print("NO_EVENT")
                 return 0
             if response.kind is ResponseKind.DMA_ERROR:
+                if output:
+                    output.abort()
                 print("DMA_ERROR code=%d" % response.dma_error_code,
                       file=sys.stderr)
                 return 1
             if response.kind is ResponseKind.EMPTY:
+                if output:
+                    output.abort()
                 print("EMPTY", file=sys.stderr)
                 return 1
+            if output:
+                output.commit(response.payload)
             print("EVENT length=%d sha256=%s" %
                   (response.length, response.sha256))
             if args.preview_bytes:
                 print("preview=%s" %
                       response.payload[:args.preview_bytes].hex())
-            if args.output:
-                args.output.write_bytes(response.payload)
+            if output:
                 print("output=%s" % args.output)
             return 0
     except Exception as exc:
+        if output:
+            output.abort()
         prefix = "PRECHECK FAILED" if args.command == "preflight" else "ERROR"
         print("%s: %s" % (prefix, exc), file=sys.stderr)
         return 1

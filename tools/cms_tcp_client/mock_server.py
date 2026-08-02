@@ -7,7 +7,10 @@ import sys
 import threading
 import time
 
-from .protocol import TERM
+try:
+    from .protocol import TERM
+except ImportError:
+    from protocol import TERM
 
 COMMANDS = {
     b"-check",
@@ -54,16 +57,20 @@ class MockZynqServer:
 
     def __init__(self, *, scenario="normal", event_size=4096,
                  event_count=1, delay=0.05, dma_error_code=-2,
+                 fault_after=0, dma_error_every=0,
                  host="127.0.0.1", port=0):
         if scenario not in SCENARIOS:
             raise ValueError("unknown scenario: %s" % scenario)
-        if event_size < 0 or event_count < 0 or delay < 0:
-            raise ValueError("size, count, and delay must not be negative")
+        if (event_size < 0 or event_count < 0 or delay < 0
+                or fault_after < 0 or dma_error_every < 0):
+            raise ValueError("size, count, delay, and fault controls must not be negative")
         self.scenario = scenario
         self.event_size = event_size
         self.event_count = event_count
         self.delay = delay
         self.dma_error_code = dma_error_code
+        self.fault_after = fault_after
+        self.dma_error_every = dma_error_every
         self.host = host
         self.port = port
         self.commands_received = []
@@ -180,7 +187,9 @@ class MockZynqServer:
             return STATE_RESPONSE
         if self.scenario == "no-event":
             return b"#NO_EVENT"
-        if self.scenario == "dma-error":
+        if self.scenario == "dma-error" or (
+                self.dma_error_every and command in (b"-get_event", b"-get_event_v2")
+                and (self._events_sent + 1) % self.dma_error_every == 0):
             return b"#DMA_ERROR:%d" % self.dma_error_code
         if self.scenario == "empty":
             return b""
@@ -193,15 +202,18 @@ class MockZynqServer:
         return (pattern * repeats)[:self.event_size]
 
     def _v2_header(self, payload):
-        if self.scenario == "v2-short-length":
+        if self._fault_applies() and self.scenario == "v2-short-length":
             return b"#EVENT:%d\n" % max(0, len(payload) - 4)
-        if self.scenario == "v2-long-length":
+        if self._fault_applies() and self.scenario == "v2-long-length":
             return b"#EVENT:%d\n" % (len(payload) + 4)
-        if self.scenario == "v2-negative-length":
+        if self._fault_applies() and self.scenario == "v2-negative-length":
             return b"#EVENT:-1\n"
-        if self.scenario == "v2-malformed-length":
+        if self._fault_applies() and self.scenario == "v2-malformed-length":
             return b"#EVENT:12x\n"
         return b"#EVENT:%d\n" % len(payload)
+
+    def _fault_applies(self):
+        return self._events_sent > self.fault_after
 
     def _wire(self, command, payload):
         if (command != b"-get_event_v2"
@@ -214,21 +226,24 @@ class MockZynqServer:
         is_v2_event = wire.startswith(b"#EVENT:")
         if self.scenario == "delayed":
             time.sleep(self.delay)
-        if self.scenario == "eof":
-            conn.sendall(payload)
+        if (self.scenario == "eof"
+                and ((command not in (b"-get_event", b"-get_event_v2")
+                      and self.fault_after == 0)
+                     or self._fault_applies())):
+            conn.sendall(wire[:-len(TERM)] if is_v2_event else payload)
             return False
-        if is_v2_event and self.scenario == "v2-eof-payload":
+        if is_v2_event and self._fault_applies() and self.scenario == "v2-eof-payload":
             conn.sendall(self._v2_header(payload) +
                          payload[:len(payload) // 2])
             return False
-        if is_v2_event and self.scenario == "v2-eof-term":
+        if is_v2_event and self._fault_applies() and self.scenario == "v2-eof-term":
             conn.sendall(self._v2_header(payload) + payload)
             return False
-        if is_v2_event and self.scenario == "v2-long-length":
+        if is_v2_event and self._fault_applies() and self.scenario == "v2-long-length":
             conn.sendall(wire)  # declared > sent: client hits EOF next
             return False
-        if self.scenario == "rst" and command in (b"-get_event",
-                                                  b"-get_event_v2"):
+        if (self.scenario == "rst" and self._fault_applies()
+                and command in (b"-get_event", b"-get_event_v2")):
             conn.sendall(wire[:min(32, len(payload))])
             conn.setsockopt(
                 socket.SOL_SOCKET, socket.SO_LINGER, struct.pack("ii", 1, 0))
@@ -262,13 +277,18 @@ def main(argv=None):
     parser.add_argument("--event-size", type=nonnegative_int, default=4096)
     parser.add_argument("--event-count", type=nonnegative_int, default=1)
     parser.add_argument("--delay", type=float, default=0.05)
+    parser.add_argument("--fault-after", type=nonnegative_int, default=0,
+                        help="normal events before an EOF/RST/malformed-v2 fault")
+    parser.add_argument("--dma-error-every", type=nonnegative_int, default=0,
+                        help="return DMA_ERROR on every Nth event request; zero disables it")
     args = parser.parse_args(argv)
     if not 0 <= args.port <= 65535:
         parser.error("--port must be between 0 and 65535")
     with MockZynqServer(
             host=args.host, port=args.port, scenario=args.scenario,
             event_size=args.event_size, event_count=args.event_count,
-            delay=args.delay) as server:
+            delay=args.delay, fault_after=args.fault_after,
+            dma_error_every=args.dma_error_every) as server:
         print("MOCK_ZYNQ %s:%d" % server.address, flush=True)
         try:
             while True:

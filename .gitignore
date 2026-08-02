@@ -4,6 +4,13 @@
 # Ignore generated Vivado, SDK/Eclipse, build, cache and analysis artifacts.
 # -----------------------------------------------------------------------------
 
+# Caches
+*.pyc
+*.pyo
+*.pyd
+zynq/CMB40_v1/CMB40_v1.tmp/axi_adc_v2_0_project/AXI_ADC_v2_0_project.cache/wt/*
+
+
 # OS / editors
 .DS_Store
 Thumbs.db
@@ -89,3 +96,10 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Browser UI development dependency; compiled dist/ is runtime source.
+tools/cms_tcp_client/web/node_modules/
+
+# zynq cache
+zynq/CMB40_v1/CMB40_v1.sdk/.metadata/.plugins/org.eclipse.core.runtime/.settings/*
+
