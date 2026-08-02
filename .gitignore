@@ -102,4 +102,14 @@ tools/cms_tcp_client/web/node_modules/
 
 # zynq cache
 zynq/CMB40_v1/CMB40_v1.sdk/.metadata/.plugins/org.eclipse.core.runtime/.settings/*
+zynq/CMB40_v1/CMB40_v1.sdk/*.log
+zynq/CMB40_v1/CMB40_v1.sdk/.metadata/
+zynq/CMB40_v1/CMB40_v1.sdk/*/Debug/
+zynq/CMB40_v1/CMB40_v1.tmp/axi_adc_v2_0_project/
+tools/cms_tcp_client/web/node_modules/
 
+*.o
+*.d
+*/.cache/
+*/.hw/
+*/.xpr/
