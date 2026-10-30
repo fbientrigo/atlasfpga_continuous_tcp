@@ -62,7 +62,7 @@ class DATA_MONITOR:
             )
         if self.figH is None:
             self.figH, hist_axes = plt.subplots(2, 4, figsize=(11, 6))
-            self.axsH = hist_axes.flat
+            self.axsH = hist_axes.ravel()
 
         for ch, (wave_axis, hist_axis) in enumerate(zip(self.axsWF, self.axsH)):
             values = self._channel_data(frame, ch)
